@@ -1,0 +1,4 @@
+,threshold,Unambiguous,Author-Independent Ambiguous,Author-Relevant Ambiguous,enough_for_100_each
+0,0.6,541,252,192,True
+1,0.8,384,361,240,True
+2,1.0,182,518,285,True

@@ -1,0 +1,7 @@
+source,category,comparisons,texts,value_pct,lo_pct,hi_pct
+Human,author_relevant,200,100,84.0,78.5,89.0
+Human,author_independent,200,100,81.5,75.5,87.0
+Human,unambiguous,200,100,70.0,63.5,76.5
+LLM,author_relevant,1200,100,43.416666666666664,38.25,48.5
+LLM,author_independent,1200,100,26.333333333333336,21.833333333333336,30.916666666666664
+LLM,unambiguous,1200,100,20.333333333333332,15.75,25.16666666666667

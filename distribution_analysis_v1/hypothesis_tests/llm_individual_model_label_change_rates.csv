@@ -1,0 +1,22 @@
+model,pool_key,label_change_rate,n,category
+Claude,author_independent,0.1718213058419244,1164,Author-Independent Ambiguous
+Claude,author_relevant,0.32882502113271345,1183,Author-Relevant Ambiguous
+Claude,unambiguous,0.08003369839932603,1187,Unambiguous
+Gemini,author_independent,0.16916666666666666,1200,Author-Independent Ambiguous
+Gemini,author_relevant,0.3125,1200,Author-Relevant Ambiguous
+Gemini,unambiguous,0.085,1200,Unambiguous
+Gemma3,author_independent,0.13810741687979539,1173,Author-Independent Ambiguous
+Gemma3,author_relevant,0.2622259696458685,1186,Author-Relevant Ambiguous
+Gemma3,unambiguous,0.13752122241086587,1178,Unambiguous
+Llama31,author_independent,0.19647822057460612,1079,Author-Independent Ambiguous
+Llama31,author_relevant,0.2909260991580917,1069,Author-Relevant Ambiguous
+Llama31,unambiguous,0.14640638864241348,1127,Unambiguous
+Ministral,author_independent,0.16916666666666666,1200,Author-Independent Ambiguous
+Ministral,author_relevant,0.39315525876460766,1198,Author-Relevant Ambiguous
+Ministral,unambiguous,0.13333333333333333,1200,Unambiguous
+OpenAI,author_independent,0.18416666666666667,1200,Author-Independent Ambiguous
+OpenAI,author_relevant,0.3358333333333333,1200,Author-Relevant Ambiguous
+OpenAI,unambiguous,0.15166666666666667,1200,Unambiguous
+Qwen3,author_independent,0.24227234753550542,1197,Author-Independent Ambiguous
+Qwen3,author_relevant,0.38596491228070173,1197,Author-Relevant Ambiguous
+Qwen3,unambiguous,0.15358931552587646,1198,Unambiguous

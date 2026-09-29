@@ -1,0 +1,10 @@
+pool,framing,cells_all,cells_with_three_votes,fleiss_kappa
+Author-Independent Ambiguous,a,100,72,0.22934208648494364
+Author-Independent Ambiguous,b,100,79,0.24973289541371527
+Author-Independent Ambiguous,neutral,100,100,0.34423758197030224
+Author-Relevant Ambiguous,a,100,75,0.17669620420579288
+Author-Relevant Ambiguous,b,100,74,0.1590909090909091
+Author-Relevant Ambiguous,neutral,100,100,0.2940823069990989
+Unambiguous,a,100,78,0.27048978587250794
+Unambiguous,b,100,76,0.34993252949114184
+Unambiguous,neutral,100,100,0.46549924915370716

@@ -1,0 +1,2 @@
+n_texts,n_positive,n_negative,n_tied,wilcoxon_statistic,wilcoxon_p_value,zero_method,rank_biserial_r
+300,279,16,5,472.5,4.6823440161853996e-48,wilcox,0.978355474118186

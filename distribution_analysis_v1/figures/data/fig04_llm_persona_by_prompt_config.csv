@@ -1,0 +1,19 @@
+pool_key,category,prompt_variant,label_format,n,mean_tv,median_tv,config
+unambiguous,Unambiguous,few_shot,inline,200,0.107047619047619,0.0,few_shot/inline
+unambiguous,Unambiguous,few_shot,numbered,200,0.1098095238095238,0.0,few_shot/numbered
+unambiguous,Unambiguous,one_shot,inline,200,0.1128571428571428,0.0,one_shot/inline
+unambiguous,Unambiguous,one_shot,numbered,200,0.1147857142857142,0.0,one_shot/numbered
+unambiguous,Unambiguous,zero_shot,inline,200,0.1141666666666666,0.0,zero_shot/inline
+unambiguous,Unambiguous,zero_shot,numbered,200,0.1214285714285714,0.0,zero_shot/numbered
+author_independent,Author-Independent Ambiguous,few_shot,inline,200,0.1593214285714285,0.1428571428571428,few_shot/inline
+author_independent,Author-Independent Ambiguous,few_shot,numbered,200,0.1524285714285714,0.1428571428571428,few_shot/numbered
+author_independent,Author-Independent Ambiguous,one_shot,inline,200,0.1537380952380952,0.1428571428571428,one_shot/inline
+author_independent,Author-Independent Ambiguous,one_shot,numbered,200,0.1494761904761904,0.1428571428571428,one_shot/numbered
+author_independent,Author-Independent Ambiguous,zero_shot,inline,200,0.1376904761904761,0.1428571428571428,zero_shot/inline
+author_independent,Author-Independent Ambiguous,zero_shot,numbered,200,0.1528095238095237,0.1428571428571428,zero_shot/numbered
+author_relevant,Author-Relevant Ambiguous,few_shot,inline,200,0.2978333333333333,0.2857142857142857,few_shot/inline
+author_relevant,Author-Relevant Ambiguous,few_shot,numbered,200,0.2785714285714285,0.2857142857142857,few_shot/numbered
+author_relevant,Author-Relevant Ambiguous,one_shot,inline,200,0.2830357142857142,0.219047619047619,one_shot/inline
+author_relevant,Author-Relevant Ambiguous,one_shot,numbered,200,0.2831428571428571,0.2857142857142857,one_shot/numbered
+author_relevant,Author-Relevant Ambiguous,zero_shot,inline,200,0.2991904761904761,0.238095238095238,zero_shot/inline
+author_relevant,Author-Relevant Ambiguous,zero_shot,numbered,200,0.3038095238095237,0.2857142857142857,zero_shot/numbered

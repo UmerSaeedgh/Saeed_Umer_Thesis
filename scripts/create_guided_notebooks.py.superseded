@@ -1,0 +1,632 @@
+"""Canonical source for the NEW guided notebooks only.
+
+This deliberately does not overwrite the earlier notebooks or their retired builders.
+After editing this file or guided_analysis.py, regenerate and execute both notebooks.
+"""
+from pathlib import Path
+import nbformat as nb
+
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'distribution_analysis_v1'
+
+def md(s):return nb.v4.new_markdown_cell(s.strip())
+def code(s):return nb.v4.new_code_cell(s.strip())
+def write(name,cells):
+    doc=nb.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3'}})
+    nb.validate(doc);nb.write(doc,OUT/name)
+
+SETUP='''
+from pathlib import Path
+import sys
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy import stats
+from IPython.display import display, Markdown
+%matplotlib inline
+# Works when opened from the notebook directory or the project root.
+root = Path.cwd() if (Path.cwd() / 'scripts').exists() else Path.cwd().parent
+sys.path.insert(0, str(root / 'scripts'))
+from guided_analysis import *
+setup()
+study = Study()  # Raw votes, original text IDs, master categories; no cached analysis CSVs.
+record_hashes()
+table(study.overview(), 'design_overview')
+'''
+
+cells=[md('''
+# Notebook 1 — From majority labels to emotion distributions
+
+## The question we are trying to answer
+
+**When the words stay the same but the perceived author changes, does the emotional reading change? Do humans and language models change in similar ways?**
+
+Read this notebook from top to bottom. It completes the old analysis before introducing the new one.
+
+1. **Part A — The old method:** choose one label, analyse agreement and label changes, and evaluate H1–H4 using that representation.
+2. **Part B — Why is that analysis incomplete?** Measure ties and movement concealed by a single label.
+3. **Part C — The solution:** build emotion-share vectors and repeat the questions and hypothesis tests.
+4. **Part D — What have we learned?** Compare the answers directly and state what is supported, uncertain, or unanswerable.
+
+Notebook 2 then examines new/disappearing observed emotions, proportion-only changes, category patterns, examples, prompt configurations, individual models and count sensitivity.
+
+### Four hypotheses, in plain language
+
+| Hypothesis | Question |
+|---|---|
+| H1 | Do human judgments change under personas, particularly for ambiguous texts? |
+| H2 | Do model judgments change under personas? |
+| H3 | Do author-relevant ambiguous texts change more than author-independent texts? |
+| H4 | Do models partly follow human changes in direction while differing in magnitude? |
+
+**Do not expect every hypothesis to be confirmed.** The purpose is to evaluate the predictions. These newly organised comparisons are retrospective; they are not a preregistered replication.
+'''),md('''
+## Before analysing: what is one observation?
+
+There are 300 texts, 100 in each category. Each human text has neutral, persona A and persona B judgments. Each model text has these plus a generic-author condition, under six prompt configurations.
+
+- A **human comparison** is one text under neutral versus one persona: 600 comparisons.
+- A **model comparison** is one text, one persona and one exact configuration: 3,600 comparisons.
+- These are repeated observations of **300 texts**, not 4,200 independent texts.
+- For both old and new model analyses below, each pair uses the **same models valid in both conditions**. This makes the representations comparable without changing the ensemble between conditions.
+- Confidence intervals resample whole texts. Each participant rated 30 different texts and never two framings of the same text. Respondent links are unavailable, so cross-text participant dependence remains unmodelled.
+
+`guided_analysis.py` contains the calculation code. Every table and graph is regenerated from the raw inputs by the cells below. No earlier results CSV is used as an input.
+'''),code(SETUP),md('''
+# Part A — Complete the old, one-label analysis first
+
+## A1. Turn every set of votes into one selected label
+
+The old approach retains the most frequent emotion. A strict majority means **more than half** the votes. A unique winner with less than half is a **plurality**, and a tied maximum has no unique winner.
+
+To make this baseline executable for every comparison, we choose the alphabetically first emotion among tied winners. We call the result the **selected label**. This is an explicit reconstruction of a conventional one-label method; it is not a claim that an undocumented historical script used this tie rule.
+
+Example: `anger, anger, sadness` becomes `anger`; so does `anger, sadness, surprise` under this tie rule. The old analysis treats both outputs as the same label.
+'''),code('''
+preview=[]
+for tid in study.ids[:6]:
+    a=study.hvotes[(tid,'neutral')]
+    counts=np.bincount(a,minlength=11); top=counts.max()/counts.sum()
+    preview.append({'text_id':tid,'neutral_votes':', '.join(E[i] for i in a),
+        'selected_label':E[counts.argmax()],'top_share_pct':100*top,
+        'strict_majority':bool(top>.5),'tied_top':bool((counts==counts.max()).sum()>1)})
+table(pd.DataFrame(preview),'old_vote_to_label_examples',1)
+explain('**Read this table:** each row shows the votes and the one value the old method keeps. The vote shares and competing emotions will no longer contribute to its later label-change statistic.')
+'''),md('''
+## A2. Before personas: how often do selected neutral labels agree?
+
+First compare the original corpus readers with the new human neutral readers. Then compare the new human neutral label with the model ensemble neutral label.
+
+These are **agreement rates**, not accuracy against an unquestionable true emotion. The two human rounds contain different people and were collected in different contexts.
+'''),code('''
+baseline=study.baseline()
+base_label=baseline.groupby(['comparison','category']).agg(comparisons=('text_id','size'),agreement_pct=('label_agrees',lambda x:100*x.mean())).reset_index()
+fig,ax=plt.subplots(figsize=(10,5))
+for j,comp in enumerate(base_label.comparison.unique()):
+    sub=base_label[base_label.comparison==comp].set_index('category').reindex(CATS)
+    ax.bar(np.arange(3)+(j-.5)*.35,sub.agreement_pct,.33,label=comp)
+    for i,v in enumerate(sub.agreement_pct):ax.text(i+(j-.5)*.35,v+1,f'{v:.1f}%',ha='center',fontsize=9)
+ax.set_xticks(range(3),CAT_NAMES);ax.set_ylim(0,105);ax.set_ylabel('Selected labels agreeing (%)');ax.set_title('Old method: agreement before personas');ax.legend(fontsize=9)
+finish(fig,'old_baseline_agreement');table(base_label,'old_baseline_agreement',1)
+explain('**What this shows:** how often two sources select the same single emotion. **What it means:** disagreement already exists before author framing. **What it cannot tell us:** whether nonmatching distributions are slightly different or almost entirely different; matching labels may also conceal large differences.')
+'''),md('''
+## A3. Under a persona, how often does the selected label change?
+
+For each neutral–persona pair, record `0 = same selected label` or `1 = different selected label`. The height of a bar is the percentage changing label; whiskers are 95% confidence intervals obtained by resampling texts. Human bars average two comparisons per text, model bars twelve.
+'''),code('''
+old_rates=study.bar('flip','old_label_change_rates','Old method: how often does the selected emotion change?','Comparisons changing selected label (%)')
+old_total=study.summary('flip',False);table(old_total,'old_overall_change_rates',2)
+for _,r in old_total.iterrows():
+    explain(f'**{r.source}:** the selected label changes in {r.value_pct:.1f}% of comparisons. Every remaining comparison is recorded as unchanged, regardless of what happened to the other votes.')
+'''),md('''
+## A4. Which selected labels replace which?
+
+Rows are neutral labels; columns are persona labels. Numbers are **comparison counts**. The diagonal means the selected label stayed the same. Off-diagonal cells show categorical transitions. Human and model totals differ, so compare patterns, not raw count sizes across the two panels.
+'''),code('''
+study.transitions()
+explain('**What this adds:** the label-change rate now has a categorical direction, such as sadness → guilt. **What is still absent:** the amount of probability moved, secondary emotions, and changes inside the diagonal cells.')
+'''),md('''
+## A5. H1 and H2 using selected labels
+
+We now test the old representation, rather than assuming that any observed label change proves a persona effect.
+
+- **H1:** pool human votes within each text and persona comparison, enumerate all assignments to the observed condition sizes, and obtain the conditional chance of changing the selected label. Simulate the aggregate reference across texts 10,000 times. Holm correction covers the six category × persona tests.
+- **H2:** preserve each model's identity and enumerate swaps of its paired neutral/persona answers. Simulate the mean ensemble-label-change rate across cells 10,000 times. Holm correction covers the two persona tests.
+
+Green points show observed rates and text-bootstrap intervals; orange crosses show conditional-null means. The printed p-values are adjusted. These are one-sided tests of a larger change statistic, conditional on the exchangeability assumptions. Independent shuffles across human texts or model configurations are not automatically justified by text-clustered intervals.
+'''),code('''
+old_h12=study.hypothesis_plot('flip','old_H1_H2')
+for hyp in ['H1','H2']:
+    q=old_h12[old_h12.hypothesis==hyp]
+    explain(f'**{hyp}, old method:** {q.reject_05.sum()} of {len(q)} comparisons reject their conditional null after Holm correction. Read the category and persona rows individually. Non-rejection does not prove no framing effect; it describes this selected-label statistic under the stated reference.')
+'''),md('''
+## A6. H3 using selected labels: the direct category comparison
+
+H3 is specifically **author-relevant minus author-independent**, not merely any difference among three categories. The statistic is each text's mean selected-label-change indicator over its two personas.
+
+Compare mean rates using text-label permutation, with bootstrap intervals on the mean difference and Holm correction across three category pairs. Positive differences mean the first category changes more often. This is a test of **label-change frequency**, not of how far the full emotions move.
+'''),code('''
+old_h3,old_h3_text=study.h3('flip')
+old_h3_raw=old_h3[old_h3.analysis=='Raw'];table(old_h3_raw,'old_H3_raw')
+r=old_h3_raw.iloc[0]
+fig,ax=plt.subplots(figsize=(9,4))
+ax.errorbar(old_h3_raw.difference_pp,np.arange(3),xerr=[old_h3_raw.difference_pp-old_h3_raw.ci_lo,old_h3_raw.ci_hi-old_h3_raw.difference_pp],fmt='o',capsize=4)
+ax.axvline(0,color='grey',ls='--');ax.set_yticks(range(3),old_h3_raw.contrast);ax.set_xlabel('Difference in selected-label-change rate (percentage points)');ax.set_title('H3, old method: category differences')
+finish(fig,'old_H3_contrasts')
+explain(f'**Direct H3 answer under the old method:** author-relevant texts change labels {r.difference_pp:.2f} percentage points more often than author-independent texts; 95% CI [{r.ci_lo:.2f}, {r.ci_hi:.2f}], Holm p={r.p_holm:.4f}. '+('This raw label-based contrast rejects zero difference.' if r.p_holm<.05 else 'This raw label-based contrast does not reject zero difference.'))
+'''),md('''
+## A7. H4 using selected labels: what can the old method answer?
+
+There are two questions:
+
+1. **Frequency proxy for magnitude:** do humans change their label more often than models? Compare text-level change rates, paired by text. This cannot measure the size of a distribution shift.
+2. **Categorical proxy for direction:** among comparisons where both sources change their selected labels, do they have the same origin **and** destination? For example, both `sadness → guilt`. Compare this to shuffling complete model text profiles, keeping persona side and configuration positions intact. The bootstrap resamples text profiles too.
+
+These are explicitly **proxies**. One label cannot test full-vector magnitude or direction. Change-status agreement also includes both sources staying still, which is not evidence that they shift together.
+'''),code('''
+old_h4=study.h4('flip');table(old_h4,'old_H4_frequency')
+old_pairs,old_agreement=study.label_agreement();table(old_agreement,'old_H4_change_agreement')
+old_direction=study.label_direction();table(old_direction,'old_H4_transition_proxy')
+status=old_pairs.status.value_counts().reindex(['Both keep their label','Only humans change label','Only LLMs change label','Both change label'],fill_value=0)
+fig,ax=plt.subplots(figsize=(10,4));ax.barh(status.index,status.values/len(old_pairs)*100,color=['#8795a1','#177e89','#d66b35','#7359a3']);ax.invert_yaxis()
+for i,n in enumerate(status):ax.text(n/len(old_pairs)*100+.5,i,f'{n:,}/3,600 ({n/len(old_pairs)*100:.1f}%)',va='center')
+ax.set_xlim(0,max(status)/len(old_pairs)*100+22);ax.set_xlabel('Matched comparisons (%)');ax.set_title('Old method: do humans and models change their labels together?');finish(fig,'old_H4_status')
+r=old_h4.iloc[0];dr=old_direction.iloc[0]
+explain(f'**Frequency:** human label changes exceed model changes by {r.human_minus_llm_pp:.2f} percentage points, CI [{r.ci_lo:.2f}, {r.ci_hi:.2f}]. **Categorical direction proxy:** {dr.agreement_pct:.1f}% of {int(dr.eligible_comparisons):,} jointly changed comparisons have the same selected transition (permutation p={dr.p_permutation:.4f}). These results do not recover the lost distributional magnitude or secondary-emotion movement.')
+'''),md('''
+## A8. Finish the old analysis: hypothesis conclusions
+
+This is the end of the old-method analysis. The table records its actual results and its scope before we introduce a replacement representation.
+'''),code('''
+old_summary=pd.DataFrame([
+ {'hypothesis':'H1','old_method_answer':f'{int(old_h12.query("hypothesis == \'H1\'").reject_05.sum())}/6 adjusted tests reject; category/side-specific','scope':'Selected-label-change rate; non-rejection is not absence'},
+ {'hypothesis':'H2','old_method_answer':f'{int(old_h12.query("hypothesis == \'H2\'").reject_05.sum())}/2 adjusted tests reject','scope':'Ensemble selected-label changes, preserving model pairs'},
+ {'hypothesis':'H3','old_method_answer':f'AR−AI {old_h3_raw.iloc[0].difference_pp:.2f}pp; adjusted p={old_h3_raw.iloc[0].p_holm:.4f}','scope':'Raw category difference in label-change frequency'},
+ {'hypothesis':'H4','old_method_answer':f'Human−model label-change frequency {old_h4.iloc[0].human_minus_llm_pp:.2f}pp; transition agreement {old_direction.iloc[0].agreement_pct:.1f}%','scope':'Only categorical proxies; full magnitude/direction unavailable'}])
+table(old_summary,'old_hypothesis_summary')
+'''),md('''
+# Part B — Why is this analysis problematic, and what does it lose?
+
+The old method answers a useful, narrow question: **did the selected label change?** It cannot fully answer **how the interpretation changed**.
+
+### B1. Ties make the chosen label depend on an extra rule
+
+The next table repeats the *descriptive* change rate with the alphabetical order reversed, then shows the rate when both conditions have unique winners. Restricting to unique winners changes the sample, so that column is not a directly equivalent estimate. These are descriptive sensitivities; they do not establish robustness of every hypothesis test.
+'''),code('''
+tie_report=study.ties();table(tie_report,'tie_rule_sensitivity',2)
+explain('**What we lose:** tied interpretations become one apparently decisive label. The `changed_decision` column counts neutral–persona comparisons whose changed/unchanged result differs under the two fixed tie rules. A tie-aware set retains more information than a single selected label, but still discards the vote shares.')
+'''),md('''
+### B2. A stable label can conceal substantial redistribution
+
+We temporarily inspect the original vote shares to audit what the old method discarded. Here `TV > 0` simply means the two vote distributions are not identical; its definition comes in Part C.
+
+Compare two measures of hidden movement:
+
+- **Same selected label:** the exact old method would record no change.
+- **Same complete top set:** even keeping all tied winners would record no change.
+
+The second is a stricter condition. Do not interchange these percentages.
+'''),code('''
+hidden=[]
+for src,d in [('Human',study.h),('LLM',study.l)]:
+    unchanged=(d.flip==0).sum()
+    hidden.append({'source':src,'all_comparisons':len(d),'selected_label_unchanged':int(unchanged),
+        'moved_with_same_selected_label':int(d.hidden_label.sum()),'hidden_pct_of_all':100*d.hidden_label.mean(),
+        'hidden_pct_of_unchanged_labels':100*d.hidden_label.sum()/unchanged,
+        'moved_with_same_complete_top_set':int(d.hidden_top.sum()),'same_top_set_hidden_pct':100*d.hidden_top.mean()})
+hidden=pd.DataFrame(hidden);table(hidden,'information_lost_by_labels',2)
+fig,ax=plt.subplots(figsize=(9,5))
+for j,col in enumerate(['hidden_pct_of_all','same_top_set_hidden_pct']):
+    ax.bar(np.arange(2)+(j-.5)*.34,hidden[col],.32,label=['Same selected label','Same complete top set'][j])
+    for i,v in enumerate(hidden[col]):ax.text(i+(j-.5)*.34,v+1,f'{v:.1f}%',ha='center')
+ax.set_xticks(range(2),hidden.source);ax.set_ylabel('All comparisons with concealed movement (%)');ax.set_ylim(0,hidden.hidden_pct_of_all.max()+15);ax.set_title('What the categorical summaries missed');ax.legend(fontsize=9);finish(fig,'hidden_distribution_movement')
+explain('**What this means:** a recorded “unchanged” label does not mean the emotion distribution stayed unchanged. This is information loss, not automatically proof that every concealed movement is a causal persona effect; small vote samples also vary.')
+'''),md('''
+### B3. What exactly has been thrown away?
+
+| What is lost by one selected label? | Why we need it |
+|---|---|
+| Vote percentages | A 100% winner and a 34% winner look identical |
+| Other observed emotions | A new minority interpretation may appear without winning |
+| Ties and uncertainty | One selected label can overstate consensus |
+| How far the distribution moves | A tiny lead reversal and a wholesale change both count as one flip |
+| Direction across all emotions | Some emotions gain share while others lose it |
+| Similarity between human and model changes | The winners may differ even when their other shifts align |
+
+These limits motivate the solution below. They do not invalidate every categorical question.
+'''),md('''
+# Part C — The solution: vectorisation, then the same analysis again
+
+## C1. Keep the full emotion-share vector
+
+Use the same fixed order of eleven emotions for every condition. Each coordinate is `votes for emotion / retained votes`.
+
+For example, `anger, anger, sadness` becomes 66.7% anger and 33.3% sadness, with zero on the other nine coordinates. These are **empirical vote shares**, not model softmax scores or proven probabilities of the author's true emotion.
+
+Three quantities answer different questions:
+
+- **TV (total variation):** half the sum of absolute share differences. `TV × 100` is the percentage of mass that must move to make the distributions equal.
+- **Delta vector:** persona share minus neutral share for every emotion; positive means a gain, negative a loss.
+- **Observed support:** the emotions receiving at least one vote. Zero means unobserved in this finite sample, not an impossible underlying emotion.
+
+The human comparisons and model subsets are exactly the same as in Part A. We change the representation and statistic, not the participants or texts.
+'''),code('''
+study.example('hidden_top','Human','human_hidden_change_example')
+explain('**Compare this with the old method:** the top set stays fixed in this selected example, yet the plotted percentages change. The old result would compress those two distributions to the same top-label summary.')
+'''),md('''
+## C2. Repeat the neutral-baseline comparison with full distributions
+
+The categorical agreement in A2 is now supplemented by the distance between the *entire* neutral distributions. This is contextual evidence of between-source variation, not a pure sampling-noise estimate or a baseline to subtract mechanically from persona effects.
+'''),code('''
+base_vectors=baseline.groupby(['comparison','category']).agg(comparisons=('text_id','size'),mean_TV_pct=('tv',lambda x:100*x.mean()),mean_cosine=('cosine','mean')).reset_index()
+fig,ax=plt.subplots(figsize=(10,5))
+for j,comp in enumerate(base_vectors.comparison.unique()):
+    q=base_vectors[base_vectors.comparison==comp].set_index('category').reindex(CATS)
+    ax.bar(np.arange(3)+(j-.5)*.35,q.mean_TV_pct,.33,label=comp)
+    for i,v in enumerate(q.mean_TV_pct):ax.text(i+(j-.5)*.35,v+1,f'{v:.1f}%',ha='center',fontsize=9)
+ax.set_xticks(range(3),CAT_NAMES);ax.set_ylabel('Mean TV × 100');ax.set_ylim(0,100);ax.legend(fontsize=9);ax.set_title('Vector method: how far apart are the neutral distributions?');finish(fig,'vector_baseline_distances');table(base_vectors,'vector_baseline_distances',2)
+explain('**New understanding:** A2 said only whether the selected labels agreed. This plot measures the amount of disagreement, including disagreements hidden inside matching labels. The original and new human neutral rounds are kept separate throughout the persona tests.')
+'''),md('''
+## C3. Repeat the persona comparison: how far do the distributions move?
+
+These bars show mean TV, not the percentage of comparisons that change. A mean TV of 30% means 30% of the probability mass would need to move on average. It does **not** mean that only 30% of texts were affected.
+'''),code('''
+vector_rates=study.bar('tv','vector_TV_by_category','Vector method: how far do the emotion shares move?','Mean TV × 100 (probability mass moved)')
+vector_total=study.summary('tv',False);table(vector_total,'vector_overall_TV',2)
+explain('**Compare with A3:** a label flip is a yes/no event; TV measures distance whether or not the winner flips. The category means remain descriptive until compared with a sampling reference. Human-versus-model differences also reflect different voters and collection processes.')
+'''),md('''
+## C4. Go deeper: new emotions, disappearing emotions, or percentages only?
+
+The next five outcomes are mutually exclusive and exhaustive. Every comparison appears exactly once.
+
+1. The whole distribution is unchanged.
+2. The observed emotions stay the same but their shares change, whether or not the winner changes.
+3. At least one emotion appears and none disappears.
+4. At least one disappears and none appears.
+5. Both appearance and disappearance occur.
+
+“Appears” means zero observed votes in neutral and positive votes under the persona. Different people supplied the human conditions: it does not mean an individual reader changed their mind or that an emotion was created psychologically.
+'''),code('''
+events=study.events_plot()
+for src in ['Human','LLM']:
+    r=events[(events.source==src)&(events.event=='Same emotions; proportions change')].iloc[0]
+    explain(f'**{src}, the exact pattern you asked about:** {int(r.comparisons):,}/{int(r.denominator):,} comparisons ({r.percent:.1f}%) retain the same observed emotions but change their percentages. This happens in at least one comparison for {int(r.texts_with_event)}/300 texts. The winner is allowed to change in this definition.')
+explain('**Count carefully:** comparison categories sum to 100%; unique-text counts do not, because a text can have different events under its two personas or across configurations. Models have twelve opportunities per text and humans two, so “any event per text” is not directly comparable between sources.')
+'''),md('''
+## C5. H1 and H2 again, now using full vectors
+
+Repeat the conditional randomisation from A5, but calculate TV after each reassignment instead of a selected-label-change indicator. The same text pairs, model identities and multiplicity families are retained.
+
+For H2, this test detects **net ensemble redistribution** under swaps. It is not a test of every individual model's responsiveness. If only one model changes in a cell, TV is the same under every swap and that cell supplies no null variance. Notebook 2 reports individual changes alongside this test.
+'''),code('''
+vector_h12=study.hypothesis_plot('tv','vector_H1_H2')
+for hyp in ['H1','H2']:
+    q=vector_h12[vector_h12.hypothesis==hyp]
+    explain(f'**{hyp}, vector method:** {q.reject_05.sum()} of {len(q)} comparisons reject the conditional reference after Holm correction. The point estimate measures full-distribution movement. A change in significance from the old method reflects a different statistic; it is not proof that vectors are valid merely because a p-value is smaller.')
+'''),md('''
+## C6. H3 again: raw TV and a conditional-null sensitivity
+
+First ask whether author-relevant texts have larger raw TV. Then ask whether the difference remains after subtracting each text's expected TV under pooled-vote reassignment.
+
+Small samples from a dispersed distribution can differ even under this reference. Category definitions already involve ambiguity, so raw TV may reflect that sampling property as well as framing-associated movement.
+
+`Observed − expected conditional TV` is a **reference-adjusted statistic**, not the identified causal part attributable to persona information. The sensitivity is post hoc. Failure to reject is not equivalence, and we keep both analyses visible.
+'''),code('''
+vector_h3,vector_h3_text=study.h3('tv');table(vector_h3,'vector_H3_raw_and_referenced')
+reference=vector_h3_text.groupby('category')[['tv','expected','excess']].mean().reindex(CATS)*100
+fig,axes=plt.subplots(1,2,figsize=(12,4.5))
+for j,col in enumerate(['tv','expected']):axes[0].bar(np.arange(3)+(j-.5)*.33,reference[col],.31,label=['Observed','Conditional-null mean'][j])
+axes[0].set_xticks(range(3),CAT_NAMES,rotation=15);axes[0].set_ylabel('TV × 100');axes[0].set_title('Much raw TV is expected under the reference');axes[0].legend(fontsize=9)
+axes[1].bar(CAT_NAMES,reference.excess,color='#177e89');axes[1].tick_params(axis='x',rotation=15);axes[1].axhline(0,color='grey');axes[1].set_ylabel('Observed minus expected (pp)');axes[1].set_title('Reference-adjusted distance is a different quantity')
+finish(fig,'vector_H3_reference');table(reference.reset_index(),'vector_H3_category_reference',2)
+for mode in ['Raw','Conditional-null referenced']:
+    r=vector_h3[vector_h3.analysis==mode].iloc[0]
+    explain(f'**{mode}, direct AR−AI:** {r.difference_pp:.2f}pp, CI [{r.ci_lo:.2f}, {r.ci_hi:.2f}], adjusted p={r.p_holm:.4f}. '+('Rejects zero difference under this test.' if r.p_holm<.05 else 'Does not reject zero difference under this test.'))
+explain('**Conclusion rule:** if the raw difference is supported but the adjusted difference is not, say that the observed ordering is present but the stronger framing-sensitivity claim is not robust to this reference. Do not force H3 into a simple confirmed verdict.')
+'''),md('''
+## C7. H4 again: magnitude and direction are now distinct
+
+**Magnitude:** compare human and model mean TV for each text. The paired difference and interval describe this dataset and its two sampling processes.
+
+**Direction:** compare human and model delta vectors for the same text, persona side and configuration. Cosine is +1 for aligned directions, 0 for perpendicular directions and −1 for opposite directions. If either vector is zero, direction is undefined.
+
+We retain persona A and B separately rather than averaging their deltas before cosine. The mean is over defined comparison-level cosines; intervals resample complete text profiles. The shuffled reference permutes model text profiles as blocks, preserving their two sides and six configurations. It tests text-specific correspondence, not causation.
+'''),code('''
+vector_h4=study.h4('tv');table(vector_h4,'vector_H4_magnitude')
+direction,cosines,direction_null=study.direction();table(direction,'vector_H4_direction')
+hv=study.h.groupby('text_id').tv.mean().reindex(study.ids)*100
+lv=study.l.groupby('text_id').tv.mean().reindex(study.ids)*100
+fig,axes=plt.subplots(1,2,figsize=(12,5))
+for cat in CATS:
+    mask=np.array([study.category[t]==cat for t in study.ids]);axes[0].scatter(hv[mask],lv[mask],s=20,alpha=.55,label=CAT_NAME[cat])
+axes[0].plot([0,100],[0,100],'--',color='grey');axes[0].set(xlim=(0,100),ylim=(0,100),xlabel='Human mean TV × 100',ylabel='Model mean TV × 100',title='Below diagonal: humans move further');axes[0].legend(fontsize=8)
+axes[1].hist(cosines[np.isfinite(cosines)],bins=25,color='#177e89',alpha=.8);axes[1].axvline(direction.iloc[0].mean_cosine,color='#d66b35',label='Observed mean');axes[1].axvline(direction.iloc[0].null_mean,color='black',ls='--',label='Shuffled-reference mean');axes[1].set(xlabel='Delta-vector cosine',ylabel='Defined comparison count',title='Direction: alignment varies across comparisons');axes[1].legend(fontsize=8)
+finish(fig,'vector_H4_magnitude_direction')
+r=vector_h4.iloc[0];dr=direction.iloc[0]
+explain(f'**Magnitude:** human−model mean TV is {r.human_minus_llm_pp:.2f}pp, CI [{r.ci_lo:.2f}, {r.ci_hi:.2f}]. **Direction:** mean cosine {dr.mean_cosine:.3f}, CI [{dr.ci_lo:.3f}, {dr.ci_hi:.3f}], shuffled-reference p={dr.p_permutation:.4f}, defined for {int(dr.defined_comparisons):,}/3,600 comparisons. Read these separately: similar direction need not imply similar size. Notebook 2 checks equal vote counts; undefined directions are never filled with zero.')
+'''),md('''
+# Part D — Compare the old and new answers
+
+## D1. Same data, different questions
+
+The old method quantifies label switches. The vector method measures distance and movement within the complete emotion distribution. Their percentages therefore have different meanings. They should not be subtracted from each other as though they were the same outcome.
+'''),code('''
+comparison=old_h12[['hypothesis','category','side','observed_pct','p_holm','reject_05']].merge(
+    vector_h12[['hypothesis','category','side','observed_pct','p_holm','reject_05']],on=['hypothesis','category','side'],suffixes=('_label','_vector'),validate='one_to_one')
+table(comparison,'old_vs_vector_H1_H2')
+final_summary=pd.DataFrame([
+ {'question':'H1','old':'Selected-label switch frequency','vector':'Full-distribution TV against conditional null','conclusion':f'{int(vector_h12.query("hypothesis == \'H1\'").reject_05.sum())}/6 vector tests reject; interpret by category and side; controls not proven null'},
+ {'question':'H2','old':'Selected ensemble-label switches','vector':'Net redistribution under paired model swaps','conclusion':f'{int(vector_h12.query("hypothesis == \'H2\'").reject_05.sum())}/2 vector tests reject; coordination and individual changes remain distinct'},
+ {'question':'H3','old':f'Raw AR−AI label-rate p={old_h3_raw.iloc[0].p_holm:.4f}','vector':f'Raw AR−AI p={vector_h3.iloc[0].p_holm:.4f}; referenced p={vector_h3.iloc[3].p_holm:.4f}','conclusion':'Evaluate the direct contrast under both references; raw ordering alone is insufficient'},
+ {'question':'H4 magnitude','old':f'Frequency gap {old_h4.iloc[0].human_minus_llm_pp:.2f}pp','vector':f'TV gap {vector_h4.iloc[0].human_minus_llm_pp:.2f}pp','conclusion':'Different constructs; count and sampling-process sensitivity still matters'},
+ {'question':'H4 direction','old':'Exact selected-label transition proxy','vector':f'Delta cosine {direction.iloc[0].mean_cosine:.3f}, with explicit coverage','conclusion':'Partial resemblance is conditional; no averaging away opposing personas'},
+ {'question':'What was hidden?','old':'A stable label is recorded as no change','vector':'Separates unchanged, proportion changes, appearances and disappearances','conclusion':'The information-loss and event tables provide the direct counts'}])
+table(final_summary,'final_method_comparison')
+plain_verdicts=pd.DataFrame([
+ {'hypothesis':'H1 — humans','old_method':'No adjusted selected-label tests reject in this run',
+  'vector_method':'Qualified partial support: author-relevant A and B, and author-independent A reject',
+  'meaning':'Full distributions detect differences the selected-label statistic misses; control non-rejection is not absence'},
+ {'hypothesis':'H2 — models','old_method':'Both paired selected-label tests reject',
+  'vector_method':'Both paired-TV coordination tests reject',
+  'meaning':'Conditional support; single generations and joint exchangeability limit attribution'},
+ {'hypothesis':'H3 — author relevance','old_method':'Direct AR−AI label-frequency contrast does not reject',
+  'vector_method':'Raw contrast rejects; conditional-null-referenced contrast does not',
+  'meaning':'The stronger category-sensitivity claim is not robust to the reference'},
+ {'hypothesis':'H4 — resemblance','old_method':'Frequency differs; categorical transition proxy exceeds shuffled pairing',
+  'vector_method':'Larger human TV; small positive directional correspondence',
+  'meaning':'Qualified partial resemblance; count sensitivity follows in Notebook 2'}])
+# Guard the plain-language verdict against silently becoming stale on future data.
+assert old_h12[old_h12.hypothesis=='H1'].reject_05.sum()==0
+assert vector_h12[vector_h12.hypothesis=='H1'].reject_05.sum()==3
+assert old_h12[old_h12.hypothesis=='H2'].reject_05.all() and vector_h12[vector_h12.hypothesis=='H2'].reject_05.all()
+assert old_h3_raw.iloc[0].p_holm>=.05 and vector_h3.iloc[0].p_holm<.05 and vector_h3.iloc[3].p_holm>=.05
+assert old_direction.iloc[0].p_permutation<.05 and direction.iloc[0].p_permutation<.05
+assert old_h4.iloc[0].ci_lo>0 and vector_h4.iloc[0].ci_lo>0
+table(plain_verdicts,'plain_language_hypothesis_verdicts')
+explain('**The overall answer:** vectorisation adds meaningful understanding and changes what the tests can detect. H1 has qualified partial support, H2 has conditional support, H3 is not robust to the sampling reference, and H4 shows partial directional resemblance with a substantial observed magnitude difference. These are conclusions for this executed dataset and its stated statistics.')
+'''),md('''
+## D2. The thesis answer this analysis can support
+
+**Vectorisation helped because it made previously discarded changes measurable.** It shows whether a persona comparison changes the winning label, redistributes shares while retaining the same emotions, changes which emotions are observed, or combines these events. It also separates how far a change moves from which way it moves.
+
+That does not mean every numerical movement proves a persona mechanism, or that every hypothesis is confirmed. The tests above specify their references, and H3 must be read with its conditional-null sensitivity. Human and model comparisons use different kinds of voters; raw gaps do not isolate intrinsic sensitivity.
+
+**Continue to Notebook 2** for detailed counts by text and category, examples of proportion-only changes, which emotions appear/disappear, changes in dispersion, the model/generic-author control, and a three-vote sensitivity for both magnitude and entropy.
+
+### Interpretation limits to retain in the thesis
+
+Participant assignment is confirmed: 30 distinct texts per person, no duplicate text under another persona for a person. Respondent links across texts are unavailable, so human aggregate inference remains conditional. H2 uses independent within-cell swaps and requires joint exchangeability across repeated configurations. Each model supplied one generation per condition. Category definitions partly use pilot persona judgments. The extra analyses are retrospective and exploratory, and non-significant results do not establish absence or equivalence.
+''')]
+write('01_majority_labels_then_vectors.ipynb',cells)
+
+cells=[md('''
+# Notebook 2 — What changed inside the emotion distributions?
+
+Notebook 1 completed the majority-label analysis, explained its losses, and repeated H1–H4 with vectors. This notebook answers the detailed questions behind those results.
+
+**Reading route:** count event types → separate comparisons from texts → inspect proportions without new emotions → find appearing/disappearing emotions → compare human and model patterns → examine dispersion and sample size → inspect prompts, models and the generic-author control → state the deeper conclusions.
+
+The model contrasts use the same valid models in both conditions, as in Notebook 1. Consequently their values may differ slightly from older notebooks that used all valid models separately in each condition. Every percentage here has its denominator alongside it.
+'''),code(SETUP),md('''
+## 1. Exactly how many comparisons have each kind of change?
+
+These five categories are exclusive: no change; the same observed emotions with altered shares; appearance only; disappearance only; both appearance and disappearance. A **comparison** is neutral versus one persona, with a fixed configuration for models.
+'''),code('''
+events=study.events_plot()
+assert events.groupby('source').percent.sum().round(8).eq(100).all()
+explain('**Read the plot:** percentages compare rates; printed fractions give exact counts. A new observed emotion need not become the winner. More model comparisons do not mean more independently sampled texts.')
+'''),md('''
+## 2. How many distinct texts show each event?
+
+Text incidence means an event occurs in at least one persona comparison. Because each text can show several events, these counts overlap and must not be added.
+
+Humans have two opportunities per text; models have twelve. To make the opportunity count more comparable, the next table also reports model text incidence within each configuration, where there are two persona comparisons per text. The mean across configurations is an average count, not another integer set of texts.
+'''),code('''
+rows=[]
+for src,d in [('Human',study.h),('LLM',study.l)]:
+    for event in ['gain_any','loss_any','same_support_change','hidden_top','strict_proportion']:
+        for cat in CATS:
+            q=d[d.category==cat];any_text=q.groupby('text_id')[event].any()
+            rows.append({'source':src,'category':CAT_NAME[cat],'event':event,'texts_any_event':int(any_text.sum()),'text_denominator':100,
+                'comparisons_with_event':int(q[event].sum()),'comparison_denominator':len(q),
+                'opportunities_per_text':2 if src=='Human' else 12})
+incidence=pd.DataFrame(rows);table(incidence,'event_text_incidence')
+config_incidence=[]
+for config,d in study.l.groupby('config'):
+    for event in ['gain_any','loss_any','same_support_change','hidden_top','strict_proportion']:
+        config_incidence.append({'configuration':config,'event':event,'texts_with_event':int(d.groupby('text_id')[event].any().sum()),'out_of':300})
+config_incidence=pd.DataFrame(config_incidence);table(config_incidence,'model_event_text_incidence_by_config')
+table(config_incidence.groupby('event').texts_with_event.agg(['mean','min','max']).reset_index(),'model_event_incidence_config_summary',2)
+explain('**What this means:** the first table locates events among the actual texts; the second makes model configuration opportunities explicit. Neither table treats the multiple events within one text as independent samples.')
+'''),md('''
+## 3. The precise “same emotions, different percentages” question
+
+There are two definitions worth separating:
+
+- **Broad proportion change:** the set of observed emotions is identical, shares differ, and the winner may change.
+- **Strict hidden proportion change:** the same observed emotions **and the same complete top set**, but different shares. Even a tie-aware top-set analysis misses this.
+
+Both are subsets of all distribution changes; neither includes adding or losing an observed emotion.
+'''),code('''
+rows=[]
+for src,d in [('Human',study.h),('LLM',study.l)]:
+    for event in ['same_support_change','strict_proportion']:
+        n=int(d[event].sum());rows.append({'source':src,'definition':event,'comparisons':n,'out_of':len(d),'percent':100*n/len(d),'unique_texts':d.loc[d[event],'text_id'].nunique()})
+proportions=pd.DataFrame(rows);table(proportions,'proportion_only_definitions',2)
+study.example('strict_proportion','Human','strict_proportions_human')
+study.example('strict_proportion','LLM','strict_proportions_llm')
+explain('**Meaning:** these examples answer the original question directly: the same emotion inventory remains present, yet the balance changes. The examples are selected for visibility; the table gives the full-data frequency.')
+'''),md('''
+## 4. Which emotions appear and disappear?
+
+An emotion “appears” if its empirical share goes from zero to positive. It “disappears” if the reverse happens. Multiple emotions can do so in one comparison, so rows are not mutually exclusive and percentages need not sum to 100%.
+
+This is an observation about finite vote samples. It is not evidence that an unobserved emotion was psychologically impossible before framing.
+'''),code('''
+emotion_events=study.emotion_events()
+for src in ['Human','LLM']:
+    r=emotion_events[emotion_events.source==src].sort_values('appears_pct',ascending=False).iloc[0]
+    explain(f'**{src}:** the most frequently newly observed emotion is {r.emotion}, appearing in {r.appears_pct:.1f}% of comparisons. This is a descriptive rate, not a corrected per-emotion hypothesis result.')
+'''),md('''
+## 5. Does appearance or disappearance depend on ambiguity category?
+
+The category bars below count any newly observed emotion and any lost observed emotion. Confidence intervals resample texts. These graphs describe patterns; they do not independently confirm H3, whose direct comparison and reference sensitivity were tested in Notebook 1.
+'''),code('''
+gains=study.bar('gain_any','new_emotions_by_category','At least one emotion appears: where does it happen?','Comparisons with an observed appearance (%)')
+losses=study.bar('loss_any','lost_emotions_by_category','At least one emotion disappears: where does it happen?','Comparisons with an observed disappearance (%)')
+explain('**Read together:** a high appearance rate may coexist with a high disappearance rate. That can mean replacement of observed emotions rather than simple expansion of the set. Vote counts and different rater populations influence both rates.')
+'''),md('''
+## 6. Do human and model comparisons show the same kind of change?
+
+Match each model comparison to the human comparison for the same text and persona. Rows show human event type, columns model event type. Cell values are percentages **within each human row**; the row totals beneath the plot give the actual matched comparison counts. Human events repeat across the six model configurations.
+'''),code('''
+j=study.l[['text_id','side','change']].merge(study.h[['text_id','side','change']],on=['text_id','side'],suffixes=('_llm','_human'),validate='many_to_one')
+types=study.events().event.drop_duplicates().tolist()
+cross=pd.crosstab(j.change_human,j.change_llm).reindex(index=types,columns=types,fill_value=0)
+percent=cross.div(cross.sum(axis=1),axis=0).fillna(0)*100
+short=['No change','Same support','Appear only','Disappear only','Appear + disappear']
+fig,ax=plt.subplots(figsize=(10,6));im=ax.imshow(percent,cmap='Blues',vmin=0,vmax=100)
+for i in range(5):
+    for k in range(5):ax.text(k,i,f'{percent.iloc[i,k]:.1f}%',ha='center',va='center',color='white' if percent.iloc[i,k]>50 else 'black')
+ax.set_xticks(range(5),short,rotation=25,ha='right');ax.set_yticks(range(5),short);ax.set_xlabel('LLM event');ax.set_ylabel('Human event');ax.set_title('Same text and persona: how event types correspond');fig.colorbar(im,ax=ax,label='Within-human-row percentage');finish(fig,'human_model_event_correspondence')
+table(cross.reset_index(),'human_model_event_counts');table(cross.sum(axis=1).rename('matched_comparisons').reset_index(),'human_event_denominators')
+explain('**What this shows:** agreement on a winner is not the only form of resemblance. This matrix shows whether the two sources change the structure of their distributions similarly. Unequal counts and the different sampling processes remain alternative explanations for source differences; this is exploratory.')
+'''),md('''
+## 7. Where does probability mass go, on average?
+
+For each emotion, compute persona share minus neutral share. Average the two personas within each text (and six configurations for models). The heatmap shows mean percentage-point changes, so increases and decreases can cancel across texts or personas.
+
+The accompanying tests are exploratory sign-flip tests of mean text-level deltas. BH correction covers the full family of 66 source × category × emotion tests. They assume independent, sign-exchangeable text deltas; the participant-dependence limitation still applies.
+'''),code('''
+emotion_rows=[]
+for src,d in [('Human',study.h),('LLM',study.l)]:
+    expanded=pd.DataFrame(np.stack(d.delta),columns=E);expanded['text_id']=d.text_id.to_numpy();expanded['category']=d.category.to_numpy()
+    t=expanded.groupby(['text_id','category'])[E].mean().reset_index()
+    for cat in CATS:
+        vals=t.loc[t.category==cat,E].to_numpy();rng=np.random.default_rng(808)
+        null=rng.choice([-1,1],size=(N_RANDOM,len(vals)))@vals/len(vals)
+        for k,e in enumerate(E):
+            obs=vals[:,k].mean();p=(1+(np.abs(null[:,k])>=abs(obs)-1e-12).sum())/(N_RANDOM+1)
+            emotion_rows.append({'source':src,'category':CAT_NAME[cat],'emotion':e,'mean_change_pp':100*obs,'p_raw':p})
+emotion_tests=pd.DataFrame(emotion_rows);emotion_tests['p_BH']=bh_fdr(emotion_tests.p_raw)
+fig,axes=plt.subplots(1,2,figsize=(13,4.5));limit=max(abs(emotion_tests.mean_change_pp).max(),1)
+for ax,src in zip(axes,['Human','LLM']):
+    grid=emotion_tests[emotion_tests.source==src].pivot(index='category',columns='emotion',values='mean_change_pp').reindex(index=CAT_NAMES,columns=E)
+    im=ax.imshow(grid,cmap='RdBu_r',vmin=-limit,vmax=limit,aspect='auto');ax.set_xticks(range(11),E,rotation=60,ha='right',fontsize=8);ax.set_yticks(range(3),CAT_NAMES,fontsize=9);ax.set_title(src)
+    for i in range(3):
+        for k in range(11):ax.text(k,i,f'{grid.iloc[i,k]:.1f}',ha='center',va='center',fontsize=7)
+    fig.colorbar(im,ax=ax,label='Mean signed change (pp)',shrink=.7)
+finish(fig,'emotion_share_changes');table(emotion_tests,'exploratory_per_emotion_tests',4)
+explain(f'**Statistical reading:** {(emotion_tests.p_BH<.05).sum()}/66 changes reject after BH correction under this exploratory reference. **Substantive reading:** red means share gained, blue share lost; it does not show the percentage of texts with that change. Cancellation can hide strong but opposing persona-specific shifts.')
+'''),md('''
+## 8. Do distributions spread out — and could vote counts explain part of it?
+
+Entropy describes dispersion. A higher value means a more spread-out empirical distribution; it is not how far the distribution moved. Entropy and TV are count-sensitive.
+
+We repeat both statistics after taking three votes per human condition and the **same three model identities** on both sides of each model comparison, using 200 draws. This is sampling without replacement from the observed answers. The point estimate averages those draws, then averages comparisons within texts. Intervals resample texts after this Monte Carlo average; they do not model unobserved respondents or future model generations.
+
+The same human comparison is standardised once and used across model configurations. This sensitivity equalises observed count and model composition. It cannot turn the between-person human design into a within-model design.
+'''),code('''
+standardised,standardised_summary=study.count_sensitivity();table(standardised_summary,'count_standardisation_summary',4)
+fig,axes=plt.subplots(1,2,figsize=(12,5))
+for ax,quantity,scale,ylabel in [(axes[0],'tv',100,'Mean TV × 100'),(axes[1],'entropy',1,'Mean persona − neutral entropy (nats)')]:
+    for j,src in enumerate(['Human','LLM']):
+        q=standardised_summary[standardised_summary.source==src].set_index('quantity').loc[[quantity+'_raw',quantity+'_standardised']]
+        x=np.arange(2)+(j-.5)*.34;ax.bar(x,q['mean']*scale,.32,label=src,color=COLORS[src]);ax.errorbar(x,q['mean']*scale,yerr=[(q['mean']-q.ci_lo)*scale,(q.ci_hi-q['mean'])*scale],fmt='none',color='black',capsize=3)
+    ax.set_xticks([0,1],['Original counts','Three votes each']);ax.set_ylabel(ylabel);ax.axhline(0,color='grey',lw=.8);ax.legend();ax.set_title('Distance' if quantity=='tv' else 'Dispersion')
+finish(fig,'count_standardisation_TV_entropy')
+per_text=standardised.groupby(['source','text_id'])[['tv_raw','tv_standardised']].mean().unstack('source')
+gap_rows=[]
+for quantity in ['tv_raw','tv_standardised']:
+    p,lo,hi=boot_mean(per_text[quantity]['Human']-per_text[quantity]['LLM'])
+    gap_rows.append({'analysis':quantity,'mean_gap_pp':100*p,'ci_lo':100*lo,'ci_hi':100*hi})
+gap=pd.DataFrame(gap_rows);table(gap,'count_standardised_magnitude_gap',3)
+explain(f'**Magnitude answer:** the human−model gap is {gap.iloc[0].mean_gap_pp:.2f}pp at the original counts and approximately {gap.iloc[1].mean_gap_pp:.0f}pp with three votes each. The difference between estimates is a sensitivity result, not a causal attribution to count granularity. **Entropy answer:** compare both sources before and after standardisation; any remaining source difference still does not establish a psychological mechanism. Seed and vote order are fixed; Monte Carlo decimals should not be overinterpreted.')
+'''),md('''
+## 9. Do individual models change, even when the ensemble summary does not?
+
+Each model contributes one selected response per condition. The plot counts paired answers that differ, retaining a model only when both answers are valid. This is distinct from the ensemble's winning-label-change rate and from its vector coordination test.
+'''),code('''
+ind=study.individual.groupby('model').agg(valid_pairs=('changed','size'),changed_pairs=('changed','sum'),change_rate=('changed','mean')).sort_values('change_rate')
+ind['change_pct']=100*ind.change_rate
+fig,ax=plt.subplots(figsize=(9,5));ax.barh(ind.index,ind.change_pct,color='#d66b35')
+for i,(_,r) in enumerate(ind.iterrows()):ax.text(r.change_pct+.3,i,f'{r.change_pct:.1f}% ({int(r.changed_pairs):,}/{int(r.valid_pairs):,})',va='center',fontsize=9)
+ax.set_xlim(0,ind.change_pct.max()+14);ax.set_xlabel('Valid model pairs with different answers (%)');ax.set_title('Individual recorded changes');finish(fig,'individual_model_changes');table(ind.reset_index(),'individual_model_change_rates',2)
+changed=study.individual.groupby(['text_id','side','config']).changed.sum()
+coordination=pd.DataFrame({'discordant_models':changed.value_counts().sort_index().index,'comparisons':changed.value_counts().sort_index().values})
+table(coordination,'ensemble_discordance_counts')
+explain(f'**H2 context:** {study.individual.changed.sum():,}/{len(study.individual):,} model pairs change their answer. {(changed<=1).mean()*100:.1f}% of ensemble cells have at most one changed model, so paired-swap TV has no variance in those cells. The ensemble test addresses coordination; this plot addresses individual recorded differences. No between-model superiority claim follows from these descriptive ranks or one generation per condition.')
+'''),md('''
+## 10. Does prompt configuration change the old or new outcome?
+
+For each text and exact configuration, average the two persona comparisons. Repeat the comparison across configurations for selected-label frequency and TV. The Friedman tests use 300 paired text profiles, separately for the two outcomes. They are exploratory; no rejection is not prompt equivalence and neither outcome is classification accuracy.
+'''),code('''
+prompt_results=[];fig,axes=plt.subplots(1,2,figsize=(13,5))
+for ax,metric in zip(axes,['flip','tv']):
+    values,result=study.prompt(metric);prompt_results.append(result)
+    groups=[values[c].to_numpy()*100 for c in values]
+    ax.boxplot(groups,showfliers=False);ax.set_xticks(range(1,7),values.columns,rotation=45,ha='right',fontsize=8)
+    ax.set_ylabel('Text-level label-change rate (%)' if metric=='flip' else 'Text-level mean TV × 100');ax.set_title(('Old: selected labels' if metric=='flip' else 'New: vectors')+f' — Friedman p={result.iloc[0].p_value:.4f}')
+finish(fig,'prompt_old_and_vector');table(pd.concat(prompt_results,ignore_index=True),'prompt_comparison_tests')
+explain('**Meaning:** a repeated pattern across configurations is useful descriptive information. A non-significant configuration test does not establish that every configuration has an independently significant persona effect or the same predictive accuracy.')
+'''),md('''
+## 11. Is a specific persona different from a generic author cue?
+
+This control is available for models only. To make all three comparisons genuinely comparable, use a **three-way intersection of valid models** within each text, configuration and persona side: neutral, generic human and that persona. This is stricter than independently matching a different set for each pair.
+
+The same three-way intersection is used for both categorical and vector outcomes. TV distances still do not add: the bars do not identify causal percentages for “author presence” and “persona content.”
+'''),code('''
+control=[]
+for tid in study.ids:
+    for side in ['a','b']:
+        for pv,lf in study.configs:
+            n=study.mvotes[(tid,'neutral',pv,lf)];g=study.mvotes[(tid,'generic_human',pv,lf)];p=study.mvotes[(tid,'persona_'+side,pv,lf)]
+            common=sorted(n.keys()&g.keys()&p.keys());assert len(common)>=3
+            for label,a,b in [('Neutral → generic',n,g),('Generic → persona',g,p),('Neutral → persona',n,p)]:
+                pa=vec([a[m] for m in common]);pb=vec([b[m] for m in common])
+                control.append({'text_id':tid,'side':side,'config':pv+'/'+lf,'contrast':label,'n_models':len(common),
+                    'flip':int(pa.argmax()!=pb.argmax()),'tv':abs(pa-pb).sum()/2})
+control=pd.DataFrame(control);rows=[]
+for (side,contrast),q in control.groupby(['side','contrast']):
+    for metric in ['flip','tv']:
+        point,lo,hi=boot_mean(q.groupby('text_id')[metric].mean())
+        rows.append({'side':side,'contrast':contrast,'metric':metric,'mean_pct':100*point,'ci_lo':100*lo,'ci_hi':100*hi,'cells':len(q),'min_common_models':q.n_models.min()})
+control_summary=pd.DataFrame(rows);table(control_summary,'generic_author_three_way_control',2)
+fig,axes=plt.subplots(1,2,figsize=(13,5));order=['Neutral → generic','Generic → persona','Neutral → persona']
+for ax,metric in zip(axes,['flip','tv']):
+    for j,side in enumerate(['a','b']):
+        q=control_summary[(control_summary.side==side)&(control_summary.metric==metric)].set_index('contrast').reindex(order)
+        x=np.arange(3)+(j-.5)*.34;ax.bar(x,q.mean_pct,.32,label='Persona '+side.upper());ax.errorbar(x,q.mean_pct,yerr=[q.mean_pct-q.ci_lo,q.ci_hi-q.mean_pct],fmt='none',color='black',capsize=3)
+    ax.set_xticks(range(3),order,rotation=20,ha='right');ax.set_ylabel('Selected-label changes (%)' if metric=='flip' else 'Mean TV × 100');ax.set_title('Old method' if metric=='flip' else 'Vector method');ax.legend()
+finish(fig,'generic_author_control_comparison')
+explain('**Meaning:** these contrasts describe what is associated with generic and specific author cues among exactly the same models within each triplet. They cannot be interpreted as additive components of a total causal effect. The neutral→generic contrast is indexed by persona triplet because the eligible model set can differ between A and B.')
+'''),md('''
+## 12. Are the old H3 conclusions sensitive to the same reference problem?
+
+Notebook 1 showed a conditional-null sensitivity for TV. For a fair comparison, apply the same logic to the old selected-label-change indicator. Ties and dispersed vote pools can also make label switches likely under reassignment. This is a post-hoc reference adjustment, not a causal correction.
+'''),code('''
+old_sensitivity,_=study.h3('flip');table(old_sensitivity,'old_H3_conditional_reference_sensitivity')
+explain('**What this adds:** the old method is not exempt from sampling variation simply because its outcome is categorical. Read the direct AR−AI raw and referenced rows together, using the same caution applied to vector H3.')
+'''),md('''
+## 13. Final interpretation: what the collected data represent
+
+The data are **empirical distributions of judgments under different author frames**. Human vectors summarise different readers; model vectors summarise different systems. They are not repeated measurements of the same person's internal emotions, and the ensemble is not one model's probability distribution.
+
+The analyses now distinguish:
+
+- a change of selected label;
+- a change of the complete tied top set;
+- changing shares among exactly the same observed emotions;
+- appearance and disappearance of observed labels;
+- the amount and direction of redistribution;
+- differences in concentration, prompt conditions and individual model responses;
+- raw differences and what remains relative to specified sampling references.
+
+**What to say in your defence:** “Vectorisation lets us see where the votes go. A majority label only tells us the winner. We measure how often the winner hides a change, whether the change adds or removes observed emotions or only changes their shares, and whether humans and models move similarly. The hypothesis results are qualified by the sampling references and study design.”
+
+### What these notebooks do not manufacture
+
+They do not recover unavailable respondent identities, invent repeated model generations, identify a causal decomposition from three distances, or guarantee that all hypotheses hold. They retain the confirmed participant assignment and document the remaining uncertainty. The exact results tables, input hashes, source calculations and full execution records accompany the notebooks.
+''')]
+write('02_understanding_distribution_changes.ipynb',cells)
+print('Created the two guided notebook sources.')

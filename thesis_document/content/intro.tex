@@ -1,0 +1,124 @@
+\chapter{Introduction}
+\label{c:introduction}
+
+\noindent
+Emotion recognition in text tries to identify the affective state expressed or implied in written
+language. Sentiment analysis typically reduces to positive and negative polarity; emotion
+classification instead assigns finer-grained categories such as joy, anger, fear, shame, pride or
+sadness. The task is hard because emotional meaning is rarely stated outright. It arises
+from the interaction of linguistic content, situational context, and the assumptions a reader
+makes about the person speaking.
+
+The major challenge is ambiguity. Some texts allow a variety of reasonable emotional readings,
+due to underspecified context, an emotionally complicated situation, or the relative position of
+writer and reader. Even short, seemingly simple statements can be read in competing ways.
+Consider:
+
+\begin{quote}
+I can't believe I actually did that.
+\end{quote}
+
+\noindent
+Without further context, this could be a statement of pride, embarrassment, regret, excitement,
+or disbelief. Background assumptions tend to resolve such ambiguity for the reader, and one of
+the most accessible is an assumption about \emph{who} is speaking. Attributed to someone running
+their first marathon, the sentence invites one emotional reading; attributed to someone
+recounting a lapse of judgment, it invites a different one, yet the words are the same.
+
+\section{Motivation}
+\label{intro:motivation}
+
+\noindent
+The thesis has two motivations.
+
+The first is computational. Large language models are now widely used for text classification,
+emotion recognition included, and are known to be sensitive to prompt framing and contextual
+cues. If minimal author information systematically changes a model's emotional interpretation,
+then an emotion classifier's output is shaped by the social context supplied in the prompt, not
+by text content alone. That bears directly on how such systems are evaluated and deployed.
+
+The second is cognitive and social: do models reflect human interpretive behaviour when dealing
+with ambiguous emotional content? Humans demonstrably use assumptions about a speaker to
+disambiguate. Whether models do the same, and to what extent and in what direction, is an
+empirical question. It has not been directly investigated by manipulating perceived authorship
+while holding the text constant.
+
+\section{Problem Statement}
+\label{intro:problem}
+
+\noindent
+Current research on emotion recognition largely treats disagreement among annotators as
+noise to be removed. Datasets often include a single aggregated label for each text, most
+frequently by majority vote, and models are trained and evaluated against that label. Built into
+this practice is an assumption that fails for a large portion of ambiguous texts: that there is
+one correct emotional reading and that annotators who do not stay with that reading are simply
+in error.
+
+The problem addressed here has two parts. The first is whether perceived author identity has a
+systematic effect on emotion interpretation, in both humans and models, or only affects it
+incidentally. The second is whether the normal practice of collapsing judgments to a single label
+can detect such an influence at all. Suppose author framing causes a shift in the
+\emph{distribution} of plausible readings without necessarily changing which reading is most
+popular. An analysis based on a majority label will then record no change where an actual change
+occurred.
+
+\section{Research Approach}
+\label{intro:approach}
+
+\noindent
+The thesis manipulates perceived authorship experimentally and keeps the textual content fixed.
+Three hundred texts from the crowd-enVent corpus \cite{Troiano2023CrowdEnVent} were stratified
+into three groups: unambiguous control texts, author-independent ambiguous texts, and
+author-relevant ambiguous texts. Each text was framed neutrally and under two contrasting author
+personas. Human annotations were collected for all framings, and seven large language models
+labelled every text across four framings and six prompt settings.
+
+What distinguishes this work is its choice of representation. All judgments, human and model, are
+modelled as full probability distributions over the label set of eleven emotions rather than as a
+single label. Framing effects are then shifts in that distribution: their \emph{magnitude} is the total variation
+distance, their \emph{direction} the signed change in probability mass across emotions. Using this,
+one can distinguish a text that was only slightly reinterpreted from one that was substantially
+reinterpreted but happened to retain the same most-popular answer.
+
+\section{Contributions}
+\label{intro:contributions}
+
+\noindent
+The contributions of this thesis are as follows.
+
+\begin{itemize}
+    \item An experimental design that dissociates the influence of perceived authorship on
+    emotion interpretation by changing author framing while holding text fixed, implemented in
+    parallel on human annotators and seven large language models.
+
+    \item A distributional analysis framework in which each judgment is an eleven-dimensional
+    probability vector, with the magnitude and direction of framing-induced shift measured
+    separately and never mixed together.
+
+    \item Empirical evidence that author framing measurably shifts both human and model emotion
+    judgments, together with a control condition that dissociates the effect of the persona's
+    content from the mere presence of an author attribution.
+
+    \item A direct measure of what majority-label analysis gives up: the fraction of judgments
+    that shifted but would have been recorded as unchanged.
+
+    \item An explicit account of what these data can and cannot establish, including a
+    sensitivity analysis showing that, at this sample size, the predicted ordering across
+    ambiguity categories cannot be separated from baseline disagreement.
+\end{itemize}
+
+\section{Thesis Structure}
+\label{intro:structure}
+
+\noindent
+Chapter~\ref{c:literature} examines research on emotion recognition and annotator disagreement,
+and on framing effects arising from perceived authorship, and identifies the gap this thesis
+addresses. Chapter~\ref{c:methodology} describes the corpus, how texts were categorised by
+ambiguity type, and the author-framing manipulation, together with the research questions and
+hypotheses. The entire pipeline is recorded in chapter~\ref{c:implementation}: prompt
+construction, model evaluation, the human annotation study, the generation of emotion probability
+vectors, the metrics derived from them, and the quality-control and statistical procedures.
+Chapter~\ref{c:result} is a hypothesis-by-hypothesis report of the results. These results are
+explained in relation to the research questions in chapter~\ref{c:discussion}, and the
+limitations of the design are set out, along with recommendations for future research.
+Chapter~\ref{c:conclusion} concludes.

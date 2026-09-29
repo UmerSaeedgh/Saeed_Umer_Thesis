@@ -1,0 +1,2101 @@
+,text_id,category,comparison,label_agrees,tv,cosine
+0,21,author_relevant,Original vs new human neutral,True,0.4666666666666667,0.6963106238227913
+1,21,author_relevant,Human vs LLM neutral,False,0.38095238095238093,0.700140042014005
+2,21,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.7947194142390263
+3,21,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.816496580927726
+4,21,author_relevant,Human vs LLM neutral,False,0.38095238095238093,0.7504787743864565
+5,21,author_relevant,Human vs LLM neutral,False,0.5238095238095238,0.6666666666666666
+6,21,author_relevant,Human vs LLM neutral,False,0.38095238095238093,0.7559289460184545
+7,99,author_relevant,Original vs new human neutral,False,0.9999999999999999,0.0
+8,99,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.42008402520840304
+9,99,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.28005601680560205
+10,99,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.28005601680560205
+11,99,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.28005601680560205
+12,99,author_relevant,Human vs LLM neutral,False,0.8571428571428571,0.12598815766974242
+13,99,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.28005601680560205
+14,249,author_independent,Original vs new human neutral,False,0.6666666666666667,0.43386091563731227
+15,249,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+16,249,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+17,249,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+18,249,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+19,249,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+20,249,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+21,253,author_relevant,Original vs new human neutral,False,0.9999999999999999,0.0
+22,253,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.4303314829119351
+23,253,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.3585685828003181
+24,253,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.4303314829119351
+25,253,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.39036002917941326
+26,253,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.4411287732562847
+27,253,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.4411287732562847
+28,272,author_independent,Original vs new human neutral,False,1.0,0.0
+29,272,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+30,272,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.8728715609439696
+31,272,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.8728715609439696
+32,272,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.6882472016116853
+33,272,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+34,272,author_independent,Human vs LLM neutral,True,0.5714285714285714,0.727606875108999
+35,276,author_independent,Original vs new human neutral,True,0.39999999999999997,0.8451542547285165
+36,276,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+37,276,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+38,276,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+39,276,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+40,276,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+41,276,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+42,281,author_independent,Original vs new human neutral,False,0.8,0.24253562503633294
+43,281,author_independent,Human vs LLM neutral,True,0.4285714285714286,0.8
+44,281,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+45,281,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.6000000000000001
+46,281,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+47,281,author_independent,Human vs LLM neutral,True,0.4285714285714286,0.8
+48,281,author_independent,Human vs LLM neutral,True,0.4285714285714286,0.8
+49,287,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+50,287,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+51,287,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+52,287,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+53,287,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+54,287,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+55,287,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+56,315,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+57,315,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+58,315,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+59,315,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+60,315,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+61,315,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+62,315,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+63,340,unambiguous,Original vs new human neutral,True,0.0,1.0
+64,340,unambiguous,Human vs LLM neutral,True,0.0,1.0
+65,340,unambiguous,Human vs LLM neutral,True,0.0,1.0
+66,340,unambiguous,Human vs LLM neutral,True,0.0,1.0
+67,340,unambiguous,Human vs LLM neutral,True,0.0,1.0
+68,340,unambiguous,Human vs LLM neutral,True,0.0,1.0
+69,340,unambiguous,Human vs LLM neutral,True,0.0,1.0
+70,378,author_relevant,Original vs new human neutral,True,0.6,0.5962847939999438
+71,378,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+72,378,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+73,378,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+74,378,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+75,378,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+76,378,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+77,387,unambiguous,Original vs new human neutral,False,0.9999999999999999,0.0
+78,387,unambiguous,Human vs LLM neutral,False,1.0,0.0
+79,387,unambiguous,Human vs LLM neutral,False,0.8,0.10846522890932807
+80,387,unambiguous,Human vs LLM neutral,False,1.0,0.0
+81,387,unambiguous,Human vs LLM neutral,False,1.0,0.0
+82,387,unambiguous,Human vs LLM neutral,True,0.5,0.7071067811865476
+83,387,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.4780914437337575
+84,414,author_independent,Original vs new human neutral,False,0.6666666666666667,0.4472135954999579
+85,414,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.4303314829119351
+86,414,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.4303314829119351
+87,414,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.4411287732562847
+88,414,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.4411287732562847
+89,414,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.4411287732562847
+90,414,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.4411287732562847
+91,437,unambiguous,Original vs new human neutral,True,0.0,1.0
+92,437,unambiguous,Human vs LLM neutral,True,0.0,1.0
+93,437,unambiguous,Human vs LLM neutral,True,0.0,1.0
+94,437,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+95,437,unambiguous,Human vs LLM neutral,True,0.0,1.0
+96,437,unambiguous,Human vs LLM neutral,True,0.0,1.0
+97,437,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+98,441,author_relevant,Original vs new human neutral,False,0.8,0.30151134457776363
+99,441,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+100,441,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.8
+101,441,author_relevant,Human vs LLM neutral,True,0.0,1.0
+102,441,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+103,441,author_relevant,Human vs LLM neutral,True,0.0,1.0
+104,441,author_relevant,Human vs LLM neutral,True,0.0,1.0
+105,458,unambiguous,Original vs new human neutral,False,0.6666666666666667,0.4472135954999579
+106,458,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+107,458,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+108,458,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.6024640760767092
+109,458,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+110,458,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+111,458,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+112,476,author_independent,Original vs new human neutral,True,0.4,0.8090398349558904
+113,476,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+114,476,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+115,476,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+116,476,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+117,476,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+118,476,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+119,481,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+120,481,unambiguous,Human vs LLM neutral,True,0.0,1.0
+121,481,unambiguous,Human vs LLM neutral,True,0.0,1.0
+122,481,unambiguous,Human vs LLM neutral,True,0.0,1.0
+123,481,unambiguous,Human vs LLM neutral,True,0.0,1.0
+124,481,unambiguous,Human vs LLM neutral,True,0.0,1.0
+125,481,unambiguous,Human vs LLM neutral,True,0.0,1.0
+126,494,author_independent,Original vs new human neutral,True,0.08333333333333334,0.9899494936611666
+127,494,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+128,494,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+129,494,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+130,494,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+131,494,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+132,494,author_independent,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+133,521,author_independent,Original vs new human neutral,True,0.6,0.6761234037828132
+134,521,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+135,521,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8770580193070292
+136,521,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.848528137423857
+137,521,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+138,521,author_independent,Human vs LLM neutral,True,0.4,0.7442084075352505
+139,521,author_independent,Human vs LLM neutral,True,0.4,0.7442084075352505
+140,525,author_independent,Original vs new human neutral,True,0.4,0.8320502943378436
+141,525,author_independent,Human vs LLM neutral,True,0.0,1.0
+142,525,author_independent,Human vs LLM neutral,True,0.0,1.0
+143,525,author_independent,Human vs LLM neutral,True,0.0,1.0
+144,525,author_independent,Human vs LLM neutral,True,0.0,1.0
+145,525,author_independent,Human vs LLM neutral,True,0.0,1.0
+146,525,author_independent,Human vs LLM neutral,True,0.0,1.0
+147,553,author_independent,Original vs new human neutral,True,0.19999999999999998,0.9438798074485387
+148,553,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+149,553,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+150,553,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+151,553,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+152,553,author_independent,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+153,553,author_independent,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+154,588,author_independent,Original vs new human neutral,True,0.19999999999999998,0.9438798074485387
+155,588,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+156,588,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+157,588,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+158,588,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+159,588,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+160,588,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+161,594,author_independent,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+162,594,author_independent,Human vs LLM neutral,True,0.0,1.0
+163,594,author_independent,Human vs LLM neutral,True,0.0,1.0
+164,594,author_independent,Human vs LLM neutral,True,0.0,1.0
+165,594,author_independent,Human vs LLM neutral,True,0.0,1.0
+166,594,author_independent,Human vs LLM neutral,True,0.0,1.0
+167,594,author_independent,Human vs LLM neutral,True,0.0,1.0
+168,612,unambiguous,Original vs new human neutral,False,0.8,0.24253562503633294
+169,612,unambiguous,Human vs LLM neutral,False,0.8571428571428572,0.2182178902359924
+170,612,unambiguous,Human vs LLM neutral,False,1.0,0.0
+171,612,unambiguous,Human vs LLM neutral,False,0.8571428571428571,0.25819888974716115
+172,612,unambiguous,Human vs LLM neutral,False,1.0,0.0
+173,612,unambiguous,Human vs LLM neutral,True,0.5714285714285714,0.6882472016116853
+174,612,unambiguous,Human vs LLM neutral,False,0.7142857142857142,0.485071250072666
+175,623,author_independent,Original vs new human neutral,True,0.19999999999999998,0.9438798074485388
+176,623,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+177,623,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+178,623,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+179,623,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+180,623,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+181,623,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6024640760767092
+182,641,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+183,641,unambiguous,Human vs LLM neutral,True,0.0,1.0
+184,641,unambiguous,Human vs LLM neutral,True,0.0,1.0
+185,641,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+186,641,unambiguous,Human vs LLM neutral,True,0.0,1.0
+187,641,unambiguous,Human vs LLM neutral,True,0.0,1.0
+188,641,unambiguous,Human vs LLM neutral,True,0.0,1.0
+189,657,author_independent,Original vs new human neutral,True,0.5,0.7071067811865475
+190,657,author_independent,Human vs LLM neutral,True,0.49999999999999994,0.8017837257372732
+191,657,author_independent,Human vs LLM neutral,True,0.5,0.8660254037844385
+192,657,author_independent,Human vs LLM neutral,False,0.6,0.5547001962252291
+193,657,author_independent,Human vs LLM neutral,True,0.5714285714285714,0.7745966692414833
+194,657,author_independent,Human vs LLM neutral,True,0.5714285714285714,0.6882472016116853
+195,657,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.8728715609439696
+196,762,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+197,762,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+198,762,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+199,762,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+200,762,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+201,762,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+202,762,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+203,783,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+204,783,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+205,783,unambiguous,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+206,783,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+207,783,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+208,783,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+209,783,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+210,825,author_relevant,Original vs new human neutral,False,0.6000000000000001,0.6666666666666666
+211,825,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6000000000000001
+212,825,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6000000000000001
+213,825,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6000000000000001
+214,825,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6000000000000001
+215,825,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.8
+216,825,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.8728715609439696
+217,922,author_independent,Original vs new human neutral,False,0.8,0.3779644730092272
+218,922,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.485071250072666
+219,922,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.6882472016116853
+220,922,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+221,922,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.485071250072666
+222,922,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+223,922,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+224,2105,author_relevant,Original vs new human neutral,False,0.7999999999999999,0.2696799449852968
+225,2105,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+226,2105,author_relevant,Human vs LLM neutral,True,0.23809523809523808,0.9233805168766386
+227,2105,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.8677218312746248
+228,2105,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.7181848464596078
+229,2105,author_relevant,Human vs LLM neutral,False,0.38095238095238093,0.7592566023652967
+230,2105,author_relevant,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+231,2142,author_independent,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+232,2142,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+233,2142,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+234,2142,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+235,2142,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+236,2142,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+237,2142,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+238,2143,unambiguous,Original vs new human neutral,False,0.6666666666666667,0.4472135954999579
+239,2143,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+240,2143,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+241,2143,unambiguous,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+242,2143,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+243,2143,unambiguous,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+244,2143,unambiguous,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+245,2161,author_independent,Original vs new human neutral,False,0.6666666666666667,0.37210420376762526
+246,2161,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.2683281572999748
+247,2161,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+248,2161,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.35777087639996635
+249,2161,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.41522739926869984
+250,2161,author_independent,Human vs LLM neutral,False,0.857142857142857,0.07352146220938079
+251,2161,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.35777087639996635
+252,2163,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+253,2163,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+254,2163,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+255,2163,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+256,2163,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+257,2163,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+258,2163,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+259,2168,author_relevant,Original vs new human neutral,True,0.6000000000000001,0.6666666666666666
+260,2168,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+261,2168,author_relevant,Human vs LLM neutral,True,0.0,1.0
+262,2168,author_relevant,Human vs LLM neutral,True,0.0,1.0
+263,2168,author_relevant,Human vs LLM neutral,True,0.0,1.0
+264,2168,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+265,2168,author_relevant,Human vs LLM neutral,True,0.0,1.0
+266,2172,author_relevant,Original vs new human neutral,True,0.4,0.8090398349558904
+267,2172,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+268,2172,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+269,2172,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.7807200583588265
+270,2172,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.7807200583588265
+271,2172,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+272,2172,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+273,2182,author_relevant,Original vs new human neutral,False,0.4666666666666667,0.6963106238227913
+274,2182,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.3464101615137755
+275,2182,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.214422506967559
+276,2182,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.4618802153517007
+277,2182,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.3464101615137755
+278,2182,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.4618802153517007
+279,2182,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.3464101615137755
+280,2187,author_relevant,Original vs new human neutral,False,0.6666666666666666,0.4045199174779452
+281,2187,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.8677218312746248
+282,2187,author_relevant,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+283,2187,author_relevant,Human vs LLM neutral,False,0.38095238095238093,0.7592566023652967
+284,2187,author_relevant,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+285,2187,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5855400437691199
+286,2187,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.6024640760767092
+287,2198,author_relevant,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+288,2198,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+289,2198,author_relevant,Human vs LLM neutral,True,0.14285714285714285,0.9759000729485332
+290,2198,author_relevant,Human vs LLM neutral,True,0.14285714285714285,0.9759000729485332
+291,2198,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+292,2198,author_relevant,Human vs LLM neutral,True,0.14285714285714285,0.9759000729485332
+293,2198,author_relevant,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+294,2211,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+295,2211,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8606629658238703
+296,2211,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8606629658238703
+297,2211,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8432740427115677
+298,2211,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8606629658238703
+299,2211,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8606629658238703
+300,2211,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8606629658238703
+301,2212,author_relevant,Original vs new human neutral,True,0.19999999999999998,0.9438798074485388
+302,2212,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+303,2212,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+304,2212,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+305,2212,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+306,2212,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+307,2212,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+308,2213,author_relevant,Original vs new human neutral,False,0.4666666666666667,0.5962847939999438
+309,2213,author_relevant,Human vs LLM neutral,True,0.14285714285714285,0.9759000729485332
+310,2213,author_relevant,Human vs LLM neutral,True,0.14285714285714285,0.9759000729485332
+311,2213,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+312,2213,author_relevant,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+313,2213,author_relevant,Human vs LLM neutral,True,0.14285714285714285,0.9759000729485332
+314,2213,author_relevant,Human vs LLM neutral,False,0.38095238095238093,0.7807200583588265
+315,2218,author_relevant,Original vs new human neutral,False,0.6000000000000001,0.6666666666666666
+316,2218,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.917662935482247
+317,2218,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9622504486493763
+318,2218,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9622504486493763
+319,2218,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.8728715609439696
+320,2218,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9622504486493763
+321,2218,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.917662935482247
+322,2224,author_relevant,Original vs new human neutral,True,0.19999999999999998,0.9438798074485388
+323,2224,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+324,2224,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+325,2224,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+326,2224,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+327,2224,author_relevant,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+328,2224,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+329,2228,author_independent,Original vs new human neutral,True,0.26666666666666666,0.8944271909999159
+330,2228,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.3077935056255462
+331,2228,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.08606629658238703
+332,2228,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.5773502691896257
+333,2228,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.4879500364742666
+334,2228,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.16609095970747992
+335,2228,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.4879500364742666
+336,3107,author_independent,Original vs new human neutral,False,0.4666666666666667,0.6963106238227914
+337,3107,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6666666666666666
+338,3107,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.629940788348712
+339,3107,author_independent,Human vs LLM neutral,False,0.3333333333333333,0.8082903768654762
+340,3107,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7504787743864565
+341,3107,author_independent,Human vs LLM neutral,False,0.3333333333333333,0.8082903768654762
+342,3107,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+343,3117,author_relevant,Original vs new human neutral,False,0.4666666666666667,0.5962847939999438
+344,3117,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+345,3117,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+346,3117,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+347,3117,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+348,3117,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+349,3117,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+350,3118,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+351,3118,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+352,3118,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+353,3118,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+354,3118,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+355,3118,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+356,3118,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+357,3267,author_independent,Original vs new human neutral,False,0.6,0.5547001962252291
+358,3267,author_independent,Human vs LLM neutral,True,0.0,1.0
+359,3267,author_independent,Human vs LLM neutral,True,0.0,1.0
+360,3267,author_independent,Human vs LLM neutral,True,0.0,1.0
+361,3267,author_independent,Human vs LLM neutral,True,0.0,1.0
+362,3267,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+363,3267,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+364,3283,author_independent,Original vs new human neutral,False,0.6666666666666667,0.36514837167011077
+365,3283,author_independent,Human vs LLM neutral,False,1.0,0.0
+366,3283,author_independent,Human vs LLM neutral,False,1.0,0.0
+367,3283,author_independent,Human vs LLM neutral,False,0.857142857142857,0.07352146220938079
+368,3283,author_independent,Human vs LLM neutral,False,1.0,0.0
+369,3283,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.1025978352085154
+370,3283,author_independent,Human vs LLM neutral,False,0.857142857142857,0.09759000729485331
+371,3290,author_relevant,Original vs new human neutral,True,0.06666666666666668,0.9922778767136675
+372,3290,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+373,3290,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+374,3290,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+375,3290,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+376,3290,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+377,3290,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+378,3292,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+379,3292,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+380,3292,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+381,3292,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+382,3292,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+383,3292,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+384,3292,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+385,3319,author_independent,Original vs new human neutral,True,0.6000000000000001,0.6666666666666666
+386,3319,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+387,3319,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+388,3319,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+389,3319,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+390,3319,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+391,3319,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+392,3328,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+393,3328,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+394,3328,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+395,3328,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+396,3328,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+397,3328,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+398,3328,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+399,3338,author_independent,Original vs new human neutral,True,0.6666666666666666,0.5773502691896257
+400,3338,author_independent,Human vs LLM neutral,True,0.6666666666666666,0.5360562674188974
+401,3338,author_independent,Human vs LLM neutral,True,0.6666666666666665,0.5694947974514996
+402,3338,author_independent,Human vs LLM neutral,True,0.6666666666666666,0.5360562674188974
+403,3338,author_independent,Human vs LLM neutral,True,0.6666666666666665,0.5694947974514996
+404,3338,author_independent,Human vs LLM neutral,True,0.6666666666666665,0.5039526306789697
+405,3338,author_independent,Human vs LLM neutral,True,0.6666666666666665,0.5039526306789697
+406,3339,author_independent,Original vs new human neutral,True,0.06666666666666668,0.9922778767136675
+407,3339,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+408,3339,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+409,3339,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+410,3339,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+411,3339,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+412,3339,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+413,3344,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+414,3344,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+415,3344,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+416,3344,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+417,3344,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+418,3344,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+419,3344,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+420,3348,author_relevant,Original vs new human neutral,False,0.41666666666666663,0.7302967433402215
+421,3348,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+422,3348,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+423,3348,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8770580193070292
+424,3348,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+425,3348,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+426,3348,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+427,3370,author_independent,Original vs new human neutral,True,0.6,0.5962847939999438
+428,3370,author_independent,Human vs LLM neutral,False,1.0,0.0
+429,3370,author_independent,Human vs LLM neutral,False,1.0,0.0
+430,3370,author_independent,Human vs LLM neutral,False,1.0,0.0
+431,3370,author_independent,Human vs LLM neutral,False,1.0,0.0
+432,3370,author_independent,Human vs LLM neutral,False,1.0,0.0
+433,3370,author_independent,Human vs LLM neutral,False,1.0,0.0
+434,3426,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+435,3426,unambiguous,Human vs LLM neutral,True,0.0,1.0
+436,3426,unambiguous,Human vs LLM neutral,True,0.0,1.0
+437,3426,unambiguous,Human vs LLM neutral,True,0.0,1.0
+438,3426,unambiguous,Human vs LLM neutral,True,0.0,1.0
+439,3426,unambiguous,Human vs LLM neutral,True,0.0,1.0
+440,3426,unambiguous,Human vs LLM neutral,True,0.0,1.0
+441,3431,unambiguous,Original vs new human neutral,True,0.0,1.0
+442,3431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+443,3431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+444,3431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+445,3431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+446,3431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+447,3431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+448,3443,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+449,3443,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+450,3443,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+451,3443,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+452,3443,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+453,3443,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+454,3443,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+455,3469,unambiguous,Original vs new human neutral,True,0.0,1.0
+456,3469,unambiguous,Human vs LLM neutral,True,0.0,1.0
+457,3469,unambiguous,Human vs LLM neutral,True,0.0,1.0
+458,3469,unambiguous,Human vs LLM neutral,True,0.0,1.0
+459,3469,unambiguous,Human vs LLM neutral,True,0.0,1.0
+460,3469,unambiguous,Human vs LLM neutral,True,0.0,1.0
+461,3469,unambiguous,Human vs LLM neutral,True,0.0,1.0
+462,3481,author_independent,Original vs new human neutral,False,0.2666666666666666,0.8682431421244591
+463,3481,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+464,3481,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+465,3481,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+466,3481,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+467,3481,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+468,3481,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+469,3493,author_independent,Original vs new human neutral,False,0.6666666666666667,0.24806946917841688
+470,3493,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+471,3493,author_independent,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+472,3493,author_independent,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+473,3493,author_independent,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+474,3493,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+475,3493,author_independent,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+476,3514,author_independent,Original vs new human neutral,False,0.6666666666666666,0.36514837167011077
+477,3514,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.2169304578186562
+478,3514,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.35777087639996635
+479,3514,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.16609095970747992
+480,3514,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.3077935056255462
+481,3514,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.19518001458970663
+482,3514,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.08606629658238703
+483,3528,author_relevant,Original vs new human neutral,False,1.0,0.0
+484,3528,author_relevant,Human vs LLM neutral,False,1.0,0.0
+485,3528,author_relevant,Human vs LLM neutral,False,1.0,0.0
+486,3528,author_relevant,Human vs LLM neutral,False,1.0,0.0
+487,3528,author_relevant,Human vs LLM neutral,False,0.8333333333333334,0.17541160386140583
+488,3528,author_relevant,Human vs LLM neutral,False,1.0,0.0
+489,3528,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.33218191941495984
+490,3538,author_relevant,Original vs new human neutral,True,0.4,0.8320502943378436
+491,3538,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+492,3538,author_relevant,Human vs LLM neutral,True,0.0,1.0
+493,3538,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+494,3538,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+495,3538,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+496,3538,author_relevant,Human vs LLM neutral,True,0.0,1.0
+497,3579,author_relevant,Original vs new human neutral,False,0.6666666666666666,0.43386091563731227
+498,3579,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8366600265340756
+499,3579,author_relevant,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+500,3579,author_relevant,Human vs LLM neutral,False,0.23809523809523808,0.9233805168766386
+501,3579,author_relevant,Human vs LLM neutral,True,0.16666666666666663,0.956182887467515
+502,3579,author_relevant,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+503,3579,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+504,3618,author_relevant,Original vs new human neutral,True,0.4,0.8320502943378436
+505,3618,author_relevant,Human vs LLM neutral,True,0.0,1.0
+506,3618,author_relevant,Human vs LLM neutral,True,0.0,1.0
+507,3618,author_relevant,Human vs LLM neutral,True,0.0,1.0
+508,3618,author_relevant,Human vs LLM neutral,True,0.0,1.0
+509,3618,author_relevant,Human vs LLM neutral,True,0.0,1.0
+510,3618,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+511,3620,unambiguous,Original vs new human neutral,True,0.13333333333333336,0.9761870601839525
+512,3620,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+513,3620,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+514,3620,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+515,3620,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+516,3620,unambiguous,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+517,3620,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+518,3639,author_independent,Original vs new human neutral,True,0.33333333333333337,0.848528137423857
+519,3639,author_independent,Human vs LLM neutral,True,0.0,1.0
+520,3639,author_independent,Human vs LLM neutral,True,0.0,1.0
+521,3639,author_independent,Human vs LLM neutral,False,0.49999999999999994,0.6324555320336758
+522,3639,author_independent,Human vs LLM neutral,False,0.49999999999999994,0.6324555320336758
+523,3639,author_independent,Human vs LLM neutral,True,0.26666666666666666,0.8944271909999159
+524,3639,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+525,3641,author_relevant,Original vs new human neutral,False,0.33333333333333337,0.8006407690254357
+526,3641,author_relevant,Human vs LLM neutral,False,0.9999999999999999,0.0
+527,3641,author_relevant,Human vs LLM neutral,False,0.9999999999999999,0.0
+528,3641,author_relevant,Human vs LLM neutral,False,0.9999999999999999,0.0
+529,3641,author_relevant,Human vs LLM neutral,False,0.9999999999999999,0.0
+530,3641,author_relevant,Human vs LLM neutral,False,0.9999999999999999,0.0
+531,3641,author_relevant,Human vs LLM neutral,False,0.9999999999999999,0.0
+532,3645,author_independent,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+533,3645,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+534,3645,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+535,3645,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+536,3645,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+537,3645,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+538,3645,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+539,3649,author_independent,Original vs new human neutral,True,0.0,1.0
+540,3649,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+541,3649,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+542,3649,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+543,3649,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+544,3649,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+545,3649,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+546,3833,author_independent,Original vs new human neutral,True,0.4,0.9045340337332908
+547,3833,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+548,3833,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.9428090415820632
+549,3833,author_independent,Human vs LLM neutral,True,0.16666666666666663,0.9805806756909202
+550,3833,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+551,3833,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+552,3833,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+553,3857,unambiguous,Original vs new human neutral,True,0.6666666666666666,0.5601120336112039
+554,3857,unambiguous,Human vs LLM neutral,True,0.6666666666666666,0.5443310539518174
+555,3857,unambiguous,Human vs LLM neutral,True,0.6666666666666665,0.5694947974514996
+556,3857,unambiguous,Human vs LLM neutral,True,0.5238095238095237,0.6622661785325219
+557,3857,unambiguous,Human vs LLM neutral,True,0.38095238095238093,0.7559289460184545
+558,3857,unambiguous,Human vs LLM neutral,True,0.5238095238095237,0.6644105970267494
+559,3857,unambiguous,Human vs LLM neutral,True,0.6666666666666665,0.5694947974514996
+560,3864,author_independent,Original vs new human neutral,False,0.4666666666666667,0.5773502691896257
+561,3864,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.447213595499958
+562,3864,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.26490647141300877
+563,3864,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.26490647141300877
+564,3864,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.447213595499958
+565,3864,author_independent,Human vs LLM neutral,False,0.4285714285714286,0.5601120336112041
+566,3864,author_independent,Human vs LLM neutral,False,0.380952380952381,0.700140042014005
+567,3936,author_independent,Original vs new human neutral,False,0.33333333333333337,0.8006407690254357
+568,3936,author_independent,Human vs LLM neutral,True,0.5238095238095237,0.6644105970267494
+569,3936,author_independent,Human vs LLM neutral,True,0.5238095238095237,0.6644105970267494
+570,3936,author_independent,Human vs LLM neutral,True,0.49999999999999994,0.6804138174397717
+571,3936,author_independent,Human vs LLM neutral,True,0.38095238095238093,0.7559289460184545
+572,3936,author_independent,Human vs LLM neutral,False,0.09523809523809523,0.980196058819607
+573,3936,author_independent,Human vs LLM neutral,False,0.3333333333333333,0.8082903768654762
+574,3937,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+575,3937,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.8677218312746248
+576,3937,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.8677218312746248
+577,3937,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.5773502691896257
+578,3937,unambiguous,Human vs LLM neutral,False,0.3333333333333333,0.8485281374238569
+579,3937,unambiguous,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+580,3937,unambiguous,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+581,3942,unambiguous,Original vs new human neutral,True,0.0,1.0
+582,3942,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.9622504486493763
+583,3942,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.9622504486493763
+584,3942,unambiguous,Human vs LLM neutral,True,0.49999999999999994,0.8017837257372732
+585,3942,unambiguous,Human vs LLM neutral,True,0.4285714285714286,0.8728715609439696
+586,3942,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+587,3942,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+588,3964,author_independent,Original vs new human neutral,True,0.4,0.8320502943378436
+589,3964,author_independent,Human vs LLM neutral,True,0.0,1.0
+590,3964,author_independent,Human vs LLM neutral,True,0.0,1.0
+591,3964,author_independent,Human vs LLM neutral,True,0.0,1.0
+592,3964,author_independent,Human vs LLM neutral,True,0.0,1.0
+593,3964,author_independent,Human vs LLM neutral,True,0.0,1.0
+594,3964,author_independent,Human vs LLM neutral,True,0.0,1.0
+595,3966,unambiguous,Original vs new human neutral,False,0.8,0.10846522890932807
+596,3966,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.39999999999999997
+597,3966,unambiguous,Human vs LLM neutral,False,0.7142857142857143,0.33218191941495984
+598,3966,unambiguous,Human vs LLM neutral,False,0.8333333333333334,0.17541160386140583
+599,3966,unambiguous,Human vs LLM neutral,False,0.7142857142857143,0.33218191941495984
+600,3966,unambiguous,Human vs LLM neutral,True,0.4285714285714285,0.7155417527999327
+601,3966,unambiguous,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+602,3975,author_relevant,Original vs new human neutral,False,0.4666666666666667,0.5773502691896257
+603,3975,author_relevant,Human vs LLM neutral,True,0.38095238095238093,0.7504787743864565
+604,3975,author_relevant,Human vs LLM neutral,True,0.38095238095238093,0.7504787743864565
+605,3975,author_relevant,Human vs LLM neutral,True,0.23809523809523808,0.8819171036881969
+606,3975,author_relevant,Human vs LLM neutral,True,0.38095238095238093,0.7504787743864565
+607,3975,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8082903768654762
+608,3975,author_relevant,Human vs LLM neutral,True,0.38095238095238093,0.7504787743864565
+609,4117,author_independent,Original vs new human neutral,True,0.39999999999999997,0.7453559924999298
+610,4117,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+611,4117,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+612,4117,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+613,4117,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+614,4117,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+615,4117,author_independent,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+616,4146,unambiguous,Original vs new human neutral,True,0.13333333333333336,0.9761870601839525
+617,4146,unambiguous,Human vs LLM neutral,True,0.23809523809523808,0.9233805168766386
+618,4146,unambiguous,Human vs LLM neutral,True,0.14285714285714285,0.9759000729485332
+619,4146,unambiguous,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+620,4146,unambiguous,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+621,4146,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+622,4146,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+623,4150,unambiguous,Original vs new human neutral,True,0.6666666666666666,0.5601120336112039
+624,4150,unambiguous,Human vs LLM neutral,True,0.6666666666666666,0.5360562674188974
+625,4150,unambiguous,Human vs LLM neutral,True,0.6666666666666665,0.5694947974514996
+626,4150,unambiguous,Human vs LLM neutral,True,0.6666666666666666,0.5360562674188974
+627,4150,unambiguous,Human vs LLM neutral,True,0.6666666666666666,0.5360562674188974
+628,4150,unambiguous,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+629,4150,unambiguous,Human vs LLM neutral,True,0.6666666666666665,0.5694947974514996
+630,4387,author_independent,Original vs new human neutral,False,0.4666666666666667,0.6761234037828132
+631,4387,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+632,4387,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+633,4387,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.33218191941495984
+634,4387,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+635,4387,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.7181848464596078
+636,4387,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.4879500364742666
+637,4410,author_independent,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+638,4410,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.6000000000000001
+639,4410,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+640,4410,author_independent,Human vs LLM neutral,False,1.0,0.0
+641,4410,author_independent,Human vs LLM neutral,True,0.4285714285714286,0.8
+642,4410,author_independent,Human vs LLM neutral,False,1.0,0.0
+643,4410,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+644,4431,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+645,4431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+646,4431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+647,4431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+648,4431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+649,4431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+650,4431,unambiguous,Human vs LLM neutral,True,0.0,1.0
+651,4454,unambiguous,Original vs new human neutral,True,0.0,1.0
+652,4454,unambiguous,Human vs LLM neutral,True,0.0,1.0
+653,4454,unambiguous,Human vs LLM neutral,True,0.0,1.0
+654,4454,unambiguous,Human vs LLM neutral,True,0.0,1.0
+655,4454,unambiguous,Human vs LLM neutral,True,0.0,1.0
+656,4454,unambiguous,Human vs LLM neutral,True,0.0,1.0
+657,4454,unambiguous,Human vs LLM neutral,True,0.0,1.0
+658,4490,unambiguous,Original vs new human neutral,False,1.0,0.0
+659,4490,unambiguous,Human vs LLM neutral,False,1.0,0.0
+660,4490,unambiguous,Human vs LLM neutral,False,1.0,0.0
+661,4490,unambiguous,Human vs LLM neutral,False,1.0,0.0
+662,4490,unambiguous,Human vs LLM neutral,False,1.0,0.0
+663,4490,unambiguous,Human vs LLM neutral,False,1.0,0.0
+664,4490,unambiguous,Human vs LLM neutral,False,0.857142857142857,0.14704292441876157
+665,4497,unambiguous,Original vs new human neutral,False,0.6666666666666667,0.4472135954999579
+666,4497,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.41522739926869984
+667,4497,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.4303314829119351
+668,4497,unambiguous,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+669,4497,unambiguous,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+670,4497,unambiguous,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+671,4497,unambiguous,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+672,4510,author_independent,Original vs new human neutral,False,0.8,0.3380617018914066
+673,4510,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+674,4510,author_independent,Human vs LLM neutral,False,0.7142857142857143,0.46188021535170054
+675,4510,author_independent,Human vs LLM neutral,False,0.7999999999999999,0.39999999999999997
+676,4510,author_independent,Human vs LLM neutral,False,0.857142857142857,0.26967994498529685
+677,4510,author_independent,Human vs LLM neutral,True,0.7142857142857142,0.5393598899705937
+678,4510,author_independent,Human vs LLM neutral,True,0.5714285714285714,0.7442084075352505
+679,4519,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+680,4519,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.9622504486493763
+681,4519,unambiguous,Human vs LLM neutral,True,0.16666666666666663,0.9805806756909202
+682,4519,unambiguous,Human vs LLM neutral,True,0.16666666666666663,0.9805806756909202
+683,4519,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.9428090415820632
+684,4519,unambiguous,Human vs LLM neutral,True,0.49999999999999994,0.8660254037844385
+685,4519,unambiguous,Human vs LLM neutral,True,0.4285714285714286,0.8728715609439696
+686,4571,author_relevant,Original vs new human neutral,False,0.6666666666666667,0.37210420376762526
+687,4571,author_relevant,Human vs LLM neutral,False,0.6666666666666665,0.39036002917941326
+688,4571,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.4103913408340616
+689,4571,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.3077935056255462
+690,4571,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.3162277660168379
+691,4571,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.4385290096535146
+692,4571,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.39999999999999997
+693,4573,author_relevant,Original vs new human neutral,False,1.0,0.0
+694,4573,author_relevant,Human vs LLM neutral,False,0.8333333333333333,0.11952286093343938
+695,4573,author_relevant,Human vs LLM neutral,False,0.9999999999999999,0.0
+696,4573,author_relevant,Human vs LLM neutral,False,1.0,0.0
+697,4573,author_relevant,Human vs LLM neutral,False,1.0,0.0
+698,4573,author_relevant,Human vs LLM neutral,False,1.0,0.0
+699,4573,author_relevant,Human vs LLM neutral,False,1.0,0.0
+700,4592,author_relevant,Original vs new human neutral,True,0.4,0.8320502943378436
+701,4592,author_relevant,Human vs LLM neutral,True,0.0,1.0
+702,4592,author_relevant,Human vs LLM neutral,True,0.0,1.0
+703,4592,author_relevant,Human vs LLM neutral,True,0.0,1.0
+704,4592,author_relevant,Human vs LLM neutral,True,0.0,1.0
+705,4592,author_relevant,Human vs LLM neutral,True,0.0,1.0
+706,4592,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+707,4594,author_independent,Original vs new human neutral,False,0.2666666666666666,0.8703882797784891
+708,4594,author_independent,Human vs LLM neutral,False,0.4666666666666667,0.7001400420140047
+709,4594,author_independent,Human vs LLM neutral,False,0.33333333333333337,0.8006407690254357
+710,4594,author_independent,Human vs LLM neutral,False,0.33333333333333337,0.8006407690254357
+711,4594,author_independent,Human vs LLM neutral,False,0.4666666666666667,0.7001400420140047
+712,4594,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7504787743864565
+713,4594,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7504787743864565
+714,4609,author_independent,Original vs new human neutral,False,1.0,0.0
+715,4609,author_independent,Human vs LLM neutral,False,1.0,0.0
+716,4609,author_independent,Human vs LLM neutral,False,1.0,0.0
+717,4609,author_independent,Human vs LLM neutral,False,1.0,0.0
+718,4609,author_independent,Human vs LLM neutral,False,1.0,0.0
+719,4609,author_independent,Human vs LLM neutral,False,1.0,0.0
+720,4609,author_independent,Human vs LLM neutral,False,1.0,0.0
+721,4636,author_independent,Original vs new human neutral,False,0.4666666666666667,0.5962847939999438
+722,4636,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+723,4636,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+724,4636,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+725,4636,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+726,4636,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+727,4636,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+728,4671,author_independent,Original vs new human neutral,True,0.4666666666666667,0.6963106238227913
+729,4671,author_independent,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+730,4671,author_independent,Human vs LLM neutral,True,0.5238095238095237,0.6644105970267494
+731,4671,author_independent,Human vs LLM neutral,True,0.5238095238095237,0.6644105970267494
+732,4671,author_independent,Human vs LLM neutral,True,0.5238095238095237,0.6644105970267494
+733,4671,author_independent,Human vs LLM neutral,True,0.5238095238095237,0.6644105970267494
+734,4671,author_independent,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+735,4817,author_independent,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+736,4817,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+737,4817,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+738,4817,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+739,4817,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+740,4817,author_independent,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+741,4817,author_independent,Human vs LLM neutral,True,0.14285714285714285,0.9759000729485332
+742,4868,author_independent,Original vs new human neutral,True,0.19999999999999998,0.9438798074485387
+743,4868,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+744,4868,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+745,4868,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+746,4868,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+747,4868,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+748,4868,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+749,4874,unambiguous,Original vs new human neutral,True,0.0,1.0
+750,4874,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+751,4874,unambiguous,Human vs LLM neutral,True,0.0,1.0
+752,4874,unambiguous,Human vs LLM neutral,True,0.0,1.0
+753,4874,unambiguous,Human vs LLM neutral,True,0.0,1.0
+754,4874,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+755,4874,unambiguous,Human vs LLM neutral,True,0.0,1.0
+756,5105,author_relevant,Original vs new human neutral,False,0.8,0.26967994498529685
+757,5105,author_relevant,Human vs LLM neutral,False,0.5,0.5976143046671969
+758,5105,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+759,5105,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.39999999999999997
+760,5105,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.39999999999999997
+761,5105,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.14704292441876157
+762,5105,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.14704292441876157
+763,5130,author_independent,Original vs new human neutral,True,0.4,0.7442084075352505
+764,5130,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+765,5130,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+766,5130,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+767,5130,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+768,5130,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+769,5130,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+770,5166,unambiguous,Original vs new human neutral,True,0.6666666666666666,0.5773502691896257
+771,5166,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8082903768654762
+772,5166,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8082903768654762
+773,5166,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8082903768654762
+774,5166,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8082903768654762
+775,5166,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.7947194142390263
+776,5166,unambiguous,Human vs LLM neutral,True,0.5,0.6793662204867575
+777,5206,author_independent,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+778,5206,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+779,5206,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+780,5206,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+781,5206,author_independent,Human vs LLM neutral,False,1.0,0.0
+782,5206,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+783,5206,author_independent,Human vs LLM neutral,False,0.7142857142857143,0.33218191941495984
+784,5225,author_independent,Original vs new human neutral,True,0.26666666666666666,0.8944271909999159
+785,5225,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+786,5225,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+787,5225,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+788,5225,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+789,5225,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+790,5225,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+791,5502,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+792,5502,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+793,5502,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+794,5502,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+795,5502,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+796,5502,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+797,5502,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+798,5575,author_relevant,Original vs new human neutral,True,0.4666666666666667,0.6546536707079772
+799,5575,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.25819888974716115
+800,5575,author_relevant,Human vs LLM neutral,True,0.5238095238095237,0.5962847939999438
+801,5575,author_relevant,Human vs LLM neutral,True,0.49999999999999994,0.6666666666666665
+802,5575,author_relevant,Human vs LLM neutral,True,0.5714285714285713,0.5222329678670936
+803,5575,author_relevant,Human vs LLM neutral,False,0.38095238095238093,0.7453559924999298
+804,5575,author_relevant,Human vs LLM neutral,False,0.38095238095238093,0.7453559924999298
+805,5580,unambiguous,Original vs new human neutral,True,0.0,1.0
+806,5580,unambiguous,Human vs LLM neutral,True,0.0,1.0
+807,5580,unambiguous,Human vs LLM neutral,True,0.0,1.0
+808,5580,unambiguous,Human vs LLM neutral,True,0.0,1.0
+809,5580,unambiguous,Human vs LLM neutral,True,0.0,1.0
+810,5580,unambiguous,Human vs LLM neutral,True,0.0,1.0
+811,5580,unambiguous,Human vs LLM neutral,True,0.0,1.0
+812,5600,author_independent,Original vs new human neutral,True,0.4,0.9045340337332908
+813,5600,author_independent,Human vs LLM neutral,True,0.0,1.0
+814,5600,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+815,5600,author_independent,Human vs LLM neutral,True,0.0,1.0
+816,5600,author_independent,Human vs LLM neutral,True,0.0,1.0
+817,5600,author_independent,Human vs LLM neutral,True,0.0,1.0
+818,5600,author_independent,Human vs LLM neutral,True,0.0,1.0
+819,5609,author_relevant,Original vs new human neutral,False,0.6666666666666666,0.5222329678670934
+820,5609,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+821,5609,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+822,5609,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+823,5609,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+824,5609,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+825,5609,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+826,5639,author_relevant,Original vs new human neutral,False,0.7999999999999999,0.2696799449852968
+827,5639,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+828,5639,author_relevant,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+829,5639,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+830,5639,author_relevant,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+831,5639,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+832,5639,author_relevant,Human vs LLM neutral,True,0.4285714285714285,0.7155417527999327
+833,5641,author_independent,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+834,5641,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+835,5641,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+836,5641,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+837,5641,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+838,5641,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+839,5641,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+840,5642,author_relevant,Original vs new human neutral,True,0.4,0.8090398349558904
+841,5642,author_relevant,Human vs LLM neutral,False,1.0,0.0
+842,5642,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.14704292441876157
+843,5642,author_relevant,Human vs LLM neutral,False,1.0,0.0
+844,5642,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.14704292441876157
+845,5642,author_relevant,Human vs LLM neutral,False,1.0,0.0
+846,5642,author_relevant,Human vs LLM neutral,False,1.0,0.0
+847,5680,unambiguous,Original vs new human neutral,True,0.0,1.0
+848,5680,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+849,5680,unambiguous,Human vs LLM neutral,True,0.4285714285714286,0.8
+850,5680,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+851,5680,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+852,5680,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+853,5680,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+854,5688,author_independent,Original vs new human neutral,True,0.25,0.9486832980505138
+855,5688,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+856,5688,author_independent,Human vs LLM neutral,True,0.4285714285714286,0.8728715609439696
+857,5688,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+858,5688,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+859,5688,author_independent,Human vs LLM neutral,True,0.0,1.0
+860,5688,author_independent,Human vs LLM neutral,True,0.0,1.0
+861,5691,author_independent,Original vs new human neutral,False,0.4666666666666667,0.5773502691896257
+862,5691,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.39735970711951313
+863,5691,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+864,5691,author_independent,Human vs LLM neutral,False,0.7142857142857143,0.214422506967559
+865,5691,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.09491579957524991
+866,5691,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.3464101615137755
+867,5691,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.4618802153517007
+868,5704,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+869,5704,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+870,5704,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+871,5704,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+872,5704,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+873,5704,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+874,5704,unambiguous,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+875,5720,author_independent,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+876,5720,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+877,5720,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+878,5720,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+879,5720,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+880,5720,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+881,5720,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+882,5725,author_independent,Original vs new human neutral,False,0.6,0.49613893835683376
+883,5725,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+884,5725,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+885,5725,author_independent,Human vs LLM neutral,False,0.8333333333333333,0.25819888974716104
+886,5725,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+887,5725,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.1025978352085154
+888,5725,author_independent,Human vs LLM neutral,False,0.8333333333333333,0.21081851067789192
+889,5730,unambiguous,Original vs new human neutral,False,0.6666666666666666,0.5773502691896257
+890,5730,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+891,5730,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+892,5730,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+893,5730,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+894,5730,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+895,5730,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+896,5802,author_independent,Original vs new human neutral,False,0.4666666666666667,0.6741998624632419
+897,5802,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+898,5802,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+899,5802,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+900,5802,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+901,5802,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+902,5802,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+903,5830,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+904,5830,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+905,5830,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+906,5830,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+907,5830,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+908,5830,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+909,5830,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+910,5856,unambiguous,Original vs new human neutral,False,0.6666666666666666,0.5773502691896257
+911,5856,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+912,5856,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7504787743864565
+913,5856,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+914,5856,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7504787743864565
+915,5856,unambiguous,Human vs LLM neutral,False,0.6666666666666665,0.5694947974514996
+916,5856,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+917,5880,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+918,5880,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+919,5880,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+920,5880,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+921,5880,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+922,5880,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+923,5880,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+924,5914,unambiguous,Original vs new human neutral,False,0.4666666666666667,0.6507913734559684
+925,5914,unambiguous,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+926,5914,unambiguous,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+927,5914,unambiguous,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+928,5914,unambiguous,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+929,5914,unambiguous,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+930,5914,unambiguous,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+931,5951,author_independent,Original vs new human neutral,False,0.8,0.17407765595569782
+932,5951,author_independent,Human vs LLM neutral,False,1.0,0.0
+933,5951,author_independent,Human vs LLM neutral,False,1.0,0.0
+934,5951,author_independent,Human vs LLM neutral,False,1.0,0.0
+935,5951,author_independent,Human vs LLM neutral,False,1.0,0.0
+936,5951,author_independent,Human vs LLM neutral,False,1.0,0.0
+937,5951,author_independent,Human vs LLM neutral,False,1.0,0.0
+938,5986,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+939,5986,unambiguous,Human vs LLM neutral,True,0.0,1.0
+940,5986,unambiguous,Human vs LLM neutral,True,0.0,1.0
+941,5986,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+942,5986,unambiguous,Human vs LLM neutral,True,0.0,1.0
+943,5986,unambiguous,Human vs LLM neutral,True,0.0,1.0
+944,5986,unambiguous,Human vs LLM neutral,True,0.0,1.0
+945,6218,author_relevant,Original vs new human neutral,False,0.4666666666666667,0.6507913734559684
+946,6218,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+947,6218,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+948,6218,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+949,6218,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+950,6218,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+951,6218,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+952,6221,author_independent,Original vs new human neutral,True,0.0,1.0
+953,6221,author_independent,Human vs LLM neutral,True,0.0,1.0
+954,6221,author_independent,Human vs LLM neutral,True,0.0,1.0
+955,6221,author_independent,Human vs LLM neutral,True,0.0,1.0
+956,6221,author_independent,Human vs LLM neutral,True,0.0,1.0
+957,6221,author_independent,Human vs LLM neutral,True,0.0,1.0
+958,6221,author_independent,Human vs LLM neutral,True,0.0,1.0
+959,6228,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+960,6228,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+961,6228,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+962,6228,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+963,6228,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+964,6228,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+965,6228,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+966,6288,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+967,6288,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+968,6288,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+969,6288,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+970,6288,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+971,6288,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+972,6288,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+973,6304,author_independent,Original vs new human neutral,False,0.4666666666666667,0.6741998624632419
+974,6304,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+975,6304,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+976,6304,author_independent,Human vs LLM neutral,False,0.5,0.6139406135149205
+977,6304,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+978,6304,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+979,6304,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+980,6306,author_independent,Original vs new human neutral,False,0.6,0.4364357804719848
+981,6306,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+982,6306,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+983,6306,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+984,6306,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+985,6306,author_independent,Human vs LLM neutral,False,0.8333333333333334,0.11322770341445958
+986,6306,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.09491579957524991
+987,6337,author_relevant,Original vs new human neutral,False,0.75,0.31622776601683794
+988,6337,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+989,6337,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.485071250072666
+990,6337,author_relevant,Human vs LLM neutral,False,0.8333333333333334,0.2672612419124244
+991,6337,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.485071250072666
+992,6337,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.485071250072666
+993,6337,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6882472016116853
+994,6403,author_independent,Original vs new human neutral,False,0.41666666666666663,0.7071067811865475
+995,6403,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.41522739926869984
+996,6403,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+997,6403,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+998,6403,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+999,6403,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.512989176042577
+1000,6403,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.2683281572999748
+1001,6407,author_relevant,Original vs new human neutral,False,0.41666666666666663,0.7071067811865476
+1002,6407,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5694947974514996
+1003,6407,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5694947974514996
+1004,6407,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5694947974514996
+1005,6407,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5694947974514996
+1006,6407,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5694947974514996
+1007,6407,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5694947974514996
+1008,6440,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+1009,6440,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1010,6440,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1011,6440,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1012,6440,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1013,6440,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1014,6440,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1015,6450,author_independent,Original vs new human neutral,False,0.5999999999999999,0.49613893835683376
+1016,6450,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8770580193070292
+1017,6450,author_independent,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1018,6450,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1019,6450,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1020,6450,author_independent,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1021,6450,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+1022,6499,author_independent,Original vs new human neutral,False,0.9999999999999999,0.0
+1023,6499,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1024,6499,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1025,6499,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1026,6499,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1027,6499,author_independent,Human vs LLM neutral,True,0.4285714285714285,0.7155417527999327
+1028,6499,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1029,6524,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+1030,6524,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1031,6524,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1032,6524,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1033,6524,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1034,6524,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1035,6524,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1036,6649,author_independent,Original vs new human neutral,True,0.4,0.8320502943378436
+1037,6649,author_independent,Human vs LLM neutral,True,0.0,1.0
+1038,6649,author_independent,Human vs LLM neutral,True,0.0,1.0
+1039,6649,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1040,6649,author_independent,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1041,6649,author_independent,Human vs LLM neutral,True,0.0,1.0
+1042,6649,author_independent,Human vs LLM neutral,True,0.0,1.0
+1043,6696,author_independent,Original vs new human neutral,True,0.4,0.7442084075352505
+1044,6696,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1045,6696,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1046,6696,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1047,6696,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1048,6696,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1049,6696,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1050,6732,unambiguous,Original vs new human neutral,True,0.13333333333333336,0.9761870601839525
+1051,6732,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1052,6732,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1053,6732,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1054,6732,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1055,6732,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1056,6732,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1057,6761,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+1058,6761,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1059,6761,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1060,6761,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1061,6761,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+1062,6761,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1063,6761,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1064,6768,unambiguous,Original vs new human neutral,False,0.6666666666666667,0.4472135954999579
+1065,6768,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1066,6768,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1067,6768,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1068,6768,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1069,6768,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1070,6768,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1071,6789,unambiguous,Original vs new human neutral,True,0.13333333333333336,0.9761870601839525
+1072,6789,unambiguous,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+1073,6789,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1074,6789,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1075,6789,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1076,6789,unambiguous,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1077,6789,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1078,6804,author_independent,Original vs new human neutral,True,0.19999999999999998,0.9438798074485388
+1079,6804,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1080,6804,author_independent,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+1081,6804,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1082,6804,author_independent,Human vs LLM neutral,True,0.2857142857142857,0.9233805168766386
+1083,6804,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8770580193070292
+1084,6804,author_independent,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+1085,6829,unambiguous,Original vs new human neutral,False,0.6666666666666667,0.5601120336112039
+1086,6829,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1087,6829,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1088,6829,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1089,6829,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1090,6829,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1091,6829,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1092,6848,unambiguous,Original vs new human neutral,True,0.0,1.0
+1093,6848,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1094,6848,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1095,6848,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1096,6848,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1097,6848,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1098,6848,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1099,6869,author_independent,Original vs new human neutral,True,0.4,0.8320502943378436
+1100,6869,author_independent,Human vs LLM neutral,False,1.0,0.0
+1101,6869,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1102,6869,author_independent,Human vs LLM neutral,False,1.0,0.0
+1103,6869,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1104,6869,author_independent,Human vs LLM neutral,False,1.0,0.0
+1105,6869,author_independent,Human vs LLM neutral,False,1.0,0.0
+1106,6938,author_relevant,Original vs new human neutral,False,1.0,0.0
+1107,6938,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.16609095970747992
+1108,6938,author_relevant,Human vs LLM neutral,False,0.8571428571428571,0.07352146220938079
+1109,6938,author_relevant,Human vs LLM neutral,False,0.8333333333333334,0.08770580193070292
+1110,6938,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.16609095970747992
+1111,6938,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.16609095970747992
+1112,6938,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.16609095970747992
+1113,6957,author_independent,Original vs new human neutral,False,0.7999999999999999,0.21693045781865614
+1114,6957,author_independent,Human vs LLM neutral,False,1.0,0.0
+1115,6957,author_independent,Human vs LLM neutral,False,1.0,0.0
+1116,6957,author_independent,Human vs LLM neutral,False,1.0,0.0
+1117,6957,author_independent,Human vs LLM neutral,False,1.0,0.0
+1118,6957,author_independent,Human vs LLM neutral,False,1.0,0.0
+1119,6957,author_independent,Human vs LLM neutral,False,1.0,0.0
+1120,6997,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+1121,6997,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1122,6997,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1123,6997,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.9233805168766386
+1124,6997,unambiguous,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+1125,6997,unambiguous,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1126,6997,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.8783100656536799
+1127,7134,unambiguous,Original vs new human neutral,False,0.6666666666666666,0.5773502691896257
+1128,7134,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+1129,7134,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+1130,7134,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+1131,7134,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+1132,7134,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1133,7134,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.6666666666666666
+1134,7147,author_independent,Original vs new human neutral,False,0.4666666666666667,0.6761234037828132
+1135,7147,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+1136,7147,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6155870112510924
+1137,7147,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.3077935056255462
+1138,7147,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.3077935056255462
+1139,7147,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+1140,7147,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.41522739926869984
+1141,7160,author_relevant,Original vs new human neutral,True,0.5999999999999999,0.5962847939999438
+1142,7160,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1143,7160,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.7807200583588265
+1144,7160,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.7807200583588265
+1145,7160,author_relevant,Human vs LLM neutral,True,0.4285714285714285,0.8207826816681232
+1146,7160,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1147,7160,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1148,7164,unambiguous,Original vs new human neutral,False,0.6666666666666666,0.5773502691896257
+1149,7164,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1150,7164,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1151,7164,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1152,7164,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1153,7164,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1154,7164,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1155,7179,author_independent,Original vs new human neutral,False,0.7999999999999999,0.39999999999999997
+1156,7179,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.4879500364742666
+1157,7179,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.808290376865476
+1158,7179,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.6155870112510924
+1159,7179,author_independent,Human vs LLM neutral,True,0.4285714285714285,0.7807200583588265
+1160,7179,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.5773502691896257
+1161,7179,author_independent,Human vs LLM neutral,True,0.5714285714285714,0.6507913734559686
+1162,7180,author_independent,Original vs new human neutral,False,1.0,0.0
+1163,7180,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1164,7180,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+1165,7180,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+1166,7180,author_independent,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+1167,7180,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1168,7180,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1169,7193,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+1170,7193,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1171,7193,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1172,7193,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1173,7193,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1174,7193,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1175,7193,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1176,7198,author_relevant,Original vs new human neutral,False,0.6,0.5547001962252291
+1177,7198,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1178,7198,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1179,7198,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.8
+1180,7198,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+1181,7198,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+1182,7198,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+1183,7200,author_relevant,Original vs new human neutral,True,0.33333333333333337,0.848528137423857
+1184,7200,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1185,7200,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1186,7200,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1187,7200,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1188,7200,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1189,7200,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1190,31015,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+1191,31015,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1192,31015,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1193,31015,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1194,31015,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1195,31015,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1196,31015,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1197,31060,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+1198,31060,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1199,31060,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1200,31060,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1201,31060,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1202,31060,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1203,31060,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1204,31077,unambiguous,Original vs new human neutral,True,0.0,1.0
+1205,31077,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1206,31077,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1207,31077,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1208,31077,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1209,31077,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1210,31077,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1211,31089,unambiguous,Original vs new human neutral,True,0.0,1.0
+1212,31089,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1213,31089,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1214,31089,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1215,31089,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1216,31089,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1217,31089,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1218,31147,author_relevant,Original vs new human neutral,False,0.6666666666666666,0.5773502691896257
+1219,31147,author_relevant,Human vs LLM neutral,False,0.6666666666666665,0.5694947974514996
+1220,31147,author_relevant,Human vs LLM neutral,False,0.6666666666666665,0.5694947974514996
+1221,31147,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.6622661785325219
+1222,31147,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.6622661785325219
+1223,31147,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.4618802153517007
+1224,31147,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5039526306789697
+1225,31154,author_relevant,Original vs new human neutral,False,0.4666666666666667,0.6546536707079772
+1226,31154,author_relevant,Human vs LLM neutral,True,0.38095238095238093,0.7559289460184545
+1227,31154,author_relevant,Human vs LLM neutral,True,0.5238095238095238,0.5962847939999438
+1228,31154,author_relevant,Human vs LLM neutral,True,0.5238095238095238,0.629940788348712
+1229,31154,author_relevant,Human vs LLM neutral,True,0.38095238095238093,0.7559289460184545
+1230,31154,author_relevant,Human vs LLM neutral,True,0.4285714285714285,0.6963106238227914
+1231,31154,author_relevant,Human vs LLM neutral,True,0.38095238095238093,0.7453559924999298
+1232,31177,author_independent,Original vs new human neutral,False,0.6666666666666667,0.3849001794597504
+1233,31177,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.5039526306789697
+1234,31177,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.5039526306789697
+1235,31177,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.5039526306789697
+1236,31177,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.5039526306789697
+1237,31177,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.4618802153517007
+1238,31177,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.5039526306789697
+1239,31179,author_independent,Original vs new human neutral,False,0.49999999999999994,0.5477225575051662
+1240,31179,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+1241,31179,author_independent,Human vs LLM neutral,False,1.0,0.0
+1242,31179,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.17213259316477406
+1243,31179,author_independent,Human vs LLM neutral,False,1.0,0.0
+1244,31179,author_independent,Human vs LLM neutral,False,1.0,0.0
+1245,31179,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.17213259316477406
+1246,31181,author_relevant,Original vs new human neutral,True,0.4,0.8320502943378436
+1247,31181,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1248,31181,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1249,31181,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+1250,31181,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1251,31181,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1252,31181,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1253,31207,author_relevant,Original vs new human neutral,True,0.4,0.9045340337332908
+1254,31207,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.3713906763541037
+1255,31207,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.3713906763541037
+1256,31207,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6882472016116853
+1257,31207,author_relevant,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1258,31207,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.8
+1259,31207,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+1260,31234,author_relevant,Original vs new human neutral,True,0.19999999999999998,0.9438798074485387
+1261,31234,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1262,31234,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1263,31234,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1264,31234,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1265,31234,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1266,31234,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1267,31292,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+1268,31292,unambiguous,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1269,31292,unambiguous,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1270,31292,unambiguous,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1271,31292,unambiguous,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1272,31292,unambiguous,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+1273,31292,unambiguous,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+1274,31313,author_relevant,Original vs new human neutral,False,0.7999999999999999,0.2696799449852968
+1275,31313,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9233805168766386
+1276,31313,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6155870112510924
+1277,31313,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6155870112510924
+1278,31313,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.7807200583588265
+1279,31313,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5773502691896257
+1280,31313,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.3077935056255462
+1281,31317,author_relevant,Original vs new human neutral,False,0.9999999999999999,0.0
+1282,31317,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1283,31317,author_relevant,Human vs LLM neutral,False,0.9999999999999999,0.0
+1284,31317,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1285,31317,author_relevant,Human vs LLM neutral,False,0.9999999999999999,0.0
+1286,31317,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1287,31317,author_relevant,Human vs LLM neutral,False,0.9999999999999999,0.0
+1288,31346,author_relevant,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+1289,31346,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1290,31346,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1291,31346,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1292,31346,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1293,31346,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1294,31346,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1295,31378,author_relevant,Original vs new human neutral,True,0.3333333333333333,0.848528137423857
+1296,31378,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1297,31378,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1298,31378,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1299,31378,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1300,31378,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1301,31378,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1302,31387,author_relevant,Original vs new human neutral,True,0.19999999999999998,0.9438798074485387
+1303,31387,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1304,31387,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1305,31387,author_relevant,Human vs LLM neutral,True,0.14285714285714285,0.9759000729485332
+1306,31387,author_relevant,Human vs LLM neutral,True,0.14285714285714285,0.9759000729485332
+1307,31387,author_relevant,Human vs LLM neutral,True,0.14285714285714285,0.9759000729485332
+1308,31387,author_relevant,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+1309,31398,author_relevant,Original vs new human neutral,False,1.0,0.0
+1310,31398,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1311,31398,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.23094010767585027
+1312,31398,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1313,31398,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.4961389383568338
+1314,31398,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1315,31398,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1316,41082,unambiguous,Original vs new human neutral,False,0.6666666666666667,0.4472135954999579
+1317,41082,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1318,41082,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1319,41082,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1320,41082,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+1321,41082,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1322,41082,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+1323,41208,author_independent,Original vs new human neutral,True,0.06666666666666668,0.9922778767136675
+1324,41208,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1325,41208,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+1326,41208,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1327,41208,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+1328,41208,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1329,41208,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+1330,41228,unambiguous,Original vs new human neutral,False,0.4666666666666667,0.7001400420140047
+1331,41228,unambiguous,Human vs LLM neutral,False,0.3333333333333333,0.8082903768654762
+1332,41228,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7504787743864565
+1333,41228,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7504787743864565
+1334,41228,unambiguous,Human vs LLM neutral,False,0.3333333333333333,0.8082903768654762
+1335,41228,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7504787743864565
+1336,41228,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7504787743864565
+1337,41239,unambiguous,Original vs new human neutral,True,0.0,1.0
+1338,41239,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1339,41239,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1340,41239,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1341,41239,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1342,41239,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1343,41239,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1344,41260,author_independent,Original vs new human neutral,False,0.4666666666666667,0.6741998624632419
+1345,41260,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1346,41260,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1347,41260,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+1348,41260,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1349,41260,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+1350,41260,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1351,41311,author_independent,Original vs new human neutral,True,0.4,0.7442084075352505
+1352,41311,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7807200583588265
+1353,41311,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7807200583588265
+1354,41311,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.5855400437691199
+1355,41311,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+1356,41311,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6201736729460423
+1357,41311,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7807200583588265
+1358,41378,unambiguous,Original vs new human neutral,True,0.0,1.0
+1359,41378,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1360,41378,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1361,41378,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1362,41378,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1363,41378,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1364,41378,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1365,41415,author_independent,Original vs new human neutral,False,0.6,0.5962847939999438
+1366,41415,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1367,41415,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1368,41415,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1369,41415,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1370,41415,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1371,41415,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1372,41548,author_relevant,Original vs new human neutral,False,0.33333333333333337,0.7698003589195008
+1373,41548,author_relevant,Human vs LLM neutral,False,0.3333333333333333,0.8082903768654762
+1374,41548,author_relevant,Human vs LLM neutral,False,0.23809523809523808,0.8819171036881969
+1375,41548,author_relevant,Human vs LLM neutral,False,0.3333333333333333,0.8082903768654762
+1376,41548,author_relevant,Human vs LLM neutral,False,0.23809523809523808,0.8819171036881969
+1377,41548,author_relevant,Human vs LLM neutral,False,0.3333333333333333,0.8082903768654762
+1378,41548,author_relevant,Human vs LLM neutral,False,0.19047619047619047,0.9271726499455307
+1379,41581,author_relevant,Original vs new human neutral,False,0.4666666666666667,0.5962847939999438
+1380,41581,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.19999999999999998
+1381,41581,author_relevant,Human vs LLM neutral,False,0.8333333333333333,0.08770580193070292
+1382,41581,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.19999999999999998
+1383,41581,author_relevant,Human vs LLM neutral,False,0.8333333333333333,0.08770580193070292
+1384,41581,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.16609095970747992
+1385,41581,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.07352146220938079
+1386,41600,author_relevant,Original vs new human neutral,False,0.6,0.5962847939999438
+1387,41600,author_relevant,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+1388,41600,author_relevant,Human vs LLM neutral,False,0.23809523809523808,0.9233805168766386
+1389,41600,author_relevant,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+1390,41600,author_relevant,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+1391,41600,author_relevant,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+1392,41600,author_relevant,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+1393,41606,author_relevant,Original vs new human neutral,True,0.06666666666666668,0.9922778767136675
+1394,41606,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1395,41606,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1396,41606,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1397,41606,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1398,41606,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1399,41606,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1400,41629,author_relevant,Original vs new human neutral,True,0.06666666666666668,0.9922778767136675
+1401,41629,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1402,41629,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1403,41629,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1404,41629,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1405,41629,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1406,41629,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1407,41641,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+1408,41641,unambiguous,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+1409,41641,unambiguous,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+1410,41641,unambiguous,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+1411,41641,unambiguous,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+1412,41641,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1413,41641,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1414,41660,author_relevant,Original vs new human neutral,False,0.6,0.49613893835683376
+1415,41660,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1416,41660,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1417,41660,author_relevant,Human vs LLM neutral,True,0.4285714285714285,0.7155417527999327
+1418,41660,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1419,41660,author_relevant,Human vs LLM neutral,True,0.4285714285714285,0.7807200583588265
+1420,41660,author_relevant,Human vs LLM neutral,True,0.4285714285714285,0.7807200583588265
+1421,41671,author_relevant,Original vs new human neutral,False,0.2666666666666666,0.8682431421244591
+1422,41671,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1423,41671,author_relevant,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+1424,41671,author_relevant,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+1425,41671,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1426,41671,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1427,41671,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1428,41688,unambiguous,Original vs new human neutral,False,1.0,0.0
+1429,41688,unambiguous,Human vs LLM neutral,False,0.8571428571428571,0.13245323570650439
+1430,41688,unambiguous,Human vs LLM neutral,False,0.8571428571428572,0.14907119849998599
+1431,41688,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1432,41688,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1433,41688,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1434,41688,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1435,41722,author_relevant,Original vs new human neutral,False,0.6666666666666666,0.5222329678670935
+1436,41722,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.25197631533948484
+1437,41722,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.09491579957524991
+1438,41722,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.12598815766974242
+1439,41722,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.12598815766974242
+1440,41722,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.25197631533948484
+1441,41722,author_relevant,Human vs LLM neutral,False,0.9999999999999999,0.0
+1442,41744,author_relevant,Original vs new human neutral,False,0.75,0.282842712474619
+1443,41744,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.14704292441876157
+1444,41744,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.14704292441876157
+1445,41744,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.33218191941495984
+1446,41744,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.33218191941495984
+1447,41744,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+1448,41744,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.33218191941495984
+1449,41759,author_relevant,Original vs new human neutral,False,0.6666666666666666,0.2981423969999719
+1450,41759,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1451,41759,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1452,41759,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1453,41759,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1454,41759,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1455,41759,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1456,41789,unambiguous,Original vs new human neutral,True,0.0,1.0
+1457,41789,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1458,41789,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1459,41789,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1460,41789,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1461,41789,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1462,41789,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1463,41791,author_independent,Original vs new human neutral,False,0.26666666666666666,0.8944271909999159
+1464,41791,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6024640760767092
+1465,41791,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+1466,41791,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+1467,41791,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1468,41791,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1469,41791,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1470,41795,author_independent,Original vs new human neutral,False,0.16666666666666666,0.9428090415820634
+1471,41795,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+1472,41795,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8819171036881969
+1473,41795,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6666666666666666
+1474,41795,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7504787743864565
+1475,41795,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6666666666666666
+1476,41795,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7777777777777778
+1477,41840,author_independent,Original vs new human neutral,False,0.6666666666666666,0.5222329678670934
+1478,41840,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5555555555555556
+1479,41840,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5039526306789697
+1480,41840,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+1481,41840,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6666666666666666
+1482,41840,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+1483,41840,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6666666666666666
+1484,41857,author_independent,Original vs new human neutral,False,0.39999999999999997,0.7745966692414833
+1485,41857,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5694947974514996
+1486,41857,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+1487,41857,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.5773502691896257
+1488,41857,author_independent,Human vs LLM neutral,False,0.5238095238095238,0.6666666666666666
+1489,41857,author_independent,Human vs LLM neutral,False,0.38095238095238093,0.7559289460184545
+1490,41857,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+1491,41862,author_relevant,Original vs new human neutral,True,0.6666666666666666,0.5601120336112039
+1492,41862,author_relevant,Human vs LLM neutral,True,0.6666666666666667,0.5773502691896257
+1493,41862,author_relevant,Human vs LLM neutral,True,0.6666666666666667,0.5773502691896257
+1494,41862,author_relevant,Human vs LLM neutral,True,0.5238095238095237,0.6666666666666666
+1495,41862,author_relevant,Human vs LLM neutral,True,0.6666666666666667,0.5773502691896257
+1496,41862,author_relevant,Human vs LLM neutral,True,0.6666666666666667,0.5773502691896257
+1497,41862,author_relevant,Human vs LLM neutral,True,0.6666666666666665,0.5694947974514996
+1498,51023,author_independent,Original vs new human neutral,False,0.33333333333333337,0.8006407690254357
+1499,51023,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1500,51023,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1501,51023,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1502,51023,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1503,51023,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1504,51023,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1505,51054,author_relevant,Original vs new human neutral,False,0.8,0.26967994498529685
+1506,51054,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+1507,51054,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+1508,51054,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+1509,51054,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1510,51054,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+1511,51054,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1512,51081,author_relevant,Original vs new human neutral,True,0.4,0.7442084075352505
+1513,51081,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.4338609156373124
+1514,51081,author_relevant,Human vs LLM neutral,False,0.8571428571428571,0.17213259316477406
+1515,51081,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.19518001458970663
+1516,51081,author_relevant,Human vs LLM neutral,False,0.8571428571428571,0.17213259316477406
+1517,51081,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8606629658238703
+1518,51081,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.2051956704170308
+1519,51082,author_independent,Original vs new human neutral,False,1.0,0.0
+1520,51082,author_independent,Human vs LLM neutral,True,0.5714285714285714,0.6155870112510924
+1521,51082,author_independent,Human vs LLM neutral,True,0.5714285714285714,0.6155870112510924
+1522,51082,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+1523,51082,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.7807200583588265
+1524,51082,author_independent,Human vs LLM neutral,True,0.5714285714285714,0.6155870112510924
+1525,51082,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1526,51236,unambiguous,Original vs new human neutral,True,0.0,1.0
+1527,51236,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1528,51236,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1529,51236,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1530,51236,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1531,51236,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1532,51236,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1533,51249,unambiguous,Original vs new human neutral,True,0.0,1.0
+1534,51249,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.9622504486493763
+1535,51249,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1536,51249,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1537,51249,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1538,51249,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1539,51249,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1540,51258,unambiguous,Original vs new human neutral,True,0.0,1.0
+1541,51258,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1542,51258,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1543,51258,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1544,51258,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1545,51258,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1546,51258,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1547,51263,author_independent,Original vs new human neutral,False,0.2666666666666666,0.8682431421244591
+1548,51263,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1549,51263,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1550,51263,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1551,51263,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1552,51263,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1553,51263,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1554,51275,author_relevant,Original vs new human neutral,False,0.7999999999999999,0.21693045781865614
+1555,51275,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.7181848464596078
+1556,51275,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+1557,51275,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+1558,51275,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.6155870112510924
+1559,51275,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.2581988897471611
+1560,51275,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.33218191941495984
+1561,51285,author_independent,Original vs new human neutral,True,0.2666666666666666,0.8703882797784891
+1562,51285,author_independent,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1563,51285,author_independent,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1564,51285,author_independent,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1565,51285,author_independent,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1566,51285,author_independent,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1567,51285,author_independent,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1568,51329,author_relevant,Original vs new human neutral,False,0.6,0.5547001962252291
+1569,51329,author_relevant,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1570,51329,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.3713906763541037
+1571,51329,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.3713906763541037
+1572,51329,author_relevant,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1573,51329,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.3713906763541037
+1574,51329,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6000000000000001
+1575,51577,author_independent,Original vs new human neutral,False,1.0,0.0
+1576,51577,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.3721042037676254
+1577,51577,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.2169304578186562
+1578,51577,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.2051956704170308
+1579,51577,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.2051956704170308
+1580,51577,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+1581,51577,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.34641016151377546
+1582,51593,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+1583,51593,unambiguous,Human vs LLM neutral,True,0.4285714285714285,0.7155417527999327
+1584,51593,unambiguous,Human vs LLM neutral,True,0.4285714285714285,0.7155417527999327
+1585,51593,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1586,51593,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1587,51593,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1588,51593,unambiguous,Human vs LLM neutral,True,0.4285714285714285,0.7155417527999327
+1589,51598,author_relevant,Original vs new human neutral,False,0.4666666666666667,0.674199862463242
+1590,51598,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+1591,51598,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1592,51598,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1593,51598,author_relevant,Human vs LLM neutral,True,0.4285714285714285,0.7155417527999327
+1594,51598,author_relevant,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+1595,51598,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1596,51632,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+1597,51632,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1598,51632,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1599,51632,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1600,51632,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1601,51632,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1602,51632,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1603,51653,author_relevant,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+1604,51653,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1605,51653,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1606,51653,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1607,51653,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1608,51653,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1609,51653,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1610,51688,unambiguous,Original vs new human neutral,True,0.13333333333333336,0.9761870601839525
+1611,51688,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1612,51688,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1613,51688,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1614,51688,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1615,51688,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1616,51688,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1617,51705,author_independent,Original vs new human neutral,False,0.6,0.40451991747794525
+1618,51705,author_independent,Human vs LLM neutral,False,0.857142857142857,0.07352146220938079
+1619,51705,author_independent,Human vs LLM neutral,False,0.857142857142857,0.07352146220938079
+1620,51705,author_independent,Human vs LLM neutral,False,0.857142857142857,0.07352146220938079
+1621,51705,author_independent,Human vs LLM neutral,False,1.0,0.0
+1622,51705,author_independent,Human vs LLM neutral,False,1.0,0.0
+1623,51705,author_independent,Human vs LLM neutral,False,1.0,0.0
+1624,51710,unambiguous,Original vs new human neutral,False,0.4666666666666667,0.7001400420140047
+1625,51710,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1626,51710,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1627,51710,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1628,51710,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5694947974514996
+1629,51710,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1630,51710,unambiguous,Human vs LLM neutral,False,0.6666666666666665,0.5694947974514996
+1631,51713,author_independent,Original vs new human neutral,True,0.13333333333333336,0.9761870601839525
+1632,51713,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1633,51713,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1634,51713,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1635,51713,author_independent,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1636,51713,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1637,51713,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1638,51792,unambiguous,Original vs new human neutral,False,0.6666666666666666,0.43386091563731227
+1639,51792,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1640,51792,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+1641,51792,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+1642,51792,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+1643,51792,unambiguous,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+1644,51792,unambiguous,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+1645,51835,author_independent,Original vs new human neutral,False,0.8,0.30151134457776363
+1646,51835,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1647,51835,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1648,51835,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1649,51835,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1650,51835,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1651,51835,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1652,51837,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+1653,51837,unambiguous,Human vs LLM neutral,True,0.4285714285714286,0.8
+1654,51837,unambiguous,Human vs LLM neutral,True,0.4285714285714286,0.8
+1655,51837,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+1656,51837,unambiguous,Human vs LLM neutral,True,0.4285714285714286,0.8
+1657,51837,unambiguous,Human vs LLM neutral,True,0.4285714285714286,0.8
+1658,51837,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+1659,51882,author_independent,Original vs new human neutral,False,0.6666666666666666,0.4364357804719848
+1660,51882,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.3651483716701107
+1661,51882,author_independent,Human vs LLM neutral,False,0.8333333333333334,0.13608276348795434
+1662,51882,author_independent,Human vs LLM neutral,False,0.8333333333333333,0.15430334996209194
+1663,51882,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.13245323570650439
+1664,51882,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.5039526306789697
+1665,51882,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.5039526306789697
+1666,51929,author_independent,Original vs new human neutral,True,0.06666666666666668,0.9922778767136675
+1667,51929,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+1668,51929,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+1669,51929,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+1670,51929,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+1671,51929,author_independent,Human vs LLM neutral,True,0.09523809523809523,0.9838699100999074
+1672,51929,author_independent,Human vs LLM neutral,False,0.23809523809523808,0.8944271909999159
+1673,51945,author_independent,Original vs new human neutral,False,0.6666666666666667,0.2981423969999719
+1674,51945,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+1675,51945,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+1676,51945,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+1677,51945,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.41522739926869984
+1678,51945,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.41522739926869984
+1679,51945,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.4411287732562847
+1680,51946,author_independent,Original vs new human neutral,False,1.0,0.0
+1681,51946,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.07352146220938079
+1682,51946,author_independent,Human vs LLM neutral,False,0.7142857142857142,0.2581988897471611
+1683,51946,author_independent,Human vs LLM neutral,False,1.0,0.0
+1684,51946,author_independent,Human vs LLM neutral,False,1.0,0.0
+1685,51946,author_independent,Human vs LLM neutral,False,1.0,0.0
+1686,51946,author_independent,Human vs LLM neutral,False,1.0,0.0
+1687,51953,unambiguous,Original vs new human neutral,False,1.0,0.0
+1688,51953,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1689,51953,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1690,51953,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1691,51953,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1692,51953,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1693,51953,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1694,51962,author_relevant,Original vs new human neutral,False,0.4666666666666667,0.6507913734559684
+1695,51962,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+1696,51962,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+1697,51962,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+1698,51962,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+1699,51962,author_relevant,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+1700,51962,author_relevant,Human vs LLM neutral,False,0.38095238095238093,0.7474093186836597
+1701,52029,unambiguous,Original vs new human neutral,False,0.4666666666666667,0.6507913734559684
+1702,52029,unambiguous,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+1703,52029,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1704,52029,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8606629658238703
+1705,52029,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1706,52029,unambiguous,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+1707,52029,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1708,52046,author_independent,Original vs new human neutral,True,0.4,0.9045340337332909
+1709,52046,author_independent,Human vs LLM neutral,True,0.0,1.0
+1710,52046,author_independent,Human vs LLM neutral,True,0.0,1.0
+1711,52046,author_independent,Human vs LLM neutral,True,0.0,1.0
+1712,52046,author_independent,Human vs LLM neutral,True,0.0,1.0
+1713,52046,author_independent,Human vs LLM neutral,True,0.0,1.0
+1714,52046,author_independent,Human vs LLM neutral,True,0.0,1.0
+1715,52050,unambiguous,Original vs new human neutral,True,0.0,1.0
+1716,52050,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1717,52050,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1718,52050,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1719,52050,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1720,52050,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1721,52050,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1722,52051,unambiguous,Original vs new human neutral,True,0.0,1.0
+1723,52051,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1724,52051,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1725,52051,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1726,52051,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1727,52051,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1728,52051,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1729,52077,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+1730,52077,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1731,52077,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1732,52077,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1733,52077,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1734,52077,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1735,52077,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1736,52102,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+1737,52102,unambiguous,Human vs LLM neutral,True,0.4285714285714285,0.7807200583588265
+1738,52102,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1739,52102,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1740,52102,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8606629658238703
+1741,52102,unambiguous,Human vs LLM neutral,True,0.4285714285714285,0.7155417527999327
+1742,52102,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1743,52157,unambiguous,Original vs new human neutral,True,0.0,1.0
+1744,52157,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1745,52157,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1746,52157,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1747,52157,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1748,52157,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1749,52157,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1750,52176,author_independent,Original vs new human neutral,False,0.5,0.7071067811865475
+1751,52176,author_independent,Human vs LLM neutral,False,0.8333333333333333,0.2357022603955158
+1752,52176,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.5345224838248488
+1753,52176,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1754,52176,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1755,52176,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.22941573387056174
+1756,52176,author_independent,Human vs LLM neutral,False,0.8571428571428572,0.19245008972987523
+1757,52184,unambiguous,Original vs new human neutral,True,0.13333333333333336,0.9761870601839525
+1758,52184,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1759,52184,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1760,52184,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1761,52184,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1762,52184,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1763,52184,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1764,52217,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+1765,52217,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1766,52217,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1767,52217,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1768,52217,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1769,52217,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1770,52217,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1771,52225,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+1772,52225,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1773,52225,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1774,52225,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1775,52225,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1776,52225,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1777,52225,unambiguous,Human vs LLM neutral,True,0.0,1.0
+1778,52289,author_independent,Original vs new human neutral,False,0.33333333333333337,0.7698003589195008
+1779,52289,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1780,52289,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1781,52289,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1782,52289,author_independent,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1783,52289,author_independent,Human vs LLM neutral,False,0.6666666666666665,0.5694947974514996
+1784,52289,author_independent,Human vs LLM neutral,False,0.6666666666666667,0.5360562674188974
+1785,52316,author_relevant,Original vs new human neutral,False,0.4666666666666667,0.6963106238227913
+1786,52316,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1787,52316,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1788,52316,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1789,52316,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+1790,52316,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5694947974514996
+1791,52316,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5694947974514996
+1792,52338,author_relevant,Original vs new human neutral,False,0.4666666666666667,0.6963106238227913
+1793,52338,author_relevant,Human vs LLM neutral,False,0.5238095238095238,0.6666666666666666
+1794,52338,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.629940788348712
+1795,52338,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.629940788348712
+1796,52338,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.629940788348712
+1797,52338,author_relevant,Human vs LLM neutral,False,0.5238095238095238,0.6666666666666666
+1798,52338,author_relevant,Human vs LLM neutral,False,0.5238095238095238,0.6666666666666666
+1799,52365,author_relevant,Original vs new human neutral,True,0.6666666666666666,0.5601120336112039
+1800,52365,author_relevant,Human vs LLM neutral,True,0.49999999999999994,0.6793662204867575
+1801,52365,author_relevant,Human vs LLM neutral,True,0.5238095238095237,0.6644105970267494
+1802,52365,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.7745966692414834
+1803,52365,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1804,52365,author_relevant,Human vs LLM neutral,True,0.38095238095238093,0.7504787743864565
+1805,52365,author_relevant,Human vs LLM neutral,True,0.5238095238095237,0.6622661785325219
+1806,52369,author_relevant,Original vs new human neutral,False,0.6666666666666667,0.3849001794597504
+1807,52369,author_relevant,Human vs LLM neutral,False,0.6666666666666665,0.5694947974514996
+1808,52369,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.6666666666666666
+1809,52369,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.6666666666666666
+1810,52369,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.6666666666666666
+1811,52369,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1812,52369,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1813,52371,author_relevant,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+1814,52371,author_relevant,Human vs LLM neutral,True,0.16666666666666663,0.9805806756909202
+1815,52371,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.917662935482247
+1816,52371,author_relevant,Human vs LLM neutral,True,0.3333333333333333,0.9428090415820632
+1817,52371,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9622504486493763
+1818,52371,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.7745966692414834
+1819,52371,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.8320502943378437
+1820,52373,author_relevant,Original vs new human neutral,False,0.75,0.282842712474619
+1821,52373,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1822,52373,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1823,52373,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1824,52373,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1825,52373,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1826,52373,author_relevant,Human vs LLM neutral,True,0.33333333333333326,0.8822575465125694
+1827,52398,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+1828,52398,unambiguous,Human vs LLM neutral,True,0.16666666666666669,0.9647638212377322
+1829,52398,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1830,52398,unambiguous,Human vs LLM neutral,True,0.16666666666666669,0.9647638212377322
+1831,52398,unambiguous,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1832,52398,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1833,52398,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1834,52434,author_relevant,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+1835,52434,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1836,52434,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1837,52434,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1838,52434,author_relevant,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+1839,52434,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1840,52434,author_relevant,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+1841,52441,author_relevant,Original vs new human neutral,True,0.4,0.8090398349558904
+1842,52441,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1843,52441,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+1844,52441,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1845,52441,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1846,52441,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1847,52441,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1848,52448,unambiguous,Original vs new human neutral,False,0.8,0.24253562503633294
+1849,52448,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1850,52448,unambiguous,Human vs LLM neutral,False,0.8571428571428572,0.1643989873053573
+1851,52448,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1852,52448,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1853,52448,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1854,52448,unambiguous,Human vs LLM neutral,False,1.0,0.0
+1855,52458,author_relevant,Original vs new human neutral,False,0.6666666666666667,0.5222329678670935
+1856,52458,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.5360562674188974
+1857,52458,author_relevant,Human vs LLM neutral,False,0.6666666666666665,0.5694947974514996
+1858,52458,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.5773502691896257
+1859,52458,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5555555555555556
+1860,52458,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.5773502691896257
+1861,52458,author_relevant,Human vs LLM neutral,False,0.6666666666666665,0.5694947974514996
+1862,52501,unambiguous,Original vs new human neutral,True,0.13333333333333336,0.9761870601839525
+1863,52501,unambiguous,Human vs LLM neutral,False,0.5714285714285714,0.46188021535170054
+1864,52501,unambiguous,Human vs LLM neutral,False,0.5714285714285714,0.46188021535170054
+1865,52501,unambiguous,Human vs LLM neutral,False,0.42857142857142855,0.7442084075352507
+1866,52501,unambiguous,Human vs LLM neutral,False,0.42857142857142855,0.7442084075352507
+1867,52501,unambiguous,Human vs LLM neutral,False,0.5714285714285714,0.46188021535170054
+1868,52501,unambiguous,Human vs LLM neutral,False,0.5714285714285714,0.46188021535170054
+1869,52520,author_relevant,Original vs new human neutral,True,0.41666666666666663,0.7071067811865476
+1870,52520,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1871,52520,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1872,52520,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1873,52520,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1874,52520,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1875,52520,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1876,52550,author_relevant,Original vs new human neutral,False,0.6,0.40451991747794525
+1877,52550,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.19518001458970663
+1878,52550,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.19518001458970663
+1879,52550,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.16609095970747992
+1880,52550,author_relevant,Human vs LLM neutral,False,0.6666666666666665,0.3077935056255462
+1881,52550,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.512989176042577
+1882,52550,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.4618802153517006
+1883,52584,author_relevant,Original vs new human neutral,False,0.6,0.4364357804719848
+1884,52584,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.408248290463863
+1885,52584,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.42008402520840304
+1886,52584,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.4618802153517007
+1887,52584,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.4618802153517007
+1888,52584,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.3464101615137755
+1889,52584,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.214422506967559
+1890,52591,author_relevant,Original vs new human neutral,True,0.4666666666666667,0.7001400420140047
+1891,52591,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1892,52591,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1893,52591,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1894,52591,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1895,52591,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1896,52591,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.5773502691896257
+1897,52596,author_relevant,Original vs new human neutral,True,0.6,0.5962847939999438
+1898,52596,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8606629658238703
+1899,52596,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.6155870112510924
+1900,52596,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.7807200583588265
+1901,52596,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.39036002917941326
+1902,52596,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.17213259316477406
+1903,52596,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.33218191941495984
+1904,52598,author_relevant,Original vs new human neutral,False,0.2666666666666666,0.8703882797784891
+1905,52598,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.6644105970267494
+1906,52598,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1907,52598,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1908,52598,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1909,52598,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1910,52598,author_relevant,Human vs LLM neutral,False,0.6666666666666666,0.5773502691896257
+1911,52614,author_independent,Original vs new human neutral,False,0.7999999999999999,0.1924500897298752
+1912,52614,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+1913,52614,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+1914,52614,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.1111111111111111
+1915,52614,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+1916,52614,author_independent,Human vs LLM neutral,False,0.8571428571428571,0.1111111111111111
+1917,52614,author_independent,Human vs LLM neutral,False,0.9999999999999999,0.0
+1918,52625,author_relevant,Original vs new human neutral,False,0.6666666666666667,0.4472135954999579
+1919,52625,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5855400437691199
+1920,52625,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5855400437691199
+1921,52625,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.6024640760767092
+1922,52625,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5855400437691199
+1923,52625,author_relevant,Human vs LLM neutral,False,0.5238095238095237,0.5881716976750463
+1924,52625,author_relevant,Human vs LLM neutral,False,0.5,0.6139406135149205
+1925,52626,author_relevant,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+1926,52626,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.8728715609439696
+1927,52626,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.8728715609439696
+1928,52626,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.7745966692414834
+1929,52626,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9622504486493763
+1930,52626,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1931,52626,author_relevant,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+1932,52635,author_relevant,Original vs new human neutral,True,0.0,1.0
+1933,52635,author_relevant,Human vs LLM neutral,True,0.0,1.0
+1934,52635,author_relevant,Human vs LLM neutral,True,0.0,1.0
+1935,52635,author_relevant,Human vs LLM neutral,True,0.0,1.0
+1936,52635,author_relevant,Human vs LLM neutral,True,0.0,1.0
+1937,52635,author_relevant,Human vs LLM neutral,True,0.0,1.0
+1938,52635,author_relevant,Human vs LLM neutral,True,0.0,1.0
+1939,52645,author_relevant,Original vs new human neutral,False,0.6000000000000001,0.6666666666666666
+1940,52645,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1941,52645,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1942,52645,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1943,52645,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1944,52645,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1945,52645,author_relevant,Human vs LLM neutral,False,1.0,0.0
+1946,52658,author_relevant,Original vs new human neutral,False,0.9999999999999999,0.0
+1947,52658,author_relevant,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+1948,52658,author_relevant,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+1949,52658,author_relevant,Human vs LLM neutral,False,0.8571428571428571,0.14704292441876157
+1950,52658,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.33218191941495984
+1951,52658,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.33218191941495984
+1952,52658,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+1953,52679,author_independent,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+1954,52679,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1955,52679,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1956,52679,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1957,52679,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1958,52679,author_independent,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+1959,52679,author_independent,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+1960,52709,author_relevant,Original vs new human neutral,True,0.4,0.9045340337332909
+1961,52709,author_relevant,Human vs LLM neutral,False,0.8333333333333334,0.19611613513818402
+1962,52709,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.3713906763541037
+1963,52709,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1964,52709,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.3713906763541037
+1965,52709,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.3713906763541037
+1966,52709,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6000000000000001
+1967,52768,author_relevant,Original vs new human neutral,False,0.6,0.49613893835683376
+1968,52768,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1969,52768,author_relevant,Human vs LLM neutral,True,0.4285714285714285,0.7155417527999327
+1970,52768,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+1971,52768,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.6155870112510924
+1972,52768,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+1973,52768,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5366563145999496
+1974,52777,author_independent,Original vs new human neutral,False,0.4666666666666667,0.5962847939999438
+1975,52777,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.5773502691896257
+1976,52777,author_independent,Human vs LLM neutral,False,0.7142857142857143,0.19518001458970663
+1977,52777,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.512989176042577
+1978,52777,author_independent,Human vs LLM neutral,False,0.5238095238095237,0.512989176042577
+1979,52777,author_independent,Human vs LLM neutral,False,0.7142857142857143,0.2581988897471611
+1980,52777,author_independent,Human vs LLM neutral,True,0.42857142857142855,0.7181848464596078
+1981,52784,author_relevant,Original vs new human neutral,True,0.4,0.9045340337332908
+1982,52784,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6000000000000001
+1983,52784,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.8
+1984,52784,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6000000000000001
+1985,52784,author_relevant,Human vs LLM neutral,True,0.42857142857142855,0.8728715609439696
+1986,52784,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.8
+1987,52784,author_relevant,Human vs LLM neutral,True,0.2857142857142857,0.9284766908852594
+1988,52822,unambiguous,Original vs new human neutral,False,0.6666666666666667,0.4472135954999579
+1989,52822,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.4411287732562847
+1990,52822,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1991,52822,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.4411287732562847
+1992,52822,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.4411287732562847
+1993,52822,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1994,52822,unambiguous,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+1995,52823,author_independent,Original vs new human neutral,False,0.2666666666666666,0.8682431421244591
+1996,52823,author_independent,Human vs LLM neutral,True,0.16666666666666669,0.9647638212377322
+1997,52823,author_independent,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+1998,52823,author_independent,Human vs LLM neutral,True,0.1904761904761905,0.9467292624062572
+1999,52823,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+2000,52823,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+2001,52823,author_independent,Human vs LLM neutral,True,0.047619047619047644,0.9965457582448796
+2002,52828,author_relevant,Original vs new human neutral,True,0.4666666666666667,0.6963106238227913
+2003,52828,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5222329678670936
+2004,52828,author_relevant,Human vs LLM neutral,False,0.42857142857142855,0.6963106238227914
+2005,52828,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5222329678670936
+2006,52828,author_relevant,Human vs LLM neutral,False,0.49999999999999994,0.6123724356957945
+2007,52828,author_relevant,Human vs LLM neutral,True,0.6666666666666666,0.44721359549995787
+2008,52828,author_relevant,Human vs LLM neutral,False,0.42857142857142855,0.6963106238227914
+2009,52829,author_relevant,Original vs new human neutral,False,0.6,0.5962847939999438
+2010,52829,author_relevant,Human vs LLM neutral,False,0.8333333333333334,0.21081851067789192
+2011,52829,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.40451991747794525
+2012,52829,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.2051956704170308
+2013,52829,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5773502691896257
+2014,52829,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.39036002917941326
+2015,52829,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5773502691896257
+2016,52833,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8677218312746245
+2017,52833,unambiguous,Human vs LLM neutral,False,0.5714285714285714,0.46188021535170054
+2018,52833,unambiguous,Human vs LLM neutral,False,0.8571428571428572,0.08606629658238703
+2019,52833,unambiguous,Human vs LLM neutral,False,0.5714285714285714,0.5773502691896257
+2020,52833,unambiguous,Human vs LLM neutral,False,0.5714285714285714,0.5773502691896257
+2021,52833,unambiguous,Human vs LLM neutral,False,0.8571428571428571,0.17213259316477406
+2022,52833,unambiguous,Human vs LLM neutral,False,0.7142857142857142,0.3077935056255462
+2023,52859,author_relevant,Original vs new human neutral,False,1.0,0.0
+2024,52859,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.3721042037676254
+2025,52859,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6741998624632421
+2026,52859,author_relevant,Human vs LLM neutral,False,0.7142857142857143,0.4961389383568338
+2027,52859,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6741998624632421
+2028,52859,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6155870112510924
+2029,52859,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.5773502691896257
+2030,52860,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+2031,52860,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8304547985373997
+2032,52860,unambiguous,Human vs LLM neutral,False,0.5714285714285714,0.6155870112510924
+2033,52860,unambiguous,Human vs LLM neutral,False,0.6666666666666666,0.565685424949238
+2034,52860,unambiguous,Human vs LLM neutral,False,0.7142857142857142,0.4961389383568338
+2035,52860,unambiguous,Human vs LLM neutral,True,0.42857142857142855,0.7155417527999327
+2036,52860,unambiguous,Human vs LLM neutral,True,0.42857142857142855,0.7807200583588265
+2037,52866,author_relevant,Original vs new human neutral,True,0.4,0.7442084075352505
+2038,52866,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.4961389383568338
+2039,52866,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.6507913734559686
+2040,52866,author_relevant,Human vs LLM neutral,False,0.5714285714285714,0.6155870112510924
+2041,52866,author_relevant,Human vs LLM neutral,False,0.8571428571428571,0.23094010767585027
+2042,52866,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.6928203230275509
+2043,52866,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.6928203230275508
+2044,52895,author_relevant,Original vs new human neutral,False,0.39999999999999997,0.7453559924999298
+2045,52895,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+2046,52895,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+2047,52895,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+2048,52895,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+2049,52895,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+2050,52895,author_relevant,Human vs LLM neutral,False,0.6666666666666667,0.4472135954999579
+2051,61021,author_relevant,Original vs new human neutral,True,0.19999999999999998,0.9438798074485387
+2052,61021,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+2053,61021,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+2054,61021,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+2055,61021,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+2056,61021,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+2057,61021,author_relevant,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+2058,61031,unambiguous,Original vs new human neutral,True,0.33333333333333337,0.8944271909999159
+2059,61031,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+2060,61031,unambiguous,Human vs LLM neutral,True,0.2857142857142857,0.8783100656536799
+2061,61031,unambiguous,Human vs LLM neutral,True,0.19047619047619047,0.9557790087219502
+2062,61031,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+2063,61031,unambiguous,Human vs LLM neutral,True,0.3333333333333333,0.8822575465125694
+2064,61031,unambiguous,Human vs LLM neutral,True,0.33333333333333337,0.8944271909999159
+2065,61055,author_relevant,Original vs new human neutral,False,0.41666666666666663,0.7302967433402215
+2066,61055,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.7453559924999299
+2067,61055,author_relevant,Human vs LLM neutral,True,0.4285714285714286,0.808290376865476
+2068,61055,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.7453559924999299
+2069,61055,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.7442084075352507
+2070,61055,author_relevant,Human vs LLM neutral,False,0.42857142857142855,0.7442084075352507
+2071,61055,author_relevant,Human vs LLM neutral,True,0.5714285714285714,0.7442084075352507
+2072,61071,unambiguous,Original vs new human neutral,True,0.19999999999999998,0.9701425001453318
+2073,61071,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+2074,61071,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+2075,61071,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+2076,61071,unambiguous,Human vs LLM neutral,True,0.0,1.0
+2077,61071,unambiguous,Human vs LLM neutral,True,0.14285714285714288,0.9863939238321437
+2078,61071,unambiguous,Human vs LLM neutral,True,0.0,1.0
+2079,61094,author_independent,Original vs new human neutral,False,0.7999999999999999,0.2696799449852968
+2080,61094,author_independent,Human vs LLM neutral,True,0.4285714285714285,0.7807200583588265
+2081,61094,author_independent,Human vs LLM neutral,True,0.4285714285714285,0.8207826816681232
+2082,61094,author_independent,Human vs LLM neutral,False,0.857142857142857,0.2480694691784169
+2083,61094,author_independent,Human vs LLM neutral,True,0.49999999999999994,0.7171371656006362
+2084,61094,author_independent,Human vs LLM neutral,True,0.5714285714285714,0.6155870112510924
+2085,61094,author_independent,Human vs LLM neutral,True,0.4285714285714285,0.7807200583588265
+2086,61099,unambiguous,Original vs new human neutral,False,0.6666666666666667,0.5601120336112039
+2087,61099,unambiguous,Human vs LLM neutral,False,0.5714285714285714,0.37796447300922725
+2088,61099,unambiguous,Human vs LLM neutral,False,0.8571428571428571,0.09491579957524991
+2089,61099,unambiguous,Human vs LLM neutral,False,0.8571428571428571,0.09491579957524991
+2090,61099,unambiguous,Human vs LLM neutral,False,0.9999999999999999,0.0
+2091,61099,unambiguous,Human vs LLM neutral,False,0.8571428571428571,0.09491579957524991
+2092,61099,unambiguous,Human vs LLM neutral,False,0.8571428571428571,0.09491579957524991
+2093,61101,author_relevant,Original vs new human neutral,False,0.6666666666666667,0.3849001794597504
+2094,61101,author_relevant,Human vs LLM neutral,False,0.6666666666666665,0.5298129428260175
+2095,61101,author_relevant,Human vs LLM neutral,False,0.6666666666666665,0.447213595499958
+2096,61101,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.3202563076101743
+2097,61101,author_relevant,Human vs LLM neutral,False,0.6666666666666665,0.447213595499958
+2098,61101,author_relevant,Human vs LLM neutral,False,0.7142857142857142,0.3849001794597505
+2099,61101,author_relevant,Human vs LLM neutral,False,0.857142857142857,0.17407765595569785

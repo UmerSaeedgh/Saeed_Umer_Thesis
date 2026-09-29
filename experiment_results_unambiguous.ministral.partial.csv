@@ -1,0 +1,1033 @@
+text_id,framing_condition,prompt_variant,label_format,label,reason
+387,neutral,zero_shot,numbered,**surprise**,"The statement implies an unexpected or unplanned event, which often triggers surprise."
+387,neutral,zero_shot,inline,**surprise**,"The statement is a simple, neutral observation that lacks emotional context, but the act of misplacing keys often triggers a momentary, mild surprise before other emotions may arise."
+387,neutral,one_shot,numbered,**surprise**,"The author describes a sudden, unexpected loss of an important item, which is a common trigger for surprise."
+387,neutral,one_shot,inline,**surprise**,The loss of something essential like car keys often triggers a sense of unexpectedness or shock.
+387,neutral,few_shot,numbered,**surprise**,The author describes an unexpected event (losing keys) that likely triggered a moment of surprise.
+387,neutral,few_shot,inline,**surprise**,The author describes an unexpected event (losing keys) that likely triggered a moment of surprise.
+387,generic_human,zero_shot,numbered,**surprise**,"The statement implies a sudden realization or unexpected occurrence of losing something important, which often triggers surprise."
+387,generic_human,zero_shot,inline,**surprise**,"The statement is a straightforward declaration of an unexpected event, implying a moment of realization or mild astonishment."
+387,generic_human,one_shot,numbered,**surprise**,The author’s loss of keys is an unexpected event that likely triggered a moment of surprise.
+387,generic_human,one_shot,inline,**surprise**,The loss of a familiar object like car keys often triggers a sense of unexpectedness or shock.
+387,generic_human,few_shot,numbered,**surprise**,"The author describes a sudden, unexpected loss of an important item, which typically triggers surprise."
+387,generic_human,few_shot,inline,**surprise**,"The author describes a sudden, unexpected loss of an essential item, which typically triggers surprise."
+387,persona_a,zero_shot,numbered,**surprise**,"The act of misplacing keys often triggers a momentary realization or shock, which aligns with surprise."
+387,persona_a,zero_shot,inline,**surprise**,The situation of misplacing keys is unexpected and likely triggered a momentary sense of surprise.
+387,persona_a,one_shot,numbered,**surprise**,"The author likely felt surprised by the unexpected loss of their car keys, which disrupted their routine."
+387,persona_a,one_shot,inline,**surprise**,The loss of a commonly used item like car keys is unexpected and often triggers surprise.
+387,persona_a,few_shot,numbered,**surprise**,"The author describes a sudden, unexpected loss of an essential item, which often triggers surprise."
+387,persona_a,few_shot,inline,**fear**,"The author’s loss of a critical item (car keys) while commuting suggests concern for potential consequences (e.g., being stranded or late), triggering fear."
+387,persona_b,zero_shot,numbered,**surprise**,The situation of misplacing keys while running late is unexpected and likely triggered a moment of surprise.
+387,persona_b,zero_shot,inline,**fear**,"The situation of being late and misplacing keys suggests a sense of urgency and potential consequences, evoking fear of missing an important commitment."
+387,persona_b,one_shot,numbered,**surprise**,"The author’s unexpected loss of keys—while running late—suggests a moment of sudden realization or disruption, triggering surprise."
+387,persona_b,one_shot,inline,**surprise**,The author’s sudden realization of losing their car keys—especially while running late—would likely trigger a moment of surprise at the inconvenience.
+387,persona_b,few_shot,numbered,**fear**,"The author’s situation (running late as a parent) combined with the stress of losing keys triggers anxiety about potential consequences (e.g., missing an important event or being late for a child)."
+387,persona_b,few_shot,inline,**fear**,The author’s urgency (running late) combined with the stress of losing something essential (car keys) triggers anxiety about potential consequences.
+3620,neutral,zero_shot,numbered,**joy**,"The author expressed excitement and satisfaction (""won an online competition"") about achieving a specific goal (""just over 3k""), which aligns with a sense of happiness or joy."
+3620,neutral,zero_shot,inline,**joy**,"The author expresses a positive outcome (winning a competition) and a sense of accomplishment with excitement (""just over 3k"")."
+3620,neutral,one_shot,numbered,**joy**,"The author describes winning an online competition, which is a positive achievement typically associated with joy."
+3620,neutral,one_shot,inline,**joy**,"The author expresses a positive outcome (winning a competition) with a specific achievement (over 3k), which is a clear indicator of joy."
+3620,neutral,few_shot,numbered,**joy**,"The author describes winning an online competition and earning money, which are clear indicators of a positive, uplifting experience."
+3620,neutral,few_shot,inline,**joy**,"The author describes winning an online competition and earning a monetary prize, which is a clear source of happiness and positive excitement."
+3620,generic_human,zero_shot,numbered,**joy**,The author’s excitement about winning an online competition with a specific monetary reward suggests a sense of happiness and satisfaction.
+3620,generic_human,zero_shot,inline,**joy**,"The author’s excitement about winning an online competition with a modest prize (just over $3,000) suggests a sense of happiness and satisfaction."
+3620,generic_human,one_shot,numbered,**joy**,"The author describes winning an online competition, which is a clear source of positive excitement and happiness."
+3620,generic_human,one_shot,inline,**joy**,"The author describes winning an online competition with a positive outcome (""won just over 3k""), which is a clear indicator of happiness or joy."
+3620,generic_human,few_shot,numbered,**joy**,"The author describes winning an online competition and earning money, which are clear indicators of a positive, rewarding experience."
+3620,generic_human,few_shot,inline,**joy**,"The author describes winning an online competition and earning money, which are typically associated with positive, joyful experiences."
+3620,persona_a,zero_shot,numbered,**joy**,The author’s casual excitement about winning an online competition with a modest prize suggests a sense of happiness and satisfaction.
+3620,persona_a,zero_shot,inline,**joy**,The author’s casual excitement about winning an online competition with a modest prize suggests a sense of happiness and satisfaction.
+3620,persona_a,one_shot,numbered,**joy**,"The author describes winning an online competition, which is a positive achievement typically associated with joy."
+3620,persona_a,one_shot,inline,**joy**,"The author’s casual mention of winning an online competition with a modest prize (just over $3k) suggests a positive, happy reaction to their achievement."
+3620,persona_a,few_shot,numbered,**pride**,"The author won an online competition as a hobbyist, which typically evokes a sense of accomplishment and pride in their achievement."
+3620,persona_a,few_shot,inline,**pride**,"The author achieved a personal accomplishment in a competitive hobby, which typically evokes pride."
+3620,persona_b,zero_shot,numbered,**joy**,"The author’s tone suggests a positive, celebratory reaction to winning the competition despite financial struggles."
+3620,persona_b,zero_shot,inline,**relief**,The author’s mention of winning a small amount of money (3k) after being in debt suggests a sense of relief from financial stress.
+3620,persona_b,one_shot,numbered,**joy**,"The author’s mention of winning an online competition and earning money (even modestly) suggests a positive, uplifting emotional response."
+3620,persona_b,one_shot,inline,**relief**,The author’s financial situation (being in debt) suggests winning the competition provided a sense of temporary financial ease or release from stress.
+3620,persona_b,few_shot,numbered,**relief**,"The author’s financial situation (being in debt) contrasts with the positive outcome of winning money, suggesting a sense of relief at unexpected financial improvement."
+3620,persona_b,few_shot,inline,**relief**,"The author’s financial struggle (being in debt) contrasts with the unexpected positive outcome of winning money, suggesting a sense of relief from financial stress."
+52398,neutral,zero_shot,numbered,**shame**,"The author’s description of vomiting at work in front of colleagues suggests deep embarrassment and self-consciousness, which aligns with shame."
+52398,neutral,zero_shot,inline,**shame**,"The author’s description of vomiting in front of colleagues suggests deep embarrassment and self-consciousness, indicative of shame."
+52398,neutral,one_shot,numbered,shame,"The author describes a deeply mortifying and embarrassing event (vomiting in front of colleagues), which aligns with feelings of shame."
+52398,neutral,one_shot,inline,**shame**,"The author describes a deeply mortifying and humiliating event (vomiting in front of colleagues), which aligns with shame."
+52398,neutral,few_shot,numbered,shame,"The author describes a humiliating and private failure exposed to others, which triggers shame."
+52398,neutral,few_shot,inline,**shame**,"The author describes a humiliating, private failure exposed to others, which typically triggers shame."
+52398,generic_human,zero_shot,numbered,**shame**,"The author’s description of vomiting at work in front of colleagues suggests a deep sense of embarrassment and self-consciousness, indicative of shame."
+52398,generic_human,zero_shot,inline,**shame**,"The author’s description of vomiting at work in front of colleagues suggests deep embarrassment and self-consciousness, indicative of shame."
+52398,generic_human,one_shot,numbered,shame,"The author describes a deeply mortifying and humiliating experience in a public setting, which aligns with the emotion of shame."
+52398,generic_human,one_shot,inline,**shame**,"The author’s act of vomiting in front of colleagues suggests a deep sense of embarrassment and self-consciousness, indicative of shame."
+52398,generic_human,few_shot,numbered,shame,"The author describes a humiliating, private failure exposed to others, which triggers shame."
+52398,generic_human,few_shot,inline,**shame**,"The author describes a deeply mortifying, socially embarrassing event, which typically triggers shame."
+52398,persona_a,zero_shot,numbered,**shame**,The author’s description of vomiting at work in front of colleagues suggests a strong sense of embarrassment and self-consciousness.
+52398,persona_a,zero_shot,inline,**shame**,"The author’s description of vomiting at work in front of colleagues suggests deep embarrassment and self-consciousness, indicative of shame."
+52398,persona_a,one_shot,numbered,**shame**,"The author’s description of vomiting in front of colleagues suggests deep embarrassment and self-consciousness, a hallmark of shame."
+52398,persona_a,one_shot,inline,**shame**,The author likely felt deep embarrassment and self-consciousness about a humiliating public health incident.
+52398,persona_a,few_shot,numbered,shame,The author likely felt intense self-consciousness and embarrassment about a humiliating public health incident.
+52398,persona_a,few_shot,inline,**shame**,"The author describes a humiliating, private failure exposed to others, which typically triggers shame."
+52398,persona_b,zero_shot,numbered,**shame**,The author’s description of vomiting at work in front of colleagues suggests a deep sense of embarrassment and self-consciousness.
+52398,persona_b,zero_shot,inline,**shame**,"The author’s description of vomiting at work in front of colleagues suggests deep embarrassment and self-consciousness, indicative of shame."
+52398,persona_b,one_shot,numbered,shame,The author describes a deeply mortifying and embarrassing event (vomiting at work) that likely triggered feelings of humiliation and self-consciousness.
+52398,persona_b,one_shot,inline,**shame**,"The author describes a deeply mortifying and private failure (vomiting) exposed to others, triggering shame."
+52398,persona_b,few_shot,numbered,shame,"The author describes a humiliating, private failure exposed to others, which triggers shame."
+52398,persona_b,few_shot,inline,**shame**,"The author describes a humiliating, private failure exposed to others, which typically triggers shame."
+41688,neutral,zero_shot,numbered,**surprise**,"The statement is a straightforward disclosure without additional context indicating deeper emotional layers, suggesting the primary emotion is likely surprise at the news."
+41688,neutral,zero_shot,inline,**surprise**,"The statement is a straightforward announcement without additional context indicating deeper emotions, suggesting the author was likely caught off guard by the news."
+41688,neutral,one_shot,numbered,**surprise**,"The author’s brief, direct statement about a friend’s coming out suggests a reaction to an unexpected or newly revealed aspect of their friend’s identity."
+41688,neutral,one_shot,inline,**surprise**,"The author’s brief, direct statement about their friend’s coming out suggests a reaction to an unexpected disclosure."
+41688,neutral,few_shot,numbered,**surprise**,"The author describes a significant, unexpected personal disclosure from a friend, which typically triggers surprise."
+41688,neutral,few_shot,inline,**surprise**,"The author describes a significant personal disclosure by a friend, which is an unexpected event likely to evoke surprise."
+41688,generic_human,zero_shot,numbered,**trust**,"The statement reflects a sense of openness and emotional connection, suggesting the author felt secure enough to share such a personal moment with their friend."
+41688,generic_human,zero_shot,inline,**surprise**,"The statement is a straightforward declaration of a personal revelation without additional context indicating deeper emotional layers, suggesting the primary emotion was likely surprise at the disclosure itself."
+41688,generic_human,one_shot,numbered,**surprise**,"The author’s brief, neutral phrasing (""came out as gay to me"") suggests a reaction to an unexpected or noteworthy disclosure rather than a strong emotional charge."
+41688,generic_human,one_shot,inline,**surprise**,"The author’s brief, neutral phrasing suggests a reaction to an unexpected disclosure rather than a strong emotional response."
+41688,generic_human,few_shot,numbered,**surprise**,"The author describes a significant, unexpected disclosure about their friend’s identity, which typically triggers surprise."
+41688,generic_human,few_shot,inline,**surprise**,"The author describes a significant, unexpected disclosure about their friend’s identity, which typically elicits surprise."
+41688,persona_a,zero_shot,numbered,**trust**,"The author’s close, intimate disclosure suggests a deep sense of trust in their friend."
+41688,persona_a,zero_shot,inline,**trust**,"The context of a close, trusted friend coming out suggests a deep sense of emotional security and reliance on the relationship."
+41688,persona_a,one_shot,numbered,**trust**,"The author’s close, trusted relationship with their friend suggests a deep sense of emotional security and confidence in their bond."
+41688,persona_a,one_shot,inline,**joy**,"The author’s close, trusted relationship with the friend suggests a positive, supportive reaction to their coming out, which is often associated with joy."
+41688,persona_a,few_shot,numbered,**trust**,"The author’s close, trusted relationship with their friend suggests a deep sense of emotional safety and connection, which is often tied to trust when sharing such personal news."
+41688,persona_a,few_shot,inline,**trust**,"The author’s close, trusted relationship with their friend suggests a deep sense of emotional safety and connection, which often evokes trust when sharing such a personal revelation."
+41688,persona_b,zero_shot,numbered,**surprise**,"The phrasing ""my friend came out as gay to me"" suggests a lack of prior awareness or expectation, indicating the author was likely caught off guard."
+41688,persona_b,zero_shot,inline,**surprise**,"The statement is brief and lacks emotional depth, but the act of someone coming out to an acquaintance—especially with minimal prior connection—suggests a moment of unexpectedness or astonishment."
+41688,persona_b,one_shot,numbered,**surprise**,The author’s unfamiliarity with the friend’s personal revelation suggests a reaction to unexpected news.
+41688,persona_b,one_shot,inline,**surprise**,The author’s unfamiliarity with the friend’s personal revelation suggests a reaction to unexpected news.
+41688,persona_b,few_shot,numbered,**surprise**,"The author describes a sudden, unexpected disclosure about their friend’s identity, which typically triggers surprise."
+41688,persona_b,few_shot,inline,**surprise**,The author’s unfamiliarity with the friend’s personal revelation suggests a reaction to unexpected news about someone they know little about.
+41641,neutral,zero_shot,numbered,**joy**,The context describes a celebratory and positive event (a surprise birthday party) that typically evokes happiness.
+41641,neutral,zero_shot,inline,**joy**,"The context describes a celebratory event (a birthday party) planned by loved ones, which typically evokes positive emotions like joy."
+41641,neutral,one_shot,numbered,**joy**,"The author describes a birthday celebration planned by loved ones, which is a common source of joyful emotions."
+41641,neutral,one_shot,inline,**joy**,"The author describes a positive, celebratory event (a birthday party) planned by loved ones, which is strongly associated with joy."
+41641,neutral,few_shot,numbered,joy,"The author describes a celebratory and positive event (a birthday party) planned by loved ones, which typically evokes joy."
+41641,neutral,few_shot,inline,**joy**,"The author describes a celebratory, positive event (a birthday party) planned by loved ones, which typically evokes joy."
+41641,generic_human,zero_shot,numbered,**joy**,"The context describes a celebratory and affectionate event (a surprise birthday party planned by loved ones), which strongly suggests positive emotional warmth and happiness."
+41641,generic_human,zero_shot,inline,**joy**,"The context describes a celebratory and affectionate event (a surprise birthday party planned by loved ones), which typically evokes positive emotions like joy."
+41641,generic_human,one_shot,numbered,joy,"The author describes a positive, celebratory event (a birthday party) planned by loved ones, which is strongly associated with joy."
+41641,generic_human,one_shot,inline,**joy**,"The author describes a positive, celebratory event (a birthday party) planned by loved ones, which is strongly associated with joy."
+41641,generic_human,few_shot,numbered,joy,"The author describes a celebratory event (a birthday party) planned by loved ones, which is strongly associated with joy."
+41641,generic_human,few_shot,inline,joy,"The author describes a celebratory event (a birthday party) planned by loved ones, which is a common trigger for joy."
+41641,persona_a,zero_shot,numbered,**joy**,"The author describes a planned birthday party for their 17th birthday, which is typically associated with happiness and excitement."
+41641,persona_a,zero_shot,inline,**joy**,The mention of a surprise birthday party planned by loved ones typically evokes feelings of happiness and excitement.
+41641,persona_a,one_shot,numbered,joy,"The author describes a planned birthday party for their 17th birthday, which is typically associated with positive excitement and happiness."
+41641,persona_a,one_shot,inline,**joy**,"The author describes a positive, celebratory event (a birthday party) planned by loved ones, which is strongly associated with joy."
+41641,persona_a,few_shot,numbered,joy,"The author describes a celebratory event (a birthday party) planned by loved ones, which is strongly associated with joy."
+41641,persona_a,few_shot,inline,**joy**,"The author describes a celebratory, positive event (a surprise birthday party) that typically evokes joy."
+41641,persona_b,zero_shot,numbered,**joy**,"The author describes a secret birthday party organized by loved ones, which is typically associated with happiness and excitement."
+41641,persona_b,zero_shot,inline,**joy**,"The author describes a secret birthday party organized by loved ones, which typically evokes positive, celebratory emotions like joy."
+41641,persona_b,one_shot,numbered,**joy**,"The author describes a secret birthday party planned by loved ones, which is a common source of happiness and excitement."
+41641,persona_b,one_shot,inline,**joy**,"The author describes a secret birthday party planned by loved ones, which is a common source of happiness and excitement."
+41641,persona_b,few_shot,numbered,**joy**,"The author describes a secretive, celebratory birthday party orchestrated by loved ones, which is a strong indicator of joy."
+41641,persona_b,few_shot,inline,**joy**,"The author describes a celebratory, secretive birthday party planned by loved ones, which is a classic trigger for joy."
+52448,neutral,zero_shot,numbered,**surprise**,"The author expresses being caught off guard by their friend’s unannounced visit, indicating a sense of surprise."
+52448,neutral,zero_shot,inline,**surprise**,The author expressed unexpectedness about their friend attending the party without prior knowledge.
+52448,neutral,one_shot,numbered,**surprise**,"The author describes an unexpected event (a friend attending their party unannounced), which aligns with surprise."
+52448,neutral,one_shot,inline,**surprise**,"The author describes an unexpected event (a friend attending their party unannounced), which is a hallmark of surprise."
+52448,neutral,few_shot,numbered,**surprise**,"The author describes an unexpected event (a friend attending their party unannounced), which triggers surprise."
+52448,neutral,few_shot,inline,**surprise**,"The author describes an unexpected event (a friend attending their party unannounced), which is a classic trigger for surprise."
+52448,generic_human,zero_shot,numbered,**surprise**,"The author’s statement implies a lack of prior knowledge about the friend’s attendance, suggesting they were caught off guard."
+52448,generic_human,zero_shot,inline,**surprise**,The author expressed being caught off guard by their friend’s unexpected visit to their birthday party.
+52448,generic_human,one_shot,numbered,**surprise**,"The author was unexpectedly visited by a friend, which is a common trigger for surprise."
+52448,generic_human,one_shot,inline,**surprise**,"The author was unexpectedly visited by a friend, which is a common trigger for surprise."
+52448,generic_human,few_shot,numbered,**surprise**,"The author describes an unexpected event (a friend attending their party unannounced), which is a classic trigger for surprise."
+52448,generic_human,few_shot,inline,**surprise**,"The author describes an unexpected event (a friend attending their party unannounced), which typically triggers surprise."
+52448,persona_a,zero_shot,numbered,**surprise**,"The author expresses being caught off guard by their friend’s unannounced visit, indicating a sudden, unexpected reaction."
+52448,persona_a,zero_shot,inline,**surprise**,"The author’s statement implies a lack of awareness or expectation about their friend’s attendance, which aligns with feeling surprised."
+52448,persona_a,one_shot,numbered,**surprise**,The author was caught off guard by their friend’s unexpected attendance at the party.
+52448,persona_a,one_shot,inline,**surprise**,"The author was caught off guard by their friend’s unannounced visit, indicating a sudden, unexpected reaction."
+52448,persona_a,few_shot,numbered,**surprise**,"The author describes an unexpected event (their friend attending their party unannounced), which triggers surprise."
+52448,persona_a,few_shot,inline,**surprise**,"The author describes an unexpected event (a friend attending their party unannounced), which triggers surprise."
+52448,persona_b,zero_shot,numbered,**surprise**,"The author was caught off guard by the friend’s unannounced visit, despite their usual close contact."
+52448,persona_b,zero_shot,inline,**surprise**,"The author was caught off guard by the friend’s unannounced visit, despite their usual close contact."
+52448,persona_b,one_shot,numbered,**surprise**,"The author was caught off guard by their friend’s unannounced visit, indicating a sudden, unexpected emotion."
+52448,persona_b,one_shot,inline,**surprise**,"The author was caught off guard by their friend’s unannounced visit, which is a clear indicator of surprise."
+52448,persona_b,few_shot,numbered,**surprise**,"The author describes an unexpected event (their friend attending their party unannounced), which triggers surprise."
+52448,persona_b,few_shot,inline,**surprise**,"The author describes an unexpected event (a friend attending their party unannounced), which triggers surprise."
+52501,neutral,zero_shot,numbered,**relief**,"The author expresses a sense of emotional release after enduring prolonged heartbreak and uncertainty, now that pregnancy has finally occurred."
+52501,neutral,zero_shot,inline,**relief**,The author expresses a sense of emotional release after overcoming long-standing heartbreak and uncertainty about having a child.
+52501,neutral,one_shot,numbered,**surprise**,"The author expresses astonishment (""this ... me"") at the unexpected news of pregnancy after long struggles with miscarriages."
+52501,neutral,one_shot,inline,**relief**,"The author expresses a mix of longing and emotional release after a long struggle, indicating a sense of relief at the unexpected positive outcome."
+52501,neutral,few_shot,numbered,**relief**,"The author expresses a long-awaited positive outcome after enduring prolonged heartbreak and loss, which is a hallmark of relief."
+52501,neutral,few_shot,inline,**relief**,"The author expresses a long-awaited positive outcome after enduring prolonged heartbreak and uncertainty, which is a hallmark of relief."
+52501,generic_human,zero_shot,numbered,**relief**,"The author expresses a sense of emotional release after enduring prolonged heartbreak, indicating a shift from despair to hope."
+52501,generic_human,zero_shot,inline,**relief**,"The author expresses a sense of emotional release after a long period of heartbreak and uncertainty, now that pregnancy has finally occurred."
+52501,generic_human,one_shot,numbered,**surprise**,"The author describes an unexpected and long-awaited event (pregnancy after miscarriages), which aligns with surprise."
+52501,generic_human,one_shot,inline,**relief**,"The author expresses a mix of longing and emotional release after a difficult journey, indicating a sense of relief at the positive outcome."
+52501,generic_human,few_shot,numbered,**relief**,"The author describes a long-awaited, emotionally fraught outcome (pregnancy after miscarriages) that brings a sense of release from past suffering."
+52501,generic_human,few_shot,inline,**relief**,"The author expresses a profound sense of emotional release after enduring prolonged heartbreak and uncertainty, now that their longed-for pregnancy has finally occurred."
+52501,persona_a,zero_shot,numbered,**surprise**,"The narrator describes the pregnancy as unexpected after years of miscarriages, indicating a sudden, unexpected emotional reaction."
+52501,persona_a,zero_shot,inline,**relief**,"The narrator expresses a sense of emotional release after enduring prolonged heartbreak and uncertainty, now that the longed-for pregnancy has finally occurred."
+52501,persona_a,one_shot,numbered,**surprise**,The narrator describes an unexpected and long-awaited event (pregnancy after miscarriages) that likely evoked astonishment.
+52501,persona_a,one_shot,inline,**relief**,"The narrator expresses a mix of longing and emotional release after years of heartbreak, indicating a sense of relief that their shared dream is finally possible."
+52501,persona_a,few_shot,numbered,**relief**,"The author describes a long-awaited, emotionally fraught outcome (pregnancy after miscarriages) that brings a sense of release from prior anxiety."
+52501,persona_a,few_shot,inline,**relief**,"The author expresses a profound sense of emotional release after enduring prolonged heartbreak and uncertainty, now that the longed-for pregnancy has finally occurred."
+52501,persona_b,zero_shot,numbered,**relief**,"The author expressed deep emotional weight lifted after enduring years of miscarriages, now experiencing a successful pregnancy."
+52501,persona_b,zero_shot,inline,**relief**,"The author expresses a sense of emotional release after a long period of heartbreak and uncertainty, now that a pregnancy has finally occurred."
+52501,persona_b,one_shot,numbered,**relief**,"The author expresses overwhelming emotional release after enduring prolonged heartbreak and uncertainty, now that the longed-for pregnancy has finally occurred."
+52501,persona_b,one_shot,inline,**relief**,"The author expresses deep emotional weight lifted after enduring years of heartbreak, signaling a shift from despair to relief at the unexpected but longed-for news."
+52501,persona_b,few_shot,numbered,**relief**,"The author describes a long-awaited, emotionally fraught outcome (a successful pregnancy after miscarriages), which typically triggers relief."
+52501,persona_b,few_shot,inline,**relief**,"The author expresses a profound sense of emotional release after enduring prolonged heartbreak and uncertainty, now that the longed-for pregnancy has finally occurred."
+2211,neutral,zero_shot,numbered,**surprise**,"The text lacks context for deeper emotions but implies a neutral or neutral-to-positive expectation, making surprise the most likely single emotion triggered by an unanticipated request. *(Note: This is speculative without additional context.)*"
+2211,neutral,zero_shot,inline,**surprise**,"The statement is neutral and lacks context for deeper emotions, but the phrasing implies a spontaneous or unexpected request, which could evoke surprise."
+2211,neutral,one_shot,numbered,**surprise**,"The text implies an unexpected request or action from the partner, triggering surprise."
+2211,neutral,one_shot,inline,**surprise**,"The text is a simple statement without context for deeper emotion, but the abruptness suggests the author was caught off guard by the request."
+2211,neutral,few_shot,numbered,**surprise**,"The author describes a simple, unexpected request directed at their partner, which suggests a moment of unexpectedness."
+2211,neutral,few_shot,inline,**surprise**,"The author describes a simple, unexpected request to their partner, which suggests a moment of surprise at the interaction."
+2211,generic_human,zero_shot,numbered,**surprise**,"The text is too brief to infer deeper emotions, but the act of asking a partner for a task (without additional context) most neutrally aligns with **surprise** as the most likely initial reaction if this were a spontaneous or unexpected request. *(Note: Without more context, this is speculative—other emotions could apply if expanded.)*"
+2211,generic_human,zero_shot,inline,**surprise**,"The statement is neutral and lacks context for deeper emotions, but the act of asking someone to do a task implies an unexpected or unplanned request, which could evoke surprise."
+2211,generic_human,one_shot,numbered,**surprise**,"The author’s request to their partner lacks context about the task or outcome, making it a neutral act that could evoke surprise if unexpected or unprompted. *(Note: Without additional context, this is the most neutral/likely single emotion from the list, though the text itself is too minimal to definitively pinpoint an emotion.)*"
+2211,generic_human,one_shot,inline,**surprise**,"The text is too brief to infer a clear emotion, but the most neutral assumption is that the author was caught off guard by the request, which aligns with surprise. *(Note: Without additional context, this is speculative—other emotions could apply depending on the outcome or tone implied.)*"
+2211,generic_human,few_shot,numbered,**surprise**,"The author’s statement is abrupt and lacks context about the partner’s response, suggesting a lack of expectation or anticipation, which aligns with surprise."
+2211,generic_human,few_shot,inline,**surprise**,"The author’s request to their partner implies an unexpected or unanticipated interaction, which often triggers surprise."
+2211,persona_a,zero_shot,numbered,**anger**,"The author’s repeated experience of their partner forgetting tasks suggests frustration or irritation, which aligns with anger."
+2211,persona_a,zero_shot,inline,**anger**,The author’s repeated frustration with their partner’s forgetfulness suggests irritation or annoyance.
+2211,persona_a,one_shot,numbered,**anger**,"The author’s repeated experience of their partner forgetting tasks suggests frustration or irritation, a core component of anger."
+2211,persona_a,one_shot,inline,**sadness**,The author’s repeated experience of their partner forgetting tasks suggests a lingering sense of disappointment or unhappiness.
+2211,persona_a,few_shot,numbered,anger,"The author’s repeated frustration with their partner’s forgetfulness suggests irritation or annoyance, which aligns with anger."
+2211,persona_a,few_shot,inline,**anger**,"The author’s repeated frustration with their partner’s forgetfulness suggests irritation or annoyance, a core component of anger."
+2211,persona_b,zero_shot,numbered,**trust**,The author’s partner’s reliability in following through suggests a sense of confidence and trust in their partner’s dependability.
+2211,persona_b,zero_shot,inline,**trust**,The author’s partner’s reliable follow-through reinforces their confidence and positive expectation in the relationship.
+2211,persona_b,one_shot,numbered,**trust**,"The author’s partner’s reliable behavior reinforces confidence and positive expectation, indicating trust."
+2211,persona_b,one_shot,inline,**trust**,The author’s partner’s consistent reliability reinforces a sense of confidence and security in their relationship.
+2211,persona_b,few_shot,numbered,**trust**,The author’s partner’s reliable behavior reinforces trust in their relationship.
+2211,persona_b,few_shot,inline,**trust**,The author’s partner’s consistent reliability reinforces a sense of trust in their relationship.
+41789,neutral,zero_shot,numbered,**trust**,The author explicitly expressed an unquestioning reliance and confidence in the surgeon’s decisions despite not knowing them personally.
+41789,neutral,zero_shot,inline,**trust**,The author explicitly expressed an unquestioning reliance and confidence in the surgeon’s decisions despite not knowing him personally.
+41789,neutral,one_shot,numbered,**trust**,The author explicitly states they implicitly trusted the surgeon despite not knowing them personally.
+41789,neutral,one_shot,inline,**trust**,The author expressed implicit trust in their surgeon despite not knowing them personally.
+41789,neutral,few_shot,numbered,**trust**,"The author expresses implicit trust in their surgeon despite being unfamiliar with them, indicating a sense of confidence and reliance."
+41789,neutral,few_shot,inline,**trust**,"The author expresses implicit trust in their surgeon despite not knowing them personally, highlighting a sense of confidence in their care."
+41789,generic_human,zero_shot,numbered,**11. trust**,The author explicitly expresses an implicit trust in the surgeon’s decisions despite not knowing them personally.
+41789,generic_human,zero_shot,inline,**trust**,The author explicitly expressed implicit trust in the surgeon’s decisions despite not knowing them personally.
+41789,generic_human,one_shot,numbered,**trust**,The author explicitly states they implicitly trusted the surgeon despite not knowing them personally.
+41789,generic_human,one_shot,inline,**trust**,"The author explicitly states they implicitly trusted the surgeon despite not knowing them, indicating a sense of confidence or reliance."
+41789,generic_human,few_shot,numbered,trust,"The author expresses implicit trust in the surgeon despite not knowing them personally, indicating a sense of confidence and reliance."
+41789,generic_human,few_shot,inline,**trust**,"The author expresses implicit trust in the surgeon despite not knowing them personally, indicating a sense of confidence and reliance in their care."
+41789,persona_a,zero_shot,numbered,**11. trust**,The author explicitly expresses an implicit trust in the surgeon despite not knowing them personally.
+41789,persona_a,zero_shot,inline,**trust**,The author explicitly expressed an implicit trust in the surgeon’s decisions despite not knowing them personally.
+41789,persona_a,one_shot,numbered,**trust**,"The author explicitly states they ""implicitly trusted"" their surgeon despite not knowing them, indicating a sense of confidence and reliance."
+41789,persona_a,one_shot,inline,**trust**,The author explicitly states they implicitly trusted the surgeon despite not knowing them personally.
+41789,persona_a,few_shot,numbered,**trust**,"The author expresses implicit trust in their surgeon despite not knowing them personally, highlighting a sense of confidence and reliance in their care."
+41789,persona_a,few_shot,inline,**trust**,"The author expresses implicit trust in their surgeon despite not knowing them personally, indicating a sense of confidence and reliance."
+41789,persona_b,zero_shot,numbered,**trust**,The author explicitly expressed implicit trust in the surgeon’s expertise and decisions despite not knowing them personally.
+41789,persona_b,zero_shot,inline,**trust**,"The author explicitly states they ""implicitly trusted"" the surgeon and his decisions, indicating a strong sense of confidence and reliance."
+41789,persona_b,one_shot,numbered,**trust**,The author explicitly states they implicitly trusted the surgeon despite not knowing them personally.
+41789,persona_b,one_shot,inline,**trust**,"The author explicitly states they implicitly trusted the surgeon despite not knowing them, indicating a sense of confidence and reliance in their abilities."
+41789,persona_b,few_shot,numbered,**trust**,"The author explicitly describes an implicit trust in the surgeon despite not knowing them, indicating a strong sense of confidence and reliance."
+41789,persona_b,few_shot,inline,**trust**,"The author expresses implicit trust in the surgeon despite not knowing them personally, indicating a sense of confidence and reliance in their expertise."
+52860,neutral,zero_shot,numbered,**shame**,"The context suggests vulnerability and self-consciousness about exposing personal details to others, which aligns with feelings of shame."
+52860,neutral,zero_shot,inline,**shame**,"The context suggests vulnerability and a sense of exposure, which commonly aligns with feelings of shame when deeply personal information is shared with others."
+52860,neutral,one_shot,numbered,**shame**,"The author describes being exposed to deeply personal information in a way that suggests vulnerability or embarrassment, triggering shame."
+52860,neutral,one_shot,inline,**shame**,"The author describes receiving deeply personal information, which often triggers feelings of vulnerability and self-consciousness tied to shame."
+52860,neutral,few_shot,numbered,**shame**,"The author describes being exposed in a deeply personal way, which often triggers feelings of vulnerability and shame."
+52860,neutral,few_shot,inline,**trust**,"The author describes being confided in with deeply personal information, which typically evokes trust in the person sharing it."
+52860,generic_human,zero_shot,numbered,**trust**,The context of sharing deeply personal information with someone suggests a sense of trust in that person.
+52860,generic_human,zero_shot,inline,**trust**,"The context suggests a sense of being valued and connected through vulnerability, which is commonly associated with trust."
+52860,generic_human,one_shot,numbered,**shame**,"The author describes being exposed to deeply personal information, which often triggers feelings of vulnerability and shame."
+52860,generic_human,one_shot,inline,**shame**,"The author describes receiving deeply personal information, which often evokes feelings of vulnerability and self-consciousness tied to shame."
+52860,generic_human,few_shot,numbered,**trust**,"The author describes being confided in with deeply personal information, which typically evokes trust in the confidant."
+52860,generic_human,few_shot,inline,**trust**,"The author describes being confided in with deeply personal information, which typically evokes trust in the person sharing it."
+52860,persona_a,zero_shot,numbered,**surprise**,The author’s rarity of being confided in suggests a sense of unexpectedness or astonishment at receiving such personal disclosure.
+52860,persona_a,zero_shot,inline,**surprise**,"The author’s rarity of being confided in suggests a sudden, unexpected emotional reaction to the disclosure."
+52860,persona_a,one_shot,numbered,**surprise**,"The author describes an unexpected disclosure of deeply personal information, which is a clear trigger for surprise."
+52860,persona_a,one_shot,inline,**trust**,The author’s rare experience of being confided in suggests a sense of trust in the person sharing deeply personal information.
+52860,persona_a,few_shot,numbered,**trust**,"The author describes receiving deeply personal information, which typically fosters a sense of trust in the confidant."
+52860,persona_a,few_shot,inline,**trust**,"The author describes receiving deeply personal information from someone, which typically fosters a sense of trust in the confidant."
+52860,persona_b,zero_shot,numbered,**trust**,The author’s repeated exposure to deeply personal information suggests a sense of trust in the confidant.
+52860,persona_b,zero_shot,inline,**trust**,"The context suggests a sense of being chosen and valued, which typically aligns with the emotion of trust when deeply personal information is shared."
+52860,persona_b,one_shot,numbered,**trust**,The author’s repeated exposure to deeply personal information suggests a sense of trust in the confidant.
+52860,persona_b,one_shot,inline,**shame**,"The author’s tone suggests discomfort and vulnerability tied to sharing deeply personal information, which is often linked to shame."
+52860,persona_b,few_shot,numbered,**trust**,The author’s repeated exposure to deeply personal information suggests a sense of trust in the confidant.
+52860,persona_b,few_shot,inline,**trust**,The author’s repeated exposure to deeply personal information suggests a sense of trust in the confidant sharing such intimate details.
+52822,neutral,zero_shot,numbered,**trust**,"The author expressed deep admiration and confidence in the specialist’s expertise, indicating a strong sense of trust."
+52822,neutral,zero_shot,inline,**trust**,"The author expressed admiration and confidence in the specialist’s expertise, indicating a sense of trust in their abilities."
+52822,neutral,one_shot,numbered,**trust**,"The author expressed admiration for the specialist’s expertise, which reflects a sense of trust in their competence and care."
+52822,neutral,one_shot,inline,**trust**,The author’s admiration for the specialist’s expertise and contrast with previous doctors suggests a sense of confidence and reliance in his abilities.
+52822,neutral,few_shot,numbered,**trust**,"The author expresses admiration and reliance on the specialist’s expertise, indicating a sense of trust in their abilities."
+52822,neutral,few_shot,inline,**trust**,"The author’s admiration for the specialist’s expertise and knowledge contrasts with their past experiences, indicating a sense of trust in his abilities."
+52822,generic_human,zero_shot,numbered,**trust**,"The author expressed admiration and confidence in the specialist’s expertise, indicating a sense of trust in their abilities."
+52822,generic_human,zero_shot,inline,**trust**,"The author expressed admiration and confidence in the specialist’s expertise, indicating a sense of trust in their abilities."
+52822,generic_human,one_shot,numbered,**trust**,"The author expressed admiration for the specialist’s expertise, which is a key indicator of trust in their competence and care."
+52822,generic_human,one_shot,inline,**trust**,The author’s admiration for the specialist’s expertise and the contrast with previous doctors suggests a sense of trust in their competence and care.
+52822,generic_human,few_shot,numbered,**trust**,The author’s admiration for the specialist’s expertise and knowledge—contrasting with previous doctors—suggests a deep sense of trust in their abilities.
+52822,generic_human,few_shot,inline,**trust**,The author’s admiration for the specialist’s expertise and knowledge—contrasting with their previous doctors—indicates a sense of trust in his abilities.
+52822,persona_a,zero_shot,numbered,**trust**,"The author expressed admiration and confidence in the specialist’s expertise, indicating a strong sense of trust."
+52822,persona_a,zero_shot,inline,**trust**,"The author expressed admiration for the specialist’s expertise, indicating a sense of confidence and reliance in their abilities."
+52822,persona_a,one_shot,numbered,**trust**,"The author expressed admiration for the specialist’s expertise and knowledge, which reflects a sense of trust in their abilities."
+52822,persona_a,one_shot,inline,**trust**,The author’s admiration for the specialist’s expertise suggests a sense of confidence and reliance in his abilities.
+52822,persona_a,few_shot,numbered,**trust**,The author’s admiration for the specialist’s expertise and knowledge—especially in contrast to previous doctors—suggests a deep sense of trust in their abilities.
+52822,persona_a,few_shot,inline,**trust**,The author’s admiration for the specialist’s expertise suggests a deep sense of trust in their competence and care.
+52822,persona_b,zero_shot,numbered,**trust**,"The author expressed admiration and confidence in the specialist’s expertise, indicating a strong sense of trust in their abilities."
+52822,persona_b,zero_shot,inline,**trust**,"The author expressed admiration and confidence in the specialist’s expertise, indicating a strong sense of trust in their abilities."
+52822,persona_b,one_shot,numbered,**trust**,"The author expressed admiration for the specialist’s expertise and knowledge, indicating a sense of confidence and reliance in their abilities."
+52822,persona_b,one_shot,inline,**trust**,The author’s admiration for the specialist’s expertise and knowledge reflects a sense of confidence and reliance in their abilities.
+52822,persona_b,few_shot,numbered,**trust**,The author’s admiration for the specialist’s expertise and knowledge in a niche field suggests a deep sense of trust in their abilities.
+52822,persona_b,few_shot,inline,**trust**,The author’s admiration for the specialist’s expertise and knowledge suggests a deep sense of trust in their abilities.
+52833,neutral,zero_shot,numbered,**shame**,"The phrase *""had to ... my team mates""* (likely ""let down"") suggests the author felt self-conscious or embarrassed about failing their team."
+52833,neutral,zero_shot,inline,**shame**,"The phrase *""had to ... my team mates""* (likely ""let down"") suggests a sense of failure or self-blame, indicating shame."
+52833,neutral,one_shot,numbered,**guilt**,"The phrase *""had to ... my team mates""* (likely ""quit"" or ""abandon"") suggests the author felt regret or remorse for leaving their teammates in a team game."
+52833,neutral,one_shot,inline,**shame**,"The phrase *""had to ... my team mates""* (likely implying betrayal or letting them down) suggests the author felt self-conscious or embarrassed about their actions."
+52833,neutral,few_shot,numbered,**shame**,"The incomplete sentence implies the author had to withdraw or abandon their teammates, which suggests a feeling of shame or regret for not fulfilling their role."
+52833,neutral,few_shot,inline,**shame**,"The abrupt, unfinished sentence (""had to ... my teammates"") strongly suggests the author felt awkward or embarrassed about a failure or betrayal in the team context."
+52833,generic_human,zero_shot,numbered,**shame**,"The phrase *""had to ... my team mates""* (likely implying betrayal or letting them down) suggests the author felt self-conscious or embarrassed about their actions."
+52833,generic_human,zero_shot,inline,**shame**,"The phrase *""had to ... my team mates""* (likely ""let down"") suggests a sense of failure or self-blame, which aligns with shame."
+52833,generic_human,one_shot,numbered,**shame**,"The phrase *""had to ... my team mates""* (likely implying betrayal or letting them down) suggests the author felt self-conscious or embarrassed about their actions."
+52833,generic_human,one_shot,inline,**shame**,"The phrase *""had to ... my team mates""* (likely implying betrayal or failure) suggests the author felt self-conscious or embarrassed about their actions."
+52833,generic_human,few_shot,numbered,**shame**,"The phrase *""had to ... my team mates""* (likely implying betrayal or letting them down) suggests the author felt shame for their actions."
+52833,generic_human,few_shot,inline,**shame**,"The incomplete phrase (""had to ... my team mates"") strongly implies the author felt compelled to betray or abandon their teammates, triggering shame."
+52833,persona_a,zero_shot,numbered,**trust**,"The author’s reliance on teammates and the context of teamwork suggest a sense of confidence and reliance, indicating trust."
+52833,persona_a,zero_shot,inline,**pride**,The author’s reliance on teammates and the context of teamwork suggest a sense of satisfaction and positive self-regard.
+52833,persona_a,one_shot,numbered,shame,The author implies a sense of personal failure or regret for not supporting teammates during a critical moment.
+52833,persona_a,one_shot,inline,**shame**,"The author implies a sense of failure or inadequacy in supporting teammates, which aligns with shame."
+52833,persona_a,few_shot,numbered,**shame**,"The author’s incomplete sentence (""had to ... my teammates"") suggests a sense of failure or inadequacy in relying on teammates, which aligns with shame."
+52833,persona_a,few_shot,inline,**trust**,The author’s reliance on teammates during a game suggests they felt trust in their team members.
+52833,persona_b,zero_shot,numbered,**pride**,The author likely felt pride in their teammate’s competence and reliability during the game.
+52833,persona_b,zero_shot,inline,**pride**,The author likely felt pride in their teammate’s ability to rely on them during the game.
+52833,persona_b,one_shot,numbered,**shame**,"The author implies a sense of failure or inadequacy in relying on a teammate, which aligns with feelings of shame."
+52833,persona_b,one_shot,inline,**shame**,"The author implies a sense of failure or inadequacy in relying on a teammate, which aligns with feelings of shame."
+52833,persona_b,few_shot,numbered,**pride**,"The author describes relying on a teammate during a team game, which suggests a sense of satisfaction or admiration for their teammate's abilities."
+52833,persona_b,few_shot,inline,**pride**,"The author describes relying on a teammate in a team game, which suggests a sense of accomplishment or admiration for their teammate’s contribution."
+61031,neutral,zero_shot,numbered,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment to their family.
+61031,neutral,zero_shot,inline,**trust**,The author expresses deep confidence and assurance in their husband’s unwavering support and commitment to their family.
+61031,neutral,one_shot,numbered,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment.
+61031,neutral,one_shot,inline,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment.
+61031,neutral,few_shot,numbered,**trust**,"The author expresses deep confidence and reliance in their husband’s unwavering support and commitment, which aligns with the emotion of trust."
+61031,neutral,few_shot,inline,**trust**,"The author expresses deep confidence and reliance in their husband’s unwavering support and commitment, which reflects trust."
+61031,generic_human,zero_shot,numbered,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment.
+61031,generic_human,zero_shot,inline,**trust**,The author expresses deep confidence and assurance in their husband’s unwavering support and commitment.
+61031,generic_human,one_shot,numbered,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment.
+61031,generic_human,one_shot,inline,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment.
+61031,generic_human,few_shot,numbered,**trust**,"The author expresses deep confidence and reliance in their husband’s unwavering support and commitment, which aligns with the emotion of trust."
+61031,generic_human,few_shot,inline,**trust**,"The author expresses deep confidence and reliance in their husband’s unwavering support and commitment, which aligns with the emotion of trust."
+61031,persona_a,zero_shot,numbered,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment.
+61031,persona_a,zero_shot,inline,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment.
+61031,persona_a,one_shot,numbered,**trust**,The author expresses deep confidence and reliance on their husband’s unwavering support and commitment.
+61031,persona_a,one_shot,inline,**trust**,The author expresses deep confidence and reliance on their husband’s unwavering support and commitment.
+61031,persona_a,few_shot,numbered,trust,"The author expresses deep confidence and reliance in their husband’s unwavering support and commitment, which aligns with the emotion of trust."
+61031,persona_a,few_shot,inline,**trust**,The author expresses deep confidence and reliance on their husband’s unwavering support and commitment.
+61031,persona_b,zero_shot,numbered,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment to their family.
+61031,persona_b,zero_shot,inline,**trust**,The author expresses confidence and reliance in their husband’s unwavering support and commitment to their family.
+61031,persona_b,one_shot,numbered,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment.
+61031,persona_b,one_shot,inline,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment.
+61031,persona_b,few_shot,numbered,**trust**,The author expresses deep confidence and reliance in their husband’s unwavering support and commitment to their family.
+61031,persona_b,few_shot,inline,**trust**,The author expresses deep confidence and reliance on their husband’s unwavering support and commitment to their family.
+6997,neutral,zero_shot,numbered,**surprise**,"The phrase *""how small she was""* suggests an unexpected or surprising observation about the niece’s size."
+6997,neutral,zero_shot,inline,**surprise**,"The phrase *""how small she was""* suggests an unexpected or unexpectedly vivid observation, indicating astonishment or surprise."
+6997,neutral,one_shot,numbered,**surprise**,"The abrupt, unexpected observation of how small the niece was suggests astonishment or surprise."
+6997,neutral,one_shot,inline,**surprise**,"The abrupt, unexpected observation of the niece’s small size suggests a moment of astonishment or unexpectedness."
+6997,neutral,few_shot,numbered,**surprise**,"The author expresses astonishment at the small size of their niece, which is a clear indicator of surprise."
+6997,neutral,few_shot,inline,**surprise**,The author expresses astonishment at the unexpected observation of their niece’s small size.
+6997,generic_human,zero_shot,numbered,**surprise**,"The phrase *""how small she was""* suggests an unexpected or unexpectedly observed detail that evoked astonishment."
+6997,generic_human,zero_shot,inline,**surprise**,"The phrasing *""how small she was""* suggests an unexpected or unexpectedly strong reaction to her niece’s size, indicating surprise."
+6997,generic_human,one_shot,numbered,**surprise**,"The phrasing ""how small she was"" suggests an unexpected or unexpectedly observed detail about the niece's size, triggering surprise."
+6997,generic_human,one_shot,inline,**surprise**,"The abrupt, unexpected observation of the niece’s small size suggests the author was caught off guard by the discovery."
+6997,generic_human,few_shot,numbered,**surprise**,"The author’s observation of their niece’s small size suggests an unexpected or unexpectedly vivid realization, triggering surprise."
+6997,generic_human,few_shot,inline,**surprise**,The author expresses astonishment at the unexpected observation of their niece’s small size.
+6997,persona_a,zero_shot,numbered,**surprise**,"The author’s focus on the newborn’s small size suggests a sudden, unexpected reaction to the tiny size of their niece."
+6997,persona_a,zero_shot,inline,**surprise**,"The author expresses astonishment at the small size of their newborn niece, indicating a sudden, unexpected reaction."
+6997,persona_a,one_shot,numbered,**surprise**,The author’s focus on the newborn’s small size suggests a reaction to an unexpected or novel experience of holding a tiny infant.
+6997,persona_a,one_shot,inline,**surprise**,The author’s focus on the newborn’s small size suggests a reaction to the unexpected or novel experience of seeing a tiny infant for the first time.
+6997,persona_a,few_shot,numbered,**surprise**,"The author describes an unexpected encounter with a newborn, which is likely to evoke surprise at their small size."
+6997,persona_a,few_shot,inline,**surprise**,"The author describes an unexpected encounter with a newborn, which typically evokes surprise at their small size."
+6997,persona_b,zero_shot,numbered,**surprise**,"The author’s observation of their niece’s small size, despite prior experience with newborns, suggests a moment of unexpectedness or astonishment."
+6997,persona_b,zero_shot,inline,**surprise**,The author’s reaction to the niece’s small size suggests they were unexpectedly struck by the contrast between expectation and reality.
+6997,persona_b,one_shot,numbered,**surprise**,The author’s observation of their niece’s small size—likely unexpected or striking—suggests a moment of astonishment or surprise.
+6997,persona_b,one_shot,inline,**surprise**,"The author’s focus on the unexpected size of the niece (being ""how small"") suggests a moment of astonishment or unexpectedness."
+6997,persona_b,few_shot,numbered,**surprise**,"The author’s observation of their niece’s small size—likely unexpected or striking—evokes surprise, especially given prior experience with newborns."
+6997,persona_b,few_shot,inline,**surprise**,The author’s observation of their niece’s small size—likely unexpected or striking—evokes surprise at the contrast with prior experience.
+31292,neutral,zero_shot,numbered,**surprise**,"The author explicitly mentions the unexpected nature of winning the free meal, which aligns with the emotion of surprise."
+31292,neutral,zero_shot,inline,**surprise**,The author explicitly mentions the unexpected nature of winning the free meal as a key factor in their emotional response.
+31292,neutral,one_shot,numbered,**surprise**,"The author describes an unexpected event (winning a free meal) that triggered a reaction beyond joy, indicating surprise at the sudden turn of events."
+31292,neutral,one_shot,inline,**surprise**,"The author describes an unexpected event (winning a free meal) that triggered a strong, sudden reaction beyond just joy."
+31292,neutral,few_shot,numbered,**surprise**,"The author describes an unexpected event (winning a free meal) that triggered a strong, sudden reaction beyond just joy."
+31292,neutral,few_shot,inline,**surprise**,"The author describes an unexpected and sudden event (winning a free meal) that triggered a strong, initial emotional reaction beyond the already expressed joy."
+31292,generic_human,zero_shot,numbered,**surprise**,"The author explicitly mentions the unexpected nature of winning the free meal, which aligns with the emotion of surprise."
+31292,generic_human,zero_shot,inline,**surprise**,"The author explicitly mentions the unexpected nature of winning the free meal, which aligns with the emotion of surprise."
+31292,generic_human,one_shot,numbered,**surprise**,"The author describes an unexpected event (winning a free meal) that triggered a strong reaction, which aligns with surprise."
+31292,generic_human,one_shot,inline,**surprise**,"The author describes an unexpected event (winning a free meal) that triggered a strong reaction beyond joy, indicating surprise at the sudden turn of events."
+31292,generic_human,few_shot,numbered,**surprise**,"The author describes an unexpected and sudden event (winning a free meal) that triggered a strong reaction beyond joy, aligning with surprise."
+31292,generic_human,few_shot,inline,**surprise**,"The author describes an unexpected and sudden event (winning a free meal) that triggered a strong, initial reaction beyond the already expressed joy."
+31292,persona_a,zero_shot,numbered,**surprise**,"The author explicitly describes the unexpected nature of winning the free meal as a source of emotion, alongside joy."
+31292,persona_a,zero_shot,inline,**surprise**,"The author explicitly mentions the unexpected nature of winning the free meal, which aligns with the emotion of surprise."
+31292,persona_a,one_shot,numbered,**surprise**,The author describes the unexpectedness of winning a free meal as a primary emotional trigger.
+31292,persona_a,one_shot,inline,**surprise**,"The author describes an unexpected event (winning a free meal) that triggered a strong, sudden reaction beyond just joy."
+31292,persona_a,few_shot,numbered,**surprise**,"The author describes an unexpected event (winning a free meal) that triggered a strong reaction beyond joy, indicating surprise."
+31292,persona_a,few_shot,inline,**surprise**,The author describes an unexpected event (winning a free meal) that triggered a strong reaction beyond the already mentioned joy.
+31292,persona_b,zero_shot,numbered,**surprise**,The author explicitly mentions the unexpected nature of the free meal as a key factor in their emotional reaction.
+31292,persona_b,zero_shot,inline,**surprise**,The author explicitly mentions the unexpected nature of the free meal as a key factor in their emotional reaction.
+31292,persona_b,one_shot,numbered,**surprise**,The author describes an unexpected event (winning a free meal) that triggered a spontaneous emotional reaction.
+31292,persona_b,one_shot,inline,**surprise**,The author describes an unexpected event (winning a free meal) that triggered a reaction of astonishment.
+31292,persona_b,few_shot,numbered,**surprise**,"The author describes an unexpected event (winning a free meal) that triggered a spontaneous reaction, which aligns with surprise."
+31292,persona_b,few_shot,inline,**surprise**,The author describes an unexpected and sudden event (winning a free meal) that triggered a reaction of astonishment.
+61099,neutral,zero_shot,numbered,**fear**,"The author described a life-threatening situation with physical vulnerability and uncertainty about their safety, which is characteristic of fear."
+61099,neutral,zero_shot,inline,**fear**,"The author described a life-threatening situation with physical vulnerability and uncertainty about their safety, which is characteristic of fear."
+61099,neutral,one_shot,numbered,**fear**,"The author describes a life-threatening, adrenaline-inducing situation (malfunctioning zip-line, hanging 20ft above water) that triggers a primal fear response."
+61099,neutral,one_shot,inline,**fear**,"The author describes a life-threatening situation with physical danger and uncertainty, triggering a sense of fear."
+61099,neutral,few_shot,numbered,**fear**,"The author describes a life-threatening, sudden malfunction while suspended high above water, triggering intense fear."
+61099,neutral,few_shot,inline,**fear**,"The author describes a sudden, life-threatening situation involving a malfunctioning zip-line and being suspended above water, which triggers intense fear."
+61099,generic_human,zero_shot,numbered,**fear**,The author described a life-threatening situation (hanging 20ft above water) and explicitly mentioned the terror of trusting their sister to hold them.
+61099,generic_human,zero_shot,inline,**fear**,"The author described a life-threatening situation with physical vulnerability and uncertainty about their safety, which is characteristic of fear."
+61099,generic_human,one_shot,numbered,**fear**,"The author describes a life-threatening, adrenaline-inducing situation (malfunctioning zip-line, hanging 20ft above water) that triggers fear."
+61099,generic_human,one_shot,inline,**fear**,"The author describes a life-threatening, adrenaline-inducing situation (falling 20ft) and relief only after a close call, indicating fear during the initial danger."
+61099,generic_human,few_shot,numbered,**fear**,"The author describes a sudden, life-threatening situation with a zip-line malfunction, triggering intense fear of falling and injury."
+61099,generic_human,few_shot,inline,**fear**,"The author describes a sudden, dangerous situation with physical vulnerability and uncertainty, triggering intense fear."
+61099,persona_a,zero_shot,numbered,**fear**,"The narrator describes a life-threatening situation with physical vulnerability and uncertainty about their safety, indicating a strong sense of fear."
+61099,persona_a,zero_shot,inline,**fear**,The narrator describes a physically dangerous and uncertain situation (hanging 20ft above water) and explicitly mentions the terror of trusting their sister to hold them.
+61099,persona_a,one_shot,numbered,**fear**,"The narrator describes a life-threatening situation (hanging 20ft above water) and their immediate concern for their sister’s ability to save them, indicating intense fear."
+61099,persona_a,one_shot,inline,**fear**,"The narrator describes a life-threatening situation (hanging 20ft above water) and the terror of being unsupported, a hallmark of fear."
+61099,persona_a,few_shot,numbered,**fear**,"The narrator describes a life-threatening, sudden, and uncontrolled situation (hanging 20ft above water) that triggers intense fear."
+61099,persona_a,few_shot,inline,**fear**,"The narrator describes a life-threatening, sudden malfunction while suspended high above water, triggering intense fear."
+61099,persona_b,zero_shot,numbered,**fear**,"The author described a life-threatening situation and the immediate, intense worry about their sister’s ability to save them, reflecting a strong sense of fear."
+61099,persona_b,zero_shot,inline,**fear**,"The author described a life-threatening situation where they were suspended above water, highlighting the intense physical and emotional vulnerability they experienced."
+61099,persona_b,one_shot,numbered,**fear**,"The author describes a life-threatening, suspended moment of uncertainty and physical vulnerability, which is a hallmark of fear."
+61099,persona_b,one_shot,inline,**fear**,"The author describes a life-threatening situation (falling 20ft) and the intense relief at their sister’s intervention, indicating a dominant emotional response of fear during the perilous moment."
+61099,persona_b,few_shot,numbered,**fear**,"The author describes a life-threatening situation (hanging 20ft above water) and the immediate, intense physical danger they faced."
+61099,persona_b,few_shot,inline,**fear**,"The author describes a sudden, dangerous situation with a life-threatening risk, triggering intense fear."
+61071,neutral,zero_shot,numbered,**trust**,The author’s willingness to relinquish control of their friend’s finances suggests a strong sense of trust in the relationship.
+61071,neutral,zero_shot,inline,**trust**,The author’s willingness to relinquish control of their friend’s finances suggests a strong sense of trust in that person.
+61071,neutral,one_shot,numbered,trust,"The author expressed a sense of being entrusted with a responsibility, indicating trust in their friend."
+61071,neutral,one_shot,inline,**trust**,The author expressed confidence and reliance in their friend by willingly taking control of their financial matters.
+61071,neutral,few_shot,numbered,trust,"The author describes a situation involving a friend placing confidence in them by sharing control of their finances, which reflects trust."
+61071,neutral,few_shot,inline,**trust**,"The author describes granting a friend significant responsibility over their finances, indicating a sense of trust in that person."
+61071,generic_human,zero_shot,numbered,**trust**,The author’s willingness to relinquish control of their friend’s finances suggests a strong sense of trust in the friend’s judgment or reliability.
+61071,generic_human,zero_shot,inline,**trust**,The author’s willingness to relinquish control of their friend’s finances suggests a strong sense of trust in the relationship.
+61071,generic_human,one_shot,numbered,trust,"The author expressed willingness to entrust their friend with financial control, indicating a sense of trust."
+61071,generic_human,one_shot,inline,**trust**,"The author expressed willingness to entrust their financial management to a friend, indicating a sense of trust."
+61071,generic_human,few_shot,numbered,trust,"The author describes granting control of their financial affairs to a friend, indicating a sense of trust in that person."
+61071,generic_human,few_shot,inline,trust,"The author expressed a willingness to entrust their friend with sensitive financial control, indicating a sense of trust."
+61071,persona_a,zero_shot,numbered,**trust**,"The author expressed a sense of being entrusted with a significant responsibility for the first time, indicating a feeling of trust in the friend's decision."
+61071,persona_a,zero_shot,inline,**trust**,"The author expressed a sense of being entrusted with a significant responsibility for the first time, indicating a feeling of trust in the friend’s decision."
+61071,persona_a,one_shot,numbered,**surprise**,The author describes an unexpected and novel experience of being given full financial responsibility for the first time.
+61071,persona_a,one_shot,inline,**trust**,"The author describes being given a significant responsibility, indicating a sense of confidence and reliance placed in them by their friend."
+61071,persona_a,few_shot,numbered,**trust**,"The author describes being given a significant responsibility by a friend, which reflects a sense of trust placed in them."
+61071,persona_a,few_shot,inline,**trust**,"The author describes being given significant financial responsibility by a friend, indicating a sense of trust placed in them."
+61071,persona_b,zero_shot,numbered,**trust**,The author’s professional experience managing finances for others suggests confidence and reliance in the friend’s decision to entrust them with control.
+61071,persona_b,zero_shot,inline,**trust**,The author’s professional experience managing finances for others suggests a sense of confidence and trust in their ability to handle the responsibility.
+61071,persona_b,one_shot,numbered,**trust**,The author’s professional role and the act of entrusting financial control reflect confidence and reliance on the author’s competence.
+61071,persona_b,one_shot,inline,**trust**,The author likely felt trust in their friend’s confidence and ability to entrust them with financial responsibility.
+61071,persona_b,few_shot,numbered,**trust**,The author’s professional experience managing finances for others suggests a sense of trust in their friend’s reliance on their expertise.
+61071,persona_b,few_shot,inline,**trust**,The author’s willingness to delegate financial control to someone they know professionally reflects a sense of trust in that person’s competence and reliability.
+51258,neutral,zero_shot,inline,**joy**,"The author expresses affection and deep happiness (""like my child,"" ""brings me a ton of...""), indicating a strong sense of joy."
+51258,neutral,zero_shot,numbered,**joy**,"The author expresses affection and deep happiness (""like my child"" and ""brings me a ton of...""), indicating a strong positive emotion."
+51258,neutral,one_shot,inline,**joy**,"The author expresses affection and happiness (""like my child,"" ""brings me a ton of..."") about their cat, indicating a positive, joyful emotion."
+51258,neutral,one_shot,numbered,joy,The author expresses affection and happiness through the comparison of their cat to a beloved child and the positive impact she has on their life.
+51258,neutral,few_shot,numbered,joy,"The author expresses deep affection and happiness about adopting a cat, a significant source of fulfillment and positive emotion."
+51258,neutral,few_shot,inline,**joy**,"The author expresses deep affection and happiness about adopting a cat, a significant and positive life event."
+51258,generic_human,zero_shot,numbered,**joy**,"The author expresses affection and deep happiness (""like my child,"" ""brings me a ton of..."") in describing their bond with Sandy."
+51258,generic_human,zero_shot,inline,**joy**,"The author expresses deep affection and happiness (""like my child,"" ""brings me a ton of...""), indicating a strong positive emotion."
+51258,generic_human,one_shot,numbered,joy,"The author expresses affection and happiness through the comparison of their cat to a ""child"" and the positive, loving tone of the description."
+51258,generic_human,one_shot,inline,**joy**,"The author expresses affection and happiness (""like my child"") about adopting their cat, indicating a positive, joyful emotion."
+51258,generic_human,few_shot,numbered,joy,"The author expresses deep affection and happiness about adopting a cat, framing it as a cherished, fulfilling experience."
+51258,generic_human,few_shot,inline,**joy**,"The author expresses deep affection and happiness about adopting a cat, framing it as a cherished, fulfilling experience."
+51258,persona_a,zero_shot,numbered,**joy**,"The author’s description of their cat as a ""child"" and a source of fulfillment reflects deep happiness and contentment in finding companionship and love."
+51258,persona_a,zero_shot,inline,**joy**,"The author expresses deep affection and fulfillment through their pet, reflecting a sense of happiness and contentment in finding companionship and love."
+51258,persona_a,one_shot,numbered,**joy**,"The author expresses deep affection and fulfillment through the metaphor of their cat as a ""child,"" reflecting a positive, nurturing emotion."
+51258,persona_a,one_shot,inline,**joy**,"The author expresses deep affection and fulfillment through comparing their cat to a child and finding substitute family, indicating happiness and emotional warmth."
+51258,persona_a,few_shot,numbered,joy,"The author expresses deep affection and fulfillment through adopting a pet as a substitute for a child, indicating a strong sense of happiness and emotional connection."
+51258,persona_a,few_shot,inline,**joy**,"The author expresses deep affection and fulfillment through adopting a pet as a substitute for a child, which is a source of happiness."
+51258,persona_b,zero_shot,numbered,**guilt**,The author’s tone suggests regret or unease about adding another pet despite already having a full household.
+51258,persona_b,zero_shot,inline,**guilt**,The author’s tone suggests regret or unease about adding another pet despite already having a full household.
+51258,persona_b,one_shot,numbered,**guilt**,The author’s mention of already having a full house of pets suggests they feel conflicted or remorseful about adding another animal.
+51258,persona_b,one_shot,inline,**guilt**,The author’s mention of already having a full house of pets suggests they feel conflicted or regretful about adding another animal.
+51258,persona_b,few_shot,numbered,**guilt**,The author’s mention of already having a full house of pets while adopting another suggests regret or unease about adding to their current situation.
+51258,persona_b,few_shot,inline,**guilt**,"The author’s tone suggests regret or unease about adding another pet to an already full household, indicating guilt."
+641,neutral,zero_shot,numbered,**anger**,"The author expressed frustration and perceived injustice, which are key indicators of anger."
+641,neutral,zero_shot,inline,**anger**,"The author expresses frustration and a sense of injustice due to perceived unfair treatment, which aligns with feelings of anger."
+641,neutral,one_shot,numbered,anger,"The author implies frustration and resentment due to perceived unfairness, which aligns with feelings of anger."
+641,neutral,one_shot,inline,**anger**,"The author implies frustration and resentment due to perceived unfairness, a primary trigger for anger."
+641,neutral,few_shot,numbered,anger,"The author describes a perceived injustice in grading, which often triggers anger due to frustration and unfairness."
+641,neutral,few_shot,inline,**anger**,"The author expresses frustration over what they perceive as unfair treatment, a common trigger for anger."
+641,generic_human,zero_shot,numbered,**anger**,The author’s frustration with perceived unfairness suggests a strong emotional response of anger toward the situation.
+641,generic_human,zero_shot,inline,**anger**,"The author’s frustration stems from perceiving unfairness, which typically triggers anger when someone feels wronged or treated unjustly."
+641,generic_human,one_shot,numbered,anger,"The author experienced unfair treatment and perceived injustice, which is a common trigger for anger."
+641,generic_human,one_shot,inline,anger,"The author’s frustration stems from perceiving unfair treatment, a common trigger for anger."
+641,generic_human,few_shot,numbered,anger,"The author describes a perceived injustice in grading, which is a common trigger for anger."
+641,generic_human,few_shot,inline,**anger**,"The author describes a perceived injustice in grading, which commonly triggers anger due to frustration and unfairness."
+641,persona_a,zero_shot,numbered,**anger**,The author’s frustration with perceived unfairness and their sudden questioning of grading suggests a strong emotional reaction of anger.
+641,persona_a,zero_shot,inline,**anger**,The author’s frustration with perceived unfairness and their prior confidence being undermined suggests a strong emotional reaction of anger.
+641,persona_a,one_shot,numbered,**anger**,"The author, a top student, likely felt betrayed and frustrated by perceived unfairness, triggering anger."
+641,persona_a,one_shot,inline,**anger**,"The author’s frustration stems from perceiving an unjust grading decision, which triggers a strong emotional response of anger."
+641,persona_a,few_shot,numbered,anger,"The author describes an unfair outcome that contradicts their prior confidence, triggering frustration and resentment."
+641,persona_a,few_shot,inline,**anger**,"The author’s frustration stems from perceiving an unjust grading decision, which triggers anger at the perceived unfairness."
+641,persona_b,zero_shot,numbered,**anger**,The context of unfair grading and prior grievances suggests frustration and indignation toward perceived injustice.
+641,persona_b,zero_shot,inline,**anger**,The context of unfair grading and prior grievances suggests frustration and indignation toward perceived injustice.
+641,persona_b,one_shot,numbered,**anger**,The author’s history of grievances about unfair grading and the context of a perceived unjust mark strongly suggest frustration or anger.
+641,persona_b,one_shot,inline,**anger**,"The author’s history of grievances about unfair grading, combined with receiving a bad mark, suggests frustration and resentment directed at the perceived injustice."
+641,persona_b,few_shot,numbered,**anger**,The author’s frustration with perceived unfairness and prior grievances about inconsistent grading strongly suggests anger.
+641,persona_b,few_shot,inline,**anger**,The author’s frustration with perceived unfairness and prior grievances about grading suggests they felt anger.
+4146,neutral,zero_shot,numbered,**sadness**,"The author expresses a lack of food and a sense of loss due to the stolen fishcake, reflecting a feeling of unhappiness or sorrow."
+4146,neutral,zero_shot,inline,**sadness**,"The author expresses a lack of food due to the theft, highlighting a sense of loss and disappointment."
+4146,neutral,one_shot,numbered,sadness,"The author describes a loss of something valuable (food) and a negative consequence (no dinner), which aligns with feelings of sadness."
+4146,neutral,one_shot,inline,**sadness**,"The author describes a loss of food and an empty evening, which evokes a sense of deprivation and unhappiness."
+4146,neutral,few_shot,numbered,sadness,"The author describes a loss of a meal and a lack of sustenance, which typically evokes sadness due to deprivation and frustration."
+4146,neutral,few_shot,inline,**sadness**,"The author describes a loss of food and deprivation, which typically evokes sadness due to a lack of sustenance and emotional distress."
+4146,generic_human,zero_shot,numbered,**sadness**,"The author describes a loss of food (their fishcake) and the resulting lack of sustenance, which aligns with a sense of deprivation and unhappiness."
+4146,generic_human,zero_shot,inline,**sadness**,"The author expresses a lack of food due to theft, highlighting a sense of loss and disappointment."
+4146,generic_human,one_shot,numbered,sadness,"The author describes a loss of something essential (food) and a negative consequence (no dinner), which aligns with feelings of sadness."
+4146,generic_human,one_shot,inline,**sadness**,"The author describes a loss of food and an empty evening, which evokes a sense of deprivation and unhappiness."
+4146,generic_human,few_shot,numbered,sadness,"The author describes a loss of a meal and a lack of food, which typically evokes sadness due to deprivation and frustration."
+4146,generic_human,few_shot,inline,**sadness**,"The author describes a loss of food (a basic need) and a lack of sustenance, which typically evokes sadness."
+4146,persona_a,zero_shot,numbered,**sadness**,"The author’s focus on loss of food, financial struggle, and the absence of a meal highlights a sense of sorrow or unhappiness."
+4146,persona_a,zero_shot,inline,**sadness**,"The author expresses a lack of food due to financial constraints, highlighting a sense of deprivation and emotional weight."
+4146,persona_a,one_shot,numbered,sadness,"The author describes a loss of a meal and financial hardship, which aligns with feelings of sadness."
+4146,persona_a,one_shot,inline,**sadness**,"The author describes a loss of a meal due to theft, highlighting their vulnerable financial situation and lack of alternatives."
+4146,persona_a,few_shot,numbered,**sadness**,"The author describes a loss of a carefully budgeted meal, highlighting a sense of deprivation and emotional distress."
+4146,persona_a,few_shot,inline,**sadness**,"The author describes a loss of a carefully budgeted meal, highlighting deprivation and emotional distress tied to financial struggle."
+4146,persona_b,zero_shot,numbered,**sadness**,"The author expresses a sense of loss and deprivation over a small but meaningful food item, reflecting a mild but noticeable emotional low."
+4146,persona_b,zero_shot,inline,**sadness**,"The author expresses a sense of loss and deprivation over a small but meaningful food item, reflecting a mild emotional low."
+4146,persona_b,one_shot,numbered,**sadness**,"The author describes a loss of a specific food item and the resulting lack of sustenance, which aligns with feelings of sadness over a minor but personal deprivation."
+4146,persona_b,one_shot,inline,**sadness**,"The author describes a loss of a small but meaningful meal, highlighting a sense of deprivation and emotional distress."
+4146,persona_b,few_shot,numbered,**anger**,"The author describes a frustrating violation of their personal property and food security, which triggers anger."
+4146,persona_b,few_shot,inline,**sadness**,"The author describes a loss of a small but meaningful food item and the resulting lack of sustenance, which evokes sadness over the inconvenience and deprivation."
+4874,neutral,zero_shot,numbered,**joy**,The context of seeing a loved one (their girlfriend) after an implied separation or uncertainty strongly suggests happiness or contentment.
+4874,neutral,zero_shot,inline,**joy**,"The context of seeing a loved one (their girlfriend) typically evokes a positive, happy emotion."
+4874,neutral,one_shot,numbered,joy,"The author’s ability to see their girlfriend suggests a positive, happy experience tied to connection and affection."
+4874,neutral,one_shot,inline,**joy**,"The author’s ability to see their girlfriend suggests a positive, affectionate, or happy feeling."
+4874,neutral,few_shot,numbered,joy,"The author describes a positive and meaningful encounter with their girlfriend, which typically evokes joy."
+4874,neutral,few_shot,inline,joy,"The author describes a positive and meaningful encounter with their girlfriend, which typically evokes joy."
+4874,generic_human,zero_shot,numbered,joy,"The context of seeing a loved one (girlfriend) after likely separation or worry naturally evokes a positive, happy emotion."
+4874,generic_human,zero_shot,inline,**joy**,"The author’s ability to see their girlfriend suggests a positive, happy feeling tied to connection and affection."
+4874,generic_human,one_shot,numbered,joy,"The author explicitly states a positive connection to seeing their girlfriend, which is a common trigger for joy."
+4874,generic_human,one_shot,inline,**joy**,"The author explicitly states a positive connection to seeing their girlfriend, which strongly suggests happiness or joy."
+4874,generic_human,few_shot,numbered,joy,"The author describes a positive and meaningful encounter with their girlfriend, which is commonly associated with joy."
+4874,generic_human,few_shot,inline,joy,"The author describes a positive and intimate connection with their girlfriend, which is commonly associated with joy."
+4874,persona_a,zero_shot,numbered,**joy**,The context of reuniting after a long separation in a long-distance relationship strongly suggests a sense of happiness and fulfillment.
+4874,persona_a,zero_shot,inline,**joy**,"The author’s reunion with their girlfriend after a long separation is a positive, emotionally uplifting event typically associated with joy."
+4874,persona_a,one_shot,numbered,joy,The author’s reunion with their girlfriend after a long separation is a clear source of happiness and emotional fulfillment.
+4874,persona_a,one_shot,inline,**joy**,"The author’s reunion with their girlfriend after a long separation is a positive, emotionally uplifting event."
+4874,persona_a,few_shot,numbered,joy,"The author’s reunion with their girlfriend after a long separation is a positive, emotionally fulfilling event, strongly associated with joy."
+4874,persona_a,few_shot,inline,**joy**,"The author’s reunion with their girlfriend after a long separation is a positive, emotionally fulfilling event, strongly associated with joy."
+4874,persona_b,zero_shot,numbered,**joy**,"The author’s routine separation from their girlfriend suggests that seeing her after an absence would naturally evoke positive, happy feelings."
+4874,persona_b,zero_shot,inline,**joy**,"The author’s routine separation from their girlfriend suggests that seeing her after a period of absence would naturally evoke positive, happy feelings."
+4874,persona_b,one_shot,numbered,joy,"The author’s ability to see their girlfriend—typically a daily routine—implies a positive, contented feeling, which aligns with joy."
+4874,persona_b,one_shot,inline,**joy**,"The author’s ability to see their girlfriend—typically a daily routine—implies a positive, contented feeling."
+4874,persona_b,few_shot,numbered,**surprise**,"The author’s routine lack of seeing their girlfriend suggests that the act of seeing her was unexpected or unusual, triggering surprise."
+4874,persona_b,few_shot,inline,**relief**,"The author’s ability to see their girlfriend—who they rarely see—suggests a rare, positive reunion that likely brought a sense of relief after separation."
+6789,neutral,zero_shot,numbered,**relief**,The author expresses a sense of overwhelming reassurance and gratitude that everything worked out despite the uncertainty and stress of having no immediate alternative housing.
+6789,neutral,zero_shot,inline,**relief**,The author expresses a sense of unexpected resolution and gratitude for the last-minute resolution of their housing situation.
+6789,neutral,one_shot,numbered,**relief**,"The author describes a stressful situation (selling their home with no backup plan) resolving at the last minute, which is a hallmark of relief."
+6789,neutral,one_shot,inline,**relief**,"The author expresses gratitude and a sense of fortuitous resolution after a stressful situation (selling a home with no immediate alternative), which aligns with relief."
+6789,neutral,few_shot,numbered,**relief**,"The author describes a stressful situation (selling their home with no alternative living space) resolving at the last minute, which is a hallmark of relief."
+6789,neutral,few_shot,inline,**relief**,"The author describes a stressful situation resolved at the last moment, which is a hallmark of relief."
+6789,generic_human,zero_shot,numbered,**joy**,"The author expresses overwhelming happiness and satisfaction (""huge ... for us all"") about securing their new home despite prior uncertainty."
+6789,generic_human,zero_shot,inline,**relief**,The author expresses a sense of unexpected resolution and gratitude for a stressful situation being resolved at the last minute.
+6789,generic_human,one_shot,numbered,**relief**,"The author describes a stressful situation resolved at the last minute, which aligns with the emotion of relief."
+6789,generic_human,one_shot,inline,**relief**,"The author describes a stressful situation (selling their home with no backup plan) resolving at the last minute, which is a hallmark of relief."
+6789,generic_human,few_shot,numbered,relief,"The author describes a stressful situation resolved at the last moment, which aligns with the emotion of relief."
+6789,generic_human,few_shot,inline,**relief**,"The author describes a stressful situation (selling their home with no backup plan) resolving at the last minute, which is a hallmark of relief."
+6789,persona_a,zero_shot,numbered,**7. relief**,"The author describes a tense situation where they had no backup plan, and the resolution of their housing crisis brought a strong sense of relief."
+6789,persona_a,zero_shot,inline,**relief**,"The author expresses a sense of immense relief after a stressful situation where they were at risk of having no home, and the outcome was successfully resolved."
+6789,persona_a,one_shot,numbered,**relief**,"The author describes a stressful situation resolved at the last moment, which is a hallmark of relief."
+6789,persona_a,one_shot,inline,**relief**,"The author describes a tense situation resolved at the last minute, highlighting a sense of relief after a stressful period."
+6789,persona_a,few_shot,numbered,**relief**,"The author describes a stressful situation resolved at the last moment, which is a classic trigger for relief."
+6789,persona_a,few_shot,inline,**relief**,"The author describes a stressful situation resolved at the last moment, which is a hallmark of relief."
+6789,persona_b,zero_shot,numbered,**relief**,"The author expressed a sense of immense gratitude and ease due to a last-minute resolution of their housing uncertainty, indicating **relief**."
+6789,persona_b,zero_shot,inline,**relief**,The author expressed a sense of unexpected resolution to a stressful situation (having no backup housing while waiting for the exchange).
+6789,persona_b,one_shot,numbered,**relief**,"The author describes a stressful situation (selling their current home with no backup plan) resolving at the last minute, which aligns with the emotion of relief."
+6789,persona_b,one_shot,inline,**relief**,"The author describes a stressful situation (selling their current home with no immediate alternative) resolving at the last minute, which is a hallmark of relief."
+6789,persona_b,few_shot,numbered,relief,"The author describes a stressful situation resolved at the last minute, which aligns with the emotion of relief."
+6789,persona_b,few_shot,inline,**relief**,"The author describes a stressful situation (selling their current property with no immediate alternative housing) resolving at the last moment, which is a classic trigger for relief."
+5880,neutral,zero_shot,numbered,**fear**,"The phrase ""felt ... going in to hospital"" suggests apprehension or anxiety about an uncertain or potentially threatening situation."
+5880,neutral,zero_shot,inline,**fear**,"The phrase ""felt ... going in to hospital"" suggests apprehension or anxiety about an uncertain or potentially threatening situation."
+5880,neutral,one_shot,numbered,**fear**,"The phrase ""felt ... going in to hospital"" suggests apprehension or anxiety about an uncertain or potentially threatening situation."
+5880,neutral,one_shot,inline,**fear**,"The phrase *""felt ... going in to hospital""* suggests apprehension or anxiety about an uncertain or potentially threatening situation."
+5880,neutral,few_shot,numbered,fear,"The phrase ""felt ... going into hospital"" suggests apprehension or anxiety about an uncertain, potentially threatening medical situation."
+5880,neutral,few_shot,inline,**fear**,"The phrase ""felt ... going into hospital"" suggests apprehension or anxiety about an uncertain medical situation, a hallmark of fear."
+5880,generic_human,zero_shot,numbered,**fear**,"The phrase ""felt ... going in to hospital"" suggests apprehension or anxiety about an uncertain or potentially threatening situation."
+5880,generic_human,zero_shot,inline,**fear**,The incomplete sentence suggests apprehension or anxiety about an uncertain or potentially threatening situation.
+5880,generic_human,one_shot,numbered,**fear**,"The phrase ""felt ... going in to hospital"" suggests apprehension or anxiety about an uncertain or potentially threatening situation."
+5880,generic_human,one_shot,inline,**fear**,"The phrase ""felt ... going in to hospital"" suggests apprehension or anxiety about an uncertain or potentially threatening medical situation."
+5880,generic_human,few_shot,numbered,fear,"The author’s vague but tense phrasing (""felt ... going in to hospital"") suggests anxiety or apprehension about an uncertain, potentially threatening medical situation."
+5880,generic_human,few_shot,inline,**fear**,"The phrase ""felt ... going into hospital"" suggests apprehension or anxiety about an uncertain or potentially threatening medical situation."
+5880,persona_a,zero_shot,numbered,**fear**,"The phrase *""felt ... going in to hospital""* for a routine procedure suggests apprehension or anxiety about the unknown or potential discomfort."
+5880,persona_a,zero_shot,inline,**fear**,"The phrase *""felt ... going in to hospital""* (with an ellipsis suggesting hesitation or unease) implies apprehension or anxiety about an outpatient procedure, which aligns with **fear**."
+5880,persona_a,one_shot,numbered,**fear**,"The author’s vague but negative anticipation of a hospital visit suggests unease or apprehension, a hallmark of fear."
+5880,persona_a,one_shot,inline,**fear**,"The phrase *""felt ... going in to hospital""* (with an ellipsis) suggests apprehension or anxiety about an unknown medical procedure, a hallmark of fear."
+5880,persona_a,few_shot,numbered,**fear**,"The author describes anticipation of a medical procedure, which often triggers anxiety or fear about potential discomfort, health risks, or the unknown."
+5880,persona_a,few_shot,inline,**fear**,"The author describes anticipation of a hospital visit for a procedure, which often triggers anxiety or fear of the unknown or potential discomfort."
+5880,persona_b,zero_shot,numbered,**fear**,"The phrase *""felt ... going in to hospital""* with the context of a serious, uncertain diagnosis strongly suggests apprehension and anxiety, which align with the emotion of fear."
+5880,persona_b,zero_shot,inline,**fear**,The uncertainty and seriousness of the diagnosis suggest the author likely experienced fear about the unknown outcome.
+5880,persona_b,one_shot,numbered,**fear**,"The author’s vague but ominous phrasing (""serious, uncertain diagnosis"") suggests apprehension and anxiety about an unknown, potentially threatening outcome."
+5880,persona_b,one_shot,inline,**fear**,The uncertainty and seriousness of a diagnosis typically evoke apprehension or fear.
+5880,persona_b,few_shot,numbered,fear,"The author is anticipating a serious, uncertain medical diagnosis, which is a classic trigger for fear."
+5880,persona_b,few_shot,inline,**fear**,"The author describes an uncertain, high-stakes medical situation, which typically triggers fear about health outcomes."
+52157,neutral,zero_shot,numbered,**sadness**,"The author vividly describes their overwhelming grief and emotional distress upon learning of their uncle’s death, particularly highlighting their own and their mother’s deep sorrow."
+52157,neutral,zero_shot,inline,**sadness**,"The author vividly describes their overwhelming grief and emotional turmoil upon learning of their uncle’s death, particularly the heartbreak of witnessing their mother’s devastation."
+52157,neutral,one_shot,numbered,sadness,"The author vividly describes grief, loss, and emotional distress upon learning of their uncle’s death and witnessing their mother’s deep sorrow."
+52157,neutral,one_shot,inline,**sadness**,"The author vividly describes grief, loss, and emotional distress over their uncle’s death, particularly highlighting their own and their family’s deep sorrow."
+52157,neutral,few_shot,numbered,sadness,"The author vividly describes overwhelming grief, loss, and emotional distress upon learning of their uncle’s death, which aligns with the core experience of sadness."
+52157,neutral,few_shot,inline,**sadness**,"The author vividly describes grief, loss, and emotional distress over their uncle’s death, particularly highlighting their own and their family’s deep sorrow."
+52157,generic_human,zero_shot,numbered,**sadness**,"The author vividly describes grief, loss, and emotional distress upon learning of their uncle’s death, highlighting their overwhelming sorrow."
+52157,generic_human,zero_shot,inline,**sadness**,"The author vividly describes their overwhelming grief and emotional distress upon learning of their uncle’s death, highlighting their first experience with loss and deep sorrow."
+52157,generic_human,one_shot,numbered,sadness,"The author describes overwhelming grief, emotional breakdowns, and a profound sense of loss upon hearing about their uncle’s death, which aligns with the emotion of sadness."
+52157,generic_human,one_shot,inline,**sadness**,"The author vividly describes grief, loss, and emotional distress upon learning of their uncle’s death and witnessing their mother’s profound sorrow."
+52157,generic_human,few_shot,numbered,sadness,"The author describes overwhelming grief, emotional breakdowns, and a profound experience of loss, which are hallmark indicators of sadness."
+52157,generic_human,few_shot,inline,**sadness**,"The author describes overwhelming grief, loss, and emotional distress upon learning of their uncle’s death and witnessing their parents’ deep sorrow."
+52157,persona_a,zero_shot,numbered,**sadness**,"The author describes their first experience with grief and witnessing their mother’s emotional breakdown, highlighting deep emotional pain and sorrow."
+52157,persona_a,zero_shot,inline,**sadness**,"The author describes their first experience with grief and witnessing their mother’s emotional breakdown, which aligns with feeling deeply sorrowful."
+52157,persona_a,one_shot,numbered,sadness,"The author describes overwhelming grief, emotional breakdowns, and a first-time experience with loss, all hallmarks of profound sadness."
+52157,persona_a,one_shot,inline,**sadness**,The author describes witnessing profound grief in their parents and their own overwhelming emotional response to the loss and helplessness of the situation.
+52157,persona_a,few_shot,numbered,sadness,"The author describes witnessing a profound loss, emotional breakdown of loved ones, and their own first experience with grief, all of which evoke deep sadness."
+52157,persona_a,few_shot,inline,**sadness**,"The author describes witnessing their parent’s profound grief and their own emotional turmoil upon learning of a loved one’s death, which aligns with sadness."
+52157,persona_b,zero_shot,numbered,**sadness**,"The author describes overwhelming grief, helplessness, and a deep emotional response to witnessing their mother’s devastation and their own first experience with loss."
+52157,persona_b,zero_shot,inline,**sadness**,"The author vividly describes their overwhelming grief and helplessness upon witnessing their mother’s profound loss and emotional collapse, marking their first direct experience with death and grief."
+52157,persona_b,one_shot,numbered,sadness,"The author describes overwhelming grief, emotional breakdowns, and a profound sense of loss upon learning of their uncle’s death, which aligns with the emotion of sadness."
+52157,persona_b,one_shot,inline,**sadness**,The author describes overwhelming grief and emotional distress upon learning of their uncle’s death and witnessing their mother’s profound sorrow.
+52157,persona_b,few_shot,numbered,sadness,"The author describes overwhelming grief, emotional breakdowns, and a profound personal experience of loss, all of which align with the emotion of sadness."
+52157,persona_b,few_shot,inline,**sadness**,"The author describes overwhelming grief, emotional breakdowns, and a firsthand experience of loss, all of which align with the emotion of sadness."
+287,neutral,zero_shot,numbered,**joy**,"The author describes overwhelmingly positive and exhilarating experiences (magical, bliss) tied to their favorite band, indicating a strong sense of happiness."
+287,neutral,zero_shot,inline,**joy**,"The text describes overwhelmingly positive and exhilarating experiences (magical, bliss) tied to a cherished activity, indicating pure joy."
+287,neutral,one_shot,numbered,joy,"The author describes overwhelmingly positive and exhilarating experiences tied to their favorite band, which aligns with the emotion of joy."
+287,neutral,one_shot,inline,**joy**,"The author describes overwhelmingly positive and exhilarating experiences (magical, bliss) tied to a cherished activity."
+287,neutral,few_shot,numbered,joy,"The author describes overwhelmingly positive, euphoric experiences tied to their favorite band, which strongly aligns with the emotion of joy."
+287,neutral,few_shot,inline,joy,"The author describes overwhelmingly positive, euphoric experiences tied to their favorite band, which are strong indicators of joy."
+287,generic_human,zero_shot,numbered,**joy**,"The author describes overwhelmingly positive and exhilarating experiences (magical, bliss) tied to their favorite band, indicating a strong sense of joy."
+287,generic_human,zero_shot,inline,**joy**,"The author describes overwhelmingly positive and exhilarating experiences (magical, bliss) tied to their favorite band, indicating pure happiness."
+287,generic_human,one_shot,numbered,joy,"The author describes overwhelmingly positive experiences like witnessing a beloved band live and hearing favorite songs, which are classic indicators of joy."
+287,generic_human,one_shot,inline,joy,"The author describes overwhelmingly positive and exhilarating experiences tied to their favorite band, which aligns with the emotion of joy."
+287,generic_human,few_shot,numbered,joy,"The author describes overwhelmingly positive and exhilarating experiences tied to their favorite band, which are strong indicators of joy."
+287,generic_human,few_shot,inline,joy,"The author describes overwhelmingly positive and exhilarating experiences at a concert of their favorite band, which are strong indicators of joy."
+287,persona_a,zero_shot,numbered,**joy**,"The author describes overwhelmingly positive and exhilarating experiences (magical, bliss) tied to their deep passion for the band."
+287,persona_a,zero_shot,inline,**joy**,The author vividly describes overwhelmingly positive and exhilarating experiences tied to their deep passion and long-awaited event.
+287,persona_a,one_shot,numbered,joy,The author describes overwhelmingly positive and exhilarating experiences tied to their deep passion and long-awaited event.
+287,persona_a,one_shot,inline,**joy**,The author describes overwhelmingly positive and exhilarating experiences tied to their deep passion and long-awaited fandom moment.
+287,persona_a,few_shot,numbered,joy,"The author describes overwhelmingly positive, euphoric experiences tied to their long-awaited passion (concert, favorite band, live music), which aligns with joy."
+287,persona_a,few_shot,inline,joy,"The author describes overwhelmingly positive and euphoric experiences tied to their long-awaited concert, which aligns with the emotion of joy."
+287,persona_b,zero_shot,numbered,**joy**,"The author described the experience as ""magical"" and ""bliss,"" which are indicators of intense positive emotional engagement."
+287,persona_b,zero_shot,inline,**joy**,"The author described the experience as ""magical"" and ""bliss,"" indicating overwhelming happiness despite not being a big fan."
+287,persona_b,one_shot,numbered,**joy**,"The author describes experiencing excitement and bliss from attending a concert of their favorite band, even if they weren’t a big fan themselves."
+287,persona_b,one_shot,inline,**joy**,"The author describes overwhelmingly positive and exhilarating experiences (magical, bliss) at a concert, indicating a strong sense of joy despite not being a big fan."
+287,persona_b,few_shot,numbered,joy,"The author describes overwhelmingly positive and euphoric experiences (magical, bliss) at a concert, which aligns with joy despite not being a big fan."
+287,persona_b,few_shot,inline,**joy**,"The author describes overwhelmingly positive, euphoric experiences (magical, bliss) tied to a shared favorite activity, which aligns with joy."
+51710,neutral,zero_shot,numbered,**pride**,"The author reflects on accomplishment and effort, indicating a sense of satisfaction and self-respect tied to achievement."
+51710,neutral,zero_shot,inline,**pride**,"The author expresses accomplishment and satisfaction after a long, hard effort, which aligns with the emotion of pride."
+51710,neutral,one_shot,numbered,**pride**,"The author reflects on accomplishment and effort, which are key indicators of pride."
+51710,neutral,one_shot,inline,**pride**,"The author reflects on a significant accomplishment after years of hard work, which is a hallmark of pride."
+51710,neutral,few_shot,numbered,**pride**,"The author reflects on a significant personal achievement after years of effort, which is a hallmark of pride."
+51710,neutral,few_shot,inline,**pride**,"The author reflects on a significant accomplishment achieved through hard work and perseverance, which is a hallmark of pride."
+51710,generic_human,zero_shot,numbered,**6. pride**,"The author expresses accomplishment and satisfaction after a long-term effort, which aligns with the emotion of pride."
+51710,generic_human,zero_shot,inline,**pride**,"The author expresses accomplishment and satisfaction after a long, hard-earned achievement."
+51710,generic_human,one_shot,numbered,**pride**,"The author reflects on a significant accomplishment achieved through hard work and perseverance, which is a hallmark of pride."
+51710,generic_human,one_shot,inline,**pride**,"The author reflects on a significant accomplishment after years of effort, which is a hallmark of pride."
+51710,generic_human,few_shot,numbered,**pride**,"The author reflects on a significant accomplishment achieved through hard work and perseverance, which is a hallmark of pride."
+51710,generic_human,few_shot,inline,**pride**,"The author reflects on a significant accomplishment achieved through hard work and perseverance, which is a hallmark of pride."
+51710,persona_a,zero_shot,numbered,**pride**,"The author highlights their perseverance and accomplishment through hardship, which aligns with a sense of pride in overcoming challenges."
+51710,persona_a,zero_shot,inline,**pride**,"The author highlights their significant personal achievements and perseverance, which are key indicators of pride."
+51710,persona_a,one_shot,numbered,**pride**,"The author highlights their perseverance and accomplishment in overcoming significant challenges, which is a hallmark of pride."
+51710,persona_a,one_shot,inline,**pride**,"The author reflects on a significant personal achievement (completing a long-term program) despite challenges, indicating a sense of accomplishment and pride."
+51710,persona_a,few_shot,numbered,**pride**,"The author reflects on a significant personal achievement after overcoming long-term challenges, which is a hallmark of pride."
+51710,persona_a,few_shot,inline,**pride**,"The author reflects on a significant personal achievement (graduating despite hardships), which is a hallmark of pride."
+51710,persona_b,zero_shot,numbered,**pride**,The author reflects on a significant personal achievement (completing a long-term program) with a tone of satisfaction and accomplishment.
+51710,persona_b,zero_shot,inline,**pride**,"The author reflects on their significant accomplishment and the effort invested, indicating a sense of satisfaction and self-respect."
+51710,persona_b,one_shot,numbered,**pride**,The author reflects on a significant personal achievement (completing a long-term program) with a tone of accomplishment and satisfaction.
+51710,persona_b,one_shot,inline,**pride**,The author reflects on a significant personal achievement (completing a long-term program) with a tone of accomplishment and satisfaction.
+51710,persona_b,few_shot,numbered,**pride**,"The author reflects on a significant personal achievement after years of dedicated effort, which is a hallmark of pride."
+51710,persona_b,few_shot,inline,**pride**,"The author reflects on a significant personal achievement after years of effort, which is a hallmark of pride."
+3426,neutral,zero_shot,numbered,**fear**,"The author describes being chased and hiding from an older man, indicating a strong sense of threat and apprehension."
+3426,neutral,zero_shot,inline,**fear**,"The author described being chased and pursued by an older man in a potentially threatening situation, which is indicative of fear."
+3426,neutral,one_shot,numbered,**fear**,"The author describes being pursued by an older man in a potentially threatening situation, triggering a sense of danger and apprehension."
+3426,neutral,one_shot,inline,**fear**,"The author describes being pursued and hunted in a potentially dangerous situation, which is a hallmark of fear."
+3426,neutral,few_shot,numbered,**fear**,"The author describes a threatening encounter with an unknown man in a potentially dangerous situation, triggering fear."
+3426,neutral,few_shot,inline,**fear**,"The author describes a threatening, unpredictable encounter with an older man in a vulnerable setting, triggering a strong sense of danger and apprehension."
+3426,generic_human,zero_shot,numbered,**fear**,"The author described being chased and hiding from an older man, indicating a strong sense of apprehension and danger."
+3426,generic_human,zero_shot,inline,**fear**,"The author described being chased and hunted by an older man, which is a clear indication of experiencing fear."
+3426,generic_human,one_shot,numbered,**fear**,"The author describes being pursued and hunted in a potentially dangerous situation, which is a clear trigger for fear."
+3426,generic_human,one_shot,inline,**fear**,"The author describes being pursued and hunted in a potentially dangerous situation, triggering a strong sense of fear."
+3426,generic_human,few_shot,numbered,fear,"The author describes a threatening, unpredictable encounter in an isolated setting, triggering a strong sense of danger and apprehension."
+3426,generic_human,few_shot,inline,**fear**,"The author describes a threatening, unpredictable encounter with an older man in a vulnerable setting, triggering a physiological response of fear."
+3426,persona_a,zero_shot,numbered,**fear**,"The description of being chased, hiding, and feeling threatened by an unknown man indicates the author experienced fear."
+3426,persona_a,zero_shot,inline,**fear**,"The author described being chased and pursued in a potentially dangerous situation, which is indicative of feeling fear."
+3426,persona_a,one_shot,numbered,**fear**,"The author describes being pursued by an older man in a potentially threatening situation, which is a clear trigger for fear."
+3426,persona_a,one_shot,inline,**fear**,"The author describes being pursued by an older man in a potentially threatening situation, which is a clear trigger for fear."
+3426,persona_a,few_shot,numbered,fear,"The author describes a threatening encounter in an isolated setting, triggering a strong sense of danger and apprehension."
+3426,persona_a,few_shot,inline,**fear**,"The author describes a threatening, unpredictable encounter in a vulnerable situation, triggering a strong sense of apprehension and danger."
+3426,persona_b,zero_shot,numbered,**fear**,"The author described being chased and hiding, which aligns with experiencing fear despite their confidence in physical confrontation."
+3426,persona_b,zero_shot,inline,**fear**,"The author described being chased and hiding, which indicates a heightened state of physical vulnerability despite their confidence in combat."
+3426,persona_b,one_shot,numbered,**fear**,"The author describes a threatening encounter with an unknown pursuer in a vulnerable situation, triggering a physiological response (hiding) and heightened alertness."
+3426,persona_b,one_shot,inline,**fear**,"The author describes a physically threatening situation involving pursuit and concealment, which are classic triggers of fear."
+3426,persona_b,few_shot,numbered,**fear**,"The author describes a sudden, threatening encounter with an unknown aggressor in a vulnerable setting, triggering fear despite their confidence in physical confrontation."
+3426,persona_b,few_shot,inline,**fear**,"The author describes a sudden, threatening encounter with an unknown aggressor in a vulnerable setting, triggering a physiological response (hiding, fleeing) consistent with fear."
+4490,neutral,zero_shot,numbered,**fear**,"The author describes a life-threatening situation with danger (fire and flooding) and helplessness (being ""stuck and unable to leave""), which aligns with the emotion of fear."
+4490,neutral,zero_shot,inline,**fear**,"The author describes being trapped during a dangerous and chaotic situation with visible threats (fire and flooding), indicating overwhelming fear."
+4490,neutral,one_shot,numbered,**fear**,"The author describes a traumatic, uncontrollable situation (hurricane, fire, flooding) with helplessness and danger, which are hallmark indicators of fear."
+4490,neutral,one_shot,inline,**fear**,"The author describes a traumatic, uncontrollable situation (hurricane, fire, flooding) that would naturally evoke fear."
+4490,neutral,few_shot,numbered,fear,"The author describes a traumatic, life-threatening situation involving their family during a hurricane, which is a classic trigger for fear."
+4490,neutral,few_shot,inline,**fear**,"The author describes a life-threatening situation with chaos (fire, flooding) and helplessness (being ""stuck""), which are hallmark triggers of fear."
+4490,generic_human,zero_shot,numbered,**fear**,"The author describes a traumatic, helpless situation with imminent danger (fire and flooding) while being trapped, which strongly aligns with feelings of fear."
+4490,generic_human,zero_shot,inline,**fear**,"The author described being trapped during a dangerous and chaotic event (fire and flooding), which aligns with the overwhelming apprehension and anxiety characteristic of fear."
+4490,generic_human,one_shot,numbered,**fear**,"The author describes a traumatic, life-threatening situation (hurricane, fire, flooding) with helplessness and confinement, which are hallmark indicators of fear."
+4490,generic_human,one_shot,inline,**fear**,"The author describes a life-threatening situation (flooding, fire, being trapped) with uncertainty and helplessness, which are hallmark indicators of fear."
+4490,generic_human,few_shot,numbered,**fear**,"The author describes a life-threatening situation with destruction, danger, and helplessness, which are hallmark triggers of fear."
+4490,generic_human,few_shot,inline,**fear**,"The author describes a life-threatening situation (fire, flooding, being trapped) that triggers intense fear for their safety and that of their family."
+4490,persona_a,zero_shot,numbered,**fear**,"The author describes a life-threatening situation (fire, flooding, being trapped) while prioritizing their children’s calm, reflecting their own heightened anxiety and vulnerability."
+4490,persona_a,zero_shot,inline,**fear**,"The author’s description of the chaotic, dangerous situation (fires, flooding, being trapped) and their focus on keeping children calm reflects their own overwhelming fear for their safety and theirs."
+4490,persona_a,one_shot,numbered,**fear**,"The author describes a life-threatening situation (flooding, fire, and being trapped) with young children, which is a hallmark of fear."
+4490,persona_a,one_shot,inline,**fear**,"The author describes a life-threatening situation (fire, flooding, being trapped) with young children, triggering a primary emotion of fear."
+4490,persona_a,few_shot,numbered,**fear**,"The author describes a life-threatening situation with destruction and helplessness, which are classic triggers of fear."
+4490,persona_a,few_shot,inline,**fear**,"The author describes a life-threatening situation with destruction and helplessness, which are classic triggers of fear."
+4490,persona_b,zero_shot,numbered,**fear**,"The author describes a life-threatening situation with imminent danger (fire and flooding) while being trapped, which aligns with the emotion of fear."
+4490,persona_b,zero_shot,inline,**fear**,"The author described a life-threatening situation with imminent danger (fires and flooding) while being trapped, which aligns with the emotion of fear."
+4490,persona_b,one_shot,numbered,**fear**,"The author describes a life-threatening situation (fire, flooding, being trapped) typical of fear-inducing circumstances."
+4490,persona_b,one_shot,inline,**fear**,"The author describes a life-threatening situation (flooding, fire, and being trapped) typical of fear-inducing circumstances."
+4490,persona_b,few_shot,numbered,**fear**,"The author describes a life-threatening situation with extreme danger (fires, flooding) and helplessness, which are classic triggers of fear."
+4490,persona_b,few_shot,inline,**fear**,"The author describes a life-threatening situation with destruction, helplessness, and danger, which are classic triggers of fear."
+3431,neutral,zero_shot,numbered,**fear**,Night terrors are typically associated with intense fear or terror during sleep.
+3431,neutral,zero_shot,inline,**fear**,Night terrors are typically associated with intense fear or terror during sleep.
+3431,neutral,one_shot,numbered,**fear**,Night terrors are typically associated with intense fear or terror during sleep.
+3431,neutral,one_shot,inline,**fear**,Night terrors are associated with intense fear or terror during sleep.
+3431,neutral,few_shot,numbered,**fear**,"Night terrors are intense, frightening experiences that typically evoke fear or terror."
+3431,neutral,few_shot,inline,**fear**,"Night terrors are sudden, intense episodes of fear or panic during sleep, which aligns with the emotion of fear."
+3431,generic_human,zero_shot,numbered,**fear**,Night terrors are typically associated with intense fear or terror during sleep.
+3431,generic_human,zero_shot,inline,**fear**,Night terrors are typically associated with intense fear or terror during sleep.
+3431,generic_human,one_shot,numbered,**fear**,Night terrors are typically associated with intense fear or terror during sleep.
+3431,generic_human,one_shot,inline,**fear**,Night terrors are typically associated with intense fear or terror during sleep.
+3431,generic_human,few_shot,numbered,**fear**,"Night terrors are characterized by intense fear and panic during sleep, which aligns with the emotion the author likely experienced."
+3431,generic_human,few_shot,inline,**fear**,Night terrors are associated with intense fear or terror during sleep.
+3431,persona_a,zero_shot,numbered,**fear**,Night terrors are typically characterized by intense fear and panic during sleep.
+3431,persona_a,zero_shot,inline,**fear**,"Night terrors are typically associated with intense fear or panic during sleep, which aligns with the child’s experience."
+3431,persona_a,one_shot,numbered,**fear**,"Night terrors are characterized by intense fear and panic during sleep, which aligns with the child’s experience."
+3431,persona_a,one_shot,inline,**fear**,"Night terrors are characterized by intense fear and panic during sleep, which aligns with the child’s experience."
+3431,persona_a,few_shot,numbered,**fear**,"Night terrors are sudden, intense episodes of fear or terror during sleep, which aligns with the child’s experience."
+3431,persona_a,few_shot,inline,**fear**,"Night terrors are sudden, intense episodes of fear or panic that typically evoke terror in children."
+3431,persona_b,zero_shot,numbered,**fear**,"The author’s recurring night terrors—an involuntary, intense arousal during sleep—directly evoke a deep-seated fear of the terrifying experience itself."
+3431,persona_b,zero_shot,inline,**fear**,"The author’s recurring night terrors indicate a persistent, intense fear of the terrifying experiences during sleep."
+3431,persona_b,one_shot,numbered,**fear**,"Night terrors are characterized by intense fear or terror during sleep, which the author explicitly references."
+3431,persona_b,one_shot,inline,**fear**,"Night terrors are characterized by intense fear or terror during sleep, which the author likely experienced and recognized."
+3431,persona_b,few_shot,numbered,**fear**,"The author describes a recurring, intense night terror—a distressing and uncontrollable experience that typically triggers fear."
+3431,persona_b,few_shot,inline,**fear**,"The author describes a recurring, intense and involuntary night terror, which is a hallmark of fear during sleep."
+315,neutral,zero_shot,numbered,**anger**,The author expressed frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior toward their stressed cat and their own efforts to comfort her.
+315,neutral,zero_shot,inline,**anger**,The author expressed frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior toward their stressed cat and their own efforts to comfort her.
+315,neutral,one_shot,numbered,**anger**,The author expresses frustration and irritation at their roommate’s dismissive and inconsiderate behavior toward their stressed cat and their efforts to calm her.
+315,neutral,one_shot,inline,**anger**,The author expresses frustration and irritation at their roommate’s dismissive and inconsiderate behavior toward their stressed cat and their own efforts to comfort her.
+315,neutral,few_shot,numbered,**anger**,The author expresses frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior during their cat’s distress.
+315,neutral,few_shot,inline,**anger**,The author expresses frustration at their boyfriend’s dismissive and inconsiderate behavior toward their stressed cat and their own efforts to comfort her.
+315,generic_human,zero_shot,numbered,**anger**,The author expressed frustration and irritation at the boyfriend’s dismissive and inconsiderate behavior toward their stressed cat and their own efforts to calm her.
+315,generic_human,zero_shot,inline,**anger**,The author expressed frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior toward their stressed cat and their own efforts to comfort her.
+315,generic_human,one_shot,numbered,**anger**,The author expresses frustration and irritation at their roommate’s dismissive and inconsiderate behavior toward their stressed cat and their efforts to calm her.
+315,generic_human,one_shot,inline,**anger**,The author’s frustration with their roommate’s dismissive and inconsiderate behavior toward their stressed cat and their own efforts to comfort her is a clear indicator of anger.
+315,generic_human,few_shot,numbered,**anger**,The author describes frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior toward their stressed cat and their efforts to comfort her.
+315,generic_human,few_shot,inline,**anger**,The author expresses frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior toward their stressed cat and their own efforts to comfort her.
+315,persona_a,zero_shot,numbered,**anger**,"The author expressed frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior toward their stressed, elderly cat."
+315,persona_a,zero_shot,inline,**anger**,"The author expressed frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior toward their stressed, elderly cat."
+315,persona_a,one_shot,numbered,**anger**,The author’s frustration with their roommate’s dismissive and inconsiderate behavior—singing loudly despite the cat’s distress—evokes clear irritation and indignation.
+315,persona_a,one_shot,inline,**anger**,The author’s frustration with their roommate’s dismissive and inconsiderate behavior—singing loudly despite the cat’s distress—evokes clear anger.
+315,persona_a,few_shot,numbered,**anger**,"The author expresses frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior toward their stressed, elderly cat."
+315,persona_a,few_shot,inline,**anger**,"The author expresses frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior toward their stressed, elderly cat."
+315,persona_b,zero_shot,numbered,**anger**,"The author expresses frustration and irritation at the boyfriend’s dismissive and inconsiderate behavior, particularly his refusal to respect their efforts to calm the stressed cat."
+315,persona_b,zero_shot,inline,**anger**,The author’s frustration with their boyfriend’s dismissive and inconsiderate behavior—singing loudly despite the cat’s distress—evokes clear irritation and indignation.
+315,persona_b,one_shot,numbered,**anger**,The author’s frustration with their roommate’s dismissive and inconsiderate behavior—singing loudly despite the cat’s distress—evokes clear irritation and indignation.
+315,persona_b,one_shot,inline,**anger**,The author’s frustration with the boyfriend’s dismissive and inconsiderate behavior—singing loudly despite the cat’s distress—evokes clear irritation and indignation.
+315,persona_b,few_shot,numbered,**anger**,The author describes frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior during a stressful situation.
+315,persona_b,few_shot,inline,**anger**,The author describes frustration and irritation at their boyfriend’s dismissive and inconsiderate behavior during a stressful situation.
+51688,neutral,zero_shot,numbered,**6. pride**,The author expresses deep satisfaction and ownership of their creative and collaborative success in crafting meaningful experiences for their players.
+51688,neutral,zero_shot,inline,**joy**,The author expresses enthusiasm and satisfaction about their players' engagement and enjoyment of their D&D campaigns.
+51688,neutral,one_shot,numbered,**pride**,"The author expresses deep satisfaction and ownership of their creative success in crafting engaging, emotionally resonant D&D campaigns."
+51688,neutral,one_shot,inline,**pride**,The author expresses satisfaction and admiration for their players' engagement and enjoyment of their D&D campaigns.
+51688,neutral,few_shot,numbered,**pride**,"The author expresses deep satisfaction and ownership of their creative success in crafting engaging, emotionally resonant D&D campaigns."
+51688,neutral,few_shot,inline,**pride**,"The author expresses deep satisfaction and ownership of their creative success in crafting engaging, emotionally resonant D&D campaigns."
+51688,generic_human,zero_shot,numbered,**joy**,The author expresses deep satisfaction and happiness about their players' engagement and enjoyment of their D&D campaigns.
+51688,generic_human,zero_shot,inline,**joy**,The author expresses deep satisfaction and happiness about their players' engagement and enjoyment of their D&D campaigns.
+51688,generic_human,one_shot,numbered,**pride**,"The author expresses deep satisfaction and ownership of their creative success in crafting engaging, emotionally resonant D&D campaigns."
+51688,generic_human,one_shot,inline,**pride**,"The author expresses deep satisfaction and ownership of their creative and collaborative success in crafting meaningful, emotionally engaging D&D campaigns."
+51688,generic_human,few_shot,numbered,**pride**,"The author expresses deep satisfaction and ownership of their creative and engaging work, which aligns with the emotion of pride."
+51688,generic_human,few_shot,inline,**pride**,"The author expresses deep satisfaction and ownership of their creative success in crafting engaging, emotionally resonant D&D campaigns."
+51688,persona_a,zero_shot,numbered,**6. pride**,"The author expresses deep satisfaction and ownership of their creative success, highlighting personal achievement and fulfillment."
+51688,persona_a,zero_shot,inline,**pride**,"The author expresses deep satisfaction and ownership of their creative success, highlighting their accomplishment and the positive impact on others."
+51688,persona_a,one_shot,numbered,**pride**,"The author expresses deep satisfaction and ownership of their creative success, which aligns with the emotion of pride."
+51688,persona_a,one_shot,inline,**pride**,"The author expresses deep satisfaction and ownership of their creative success, highlighting their accomplishment and the positive impact on others."
+51688,persona_a,few_shot,numbered,**pride**,"The author expresses deep satisfaction and ownership of their creative success, which aligns with the emotion of pride."
+51688,persona_a,few_shot,inline,**pride**,"The author expresses deep satisfaction and ownership of their creative success, highlighting their accomplishment in a way that reflects pride."
+51688,persona_b,zero_shot,numbered,**6. pride**,The author expresses deep satisfaction and ownership in their creative success and the players' engagement with their work.
+51688,persona_b,zero_shot,inline,**pride**,The author expresses deep satisfaction and ownership in their creative work and the players' engagement with it.
+51688,persona_b,one_shot,numbered,**pride**,The author expresses deep satisfaction and ownership of their creative work and its positive impact on their players.
+51688,persona_b,one_shot,inline,**pride**,The author expresses deep satisfaction and ownership of their creative work and its positive impact on their players.
+51688,persona_b,few_shot,numbered,**pride**,"The author expresses deep satisfaction and ownership of their creative work, highlighting their players' engagement and enjoyment, which aligns with pride in their craft."
+51688,persona_b,few_shot,inline,**pride**,The author expresses deep satisfaction and ownership of their creative work and the players' emotional engagement with their campaigns.
+52184,neutral,zero_shot,numbered,sadness,"The author expresses a sense of loss and disappointment after investing significant effort and dedication, which aligns with feelings of sadness."
+52184,neutral,zero_shot,inline,**sadness**,The rejection after dedicated effort typically evokes feelings of disappointment and sorrow.
+52184,neutral,one_shot,numbered,sadness,The author describes a sense of loss and disappointment after investing significant effort and not achieving their goal.
+52184,neutral,one_shot,inline,sadness,"The author expresses regret and disappointment over a failed effort, which aligns with the emotion of sadness."
+52184,neutral,few_shot,numbered,sadness,"The author describes a setback after significant effort, which is a common trigger for sadness."
+52184,neutral,few_shot,inline,sadness,"The author describes a disappointing outcome after significant effort, which typically evokes sadness."
+52184,generic_human,zero_shot,numbered,sadness,The rejection after significant effort and dedication typically evokes feelings of sorrow or unhappiness.
+52184,generic_human,zero_shot,inline,**sadness**,The rejection after significant effort typically evokes feelings of disappointment and sorrow.
+52184,generic_human,one_shot,numbered,sadness,"The author describes a significant emotional setback after investing time and effort, which is a hallmark of sadness."
+52184,generic_human,one_shot,inline,sadness,The author describes a sense of loss and disappointment after investing effort and not achieving their goal.
+52184,generic_human,few_shot,numbered,sadness,"The author describes a setback after significant effort and dedication, which is commonly associated with sadness."
+52184,generic_human,few_shot,inline,sadness,"The author describes a setback after significant effort, which commonly evokes sadness."
+52184,persona_a,zero_shot,numbered,**sadness**,"The context of repeated effort, rejection, and personal investment in a competitive activity strongly aligns with feelings of sadness."
+52184,persona_a,zero_shot,inline,**sadness**,The repeated effort and investment in dance skills followed by rejection aligns with feelings of sorrow or unhappiness.
+52184,persona_a,one_shot,numbered,sadness,"The author describes a significant loss (rejection after hard work) in a competitive context, which is strongly associated with sadness."
+52184,persona_a,one_shot,inline,**sadness**,"The author describes a deep disappointment and loss following a significant effort and rejection, which aligns with feelings of sadness."
+52184,persona_a,few_shot,numbered,sadness,"The author describes a deeply disappointing outcome after significant effort and dedication, which is a hallmark of sadness."
+52184,persona_a,few_shot,inline,sadness,"The author describes a significant loss and effort followed by rejection, which is a common trigger for sadness."
+52184,persona_b,zero_shot,numbered,shame,"The author’s history of never failing before contrasts sharply with this rejection, suggesting deep self-consciousness and humiliation over their perceived inadequacy."
+52184,persona_b,zero_shot,inline,**shame**,"The author’s history of never failing before contrasts sharply with this rejection, suggesting deep self-doubt and humiliation."
+52184,persona_b,one_shot,numbered,**shame**,"The author’s long-term effort and prior success contrast sharply with failure, triggering deep self-consciousness and humiliation."
+52184,persona_b,one_shot,inline,**sadness**,"The author describes a significant failure after long-term effort, which is a hallmark of sadness, especially when combined with a history of prior success."
+52184,persona_b,few_shot,numbered,shame,"The author describes a deep personal failure in front of others after significant effort, which typically triggers shame."
+52184,persona_b,few_shot,inline,**shame**,"The author describes deep personal failure and embarrassment after a long-term effort, which aligns with shame—especially given their prior track record of success."
+51249,neutral,zero_shot,numbered,**joy**,"The phrase ""became partners"" in a positive context (e.g., romantic, business, or collaborative) strongly suggests a sense of happiness and fulfillment."
+51249,neutral,zero_shot,inline,**joy**,"The phrase ""became partners"" in a positive context typically evokes feelings of happiness and fulfillment, aligning with the emotion of joy."
+51249,neutral,one_shot,numbered,**joy**,"The phrase ""became partners with my partner"" suggests a positive, celebratory milestone, strongly tied to joy."
+51249,neutral,one_shot,inline,**joy**,"The phrase *""became partners with my partner""* suggests a positive, celebratory milestone, typically associated with joy."
+51249,neutral,few_shot,numbered,**joy**,"The text implies a significant positive milestone (becoming partners) with a partner, which is commonly associated with joy."
+51249,neutral,few_shot,inline,**joy**,"The author describes a significant positive relationship milestone (""partners with my partner""), which is strongly associated with joy."
+51249,generic_human,zero_shot,numbered,**joy**,"The phrase ""became partners"" in a positive context (e.g., romantic, business, or collaborative) strongly suggests a celebratory or happy emotion."
+51249,generic_human,zero_shot,inline,**joy**,"The phrase ""became partners"" in a positive context typically evokes feelings of happiness and fulfillment, aligning with the emotion of joy."
+51249,generic_human,one_shot,numbered,joy,"The phrase ""became partners with my partner"" suggests a positive, celebratory, and intimate bond, which is strongly associated with joy."
+51249,generic_human,one_shot,inline,**joy**,"The phrase ""became partners with my partner"" suggests a positive, celebratory, or affectionate bond, which aligns with the emotion of joy."
+51249,generic_human,few_shot,numbered,**joy**,"The text implies a significant positive milestone (becoming partners) with a partner, which is commonly associated with joy."
+51249,generic_human,few_shot,inline,**joy**,"The phrase ""became partners"" suggests a significant, positive milestone (e.g., romantic partnership, business, or creative collaboration), which typically evokes joy."
+51249,persona_a,zero_shot,numbered,**joy**,The context of formalizing a long-term romantic partnership typically evokes a sense of happiness and fulfillment.
+51249,persona_a,zero_shot,inline,**joy**,The context of formalizing a long-term romantic relationship typically evokes a sense of happiness and fulfillment.
+51249,persona_a,one_shot,numbered,joy,"The author describes a significant milestone in a long-term romantic relationship, which is commonly associated with joy."
+51249,persona_a,one_shot,inline,**joy**,"The context of formalizing a long-term romantic partnership typically evokes positive, celebratory emotions like joy."
+51249,persona_a,few_shot,numbered,joy,"The author describes a significant, positive milestone in a long-term romantic relationship, which is strongly associated with joy."
+51249,persona_a,few_shot,inline,**joy**,"The formalization of a long-term romantic partnership is a significant, positive milestone that typically evokes joy."
+51249,persona_b,zero_shot,numbered,**joy**,"The phrasing ""felt ... when I became partners"" with the context of formalizing a business partnership suggests a positive, celebratory, or uplifting emotional response."
+51249,persona_b,zero_shot,inline,**joy**,"The context of formalizing a business partnership with a partner typically evokes positive, celebratory emotions like joy."
+51249,persona_b,one_shot,numbered,**joy**,"The context of formalizing a business partnership with a partner (likely a close collaborator) strongly suggests a positive, celebratory emotion like joy."
+51249,persona_b,one_shot,inline,**joy**,"The context of formalizing a business partnership with a partner suggests a positive, celebratory, or fulfilling emotion."
+51249,persona_b,few_shot,numbered,joy,"The author describes a significant, positive milestone in their professional relationship, which typically evokes joy."
+51249,persona_b,few_shot,inline,**joy**,"The author describes a significant, positive milestone in a collaborative venture, which is strongly associated with joy."
+41378,neutral,zero_shot,numbered,**sadness**,The author expresses deep sorrow and emotional pain over the difficult decision to euthanize their suffering dog.
+41378,neutral,zero_shot,inline,**sadness**,The author expresses deep sorrow and emotional heaviness over the difficult decision to euthanize their suffering dog.
+41378,neutral,one_shot,numbered,sadness,"The author describes the emotional weight of making a difficult decision involving their suffering dog, highlighting their sorrow and emotional pain."
+41378,neutral,one_shot,inline,**sadness**,"The author describes the emotional weight of making a difficult, heartbreaking decision about their suffering dog, highlighting deep sorrow."
+41378,neutral,few_shot,numbered,sadness,"The author describes a deeply painful and heartbreaking decision involving their suffering dog, which evokes sadness."
+41378,neutral,few_shot,inline,**sadness**,"The author describes the painful decision to euthanize their suffering dog, a deeply sorrowful experience."
+41378,generic_human,zero_shot,numbered,**sadness**,"The author describes the experience as ""awful"" and highlights their emotional struggle over the decision to end their dog’s suffering, reflecting deep sorrow."
+41378,generic_human,zero_shot,inline,**sadness**,"The author describes the experience as ""awful"" and highlights their emotional struggle over the difficult decision to end their dog’s suffering, indicating deep sorrow."
+41378,generic_human,one_shot,numbered,sadness,"The author describes the difficult decision to euthanize their suffering dog, highlighting emotional pain and loss."
+41378,generic_human,one_shot,inline,**sadness**,"The author describes the emotional weight of making a difficult, heartbreaking decision to end their beloved dog’s suffering, reflecting deep sorrow."
+41378,generic_human,few_shot,numbered,sadness,"The author describes a deeply painful and emotionally heavy decision involving the loss of their beloved dog, which is strongly associated with sadness."
+41378,generic_human,few_shot,inline,sadness,"The author describes a deeply painful and heartbreaking decision involving their suffering dog, which evokes sorrow and grief."
+41378,persona_a,zero_shot,numbered,**sadness**,"The author describes the euthanasia decision as ""awful"" and emphasizes the suffering of their dog, reflecting deep sorrow and emotional pain."
+41378,persona_a,zero_shot,inline,**sadness**,"The author expresses deep emotional distress and sorrow over the difficult decision to euthanize their beloved dog, highlighting their suffering and loss."
+41378,persona_a,one_shot,numbered,sadness,"The author describes the emotional weight of making a difficult, heartbreaking decision about their suffering pet, reflecting deep sorrow."
+41378,persona_a,one_shot,inline,**sadness**,"The author expresses deep emotional distress and sorrow over the difficult decision to euthanize their beloved dog, highlighting their suffering and loss."
+41378,persona_a,few_shot,numbered,sadness,"The author describes the painful and emotionally heavy decision to euthanize their beloved dog, highlighting their suffering and emotional distress."
+41378,persona_a,few_shot,inline,**sadness**,"The author describes the difficult decision to euthanize their beloved dog, highlighting emotional distress and sorrow over the loss and suffering."
+41378,persona_b,zero_shot,numbered,**sadness**,"The author expresses deep emotional distress and sorrow over the difficult decision to euthanize their beloved pet, highlighting their suffering and loss."
+41378,persona_b,zero_shot,inline,**sadness**,"The author expresses deep emotional distress and sorrow over the difficult decision to euthanize their beloved pet, highlighting their suffering and loss."
+41378,persona_b,one_shot,numbered,sadness,"The author describes the emotional weight of making a difficult, heartbreaking decision about their beloved pet, highlighting their suffering and emotional struggle."
+41378,persona_b,one_shot,inline,**sadness**,"The author expresses deep emotional distress and sorrow over the difficult decision to euthanize their beloved pet, highlighting their suffering and loss."
+41378,persona_b,few_shot,numbered,sadness,"The author describes the emotional weight of making a difficult, heartbreaking decision about their beloved pet, evoking deep sorrow."
+41378,persona_b,few_shot,inline,**sadness**,"The author describes the emotional weight of making a difficult, heartbreaking decision about their beloved pet, which is a hallmark of sadness."
+5704,neutral,zero_shot,numbered,**surprise**,"The abrupt and unexpected action of being flicked with a wet bogey suggests a sudden, jarring reaction rather than a prolonged emotional state."
+5704,neutral,zero_shot,inline,**disgust**,"The abrupt, visceral description of being splattered with mucus suggests a strong, immediate revulsion."
+5704,neutral,one_shot,numbered,**disgust**,"The act of being splattered with a wet snot (bogey) is a visceral, unpleasant experience that strongly triggers disgust."
+5704,neutral,one_shot,inline,**disgust**,"The sudden, intrusive contact with bodily mucus is a visceral, repulsive trigger."
+5704,neutral,few_shot,numbered,disgust,"The author describes a gross, unwanted physical intrusion (a wet booger) on their face, which is a classic disgust trigger."
+5704,neutral,few_shot,inline,**disgust**,"The author describes a gross, involuntary bodily action (snot) directed at them, which is a classic disgust trigger."
+5704,generic_human,zero_shot,numbered,**surprise**,"The abrupt and unexpected action of being flicked with a wet bogey suggests a sudden, jarring experience that would evoke surprise."
+5704,generic_human,zero_shot,inline,**surprise**,"The abrupt and unexpected action of being flicked with a wet bogey suggests a sudden, jarring reaction rather than a prolonged emotional state."
+5704,generic_human,one_shot,numbered,**disgust**,"The author describes a gross, involuntary bodily action (flicking mucus) directed at them, a clear trigger for disgust."
+5704,generic_human,one_shot,inline,**disgust**,"The author describes a gross, involuntary bodily action (flicking a wet snot) directed at them, a clear disgust trigger."
+5704,generic_human,few_shot,numbered,**disgust**,"The author describes a gross, unwanted physical intrusion (a wet snot flick) that triggers a visceral, negative reaction."
+5704,generic_human,few_shot,inline,**disgust**,"The author describes a gross, involuntary bodily action (flicking a wet booger) directed at them, which is a strong disgust trigger."
+5704,persona_a,zero_shot,numbered,**surprise**,"The abrupt and unexpected action of being flicked with a wet bogey suggests a sudden, jarring reaction rather than a prolonged or complex emotion."
+5704,persona_a,zero_shot,inline,**disgust**,"The abrupt, visceral description of being splattered with bodily mucus suggests a strong aversion and revulsion."
+5704,persona_a,one_shot,numbered,disgust,"The author describes a gross, involuntary bodily fluid being deliberately directed at them, a strong disgust trigger."
+5704,persona_a,one_shot,inline,**disgust**,"The act of being deliberately splattered with bodily mucus is a visceral, involuntary disgust trigger."
+5704,persona_a,few_shot,numbered,disgust,"The author describes a gross, unwanted physical intrusion (a wet snot flick) on their face, a clear disgust trigger."
+5704,persona_a,few_shot,inline,**disgust**,"The author describes a gross, involuntary physical action (flicking a wet snot) directed at them, which is a strong disgust trigger."
+5704,persona_b,zero_shot,numbered,**joy**,"The context of the toddler’s affectionate action suggests a lighthearted, happy moment despite the unexpected snot."
+5704,persona_b,zero_shot,inline,**joy**,"The context suggests a lighthearted, affectionate moment, implying warmth and happiness despite the unexpected action."
+5704,persona_b,one_shot,numbered,**surprise**,"The unexpected and affectionate act of a toddler (a wet snot flick) likely caught the parent off guard, eliciting surprise."
+5704,persona_b,one_shot,inline,**surprise**,"The abrupt, unexpected action of a toddler’s affectionate (but gross) gesture likely elicited surprise in the parent."
+5704,persona_b,few_shot,numbered,joy,"The author describes an affectionate, playful act from their toddler, which is typically associated with warmth and happiness."
+5704,persona_b,few_shot,inline,**joy**,"The author describes an affectionate, playful act from their toddler, which is typically associated with warmth and happiness."
+3328,neutral,zero_shot,numbered,**2. disgust**,The mention of finding gristle in the sausage suggests a strong aversion or repulsion.
+3328,neutral,zero_shot,inline,**Disgust**,The author expressed a strong aversion to the unpleasant texture of gristle in the sausage.
+3328,neutral,one_shot,numbered,disgust,"The author describes encountering an unpleasant, unwanted texture (gristle) in their food, a clear trigger for disgust."
+3328,neutral,one_shot,inline,**disgust**,"The author describes encountering an unpleasant, unexpected texture (gristle) in food, a clear trigger for disgust."
+3328,neutral,few_shot,numbered,disgust,"The author describes encountering an unpleasant, unwanted texture (gristle) in food, a clear trigger for disgust."
+3328,neutral,few_shot,inline,**disgust**,"The author describes encountering an unpleasant, unappetizing texture (gristle) in food, a clear trigger for disgust."
+3328,generic_human,zero_shot,numbered,**2. disgust**,The author’s description of encountering gristle in the sausage suggests a strong aversion or revulsion.
+3328,generic_human,zero_shot,inline,**disgust**,The author’s description of encountering gristle in the sausage suggests a strong aversion and revulsion.
+3328,generic_human,one_shot,numbered,disgust,"The author describes encountering an unpleasant, unappetizing texture (gristle) in their food, a clear trigger for disgust."
+3328,generic_human,one_shot,inline,**disgust**,"The author reacted to finding unexpected, unpleasant gristle in the sausage, a clear trigger for disgust."
+3328,generic_human,few_shot,numbered,disgust,"The author describes encountering an unpleasant, unwanted texture (gristle) in their food, which is a clear trigger for disgust."
+3328,generic_human,few_shot,inline,disgust,"The author describes encountering an unpleasant, unappetizing texture (gristle) in their food, which is a common trigger for disgust."
+3328,persona_a,zero_shot,numbered,**disgust**,The author’s reaction to finding gristle in the sausage suggests a strong sense of aversion or revulsion.
+3328,persona_a,zero_shot,inline,**disgust**,The author’s description of encountering unexpected gristle in a homemade sausage suggests a strong physical and emotional aversion.
+3328,persona_a,one_shot,numbered,**disgust**,"The author describes encountering an unpleasant, unexpected texture (gristle) in food, a clear trigger for disgust."
+3328,persona_a,one_shot,inline,**disgust**,The author’s description of encountering unexpected gristle in a sausage—a foul or unpleasant sensory experience—triggers disgust.
+3328,persona_a,few_shot,numbered,disgust,"The author describes encountering an unpleasant, unappetizing texture (gristle) in their food, triggering disgust."
+3328,persona_a,few_shot,inline,**disgust**,"The author describes encountering an unpleasant, unappetizing texture (gristle) in their meal, a clear trigger for disgust."
+3328,persona_b,zero_shot,numbered,**disgust**,The diner’s reaction to finding gristle in a premium sausage suggests a strong aversion and revulsion.
+3328,persona_b,zero_shot,inline,**Disgust**,The diner’s reaction to finding gristle in a premium sausage suggests a strong physical and emotional aversion to the unpleasant texture.
+3328,persona_b,one_shot,numbered,disgust,"The diner encountered an unpleasant, unanticipated texture (gristle) in a premium meal, triggering a sense of revulsion."
+3328,persona_b,one_shot,inline,**disgust**,"The diner encountered an unpleasant, unanticipated texture (gristle) in a premium meal, triggering a visceral reaction of disgust."
+3328,persona_b,few_shot,numbered,disgust,"The author describes encountering an unpleasant, unappetizing texture (gristle) in a high-priced meal, triggering disgust at the spoiled or poorly prepared food."
+3328,persona_b,few_shot,inline,**disgust**,"The author encountered an unpleasant, unappetizing surprise (gristle) in a high-priced meal, triggering disgust at the violation of their expectations."
+3443,neutral,zero_shot,numbered,**fear**,The mention of worrying about having COVID-19 suggests a primary emotion of fear related to potential illness or health risks.
+3443,neutral,zero_shot,inline,**fear**,"The mention of ""thought I had COVID-19"" suggests anxiety or apprehension about a potentially serious illness."
+3443,neutral,one_shot,numbered,**fear**,The author’s mention of thinking they had COVID-19—a potentially serious illness—implies anxiety or apprehension about their health.
+3443,neutral,one_shot,inline,**fear**,The author’s mention of *thinking* they had COVID-19 suggests anxiety or apprehension about a serious health threat.
+3443,neutral,few_shot,numbered,**fear**,"The author describes a situation involving a serious health threat (COVID-19), which is a classic trigger for fear."
+3443,neutral,few_shot,inline,**fear**,"The author describes a situation involving a serious health threat (COVID-19), which is a primary trigger for fear."
+3443,generic_human,zero_shot,numbered,**fear**,The mention of worrying about having COVID-19 suggests the author experienced anxiety or apprehension about a potentially serious health threat.
+3443,generic_human,zero_shot,inline,**fear**,The context of testing positive for COVID-19 (even if later disproven) typically triggers anxiety or apprehension about health risks.
+3443,generic_human,one_shot,numbered,**fear**,The author’s mention of thinking they had COVID-19—a potentially serious illness—suggests a primary emotion of fear.
+3443,generic_human,one_shot,inline,**fear**,The author’s mention of *thinking* they had COVID-19 suggests anxiety or apprehension about a potential health threat.
+3443,generic_human,few_shot,numbered,fear,"The author mentions a situation involving a serious health threat (COVID-19), which is a primary trigger for fear."
+3443,generic_human,few_shot,inline,**fear**,"The author describes a scenario involving a serious health threat (COVID-19), which is a primary trigger for fear."
+3443,persona_a,zero_shot,numbered,**fear**,The context of having a pre-existing respiratory condition and living alone while suspecting COVID-19 suggests a primary emotion of fear due to heightened vulnerability and isolation.
+3443,persona_a,zero_shot,inline,**fear**,The context of having a pre-existing respiratory condition and testing for COVID-19 suggests heightened anxiety about potential severe health outcomes.
+3443,persona_a,one_shot,numbered,**fear**,The author’s pre-existing respiratory condition and isolation while suspecting COVID-19 strongly suggest anxiety or apprehension about their health.
+3443,persona_a,one_shot,inline,**fear**,"The author’s pre-existing respiratory condition and isolation likely triggered anxiety about contracting COVID-19, a classic fear-inducing scenario."
+3443,persona_a,few_shot,numbered,**fear**,The author’s pre-existing respiratory condition and isolation while suspecting COVID-19 triggered anxiety about their health and safety.
+3443,persona_a,few_shot,inline,**fear**,The author’s pre-existing respiratory condition and isolation likely triggered anxiety about their health and safety.
+3443,persona_b,zero_shot,numbered,**fear**,The context of testing positive for COVID-19 despite vaccination and mild symptoms suggests the author experienced apprehension or concern about their health.
+3443,persona_b,zero_shot,inline,**fear**,"The author’s mention of a COVID-19 scare—despite vaccination—suggests apprehension about potential illness, which aligns with fear."
+3443,persona_b,one_shot,numbered,**fear**,"The author’s mention of testing positive for COVID-19 (despite vaccination) and mild symptoms suggests apprehension about potential illness, a hallmark of fear."
+3443,persona_b,one_shot,inline,**fear**,The author’s mention of testing positive for COVID-19 despite vaccination and mild symptoms suggests apprehension about potential illness or complications.
+3443,persona_b,few_shot,numbered,**fear**,"The author describes a situation involving a serious health threat (COVID-19) despite vaccination, which typically triggers fear."
+3443,persona_b,few_shot,inline,**fear**,"The author describes a scenario involving a serious health threat (COVID-19) despite vaccination, which typically triggers fear of illness or complications."
+4497,neutral,zero_shot,numbered,**surprise**,"The abrupt and unexpected loss of power during a thunderstorm, while cuddling with their wife, suggests a sudden, jarring reaction."
+4497,neutral,zero_shot,inline,**surprise**,The abrupt and unexpected nature of the power outage during a cozy moment with their wife suggests the author was taken aback by the sudden event.
+4497,neutral,one_shot,numbered,**surprise**,"The abrupt loss of power during a thunderstorm in a cozy, intimate setting is an unexpected event that would likely evoke surprise."
+4497,neutral,one_shot,inline,**surprise**,"The abrupt loss of power during a cozy moment (with thunderstorm context) suggests a sudden, unexpected disruption that startled the author."
+4497,neutral,few_shot,numbered,**surprise**,"The abrupt and unexpected loss of power during a thunderstorm, combined with the vivid description of the sudden darkness, indicates a strong sense of surprise."
+4497,neutral,few_shot,inline,**surprise**,"The abrupt and unexpected loss of power during a thunderstorm triggered a sudden, jarring reaction."
+4497,generic_human,zero_shot,numbered,**surprise**,"The abrupt and unexpected loss of power during a thunderstorm, combined with the sudden darkness, suggests a jarring and unexpected reaction."
+4497,generic_human,zero_shot,inline,**surprise**,"The abrupt and unexpected loss of power during a thunderstorm caused a jarring interruption, eliciting a sense of surprise."
+4497,generic_human,one_shot,numbered,**surprise**,"The abrupt loss of power during a thunderstorm, combined with the sudden darkness, is a jarring and unexpected event that would likely evoke surprise."
+4497,generic_human,one_shot,inline,**fear**,"The author describes a sudden, unexpected event (power outage during a storm) that likely triggered a sense of vulnerability or apprehension."
+4497,generic_human,few_shot,numbered,**surprise**,"The abrupt and unexpected loss of power during a thunderstorm triggered a sudden, jarring reaction, which aligns with surprise."
+4497,generic_human,few_shot,inline,**surprise**,"The abrupt and unexpected loss of power during a thunderstorm triggered a sudden, jarring reaction, which aligns with surprise."
+4497,persona_a,zero_shot,numbered,**fear**,"The context of a previous lightning strike, a sudden thunderstorm, and the loss of power in a vulnerable moment (cuddling) suggests the author experienced fear."
+4497,persona_a,zero_shot,inline,**fear**,"The context of a previous lightning strike and the sudden, unexpected power outage during a thunderstorm suggests a heightened sense of vulnerability and apprehension."
+4497,persona_a,one_shot,numbered,**fear**,"The author describes a sudden, unexpected power outage during a thunderstorm, which is a classic trigger for fear, especially given their prior experience with lightning damage."
+4497,persona_a,one_shot,inline,**fear**,"The author describes a sudden, unexpected event (power outage during a thunderstorm) in a home previously damaged by lightning, triggering a visceral, anxious response."
+4497,persona_a,few_shot,numbered,**fear**,"The author describes a sudden, alarming event (power outage during a thunderstorm) in a home previously damaged by lightning, triggering fear of recurrence or danger."
+4497,persona_a,few_shot,inline,**fear**,"The author describes a sudden, alarming event (power outage during a thunderstorm) in a home previously struck by lightning, triggering fear of potential danger."
+4497,persona_b,zero_shot,numbered,**joy**,"The author describes the thunderstorm as cozy and romantic, emphasizing a warm, intimate moment with their partner during the outage."
+4497,persona_b,zero_shot,inline,**joy**,"The author describes the thunderstorm as cozy and romantic, emphasizing a warm, intimate connection with their partner during the unexpected event."
+4497,persona_b,one_shot,numbered,joy,"The author describes a cozy, romantic moment with their partner during a thunderstorm, which is typically associated with joyful intimacy."
+4497,persona_b,one_shot,inline,**joy**,"The author describes a cozy, romantic moment with their partner during a thunderstorm, which is typically associated with warmth and happiness."
+4497,persona_b,few_shot,numbered,joy,"The author describes a cozy, romantic moment with their partner during a thunderstorm, which is framed as a positive and intimate experience."
+4497,persona_b,few_shot,inline,**joy**,"The author describes a cozy, romantic moment with their partner during a thunderstorm, which aligns with the emotion of joy."
+31089,neutral,zero_shot,numbered,sadness,The loss of a mother is a deeply sorrowful event that typically evokes sadness.
+31089,neutral,zero_shot,inline,sadness,The loss of a mother is typically associated with profound sorrow and grief.
+31089,neutral,one_shot,numbered,sadness,The loss of a loved one like a mother is a primary trigger for sadness.
+31089,neutral,one_shot,inline,sadness,"The abrupt, incomplete sentence and context of losing a mother evoke deep sorrow."
+31089,neutral,few_shot,numbered,sadness,"The author describes a profound loss of a loved one, which is a primary trigger for sadness."
+31089,neutral,few_shot,inline,sadness,"The author describes a profound loss, which is strongly associated with sadness."
+31089,generic_human,zero_shot,numbered,sadness,The loss of a mother is a profound and universally associated cause of deep sorrow or grief.
+31089,generic_human,zero_shot,inline,sadness,The loss of a mother is commonly associated with profound sorrow and grief.
+31089,generic_human,one_shot,numbered,sadness,The loss of a mother is a profound and universally associated trigger for sadness.
+31089,generic_human,one_shot,inline,sadness,The abrupt and somber nature of the statement about losing a mother strongly indicates grief or sorrow.
+31089,generic_human,few_shot,numbered,sadness,"The text describes a profound loss of a loved one, which is a primary trigger for sadness."
+31089,generic_human,few_shot,inline,sadness,"The author describes a profound loss, which is strongly associated with sadness."
+31089,persona_a,zero_shot,numbered,**sadness**,The author’s strained but ultimately lost relationship with their mother evokes grief and sorrow over her death.
+31089,persona_a,zero_shot,inline,**sadness**,"The loss of a parent, especially in the context of a strained relationship, typically evokes deep sorrow and grief."
+31089,persona_a,one_shot,numbered,sadness,"The author’s strained but loving relationship with their mother, combined with the loss, suggests grief and sorrow."
+31089,persona_a,one_shot,inline,**sadness**,"The loss of a parent, even in a strained relationship, typically evokes deep sorrow or grief."
+31089,persona_a,few_shot,numbered,sadness,The author’s strained but unresolved relationship with their deceased mother suggests a profound sense of loss and sorrow.
+31089,persona_a,few_shot,inline,**sadness**,"The loss of a parent, even in a strained relationship, typically evokes deep sadness."
+31089,persona_b,zero_shot,numbered,sadness,The loss of a deeply loved and emotionally dependent mother typically evokes profound sorrow or grief.
+31089,persona_b,zero_shot,inline,sadness,The loss of a deeply loved and emotionally dependent mother typically evokes profound sorrow or grief.
+31089,persona_b,one_shot,numbered,sadness,The loss of a deeply loved and emotionally dependent mother is a primary trigger for profound sadness.
+31089,persona_b,one_shot,inline,**sadness**,The loss of a deeply loved and emotionally dependent mother is a primary trigger for profound sorrow.
+31089,persona_b,few_shot,numbered,sadness,"The author’s deep emotional bond and loss of a close, dependent relationship with their mother triggers profound sadness."
+31089,persona_b,few_shot,inline,**sadness**,The author’s loss of a deeply loved and dependent mother is a profound emotional trigger for grief and sorrow.
+5914,neutral,zero_shot,numbered,**fear**,"The author explicitly describes a terrorizing apprehension (""that something was wrong with my baby or me"") during the labor process."
+5914,neutral,zero_shot,inline,**fear**,"The author expressed intense apprehension (""that something was wrong with my baby or me"") about a potential threat to their or their baby’s safety during labor."
+5914,neutral,one_shot,numbered,**fear**,"The author describes intense physical distress, uncertainty about the baby’s safety, and a sense of impending danger, all hallmark indicators of fear."
+5914,neutral,one_shot,inline,**fear**,"The author describes intense physical distress and anxiety about potential harm to themselves or their baby, which are hallmark indicators of fear."
+5914,neutral,few_shot,numbered,**fear**,"The author describes intense physical distress, uncertainty about their baby’s safety, and a sense of impending danger, all classic indicators of fear."
+5914,neutral,few_shot,inline,**fear**,"The author describes intense physical distress, uncertainty about their baby’s safety, and a sense of urgency, all classic indicators of fear."
+5914,generic_human,zero_shot,numbered,**fear**,"The author explicitly describes a terrorized state of mind (""I was ... that something was wrong with my baby or me""), indicating overwhelming fear during the labor experience."
+5914,generic_human,zero_shot,inline,**fear**,The author expressed intense apprehension and dread that something was wrong with themselves or their baby during labor.
+5914,generic_human,one_shot,numbered,**fear**,"The author describes intense physical distress, uncertainty about their baby’s safety, and a sense of impending danger, all classic indicators of fear."
+5914,generic_human,one_shot,inline,**fear**,"The author describes intense physical pain, uncertainty about their baby’s safety, and a sense of impending crisis, all classic indicators of fear."
+5914,generic_human,few_shot,numbered,**fear**,"The author describes intense physical distress, uncertainty about their baby’s safety, and a sense of urgency, which are hallmark indicators of fear."
+5914,generic_human,few_shot,inline,**fear**,"The author describes intense physical distress, uncertainty about their baby’s safety, and a sense of urgency, all classic indicators of fear."
+5914,persona_a,zero_shot,numbered,**fear**,"The author explicitly describes a terrorizing apprehension (""I was ... that something was wrong with my baby or me"") during the labor process."
+5914,persona_a,zero_shot,inline,**fear**,"The author explicitly describes a terrorized state (""I was ... that something was wrong"") during a high-stakes, uncertain labor experience."
+5914,persona_a,one_shot,numbered,**fear**,"The author describes intense physical distress, uncertainty about their baby’s safety, and a sense of impending danger, all hallmark indicators of fear."
+5914,persona_a,one_shot,inline,**fear**,"The author describes intense physical pain, uncertainty about their baby’s safety, and a sense of impending danger, all classic indicators of fear."
+5914,persona_a,few_shot,numbered,**fear**,"The author describes intense physical distress, uncertainty about their baby’s safety, and a sense of impending danger, all classic indicators of fear."
+5914,persona_a,few_shot,inline,**fear**,"The author describes intense physical distress, uncertainty about their baby’s safety, and a sense of impending crisis, all classic indicators of fear."
+5914,persona_b,zero_shot,numbered,**fear**,"The author explicitly describes a terrorizing apprehension (""I was ... that something was wrong with my baby or me"") tied to a past trauma of losing a baby."
+5914,persona_b,zero_shot,inline,**fear**,"The author explicitly describes a terrorizing dread (""I was ... that something was wrong with my baby or me"") tied to a past trauma of losing a baby, reflecting overwhelming fear of recurrence."
+5914,persona_b,one_shot,numbered,**fear**,"The author describes intense physical pain, uncertainty about their baby’s safety, and a sense of impending danger, all classic indicators of fear."
+5914,persona_b,one_shot,inline,**fear**,"The author describes intense physical pain, uncertainty about the baby’s safety, and a sense of impending danger, all classic indicators of fear."
+5914,persona_b,few_shot,numbered,**fear**,"The author describes intense physical distress, uncertainty about their baby’s safety, and a traumatic medical emergency, all classic indicators of fear."
+5914,persona_b,few_shot,inline,**fear**,"The author describes intense physical distress, uncertainty about their baby’s safety, and a traumatic medical situation tied to a previous loss, all of which evoke overwhelming fear."
+41082,neutral,zero_shot,numbered,**pride**,The author experienced a sense of satisfaction and self-respect from receiving recognition for their hard work and skill.
+41082,neutral,zero_shot,inline,**pride**,"The author expressed a positive response to recognition of their skill and effort, which aligns with the emotion of pride."
+41082,neutral,one_shot,numbered,**joy**,"The author received positive recognition for their creative effort, which is a common trigger for joy."
+41082,neutral,one_shot,inline,**pride**,"The author received positive recognition for their effort and skill, which is a hallmark of pride."
+41082,neutral,few_shot,numbered,**pride**,"The author received recognition for their effort and skill in art, which typically evokes pride."
+41082,neutral,few_shot,inline,**pride**,"The author describes receiving recognition for their effort and skill in art, which is a hallmark of pride."
+41082,generic_human,zero_shot,numbered,**6. pride**,The author experienced a sense of accomplishment and self-respect from receiving recognition for their hard work and skill.
+41082,generic_human,zero_shot,inline,**pride**,The author experienced a sense of satisfaction and self-respect from receiving recognition for their hard work and skill.
+41082,generic_human,one_shot,numbered,**joy**,"The author received positive feedback on their creative work, which is a common trigger for joy."
+41082,generic_human,one_shot,inline,**joy**,"The author experienced a positive, uplifting response to receiving praise for their hard work and skill."
+41082,generic_human,few_shot,numbered,**pride**,"The author experienced recognition of their effort and skill from an authority figure, which is a hallmark of pride."
+41082,generic_human,few_shot,inline,**pride**,"The author received positive recognition for their effort and skill in art, which typically evokes pride."
+41082,persona_a,zero_shot,numbered,**joy**,"The author’s long-standing self-doubt combined with a genuine external validation of their skill suggests a moment of positive, uplifting emotion."
+41082,persona_a,zero_shot,inline,**pride**,The author’s long-standing self-doubt combined with external validation suggests a sense of accomplishment and self-affirmation.
+41082,persona_a,one_shot,numbered,**joy**,"The author’s long-held self-doubt combined with unexpected validation from an instructor suggests a surge of positive, exhilarating emotion."
+41082,persona_a,one_shot,inline,**pride**,The author’s long-standing self-doubt combined with external validation of their skill likely triggered a sense of accomplishment and self-respect.
+41082,persona_a,few_shot,numbered,**pride**,"The author’s long-standing self-doubt combined with external validation of their skill triggers a sense of accomplishment and self-respect, which aligns with pride."
+41082,persona_a,few_shot,inline,**pride**,The author’s long-held self-doubt combined with external validation of their skill triggers a sense of accomplishment and self-respect.
+41082,persona_b,zero_shot,numbered,**joy**,"The author experienced a positive, uplifting response to receiving praise for their creative effort and skill in a fun, recreational setting."
+41082,persona_b,zero_shot,inline,**joy**,"The author expressed a positive, fulfilling reaction to receiving recognition for their creative effort in a recreational setting."
+41082,persona_b,one_shot,numbered,**joy**,"The author experienced a positive, fulfilling reaction to receiving praise for their creative work, which is a hallmark of joy."
+41082,persona_b,one_shot,inline,**joy**,"The author received positive feedback on their creative work, which is a common trigger for joy."
+41082,persona_b,few_shot,numbered,**pride**,"The author achieved a personal accomplishment (finishing a drawing) and received recognition for their skill, which typically triggers pride."
+41082,persona_b,few_shot,inline,**pride**,"The author achieved a personal accomplishment (finishing a drawing) and received recognition for their skill, which typically triggers pride."
+31015,neutral,zero_shot,numbered,**sadness**,"The author describes feeling ""brokenhearted,"" crying for days, and expressing longing (""I want him to myself""), which aligns with intense sorrow."
+31015,neutral,zero_shot,inline,**sadness**,"The author describes feeling ""brokenhearted,"" crying for days, and expressing longing for their boyfriend’s attention, all indicative of deep sadness."
+31015,neutral,one_shot,numbered,sadness,"The author describes feeling heartbroken, crying for days, and emotional distress due to separation and relationship anxiety."
+31015,neutral,one_shot,inline,**sadness**,"The author describes feeling brokenhearted, crying for days, and emotional distress due to separation and relationship anxiety."
+31015,neutral,few_shot,numbered,sadness,"The author describes feelings of longing, emotional pain (""brokenhearted""), crying, and distress over separation and lack of connection, which align with sadness."
+31015,neutral,few_shot,inline,**sadness**,"The author describes feeling heartbroken, crying, and emotional distress due to longing and separation from their boyfriend, which aligns with sadness."
+31015,generic_human,zero_shot,numbered,**sadness**,"The author describes feeling ""brokenhearted,"" crying for days, and expressing longing for their boyfriend, all of which align with the experience of sadness."
+31015,generic_human,zero_shot,inline,**sadness**,"The author describes feeling ""brokenhearted,"" crying for days, and expressing longing for their boyfriend, indicating deep sorrow and emotional pain."
+31015,generic_human,one_shot,numbered,sadness,"The author describes feeling heartbroken, crying, and emotional distress due to separation and perceived neglect from their boyfriend."
+31015,generic_human,one_shot,inline,**sadness**,"The author describes feeling ""brokenhearted,"" crying for days, and emotional distress due to separation and relationship anxiety."
+31015,generic_human,few_shot,numbered,sadness,"The author describes prolonged emotional distress, crying, and feelings of being ""brokenhearted"" due to separation and lack of connection with their boyfriend."
+31015,generic_human,few_shot,inline,**sadness**,"The author describes feeling ""brokenhearted,"" crying for days, and emotional distress due to longing and separation from their boyfriend, which aligns with sadness."
+31015,persona_a,zero_shot,numbered,**sadness**,"The author describes feeling ""brokenhearted,"" crying for days, and expressing longing (""I want him to myself""), which aligns with intense sorrow and emotional pain."
+31015,persona_a,zero_shot,inline,**sadness**,"The author describes feeling brokenhearted, crying for days, and expressing longing for their boyfriend, all indicative of deep sorrow."
+31015,persona_a,one_shot,numbered,sadness,"The author describes intense emotional distress, crying, and feeling ""brokenhearted"" due to separation and perceived neglect from their partner."
+31015,persona_a,one_shot,inline,**sadness**,"The author describes feeling ""brokenhearted,"" crying, and emotional distress due to separation and perceived abandonment, which aligns with sadness."
+31015,persona_a,few_shot,numbered,sadness,"The author describes intense emotional distress, crying, and feeling ""brokenhearted"" due to separation and perceived neglect, which aligns with sadness."
+31015,persona_a,few_shot,inline,**sadness**,"The author describes feeling ""brokenhearted,"" crying, and emotional distress due to separation and perceived abandonment, which aligns with sadness."
+31015,persona_b,zero_shot,numbered,**sadness**,"The author describes feeling ""brokenhearted,"" crying for days, and experiencing emotional distress due to separation and lack of communication, which aligns with sadness."
+31015,persona_b,zero_shot,inline,**sadness**,"The author describes feeling ""brokenhearted,"" crying for days, and experiencing emotional distress due to separation and perceived loss of closeness."
+31015,persona_b,one_shot,numbered,sadness,"The author describes feeling brokenhearted, crying for days, and emotional distress due to separation and lack of timely communication from their partner."
+31015,persona_b,one_shot,inline,**sadness**,"The author describes feeling ""brokenhearted,"" crying for days, and emotional distress due to separation and missed connection with their partner."
+31015,persona_b,few_shot,numbered,sadness,"The author describes feeling ""brokenhearted,"" crying for days, and emotional distress due to separation and lack of communication, which aligns with sadness."
+31015,persona_b,few_shot,inline,**sadness**,"The author describes feeling ""brokenhearted,"" crying for days, and emotional distress due to separation and lack of connection with their partner."
+41228,neutral,zero_shot,numbered,**sadness**,"The author expresses a deep emotional weight and emotional exhaustion (""hopelessness and upset"") tied to the near-loss of someone close, highlighting a sense of sorrow."
+41228,neutral,zero_shot,inline,**sadness**,"The author describes feeling ""hopelessness and upset"" in response to a close brush with loss, indicating deep emotional distress."
+41228,neutral,one_shot,numbered,sadness,"The author expresses deep emotional distress and grief over the near-loss of someone close, highlighting a sense of sorrow and vulnerability."
+41228,neutral,one_shot,inline,**sadness**,"The author expresses deep emotional distress and grief over the near-loss of a loved one, highlighting a sense of helplessness and sorrow."
+41228,neutral,few_shot,numbered,sadness,"The author expresses deep emotional distress and grief over a near-loss of a loved one, highlighting a sense of helplessness and sorrow."
+41228,neutral,few_shot,inline,**sadness**,"The author expresses deep emotional distress and grief over a near-loss of a loved one, highlighting their unresolved sorrow and vulnerability."
+41228,generic_human,zero_shot,numbered,**sadness**,"The author expresses a deep sense of emotional distress and loss (""hopelessness and upset"") upon experiencing a near-loss event."
+41228,generic_human,zero_shot,inline,**sadness**,"The author expresses a deep sense of emotional distress and loss (""hopelessness and upset"") upon experiencing a close brush with loss, even though it was not life-threatening."
+41228,generic_human,one_shot,numbered,sadness,"The author expresses deep emotional distress and a sense of loss, even though the outcome was positive, highlighting their unresolved grief and vulnerability."
+41228,generic_human,one_shot,inline,**sadness**,"The author expresses deep emotional distress and grief over the near-loss of someone close, highlighting a sense of helplessness and sorrow."
+41228,generic_human,few_shot,numbered,sadness,"The author expresses deep emotional distress and grief over a near-loss of a loved one, highlighting a sense of helplessness and sorrow."
+41228,generic_human,few_shot,inline,**sadness**,"The author expresses emotional distress and a sense of loss, even though the outcome was positive, highlighting their unresolved grief and vulnerability."
+41228,persona_a,zero_shot,numbered,**fear**,"The author explicitly states they were ""terrified"" of losing someone close for the first time, indicating their dominant emotion was fear."
+41228,persona_a,zero_shot,inline,**fear**,"The author explicitly states they were ""terrified"" of losing someone close and describes the experience as the ""closest [they] have come,"" reflecting deep anxiety about the possibility of loss."
+41228,persona_a,one_shot,numbered,**fear**,"The author describes a deep terror of losing someone close for the first time, highlighting their overwhelming anxiety about the experience."
+41228,persona_a,one_shot,inline,**fear**,"The author describes a near-loss experience that triggered intense anxiety about losing someone close, highlighting their underlying fear of such an event."
+41228,persona_a,few_shot,numbered,**fear**,"The author describes a near-loss of a loved one as a terrifying experience, highlighting their deep fear of losing someone close."
+41228,persona_a,few_shot,inline,**fear**,"The author describes a near-loss of a loved one as a terrifying experience, highlighting their deep anxiety about mortality and emotional unpreparedness."
+41228,persona_b,zero_shot,numbered,**sadness**,"The author expresses a deep emotional weight and vulnerability tied to grief and the proximity of loss, highlighting a lingering sorrow despite the temporary nature of the ailment."
+41228,persona_b,zero_shot,inline,**sadness**,"The author expresses a deep emotional weight and vulnerability tied to the proximity of loss, highlighting their lingering grief and emotional exhaustion."
+41228,persona_b,one_shot,numbered,sadness,"The author expresses deep emotional distress and grief over the proximity of losing someone close, highlighting their unresolved sorrow and vulnerability."
+41228,persona_b,one_shot,inline,**sadness**,"The author expresses deep emotional distress and grief over the proximity of losing someone close, highlighting unresolved sorrow and vulnerability."
+41228,persona_b,few_shot,numbered,sadness,"The author expresses deep emotional distress and grief over the proximity of losing another loved one, despite the ailment not being life-threatening."
+41228,persona_b,few_shot,inline,**sadness**,"The author expresses deep emotional distress and grief over the proximity of losing another loved one, despite the outcome being positive."

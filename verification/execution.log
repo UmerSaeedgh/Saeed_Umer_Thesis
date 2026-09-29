@@ -1,0 +1,47 @@
+PASS 00_corpus_and_sampling.ipynb cell 1 count 1
+PASS 00_corpus_and_sampling.ipynb cell 3 count 2
+PASS 00_corpus_and_sampling.ipynb cell 4 count 3
+PASS 00_corpus_and_sampling.ipynb cell 7 count 4
+PASS 00_corpus_and_sampling.ipynb cell 9 count 5
+PASS 00_corpus_and_sampling.ipynb cell 11 count 6
+PASS 00_corpus_and_sampling.ipynb cell 14 count 7
+PASS 00_corpus_and_sampling.ipynb cell 16 count 8
+PASS 00_corpus_and_sampling.ipynb cell 18 count 9
+PASS 00_corpus_and_sampling.ipynb cell 20 count 10
+PASS 00_corpus_and_sampling.ipynb cell 21 count 11
+PASS 00_corpus_and_sampling.ipynb cell 23 count 12
+COMPLETE 00_corpus_and_sampling.ipynb 12
+PASS 01_majority_labels_then_vectors.ipynb cell 2 count 1
+PASS 01_majority_labels_then_vectors.ipynb cell 4 count 2
+PASS 01_majority_labels_then_vectors.ipynb cell 6 count 3
+PASS 01_majority_labels_then_vectors.ipynb cell 8 count 4
+PASS 01_majority_labels_then_vectors.ipynb cell 10 count 5
+PASS 01_majority_labels_then_vectors.ipynb cell 12 count 6
+PASS 01_majority_labels_then_vectors.ipynb cell 14 count 7
+PASS 01_majority_labels_then_vectors.ipynb cell 16 count 8
+PASS 01_majority_labels_then_vectors.ipynb cell 18 count 9
+PASS 01_majority_labels_then_vectors.ipynb cell 20 count 10
+PASS 01_majority_labels_then_vectors.ipynb cell 22 count 11
+PASS 01_majority_labels_then_vectors.ipynb cell 25 count 12
+PASS 01_majority_labels_then_vectors.ipynb cell 27 count 13
+PASS 01_majority_labels_then_vectors.ipynb cell 29 count 14
+PASS 01_majority_labels_then_vectors.ipynb cell 31 count 15
+PASS 01_majority_labels_then_vectors.ipynb cell 33 count 16
+PASS 01_majority_labels_then_vectors.ipynb cell 35 count 17
+PASS 01_majority_labels_then_vectors.ipynb cell 37 count 18
+PASS 01_majority_labels_then_vectors.ipynb cell 39 count 19
+COMPLETE 01_majority_labels_then_vectors.ipynb 19
+PASS 02_understanding_distribution_changes.ipynb cell 1 count 1
+PASS 02_understanding_distribution_changes.ipynb cell 3 count 2
+PASS 02_understanding_distribution_changes.ipynb cell 5 count 3
+PASS 02_understanding_distribution_changes.ipynb cell 7 count 4
+PASS 02_understanding_distribution_changes.ipynb cell 9 count 5
+PASS 02_understanding_distribution_changes.ipynb cell 11 count 6
+PASS 02_understanding_distribution_changes.ipynb cell 13 count 7
+PASS 02_understanding_distribution_changes.ipynb cell 15 count 8
+PASS 02_understanding_distribution_changes.ipynb cell 17 count 9
+PASS 02_understanding_distribution_changes.ipynb cell 19 count 10
+PASS 02_understanding_distribution_changes.ipynb cell 21 count 11
+PASS 02_understanding_distribution_changes.ipynb cell 23 count 12
+PASS 02_understanding_distribution_changes.ipynb cell 25 count 13
+COMPLETE 02_understanding_distribution_changes.ipynb 13

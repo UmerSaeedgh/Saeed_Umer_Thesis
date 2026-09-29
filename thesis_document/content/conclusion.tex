@@ -1,0 +1,117 @@
+\chapter{Conclusion}
+\label{c:conclusion}
+
+\noindent
+This thesis explored whether perceived author identity measurably affects the interpretation of
+emotion in ambiguous text, for both humans and large language models, and whether the two respond
+in comparable ways. Author attribution was manipulated experimentally while the textual content
+was held constant. In a first pass, one emotion was selected per condition and the hypotheses were
+tested using that label. A second pass kept all eleven emotion proportions, retested the
+hypotheses, and identified changes that the first pass had missed.
+
+\section{Summary of Findings}
+\label{conc:summary}
+
+\noindent
+Author framing shifts human emotion judgments for author-relevant ambiguous texts, on both persona
+sides, and has no statistically detectable effect on unambiguous control texts. The second result
+fits H1, but it cannot confirm a zero effect or show that the manipulation acted only on author
+information. In the author-independent category one persona contrast is significant and the other
+is not; a direct comparison does not establish different effect sizes.
+
+The model ensemble is sensitive to author framing on both persona sides. All seven models have
+nonzero observed label-change rates, although separate per-model significance tests were not run. No
+prompt-configuration effect was detected, so equivalent effects across formats cannot be claimed.
+A previously unanalysed generic-human control separates this into two steps under matched models:
+adding an unspecified author line alone moves classifications by about 8\% on both sides, and the
+step from there to a specific persona moves them by 16--19\%. These are two separately
+measured distances, not additive components of one total effect.
+
+The predicted ordering across ambiguity categories is present in raw shift magnitude, and all
+three pairwise contrasts survive correction. Referencing each text against its own conditional
+sampling null, however, shows that the shift expected under no effect is itself strongly ordered
+by category. The excess above that conditional-null expectation is small enough that none of the
+contrasts remains significant. The raw ordering agrees with H3's prediction, but evidence for a
+greater \emph{framing-specific} effect in the author-relevant category is inconclusive at this
+sample size.
+
+On human--model alignment, the two components of H4 separate cleanly. Models track the
+\emph{direction} of human shifts better than chance, but only weakly, which is what H4's word
+``partially'' predicts. Humans show much larger shifts in \emph{magnitude}, by roughly 34
+percentage points, and this survives standardising both sides to equal vote counts. A further
+pattern, beyond magnitude, was not anticipated by the original hypotheses. It is reported
+cautiously, since the two sides were not tested against each other directly: under framing, human
+judgments become measurably less in agreement with one another, while the model ensemble shows no statistically
+detectable dispersion effect in any category. Read as separate results rather than a demonstrated
+contrast, they suggest that models redirect probability mass while human group judgments also
+become more dispersed.
+
+Two findings are reported as negative or near-negative results. Under multiple-comparison
+correction, almost none of the individual per-emotion shifts remain significant: of 66 tests
+spanning both sources, only one human effect (a gain in guilt on author-independent texts) and six
+model effects survive, and the model effects form a coherent pattern of moving away from
+\emph{joy} towards more specific positive emotions (\emph{pride}, \emph{relief}) rather than towards
+threat-related ones. The exploratory comparison found no effect of prompt configuration on
+framing-effect magnitude. One further result was unplanned: most of H1's support depends on the
+choice of representation. The identical permutation test applied to the selected label rather than
+the vote vector rejects the null in one of its six cases under a reverse-alphabetical tie-break
+convention, and none under the alphabetical convention used throughout this thesis (only these two
+otherwise-arbitrary conventions were tested). A majority-label version of this same study would
+have detected a statistically significant human framing effect in one of those six tests at best,
+or none under this thesis's own convention.
+
+\section{Contribution}
+\label{conc:contribution}
+
+\noindent
+Substantively, the thesis offers evidence of a real and measurable influence of perceived
+authorship on the interpretation of emotion by both humans and language models. It adds a control
+condition that isolates persona content from author presence, and it compares the two sides
+directly under one design.
+
+The methodological contribution may reach further still. Whether judgments are represented as
+distributions or as labels is not a cosmetic difference; it determines whether the phenomenon can
+be observed at all. A selected-label analysis of these same data would have recorded 38.7\% of
+human and 41.4\% of model comparisons as showing no change when the distribution demonstrably
+moved (under the alphabetical tie-break convention; crediting the label method for tracking the
+complete set of tied top emotions instead lowers these to 25.8\% for humans and 38.7\% for models):
+for models, more than twice the comparisons it would have detected, and for humans nearly
+three-quarters as many as it would have detected. Even more directly, the same label-based
+treatment finds \emph{no} significant human framing effect under the alphabetical tie-break
+convention used as the primary analysis, and one of six under the reverse-alphabetical convention
+also tested, where the distributional treatment finds three of six. Any study asking whether some
+manipulation shifts subjective interpretation is exposed to this, and how large the blind spot is
+only becomes clear once it is measured.
+
+A second methodological result reaches just as far. Distributional distance between small vote
+samples is not zero when there is no effect, and it scales with the dispersion of the underlying
+distribution. Any ambiguity-defined grouping compares distances across groups that differ
+systematically in dispersion, which confounds the effect of interest with the measurement's own
+noise floor. An explicit per-item sampling null makes this visible, and in this study it changed
+what could be concluded from H3.
+
+\section{Closing Remarks}
+\label{conc:closing}
+
+\noindent
+This thesis set out to challenge a widespread practice: collapsing multiple human judgments into
+one gold label and treating the residue as noise \cite{Basile2020GoldStandard,
+Aroyo2015CrowdTruth}. The practice is convenient and entrenched, but for a substantial fraction of
+texts it is simply not well defined. Among the sampled texts (a sample stratified towards ambiguous
+categories, not a corpus-wide rate), one text in five has no emotion commanding a majority of
+readers, and 13.3\% have no unique most-popular answer at all. For the texts with tied top
+choices, a pipeline reporting a single label depends on a tie-break; for texts with a unique
+plurality but no majority, that label still conceals the disagreement.
+
+The distributional view shows that the disagreement being thrown away is not simply noise. Its
+overall magnitude and direction shift detectably when readers are told something about who wrote
+the text, in humans and models alike, and the two share that shift weakly but measurably. The
+claim concerns the aggregate shift, not every per-emotion pattern or category ordering examined
+along the way; several of those remain inconclusive at this sample size. Emotion recognition
+systems evaluated only against majority labels are scored on a target that discards variation this
+thesis has shown to be both structured and responsive to context.
+
+Should models reproduce human interpretive uncertainty, or is it enough that they give human-like
+answers? That is a design question, not an empirical one. It cannot even be asked, though, while
+the evaluation target is a single label, and the results reported here suggest that humans and
+models differ in ways that matter.

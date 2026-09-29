@@ -1,0 +1,122 @@
+[
+  {
+    "check": "Human grid: 300 texts \u00d7 2 personas",
+    "passed": true
+  },
+  {
+    "check": "Model grid: 300 texts \u00d7 2 personas \u00d7 6 configurations",
+    "passed": true
+  },
+  {
+    "check": "Matched raw model pair counts",
+    "passed": true
+  },
+  {
+    "check": "Original votes retain the documented 27 off-inventory exclusions",
+    "passed": true
+  },
+  {
+    "check": "All comparison probabilities normalised",
+    "passed": true
+  },
+  {
+    "check": "All delta vectors sum to zero",
+    "passed": true
+  },
+  {
+    "check": "TV equals positive moved mass",
+    "passed": true
+  },
+  {
+    "check": "All model comparisons have equal counts on both sides",
+    "passed": true
+  },
+  {
+    "check": "Five event outcomes partition each source",
+    "passed": true
+  },
+  {
+    "check": "Strict hidden proportion changes are a subset of same-support changes",
+    "passed": true
+  },
+  {
+    "check": "Complete-top-set hidden changes also hide under the fixed selected label",
+    "passed": true
+  },
+  {
+    "check": "Original human proportion-only count reconstructed",
+    "passed": true
+  },
+  {
+    "check": "Common-model proportion-only count reconstructed",
+    "passed": true
+  },
+  {
+    "check": "One label flip can occur without any support change",
+    "passed": true
+  },
+  {
+    "check": "Stable winner and support can conceal a share change",
+    "passed": true
+  },
+  {
+    "check": "Disjoint supports have TV one and both appearance and disappearance",
+    "passed": true
+  },
+  {
+    "check": "All 20 human allocations included for 3+3 votes",
+    "passed": true
+  },
+  {
+    "check": "Balanced pooled toy: exact mean TV is 0.4",
+    "passed": true
+  },
+  {
+    "check": "Balanced odd-sized groups can always have different selected labels under null",
+    "passed": true
+  },
+  {
+    "check": "One discordant model gives constant swap-null TV",
+    "passed": true
+  },
+  {
+    "check": "Concordant majority can remain fixed despite a changed model",
+    "passed": true
+  },
+  {
+    "check": "00_corpus_and_sampling.ipynb: sequential completed execution",
+    "passed": true
+  },
+  {
+    "check": "00_corpus_and_sampling.ipynb: no stored errors",
+    "passed": true
+  },
+  {
+    "check": "00_corpus_and_sampling.ipynb: all cells executed in this method",
+    "passed": true
+  },
+  {
+    "check": "01_majority_labels_then_vectors.ipynb: sequential completed execution",
+    "passed": true
+  },
+  {
+    "check": "01_majority_labels_then_vectors.ipynb: no stored errors",
+    "passed": true
+  },
+  {
+    "check": "01_majority_labels_then_vectors.ipynb: all cells executed in this method",
+    "passed": true
+  },
+  {
+    "check": "02_understanding_distribution_changes.ipynb: sequential completed execution",
+    "passed": true
+  },
+  {
+    "check": "02_understanding_distribution_changes.ipynb: no stored errors",
+    "passed": true
+  },
+  {
+    "check": "02_understanding_distribution_changes.ipynb: all cells executed in this method",
+    "passed": true
+  }
+]

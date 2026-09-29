@@ -1,0 +1,2 @@
+n_texts,n_defined_cosine,mean_cosine_observed,permutation_null_mean,permutation_null_std,permutation_p_value
+300,251,0.12688538464606863,0.009413340773378813,0.02111626634242709,9.999000099990002e-05

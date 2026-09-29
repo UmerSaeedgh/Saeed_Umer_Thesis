@@ -1,0 +1,43 @@
+% List of Abbreviations, authored directly as a longtable rather than generated via the
+% nomencl package: nomencl's \printnomenclature requires an external `makeindex -s
+% nomencl.ist` pass between LaTeX runs to turn document.nlo into document.nls, and no
+% environment used to build this thesis (a standalone Tectonic engine, with no makeindex
+% binary available) can run that pass. That silently left this section EMPTY in every
+% compiled PDF produced this way, with no error -- caught only by explicitly searching the
+% rendered text for "Abbreviation" and finding no match. Authoring the table directly removes
+% the dependency on an external tool entirely, so the section renders identically regardless
+% of which LaTeX toolchain compiles the document.
+\chapter*{List of Abbreviations}
+
+\begin{longtable}{@{}p{.20\hsize} p{.75\hsize}@{}}
+\textbf{$\rho$} & Spearman's rank correlation coefficient \\[6pt]
+\textbf{$\kappa$} & Fleiss' kappa, the inter-annotator agreement statistic used in Section~\ref{res:agreement} \\[6pt]
+\textbf{AI} & Artificial Intelligence \\[6pt]
+\textbf{API} & Application Programming Interface \\[6pt]
+\textbf{BH-FDR} & Benjamini--Hochberg False Discovery Rate correction; used for exploratory test families \\[6pt]
+\textbf{CI} & Confidence Interval \\[6pt]
+\textbf{Clustered bootstrap} & Bootstrap resampling texts rather than rows, so that repeated observations of the same text are not treated as independent \\[6pt]
+\textbf{Cosine similarity} & Angle-based similarity between two delta vectors, used to compare shift direction \\[6pt]
+\textbf{crowd-enVent} & Corpus of self-reported emotional events with author and reader annotations (Troiano et al., 2023) \\[6pt]
+\textbf{Delta vector} & Signed difference between a persona-condition vector and its neutral-condition vector \\[6pt]
+\textbf{Dominant set} & The set of emotions attaining the maximum probability in a vector; a set rather than a single label because ties are frequent \\[6pt]
+\textbf{Excess TV} & Observed TV minus the TV expected for that text under its own conditional sampling null \\[6pt]
+\textbf{Few-shot} & Prompt variant providing several worked examples \\[6pt]
+\textbf{Generic human} & Framing condition attributing the text to an unspecified human author \\[6pt]
+\textbf{H1--H4} & The four research hypotheses stated in Section~\ref{meth:hypotheses} \\[6pt]
+\textbf{Holm} & Holm correction for multiple comparisons, controlling the family-wise error rate; used for confirmatory tests \\[6pt]
+\textbf{LLM} & Large Language Model \\[6pt]
+\textbf{Neutral} & Framing condition in which no author information is supplied \\[6pt]
+\textbf{Numbered / inline} & The two label-presentation formats: emotions as a numbered list, or embedded in the question text \\[6pt]
+\textbf{One-shot} & Prompt variant providing a single worked example \\[6pt]
+\textbf{Paired sign-flip} & Permutation null in which each model's own two answers are swapped with probability one half, holding model identity fixed \\[6pt]
+\textbf{Permutation test} & Significance test comparing an observed statistic against a null built by relabelling the observed data \\[6pt]
+\textbf{Persona A / B} & The two contrasting author personas assigned to each text \\[6pt]
+\textbf{pp} & Percentage points \\[6pt]
+\textbf{Pseudo\-repli\-cation} & Treating repeated, correlated observations of the same unit as independent observations \\[6pt]
+\textbf{QC} & Quality Control \\[6pt]
+\textbf{RQ} & Research Question \\[6pt]
+\textbf{Support size} & Number of emotions receiving non-zero probability mass \\[6pt]
+\textbf{TV} & Total Variation distance, $\tfrac{1}{2}\sum_i |p_i - q_i|$; the share of probability mass separating two distributions \\[6pt]
+\textbf{Zero-shot} & Prompt variant providing no worked example \\[6pt]
+\end{longtable}

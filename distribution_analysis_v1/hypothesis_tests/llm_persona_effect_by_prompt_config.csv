@@ -1,0 +1,22 @@
+pool_key,category,prompt_variant,label_format,n,mean_tv,median_tv
+unambiguous,Unambiguous,few_shot,inline,200,0.10704761904761904,0.0
+unambiguous,Unambiguous,few_shot,numbered,200,0.10980952380952382,0.0
+unambiguous,Unambiguous,one_shot,inline,200,0.11285714285714285,0.0
+unambiguous,Unambiguous,one_shot,numbered,200,0.11478571428571428,0.0
+unambiguous,Unambiguous,zero_shot,inline,200,0.11416666666666664,0.0
+unambiguous,Unambiguous,zero_shot,numbered,200,0.1214285714285714,0.0
+unambiguous,Unambiguous,ALL_CONFIGS_SECONDARY,llm_mean_persona_sensitivity_across_configs,6,0.11334920634920635,
+author_independent,Author-Independent Ambiguous,few_shot,inline,200,0.15932142857142853,0.1428571428571428
+author_independent,Author-Independent Ambiguous,few_shot,numbered,200,0.1524285714285714,0.1428571428571428
+author_independent,Author-Independent Ambiguous,one_shot,inline,200,0.1537380952380952,0.1428571428571428
+author_independent,Author-Independent Ambiguous,one_shot,numbered,200,0.14947619047619043,0.1428571428571428
+author_independent,Author-Independent Ambiguous,zero_shot,inline,200,0.13769047619047614,0.1428571428571428
+author_independent,Author-Independent Ambiguous,zero_shot,numbered,200,0.15280952380952376,0.1428571428571428
+author_independent,Author-Independent Ambiguous,ALL_CONFIGS_SECONDARY,llm_mean_persona_sensitivity_across_configs,6,0.15091071428571426,
+author_relevant,Author-Relevant Ambiguous,few_shot,inline,200,0.29783333333333334,0.2857142857142857
+author_relevant,Author-Relevant Ambiguous,few_shot,numbered,200,0.2785714285714285,0.2857142857142857
+author_relevant,Author-Relevant Ambiguous,one_shot,inline,200,0.2830357142857142,0.219047619047619
+author_relevant,Author-Relevant Ambiguous,one_shot,numbered,200,0.2831428571428571,0.2857142857142857
+author_relevant,Author-Relevant Ambiguous,zero_shot,inline,200,0.2991904761904761,0.23809523809523805
+author_relevant,Author-Relevant Ambiguous,zero_shot,numbered,200,0.30380952380952375,0.2857142857142857
+author_relevant,Author-Relevant Ambiguous,ALL_CONFIGS_SECONDARY,llm_mean_persona_sensitivity_across_configs,6,0.2909305555555555,

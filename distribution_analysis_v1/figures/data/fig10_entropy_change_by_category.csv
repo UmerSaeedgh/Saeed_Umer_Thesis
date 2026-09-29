@@ -1,0 +1,7 @@
+source,category,n,mean_entropy_change,direction,wilcoxon_p_raw,p_bh_fdr
+human,Unambiguous,100,0.1984458071925048,more dispersed (entropy up),4.1889862459836185e-05,0.0002061406628301
+human,Author-Independent Ambiguous,100,0.1713949977500318,more dispersed (entropy up),6.871355427672588e-05,0.0002061406628301
+human,Author-Relevant Ambiguous,100,0.1609707950809586,more dispersed (entropy up),0.0015104375771421,0.0030208751542842
+llm,Unambiguous,100,0.0286995425122191,more dispersed (entropy up),0.1395461934213174,0.2093192901319761
+llm,Author-Independent Ambiguous,100,0.0120318784679709,more dispersed (entropy up),0.2173120872207569,0.2607745046649082
+llm,Author-Relevant Ambiguous,100,0.0189269157210817,more dispersed (entropy up),0.3669290747802467,0.3669290747802467

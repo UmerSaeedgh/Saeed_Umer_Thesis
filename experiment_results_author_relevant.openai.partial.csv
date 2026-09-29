@@ -1,0 +1,985 @@
+text_id,framing_condition,prompt_variant,label_format,label,reason
+378,neutral,zero_shot,numbered,anger,The author is reacting with anger to their mom's wrong and immature behavior and the gaslighting.
+378,neutral,zero_shot,inline,anger,The author expresses disapproval and frustration toward their mom's immature behavior and manipulation.
+378,neutral,one_shot,numbered,anger,The author reacts with anger to their mom's immature behavior and gaslighting.
+378,neutral,few_shot,numbered,anger,The text conveys a response of anger to the mom's immature behavior and her gaslighting manipulation.
+378,neutral,few_shot,inline,anger,The author reacts to their mother's wrong and immature behavior and the gaslighting with anger.
+378,generic_human,zero_shot,numbered,anger,"They describe feeling upset and frustrated by their mom's immature behavior and the gaslighting, indicating anger."
+378,neutral,one_shot,inline,anger,"The speaker is frustrated and upset by their mother's immature behavior and gaslighting, indicating anger."
+378,generic_human,one_shot,numbered,anger,"The author describes a situation of confrontation and manipulation by a parent, which typically elicits anger."
+378,generic_human,zero_shot,inline,anger,"The speaker shows a strong reaction to the mother's wrong and immature behavior and the gaslighting, indicating anger."
+378,generic_human,few_shot,numbered,anger,The author is reacting to their mom's immature behavior and gaslighting with anger toward her actions.
+378,generic_human,one_shot,inline,anger,The text expresses anger at the mother's immature behavior and the experience of being gaslit.
+378,persona_a,zero_shot,numbered,anger,"The author describes the mom's wrong and immature behavior and being gaslit, which commonly provokes anger."
+378,generic_human,few_shot,inline,anger,The author describes frustration and resentment toward the mom’s immature behavior and manipulation (gaslighting).
+378,persona_a,zero_shot,inline,anger,The author feels anger toward the mom's wrong and immature behavior and her gaslighting.
+378,persona_a,one_shot,numbered,anger,"The text conveys frustration and opposition to the mother's immature behavior and gaslighting, indicating anger as the primary emotion."
+378,persona_a,one_shot,inline,anger,The author expresses frustration and anger toward the mother’s immature behavior and gaslighting.
+378,persona_b,zero_shot,numbered,anger,"They describe the mom's wrong and immature behavior and being gaslighted, which typically elicits anger."
+378,persona_a,few_shot,inline,anger,"The narrator expresses frustration and hostility toward their mother's repeated immature behavior and gaslighting, indicating anger as the primary emotion."
+378,persona_a,few_shot,numbered,anger,The text centers on frustration and hostility toward the mother's immature behavior and the experience of being gaslit.
+378,persona_b,zero_shot,inline,anger,"The author describes reacting to their mother's immature behavior and being gaslit, indicating anger toward her actions."
+378,persona_b,one_shot,numbered,anger,"The text describes the mother's immature behavior and gaslighting, signaling anger toward her actions."
+441,neutral,zero_shot,numbered,sadness,"The cheating caused hurt and sorrow for the speaker, which corresponds to sadness."
+378,persona_b,one_shot,inline,anger,"The speaker condemns the mother's immature behavior and describes being gaslit, indicating anger."
+378,persona_b,few_shot,numbered,anger,The text describes reacting to the mother's immature behavior and gaslighting with anger.
+378,persona_b,few_shot,inline,anger,The author expresses anger toward their mother's immature behavior and the gaslighting manipulation.
+441,neutral,zero_shot,inline,sadness,The betrayal by her boyfriend and the resulting hurt indicate she feels sadness.
+441,neutral,one_shot,numbered,sadness,"The betrayal by a partner typically causes emotional pain and sadness, reflecting a sense of loss and disappointment."
+441,neutral,one_shot,inline,sadness,Being cheated on by a boyfriend typically triggers sadness due to hurt and heartbreak.
+441,neutral,few_shot,numbered,sadness,The cheating by the boyfriend caused the author to feel sadness due to heartbreak and betrayal.
+441,generic_human,zero_shot,inline,sadness,The betrayal by her boyfriend caused them to feel hurt and sad.
+441,generic_human,zero_shot,numbered,sadness,The betrayal of her boyfriend cheating on her led to sadness.
+441,generic_human,one_shot,numbered,sadness,"The betrayal by a partner typically causes sadness and hurt, which fits the author's implied feeling."
+441,neutral,few_shot,inline,sadness,"The betrayal by her boyfriend caused sorrow and hurt, indicating sadness."
+441,generic_human,few_shot,numbered,sadness,"The author expresses emotional pain from their boyfriend's cheating, indicating sadness."
+441,generic_human,one_shot,inline,sadness,The betrayal of the boyfriend cheating on them would most likely evoke sadness and heartbreak.
+441,generic_human,few_shot,inline,sadness,"The statement centers on emotional pain after a partner's betrayal, indicating sadness."
+441,persona_a,zero_shot,numbered,surprise,"The author was blindsided by the discovery of infidelity, indicating surprise."
+441,persona_a,zero_shot,inline,surprise,"She was blindsided by the discovery of her partner's cheating, which signals surprise."
+441,persona_a,one_shot,numbered,surprise,"The author is blindsided by the cheating, which signals surprise."
+441,persona_a,one_shot,inline,surprise,"The author was blindsided by the discovery of infidelity, indicating a sudden sense of surprise at the betrayal."
+441,persona_a,few_shot,numbered,sadness,"The author describes heartbreak and emotional hurt after discovering a partner's infidelity, which aligns with sadness."
+441,persona_b,zero_shot,numbered,sadness,The confirmation of betrayal from infidelity typically causes sadness and emotional hurt.
+441,persona_a,few_shot,inline,surprise,"She is blindsided by discovering the infidelity, indicating she felt surprise."
+441,persona_b,zero_shot,inline,sadness,The confirmed betrayal by her boyfriend caused her to feel sorrow and heartbreak.
+441,persona_b,one_shot,numbered,sadness,The confirmation of her partner's cheating triggered sadness from the loss of trust and the relationship.
+441,persona_b,few_shot,numbered,sadness,She experiences emotional pain and heartbreak after confirming his infidelity.
+441,persona_b,one_shot,inline,sadness,"She feels sad and hurt after discovering her boyfriend cheated, reflecting sadness from betrayal."
+441,persona_b,few_shot,inline,sadness,The author experiences heartbreak and emotional pain after confirming her boyfriend's infidelity.
+6337,neutral,zero_shot,numbered,fear,"An in-person Halloween experience is commonly associated with fear or fright, which fits the implied emotion in the sentence."
+6337,neutral,zero_shot,inline,fear,"In-person Halloween experiences are typically scary, which would evoke fear."
+6337,neutral,one_shot,inline,fear,The in-person Halloween experience likely elicited fear due to its scary or unsettling nature.
+6337,neutral,one_shot,numbered,fear,The incomplete sentence about an in-person Halloween experience implies the emotion of fear in a context commonly associated with scary events.
+6337,neutral,few_shot,numbered,fear,The mention of an in-person Halloween experience suggests the author felt fear.
+6337,generic_human,zero_shot,numbered,fear,"The Halloween in-person experience is commonly associated with fear, which fits the context of the sentence."
+6337,generic_human,zero_shot,inline,fear,"Halloween immersive experiences are typically designed to provoke fear, so the emotion is fear."
+6337,generic_human,one_shot,numbered,fear,The context of an in-person Halloween experience suggests the author felt scared.
+6337,neutral,few_shot,inline,fear,The Halloween in-person experience implies a scary or startling context that would trigger fear.
+6337,generic_human,few_shot,numbered,fear,"The in-person Halloween experience is commonly associated with fear, which is the emotion the author likely felt."
+6337,generic_human,one_shot,inline,fear,The reference to an in-person Halloween experience suggests the author felt fear.
+6337,generic_human,few_shot,inline,surprise,"The sentence hints at an unexpected reaction to attending an in-person Halloween experience, which aligns with surprise."
+6337,persona_a,zero_shot,numbered,joy,"The author is described as a horror fan who loves haunted house experiences, implying a positive, joyful feeling about attending one."
+6337,persona_a,zero_shot,inline,joy,"The author is described as a horror fan who loves haunted house experiences, suggesting they felt joy about attending the in-person Halloween experience."
+6337,persona_a,one_shot,numbered,joy,"The author is described as a horror fan who loves haunted house experiences, so attending a Halloween haunted house would evoke positive excitement and joy."
+6337,persona_a,few_shot,inline,joy,"As a horror fan who loves haunted house experiences, the author likely felt joy during the in-person Halloween experience."
+6337,persona_a,one_shot,inline,joy,"The author is described as a horror fan who loves haunted house experiences, which suggests they felt joyful about the in-person Halloween event."
+6337,persona_b,zero_shot,numbered,fear,"They were dragged to a scary Halloween experience despite hating being scared, indicating they felt fear."
+6337,persona_a,few_shot,numbered,joy,"As a horror fan who loves haunted house experiences, going to an in-person Halloween experience would naturally evoke positive feelings like joy."
+6337,persona_b,one_shot,inline,fear,"The author hates being scared and was dragged to a scary Halloween experience, which would evoke fear."
+6337,persona_b,zero_shot,inline,fear,"The author was drafted into a scary in-person Halloween experience, which suggests they felt fear."
+6337,persona_b,few_shot,inline,fear,"The author was dragged to a scary Halloween experience, which triggers fear."
+6337,persona_b,one_shot,numbered,fear,"The in-person Halloween experience is inherently scary, and being dragged along by friends who hate being scared suggests the author felt fear."
+6337,persona_b,few_shot,numbered,fear,"The author describes being dragged to a scary Halloween experience by friends while they hate being scared, which aligns with feeling fear."
+51081,neutral,zero_shot,numbered,guilt,Fighting with friends often makes someone feel guilty for hurting them.
+51081,neutral,zero_shot,inline,guilt,"The narrator implies remorse after fighting with friends, suggesting guilt."
+51081,neutral,one_shot,numbered,guilt,"The phrase implies remorse for the conflict with friends, indicating guilt."
+51081,neutral,few_shot,numbered,guilt,The conflict with friends suggests the author feels remorse or responsibility for the situation.
+51081,generic_human,zero_shot,numbered,guilt,"The conflict with friends suggests remorse and a sense of responsibility, i.e., guilt."
+51081,neutral,few_shot,inline,guilt,"Fighting with friends often leads to remorse for hurting them, which aligns with guilt."
+51081,neutral,one_shot,inline,guilt,Failing to get along with friends often evokes guilt for upsetting them.
+51081,generic_human,zero_shot,inline,guilt,Fighting with friends often leads to feeling guilty for hurting or upsetting them.
+51081,generic_human,few_shot,numbered,guilt,"Fighting with friends often leads to remorse for causing conflict, i.e., guilt."
+51081,generic_human,one_shot,inline,guilt,"The conflict with friends often triggers guilt or remorse for hurting them, so guilt is the most plausible emotion here."
+51081,generic_human,one_shot,numbered,anger,The context of fighting with friends suggests the emotion of anger.
+51081,persona_a,zero_shot,numbered,guilt,"The author started the fight with friends over something trivial, which likely made them feel guilty about their actions."
+51081,generic_human,few_shot,inline,guilt,"The situation implies remorse and self-blame after a conflict with friends, which aligns with guilt."
+51081,persona_a,zero_shot,inline,guilt,The author started the fight over something trivial and felt guilt for causing harm to their friends.
+51081,persona_a,one_shot,inline,guilt,"The author admits to starting a fight over something trivial, which would commonly evoke guilt for causing the conflict."
+51081,persona_a,one_shot,numbered,guilt,"The author started a petty fight with friends, which commonly evokes guilt for causing the conflict."
+51081,persona_a,few_shot,numbered,guilt,"The author started a fight over something trivial, which would commonly evoke guilt for causing conflict."
+51081,persona_a,few_shot,inline,guilt,"The author started a fight over something trivial, which would commonly evoke guilt for causing conflict with friends."
+51081,persona_b,one_shot,numbered,anger,Defending themselves against unfair accusations implies they felt anger during the conflict.
+51081,persona_b,zero_shot,numbered,anger,"They were defending themselves against unfair accusations from friends, indicating anger toward the situation."
+51081,persona_b,few_shot,numbered,anger,"The author was defending themselves against unfair accusations from friends during a fight, which most clearly signals anger."
+51081,persona_b,one_shot,inline,anger,"The author describes a conflict with friends while defending themselves against unfair accusations, which most clearly signals anger."
+51081,persona_b,zero_shot,inline,anger,Defending oneself in a confrontation over unfair accusations with friends most commonly involves feeling anger.
+51081,persona_b,few_shot,inline,anger,Defending themselves against unfair accusations typically involves anger toward the situation or the accusers.
+2168,neutral,zero_shot,inline,anger,The act of arguing with a friend most often evokes anger in the speaker.
+2168,neutral,zero_shot,numbered,anger,"Arguing with a friend commonly elicits anger, making it the most plausible inferred emotion."
+2168,neutral,one_shot,numbered,anger,"Arguing with a friend typically triggers anger, a common response to conflict."
+2168,neutral,one_shot,inline,anger,"The phrase implies a strong negative emotion during an argument, which is most commonly anger."
+2168,neutral,few_shot,inline,anger,"Arguing with a friend is commonly associated with anger, which is the most likely emotion conveyed."
+2168,neutral,few_shot,numbered,anger,The act of arguing with a friend typically triggers anger due to conflict and rising tension.
+2168,generic_human,zero_shot,inline,anger,"The statement references an argument with a friend, a situation that commonly elicits anger."
+2168,generic_human,zero_shot,numbered,anger,"Arguing with a friend typically elicits anger, which matches the context."
+2168,generic_human,one_shot,numbered,anger,"Arguing with a friend commonly triggers anger, so that fits the context."
+2168,persona_a,zero_shot,numbered,sadness,"The author is distressed by a long-standing friendship falling apart, indicating sadness."
+2168,generic_human,few_shot,numbered,anger,Arguing with a friend often evokes anger due to conflict and heated emotions.
+2168,generic_human,few_shot,inline,anger,"Arguing with a friend typically triggers anger, a negative emotion likely felt in this situation."
+2168,generic_human,one_shot,inline,anger,The context of arguing with a friend implies an emotional response commonly associated with anger.
+2168,persona_a,zero_shot,inline,sadness,The sense of a long-standing friendship breaking apart during an argument points to sadness about the relationship's deterioration.
+2168,persona_a,one_shot,inline,sadness,"The author’s closest, oldest friendship is falling apart, which evokes sadness during an argument."
+2168,persona_a,one_shot,numbered,sadness,The destruction of a longtime friendship and the conflict implied by arguing suggest the author feels sadness about the relationship breaking apart.
+2168,persona_a,few_shot,numbered,sadness,"The deteriorating, long-term friendship described would typically evoke sadness."
+2168,persona_a,few_shot,inline,sadness,The context of a longtime friendship falling apart suggests emotional pain and sorrow.
+2168,persona_b,zero_shot,numbered,anger,"The text centers on arguing with a friend and mentions being quick to anger, indicating the author felt anger."
+2168,persona_b,one_shot,numbered,anger,"They felt anger while arguing with a friend, consistent with being quick to anger."
+2168,persona_b,few_shot,numbered,anger,"The author, described as quick to anger, felt anger during an argument with a friend."
+2168,persona_b,zero_shot,inline,anger,"The author describes being in an argument and their quick temper, indicating they felt anger."
+2168,persona_b,one_shot,inline,anger,"The statement implies the author felt anger during an argument, aligning with their quick-to-anger temperament."
+2168,persona_b,few_shot,inline,anger,"The line suggests the author felt a strong negative emotion during an argument, aligning with being quick to anger."
+2187,neutral,zero_shot,numbered,guilt,The narrator expresses regret about losing their temper and letting their emotions get the best of them.
+2187,neutral,zero_shot,inline,guilt,The speaker expresses remorse for losing their temper and acknowledges letting their emotions get the best of them.
+2187,neutral,one_shot,inline,guilt,"They describe losing their temper and feeling they let their emotions get the best of them, indicating remorse for their outburst."
+2187,neutral,few_shot,numbered,guilt,The narrator expresses remorse for losing their temper and acknowledges letting their emotions get the best of them.
+2187,neutral,one_shot,numbered,guilt,They express remorse for their outburst and acknowledge that they let their emotions get the best of them.
+2187,neutral,few_shot,inline,guilt,"The speaker acknowledges losing their temper and admits that they let their emotions get the best of them, indicating guilt over their behavior."
+2187,generic_human,zero_shot,numbered,guilt,They acknowledge that they let their emotions get the best of them and feel guilty about losing their temper.
+2187,generic_human,zero_shot,inline,guilt,"The narrator recalls losing their temper and expresses regret that their emotions got the best of them, indicating guilt."
+2187,generic_human,one_shot,numbered,anger,"The narrator describes losing their temper, yelling, and slamming doors, signaling anger."
+2187,generic_human,one_shot,inline,guilt,"The narrator acknowledges losing their temper and feels remorse for letting their emotions take over, indicating guilt."
+2187,generic_human,few_shot,inline,guilt,The author expresses remorse for losing their temper and letting emotions get the best of them.
+2187,persona_a,zero_shot,inline,guilt,"The speaker expresses remorse for losing temper and acknowledges their emotions got the best of them, indicating guilt."
+2187,generic_human,few_shot,numbered,guilt,"The author acknowledges losing their temper and feeling they acted badly because of their emotions, indicating guilt about the behavior."
+2187,persona_a,zero_shot,numbered,guilt,"The text shows the author acknowledging a lapse in self-control and feeling they let their emotions get the best of them, indicating guilt over their behavior."
+2187,persona_a,one_shot,numbered,guilt,The speaker expresses remorse for losing their temper and letting emotions get the best of them.
+2187,persona_a,one_shot,inline,anger,"The speaker describes losing their temper, yelling, and slamming doors, indicating anger."
+2187,persona_a,few_shot,numbered,guilt,The speaker expresses remorse for losing their temper and letting emotions get the best of them.
+2187,persona_a,few_shot,inline,guilt,"The speaker admits losing their temper and feeling remorse for letting emotions get the best of them, indicating guilt."
+2187,persona_b,zero_shot,inline,guilt,They express feeling guilty about letting their emotions get the best of them after losing their temper.
+2187,persona_b,one_shot,numbered,anger,"The narrator describes losing their temper, yelling, and feeling that their emotions got the best of them, indicating anger."
+2187,persona_b,zero_shot,numbered,guilt,The author expresses remorse for losing their temper and acknowledges that their emotions got the best of them.
+2187,persona_b,few_shot,numbered,guilt,"The narrator acknowledges losing their temper and expresses that they let their emotions get the best of them, indicating guilt over the outburst."
+2182,neutral,zero_shot,numbered,sadness,"The author describes being bullied and mocked, which conveys sadness and emotional pain."
+2187,persona_b,one_shot,inline,guilt,The author expresses regret about losing their temper and letting emotions take over.
+2182,neutral,one_shot,numbered,shame,"The author describes being bullied and ridiculed, which commonly triggers shame due to social embarrassment and devaluation."
+2182,neutral,zero_shot,inline,sadness,"The narrator describes being bullied and teased, which is commonly associated with sadness."
+2187,persona_b,few_shot,inline,guilt,"The narrator acknowledges losing their temper and expresses remorse about letting their emotions take over, indicating guilt about the outburst."
+2182,neutral,few_shot,numbered,shame,"The author describes being bullied and ridiculed, which commonly evokes a feeling of shame."
+2182,generic_human,zero_shot,numbered,shame,Being bullied and ridiculed by others typically leads to feeling ashamed about oneself.
+2182,neutral,few_shot,inline,shame,"The author describes being bullied and ridiculed, which commonly triggers a feeling of shame."
+2182,neutral,one_shot,inline,sadness,The experience of being bullied and mocked typically evokes sadness in the speaker.
+2182,generic_human,zero_shot,inline,sadness,"The author describes being bullied and ridiculed, which commonly causes sadness due to emotional pain."
+2182,generic_human,one_shot,numbered,shame,"The author describes being bullied and ridiculed, which typically triggers a feeling of shame from social humiliation."
+2182,generic_human,few_shot,numbered,sadness,"The author describes being bullied and mocked, an experience that typically evokes sadness."
+2182,generic_human,few_shot,inline,sadness,"The author describes being bullied and ridiculed, which typically triggers sadness."
+2182,generic_human,one_shot,inline,shame,"The author describes being bullied and ridiculed, a situation that would trigger feelings of shame."
+2182,persona_a,one_shot,numbered,sadness,"The description of being bullied and mocked suggests the author felt emotional hurt and distress, i.e., sadness."
+2182,persona_a,zero_shot,inline,sadness,"The author describes being bullied and ridiculed, which clearly reflects sadness and emotional pain."
+2182,persona_a,one_shot,inline,sadness,"The author describes being bullied and mocked, a situation that typically triggers sadness, especially when targeted for something out of their control."
+2182,persona_a,zero_shot,numbered,sadness,"The text describes being bullied and mocked, which typically causes sadness and emotional hurt."
+2182,persona_a,few_shot,numbered,shame,"The author is described as being targeted for an uncontrollable trait, which commonly triggers feelings of humiliation and shame."
+2182,persona_a,few_shot,inline,sadness,"The author describes being bullied and ridiculed for something out of their control, which typically evokes sadness."
+2182,persona_b,one_shot,inline,shame,"The author recalls being bullied and publicly mocked by colleagues they trusted, which evokes shame."
+2182,persona_b,zero_shot,numbered,sadness,"The author describes being bullied and mocked, which conveys a feeling of sadness from the painful experience."
+2182,persona_b,one_shot,numbered,shame,"Being bullied and mocked by coworkers led to humiliation and a sense of social embarrassment, signaling shame."
+2182,persona_b,zero_shot,inline,shame,The experience of bullying and being ridiculed by people who were supposed to be friends suggests a feeling of humiliation and shame.
+2182,persona_b,few_shot,numbered,sadness,"Being bullied and mocked by colleagues, especially those once trusted as friends, commonly triggers sadness due to the hurt and sense of betrayal."
+5609,neutral,zero_shot,inline,fear,The narrator describes being anxious and fearing that they might faint during the blood draw.
+2182,persona_b,few_shot,inline,sadness,"The author describes being bullied and mocked by people they trusted, a situation that typically evokes sadness."
+5609,neutral,zero_shot,numbered,fear,"They describe feeling anxious and worried about the blood draw, fearing they might faint."
+5609,neutral,one_shot,inline,fear,The narrator describes anxiety and fear of fainting during a difficult blood draw.
+5609,neutral,few_shot,inline,fear,"The author describes being nervous and anxious about fainting during the blood draw, with accompanying physical symptoms."
+5609,generic_human,zero_shot,numbered,fear,"The author describes feeling anxious and fearing fainting during the blood test, indicating fear."
+5609,neutral,one_shot,numbered,fear,The author describes being anxious and fearful of fainting during the blood test.
+5609,neutral,few_shot,numbered,fear,The narrator describes being anxious and afraid of possibly fainting during the blood test.
+5609,generic_human,one_shot,numbered,fear,The narrator describes anxiety and fear of fainting during the blood draw.
+5609,generic_human,few_shot,inline,fear,The author describes intense anxiety about the blood draw and fear of fainting.
+5609,generic_human,one_shot,inline,fear,"The passage centers on anxiety and fear of a painful, uncomfortable blood draw and the possibility of fainting."
+5609,generic_human,zero_shot,inline,fear,"The author describes feeling anxious and worried about fainting during the blood draw, indicating fear."
+5609,generic_human,few_shot,numbered,fear,"The author describes being anxious and worried about fainting during the blood test, indicating fear."
+5609,persona_a,zero_shot,numbered,fear,The passage centers on anxiety and dread related to the needle procedure and the fear of fainting.
+5609,persona_a,one_shot,inline,fear,The author describes intense anxiety and fear of needles and fainting during a blood draw.
+5609,persona_a,few_shot,numbered,fear,"The author describes intense anxiety and worry about fainting during a blood draw, indicating fear."
+5609,persona_a,one_shot,numbered,fear,The author experiences intense anxiety and fear about the needle procedure and the possibility of fainting.
+5609,persona_a,zero_shot,inline,fear,"The text centers on intense anxiety and worry about the blood draw and the possibility of fainting, indicating fear."
+5609,persona_a,few_shot,inline,fear,"The author conveys intense anxiety and worry about the needle, the procedure, and the possibility of fainting."
+5609,persona_b,zero_shot,inline,fear,"The passage describes being very anxious and fearing that they might faint, indicating fear."
+5609,persona_b,one_shot,inline,fear,"The narrator describes being really anxious about possibly fainting during the blood draw, with accompanying sickness and discomfort."
+5609,persona_b,zero_shot,numbered,fear,"The writer describes feeling anxious, worried about fainting, and generally nervous during the blood draw, indicating fear."
+5609,persona_b,one_shot,numbered,fear,The narrator describes being really anxious about the blood draw and fearing they might faint.
+5609,persona_b,few_shot,numbered,fear,"The author describes feeling anxious and worried about fainting during the blood draw, indicating fear."
+5609,persona_b,few_shot,inline,fear,The author describes intense anxiety about the blood test and the fear of possibly fainting due to the uncomfortable procedure.
+2224,neutral,zero_shot,inline,trust,"The speaker expresses reliance on a friend for the holiday, signaling trust despite past negative experiences."
+2224,neutral,zero_shot,numbered,trust,"The speaker expresses confidence in and reliance on a friend, signaling trust."
+2224,neutral,one_shot,numbered,trust,"The author expresses confidence in and reliance on a friend's reliability, indicating trust."
+2224,neutral,one_shot,inline,trust,"The author expresses confidence in relying on a friend, indicating trust after having had negative experiences before."
+2224,neutral,few_shot,numbered,trust,"The author expresses confidence in and reliance on a friend, indicating trust."
+2224,generic_human,zero_shot,numbered,trust,"The author expresses reliance on a friend and confidence, indicating trust."
+2224,neutral,few_shot,inline,trust,"The author expresses confidence in and reliance on a friend, indicating trust built from past experiences."
+2224,generic_human,zero_shot,inline,trust,"The speaker expresses confidence in a friend and reliance on them, indicating trust."
+2224,generic_human,one_shot,numbered,trust,"The speaker expresses confidence in and reliance on a friend, indicating trust."
+2224,generic_human,few_shot,numbered,trust,"The author expresses confidence and reliance on a friend, indicating trust."
+2224,generic_human,few_shot,inline,trust,"The author expresses confidence in and reliance on a friend, indicating trust after past bad experiences."
+2224,generic_human,one_shot,inline,trust,"The author expresses confidence in the friend's reliability and relies on them, showing trust."
+2224,persona_a,zero_shot,numbered,trust,"The author indicates they can rely on a friend for the holiday, signaling trust after previous letdowns."
+2224,persona_a,one_shot,inline,trust,"The author expresses confidence in relying on a friend, indicating trust."
+2224,persona_a,zero_shot,inline,trust,"They express confidence in and reliance on a friend, indicating trust."
+2224,persona_a,one_shot,numbered,trust,"The author expresses confidence in a friend and reliance on them, indicating trust after past letdowns."
+2224,persona_a,few_shot,inline,trust,"The author expresses confidence in and reliance on a friend, indicating trust after past disappointments."
+2224,persona_a,few_shot,numbered,trust,"The author expresses confidence in a friend's reliability and willingness to rely on them, indicating trust after past letdowns."
+2224,persona_b,one_shot,numbered,trust,"The author expresses confidence in a friend's reliability and reliance during holidays, signaling trust."
+2224,persona_b,zero_shot,numbered,trust,"The author expresses trust in their friend, feeling confident they can rely on them despite past bad experiences."
+2224,persona_b,zero_shot,inline,trust,"The author expresses reliance on a friend and confidence based on past experiences, signaling trust."
+2224,persona_b,few_shot,numbered,trust,The author expresses confidence in relying on a friend during a holiday.
+2224,persona_b,one_shot,inline,trust,"The author expresses confidence in and reliance on a friend, signaling trust."
+2224,persona_b,few_shot,inline,trust,"The text centers on reliance on a friend and confidence in their support, signaling trust."
+52598,neutral,zero_shot,numbered,joy,The statement about pregnancy with her son suggests happiness about a positive milestone and the addition of a child.
+52598,neutral,zero_shot,inline,joy,The statement about becoming pregnant with a son conveys happiness and positive emotion.
+52598,neutral,one_shot,numbered,joy,The sentence expresses happiness about becoming pregnant with her son.
+52598,neutral,one_shot,inline,joy,"The statement frames becoming pregnant with their child as a positive, happy occasion."
+52598,neutral,few_shot,numbered,joy,"The statement describes a positive life event and future motherhood, which typically evokes joy."
+52598,generic_human,zero_shot,numbered,joy,"It conveys a positive, joyful sentiment about becoming pregnant and having a son."
+52598,generic_human,one_shot,numbered,joy,"The statement conveys a positive emotion about becoming pregnant with a child, indicating joy."
+52598,neutral,few_shot,inline,shame,The statement describes a socially taboo incestuous situation that would typically evoke feelings of shame.
+52598,generic_human,zero_shot,inline,joy,"The speaker is describing a positive experience of becoming pregnant with a son, which conveys joy."
+52598,generic_human,one_shot,inline,joy,"The sentence describes a positive, personal milestone (becoming pregnant with their son), indicating joy."
+52598,persona_a,one_shot,numbered,joy,"The author expresses a positive, happy outcome in conceiving a child after trying."
+52598,persona_a,zero_shot,numbered,joy,The sentence expresses happiness about conceiving and becoming pregnant with her son.
+52598,generic_human,few_shot,inline,joy,"The statement describes a positive life event (pregnancy with their son), which typically evokes joy."
+52598,generic_human,few_shot,numbered,joy,It describes a positive life event (pregnancy) that typically evokes joy.
+52598,persona_a,one_shot,inline,joy,"The author describes successfully achieving pregnancy after trying to conceive, a moment typically marked by happiness."
+52598,persona_a,zero_shot,inline,joy,"It describes a joyful outcome after trying to conceive, indicating happiness."
+52598,persona_a,few_shot,inline,joy,"The author describes a positive outcome after actively trying to conceive, which typically evokes joy."
+52598,persona_a,few_shot,numbered,joy,"The author describes a positive, hoped-for life event (pregnancy after trying to conceive), which typically evokes joy."
+52598,persona_b,zero_shot,numbered,surprise,"The pregnancy was unplanned, indicating the author felt surprised by becoming pregnant with their son."
+52598,persona_b,zero_shot,inline,surprise,The pregnancy being unplanned suggests the author felt surprise upon writing this.
+52598,persona_b,one_shot,numbered,surprise,"The pregnancy was unplanned, suggesting the author felt surprised."
+52598,persona_b,one_shot,inline,shame,"The pregnancy was unplanned, which often triggers feelings of shame due to societal stigma around unplanned motherhood."
+52598,persona_b,few_shot,numbered,guilt,"The pregnancy was unplanned, which commonly elicits guilt about the situation."
+61021,neutral,zero_shot,numbered,sadness,"The statement conveys disappointment from not receiving a promotion, indicating sadness."
+61021,neutral,zero_shot,inline,sadness,The statement conveys disappointment and sadness after not getting promoted.
+52598,persona_b,few_shot,inline,guilt,The pregnancy being unplanned suggests the author feels guilt about the situation.
+61021,neutral,one_shot,numbered,sadness,The author expresses disappointment and sadness upon learning they didn't get a promotion.
+61021,neutral,one_shot,inline,sadness,Not getting a promotion is typically associated with sadness.
+61021,neutral,few_shot,inline,sadness,Not getting a promotion typically triggers sadness due to unmet expectations and disappointment.
+61021,neutral,few_shot,numbered,sadness,The disappointment of not receiving a promotion most naturally elicits sadness.
+61021,generic_human,one_shot,inline,sadness,The news of not getting a promotion commonly evokes sadness and disappointment.
+61021,generic_human,one_shot,numbered,sadness,Learning you weren’t promoted typically evokes sadness due to disappointment in the outcome.
+61021,generic_human,zero_shot,numbered,sadness,"This news signals disappointment from a setback, aligning with sadness."
+61021,generic_human,zero_shot,inline,sadness,The news of not getting a promotion suggests disappointment and sadness.
+61021,generic_human,few_shot,numbered,sadness,"The author learned they didn't get a promotion, an event that typically causes sadness."
+61021,persona_a,zero_shot,numbered,sadness,"They learned they didn't get a promotion despite feeling they clearly deserved it, which would elicit sadness."
+61021,persona_a,zero_shot,inline,sadness,They express disappointment at not receiving a promotion they believed they deserved.
+61021,persona_a,one_shot,inline,pride,"The author indicates a belief that they clearly deserved the promotion, signaling pride."
+61021,generic_human,few_shot,inline,sadness,"The author learned they did not get a promotion, a negative outcome that commonly evokes sadness."
+61021,persona_b,zero_shot,numbered,sadness,"Not getting a promotion often causes sadness, especially since the author applied with low expectations."
+61021,persona_a,one_shot,numbered,sadness,"The author expresses disappointment about not getting the promotion, indicating sadness."
+61021,persona_b,zero_shot,inline,sadness,"They found out they didn't get the promotion, which likely caused disappointment and sadness."
+61021,persona_a,few_shot,numbered,anger,The author expresses anger and grievance at not getting a promotion they clearly deserved.
+61021,persona_a,few_shot,inline,anger,The author expresses anger and a sense of injustice from not getting a promotion they believed they deserved.
+61021,persona_b,one_shot,numbered,sadness,Learning they didn't get the promotion typically triggers sadness and disappointment.
+61021,persona_b,few_shot,inline,sadness,The author expresses disappointment upon learning they did not get a promotion.
+61021,persona_b,few_shot,numbered,sadness,Learning that they did not get promoted would typically cause sadness due to disappointment.
+61021,persona_b,one_shot,inline,sadness,Discovering they didn't get a promotion would likely evoke sadness due to disappointment.
+2172,neutral,zero_shot,numbered,sadness,The mention of being diagnosed with a chronic illness like fibromyalgia suggests distress and sorrow.
+2172,neutral,one_shot,inline,fear,"Being diagnosed with a chronic condition like fibromyalgia commonly triggers fear about pain, prognosis, and impact on life."
+2172,neutral,zero_shot,inline,sadness,"The news of a fibromyalgia diagnosis is distressing, indicating sadness."
+2172,neutral,one_shot,numbered,fear,Being diagnosed with a chronic condition like fibromyalgia typically evokes fear about the future and ongoing health.
+2172,generic_human,zero_shot,numbered,sadness,The statement about being diagnosed with a chronic illness suggests the author feels sadness about the situation.
+2172,neutral,few_shot,numbered,relief,Getting a diagnosis often offers relief by turning uncertainty about symptoms into an explained condition.
+2172,generic_human,zero_shot,inline,relief,"The author is sharing a health diagnosis, which commonly conveys relief at having an explanation for their symptoms."
+2172,neutral,few_shot,inline,sadness,Receiving a chronic illness diagnosis like fibromyalgia commonly evokes sadness about its impact on life.
+2172,generic_human,one_shot,numbered,sadness,Being diagnosed with a chronic condition like fibromyalgia commonly triggers sadness about health and future daily life concerns.
+2172,persona_a,zero_shot,numbered,sadness,The sentence conveys emotional pain and hardship associated with being diagnosed with a chronic illness.
+2172,generic_human,one_shot,inline,sadness,Receiving a fibromyalgia diagnosis is typically associated with sadness about dealing with a chronic condition.
+2172,generic_human,few_shot,inline,relief,Getting a formal diagnosis often brings relief by clarifying symptoms and guiding next steps.
+2172,persona_a,zero_shot,inline,sadness,The news of a chronic illness diagnosis often carries sadness about its impact on life.
+2172,persona_a,one_shot,numbered,fear,Receiving a diagnosis of a chronic condition like fibromyalgia often evokes fear about ongoing pain and health uncertainty.
+2172,persona_a,one_shot,inline,fear,A diagnosis of a chronic illness like fibromyalgia often triggers fear about what the future holds.
+2172,persona_a,few_shot,numbered,sadness,The diagnosis of a chronic condition like fibromyalgia often evokes sadness about health and future challenges.
+2172,persona_b,zero_shot,numbered,sadness,"The phrase conveys a somber reaction to a chronic illness diagnosis, which aligns with sadness."
+2172,persona_a,few_shot,inline,fear,Receiving a diagnosis of a chronic condition like fibromyalgia often triggers fear about health and the future.
+2172,persona_b,zero_shot,inline,sadness,The announcement of a new diagnosis of a chronic illness commonly conveys sadness about health and future uncertainties.
+2172,persona_b,one_shot,numbered,fear,Receiving a chronic illness diagnosis like fibromyalgia can provoke fear about ongoing pain and future health uncertainties for an elderly person.
+2172,generic_human,few_shot,numbered,fear,A diagnosis of a chronic illness can evoke fear about the future and health.
+2172,persona_b,few_shot,numbered,relief,"Receiving a diagnosis can relieve uncertainty about symptoms, which commonly evokes relief."
+2172,persona_b,one_shot,inline,relief,The diagnosis likely brings relief by providing an explanation for persistent symptoms.
+41629,neutral,zero_shot,numbered,joy,The win likely made the author feel happy and excited about their team.
+41629,neutral,one_shot,numbered,joy,"The win of their football team triggers a positive emotion, which is joy."
+2172,persona_b,few_shot,inline,fear,"Receiving a fibromyalgia diagnosis can evoke fear about chronic pain, uncertainty, and impact on daily life."
+41629,neutral,zero_shot,inline,joy,The author's team's win likely brought them happiness and positive emotion.
+41629,neutral,one_shot,inline,joy,The author expresses happiness and delight because their team won.
+41629,neutral,few_shot,numbered,joy,"The author is describing a positive outcome (their team winning), which typically evokes joy."
+41629,generic_human,zero_shot,numbered,joy,The victory is a positive outcome that would cause the author to feel joy.
+41629,neutral,few_shot,inline,joy,The author expresses happiness about their football team's victory.
+41629,generic_human,one_shot,numbered,joy,The author expresses happiness from their team's victory.
+41629,generic_human,zero_shot,inline,joy,"The statement describes a positive outcome (their team winning), which typically elicits joy."
+41629,generic_human,one_shot,inline,joy,"A team victory typically brings happiness, so the author likely feels joy."
+41629,generic_human,few_shot,inline,joy,They are happy about their football team's victory.
+41629,generic_human,few_shot,numbered,joy,The team's win is a positive outcome that would typically make the author feel joy.
+41629,persona_a,zero_shot,inline,joy,The author is expressing happiness and positive excitement about their team's victory.
+41629,persona_a,zero_shot,numbered,joy,The author’s statement about a team victory indicates happiness and positive emotion.
+41629,persona_a,one_shot,numbered,joy,"The sentence conveys happiness from their team's victory, a joyful emotion."
+41629,persona_a,few_shot,inline,joy,The team's victory is a positive event that would typically evoke joy in a fan.
+41629,persona_a,one_shot,inline,joy,The author likely feels happiness and elation from their underdog team's victory.
+41629,persona_b,zero_shot,numbered,pride,"The sentence conveys a positive sentiment about their team's victory, indicating pride in their team's success."
+41629,persona_a,few_shot,numbered,joy,The victory of their underdog team makes the author feel happiness as a fan.
+41629,persona_b,zero_shot,inline,pride,The author feels pride in their team's victory as a supporter of a team expected to win.
+41629,persona_b,one_shot,numbered,joy,"The author’s team won, a positive result that would evoke joy for a fan."
+51054,neutral,zero_shot,numbered,guilt,The author felt guilt for writing a cruel letter out of insecurity about their appearance.
+41629,persona_b,one_shot,inline,joy,The author expresses happiness at their team's victory.
+41629,persona_b,few_shot,numbered,pride,"The fan celebrates their team's victory, which evokes a sense of pride in the team's success."
+41629,persona_b,few_shot,inline,pride,"As a fan of a team that won, the author is expressing pride in the team's success."
+51054,neutral,zero_shot,inline,guilt,"They regretted writing a cruel letter about their sister and still feel awful about it, indicating guilt."
+51054,neutral,one_shot,numbered,guilt,The narrator regrets writing the cruel letter and feels guilty about the hurtful action toward her sister.
+51054,neutral,one_shot,inline,guilt,The narrator expresses remorse and feelings of having done something wrong by writing the hurtful letter.
+51054,neutral,few_shot,numbered,guilt,"The narrator acknowledges feeling awful for writing a cruel letter, indicating guilt over their actions."
+51054,neutral,few_shot,inline,guilt,"The author expresses remorse for writing a cruel letter to her sister, indicating guilt."
+51054,generic_human,zero_shot,numbered,guilt,"The author expresses remorse and regret for writing the hurtful letter, indicating guilt."
+51054,generic_human,one_shot,numbered,guilt,The author expresses remorse for writing a hurtful letter and still feels awful about it.
+51054,generic_human,one_shot,inline,guilt,They express remorse and feel awful about writing a hurtful letter to their sister.
+51054,generic_human,zero_shot,inline,guilt,"They express remorse and regret for having written a cruel letter, indicating guilt about their action."
+51054,generic_human,few_shot,numbered,guilt,"The author expresses remorse for writing a cruel letter to her sister and still feels awful about it, indicating guilt."
+51054,persona_a,zero_shot,numbered,guilt,She felt remorse for writing a hurtful letter.
+51054,generic_human,few_shot,inline,guilt,The author expresses remorse for writing a hurtful letter born from insecurity about her appearance.
+51054,persona_a,zero_shot,inline,guilt,"They felt remorse for writing a cruel letter that blamed their sister, indicating guilt over the action."
+51054,persona_a,one_shot,inline,guilt,"The narrator expresses remorse and ongoing self-blame for writing the cruel letter, saying she still feels awful about it."
+51054,persona_a,one_shot,numbered,guilt,"The author expresses remorse for having written a cruel letter, indicating guilt over her past action."
+51054,persona_a,few_shot,inline,guilt,"The narrator expresses regret and remorse for writing a cruel letter, indicating guilt about her action."
+51054,persona_a,few_shot,numbered,guilt,"The author expresses remorse for having written a cruel letter, indicating feelings of guilt."
+51054,persona_b,zero_shot,numbered,guilt,"She acknowledges writing a cruel letter and still feels awful about it, indicating guilt."
+51054,persona_b,zero_shot,inline,guilt,She felt remorse and self-reproach for writing the cruel letter to her sister.
+51054,persona_b,few_shot,numbered,guilt,"The author expresses remorse for having written a cruel letter to her sister, indicating guilt about hurting her."
+51054,persona_b,one_shot,numbered,guilt,"The author expresses remorse for writing a horrible letter to her sister, indicating guilt about her actions."
+51054,persona_b,one_shot,inline,guilt,The author expresses remorse and lingering regret for writing the hurtful letter to her sister.
+52866,neutral,zero_shot,numbered,trust,"The speaker feels confident and reassured that their mom will defend them, indicating trust in her support."
+51054,persona_b,few_shot,inline,guilt,She expresses remorse for writing a cruel letter that hurt her sister and says she still feels awful about it.
+52866,neutral,zero_shot,inline,trust,"The speaker expresses confidence that their mom would stand up for them, indicating trust."
+52866,neutral,one_shot,numbered,pride,The speaker feels pride in their mom for standing up for them against the aunt's mistreatment.
+52866,neutral,one_shot,inline,trust,"The speaker expresses confidence that their mom will stand up for them, indicating a feeling of trust."
+52866,generic_human,zero_shot,numbered,trust,"The text shows the author’s confidence that their mom would stand up for them, indicating trust."
+52866,neutral,few_shot,numbered,trust,"The author expresses confidence and reliance on their mom to defend them, indicating trust in her support."
+52866,neutral,few_shot,inline,trust,"The speaker expresses confidence in and reliance on their mom to stand up for them, indicating trust in her support."
+52866,generic_human,zero_shot,inline,trust,"The narrator expresses confidence that their mom would defend them, indicating trust."
+52866,generic_human,one_shot,numbered,trust,"The speaker expresses confidence that their mom will stand up for them, indicating trust in her support."
+52866,generic_human,few_shot,inline,trust,"The speaker expresses confidence that their mom would stand up for them, signaling trust in her support."
+52866,persona_a,zero_shot,inline,trust,"The narrator feels confident that their mom will defend them, showing trust in her support."
+52866,persona_a,zero_shot,numbered,trust,"The narrator expresses reliance on and confidence that their mom would stand up for them, indicating a feeling of trust."
+52866,generic_human,one_shot,inline,relief,The text expresses relief that their mom will stand up for them and defend them against mistreatment.
+52866,generic_human,few_shot,numbered,relief,The author describes relief at their mom defending them against mistreatment and feeling confident she would stand up for them.
+52866,persona_a,one_shot,numbered,relief,The narrator feels relieved and reassured knowing their mom would stand up for them against the aunt's mistreatment.
+52866,persona_a,one_shot,inline,trust,"The narrator expresses reliance on and confidence that her mother would defend her, indicating trust in her mother's support."
+52866,persona_a,few_shot,numbered,relief,The narrator feels relieved that their mother stood up for them against being treated badly.
+52866,persona_a,few_shot,inline,trust,The narrator's belief that their mother would stand up for them shows reliance and confidence in her support.
+52866,persona_b,zero_shot,numbered,guilt,"The aunt is being confronted for mistreating the narrator, which would evoke guilt about her actions."
+52866,persona_b,few_shot,numbered,guilt,"The aunt is being confronted about mistreating the narrator, which would typically elicit guilt for her actions."
+52866,persona_b,one_shot,inline,guilt,"The aunt is being confronted about how she treated the narrator, which would typically evoke guilt."
+3975,neutral,zero_shot,numbered,relief,"Getting a permanent position likely ends job insecurity, triggering relief."
+52866,persona_b,one_shot,numbered,trust,"The author expresses certainty that their mom would defend them, indicating a sense of trust in her to stand up for them."
+3975,neutral,zero_shot,inline,relief,The phrase indicates relief at securing permanent employment and job security.
+52866,persona_b,zero_shot,inline,shame,"The author is described as being confronted about mistreating the narrator, which would naturally evoke shame for past behavior."
+3975,neutral,few_shot,numbered,relief,"The permanent position removes uncertainty and stress about job security, which is a classic sign of relief."
+3975,neutral,one_shot,numbered,relief,"Securing permanent employment provides job security, which would typically cause relief."
+3975,neutral,one_shot,inline,relief,"Getting a permanent job ends uncertainty about employment, which commonly triggers relief."
+3975,neutral,few_shot,inline,relief,"Securing a permanent job likely reduces uncertainty and stress, indicating relief."
+3975,generic_human,zero_shot,inline,relief,Securing a permanent position relieves the uncertainty and stress of temporary work.
+3975,generic_human,one_shot,numbered,pride,Securing a permanent job is a milestone that typically yields pride at one's achievement.
+3975,generic_human,zero_shot,numbered,relief,Securing a permanent position would typically bring relief by alleviating job insecurity and stress.
+3975,generic_human,one_shot,inline,relief,Securing a permanent job likely produced relief at job stability.
+52866,persona_b,few_shot,inline,guilt,"The aunt is being confronted for mistreating the narrator, which would typically provoke guilt."
+3975,generic_human,few_shot,inline,relief,Securing a permanent position likely brings relief from job insecurity and uncertainty.
+3975,persona_a,zero_shot,numbered,relief,They likely felt relieved after finally securing a permanent job after years of insecure temporary work.
+3975,persona_a,zero_shot,inline,relief,"Having endured years of insecure temp and contract work, obtaining a permanent job would bring a sense of relief."
+3975,generic_human,few_shot,numbered,relief,"Securing a permanent position eliminates uncertainty about job security, which commonly evokes relief."
+3975,persona_a,one_shot,numbered,relief,"The author endured years of insecure temp and contract work, and obtaining a permanent position would bring relief."
+3975,persona_a,few_shot,numbered,relief,"After years of insecure temp and contract work, securing a permanent position would most naturally evoke relief at finally gaining stability."
+3975,persona_a,one_shot,inline,relief,"After years of insecure temp work, finally securing a permanent position likely brought relief from ongoing uncertainty."
+3975,persona_a,few_shot,inline,relief,"The author ended years of insecure temp work and secured a permanent position, a classic relief from ongoing uncertainty."
+3975,persona_b,zero_shot,numbered,pride,They feel a sense of pride in finally securing a role they were always guaranteed to attain.
+3975,persona_b,zero_shot,inline,relief,"The author likely feels relief at finally securing a permanent position, resolving the ongoing situation and providing security."
+3975,persona_b,one_shot,numbered,pride,The advancement to a permanently secured role they were always guaranteed to receive reflects a sense of pride in achieving a deserved milestone.
+3975,persona_b,one_shot,inline,pride,Securing a permanent role she was guaranteed to obtain reflects a feeling of accomplishment and pride in their status.
+41660,neutral,zero_shot,numbered,pride,Being asked to be maid of honour suggests the author feels honored and proud.
+3975,persona_b,few_shot,inline,pride,"The author describes finally attaining a permanent role they were always guaranteed to get, signaling a sense of personal achievement and pride."
+3975,persona_b,few_shot,numbered,pride,The author feels a sense of achievement and satisfaction from securing a guaranteed permanent position.
+41660,neutral,zero_shot,inline,pride,Being asked to be maid of honour signals pride and a sense of honor.
+41660,neutral,one_shot,numbered,pride,They likely feel pride because being asked to be maid of honour is an honor and a positive recognition from friends.
+41660,neutral,few_shot,numbered,pride,Being asked to be maid of honour is a moment of feeling honored and proud.
+41660,neutral,one_shot,inline,pride,Being asked to be maid of honour signals honor and pride in being chosen for the role.
+41660,neutral,few_shot,inline,pride,Being asked to be maid of honour is an honor and often makes someone feel proud.
+41660,generic_human,zero_shot,numbered,pride,Being asked to be maid of honour is an honor that suggests the author feels proud.
+41660,generic_human,zero_shot,inline,pride,Being asked to be maid of honour is an honor that suggests the author feels proud.
+41660,generic_human,one_shot,inline,pride,Being asked to be maid of honour is an honor and makes the author feel proud.
+41660,generic_human,one_shot,numbered,pride,Being asked to be maid of honour is an honor that makes the author feel valued by their friends.
+41660,generic_human,few_shot,numbered,pride,They felt honored and proud to be asked to be maid of honour.
+41660,persona_a,zero_shot,numbered,pride,Being asked to be the maid of honour made me feel proud and honored.
+41660,persona_a,zero_shot,inline,joy,It conveys happiness and a sense of honor in being asked to be maid of honour.
+41660,generic_human,few_shot,inline,joy,Being asked to be maid of honour is a positive social recognition that typically evokes joy.
+41660,persona_a,one_shot,numbered,pride,"The request to be maid of honour is an honor, making the author feel proud."
+41660,persona_a,one_shot,inline,pride,Being asked by close friends to be maid of honour signals pride in being trusted and valued for a special role.
+41660,persona_a,few_shot,numbered,pride,Being asked to be maid of honour is a meaningful honor that would make the author feel pride in being trusted and close to the bride.
+41660,persona_b,zero_shot,inline,surprise,The author describes being surprised to be chosen as maid of honour over older friends.
+41660,persona_b,zero_shot,numbered,surprise,The author describes being surprised to be chosen as maid of honour over older friends.
+41660,persona_a,few_shot,inline,pride,"Being asked to be maid of honour by the bride—her closest lifelong friend—would feel like an honorable acknowledgment, sparking pride."
+41660,persona_b,one_shot,numbered,surprise,"The author explicitly states they are surprised to be chosen over older friends, indicating the emotion of surprise."
+41660,persona_b,one_shot,inline,surprise,"The author, a newer friend, is surprised to be chosen as maid of honour over older friends."
+41660,persona_b,few_shot,inline,surprise,"The author indicates they were surprised to be chosen as maid of honour, signaling surprise."
+31387,neutral,zero_shot,numbered,relief,It conveys a sense of relief upon realizing they would finally get exactly what they asked for after the steak was redone.
+41660,persona_b,few_shot,numbered,surprise,The author expresses being surprised to be chosen over older friends.
+31387,neutral,zero_shot,inline,relief,"They felt relief that, after the issue and redo, they would finally get exactly what they asked for."
+31387,neutral,one_shot,numbered,relief,"The text describes a shift from dissatisfaction to reassurance that they would finally receive exactly what they asked for, signaling relief."
+31387,neutral,one_shot,inline,relief,"The text describes a turning point where the diners realize they will finally receive exactly what they asked for, indicating relief."
+31387,neutral,few_shot,numbered,relief,The passage conveys a sense of relief at realizing they would finally get exactly what they asked for after the issue with the steak.
+31387,neutral,few_shot,inline,relief,They felt relief when they realized the issue would be corrected and they would get exactly what they had asked for.
+31387,generic_human,zero_shot,numbered,relief,They feel relief at the prospect of finally getting the steak cooked exactly as requested after the initial problem with the order.
+31387,generic_human,zero_shot,inline,relief,"After the steak issue, they realized they would finally get exactly what they asked for, which would bring relief."
+31387,generic_human,one_shot,inline,relief,"The passage expresses worry about whether the steak would be cooked to their liking and then the realization they would indeed receive exactly what they asked for, signaling relief."
+31387,generic_human,one_shot,numbered,relief,"They feel relief after worrying they wouldn’t get the steak cooked as requested, and realize they will finally receive exactly what they asked for."
+31387,generic_human,few_shot,numbered,trust,The narrator realises they can fully trust that they will get exactly what they asked for after the steak is redone.
+31387,persona_a,zero_shot,numbered,relief,The narrator experiences relief upon realizing they would finally get exactly what they asked for after the steak wasn't cooked to satisfaction.
+31387,generic_human,few_shot,inline,relief,The narrator likely felt relieved at the prospect of finally receiving exactly what they had asked for after the initial concern about the steak.
+31387,persona_a,one_shot,numbered,relief,The narrator feels relief at the reassurance that they would finally get exactly what they had asked for.
+31387,persona_a,zero_shot,inline,relief,The passage describes the moment of anticipation turning into reassurance that they would finally receive exactly what they asked for.
+31387,persona_a,few_shot,numbered,relief,"The diner realizes the issue will be resolved and they will finally get exactly what they asked for, which triggers relief."
+31387,persona_a,one_shot,inline,relief,They feel relief that the issue is being corrected and they will receive the steak cooked as requested.
+31387,persona_a,few_shot,inline,trust,They realized they could fully trust that they would receive exactly what they had asked for.
+31387,persona_b,few_shot,numbered,relief,The waiter feels relief at ensuring the customer would get exactly what they asked for after correcting the cooking mistake.
+31387,persona_b,zero_shot,numbered,relief,"The text conveys a sense of reassurance and release after the correction of the mistake, indicating relief at finally getting exactly what was requested."
+31387,persona_b,one_shot,inline,pride,The waiter felt pride from catching and correcting the cooking mistake so that the guests would receive exactly what they asked for.
+4571,neutral,zero_shot,numbered,fear,"The author describes being afraid to tell anyone or tell him off, indicating fear."
+4571,neutral,zero_shot,inline,fear,The speaker’s hesitation to tell anyone or confront the harasser shows they felt afraid.
+31387,persona_b,one_shot,numbered,trust,"The passage expresses reassurance and confidence that they would receive exactly what they asked for, indicating trust in the service."
+4571,neutral,one_shot,numbered,fear,"The author describes being too afraid to tell anyone or confront the harasser, indicating fear."
+31387,persona_b,few_shot,inline,relief,The text conveys relief at having the cooking mistake corrected and the reassurance that they would receive exactly what was requested.
+4571,neutral,one_shot,inline,fear,"The speaker was too afraid to tell anyone or confront the harasser, indicating fear as the dominant emotion."
+31387,persona_b,zero_shot,inline,relief,"The correction of the cooking mistake resolves the uncertainty and confirms they would receive exactly what was requested, which is relief."
+4571,neutral,few_shot,numbered,fear,"The author describes being harassed daily and being too afraid to tell anyone, indicating fear."
+4571,neutral,few_shot,inline,fear,"The narrator describes ongoing harassment and being too afraid to speak up, indicating fear."
+4571,generic_human,zero_shot,numbered,3,"The narrator says they were ""too ... to tell anyone or tell him off,"" indicating fear."
+4571,generic_human,zero_shot,inline,fear,"The author describes being too afraid to tell anyone or confront the harassment, indicating fear."
+4571,generic_human,one_shot,numbered,fear,"The author describes being too scared to tell anyone or confront the harasser, indicating fear."
+4571,generic_human,one_shot,inline,fear,"The author recalls being harassed and too scared to tell anyone, indicating fear."
+4571,generic_human,few_shot,inline,fear,"The author describes ongoing harassment and being too afraid to tell anyone, indicating fear."
+4571,persona_a,zero_shot,numbered,fear,"The author was too intimidated by the harasser to speak up, indicating fear."
+4571,generic_human,few_shot,numbered,fear,"The author indicates they were too afraid to tell anyone or confront the harasser, signaling fear."
+4571,persona_a,zero_shot,inline,fear,"The narrator was too intimidated by the harasser to speak up, indicating fear."
+4571,persona_a,one_shot,numbered,fear,"The author was too intimidated to speak up, indicating fear."
+4571,persona_a,one_shot,inline,fear,"The author felt fear from being harassed and intimidated, preventing them from speaking up."
+4571,persona_b,one_shot,numbered,shame,"She blamed herself for what happened, reflecting a self-conscious feeling of shame."
+4571,persona_a,few_shot,inline,fear,"The author describes being intimidated by the harasser and unable to tell anyone, indicating fear for safety."
+4571,persona_b,zero_shot,inline,shame,"The author describes self-blame and feeling at fault for the abuse, which aligns with the emotion of shame."
+4571,persona_a,few_shot,numbered,fear,"The author describes being too intimidated to speak up about the harassment, indicating fear."
+4571,persona_b,zero_shot,numbered,guilt,"The author blames herself for what happened and believes she caused it, indicating guilt."
+4571,persona_b,few_shot,numbered,guilt,"The author describes blaming herself and feeling she caused the situation, indicating guilt."
+4571,persona_b,few_shot,inline,guilt,"The author internalizes blame for the abuse, indicating feelings of guilt."
+4571,persona_b,one_shot,inline,guilt,"The author states she blamed herself for what happened, signaling guilt."
+2198,neutral,zero_shot,inline,joy,"The sentence describes a positive event (England scoring), suggesting the author feels joy."
+2198,neutral,one_shot,inline,joy,Scoring in a major final is a positive moment that would evoke joy.
+2198,neutral,zero_shot,numbered,joy,"The sentence describes a positive moment (England scoring), which would likely evoke joy in the author."
+2198,neutral,few_shot,numbered,joy,It describes a positive sporting moment (England scoring) that would typically evoke joy for fans.
+2198,neutral,one_shot,numbered,joy,"The statement describes a positive moment (England scoring), which typically evokes joy in a sports context."
+2198,neutral,few_shot,inline,joy,"The statement describes a positive moment (England scoring in a major final), which would typically evoke joy."
+2198,generic_human,zero_shot,inline,joy,"The sentence describes a positive, exciting moment (England scoring in a major final), which would typically evoke joy."
+2198,generic_human,zero_shot,numbered,joy,"It describes a positive, exciting moment in the Euros final, which typically indicates joy."
+2198,generic_human,one_shot,inline,joy,Scoring in a major final is a positive event that would typically evoke happiness for the author.
+2198,generic_human,one_shot,numbered,joy,"The sentence describes a positive moment (England scoring in a final), which would typically evoke happiness for the author."
+2198,generic_human,few_shot,numbered,joy,Scoring in a major final is a positive moment that typically evokes joy for fans.
+2198,persona_a,zero_shot,numbered,joy,"As a devoted England fan, scoring in the Euros final would naturally evoke joy."
+2198,persona_a,one_shot,numbered,joy,"As a devoted England fan, witnessing England score in the final is a joyful moment reflecting happiness about the team's success."
+2198,persona_a,one_shot,inline,joy,A devoted England fan would feel joy at their team scoring in a Euros final.
+2198,generic_human,few_shot,inline,joy,"The text describes a positive, exciting moment in a major final, which typically evokes joy."
+2198,persona_a,zero_shot,inline,joy,"As a devoted England fan, England scoring in a Euros final would evoke happiness and excitement."
+2198,persona_a,few_shot,inline,joy,"As a devoted England fan, hearing that England scored would evoke a positive, celebratory emotion."
+2198,persona_a,few_shot,numbered,joy,"The author, a devoted England fan, would feel joy at England scoring in the Euros final."
+2198,persona_b,zero_shot,inline,joy,"Scoring a goal is a positive moment in the match, likely to evoke joy even from a neutral observer."
+2198,persona_b,one_shot,numbered,joy,A neutral spectator would feel a moment of positive excitement and delight at England scoring.
+2198,persona_b,zero_shot,numbered,joy,"It highlights a positive moment (England scoring) in a high-stakes match, implying the author felt joy."
+2198,persona_b,few_shot,numbered,joy,"The author notes a positive moment in the match (England scoring), which typically evokes joy."
+5642,neutral,zero_shot,inline,sadness,It conveys the speaker's distress and hurt from their husband having an affair.
+5642,neutral,zero_shot,numbered,sadness,It conveys emotional distress and hurt in reaction to the betrayal.
+2198,persona_b,one_shot,inline,joy,Scoring a goal in a high-stakes final is a positive event that would likely evoke joy even from a neutral observer.
+5642,neutral,one_shot,numbered,sadness,The statement conveys emotional hurt and sorrow from discovering infidelity.
+2198,persona_b,few_shot,inline,joy,Scoring in a major final is a positive moment that would typically evoke joy for a spectator.
+5642,neutral,few_shot,numbered,sadness,"An affair in a marriage typically causes distress and heartbreak, signaling sadness."
+5642,generic_human,zero_shot,numbered,sadness,The phrase suggests the speaker is experiencing emotional pain and hurt due to their husband's infidelity.
+5642,neutral,few_shot,inline,sadness,The statement expresses emotional distress and sorrow after discovering a spouse's infidelity.
+5642,generic_human,zero_shot,inline,sadness,"Mentioning a spouse's affair typically signals emotional pain and sorrow, which corresponds to sadness."
+5642,neutral,one_shot,inline,sadness,"The statement describes a hurtful marital betrayal, which typically evokes sadness."
+5642,generic_human,one_shot,numbered,sadness,The report of a spouse having an affair is a painful situation that would commonly evoke sadness in the author.
+5642,generic_human,few_shot,numbered,sadness,The discovery of a spouse's affair typically triggers sadness and heartbreak in the author.
+5642,generic_human,one_shot,inline,sadness,The author is expressing emotional hurt and sorrow after learning about the husband's affair.
+5642,persona_a,zero_shot,numbered,sadness,The wife likely feels hurt and sorrow from the betrayal of her husband.
+5642,generic_human,few_shot,inline,sadness,The discovery of a spouse's affair is typically felt as sadness due to betrayal and hurt.
+5642,persona_a,zero_shot,inline,sadness,The mention of a husband's affair points to emotional pain and sorrow.
+5642,persona_a,one_shot,numbered,sadness,The discovery or report of a marital betrayal implies emotional pain and distress.
+5642,persona_a,few_shot,numbered,sadness,"The betrayal of a spouse commonly leads to hurt and sorrow, i.e., sadness."
+5642,persona_a,few_shot,inline,sadness,"The wife describes discovering her husband's affair, which is typically felt as sadness."
+5642,persona_a,one_shot,inline,sadness,"The wife is describing a painful, betrayed reaction to her husband's infidelity, which typically evokes sadness."
+5642,persona_b,one_shot,numbered,sadness,The statement conveys emotional distress and hurt after discovering her husband’s infidelity.
+5642,persona_b,zero_shot,inline,sadness,It conveys sorrow and hurt from a husband's infidelity.
+5642,persona_b,one_shot,inline,sadness,"The discovery of infidelity commonly causes hurt and sorrow, indicating sadness."
+5642,persona_b,zero_shot,numbered,sadness,The statement conveys heartbreak and sorrow after discovering a husband's infidelity.
+5642,persona_b,few_shot,inline,sadness,The news of a spouse's affair conveys emotional hurt and sorrow from betrayal.
+5642,persona_b,few_shot,numbered,sadness,The discovery of infidelity would typically cause emotional hurt and sadness from the betrayal.
+41581,neutral,zero_shot,numbered,sadness,The phrase implies grief and sorrow from the loss associated with aborting the baby.
+41581,neutral,one_shot,numbered,sadness,The statement suggests sorrow and a sense of loss surrounding ending the pregnancy.
+41581,neutral,zero_shot,inline,guilt,"The statement describes ending a pregnancy, which is commonly associated with guilt or remorse, conveying that emotion."
+41581,neutral,few_shot,numbered,sadness,The phrase conveys a painful sense of loss and sorrow associated with ending a pregnancy.
+41581,neutral,few_shot,inline,guilt,The brief statement about having an abortion implies a sense of remorse or moral conflict commonly linked to guilt.
+41581,neutral,one_shot,inline,guilt,"The statement conveys remorse about ending the pregnancy, signaling guilt."
+41581,generic_human,zero_shot,numbered,guilt,"The phrase ""aborted my baby"" suggests the author feels guilt about ending the pregnancy."
+41581,generic_human,zero_shot,inline,guilt,"The phrase implies remorse and self-blame surrounding the act of ending a pregnancy, i.e., guilt."
+41581,generic_human,one_shot,inline,guilt,The statement implies remorse or guilt about having aborted a baby.
+41581,generic_human,few_shot,numbered,guilt,Aborting a baby is a morally charged act that commonly evokes guilt in people.
+41581,generic_human,one_shot,numbered,sadness,"Aborting a baby implies the loss of a child, which commonly evokes sadness in the author."
+41581,generic_human,few_shot,inline,guilt,The statement implies remorse and moral responsibility for having aborted their baby.
+41581,persona_a,zero_shot,numbered,sadness,The statement centers on the loss and sorrow associated with terminating a pregnancy.
+41581,persona_a,one_shot,numbered,sadness,"The statement about terminating a pregnancy implies sorrow and loss, aligning with sadness even when it is medically necessary."
+41581,persona_a,few_shot,inline,relief,"The author describes a medically necessary abortion, an action often followed by relief that their health and safety were prioritized."
+41581,persona_a,few_shot,numbered,relief,"The medical necessity framing suggests the author felt relief in making a difficult, necessary choice."
+41581,persona_a,zero_shot,inline,sadness,The phrase conveys a sense of loss and sorrow associated with abortion.
+41581,persona_a,one_shot,inline,sadness,"The act of aborting a baby implies a sense of loss and sorrow, which aligns with sadness as the primary emotion."
+41581,persona_b,one_shot,inline,shame,"The person describes terminating under social and family pressure, which suggests feeling ashamed of the act in the face of stigma."
+41581,persona_b,zero_shot,numbered,shame,The social and family pressure surrounding the act suggests the author felt shame about abortion.
+41581,persona_b,one_shot,numbered,shame,"The abortion occurred under social and family pressure, suggesting the author felt ashamed about the situation."
+41581,persona_b,few_shot,numbered,shame,The mention of abortion under social and family pressure suggests the author felt shame about the act and its context.
+41581,persona_b,zero_shot,inline,guilt,The act of abortion under social and family pressure implies the author feels guilt about the decision.
+3528,neutral,zero_shot,numbered,guilt,They express guilt about being enticed by money and worry about sounding greedy.
+3528,neutral,zero_shot,inline,guilt,The author expresses concern about sounding greedy and feels guilty about being enticed by money while reflecting on wealth and relationships.
+41581,persona_b,few_shot,inline,shame,"The abortion occurred under social and family pressure, implying the author feels shame about it."
+3528,neutral,one_shot,numbered,guilt,The speaker expresses concern about being greedy and feels guilty about having thoughts related to money and wealth.
+3528,neutral,one_shot,inline,guilt,"They express guilt about being enticed by money and worry about sounding greedy, reflecting moral self-judgment tied to their upbringing."
+3528,neutral,few_shot,numbered,guilt,"The author expresses uneasy, remorseful feelings about being enticed by money and fears sounding greedy, indicating guilt."
+3528,neutral,few_shot,inline,guilt,The author acknowledges feeling conflicted and ashamed about being enticed by money and not wanting to come off as greedy.
+3528,generic_human,zero_shot,numbered,guilt,"They express concern about sounding greedy and acknowledge feeling uneasy about being enticed by money, indicating guilt."
+3528,generic_human,one_shot,numbered,guilt,She expresses concern about sounding greedy and acknowledges guilt about being enticed by money given her background.
+3528,generic_human,zero_shot,inline,shame,"The author expresses concern about being greedy and a sense of moral discomfort about desiring wealth, indicating shame."
+3528,generic_human,few_shot,numbered,guilt,The author expresses guilt about being enticed by money and not wanting to appear greedy.
+3528,generic_human,one_shot,inline,guilt,The author expresses guilt about being enticed by money and concerns about appearing greedy.
+3528,generic_human,few_shot,inline,guilt,"The speaker feels conflicted and uneasy about being drawn to wealth and worries about sounding greedy, indicating guilt about their desires."
+3528,persona_a,zero_shot,numbered,guilt,The author expresses worry about sounding greedy and feels guilty about being enticed by money.
+3528,persona_a,one_shot,numbered,fear,"The author expresses intense anxiety about money and financial security, indicating fear."
+3528,persona_a,one_shot,inline,guilt,The author expresses guilt about being enticed by money and worries about sounding greedy due to their poverty background.
+3528,persona_a,zero_shot,inline,guilt,They express guilt about being enticed by money and not wanting to appear greedy given their poverty background.
+3528,persona_a,few_shot,numbered,fear,"The author describes strong anxiety and fear about financial security, influenced by poverty and the allure of money."
+3528,persona_b,zero_shot,numbered,guilt,"She is troubled by being enticed by money and worries about sounding greedy, indicating guilt."
+3528,persona_a,few_shot,inline,guilt,The author expresses concern about sounding greedy and feels conflicted and remorseful about desiring money given their impoverished background.
+3528,persona_b,one_shot,numbered,guilt,The narrator feels conflicted and guilty about being enticed by wealth and worries about sounding greedy.
+3528,persona_b,zero_shot,inline,guilt,"The author is troubled by being enticed by money and fears seeming greedy, indicating guilt."
+3528,persona_b,one_shot,inline,guilt,"The author is reproaching themselves for having greedy thoughts about wealth, indicating guilt."
+3528,persona_b,few_shot,inline,guilt,"The author feels conflicted and self-conscious about being enticed by money, indicating guilt about greed."
+2105,neutral,zero_shot,numbered,pride,It conveys a sense of accomplishment and satisfaction after successfully passing the exams.
+3528,persona_b,few_shot,numbered,guilt,"The author acknowledges being enticed by money and worries about sounding greedy, indicating guilt about their thoughts."
+2105,neutral,zero_shot,inline,relief,Passing the exams likely relieved the stress and anxiety they felt.
+2105,neutral,one_shot,numbered,relief,Passing exams typically relieves the stress and worry from the testing period.
+2105,neutral,few_shot,numbered,relief,Passing exams typically triggers relief after a period of worry or stress.
+2105,neutral,few_shot,inline,joy,The author’s success in passing exams is a positive achievement that typically evokes joy.
+2105,neutral,one_shot,inline,relief,Finishing exams typically brings a sense of relief after stress or worry.
+2105,generic_human,zero_shot,numbered,relief,The sentence implies a feeling of relief after completing the exams.
+2105,generic_human,zero_shot,inline,relief,"Passing exams usually ends the stress and uncertainty, which is felt as relief."
+2105,generic_human,one_shot,numbered,relief,"Passing the exams likely removes the stress and anxiety surrounding them, leading to relief."
+2105,generic_human,one_shot,inline,relief,Passing exams typically brings relief from stress and worry.
+2105,generic_human,few_shot,numbered,relief,The moment of passing exams is typically accompanied by relief after the stress of studying and testing.
+2105,persona_a,zero_shot,numbered,relief,The author felt relief at passing their exams after a year of academic struggle.
+2105,persona_a,zero_shot,inline,relief,The student felt relief after finally passing their exams after a year of struggle.
+2105,generic_human,few_shot,inline,pride,Passing exams is a personal achievement that typically evokes pride.
+2105,persona_a,one_shot,numbered,relief,The student felt relief after narrowly passing exams after a year of struggle.
+2105,persona_a,one_shot,inline,relief,The student felt relief after finally passing exams after struggling all year.
+2105,persona_a,few_shot,inline,relief,"After a long struggle, passing the exams likely released tension and worry, indicating relief."
+2105,persona_a,few_shot,numbered,relief,"After a difficult year of struggle, finally passing the exams would most likely bring relief."
+2105,persona_b,zero_shot,numbered,pride,The author felt pride because passing the exams confirmed their high expectations and success.
+2105,persona_b,zero_shot,inline,pride,"As a top student who expected to pass easily, their success likely produced a sense of pride and achievement."
+2105,persona_b,one_shot,numbered,pride,"The author, a top student who expected to pass easily, felt a sense of accomplishment and pride at meeting expectations."
+2105,persona_b,one_shot,inline,pride,"The author, a top student who expected to pass easily, felt a sense of pride in achieving the expected success."
+7198,neutral,zero_shot,numbered,pride,It signals a personal achievement and would typically evoke pride.
+2105,persona_b,few_shot,numbered,pride,"The author is framed as a top student who expected to pass easily, so achieving that outcome would naturally evoke pride in their achievement."
+2105,persona_b,few_shot,inline,pride,The author’s successful exam outcome fits the feeling of pride in achievement.
+7198,neutral,zero_shot,inline,pride,"The promotion represents an achievement and recognition, which typically evokes a sense of pride."
+7198,neutral,one_shot,inline,pride,"The promotion represents an achievement and recognition, which typically evokes pride."
+7198,neutral,few_shot,inline,pride,"The promotion marks a personal achievement, which commonly elicits pride."
+7198,neutral,one_shot,numbered,pride,The promotion represents an achievement and would typically elicit a feeling of pride.
+7198,generic_human,zero_shot,numbered,pride,It signals pride in achieving a promotion.
+7198,generic_human,one_shot,numbered,pride,"The promotion represents a personal achievement, triggering pride."
+7198,generic_human,one_shot,inline,pride,The promotion is a personal achievement that naturally evokes pride.
+7198,neutral,few_shot,numbered,pride,"The author achieved a professional milestone (a promotion), which commonly evokes pride."
+7198,generic_human,few_shot,numbered,pride,The promotion is a personal achievement that typically elicits pride.
+7198,generic_human,zero_shot,inline,pride,"The sentence conveys a positive, achievement-related feeling of pride from earning a promotion."
+7198,generic_human,few_shot,inline,pride,A promotion is a positive achievement that typically evokes pride.
+7198,persona_a,zero_shot,numbered,pride,It reflects their hard work paying off and evokes a sense of pride.
+7198,persona_a,zero_shot,inline,pride,The author feels pride from achieving a promotion they expected due to hard work.
+7198,persona_a,few_shot,inline,pride,"The promotion follows hard work and an expected outcome, signaling pride in their achievement."
+7198,persona_a,one_shot,numbered,pride,The promotion after hard work indicates pride in achievement.
+7198,persona_a,one_shot,inline,pride,The promotion after hard work and expectation signals a feeling of pride in achievement.
+7198,persona_a,few_shot,numbered,pride,The promotion after hard work and expectation indicates pride in one's achievement.
+7198,persona_b,zero_shot,inline,surprise,The promotion was unexpected since they didn't think they were in the running.
+7198,persona_b,one_shot,inline,surprise,The promotion was unexpected because the author didn't think they were in the running.
+7198,persona_b,one_shot,numbered,surprise,"The promotion was unexpected for someone who didn't think they were in the running, indicating surprise."
+7198,persona_b,few_shot,numbered,surprise,The promotion was unexpected for someone who didn't think they were in the running.
+52520,neutral,zero_shot,numbered,joy,It expresses happiness and positive excitement from winning a prize.
+7198,persona_b,zero_shot,numbered,surprise,The promotion was unexpected because they didn't think they were in the running.
+7198,persona_b,few_shot,inline,surprise,"The promotion came unexpectedly to someone who doubted they were in contention, signaling surprise."
+52520,neutral,zero_shot,inline,joy,Winning a £500 voucher is a positive event that would evoke joy.
+52520,neutral,few_shot,numbered,joy,"The author describes winning a valuable prize, a positive event that typically evokes joy."
+52520,neutral,one_shot,numbered,joy,Winning a £500 voucher is a positive event that would evoke happiness or joy.
+52520,neutral,few_shot,inline,joy,"The author describes winning a valuable voucher, a positive event that would typically evoke joy."
+52520,generic_human,zero_shot,numbered,joy,"Winning a £500 voucher would evoke happiness and positive emotion, i.e., joy."
+52520,neutral,one_shot,inline,joy,Winning a £500 voucher is a highly positive event that would typically evoke joy.
+52520,generic_human,zero_shot,inline,joy,"It describes a positive outcome (winning a £500 voucher), which would typically evoke joy."
+52520,generic_human,one_shot,numbered,joy,"The author feels joy because winning a £500 voucher is a positive, exciting event."
+52520,generic_human,one_shot,inline,joy,"The author describes winning a prize, signaling happiness and excitement."
+52520,generic_human,few_shot,inline,joy,The author is expressing positive emotion from winning a valuable prize.
+52520,generic_human,few_shot,numbered,joy,"The author describes winning a valuable voucher, a positive event that typically evokes joy."
+52520,persona_a,zero_shot,numbered,joy,"The text describes winning a prize, which indicates happiness and positive emotion."
+52520,persona_a,zero_shot,inline,joy,"The author likely felt joy at winning a substantial prize, especially since they rarely enter competitions."
+52520,persona_a,few_shot,numbered,joy,"The text describes winning a valuable prize, a positive event that would typically evoke joy."
+52520,persona_a,one_shot,numbered,joy,Winning a prize is a positive event that typically evokes happiness.
+52520,persona_a,few_shot,inline,joy,"Winning a valuable prize is a positive event likely to evoke joy, especially for someone who rarely enters competitions."
+52520,persona_a,one_shot,inline,joy,"Winning a £500 John Lewis voucher would be a joyful, exciting moment, especially for someone who rarely enters competitions."
+52520,persona_b,zero_shot,inline,joy,"The winning of a valuable prize is a happy, celebratory moment, signaling joy."
+52520,persona_b,few_shot,numbered,joy,"The author describes winning a valuable prize, which typically evokes joy."
+52520,persona_b,one_shot,inline,joy,"The text describes winning a valuable voucher, which would naturally elicit happiness and excitement."
+52520,persona_b,one_shot,numbered,joy,"The author conveys happiness from winning a prize, indicating joy."
+52520,persona_b,zero_shot,numbered,joy,Winning a £500 voucher is a positive event that would likely evoke happiness and delight.
+52520,persona_b,few_shot,inline,joy,Winning a valuable prize is a positive outcome that typically triggers joy.
+52709,neutral,zero_shot,inline,surprise,Hearing someone tell you a secret introduces new information and can be surprising.
+52709,neutral,zero_shot,numbered,trust,Being told a secret suggests a sense of trust.
+52709,neutral,few_shot,numbered,trust,"Being told a secret typically indicates trust in the person who revealed it, which is the emotion implied."
+52709,neutral,one_shot,inline,trust,"Receiving a secret implies someone trusted the narrator with confidential information, indicating trust in the relationship."
+52709,neutral,few_shot,inline,surprise,Being told a secret is typically unexpected information that can evoke surprise.
+52709,neutral,one_shot,numbered,trust,"Being told a secret by someone suggests the speaker feels trusted by that person, indicating a sense of trust."
+52709,generic_human,zero_shot,numbered,surprise,The event of someone telling me a secret most commonly elicits surprise.
+52709,generic_human,zero_shot,inline,surprise,"The phrase implies the speaker has just received new, potentially surprising information."
+52709,generic_human,one_shot,inline,surprise,"The author received new, unexpected information (a secret), which commonly triggers surprise."
+52709,generic_human,few_shot,numbered,surprise,The act of someone telling me a secret is typically an unexpected event that would provoke surprise.
+52709,generic_human,one_shot,numbered,surprise,"The statement describes learning a secret, an event that commonly triggers surprise."
+52709,generic_human,few_shot,inline,surprise,"The author has just learned something unexpected (a secret), which commonly triggers surprise."
+52709,persona_a,zero_shot,numbered,surprise,Being told a secret by someone who wouldn’t normally be trusted with secrets is unexpected.
+52709,persona_a,zero_shot,inline,surprise,The author likely felt surprise at being told a secret by someone who is not usually trusted with secrets.
+52709,persona_a,one_shot,inline,surprise,"The fact that someone told me a secret is an unexpected disclosure, implying surprise because the confidant is not usually trusted with secrets."
+52709,persona_a,few_shot,numbered,surprise,"Being told a secret is an unexpected event, especially since the author is not usually trusted with secrets, which suggests surprise."
+52709,persona_a,one_shot,numbered,surprise,The event of someone not usually trusted with secrets telling me a secret is surprising.
+52709,persona_b,zero_shot,inline,trust,Because being told a secret and described as everyone's confidant suggests the author felt trusted.
+52709,persona_b,zero_shot,numbered,pride,"The author describes themselves as ""everyone's confidant,"" suggesting pride in being trusted."
+52709,persona_b,one_shot,numbered,trust,"The phrase about being ""everyone's confidant"" and someone telling a secret points to feeling trusted."
+52709,persona_a,few_shot,inline,surprise,"The speaker was unexpectedly told a secret by someone not usually trusted with secrets, indicating surprise."
+52709,persona_b,one_shot,inline,trust,Being told a secret suggests the speaker feels trusted and valued as someone's confidant.
+52709,persona_b,few_shot,inline,trust,Being told a secret and described as everyone's confidant suggests the author feels trusted.
+6218,neutral,zero_shot,numbered,guilt,Because lying about something is a wrongdoing that commonly leads to guilt.
+6218,neutral,zero_shot,inline,guilt,It expresses guilt from having lied about something.
+6218,neutral,one_shot,numbered,guilt,Lying about something typically triggers guilt for having done something wrong.
+52709,persona_b,few_shot,numbered,pride,"The author presents themselves as everyone’s confidant, suggesting pride in being trusted by others."
+6218,neutral,few_shot,numbered,guilt,"The statement implies remorse over lying, which is characteristic of guilt."
+6218,neutral,one_shot,inline,guilt,Lying about something commonly evokes guilt for the wrongdoing.
+6218,neutral,few_shot,inline,guilt,The author feels guilt due to lying about something.
+6218,generic_human,zero_shot,numbered,guilt,I felt guilty because I lied about something.
+6218,generic_human,one_shot,numbered,guilt,The author feels guilt for lying about something.
+6218,generic_human,zero_shot,inline,guilt,"The statement implies remorse and self-blame for lying, which is guilt."
+6218,generic_human,one_shot,inline,guilt,"The emotion arises from having lied about something, which is a cue for guilt."
+6218,generic_human,few_shot,numbered,guilt,"The author expresses remorse for lying, indicating guilt from the dishonest act."
+6218,generic_human,few_shot,inline,guilt,"The act of lying about something evokes a sense of personal wrongdoing, i.e., guilt."
+6218,persona_a,zero_shot,numbered,guilt,The act of lying to protect someone from a painful truth commonly evokes guilt about deceiving them.
+6218,persona_a,one_shot,numbered,guilt,Lying to protect a loved one from a painful truth commonly induces guilt.
+6218,persona_a,one_shot,inline,guilt,Lying to protect a loved one suggests the author felt guilt over dishonesty.
+6218,persona_a,zero_shot,inline,guilt,Lying to protect a loved one suggests the author feels guilt for deceiving someone they care about.
+6218,persona_a,few_shot,numbered,guilt,Lying to protect a loved one would typically cause guilt for deceiving someone.
+6218,persona_a,few_shot,inline,guilt,Lying to protect a loved one from a painful truth commonly evokes guilt for deceiving them.
+6218,persona_b,zero_shot,inline,guilt,"Lying about something is a dishonest act, which commonly elicits guilt."
+6218,persona_b,zero_shot,numbered,guilt,The act of lying about something aligns with feeling guilt for the dishonesty.
+6218,persona_b,one_shot,numbered,guilt,"The author admits lying for personal gain, which typically triggers guilt."
+52369,neutral,zero_shot,numbered,guilt,The author expresses guilt for underperforming and causing annoyance to a teammate.
+6218,persona_b,one_shot,inline,pride,The author’s act of lying for personal gain and getting away with it suggests a sense of pride in their deceitful success.
+6218,persona_b,few_shot,numbered,guilt,"The speaker admits lying for personal gain, an action that commonly triggers guilt."
+6218,persona_b,few_shot,inline,guilt,"The author admits to lying for personal gain, which commonly evokes guilt over their deceit."
+52369,neutral,zero_shot,inline,guilt,They feel guilt for having caused annoyance to a teammate by not performing well at work.
+52369,neutral,one_shot,numbered,guilt,"The author failed at work and caused a teammate to be annoyed, which suggests they feel guilt."
+52369,neutral,few_shot,numbered,guilt,"The author acknowledges underperforming and causing a teammate to be annoyed, indicating guilt over their impact on others."
+52369,generic_human,zero_shot,numbered,guilt,The author expresses guilt for causing a teammate's annoyance due to not performing well at work.
+52369,neutral,one_shot,inline,guilt,"The author acknowledges failing to perform well and the resulting annoyance it caused, signaling guilt."
+52369,neutral,few_shot,inline,guilt,"The author acknowledges underperforming and causing annoyance to a teammate, indicating guilt about their action."
+52369,generic_human,one_shot,numbered,guilt,"The author notes failing at work and causing a teammate to be annoyed, indicating guilt over the impact of their actions."
+52369,generic_human,zero_shot,inline,guilt,"The author acknowledges that not performing well caused a teammate to be annoyed, which would evoke guilt."
+52369,generic_human,one_shot,inline,guilt,"The author acknowledges that not doing well at work caused a teammate to be annoyed, implying guilt over the outcome."
+52369,generic_human,few_shot,numbered,guilt,"The author acknowledges underperforming at work and that it caused a teammate to be annoyed, implying feelings of guilt."
+52369,generic_human,few_shot,inline,guilt,"The author acknowledges their poor performance caused a team member to be annoyed, which triggers guilt."
+52369,persona_a,zero_shot,numbered,guilt,They feel guilt for causing a teammate's annoyance due to their poor performance.
+52369,persona_a,one_shot,inline,guilt,"The author feels responsible for underperforming and causing annoyance to a teammate, indicating guilt."
+52369,persona_a,one_shot,numbered,guilt,"The author acknowledges that their poor performance caused a teammate to be annoyed, indicating guilt for their action."
+52369,persona_a,few_shot,numbered,guilt,"The author acknowledges underperforming and causing someone else to be annoyed, indicating guilt for letting a teammate down."
+52369,persona_a,few_shot,inline,guilt,"The author acknowledges underperforming and causing a team member to be annoyed, implying guilt about the impact on others."
+52369,persona_a,zero_shot,inline,guilt,The author feels guilty about causing annoyance to a team member due to not performing well.
+52369,persona_b,zero_shot,numbered,guilt,They feel guilty for not performing well and causing annoyance to a team member.
+52369,persona_b,zero_shot,inline,guilt,"The author acknowledges causing a teammate to be annoyed due to not performing well, indicating a feeling of guilt."
+52369,persona_b,one_shot,numbered,guilt,"The author acknowledges causing a teammate to be annoyed due to not performing well, showing guilt."
+52369,persona_b,few_shot,numbered,guilt,"The author acknowledges failing at work and causing a teammate to be annoyed, which aligns with feeling guilt over their impact."
+4592,neutral,zero_shot,numbered,fear,A haunted house amusement park typically elicits fear.
+52369,persona_b,few_shot,inline,guilt,"The author recognizes their underperformance caused a teammate to be annoyed, signaling guilt."
+52369,persona_b,one_shot,inline,guilt,"The author acknowledges underperforming at work and that it caused a teammate to be annoyed, indicating guilt about their action."
+4592,neutral,zero_shot,inline,fear,"The haunted house amusement park would naturally evoke fear, matching the implied emotion from the ellipsis."
+4592,neutral,one_shot,numbered,fear,"A haunted house amusement park is designed to provoke fear or fright, making fear the most likely emotion here."
+4592,neutral,few_shot,numbered,fear,"A haunted house amusement park is designed to evoke fear, so the author likely felt fear."
+4592,neutral,one_shot,inline,fear,"Haunted houses are typically associated with fear, and the ellipsis suggests the author was experiencing that emotion."
+4592,neutral,few_shot,inline,fear,Visiting a haunted house amusement park typically triggers fear due to the scary environment and experiences.
+4592,generic_human,zero_shot,numbered,fear,The haunted house setting implies the author felt fear.
+4592,generic_human,one_shot,numbered,fear,"The haunted house amusement park is scary, which would trigger fear."
+4592,generic_human,one_shot,inline,fear,"Haunted house attractions are designed to scare, making fear the most likely feeling in this situation."
+4592,generic_human,few_shot,numbered,fear,The haunted house amusement park implies the author felt fear.
+4592,generic_human,zero_shot,inline,fear,"The haunted house amusement park context typically evokes fear, which matches the author's implied emotion."
+4592,generic_human,few_shot,inline,fear,Visiting a haunted house amusement park is typically scary and would evoke fear.
+4592,persona_a,zero_shot,numbered,fear,"They felt fear because haunted houses are scary and they dislike horror, yet they were dragged there."
+4592,persona_a,one_shot,numbered,fear,Being dragged into a haunted house they hate would naturally trigger fear.
+4592,persona_a,zero_shot,inline,fear,"The author dislikes horror and was dragged into a scary setting, so fear best fits their feeling."
+4592,persona_a,one_shot,inline,fear,The haunted house setting and the author's dislike of horror indicate they felt fear.
+4592,persona_a,few_shot,numbered,fear,"The author hates horror and was dragged to a haunted house, an experience that would naturally evoke fear."
+4592,persona_a,few_shot,inline,fear,"The haunted house setting and being dragged there by friends strongly indicate fear, especially since the author hates horror."
+4592,persona_b,zero_shot,numbered,joy,The author felt joy because they seek out haunted houses for the thrill and enjoy the experience.
+4592,persona_b,one_shot,numbered,fear,"A haunted house typically evokes fear, aligning with a thrill-seeking horror enthusiast who pursues frightening experiences."
+4592,persona_b,one_shot,inline,fear,"The haunted house environment is designed to evoke fear, which aligns with a thrill-seeking horror enthusiast."
+4592,persona_b,zero_shot,inline,joy,"The author’s thrill-seeking stance suggests the haunted-house experience brought positive excitement, i.e., joy."
+4592,persona_b,few_shot,numbered,fear,"Haunted houses are designed to provoke fear, aligning with a horror enthusiast who seeks thrills."
+5575,neutral,zero_shot,numbered,fear,"The author witnessed an aggressive confrontation, which would naturally evoke fear."
+4592,persona_b,few_shot,inline,fear,"Haunted-house attractions are designed to provoke fear, aligning with the author’s thrill-seeking horror interests."
+5575,neutral,zero_shot,inline,fear,"The violent, aggressive scene likely caused the author to feel fear for safety."
+5575,neutral,one_shot,numbered,fear,Seeing someone shout aggressively at another person outside their window would likely trigger fear for safety.
+5575,neutral,one_shot,inline,fear,"The author describes witnessing aggressive shouting, which would naturally evoke fear for safety."
+5575,neutral,few_shot,inline,fear,"The author describes witnessing an aggressive confrontation, which is alarming and triggers fear for safety."
+5575,neutral,few_shot,numbered,fear,"The author describes witnessing aggressive behavior toward someone’s spouse, which would trigger fear for their safety."
+5575,generic_human,zero_shot,numbered,fear,The description of someone shouting aggressively toward another person likely elicited fear in the observer.
+5575,generic_human,zero_shot,inline,fear,The observed aggressive shouting toward a wife suggests a threatening situation that would plausibly evoke fear for safety.
+5575,generic_human,few_shot,numbered,fear,"The author felt fear after witnessing someone shouting aggressively at their wife, triggering concern for safety."
+5575,generic_human,few_shot,inline,fear,"The author describes witnessing a violent, alarming confrontation, which would evoke fear for safety."
+5575,persona_a,zero_shot,numbered,fear,"The author is describing witnessing aggressive shouting, which most strongly signals fear for safety."
+5575,generic_human,one_shot,numbered,fear,Witnessing aggressive shouting toward another person would most likely evoke fear in the observer.
+5575,generic_human,one_shot,inline,fear,"The observer witnessed aggressive shouting toward someone else, which would typically evoke fear or alarm."
+5575,persona_a,one_shot,numbered,fear,"The author describes witnessing aggressive shouting, an experience that would typically evoke fear."
+5575,persona_a,zero_shot,inline,fear,"The observer witnessed aggressive shouting, which would evoke fear for safety."
+5575,persona_a,one_shot,inline,fear,"The author describes a dangerous, alarming situation involving aggression, which suggests they felt fear."
+5575,persona_a,few_shot,numbered,fear,Seeing someone shouting aggressively at their wife would likely evoke fear for her safety and concern about danger.
+5575,persona_a,few_shot,inline,fear,"The neighbor describes witnessing aggressive shouting toward a wife, which would evoke fear for her safety and the dangerous situation."
+5575,persona_b,zero_shot,numbered,fear,The passerby witnessing aggressive shouting likely felt fear in response to the perceived threat and danger.
+5575,persona_b,zero_shot,inline,fear,The passerby witnessing aggressive shouting toward a spouse would most likely feel fear for safety and concern about the situation.
+5575,persona_b,one_shot,numbered,fear,"The author describes witnessing aggressive shouting, which commonly triggers fear for safety."
+5575,persona_b,one_shot,inline,fear,"The author describes witnessing aggressive shouting, which would naturally evoke fear for safety."
+5575,persona_b,few_shot,numbered,fear,"The author witnessed someone being aggressively abusive, which commonly triggers fear for safety."
+3290,neutral,zero_shot,numbered,fear,Facing a giant bug alone and having to deal with it likely induced fear.
+5575,persona_b,few_shot,inline,fear,"The passerby describes a violent, aggressive scene that would plausibly trigger fear for the safety of others."
+3290,neutral,zero_shot,inline,fear,The situation of encountering a giant bug alone and having to handle it yourself likely elicited fear.
+3290,neutral,one_shot,inline,fear,"The presence of a large, alarming insect while alone and needing to deal with it likely triggered fear."
+3290,neutral,one_shot,numbered,fear,"The speaker encounters a large, intimidating bug alone and must deal with it, which would provoke fear."
+3290,neutral,few_shot,inline,fear,The sight of a massive bug and being home alone while needing to handle it likely triggered fear.
+3290,neutral,few_shot,numbered,fear,"The author describes encountering a large, intimidating bug while alone and having to handle it, which triggers fear."
+3290,generic_human,zero_shot,numbered,fear,The author felt fear at finding a six-inch bug and having to handle it alone.
+3290,generic_human,zero_shot,inline,fear,"The author faced a frightening situation (a very large bug alone at home and needing to handle it themselves), indicating fear."
+3290,generic_human,one_shot,numbered,fear,"The large, intimidating bug left the person alone to handle it, triggering fear."
+3290,generic_human,one_shot,inline,fear,The narrator describes a frightening situation—finding a huge bug alone and having to deal with it—indicating fear.
+3290,generic_human,few_shot,numbered,fear,The author describes a frightening situation—finding a very large bug alone and having to handle it—triggering fear.
+3290,generic_human,few_shot,inline,fear,The author describes a frightening situation—an enormous bug in the bathroom while alone and needing to confront it—triggering fear.
+3290,persona_a,zero_shot,numbered,fear,"The author describes feeling afraid in a scary, solitary situation involving handling a large insect."
+3290,persona_a,one_shot,numbered,fear,"The author is confronted with a large, intimidating bug while alone, and must handle it, signaling fear."
+3290,persona_a,zero_shot,inline,fear,They felt fear when confronted with a large insect and knew they had to handle it alone.
+3290,persona_a,one_shot,inline,fear,"The author faced a large, frightening insect while alone and had to handle it, which clearly triggers fear."
+3290,persona_a,few_shot,numbered,fear,The author describes feeling fear due to encountering a large insect while alone.
+3290,persona_a,few_shot,inline,fear,"The author describes encountering a large insect while alone, which triggers their fear of insects."
+3290,persona_b,one_shot,numbered,fear,"The author felt fear at finding a large, intimidating bug alone and having to handle it themselves."
+3290,persona_b,one_shot,inline,fear,"The author expresses fear at finding a large, intimidating bug and having to handle it alone."
+3290,persona_b,zero_shot,numbered,fear,"The moment of finding a six-inch bug alone and knowing you had to deal with it yourself is frightening, indicating fear."
+3290,persona_b,zero_shot,inline,fear,The moment of finding a six-inch bug alone and having to handle it suggests fear due to the threat and challenge involved.
+3290,persona_b,few_shot,numbered,fear,"The large, unsettling bug and being home alone with the responsibility to deal with it would naturally provoke fear about the situation and safety."
+3290,persona_b,few_shot,inline,fear,"The author faced a frightening, threatening situation—finding a huge bug alone and having to deal with it themselves."
+7200,neutral,one_shot,numbered,fear,"The smell of smoke in the basement signals potential danger, which would trigger fear."
+7200,neutral,zero_shot,inline,fear,"They likely felt fear upon smelling smoke, signaling potential danger."
+7200,neutral,zero_shot,numbered,fear,The smell of smoke in the basement signals danger and triggers fear.
+7200,neutral,few_shot,numbered,fear,"Smelling smoke in the basement signals a potential danger, which would evoke fear for safety."
+7200,neutral,few_shot,inline,fear,"The smell of smoke in the basement signals a possible fire and immediate threat, which typically evokes fear for safety."
+7200,neutral,one_shot,inline,fear,"The smell of smoke in the basement suggests potential danger, which would evoke fear."
+7200,generic_human,one_shot,numbered,fear,"The smell of smoke in the basement suggests a potential danger, triggering fear."
+7200,generic_human,zero_shot,numbered,fear,"The smell of smoke in the basement signals danger, which aligns with the emotion of fear."
+7200,generic_human,zero_shot,inline,fear,The smell of smoke in the basement would likely trigger fear and concern for safety.
+7200,generic_human,few_shot,numbered,fear,"The smell of smoke in the basement suggests a potential fire, which would provoke fear for safety."
+7200,generic_human,one_shot,inline,fear,"Smelling smoke in the basement suggests a potential danger, triggering fear."
+7200,generic_human,few_shot,inline,fear,The smell of smoke in the basement signals potential danger and likely elicited fear.
+7200,persona_a,zero_shot,inline,fear,"Detecting smoke in the basement suggests an imminent threat, triggering fear in the narrator."
+7200,persona_a,zero_shot,numbered,fear,"The smell of smoke in the basement signals potential danger, which evokes fear."
+7200,persona_a,one_shot,numbered,fear,"The smell of smoke in the basement signals potential danger, which would commonly elicit fear."
+7200,persona_a,few_shot,numbered,fear,The smell of smoke in the basement would trigger fear for potential danger and personal safety.
+7200,persona_a,one_shot,inline,fear,Detecting smoke in the basement signals potential danger and would commonly evoke fear.
+7200,persona_a,few_shot,inline,fear,"The smell of smoke in the basement suggests a dangerous situation, which typically evokes fear."
+7200,persona_b,zero_shot,inline,fear,"The smell of smoke in the basement signals potential danger, which would naturally evoke fear in the moment."
+7200,persona_b,zero_shot,numbered,fear,Smelling smoke in the basement indicates potential danger and would naturally evoke fear.
+7200,persona_b,one_shot,numbered,fear,"Smelling smoke in a basement indicates potential danger, which would commonly trigger fear in a firefighter."
+7200,persona_b,one_shot,inline,fear,"The smell of smoke in the basement signals potential danger, triggering fear in the firefighter writing about the incident."
+7200,persona_b,few_shot,numbered,fear,"The smell of smoke signals potential danger, which would trigger fear for the firefighter's safety even on a routine call."
+41671,neutral,zero_shot,numbered,pride,They felt pride at winning the first-ever women's Greco-Roman wrestling match in their province and breaking ground for women in that sport.
+7200,persona_b,few_shot,inline,relief,"The text describes a routine smoke-smell call, implying the firefighter felt relieved that the situation wasn’t immediately dangerous."
+41671,neutral,zero_shot,inline,pride,"The text emphasizes a historic achievement and the speaker’s role as a pioneer, conveying pride in the accomplishment."
+41671,neutral,one_shot,numbered,pride,"The author describes achieving a milestone by winning the first-ever women's Greco-Roman match in their province, indicating pride."
+41671,neutral,one_shot,inline,pride,The author feels pride from winning and being a pioneer by being the first to bring this wrestling style to women in their province.
+41671,neutral,few_shot,numbered,pride,"The author describes achieving a historic first and winning, a situation that typically evokes pride."
+41671,neutral,few_shot,inline,pride,"The author achieved a historic milestone by winning the first women's Greco-Roman wrestling match in their province, which evokes pride."
+41671,generic_human,zero_shot,inline,pride,The author describes a proud moment of achievement in winning a historic first for women in their province.
+41671,generic_human,zero_shot,numbered,pride,"The author views the win as a historic achievement for women in their province, signaling pride in their accomplishment."
+41671,generic_human,one_shot,numbered,pride,The achievement of a historic first and winning the match suggests a feeling of pride.
+41671,generic_human,one_shot,inline,pride,"The author describes winning a historic milestone and a match, which suggests a feeling of pride."
+41671,generic_human,few_shot,numbered,pride,"The author describes winning a historic first for women in wrestling, which evokes a strong sense of pride."
+41671,generic_human,few_shot,inline,pride,"The author describes winning a historic, first-ever women's match in their province, which typically evokes pride."
+41671,persona_a,zero_shot,numbered,pride,They felt pride in achieving a historic milestone by winning the first women's greco-roman style wrestling match in their province.
+41671,persona_a,zero_shot,inline,pride,The victory in a historic first appears to have given the author a strong sense of pride and accomplishment.
+41671,persona_a,one_shot,numbered,pride,"The author emphasizes a historic achievement and breaking barriers for women, reflecting pride in the accomplishment."
+41671,persona_a,one_shot,inline,pride,"The author describes winning a historic milestone and achieving a notable accomplishment, signaling pride in their achievement."
+41671,persona_a,few_shot,numbered,pride,The author describes achieving a historic milestone and feels a personal sense of pride.
+41671,persona_a,few_shot,inline,pride,"The author describes achieving a historic personal milestone and feeling a positive, self-satisfied emotion about it."
+41671,persona_b,zero_shot,numbered,pride,"The text centers on a personal, historic achievement and a sense of accomplishment from winning."
+41671,persona_b,zero_shot,inline,pride,The author feels pride from achieving a historic first by winning the match.
+41671,persona_b,one_shot,numbered,pride,"The author conveys a sense of pride from winning a historic, first-of-its-kind match for women."
+41671,persona_b,few_shot,numbered,pride,"The author felt a strong sense of accomplishment and significance from winning the first-ever female match in their province, indicating pride."
+41671,persona_b,one_shot,inline,pride,The win and the historic milestone of introducing women's Greco-Roman wrestling in the province would evoke pride in the journalist.
+41671,persona_b,few_shot,inline,pride,The author describes feeling pride after achieving a milestone by winning the first women's Greco-Roman wrestling match in the province.
+52458,neutral,zero_shot,inline,relief,The author expresses relief after finally receiving a job offer following a long and discouraging period of many interviews and applications.
+52458,neutral,zero_shot,numbered,relief,They express relief at finally receiving a job offer after numerous rejections.
+52458,neutral,one_shot,numbered,relief,"After many failed interviews and applications, receiving a job offer would bring relief from the ongoing stress and disappointment."
+52458,neutral,few_shot,numbered,relief,The author feels relief after finally receiving a job offer after many failed interviews and applications.
+52458,neutral,one_shot,inline,relief,They likely felt relief at finally receiving a job offer after a long period of unsuccessful applications and interviews.
+52458,neutral,few_shot,inline,relief,They feel relief after finally receiving a job offer following many unsuccessful interviews and applications.
+52458,generic_human,zero_shot,numbered,relief,The author likely felt relief at finally receiving a job offer after many failed interviews and applications.
+52458,generic_human,zero_shot,inline,relief,"After nearly forty interviews and a hundred applications with no positive results, receiving a job offer brought a strong sense of relief."
+52458,generic_human,one_shot,inline,relief,They felt relief at finally receiving a job offer after many failed interviews and applications.
+52458,generic_human,few_shot,numbered,relief,They felt relief after finally receiving a job offer after numerous failed applications.
+52458,generic_human,one_shot,numbered,relief,The author likely feels relief after enduring numerous unsuccessful interviews and applications before finally receiving a job offer.
+52458,generic_human,few_shot,inline,relief,"The author describes finally receiving a job offer after a long, frustrating search, which triggers relief."
+52458,persona_a,zero_shot,inline,relief,They felt relief at finally receiving a job offer after enduring many failed interviews and applications.
+52458,persona_a,zero_shot,numbered,relief,"After nearly forty failed interviews and a hundred applications, receiving a job offer brought relief and hopeful happiness."
+52458,persona_a,one_shot,numbered,relief,"After forty failed interviews and hundreds of applications, receiving a job offer would bring relief."
+52458,persona_a,one_shot,inline,relief,They felt relief at finally receiving a job offer after a long stretch of failed interviews and applications.
+52458,persona_a,few_shot,numbered,relief,"After enduring nearly forty failed interviews and many applications, receiving an offer would relieve the ongoing stress and disappointment."
+52458,persona_a,few_shot,inline,relief,The author feels relieved after finally receiving a job offer following a long period of unsuccessful interviews and applications.
+52458,persona_b,zero_shot,numbered,relief,They felt relief from finally receiving a job offer after many failed interviews and applications.
+52458,persona_b,zero_shot,inline,relief,They felt relief after enduring many interviews and applications without success before finally receiving a job offer.
+52458,persona_b,one_shot,numbered,relief,"After a long run of unsuccessful interviews and applications, receiving a job offer would bring a strong sense of relief."
+52458,persona_b,one_shot,inline,relief,"They felt relief after a long, difficult job search finally culminated in an offer."
+52458,persona_b,few_shot,numbered,relief,"After enduring many interviews and applications with no positive results, receiving the offer would evoke relief at the end of a stressful period."
+52828,neutral,zero_shot,numbered,fear,"The situation of gym staff actively checking for vaccine documents and ID likely caused the author to feel fearful, perceiving it as threatening or alarming."
+52458,persona_b,few_shot,inline,relief,"After enduring numerous rejections, receiving the offer would relieve the long, stressful job search."
+52828,neutral,zero_shot,inline,fear,The withholding implies the author felt anxious or worried about the checks and potential consequences.
+52828,neutral,one_shot,numbered,fear,The sense of scrutiny and potential consequences from being checked for documents likely caused anxiety and worry.
+52828,neutral,one_shot,inline,fear,The scenario of staff actively checking vaccine documents and IDs would naturally provoke fear about access and safety.
+52828,neutral,few_shot,numbered,fear,"The staff actively checking for vaccine documents and ID suggests a sense of threat or risk, which aligns with fear."
+52828,neutral,few_shot,inline,anger,The description implies irritation and resentment toward the intrusive vaccine and ID checks by gym staff.
+52828,generic_human,zero_shot,numbered,fear,The described situation of staff actively checking for vaccine documents and ID likely elicited anxiety and fear about being scrutinized or denied access.
+52828,generic_human,zero_shot,inline,anger,"The description of staff actively checking documents implies irritation and upset, indicating anger."
+52828,generic_human,one_shot,numbered,fear,The author’s reaction suggests anxiety and worry about being scrutinized and possibly denied entry due to vaccine and ID checks.
+52828,generic_human,one_shot,inline,fear,The author conveys nervousness and anxiety in response to the gym staff actively checking for COVID-19 vaccination documents and proper ID.
+52828,generic_human,few_shot,numbered,fear,The tense situation of staff actively checking vaccine documents and ID likely elicited fear or anxiety.
+52828,persona_a,zero_shot,numbered,surprise,"The emphasis on ""actively checking"" COVID-19 documentation suggests the speaker was surprised by the level of strictness in the protocols."
+52828,generic_human,few_shot,inline,fear,"The gym staff actively checking for vaccination documents and ID would typically trigger anxiety about safety and access, i.e., fear."
+52828,persona_a,zero_shot,inline,fear,The strict covid-vaccine and ID checks likely made the author feel anxious and fearful about safety and access.
+52828,persona_a,one_shot,numbered,fear,The author’s reaction to the strict vaccine and ID checks suggests they felt fear.
+52828,persona_a,one_shot,inline,fear,The author felt fear because strict COVID protocols and checks evoke anxiety about safety and potential consequences.
+52828,persona_a,few_shot,numbered,trust,The member feels confident in the gym's safety measures and trusts that strict protocols protect them.
+52828,persona_a,few_shot,inline,trust,"The strict, enforced safety protocols led the member to feel that the gym could be trusted to protect patrons."
+52828,persona_b,zero_shot,inline,anger,The text conveys anger toward the gym staff enforcing vaccine and ID checks.
+52828,persona_b,zero_shot,numbered,pride,The author’s framing as someone enforcing safety measures suggests a sense of satisfaction or pride in upholding the checks.
+52828,persona_b,one_shot,numbered,pride,"The text portrays the author as actively enforcing safety checks, suggesting a sense of duty and satisfaction."
+52828,persona_b,few_shot,numbered,pride,"The author’s description implies a positive, self-satisfied feeling about enforcing safety checks."
+52828,persona_b,one_shot,inline,pride,"The author, as a gym staff member enforcing routine checks, felt a sense of pride in upholding safety protocols."
+41722,neutral,zero_shot,numbered,pride,They felt a sense of pride and liberation at being able to publicly show affection without shame.
+41722,neutral,zero_shot,inline,relief,The author expresses release from shame and relief at being able to show affection publicly despite a hostile environment.
+41722,neutral,one_shot,numbered,pride,"The author feels pride at being able to hold hands and kiss their girlfriend in public without feeling any shame, despite the hostile environment."
+52828,persona_b,few_shot,inline,pride,The author expresses pride in enforcing the routine vaccine and ID checks to protect others.
+41722,neutral,one_shot,inline,pride,"The author expresses a positive, defiant feeling of pride in openly showing affection despite a hostile environment."
+41722,neutral,few_shot,inline,relief,The author expresses relief at being able to publicly hold hands and kiss without shame despite a hateful environment.
+41722,neutral,few_shot,numbered,pride,The author describes feeling proud to openly show affection for their girlfriend despite a hostile environment.
+41722,generic_human,zero_shot,numbered,relief,The moment described is about shedding shame and feeling freed from the negative emotions imposed by a homophobic environment.
+41722,generic_human,zero_shot,inline,relief,They felt relief from not experiencing shame while openly showing affection for their partner in public.
+41722,generic_human,one_shot,numbered,relief,The author experiences a release from shame and a sense of freedom when publicly displaying affection without feeling ashamed.
+41722,generic_human,one_shot,inline,pride,The author expresses a feeling of pride in being able to openly show affection without shame despite a homophobic environment.
+41722,generic_human,few_shot,numbered,pride,"The author feels pride in being able to publicly show affection without shame despite a hostile, homophobic environment."
+41722,generic_human,few_shot,inline,pride,The author expresses pride in openly showing affection without shame despite a hostile environment.
+41722,persona_a,zero_shot,numbered,relief,They felt relief at not experiencing shame while being able to hold hands and kiss their girlfriend in public despite a homophobic upbringing.
+41722,persona_a,zero_shot,inline,pride,The author felt pride in openly showing affection and overcoming the shame imposed by a homophobic environment.
+41722,persona_a,one_shot,inline,relief,The author experiences relief at not feeling shame while expressing affection publicly in a hostile environment.
+41722,persona_a,one_shot,numbered,relief,The author feels relief at being able to hold hands and kiss openly without feeling shame in spite of a homophobic environment.
+41722,persona_a,few_shot,numbered,pride,The narrator feels proud of openly expressing affection for their girlfriend in public despite growing up in a homophobic environment.
+41722,persona_a,few_shot,inline,relief,The author experiences a release from the shame imposed by a homophobic environment after openly showing affection.
+41722,persona_b,zero_shot,numbered,relief,The author felt relief at not feeling any shame about holding hands and kissing their girlfriend in public despite a homophobic environment.
+41722,persona_b,zero_shot,inline,relief,They felt relief at not feeling any shame for openly showing affection in public despite a homophobic environment.
+41722,persona_b,one_shot,inline,pride,The author expresses pride in being able to publicly hold hands and kiss without shame despite a hostile environment.
+41722,persona_b,one_shot,numbered,pride,The author describes feeling a sense of triumph and positive self-regard for openly showing affection without shame in a hostile environment.
+52895,neutral,zero_shot,numbered,joy,"The upfront payment made the speaker happy and ""made my day,"" indicating joy."
+41722,persona_b,few_shot,inline,relief,The author expresses a release from shame and a sense of freedom in publicly showing affection despite a hostile environment.
+41722,persona_b,few_shot,numbered,pride,The author feels a self-affirming positive emotion—pride—at being able to hold hands and kiss openly without shame in a hostile environment.
+52895,neutral,zero_shot,inline,joy,"The author expresses happiness and delight because the client paid upfront, and it ""made my day."""
+52895,neutral,one_shot,numbered,joy,"The text describes a positive outcome that made the author’s day, indicating happiness."
+52895,neutral,one_shot,inline,joy,"The upfront payment made their day, signaling positive emotion and happiness."
+52895,generic_human,zero_shot,numbered,joy,"The author expresses clear happiness and satisfaction from the upfront payment, describing it as something that “made my day.”"
+52895,neutral,few_shot,numbered,joy,"The upfront payment, though unexpected, created a positive, uplifting moment and made the author's day, indicating joy."
+52895,neutral,few_shot,inline,joy,The unexpected upfront payment from a client made the author feel happy and brighten their day.
+52895,generic_human,one_shot,numbered,joy,"The phrase ""made my day"" indicates happiness and positive emotion."
+52895,generic_human,zero_shot,inline,joy,"Receiving upfront payment unexpectedly made the author feel happy and upbeat, i.e., joy."
+52895,generic_human,one_shot,inline,joy,"The phrase ""made my day"" shows the author felt joyful about the upfront payment."
+52895,generic_human,few_shot,numbered,joy,"The upfront payment and the statement that it ""made my day"" express happiness and positive emotion."
+52895,persona_a,zero_shot,numbered,joy,"The unexpected upfront payment made the author happy and it “made my day,” signaling joy."
+52895,generic_human,few_shot,inline,joy,The unexpected upfront payment made them feel happy and brighten their day.
+52895,persona_a,zero_shot,inline,joy,"The text expresses that the upfront payment made their day, indicating happiness."
+52895,persona_a,one_shot,numbered,joy,"The unexpected upfront payment made the freelancer feel happy and satisfied, i.e., joy."
+52895,persona_a,one_shot,inline,joy,"The unexpected upfront payment made their day, signaling joy."
+52895,persona_a,few_shot,numbered,joy,"The upfront payment from the client made the freelancer's day, indicating happiness."
+52895,persona_a,few_shot,inline,joy,"The unexpected upfront payment made the freelancer feel joy, as it truly made their day."
+52895,persona_b,zero_shot,numbered,joy,"The phrase ""made my day"" expresses happiness and positive emotion at the upfront payment."
+52895,persona_b,zero_shot,inline,joy,"The author describes the upfront payment as making their day, indicating happiness and positive emotion."
+52895,persona_b,one_shot,numbered,joy,The upfront payment made the author feel joy and brighten their day.
+52895,persona_b,one_shot,inline,joy,"The upfront payment made the author happy and “made my day,” signaling joy."
+52895,persona_b,few_shot,numbered,joy,"The upfront payment created a positive, uplifting reaction, as suggested by the phrase ""made my day."""
+52895,persona_b,few_shot,inline,joy,"Getting paid upfront made the author feel joy because it ""made my day."""
+2212,neutral,zero_shot,numbered,joy,The author expresses joy from the cat sleeping by them.
+2212,neutral,zero_shot,inline,joy,The image of a cat sleeping peacefully beside me typically evokes happiness and warmth.
+2212,neutral,one_shot,numbered,joy,The calm and affectionate moment of the cat sleeping beside them evokes happiness and warmth.
+2212,neutral,one_shot,inline,joy,"The proximity of the cat sleeping by them evokes a warm, positive feeling—joy."
+2212,neutral,few_shot,numbered,joy,"The cat sleeping beside them evokes a positive, joyful feeling."
+2212,neutral,few_shot,inline,joy,"The phrase indicates a positive, warm emotion arising from the comforting presence of the cat sleeping beside the author."
+2212,generic_human,zero_shot,numbered,joy,"The line conveys a positive, happy feeling associated with the cat sleeping beside the speaker."
+2212,generic_human,one_shot,numbered,joy,"The author expresses a positive, warm feeling when the cat sleeps by them."
+2212,generic_human,zero_shot,inline,joy,The presence of the cat sleeping by them makes them feel happy.
+2212,generic_human,one_shot,inline,joy,"The calm, affectionate scenario of a cat sleeping by the author typically evokes happiness and warmth."
+2212,generic_human,few_shot,numbered,joy,It conveys a positive emotion (joy) triggered by the cat sleeping beside them.
+2212,generic_human,few_shot,inline,joy,"The warm, comforting feeling of the cat sleeping beside them is typically associated with joy."
+2212,persona_a,zero_shot,numbered,joy,"The situation of a cat sleeping beside them evokes warmth and happiness, suggesting the author feels joy."
+2212,persona_a,zero_shot,inline,joy,"The cat sleeping by them likely brings happiness and warmth, indicating joy."
+2212,persona_a,one_shot,numbered,joy,"The image of the cat sleeping beside them evokes a warm, comforting feeling and happiness."
+2212,persona_a,one_shot,inline,joy,The comfort and warmth of a cat sleeping beside them suggests the author feels joy.
+2212,persona_a,few_shot,numbered,joy,"The author describes a warm, happy moment with their cat sleeping beside them, which evokes joy."
+2212,persona_a,few_shot,inline,joy,"The cat sleeping beside them evokes a warm, positive feeling, which is joy."
+2212,persona_b,zero_shot,numbered,joy,"The text conveys a positive, warm feeling toward the cat sleeping by the author."
+2212,persona_b,zero_shot,inline,joy,"The mention of a cat sleeping by the author suggests a warm, happy feeling."
+2212,persona_b,one_shot,numbered,joy,"The statement conveys a warm, positive feeling about the cat sleeping by the author."
+2212,persona_b,one_shot,inline,joy,"The statement conveys a warm, positive feeling toward the cat sleeping by them, indicating joy."
+2212,persona_b,few_shot,inline,joy,"The cat sleeping by the author evokes a positive, warm feeling, reflecting happiness."
+2212,persona_b,few_shot,numbered,trust,The cat choosing to sleep by the veterinarian suggests a sense of trust and safety in the animal toward the caregiver.
+2213,neutral,zero_shot,numbered,trust,"The sentence implies the author trusted their manager to keep the promise, and it turned out well."
+2213,neutral,zero_shot,inline,relief,"The writer emphasizes that the situation ended well, indicating they felt relieved about the positive outcome."
+2213,neutral,one_shot,numbered,trust,"The speaker indicates they trusted the manager's promise, and the outcome being positive confirms that trust."
+2213,neutral,one_shot,inline,relief,"The situation ends positively after a temporary hardship, suggesting the author felt relieved."
+2213,neutral,few_shot,numbered,relief,"The pay cut was stressful, but the situation ended positively, so the author feels relief."
+2213,neutral,few_shot,inline,relief,The pay cut situation resolved positively and the speaker expresses feeling relieved that it all worked out.
+2213,generic_human,zero_shot,inline,relief,They felt relieved that the pay cut and promised return ended up working out positively.
+2213,generic_human,one_shot,numbered,relief,"The situation started with a sacrifice but ended well, indicating relief."
+2213,generic_human,zero_shot,numbered,trust,"The author’s statement implies reliance on the manager’s promise and a positive outcome, indicating trust."
+2213,generic_human,few_shot,numbered,relief,"The pay reduction was stressful, but it ended well, indicating relief."
+2213,generic_human,one_shot,inline,relief,"The pay cut was likely a source of worry, but since it resolved positively, the author likely felt relief."
+2213,generic_human,few_shot,inline,relief,"The author faced a stressful voluntary pay reduction that ended up working out, indicating relief."
+2213,persona_a,zero_shot,inline,relief,They felt relief that the pay cut situation resolved positively after the promised return and reward.
+2213,persona_a,zero_shot,numbered,trust,"The narrator’s statement implies they believed and trusted the manager’s promise, and the positive outcome reinforces that feeling."
+2213,persona_a,few_shot,numbered,relief,The outcome was positive and the speaker expresses release from worry about the pay cut.
+2213,persona_a,one_shot,inline,relief,The narrator is relieved that the promised payback and reward for the sacrifice worked out.
+2213,persona_a,one_shot,numbered,relief,The author expresses relief that the challenging pay-cut situation resolved positively and the sacrifice paid off.
+2213,persona_a,few_shot,inline,relief,"The narrator describes a stressful financial sacrifice that ultimately resolved positively, yielding relief."
+2213,persona_b,zero_shot,numbered,relief,The author likely felt relief that the temporary pay cut and promises ended well and the situation resolved positively.
+2213,persona_b,zero_shot,inline,relief,The author expresses relief that the difficult situation ended positively after the temporary pay cut.
+2213,persona_b,one_shot,numbered,trust,"The author indicates they trusted their manager, and the positive outcome confirms that feeling."
+2213,persona_b,one_shot,inline,relief,"The text ends with ""it all worked out well,"" indicating relief that the pay reduction situation resolved positively."
+2213,persona_b,few_shot,numbered,relief,"The author describes a situation that ended well, indicating relief rather than ongoing worry or other emotions."
+2213,persona_b,few_shot,inline,relief,"The text describes a temporary pay reduction that ultimately worked out well, implying the author feels relieved."
+41548,neutral,zero_shot,numbered,guilt,They felt guilty about cheating on their partner and concealing the Tinder profile.
+41548,neutral,zero_shot,inline,guilt,"The discovery of their secret profile and having used it during the relationship suggests remorse for the betrayal, i.e., guilt."
+41548,neutral,one_shot,numbered,guilt,"The secret dating app use during the relationship indicates wrongdoing toward the partner, which commonly triggers guilt."
+41548,neutral,one_shot,inline,guilt,"They describe secretly using a dating app during a relationship, which would lead to feelings of guilt for betraying their partner."
+41548,neutral,few_shot,numbered,guilt,The author’s secret use of a dating app during the relationship and its discovery point to feeling guilt for betraying trust.
+41548,generic_human,zero_shot,numbered,guilt,They feel guilt for betraying their partner by secretly using a dating app during the relationship.
+41548,neutral,few_shot,inline,guilt,They feel remorse for having cheated and betrayed their partner's trust.
+41548,generic_human,zero_shot,inline,guilt,"They cheated by secretly using a dating app, and the discovery triggered feelings of guilt."
+41548,generic_human,one_shot,numbered,guilt,The author felt guilt for secretly using a dating app during the relationship and betraying trust.
+41548,generic_human,one_shot,inline,guilt,"They betrayed their partner by secretly using a dating app, which commonly provokes feelings of guilt when discovered."
+41548,generic_human,few_shot,numbered,guilt,The secret dating app use within the relationship suggests remorse for a deceptive action.
+41548,generic_human,few_shot,inline,guilt,The author feels guilt for betraying their partner by secretly using a dating app during the relationship.
+41548,persona_a,zero_shot,numbered,guilt,They felt remorse for being unfaithful and acknowledged consequences they deserved.
+41548,persona_a,one_shot,numbered,guilt,"The speaker acknowledges wrongdoing (infidelity) and anticipates consequences they deserve, indicating feelings of guilt."
+41548,persona_a,zero_shot,inline,guilt,The author expresses remorse for cheating and acknowledging they deserve the consequences.
+41548,persona_a,one_shot,inline,guilt,The speaker acknowledges cheating and feels remorseful and responsible for the wrongdoing and the consequences they now face.
+41548,persona_a,few_shot,numbered,guilt,"They admit to cheating and acknowledge the consequences they deserve, signaling guilt."
+41548,persona_a,few_shot,inline,guilt,"They acknowledge being unfaithful and facing consequences they deserve, signaling guilt for cheating."
+41548,persona_b,zero_shot,numbered,guilt,They feel guilt for secretly using a dating app during the relationship and the insecurity behind it.
+41548,persona_b,zero_shot,inline,guilt,They acted dishonestly out of insecurity and feel guilty when their secret profile was discovered.
+41548,persona_b,one_shot,numbered,guilt,"They engaged in deceptive behavior by secretly using a dating profile out of insecurity, which would elicit guilt when discovered."
+41548,persona_b,one_shot,inline,guilt,"They secretly used a dating app out of insecurity and betrayed their partner's trust, which led to feelings of guilt."
+41548,persona_b,few_shot,numbered,guilt,The author engaged in a secret dating app profile out of insecurity and now feels remorse for betraying their relationship.
+41548,persona_b,few_shot,inline,guilt,"The author describes secretly using a dating app during the relationship, indicating remorse for betraying their partner's trust."

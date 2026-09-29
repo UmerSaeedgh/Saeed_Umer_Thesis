@@ -1,0 +1,3 @@
+source,texts,neutral_persona_comparisons,observations_per_text,minimum_votes,maximum_votes
+Human,300,600,2,3,7
+LLM,300,3600,12,4,7

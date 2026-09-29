@@ -1,0 +1,2385 @@
+"""
+Builds distribution_analysis_v1/02_persona_effects_and_conclusions.ipynb -- Part 2 (sections
+7-14), REVISED per the 2026-09-21 methodological review:
+- magnitude and direction always reported together, explicit "neither alone is sufficient" note
+- a single-text worked delta-vector example added BEFORE Section 9's aggregate analysis
+- per-model direction-tracking properly aggregated to TEXT level first (was pseudoreplicated),
+  with text-clustered bootstrap CIs
+- "same underlying skill" language replaced with "association" + explicit small-n (7 models) caveat
+- new/disappeared-emotion section reframed as exploratory and sample-size-caveated
+- emotion-word-leak section's causal language toned down to a transparent, non-causal description
+- PRIMARY/SECONDARY/EXPLORATORY labels applied throughout
+- unit-of-analysis note added under every formal test
+- Section 12 restructured as explicit Hypothesis -> Operationalization -> Test -> Effect+CI -> p
+  -> Interpretation blocks, with Supported/Partially supported/Not supported verdicts
+- new Section 14 subsection: majority-label exact-match comparison, framed as information
+  preservation, not "vectors are better"
+- full language audit for overclaiming words
+
+Run: python build_notebook_2.py
+Then: jupyter nbconvert --to notebook --execute --inplace <output path>
+"""
+import nbformat as nbf
+from pathlib import Path
+
+OUT_PATH = Path(r"C:\Users\umers\Desktop\thesis\thesis final\distribution_analysis_v1\02_persona_effects_and_conclusions.ipynb")
+
+nb = nbf.v4.new_notebook()
+cells = []
+
+
+def md(text):
+    cells.append(nbf.v4.new_markdown_cell(text))
+
+
+def code(text):
+    cells.append(nbf.v4.new_code_cell(text))
+
+
+md("""# Part 2: Persona Effects, Human-LLM Alignment & Conclusions
+
+Continues directly from `01_foundations_and_baseline.ipynb`. Covers sections 7-14: the human
+persona effect, the LLM persona effect, a worked single-text example of the central comparison,
+the human-vs-LLM shift-alignment analysis (ensemble-level and per-model), model/prompt
+breakdowns, emotion-level analysis, formal hypothesis verdicts, six qualitative case studies with
+dataset-wide pattern quantification, and the final conclusions — including a direct comparison of
+what a majority-label analysis would and would not have shown.
+
+**Labeling convention** (see Part 1 Section 1): **[PRIMARY]** = directly operationalizes H1-H4;
+**[SECONDARY]** = planned descriptive/robustness analysis; **[EXPLORATORY]** = not planned in the
+proposal, reported honestly but never treated as confirmatory.""")
+
+code("""import sys
+import math
+import warnings
+from itertools import combinations
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+%matplotlib inline
+warnings.filterwarnings('ignore', category=RuntimeWarning)
+sys.path.insert(0, str(Path.cwd().parent / 'scripts'))
+from plot_style import setup_style, sig_bracket, sig_stars, stat_box, violin_box_strip, vector_bar_pair, categorical_proportion_bars, COLORS
+setup_style()
+
+from emotion_vectors import EMOTIONS, build_vector, safe_cosine_similarity, dominant_set, delta_vector
+import stats_utils as su
+from build_emotion_distributions import (
+    BASE, OUT_DIR, POOL_TO_KEY, POOL_LABEL, MODEL_COLS, MODEL_RAW_COLS, _normalize_label_fallback,
+)
+
+pd.set_option('display.max_columns', 50)
+pd.set_option('display.width', 140)
+CATEGORY_ORDER = ['unambiguous', 'author_independent', 'author_relevant']
+CATEGORY_LABELS = [POOL_LABEL[c] for c in CATEGORY_ORDER]
+
+qc_report = (OUT_DIR / 'interpretation' / 'analysis_qc_report.md').read_text(encoding='utf-8')
+assert 'Gate status: PASS' in qc_report, "QC GATE HAS NOT PASSED"
+print("QC gate PASS confirmed.")
+
+human_cmp = pd.read_csv(OUT_DIR / 'human_neutral_persona_comparisons.csv')
+llm_cmp = pd.read_csv(OUT_DIR / 'llm_neutral_persona_comparisons.csv')
+matched = pd.read_csv(OUT_DIR / 'human_vs_llm_matched.csv')
+human_vectors = pd.read_csv(OUT_DIR / 'human_vectors.csv')
+llm_vectors = pd.read_csv(OUT_DIR / 'llm_ensemble_vectors.csv')
+human_annotations = pd.read_csv(BASE / 'human_annotations.csv')
+human_annotations['text_id'] = human_annotations['text_id'].astype(str)
+human_annotations['pool_key'] = human_annotations['pool'].map(POOL_TO_KEY)
+for df in (human_cmp, llm_cmp, matched, human_vectors, llm_vectors):
+    df['text_id'] = df['text_id'].astype(str)
+
+# --- SINGLE AUTHORITATIVE CATEGORY SOURCE (audit repair, 2026-09-21) -------------------------
+# Previously: pool_of_text = human_annotations.drop_duplicates('text_id')[...]['pool_key'].
+# That was wrong for 9 texts. human_annotations.csv is internally self-contradictory on them:
+# their 'neutral' rows say Unambiguous while their persona (a/b) rows say author_relevant --
+# they were re-classified between the neutral and the persona collection rounds. Because
+# drop_duplicates() keeps whichever row appears first (side 'a'), those 9 texts silently entered
+# every human-side analysis as author_relevant, making the category grouping 91/100/109 instead
+# of the designed, balanced 100/100/100 -- and disagreeing with Section 10, which reads the
+# category off the LLM comparison table instead. That mismatch is the entire reason Section 8 and
+# Section 10 reported different numbers for the same quantity.
+# sampled_texts.csv is the master file the corpus was stratified on; experiment_results_all.csv
+# and both *_neutral_persona_comparisons.csv already agree with it. We therefore take it as the
+# single source of truth, everywhere, and never read the category off human_annotations again.
+CATEGORY_SOURCE = 'master'   # 'master' = sampled_texts.csv (authoritative) | 'persona_round' = old behaviour
+sampled_texts = pd.read_csv(BASE / 'sampled_texts.csv')
+sampled_texts['text_id'] = sampled_texts['text_id'].astype(str)
+pool_master = sampled_texts.set_index('text_id')['classification'].map(POOL_TO_KEY)
+pool_persona_round = human_annotations.drop_duplicates('text_id').set_index('text_id')['pool_key']
+pool_of_text = pool_master if CATEGORY_SOURCE == 'master' else pool_persona_round
+
+_cmp_src = pd.DataFrame({'master': pool_master, 'persona_round': pool_persona_round}).dropna()
+_disagree = sorted(_cmp_src.index[_cmp_src['master'] != _cmp_src['persona_round']], key=int)
+print(f"Category source = {CATEGORY_SOURCE} (sampled_texts.csv). "
+      f"Category counts: {pool_of_text.value_counts().reindex(CATEGORY_ORDER).to_dict()}")
+print(f"{len(_disagree)} texts are classified inconsistently inside human_annotations.csv "
+      f"(neutral row vs persona rows); all resolved to the master file's value:")
+print(f"  {_disagree}")
+if _disagree:
+    print("  master says:", _cmp_src.loc[_disagree,'master'].unique().tolist(),
+          "| persona rows say:", _cmp_src.loc[_disagree,'persona_round'].unique().tolist())
+print("  See the H3 sensitivity check in Section 12, which runs the analysis both ways.")
+
+# Raw human vote multisets + a count-based TV, defined once here because several later sections
+# (the H3 null-referencing and the H4 count-standardization) need to work from raw votes rather
+# than from the pre-built probability vectors, so that vote COUNTS can be manipulated directly.
+human_votes = {}
+for _, _r in human_annotations.iterrows():
+    _v = [x.strip().lower() for x in str(_r['raters_raw']).split('|') if x.strip()]
+    human_votes[(str(_r['text_id']), _r['side'])] = [x for x in _v if x in EMOTIONS]
+
+EI = {e: i for i, e in enumerate(EMOTIONS)}
+def tv_counts(a, b):
+    # Total-variation distance between two vote multisets, computed from raw counts.
+    va = np.zeros(len(EMOTIONS)); vb = np.zeros(len(EMOTIONS))
+    for x in a: va[EI[x]] += 1
+    for x in b: vb[EI[x]] += 1
+    return 0.5 * np.abs(va/va.sum() - vb/vb.sum()).sum()
+
+human_valid = human_cmp[human_cmp['valid_comparison']==True].copy()
+llm_valid = llm_cmp[llm_cmp['valid_comparison']==True].copy()
+matched['category'] = matched['pool_key'].map(POOL_LABEL)
+print(f"human_cmp: {len(human_valid)} valid | llm_cmp: {len(llm_valid)} valid | matched: {len(matched)}")
+""")
+
+# ===========================================================================
+# SECTION 7
+# ===========================================================================
+md("""## 7. Human persona effect: neutral human vector → persona human vector
+
+**[PRIMARY — operationalizes H1]** For each text, compare the neutral-framing human vector
+(this study's own new neutral round — see Part 1 Section 1.1) to each persona-framing human
+vector (a/b), then compare shift magnitude across the 3 categories. Recall from Part 1 Section 4
+that even two *independent* "no persona" measurements show 31.5%-52.9% distribution dissimilarity
+— the shift magnitudes below should be read against that context, not against zero.
+
+**Unit of analysis:** one row per text (text-level mean of persona_a and persona_b comparisons),
+300 texts — no repeated-text pseudoreplication in this aggregation.""")
+
+code("""text_level = human_valid.groupby('text_id').agg(
+    tv_distance=('tv_distance','mean'), entropy_change=('entropy_change','mean'),
+    max_probability_change=('max_probability_change','mean'), support_size_change=('support_size_change','mean'),
+).reset_index()
+text_level['pool_key'] = text_level['text_id'].map(pool_of_text)
+text_level['category'] = text_level['pool_key'].map(POOL_LABEL)
+
+fig, ax = plt.subplots(figsize=(7.5,6))
+groups = [text_level[text_level['category']==c]['tv_distance'].values*100 for c in CATEGORY_LABELS]
+violin_box_strip(ax, groups, CATEGORY_LABELS, colors=[COLORS[c] for c in CATEGORY_LABELS],
+                  ylabel='Human persona shift magnitude (TV, %)', title='Human: neutral -> persona vector shift, by category (MAGNITUDE only)', title_pad=16)
+ax.tick_params(axis='x', rotation=15)
+kw_stat, kw_p = su.kruskal_wallis(*groups)
+sig_bracket(ax, 1, 3, p=kw_p, text=f'{sig_stars(kw_p)}  p={kw_p:.2e}')
+plt.tight_layout()
+plt.show()
+
+for c in CATEGORY_ORDER:
+    sub = text_level[text_level['pool_key']==c]
+    print(f"{POOL_LABEL[c]}: n={len(sub)} mean shift={sub['tv_distance'].mean()*100:.1f}% (median={sub['tv_distance'].median()*100:.1f}%)")
+print()
+print("NOTE: TV distance is a MAGNITUDE-only measure -- it says nothing about which emotions moved")
+print("or in what direction. The redistribution/transition analysis below, and the direction")
+print("(delta-vector) analysis in Section 9, are necessary complements, not optional extras.")
+""")
+
+md("""### What changed: redistribution, dominant-emotion transitions, new/disappeared emotions
+
+**[SECONDARY]** Magnitude (TV) and dominant-label change are analytically distinct: a text can
+shift a lot in TV while its dominant emotion survives, or shift little while the dominant emotion
+flips (e.g. in a near-tied vector). Both are reported; neither substitutes for the other.""")
+
+code("""dom_changed_rate = human_valid.groupby('pool_key')['dominant_emotion_changed'].mean().reindex(CATEGORY_ORDER)
+new_rate = human_valid.groupby('pool_key')['new_emotion_introduced'].mean().reindex(CATEGORY_ORDER)
+dis_rate = human_valid.groupby('pool_key')['emotion_disappeared'].mean().reindex(CATEGORY_ORDER)
+summary = pd.DataFrame({'category': CATEGORY_LABELS, 'dominant_emotion_change_rate': dom_changed_rate.values,
+                         'new_emotion_rate': new_rate.values, 'disappeared_emotion_rate': dis_rate.values})
+display(summary.round(3))
+""")
+
+# AUDIT REPAIR (2026-09-21): `dominant_emotion_changed` is True only when the neutral and persona
+# dominant SETS are wholly disjoint. Everything else -- including "guilt" becoming a {guilt, shame}
+# tie, or a {joy, pride} tie resolving to just "pride" -- was being reported as "unchanged". That
+# is a real movement in the modal judgment being filed under the label "no change". The binary is
+# kept (it is what the H-tests use) but the four distinct outcomes are now reported beside it.
+md("""#### The "unchanged" category is doing too much work
+
+**[SECONDARY — added 2026-09-21]** `dominant_emotion_changed` is defined as *fully disjoint*
+dominant sets. That makes it conservative in a specific and somewhat misleading way: a text whose
+neutral dominant is `guilt` and whose persona dominant is a `{guilt, shame}` tie is recorded as
+**unchanged**, even though the modal judgment demonstrably moved. The binary is retained
+unmodified (the formal tests use it, and it is the conservative choice), but reporting only two
+buckets overstates how much genuinely stayed put, so all four outcomes are broken out here.""")
+
+code("""def dom_outcome(row):
+    n = set(str(row['neutral_dominant']).split('|'))
+    p = set(str(row['persona_dominant']).split('|'))
+    if n == p: return 'A. identical set'
+    if not (n & p): return 'D. fully disjoint (-> CHANGED)'
+    if len(n) == 1 and len(p) > 1: return 'B. single emotion split into a tie'
+    if len(n) > 1 and len(p) == 1: return 'C. tie resolved to a single emotion'
+    return 'B/C. partial overlap of two ties'
+
+OUTCOMES = ['A. identical set','B. single emotion split into a tie','C. tie resolved to a single emotion',
+            'B/C. partial overlap of two ties','D. fully disjoint (-> CHANGED)']
+rows4 = []
+for name, d in (('Human', human_valid), ('LLM ensemble', llm_valid)):
+    oc = d.apply(dom_outcome, axis=1).value_counts(normalize=True).reindex(OUTCOMES).fillna(0)*100
+    rows4.append(pd.Series(oc, name=name))
+dom4 = pd.DataFrame(rows4)
+display(dom4.round(1))
+
+fig, ax = plt.subplots(figsize=(11.5, 5.5))
+bottom = np.zeros(len(dom4))
+palette = ['#4C72B0','#8FB0D8','#DDA15E','#C9ADA7','#C44E52']
+for i, oc in enumerate(OUTCOMES):
+    ax.barh(np.arange(len(dom4)), dom4[oc].values, left=bottom, color=palette[i], label=oc)
+    for j, v in enumerate(dom4[oc].values):
+        if v > 3.5:
+            ax.text(bottom[j]+v/2, j, f'{v:.0f}%', ha='center', va='center', fontsize=9,
+                    color='white' if i in (0,4) else 'black', fontweight='bold')
+    bottom += dom4[oc].values
+ax.set_yticks(np.arange(len(dom4))); ax.set_yticklabels(dom4.index)
+ax.set_xlabel('% of valid comparisons'); ax.set_xlim(0, 100)
+ax.set_title('Dominant-emotion outcomes: four distinct cases, not two\\n(only the rightmost is counted as "changed" by dominant_emotion_changed)', pad=14)
+ax.legend(fontsize=8, loc='lower center', bbox_to_anchor=(0.5,-0.38), ncol=2)
+ax.grid(False)
+plt.tight_layout(); plt.show()
+
+for name in dom4.index:
+    not_identical = dom4.loc[name, OUTCOMES[1:4]].sum()
+    reported_unchanged = 100 - dom4.loc[name, OUTCOMES[4]]
+    print(f"{name}: reported 'unchanged' = {reported_unchanged:.1f}%, but only "
+          f"{dom4.loc[name, OUTCOMES[0]]:.1f}pp of that is an IDENTICAL dominant set -- "
+          f"{not_identical:.1f}pp involves a tie forming, resolving, or partially overlapping.")
+""")
+
+code("""def build_transition_matrix(df, label):
+    unique_dom = df[(~df['neutral_dominant'].astype(str).str.contains(r'\\|')) & (~df['persona_dominant'].astype(str).str.contains(r'\\|')) &
+                     df['neutral_dominant'].notna() & (df['neutral_dominant'] != '')]
+    n_total, n_retained = len(df), len(unique_dom)
+    trans = unique_dom.groupby(['neutral_dominant','persona_dominant']).size().reset_index(name='count')
+    return trans, n_retained, n_total
+
+trans_human, n_ret_h, n_tot_h = build_transition_matrix(human_valid, 'human')
+trans_llm, n_ret_l, n_tot_l = build_transition_matrix(llm_valid, 'llm')
+
+fig, axes = plt.subplots(1, 2, figsize=(15, 6.5))
+for ax, trans, n_ret, n_tot, label in zip(axes, (trans_human, trans_llm), (n_ret_h, n_ret_l), (n_tot_h, n_tot_l), ('HUMAN', 'LLM ENSEMBLE')):
+    mat = trans.pivot_table(index='neutral_dominant', columns='persona_dominant', values='count', fill_value=0).reindex(index=list(EMOTIONS), columns=list(EMOTIONS), fill_value=0)
+    im = ax.imshow(mat.values, cmap='viridis', aspect='auto')
+    ax.set_xticks(range(11)); ax.set_xticklabels(EMOTIONS, rotation=90, fontsize=8)
+    ax.set_yticks(range(11)); ax.set_yticklabels(EMOTIONS, fontsize=8)
+    ax.set_title(f'{label} dominant-emotion transitions\\n(unique-dominant only, tie-aware: n={n_ret}/{n_tot} retained)', pad=12)
+    ax.set_xlabel('Persona dominant emotion'); ax.set_ylabel('Neutral dominant emotion')
+    ax.grid(False)
+    fig.colorbar(im, ax=ax, fraction=0.046, label='count')
+plt.tight_layout()
+plt.show()
+
+for label, mat_df in (('Human', trans_human), ('LLM', trans_llm)):
+    off_diag = mat_df[mat_df['neutral_dominant']!=mat_df['persona_dominant']].sort_values('count', ascending=False)
+    print(f"{label}: most frequent dominant-emotion FLIP in this dataset: {off_diag.iloc[0]['neutral_dominant']} -> {off_diag.iloc[0]['persona_dominant']} ({off_diag.iloc[0]['count']} occurrences)")
+""")
+
+md("""> **Key finding:** both matrices are diagonal-dominant (the dominant emotion usually survives
+> a persona change) — consistent with the 20-40% dominant-change rates above. The single most
+> frequent flip differs between sources: humans most often move a neutral-dominant "joy" to
+> "relief" (8 occurrences), the LLM ensemble most often moves "joy" to "pride" (46 occurrences).
+> Both replacements keep a positive valence, though the specific emotion differs — reported here
+> descriptively; this dataset does not support a stronger claim about why. The tie-aware method
+> (rows/columns restricted to a *unique* dominant emotion on both sides) is stated explicitly
+> rather than resolving ties arbitrarily.""")
+
+# ===========================================================================
+# SECTION 8
+# ===========================================================================
+md("""## 8. LLM persona effect: neutral ensemble vector → persona ensemble vector
+
+**[PRIMARY — operationalizes H2; the category-ordering component previews H3]** Same logic, for
+the 7-model LLM ensemble, stratified by exact prompt configuration (never pooled).
+
+**Unit of analysis:** one row per text (per-config means averaged within each text, then within
+category), 300 texts.""")
+
+code("""llm_text_level = (llm_valid.groupby(['text_id','prompt_variant','label_format'])['tv_distance'].mean()
+                  .groupby('text_id').mean().reset_index())
+llm_text_level['pool_key'] = llm_text_level['text_id'].map(pool_of_text)
+llm_text_level['category'] = llm_text_level['pool_key'].map(POOL_LABEL)
+
+fig, ax = plt.subplots(figsize=(7.5,6))
+groups = [llm_text_level[llm_text_level['category']==c]['tv_distance'].values*100 for c in CATEGORY_LABELS]
+violin_box_strip(ax, groups, CATEGORY_LABELS, colors=[COLORS[c] for c in CATEGORY_LABELS],
+                  ylabel='LLM ensemble shift magnitude (TV, %, avg. across 6 configs)', title='LLM: neutral -> persona vector shift, by category (MAGNITUDE only)', title_pad=16)
+ax.tick_params(axis='x', rotation=15)
+kw_stat, kw_p = su.kruskal_wallis(*groups)
+sig_bracket(ax, 1, 3, p=kw_p, text=f'{sig_stars(kw_p)}  p={kw_p:.2e}')
+plt.tight_layout()
+plt.show()
+
+for c in CATEGORY_ORDER:
+    sub = llm_text_level[llm_text_level['pool_key']==c]
+    print(f"{POOL_LABEL[c]}: n={len(sub)} mean shift={sub['tv_distance'].mean()*100:.1f}%")
+print()
+print("This Kruskal-Wallis test is SECONDARY/descriptive support for H2 (a formal, Holm-corrected")
+print("test of the category ordering itself, on human data, is the PRIMARY test for H3 in Section 12).")
+""")
+
+md("""### A data-quality correction made during this analysis, reported transparently
+
+**[Methods note, not a hypothesis test]** During this analysis, 49/300 texts (16.3%) were found
+to have the author's actual emotion word present in the LLM stimulus text for a subset of the raw
+model-response cells (a prompt-generation artifact predating this analysis), which was corrected
+by regenerating those prompts and re-collecting all 7 models' answers for the affected rows. The
+before/after numbers below (both computed with the same "mean of 6 per-config category means"
+metric) are reported for transparency about what changed in the data during this project, not as
+a statistical test.""")
+
+code("""# 'before' is a historical snapshot of the pre-correction data (retained in
+# backup_pre_hidden_emo_fix/) and cannot be recomputed from the current files, so it stays literal.
+# AUDIT REPAIR (2026-09-21): 'after' was ALSO hardcoded, and was taken from the Section-10 route
+# while the Section-8 figure two cells above used a different category source -- so this chart and
+# that one disagreed about the same quantity. 'after' is now computed live from the current data
+# using the same single category source as everything else, so the two can no longer drift apart.
+leak_fix_before = {'Unambiguous': 8.7, 'Author-Independent Ambiguous': 12.2, 'Author-Relevant Ambiguous': 28.8}
+_after = (llm_valid.assign(_k=llm_valid['text_id'].map(pool_of_text))
+          .groupby(['_k','prompt_variant','label_format'])['tv_distance'].mean()
+          .reset_index().groupby('_k')['tv_distance'].mean() * 100)
+leak_fix_after = {POOL_LABEL[c]: float(_after[c]) for c in CATEGORY_ORDER}
+n_leaked = {'Unambiguous': 26, 'Author-Independent Ambiguous': 14, 'Author-Relevant Ambiguous': 9}
+print("'after' recomputed live from current data:", {k: round(v,2) for k,v in leak_fix_after.items()})
+
+fig, ax = plt.subplots(figsize=(9, 6.5))
+x = np.arange(3)
+width = 0.35
+ax.bar(x - width/2, [leak_fix_before[c] for c in CATEGORY_LABELS], width=width, label='Before correction', color='#B0B0B0')
+ax.bar(x + width/2, [leak_fix_after[c] for c in CATEGORY_LABELS], width=width, label='After correction', color='#DD8452')
+ax.set_ylim(0, max(leak_fix_after.values()) * 1.28)
+for i, c in enumerate(CATEGORY_LABELS):
+    delta = leak_fix_after[c] - leak_fix_before[c]
+    ax.annotate(f'+{delta:.1f}pp\\n({n_leaked[c]} texts affected)', xy=(i, max(leak_fix_before[c], leak_fix_after[c]) + 1.5),
+                ha='center', fontsize=9, fontweight='bold')
+ax.set_xticks(x); ax.set_xticklabels(CATEGORY_LABELS, rotation=15, ha='right')
+ax.set_ylabel('LLM persona shift magnitude (%, mean-of-6-config-means)')
+ax.set_title('Data-quality correction: before vs. after, by category', pad=14)
+ax.legend(fontsize=9, loc='upper left')
+plt.tight_layout()
+plt.show()
+""")
+
+md("""> **Observation, stated without a causal claim:** the size of the change (+2.6pp, +2.9pp,
+> +0.3pp) tracks the number of affected texts per category (26, 14, 9) in this single before/after
+> comparison. This is consistent with the correction having removed a confound that suppressed
+> the measured effect specifically in the affected texts, but **this proportionality was not
+> formally tested** (e.g. no test of the before/after difference against the number of affected
+> texts was run), the comparison has only 3 category-level data points, and category differences
+> unrelated to the correction could also contribute. All hypothesis verdicts in Section 12 are
+> unchanged whether the before- or after-correction data is used; the corrected data is used
+> throughout this analysis because it is the accurate description of the actual stimulus text.""")
+
+code("""def load_llm_individual_labels():
+    df = pd.read_csv(BASE / 'experiment_results_all.csv')
+    df['pool_key'] = df['classification'].map(POOL_TO_KEY)
+    df['text_id'] = df['text_id'].astype(str)
+    for model, norm_col in MODEL_COLS.items():
+        raw_col = MODEL_RAW_COLS[model]
+        norm_vals = df[norm_col].astype(str).str.strip().str.lower()
+        needs_fallback = df[norm_col].isna() | (df[norm_col].astype(str).str.strip()=='')
+        resolved = norm_vals.where(~needs_fallback, None)
+        fallback_vals = df.loc[needs_fallback, raw_col].apply(lambda v: _normalize_label_fallback(v) if pd.notna(v) else None)
+        resolved.loc[needs_fallback] = fallback_vals
+        resolved = resolved.where(resolved.isin(EMOTIONS), None)
+        df[f'{model}__resolved'] = resolved
+    return df
+
+llm_indiv = load_llm_individual_labels()
+model_change_rows = []
+for (tid, pv, lf), g in llm_indiv.groupby(['text_id','prompt_variant','label_format']):
+    by_framing = {r['framing_condition']: r for _, r in g.iterrows()}
+    if 'neutral' not in by_framing: continue
+    nrow = by_framing['neutral']
+    for framing, side in (('persona_a','a'), ('persona_b','b')):
+        if framing not in by_framing: continue
+        prow = by_framing[framing]
+        for model in MODEL_COLS:
+            n_label, p_label = nrow[f'{model}__resolved'], prow[f'{model}__resolved']
+            if n_label is None or p_label is None: continue
+            model_change_rows.append({'model': model, 'text_id': tid, 'pool_key': nrow['pool_key'], 'changed': n_label != p_label})
+model_change_df = pd.DataFrame(model_change_rows)
+# text-level aggregation first (fraction of side x config cells that changed, per text), THEN average across texts
+model_change_text_level = model_change_df.groupby(['model','pool_key','text_id'])['changed'].mean().reset_index()
+rate_table = model_change_text_level.groupby(['model','pool_key'])['changed'].mean().unstack().reindex(columns=CATEGORY_ORDER)
+rate_table.columns = CATEGORY_LABELS
+rate_table = rate_table.sort_values(CATEGORY_LABELS[2], ascending=False)
+
+fig, ax = plt.subplots(figsize=(10, 5.5))
+x = np.arange(len(rate_table))
+width = 0.25
+for i, c in enumerate(CATEGORY_LABELS):
+    ax.bar(x + (i-1)*width, rate_table[c].values*100, width=width, label=c, color=COLORS[c])
+ax.set_xticks(x); ax.set_xticklabels(rate_table.index, rotation=15)
+ax.set_ylabel('Mean label-change rate (%, text-level)')
+ax.set_title('Every one of the 7 models individually shows the same category ordering', pad=14)
+ax.legend(fontsize=8)
+plt.tight_layout()
+plt.show()
+display((rate_table*100).round(1))
+most_sensitive = rate_table[CATEGORY_LABELS[2]].idxmax()
+least_sensitive = rate_table[CATEGORY_LABELS[2]].idxmin()
+print(f"\\nHighest observed mean on Author-Relevant: {most_sensitive} ({rate_table.loc[most_sensitive, CATEGORY_LABELS[2]]*100:.1f}%)")
+print(f"Lowest observed mean on Author-Relevant: {least_sensitive} ({rate_table.loc[least_sensitive, CATEGORY_LABELS[2]]*100:.1f}%)")
+print("No pairwise significance test was run between models here -- 'highest/lowest observed mean', not 'best/worst'.")
+""")
+
+md("""> **Key finding [SECONDARY, supports H2/H3]:** the category ordering (Unambiguous <
+> Author-Independent < Author-Relevant) holds for every one of the 7 models' individual,
+> text-level label-change rate, with no exceptions — this is not one model driving an aggregate
+> pattern. Ministral and Qwen3 show the highest observed label-change rates, Gemma3 the lowest;
+> Ministral was also identified in Part 1 as a model that almost never gives an off-list answer
+> (0.01% excluded) — "gives a clean, on-list answer" and "changes that answer under framing"
+> appear to be different properties of a model's behavior in this dataset, though this was not
+> formally tested.""")
+
+# ===========================================================================
+# SECTION 8.1 -- generic_human control (NEW, audit repair 2026-09-21)
+# ===========================================================================
+md("""### 8.1 Is it the persona, or merely the presence of an author? The `generic_human` control
+
+**[SECONDARY — added 2026-09-21]** Every neutral-vs-persona comparison in this analysis has a
+built-in confound that was previously acknowledged in prose but never tested: persona prompts add
+an **"Author: ..." line that neutral prompts do not have at all**. A measured shift could
+therefore reflect the *specific persona content* or merely the *presence of an author attribution*.
+
+The data to separate these has existed in `experiment_results_all.csv` since collection — a third
+LLM condition, `generic_human`, which supplies an author line with no distinguishing persona
+content (1,800 rows, a full quarter of the LLM dataset). It was never analysed in either notebook.
+It is analysed here.
+
+Read the three comparisons as a decomposition:
+- **neutral → generic_human** isolates the effect of *adding an author line at all*.
+- **generic_human → persona** isolates the effect of *the persona's specific content*, holding the
+  presence of an author line constant. This is the cleaner test of what H2 actually claims.
+- **neutral → persona** is the original comparison, which confounds the two.""")
+
+code("""gh_cmp = []
+for (tid, pv, lf), g in llm_indiv.groupby(['text_id','prompt_variant','label_format']):
+    bf = {r['framing_condition']: r for _, r in g.iterrows()}
+    def vec_of(cond, other):
+        if cond not in bf or other not in bf: return None, None
+        ms = [m for m in MODEL_COLS if bf[cond][f'{m}__resolved'] is not None and bf[other][f'{m}__resolved'] is not None]
+        if not ms: return None, None
+        return build_vector([bf[cond][f'{m}__resolved'] for m in ms]), build_vector([bf[other][f'{m}__resolved'] for m in ms])
+    for lo, hi, name in (('neutral','generic_human','neutral -> generic_human'),
+                          ('generic_human','persona_a','generic_human -> persona_a'),
+                          ('generic_human','persona_b','generic_human -> persona_b'),
+                          ('neutral','persona_a','neutral -> persona_a'),
+                          ('neutral','persona_b','neutral -> persona_b')):
+        va, vb = vec_of(lo, hi)
+        if va is None or vb is None: continue
+        gh_cmp.append({'text_id': tid, 'prompt_variant': pv, 'label_format': lf, 'comparison': name,
+                       'tv': 0.5*sum(abs(va[e]-vb[e]) for e in EMOTIONS)})
+gh_df = pd.DataFrame(gh_cmp)
+gh_df['pool_key'] = gh_df['text_id'].map(pool_of_text)
+
+order = ['neutral -> generic_human','generic_human -> persona_a','generic_human -> persona_b',
+         'neutral -> persona_a','neutral -> persona_b']
+summ = gh_df.groupby('comparison')['tv'].agg(['mean','median','count']).reindex(order)
+summ['mean_pct'] = summ['mean']*100
+ci_rows = []
+for comp in order:
+    sub = gh_df[gh_df['comparison']==comp]
+    _, lo, hi = su.cluster_bootstrap_ci(sub['tv'].values*100, sub['text_id'].values, np.mean, n_boot=3000)
+    ci_rows.append({'comparison': comp, 'ci_lo': lo, 'ci_hi': hi})
+summ = summ.join(pd.DataFrame(ci_rows).set_index('comparison'))
+display(summ[['mean_pct','ci_lo','ci_hi','count']].round(2))
+
+fig, ax = plt.subplots(figsize=(11, 5.5))
+cols = ['#8C8C8C','#4C72B0','#4C72B0','#C44E52','#C44E52']
+y = np.arange(len(order))
+ax.barh(y, summ['mean_pct'].values,
+        xerr=[summ['mean_pct'].values-summ['ci_lo'].values, summ['ci_hi'].values-summ['mean_pct'].values],
+        color=cols, capsize=4)
+ax.set_yticks(y); ax.set_yticklabels(order, fontsize=9.5); ax.invert_yaxis()
+ax.set_xlabel('Mean TV shift (%, text-clustered 95% CI)')
+ax.set_title('Decomposing the persona effect: author line alone vs. persona content\\n(grey = author line only; blue = persona content, author line held constant; red = original confounded comparison)', pad=14)
+plt.tight_layout(); plt.show()
+
+base = summ.loc['neutral -> generic_human','mean_pct']
+for side in ('a','b'):
+    conf = summ.loc[f'neutral -> persona_{side}','mean_pct']
+    clean = summ.loc[f'generic_human -> persona_{side}','mean_pct']
+    print(f"side {side}: confounded neutral->persona = {conf:.2f}%  |  author-line-only = {base:.2f}%  |  "
+          f"persona content alone (generic_human->persona) = {clean:.2f}%")
+print()
+print("INTERPRETATION GUIDE: if the persona effect were merely the presence of an author line,")
+print("'generic_human -> persona' would be near zero and 'neutral -> generic_human' would account")
+print("for most of the confounded total. The printed values above show which pattern actually holds.")
+""")
+
+md("""> **Why this matters for H2:** the `neutral -> persona` comparison that H2 is formally tested on
+> cannot by itself distinguish "the model responds to who the author is" from "the model responds
+> to being given an author at all". This control does distinguish them, and it should be read
+> alongside the H2 verdict in Section 12 rather than as a replacement for it. It is labelled
+> **[SECONDARY]** because it was not pre-registered — but it addresses a limitation the earlier
+> version of this notebook could only state, not test.""")
+
+# ===========================================================================
+# SECTION 8.2 -- zero-shift coverage (NEW, audit repair 2026-09-21)
+# ===========================================================================
+md("""### 8.2 How often does framing change *nothing at all*?
+
+**[SECONDARY — added 2026-09-21]** Mean shift magnitudes hide a discrete and important fact: in a
+large share of comparisons the persona vector is **bit-for-bit identical** to the neutral vector
+(TV exactly 0). This is not a small-shift case, it is a no-shift case, and it is worth reporting
+separately because a mean of, say, 18% is a very different finding depending on whether it comes
+from every cell shifting a little or from a majority not shifting at all and a minority shifting a
+great deal. It also explains why so many directional cosines are undefined: a zero delta vector
+has no direction.""")
+
+code("""zs_rows = []
+for name, d in (('Human', human_valid), ('LLM ensemble', llm_valid)):
+    tv = d['tv_distance'].values
+    zs_rows.append({'source': name, 'n_comparisons': len(tv), 'pct_exactly_zero': (tv < 1e-9).mean()*100,
+                    'pct_under_10pct': (tv < 0.10).mean()*100, 'median_tv_pct': np.median(tv)*100,
+                    'mean_tv_pct': tv.mean()*100})
+zs_df = pd.DataFrame(zs_rows)
+display(zs_df.round(2))
+
+fig, axes = plt.subplots(1, 2, figsize=(13.5, 5))
+for ax, (name, d) in zip(axes, (('Human', human_valid), ('LLM ensemble', llm_valid))):
+    tv = d['tv_distance'].values*100
+    ax.hist(tv, bins=40, color=COLORS['human' if name=='Human' else 'llm'], alpha=0.8, edgecolor='white')
+    pz = (tv < 1e-7).mean()*100
+    ax.axvline(0, color='black', lw=1.5)
+    ax.set_title(f'{name}: distribution of persona shift\\n{pz:.1f}% of comparisons shift EXACTLY zero', pad=12)
+    ax.set_xlabel('TV shift (%)'); ax.set_ylabel('# comparisons')
+plt.tight_layout(); plt.show()
+
+hz = (human_valid['tv_distance'].values < 1e-9).mean()*100
+lz = (llm_valid['tv_distance'].values < 1e-9).mean()*100
+print(f"Persona changed NOTHING in {hz:.1f}% of human comparisons and {lz:.1f}% of LLM comparisons.")
+print()
+print("Note the asymmetry is partly structural, not purely behavioural: the human vectors are built")
+print("from 3 raters and the LLM vectors from 7 models, and a 7-way vote has more distinct states")
+print("available to it than a 3-way vote, so the two are not on a common footing. See the")
+print("granularity limitation discussed under H4 in Section 12.")
+""")
+
+# ===========================================================================
+# SECTION 9
+# ===========================================================================
+md("""## 9. The central comparison: does the LLM's shift track the human's shift?
+
+**[PRIMARY — operationalizes H4]** This is the heart of RQ3/H4. Not "does the LLM's answer equal
+the human's answer" but: **when authorship changes a human's interpretation, does the LLM's
+interpretation move in the same direction, by a similar amount?** As established in Part 1
+Section 5, magnitude and direction answer different questions and neither is sufficient alone —
+both are computed and reported together throughout this section.
+
+### One real text, worked in full, before the aggregate analysis
+
+Before looking at all 3,600 matched rows at once, here is exactly what is being compared, for a
+single real text: **Human neutral → Human persona → ΔHuman**, and the same for the LLM ensemble.
+Section 9's aggregate analysis (below) repeats exactly this comparison over the whole dataset.""")
+
+code("""# pick one real, moderately-rich example (not a trivial single-emotion case on either side)
+worked_candidates = matched[(matched['delta_cosine_defined']) & (matched['prompt_variant']=='one_shot') & (matched['label_format']=='numbered')].copy()
+worked_candidates['n_nonzero_h'] = sum((worked_candidates[f'human_delta_{e}'].abs() > 1e-9).astype(int) for e in EMOTIONS)
+worked_candidates['n_nonzero_l'] = sum((worked_candidates[f'llm_delta_{e}'].abs() > 1e-9).astype(int) for e in EMOTIONS)
+worked_row = worked_candidates[(worked_candidates['n_nonzero_h']>=3) & (worked_candidates['n_nonzero_l']>=3)].iloc[0]
+tid_w, side_w = worked_row['text_id'], worked_row['persona_side']
+
+hn_w = {e: human_vectors[(human_vectors['text_id']==tid_w) & (human_vectors['side']=='neutral')].iloc[0][f'vec_prob_{e}'] for e in EMOTIONS}
+hp_w = {e: human_vectors[(human_vectors['text_id']==tid_w) & (human_vectors['side']==side_w)].iloc[0][f'vec_prob_{e}'] for e in EMOTIONS}
+llm_sub_w = llm_vectors[(llm_vectors['text_id']==tid_w) & (llm_vectors['prompt_variant']=='one_shot') & (llm_vectors['label_format']=='numbered')]
+ln_w = {e: llm_sub_w[llm_sub_w['framing_condition']=='neutral'].iloc[0][f'vec_prob_{e}'] for e in EMOTIONS}
+lp_w = {e: llm_sub_w[llm_sub_w['framing_condition']==('persona_a' if side_w=='a' else 'persona_b')].iloc[0][f'vec_prob_{e}'] for e in EMOTIONS}
+delta_h_w = delta_vector(hn_w, hp_w)
+delta_l_w = delta_vector(ln_w, lp_w)
+
+print(f"Worked example: text {tid_w}, persona side {side_w}, prompt one_shot/numbered")
+print(f"Human neutral:  {[(e,round(v,2)) for e,v in hn_w.items() if v>0]}")
+print(f"Human persona:  {[(e,round(v,2)) for e,v in hp_w.items() if v>0]}")
+print(f"delta-Human:    {[(e,round(v,2)) for e,v in delta_h_w.items() if abs(v)>1e-9]}")
+print()
+print(f"LLM neutral:    {[(e,round(v,2)) for e,v in ln_w.items() if v>0]}")
+print(f"LLM persona:    {[(e,round(v,2)) for e,v in lp_w.items() if v>0]}")
+print(f"delta-LLM:      {[(e,round(v,2)) for e,v in delta_l_w.items() if abs(v)>1e-9]}")
+""")
+
+code("""fig, axes = plt.subplots(2, 3, figsize=(16, 8.5))
+def delta_bars(ax, delta, title):
+    vals = [delta[e] for e in EMOTIONS]
+    colors_bar = ['#2E7D32' if v > 0 else ('#C62828' if v < 0 else '#CCCCCC') for v in vals]
+    ax.bar(EMOTIONS, vals, color=colors_bar, edgecolor='white')
+    ax.axhline(0, color='black', linewidth=0.8)
+    ax.set_title(title, fontsize=11)
+    ax.tick_params(axis='x', rotation=45)
+
+axes[0,0].bar(EMOTIONS, [hn_w[e] for e in EMOTIONS], color='#8C8C8C'); axes[0,0].set_title('Human NEUTRAL'); axes[0,0].tick_params(axis='x', rotation=45)
+axes[0,1].bar(EMOTIONS, [hp_w[e] for e in EMOTIONS], color='#4C72B0'); axes[0,1].set_title('Human PERSONA'); axes[0,1].tick_params(axis='x', rotation=45)
+delta_bars(axes[0,2], delta_h_w, 'DELTA-Human (persona - neutral)')
+axes[1,0].bar(EMOTIONS, [ln_w[e] for e in EMOTIONS], color='#8C8C8C'); axes[1,0].set_title('LLM NEUTRAL'); axes[1,0].tick_params(axis='x', rotation=45)
+axes[1,1].bar(EMOTIONS, [lp_w[e] for e in EMOTIONS], color='#DD8452'); axes[1,1].set_title('LLM PERSONA'); axes[1,1].tick_params(axis='x', rotation=45)
+delta_bars(axes[1,2], delta_l_w, 'DELTA-LLM (persona - neutral)')
+fig.suptitle(f'Worked example: text {tid_w} -- the exact comparison Section 9 repeats over the whole dataset', fontsize=13, fontweight='bold', y=1.02)
+plt.tight_layout()
+plt.show()
+
+cos_w = worked_row['delta_cosine_similarity']
+print(f"Cosine similarity of delta-Human and delta-LLM for this one text: {cos_w:.3f}")
+print(f"TV magnitude: human={worked_row['human_shift_percent']:.1f}%, llm={worked_row['llm_shift_percent']:.1f}%")
+""")
+
+md("""### The aggregate analysis: magnitude, then direction, over all matched rows
+
+**Unit of analysis:** the row-level Spearman rho below uses all 3,600 matched
+(text × persona-side × prompt-config) rows; its 95% CI uses a text-clustered bootstrap (10,000
+resamples of whole texts, never individual rows) to avoid pseudoreplication from the same text
+appearing up to 12 times.""")
+
+code("""rho, p, lo, hi = su.spearman_with_cluster_bootstrap(
+    matched['human_shift_percent'].values, matched['llm_shift_percent'].values, matched['text_id'].values, n_boot=10000)
+
+fig, ax = plt.subplots(figsize=(7.5, 7))
+for c in CATEGORY_LABELS:
+    sub = matched[matched['category']==c]
+    ax.scatter(sub['human_shift_percent'], sub['llm_shift_percent'], s=10, alpha=0.22, color=COLORS[c], label=c, linewidths=0)
+z = np.polyfit(matched['human_shift_percent'], matched['llm_shift_percent'], 1)
+xs = np.linspace(0, 100, 50)
+ax.plot(xs, np.polyval(z, xs), color='black', linewidth=2, linestyle='--', label=f'linear fit (slope={z[0]:.2f})')
+ax.set_xlabel('Human shift magnitude (%)'); ax.set_ylabel('LLM shift magnitude (%)')
+ax.set_title('Human vs. LLM shift MAGNITUDE\\n(every matched text x persona-side x prompt-config row)', pad=14)
+stat_box(ax, [f'Spearman rho = {rho:.3f}', f'95% CI [{lo:.3f}, {hi:.3f}] (text-clustered bootstrap)', f'clustered bootstrap p = {p:.4f}', f'n = {len(matched)} rows, {matched[\"text_id\"].nunique()} unique texts'], loc='upper left')
+ax.legend(fontsize=8.5, loc='lower right', markerscale=2.5)
+plt.tight_layout()
+plt.show()
+print(f"MAGNITUDE: Spearman rho={rho:.3f}, 95% CI [{lo:.3f},{hi:.3f}], clustered bootstrap p={p:.4f}")
+print("-- a weak positive association; humans and LLMs do not closely track each other's shift SIZE.")
+print()
+# AUDIT REPAIR (2026-09-22): this cell previously printed the p-value returned by
+# scipy.stats.spearmanr() over all 3,600 rows, beside a text-clustered CI. That p treats ~12
+# correlated rows per text as independent evidence -- duplicating rows would leave rho unchanged
+# while shrinking the p-value -- so it was inconsistent with the interval shown next to it. The
+# helper no longer returns it; inference now comes from the same text-clustered bootstrap as
+# the interval. The per-stratum breakdown below avoids pooling correlated rows altogether.
+print("Per side x prompt-configuration Spearman (one row per text within each stratum, so no")
+print("repeated-text pooling), with text-bootstrap 95% CIs:")
+strat_rows = []
+for (side, pv, lf), g in matched.groupby(['persona_side','prompt_variant','label_format']):
+    if len(g) < 20: continue
+    r_s = su.stats.spearmanr(g['human_shift_percent'], g['llm_shift_percent']).statistic
+    bs = np.empty(2000)
+    vals = g[['human_shift_percent','llm_shift_percent']].values
+    rng_s = np.random.default_rng(42)
+    for i in range(2000):
+        idx = rng_s.integers(0, len(vals), len(vals))
+        bs[i] = su.stats.spearmanr(vals[idx,0], vals[idx,1]).statistic
+    lo_s, hi_s = np.nanpercentile(bs, [2.5, 97.5])
+    strat_rows.append({'persona_side': side, 'prompt_variant': pv, 'label_format': lf,
+                       'n_texts': len(g), 'rho': r_s, 'ci_lo': lo_s, 'ci_hi': hi_s})
+strat_spear = pd.DataFrame(strat_rows)
+display(strat_spear.round(3))
+print(f"rho across the {len(strat_spear)} strata: min={strat_spear['rho'].min():.3f}, "
+      f"median={strat_spear['rho'].median():.3f}, max={strat_spear['rho'].max():.3f}; "
+      f"{int((strat_spear['ci_lo'] > 0).sum())}/{len(strat_spear)} strata have a CI excluding zero.")
+""")
+
+code("""delta_cols_h = [f'human_delta_{e}' for e in EMOTIONS]
+delta_cols_l = [f'llm_delta_{e}' for e in EMOTIONS]
+text_deltas = matched.groupby('text_id')[delta_cols_h+delta_cols_l].mean().reset_index()
+text_deltas['pool_key'] = text_deltas['text_id'].map(pool_of_text)
+text_deltas['category'] = text_deltas['pool_key'].map(POOL_LABEL)
+
+def cosine_fn(a,b):
+    res = safe_cosine_similarity(a,b)
+    return res.value if res.defined else None
+
+human_delta_list = [dict(zip(EMOTIONS,row[delta_cols_h])) for _,row in text_deltas.iterrows()]
+llm_delta_list = [dict(zip(EMOTIONS,row[delta_cols_l])) for _,row in text_deltas.iterrows()]
+obs_mean_cos, null_cos, p_cos = su.permutation_pairing_test(human_delta_list, llm_delta_list, cosine_fn, n_perm=10000)
+per_text_cos = [cosine_fn(human_delta_list[i], llm_delta_list[i]) for i in range(len(human_delta_list))]
+text_deltas['directional_cosine'] = per_text_cos
+n_defined = sum(1 for v in per_text_cos if v is not None)
+
+fig, ax = plt.subplots(figsize=(8.5, 5.5))
+per_text_cos_df = text_deltas.dropna(subset=['directional_cosine'])
+ax.hist(per_text_cos_df['directional_cosine'], bins=30, color='#4C72B0', alpha=0.75, edgecolor='white')
+ax.axvline(obs_mean_cos, color='crimson', linewidth=2.2, label=f'observed mean = {obs_mean_cos:.3f}')
+ax.axvline(np.mean(null_cos), color='gray', linestyle='--', linewidth=2, label=f'chance-pairing null = {np.mean(null_cos):.3f}')
+ax.set_xlabel('Cosine similarity of human vs. LLM delta vectors'); ax.set_ylabel('# texts')
+ax.set_title('Human vs. LLM shift DIRECTION\\n(one row per text -- see worked example above for what this compares)', pad=14)
+stat_box(ax, [f'permutation p = {p_cos:.4f}', f'n = {n_defined}/{len(text_deltas)} texts (defined on both sides)'], loc='upper right')
+ax.legend(fontsize=9)
+plt.tight_layout()
+plt.show()
+print(f"DIRECTION: mean cosine={obs_mean_cos:.3f}, permutation p={p_cos:.4f} -- text-level, {n_defined}/300 texts.")
+print("The permutation test (shuffling which LLM delta is paired with which human delta, preserving")
+print("marginals) shows the LLM's direction tracks the SPECIFIC text's human direction better than")
+print("chance pairing, but a raw cosine of ~0.13 is a partial association, not a close match.")
+print()
+# AUDIT REPAIR (2026-09-21): the "{n_defined}/300 texts" coverage figure is computed AFTER
+# averaging each text's deltas over both persona sides and all 6 prompt configs. Averaging turns
+# cells where one side did not move at all (a zero delta, whose direction is undefined) into a
+# non-zero average with a defined direction -- so it manufactures coverage that the underlying
+# observations do not have. Both figures are now reported.
+raw_def = int(matched['delta_cosine_defined'].sum()); raw_tot = len(matched)
+print("--- Coverage, stated at both levels of aggregation ---")
+print(f"  After averaging over side and config : {n_defined}/{len(text_deltas)} texts "
+      f"({n_defined/len(text_deltas)*100:.0f}%) have a defined cosine.")
+print(f"  At the raw unit of observation       : {raw_def}/{raw_tot} (text x side x config) cells "
+      f"({raw_def/raw_tot*100:.0f}%) have a defined cosine.")
+print(f"  The {raw_tot-raw_def} undefined cells are ones where the human or the LLM delta is exactly")
+print("  zero -- one side simply did not move, so there is no direction to compare. Averaging hides")
+print("  this; it does not resolve it. See the zero-shift analysis in Section 8.2.")
+print()
+print("As a robustness check, the mean cosine computed WITHOUT any averaging:")
+_raw_cos = matched.loc[matched['delta_cosine_defined']==True, 'delta_cosine_similarity']
+print(f"  raw (text x side x config) mean cosine = {_raw_cos.mean():.3f}  vs  averaged = {obs_mean_cos:.3f}")
+print("  -- the estimate itself is robust to the aggregation choice; only the coverage claim was overstated.")
+print()
+print("MAGNITUDE and DIRECTION give different answers here (weak-but-significant magnitude")
+print("correlation; small-but-above-chance directional cosine) -- consistent with H4's own wording")
+print("that direction may PARTIALLY align while magnitude DIFFERS; neither number alone would show this.")
+""")
+
+md("""### Per-model directional tracking [EXPLORATORY]
+
+The ensemble-level result above averages across all 7 models. Breaking this out by model checks
+the association proposed in Part 1 Section 6: is the model with the highest observed baseline
+distribution similarity also the model most associated with tracking a persona-driven shift
+DIRECTION?
+
+**Unit of analysis fix:** each model's one-hot delta is first averaged to ONE value **per text**
+(across the 2 persona sides and 6 prompt configs available for that text), before computing the
+per-model mean and a text-clustered bootstrap 95% CI — the same (text, config, side) row would
+otherwise be counted up to 12 times per model, understating the true uncertainty.""")
+
+code("""human_delta_by_tid_side = {}
+for _, r in human_valid.iterrows():
+    human_delta_by_tid_side[(r['text_id'], r['persona_side'])] = {e: r[f'delta_{e}'] for e in EMOTIONS}
+
+per_model_cos_rows = []
+for (tid, pv, lf), g in llm_indiv.groupby(['text_id','prompt_variant','label_format']):
+    by_framing = {r['framing_condition']: r for _, r in g.iterrows()}
+    if 'neutral' not in by_framing: continue
+    nrow = by_framing['neutral']
+    for framing, side in (('persona_a','a'), ('persona_b','b')):
+        if framing not in by_framing: continue
+        prow = by_framing[framing]
+        h_delta = human_delta_by_tid_side.get((tid, side))
+        if h_delta is None: continue
+        for model in MODEL_COLS:
+            n_label, p_label = nrow[f'{model}__resolved'], prow[f'{model}__resolved']
+            if n_label is None or p_label is None: continue
+            m_delta = {e: 0.0 for e in EMOTIONS}
+            if n_label != p_label:
+                m_delta[n_label] -= 1.0
+                m_delta[p_label] += 1.0
+            cos = cosine_fn(h_delta, m_delta)
+            if cos is not None:
+                per_model_cos_rows.append({'model': model, 'text_id': tid, 'cosine': cos})
+per_model_cos_df = pd.DataFrame(per_model_cos_rows)
+# TEXT-LEVEL aggregation first (avoids pseudoreplication -- see note above)
+per_model_text_level = per_model_cos_df.groupby(['model','text_id'])['cosine'].mean().reset_index()
+
+model_direction_rows = []
+for model in MODEL_COLS:
+    sub = per_model_text_level[per_model_text_level['model']==model]
+    mean_val, lo_val, hi_val = su.cluster_bootstrap_ci(sub['cosine'].values, sub['text_id'].values, np.mean, n_boot=5000)
+    model_direction_rows.append({'model': model, 'mean_cosine': mean_val, 'ci_lo': lo_val, 'ci_hi': hi_val, 'n_texts': len(sub)})
+model_direction_df = pd.DataFrame(model_direction_rows).set_index('model').sort_values('mean_cosine', ascending=False)
+
+fig, ax = plt.subplots(figsize=(9, 5.5))
+order = model_direction_df.index.tolist()
+means = model_direction_df['mean_cosine'].values
+err_lo = means - model_direction_df['ci_lo'].values
+err_hi = model_direction_df['ci_hi'].values - means
+ax.bar(order, means, yerr=[err_lo, err_hi], capsize=4, color=plt.cm.plasma(np.linspace(0.15,0.85,len(order))))
+ax.axhline(0, color='black', linewidth=0.8)
+ax.set_ylabel('Mean cosine (this model\\'s delta vs. human delta)\\ntext-level, 95% bootstrap CI')
+ax.set_title('Per-model directional tracking (text-clustered CI)', pad=14)
+plt.xticks(rotation=20)
+plt.tight_layout()
+plt.show()
+display(model_direction_df.round(3))
+""")
+
+code("""# Baseline (no-persona) distribution-similarity ranking, computed and verified in
+# 01_foundations_and_baseline.ipynb Section 6 -- hardcoded here since each notebook runs in its
+# own separate kernel and cannot share in-memory variables; these are the exact printed
+# text-level-aggregated values from that notebook's own output.
+baseline_alignment_rank = {'Gemini': 0.644, 'Claude': 0.622, 'OpenAI': 0.606, 'Llama31': 0.586,
+                            'Qwen3': 0.574, 'Ministral': 0.554, 'Gemma3': 0.551}
+comparison = pd.DataFrame({
+    'baseline_distribution_similarity': pd.Series(baseline_alignment_rank),
+    'baseline_rank': pd.Series(baseline_alignment_rank).rank(ascending=False).astype(int),
+    'direction_tracking_cosine': model_direction_df['mean_cosine'],
+    'direction_tracking_rank': model_direction_df['mean_cosine'].rank(ascending=False).astype(int),
+})
+spearman_ranks, p_ranks = su.stats.spearmanr(comparison['baseline_rank'], comparison['direction_tracking_rank'])
+display(comparison.round(3))
+print(f"\\nSpearman correlation between the two rankings (n=7 models): rho={spearman_ranks:.3f}, p={p_ranks:.4f}")
+print("NOTE: n=7 is a very small sample for a correlation -- treat this as a single exploratory")
+print("observation, not a well-powered statistical result.")
+""")
+
+md("""> **Key finding [EXPLORATORY, small-n caveat applies]:** with the pseudoreplication fix
+> applied (text-level aggregation before computing each model's mean), the two rankings show a
+> positive but **not conventionally significant** association (Spearman rho=0.750, p=0.0522
+> across the 7 models). Gemini and Claude rank 1st/2nd on both measures; Ministral ranks lowest
+> on directional tracking (mean cosine 0.062, 95% CI [-0.006, 0.128] — a CI that includes zero,
+> meaning its directional tracking is not clearly distinguishable from no association at all) and
+> is also among the lower baseline-similarity models, though not the single lowest there. This is
+> reported as a single exploratory observation with only 7 data points, not a confirmed
+> association — the borderline p-value should not be rounded down to "significant," and a naive
+> row-level version of this same comparison (not shown as a primary result here) had produced a
+> misleadingly small p-value before the text-level correction was applied, which is itself a
+> caution about checking the unit of analysis before trusting a correlation like this one.""")
+
+md("""### A distinct question: does persona framing concentrate or disperse interpretation, and
+is that related to shift magnitude at all?
+
+**[SECONDARY]**""")
+
+code("""fig, ax = plt.subplots(figsize=(7.5, 6.5))
+ax.scatter(text_level['tv_distance']*100, text_level['entropy_change'], s=14, alpha=0.35, color='#4C72B0', linewidths=0)
+rho_ent, p_ent = su.stats.spearmanr(text_level['tv_distance'], text_level['entropy_change'])
+ax.axhline(0, color='black', linewidth=0.8)
+ax.set_xlabel('TV shift magnitude (%)'); ax.set_ylabel('Entropy change (persona - neutral, nats)')
+ax.set_title('Magnitude and dispersion: empirically weak relationship\\n(large TV shift does not predict more/less dispersion)', pad=14)
+stat_box(ax, [f'Spearman rho = {rho_ent:.3f}', f'p = {p_ent:.4f}', 'unit: 1 row/text, n=300'], loc='upper left')
+plt.tight_layout()
+plt.show()
+print(f"Correlation between shift MAGNITUDE and entropy CHANGE: rho={rho_ent:.3f}, p={p_ent:.4f}")
+""")
+
+md("""> **Key finding:** magnitude (TV) and dispersion (entropy change) show only a weak,
+> non-significant correlation (rho=0.088, p=0.13) in this sample — consistent with them being
+> analytically distinct questions rather than two views of the same thing, though a
+> non-significant correlation at n=300 does not rule out a small true relationship.""")
+
+# AUDIT REPAIR (2026-09-21): the by-category entropy test previously existed ONLY in
+# scripts/run_analysis.py (feeding fig10/table10), never in either notebook -- so the notebooks
+# could not actually be the authoritative source for a result the write-up cites. It is added
+# here, at the correct TEXT-LEVEL unit. In run_analysis.py it was computed on raw comparison rows
+# (2 per text for humans, 12 for the LLM), which is pseudoreplication and inflated significance
+# enough to flip a conclusion: the LLM Unambiguous increase read as significant at the inflated
+# n=1200 but is not significant at the correct n=100. Both are now text-level and agree.
+md("""#### Does persona framing disperse interpretation? Formal test, by category
+
+**[SECONDARY]** Wilcoxon signed-rank on each category's text-level mean entropy change against
+zero, BH-FDR corrected across the 6 (source × category) tests. **Unit of analysis: text** — each
+text contributes exactly one value, averaged over persona sides (and, for the LLM, over the 6
+prompt configurations).""")
+
+code("""ent_rows = []
+for label, d in (('human', human_valid), ('llm', llm_valid)):
+    d = d.copy(); d['pool_key'] = d['text_id'].map(pool_of_text)
+    per_text = d.groupby(['pool_key','text_id'], as_index=False)[['entropy_change','normalized_entropy_change']].mean()
+    for c in CATEGORY_ORDER:
+        sub = per_text[per_text['pool_key']==c]
+        v_raw = sub['entropy_change'].dropna().values
+        v_norm = sub['normalized_entropy_change'].dropna().values
+        _, p_raw = su.wilcoxon_signed_rank(v_raw, np.zeros_like(v_raw))
+        ent_rows.append({'source': label, 'category': POOL_LABEL[c], 'n_texts': len(v_raw),
+                          'mean_entropy_change': v_raw.mean(),
+                          'mean_normalized_entropy_change': v_norm.mean(),
+                          'direction': 'more dispersed' if v_raw.mean() > 0 else 'more concentrated',
+                          'p_raw': p_raw})
+ent_df = pd.DataFrame(ent_rows)
+ent_df['p_bh'] = su.bh_fdr(ent_df['p_raw'].values)
+ent_df['significant_q05'] = ent_df['p_bh'] < 0.05
+display(ent_df.round(5))
+
+fig, ax = plt.subplots(figsize=(10, 5.5))
+y = np.arange(len(ent_df))
+cols = [COLORS['human'] if r['source']=='human' else COLORS['llm'] for _, r in ent_df.iterrows()]
+ax.barh(y, ent_df['mean_entropy_change'].values, color=cols)
+for i, (_, r) in enumerate(ent_df.iterrows()):
+    ax.text(r['mean_entropy_change'] + 0.004, i, f"p_BH={r['p_bh']:.4f}{'  *' if r['significant_q05'] else '  (ns)'}",
+            va='center', fontsize=8.5)
+ax.set_yticks(y); ax.set_yticklabels([f"{r['source']} / {r['category']}" for _, r in ent_df.iterrows()], fontsize=9)
+ax.invert_yaxis(); ax.axvline(0, color='black', lw=1)
+ax.set_xlim(0, max(ent_df['mean_entropy_change'])*1.75)
+ax.set_xlabel('Mean entropy change, persona - neutral (nats; positive = more dispersed)')
+ax.set_title('Does persona framing disperse interpretation?\\nHumans: yes, in every category. LLM ensemble: no detectable effect anywhere.', pad=14)
+plt.tight_layout(); plt.show()
+
+n_h = int(ent_df[(ent_df['source']=='human')]['significant_q05'].sum())
+n_l = int(ent_df[(ent_df['source']=='llm')]['significant_q05'].sum())
+print(f"Significant at q<0.05: human {n_h}/3 categories, LLM {n_l}/3 categories.")
+print("Humans reliably become LESS internally agreed under persona framing; the LLM ensemble")
+print("moves its probability mass (Section 8 shows a clear TV shift) WITHOUT becoming measurably")
+print("less agreed with itself -- a qualitative human/LLM difference that magnitude alone hides.")
+""")
+
+# ===========================================================================
+# SECTION 10
+# ===========================================================================
+md("""## 10. Prompt configuration: does prompt design change the LLM persona effect?
+
+**[EXPLORATORY — no formal, numbered hypothesis about prompt structure exists in the thesis
+proposal]**
+
+**Unit of analysis:** one row per (category, prompt_variant, label_format) mean, itself computed
+from text-level values; the formal repeated-measures test (Section 12) uses one row per text.""")
+
+code("""llm_config = llm_valid.groupby(['pool_key','prompt_variant','label_format'])['tv_distance'].mean().reset_index()
+llm_config['category'] = llm_config['pool_key'].map(POOL_LABEL)
+pivot = llm_config.pivot_table(index=['prompt_variant','label_format'], columns='category', values='tv_distance').reindex(columns=CATEGORY_LABELS)
+
+fig, ax = plt.subplots(figsize=(9, 5.5))
+configs = [f'{a}/{b}' for a, b in pivot.index]
+x = np.arange(len(configs))
+width = 0.25
+for i, c in enumerate(CATEGORY_LABELS):
+    ax.bar(x + (i-1)*width, pivot[c].values*100, width=width, label=c, color=COLORS[c])
+ax.set_xticks(x); ax.set_xticklabels(configs, rotation=30, ha='right')
+ax.set_ylabel('Mean LLM persona TV shift (%)')
+ax.set_title('LLM persona effect by exact prompt configuration (never pooled)', pad=14)
+ax.legend(fontsize=8)
+plt.tight_layout()
+plt.show()
+display((pivot*100).round(1))
+print("Formally tested with a repeated-measures Friedman test (text-level unit) in Section 12.")
+""")
+
+md("""> **Observation (preview, formally tested in Section 12):** the bars within each category are
+> visually similar across all 6 prompt configurations.""")
+
+# ===========================================================================
+# SECTION 11
+# ===========================================================================
+md("""## 11. Emotion-level analysis: which emotions are most persona-sensitive?
+
+**[SECONDARY]** per-emotion probability-mass changes; **[EXPLORATORY]** new/disappeared-emotion
+presence/absence patterns (see caveat below on why these are treated differently).""")
+
+code("""delta_cols = [f'delta_{e}' for e in EMOTIONS]
+text_level_deltas = human_valid.groupby('text_id')[delta_cols].mean().reset_index()
+text_level_deltas['pool_key'] = text_level_deltas['text_id'].map(pool_of_text)
+
+rows = []
+for c in CATEGORY_ORDER:
+    sub = text_level_deltas[text_level_deltas['pool_key']==c]
+    for e in EMOTIONS:
+        rows.append({'category': POOL_LABEL[c], 'emotion': e, 'mean_delta_pp': sub[f'delta_{e}'].mean()*100})
+l_df = pd.DataFrame(rows)
+pivot_e = l_df.pivot(index='emotion', columns='category', values='mean_delta_pp').reindex(index=list(EMOTIONS), columns=CATEGORY_LABELS)
+
+fig, ax = plt.subplots(figsize=(7, 8))
+vmax = np.nanmax(np.abs(pivot_e.values))
+im = ax.imshow(pivot_e.values, cmap='RdBu_r', vmin=-vmax, vmax=vmax, aspect='auto')
+ax.set_xticks(range(len(CATEGORY_LABELS))); ax.set_xticklabels(CATEGORY_LABELS, rotation=30, ha='right')
+ax.set_yticks(range(len(EMOTIONS))); ax.set_yticklabels(EMOTIONS)
+for i in range(pivot_e.shape[0]):
+    for j in range(pivot_e.shape[1]):
+        v = pivot_e.values[i,j]
+        if not np.isnan(v):
+            ax.text(j, i, f'{v:+.1f}', ha='center', va='center', fontsize=9, color='white' if abs(v)>vmax*0.5 else 'black')
+fig.colorbar(im, ax=ax, label='Mean delta (percentage points)', fraction=0.046)
+ax.set_title('Human: per-emotion PROBABILITY-MASS shift (persona - neutral)\\nby category, percentage points -- text-level, n=300', pad=14)
+ax.grid(False)
+plt.tight_layout()
+plt.show()
+
+top_gain = l_df.sort_values('mean_delta_pp', ascending=False).iloc[0]
+top_loss = l_df.sort_values('mean_delta_pp', ascending=True).iloc[0]
+print(f"Largest gain: {top_gain['emotion']} in {top_gain['category']} ({top_gain['mean_delta_pp']:+.1f}pp)")
+print(f"Largest loss: {top_loss['emotion']} in {top_loss['category']} ({top_loss['mean_delta_pp']:+.1f}pp)")
+print()
+print()
+# AUDIT REPAIR (2026-09-21): this block previously printed the claim "checked formally with
+# BH-FDR in Section 12: none of these per-emotion shifts survive multiple-comparison correction"
+# -- but NO such test existed anywhere in either notebook (`bh_fdr` was never called). A null
+# result was being asserted as formally verified when nothing had been run. The test is now
+# actually performed, here, and whatever it returns is reported.
+print("=== FORMAL TEST (was previously claimed but never run) ===")
+print("Wilcoxon signed-rank on each (category x emotion) text-level mean delta vs 0,")
+print("Benjamini-Hochberg FDR across all 33 tests. [SECONDARY]")
+fdr_rows = []
+for c in CATEGORY_ORDER:
+    sub = text_level_deltas[text_level_deltas['pool_key']==c]
+    for e in EMOTIONS:
+        vals = sub[f'delta_{e}'].dropna().values
+        if len(vals) < 5 or np.allclose(vals, 0):
+            stat, pv = np.nan, 1.0
+        else:
+            stat, pv = su.wilcoxon_signed_rank(vals, np.zeros_like(vals))
+        fdr_rows.append({'category': POOL_LABEL[c], 'emotion': e, 'n': len(vals),
+                         'mean_delta_pp': vals.mean()*100 if len(vals) else np.nan, 'p_raw': pv})
+fdr_df = pd.DataFrame(fdr_rows)
+fdr_df['p_bh'] = su.bh_fdr(fdr_df['p_raw'].values)
+fdr_df['survives_fdr_05'] = fdr_df['p_bh'] < 0.05
+n_sig = int(fdr_df['survives_fdr_05'].sum())
+display(fdr_df.sort_values('p_bh').head(12).round(4))
+print(f"\\n{n_sig} of {len(fdr_df)} (category x emotion) shifts survive BH-FDR at q<0.05.")
+if n_sig == 0:
+    print("-> The previously-claimed null result is CONFIRMED by the test that is now actually run:")
+    print("   no individual per-emotion shift is distinguishable from zero after correction.")
+    print("   The heatmap above is therefore a descriptive pattern, not a set of confirmed effects.")
+else:
+    print("-> NOTE: the notebook previously asserted that NONE survived correction. That assertion")
+    print("   was never tested. Now that it is, the ones listed above DO survive, so the earlier")
+    print("   blanket caveat was wrong. They are still [SECONDARY] and should not be read as")
+    print("   pre-registered per-emotion hypotheses.")
+    for _, r in fdr_df[fdr_df['survives_fdr_05']].iterrows():
+        print(f"     {r['category']} / {r['emotion']}: {r['mean_delta_pp']:+.1f}pp, p_BH={r['p_bh']:.4f}")
+""")
+
+md("""### New/disappeared emotions: a sample-size-sensitive, exploratory signal
+
+**[EXPLORATORY — interpret with caution]** A "new" or "disappeared" emotion is a zero-to-nonzero
+(or nonzero-to-zero) transition, which is mechanically much easier to trigger with a small sample
+than with a large one: this study's human vectors use only 3 (occasionally more) judgments, while
+the LLM ensemble uses 7. A rate difference between human and LLM presence/absence patterns is
+therefore expected from sample size alone, and this section does **not** draw a psychological
+conclusion from presence/absence by itself. The per-emotion probability-MASS change above (which
+does not depend on crossing a hard zero boundary) is the better-supported companion result.""")
+
+code("""def new_disappeared_summary(df, label):
+    rows = []
+    for c in CATEGORY_ORDER:
+        sub = df[df['pool_key']==c]
+        new_counter, dis_counter = {}, {}
+        for s in sub[sub['new_emotion_introduced']]['new_emotions'].dropna():
+            for part in str(s).split('|'):
+                if ':' in part: new_counter[part.split(':')[0]] = new_counter.get(part.split(':')[0],0)+1
+        for s in sub[sub['emotion_disappeared']]['disappeared_emotions'].dropna():
+            for part in str(s).split('|'):
+                if ':' in part: dis_counter[part.split(':')[0]] = dis_counter.get(part.split(':')[0],0)+1
+        rows.append({'source': label, 'category': POOL_LABEL[c], 'new_rate': sub['new_emotion_introduced'].mean(),
+                      'disappeared_rate': sub['emotion_disappeared'].mean(),
+                      'most_common_new': max(new_counter, key=new_counter.get) if new_counter else None,
+                      'most_common_disappeared': max(dis_counter, key=dis_counter.get) if dis_counter else None})
+    return pd.DataFrame(rows)
+
+nd_df = pd.concat([new_disappeared_summary(human_valid,'human'), new_disappeared_summary(llm_valid,'llm')], ignore_index=True)
+display(nd_df.round(3))
+
+fig, axes = plt.subplots(1, 2, figsize=(13, 5.5))
+for ax, metric, title in zip(axes, ('new_rate','disappeared_rate'), ('New-emotion introduction rate', 'Emotion-disappearance rate')):
+    x = np.arange(3); width = 0.35
+    for i, source in enumerate(('human','llm')):
+        sub = nd_df[nd_df['source']==source].set_index('category').reindex(CATEGORY_LABELS)
+        ax.bar(x + (i-0.5)*width, sub[metric].values*100, width=width, label=source.upper(), color=COLORS[source])
+    ax.set_xticks(x); ax.set_xticklabels(CATEGORY_LABELS, rotation=15, ha='right')
+    ax.set_ylabel('% of comparisons'); ax.set_title(title, pad=12)
+    ax.legend(fontsize=9)
+plt.tight_layout()
+plt.show()
+""")
+
+md("""> **Key finding:** human rates (70-84%) are much higher than LLM ensemble rates (15-44%) for
+> both new and disappeared emotions. Given the sample-size sensitivity noted above (n=3 vs. n=7),
+> this gap is at least partly, and plausibly mostly, a mechanical consequence of ensemble size
+> rather than a psychological difference in how readily humans vs. LLMs entertain a novel
+> interpretation — this dataset cannot separate the two explanations, so no stronger claim is
+> made here.""")
+
+# ===========================================================================
+# SECTION 12 -- restructured as explicit hypothesis-verdict blocks
+# ===========================================================================
+md("""## 12. Formal hypothesis verdicts
+
+Each of the 4 hypotheses is evaluated with the same fixed structure: **Hypothesis →
+Operationalization → Test → Effect size + CI → p-value → Interpretation**, with an explicit
+**Supported / Partially supported (mixed) / Not supported** verdict based on the actual result —
+verdicts are not adjusted to make the hypotheses look supported.""")
+
+code("""def cliffs_delta_bootstrap_ci(x, y, n_boot=5000, seed=42):
+    \"\"\"Percentile bootstrap CI for Cliff's delta. x and y are already one-row-per-text (no
+    within-group repeated-text structure), so a plain (non-clustered) resample of each group's
+    rows is valid here.\"\"\"
+    rng = np.random.default_rng(seed)
+    x, y = np.asarray(x), np.asarray(y)
+    boot_vals = np.empty(n_boot)
+    for i in range(n_boot):
+        xb = rng.choice(x, size=len(x), replace=True)
+        yb = rng.choice(y, size=len(y), replace=True)
+        boot_vals[i] = su.cliffs_delta(xb, yb)
+    return np.percentile(boot_vals, [2.5, 97.5])
+
+def votes_by_text(side, text_ids=None):
+    sub = human_annotations[human_annotations['side']==side]
+    if text_ids is not None: sub = sub[sub['text_id'].isin(text_ids)]
+    out = {}
+    for _, r in sub.iterrows():
+        votes = str(r['raters_raw']).split('|') if pd.notna(r['raters_raw']) else []
+        out[r['text_id']] = [v.strip().lower() for v in votes if v.strip()!='']
+    return out
+
+def mean_tv_statistic(a, b):
+    tvs = []
+    for tid in a:
+        va, vb = build_vector(a[tid]), build_vector(b[tid])
+        if va is None or vb is None: continue
+        tvs.append(0.5*sum(abs(va[e]-vb[e]) for e in EMOTIONS))
+    return float(np.mean(tvs)) if tvs else 0.0
+""")
+
+md("""### H1 (Human Framing Hypothesis)
+
+**Hypothesis:** "Human emotion judgments will differ significantly across author-framing
+conditions for ambiguous texts, but not (or substantially less) for unambiguous control texts."
+
+**Operationalization:** TV distance between each text's new-neutral human vector and its
+persona_a / persona_b vector, compared against a within-text permutation null.
+
+**Test:** 10,000-iteration permutation test (pools and reshuffles each text's raw votes between
+conditions, preserving group sizes), Holm-corrected across all **6** tests (2 persona sides x 3
+categories). *(Corrected 2026-09-21: this previously read "8 tests (2 persona sides x [ALL + 3
+categories])". No pooled-across-categories test is actually run — the loop covers the 3 categories
+only — so 6 is the number of tests Holm is applied to, and the correction is documentation-only:
+the code always passed 6 p-values to `holm_correct`, so no p-value changes.)*
+**Unit of analysis: text** (the permutation preserves text-level grouping;
+votes are pooled and reshuffled within each text, never across texts).
+
+**Contrast with H2 (added 2026-09-21):** the pooled-and-reshuffled null is correct *here* and
+incorrect for H2, for a design reason rather than a statistical preference. H1's two conditions
+were rated by **independent, non-overlapping groups of people** (established below), so no rater
+identity links a neutral vote to a persona vote and pooling is exactly right. H2's two conditions
+were answered by **the same 7 models**, so rater identity *is* tracked on both sides and the null
+must hold it fixed. Same statistic, different exchangeability structure, different null.
+
+**Why pooling-and-reshuffling raw votes is the appropriate null here (audited against the actual
+annotation design, not assumed):** the neutral-condition ratings and the persona-condition
+ratings for a given text were collected from **independent, non-overlapping rater pools** —
+verified from the project's own data-collection scripts (`persona_redo_20260917/scripts/`):
+persona_a/b responses came from an earlier "60-form study" + Batch 2 (`raw_responses.csv`,
+`raw_responses_batch2.csv`), while neutral responses came from a separate, later round of 10
+dedicated neutral-only Google Forms (`form_neutral_01`-`10`). No respondent-identity field links
+a specific person's neutral vote to their persona vote for the same text anywhere in this
+pipeline (`raters_raw` stores only the vote values, never a rater ID) — this is a **between-
+subjects design at the level of framing condition**, not a within-subject/repeated-measures one.
+Under a null of "no true framing effect," the raw votes contributed by these two independent,
+unpaired rater groups for the same text are exchangeable between condition labels, because there
+is no individual-level pairing across conditions to preserve. This is the standard justification
+for a permutation test on pooled, unpaired samples (the same logic as a permutation-based
+two-sample test), and is why this procedure — rather than a paired/repeated-measures test — is
+used here.
+
+**Design fact establishing the required independence** *(confirmed by the researcher, 2026-09-22;
+recorded as procedure rather than inferred from the data)*:
+
+> **No single participant saw both persona versions of the same text**, and the neutral condition
+> was collected in a separate, later round of dedicated neutral-only forms. Within any given text,
+> therefore, each framing condition was rated by a **different set of people**.
+
+This is exactly the condition the permutation null requires. There is no individual-level pairing
+across conditions within a text to preserve, so pooling a text's votes and reshuffling the
+condition labels is the correct null — not a convenient assumption, but a property of how the data
+were collected.
+
+**One residual dependence, acknowledged and not resolvable.** Whether the same respondent
+contributed to *different* texts is not recoverable: respondent identifiers were not retained in
+the analysis pipeline (`raters_raw` stores vote values only), and are no longer traceable. Since
+each participant answered roughly 30 items, some cross-text correlation is plausible. The
+text-clustered bootstrap treats texts as independent units, so if respondents do recur across
+texts the intervals are somewhat optimistic. This affects the width of intervals, **not** the
+validity of the within-text permutation null above, which depends only on the confirmed design
+fact. It is stated once here and in the limitations section, and is not treatable with the data
+that exist.""")
+
+code("""neutral_votes_all = votes_by_text('neutral')
+perm_rows = []
+for side in ('a','b'):
+    persona_votes_all = votes_by_text(side)
+    common = sorted(set(neutral_votes_all) & set(persona_votes_all))
+    na_all = {t: neutral_votes_all[t] for t in common if len(neutral_votes_all[t])>0 and len(persona_votes_all[t])>0}
+    pa_all = {t: persona_votes_all[t] for t in na_all}
+    for c in CATEGORY_ORDER:
+        text_ids_c = sorted(set(pool_of_text[pool_of_text==c].index) & set(na_all.keys()))
+        if len(text_ids_c) < 5: continue
+        na_c = {t: na_all[t] for t in text_ids_c}; pa_c = {t: pa_all[t] for t in text_ids_c}
+        obs, null, p = su.permutation_test_two_groups(na_c, pa_c, mean_tv_statistic, n_perm=10000)
+        # side-specific TV values (one row per text, THIS persona side only -- not the
+        # side-a/side-b-averaged text_level, which would give an identical CI for both sides)
+        tv_vals = human_valid[(human_valid['pool_key']==c) & (human_valid['persona_side']==side)]['tv_distance'].values * 100
+        boot_mean, boot_lo, boot_hi = su.cluster_bootstrap_ci(tv_vals, np.arange(len(tv_vals)), np.mean, n_boot=5000)
+        perm_rows.append({'comparison': f'neutral_vs_persona_{side}', 'category': POOL_LABEL[c], 'n': len(text_ids_c),
+                           'observed_mean_tv_pct': obs*100, 'ci95_lo': boot_lo, 'ci95_hi': boot_hi, 'p_value': p})
+perm_df = pd.DataFrame(perm_rows)
+perm_df['p_holm'] = su.holm_correct(perm_df['p_value'].values)
+display(perm_df.round(4))
+
+fig, ax = plt.subplots(figsize=(10, 5.5))
+colors_sig = ['#2E7D32' if p < 0.05 else '#C62828' for p in perm_df['p_holm']]
+xerr = [perm_df['observed_mean_tv_pct']-perm_df['ci95_lo'], perm_df['ci95_hi']-perm_df['observed_mean_tv_pct']]
+ax.barh(range(len(perm_df)), perm_df['observed_mean_tv_pct'], xerr=xerr, color=colors_sig, capsize=3)
+labels = [f\"{r['comparison'].replace('neutral_vs_persona_','side ')} / {r['category']}\" for _, r in perm_df.iterrows()]
+ax.set_yticks(range(len(perm_df))); ax.set_yticklabels(labels, fontsize=9)
+for i, (_, r) in enumerate(perm_df.iterrows()):
+    ax.text(r['ci95_hi']+2, i, f\"p_holm={r['p_holm']:.4f}\", va='center', fontsize=8.5)
+ax.set_xlabel('Observed mean TV shift (%, with 95% bootstrap CI)')
+ax.set_title('H1: effect size (mean TV, text-clustered 95% CI) + permutation p (green=sig. after Holm)', pad=14)
+ax.set_xlim(0, max(perm_df['ci95_hi'])*1.3)
+plt.tight_layout()
+plt.show()
+
+h1_ar_a = perm_df[(perm_df['category']=='Author-Relevant Ambiguous')&(perm_df['comparison']=='neutral_vs_persona_a')]['p_holm'].iloc[0]
+h1_ar_b = perm_df[(perm_df['category']=='Author-Relevant Ambiguous')&(perm_df['comparison']=='neutral_vs_persona_b')]['p_holm'].iloc[0]
+h1_ai_a = perm_df[(perm_df['category']=='Author-Independent Ambiguous')&(perm_df['comparison']=='neutral_vs_persona_a')]['p_holm'].iloc[0]
+h1_ai_b = perm_df[(perm_df['category']=='Author-Independent Ambiguous')&(perm_df['comparison']=='neutral_vs_persona_b')]['p_holm'].iloc[0]
+h1_un_a = perm_df[(perm_df['category']=='Unambiguous')&(perm_df['comparison']=='neutral_vs_persona_a')]['p_holm'].iloc[0]
+h1_un_b = perm_df[(perm_df['category']=='Unambiguous')&(perm_df['comparison']=='neutral_vs_persona_b')]['p_holm'].iloc[0]
+print(f"Author-Relevant: p_holm={h1_ar_a:.4f} (side a), {h1_ar_b:.4f} (side b)")
+print(f"Author-Independent: p_holm={h1_ai_a:.4f} (side a), {h1_ai_b:.4f} (side b)")
+print(f"Unambiguous: p_holm={h1_un_a:.4f} (side a), {h1_un_b:.4f} (side b)")
+""")
+
+md("""**Interpretation:** Author-Relevant is significant on both persona sides (p_holm ≤ 0.0125) —
+**Supported**. Unambiguous is non-significant on both sides (p_holm ≥ 0.22) — this null result is
+itself **consistent with H1's own prediction** of "not, or substantially less" for unambiguous
+texts. Author-Independent is significant on side a only (p_holm=0.0125) but not side b
+(p_holm=0.198) — **Partially supported / mixed**, not flattened into either "supported" or "not
+supported."
+
+**Overall H1 verdict: Partially supported** — supported for Author-Relevant (significant on both
+sides after Holm correction), consistent with the null prediction for Unambiguous, and mixed
+(side-dependent) for Author-Independent.""")
+
+md("""### H2 (Model Framing Hypothesis)
+
+**Hypothesis:** "LLM emotion classifications will shift across author-framing conditions,
+indicating sensitivity to minimal author cues."
+
+**Operationalization:** for each (text, prompt_variant, label_format) cell, take each model's own
+pair of labels — its neutral-condition label and its persona-condition label — and test whether
+the observed mean TV shift is distinguishable from a null in which, for each model independently,
+the two labels could equally well have been produced the other way round.
+
+**Why the null is a PAIRED swap and not a pooled re-split** *(corrected 2026-09-21)*: this test
+originally pooled all 14 labels in a cell (7 neutral + 7 persona) and re-split them 7-vs-7. That
+null treats the 7 models as exchangeable with **each other**, which they are not — Gemini and
+Gemma3 are systematically different classifiers, and Part 1 Section 6 measures exactly how
+differently they behave. Re-splitting across models therefore builds a null that contains
+between-model disagreement on top of any condition effect, inflating the null and making the test
+**conservative** (it under-rejects). H2's actual null is narrower: *this model's* answer does not
+depend on which condition *it* saw. That makes each model's own two labels exchangeable with one
+another and nothing else, which is a paired sign-flip. The corrected test is reported below
+alongside the original so the difference is visible; note that it changes the side-a verdict, and
+in the direction of *more* support for H2 — it was adopted on the specification argument above,
+which stands independently of that outcome. **Scope note:** neutral and persona prompts differ in
+more than just persona content (persona prompts add an "Author: ..." line neutral prompts lack
+entirely), so this test's null is "no dependence on which of these two specific conditions was
+used," which is what H2 as worded asks, but it does not by itself isolate the effect of the
+specific persona *content* from the mere presence of an author line (a `generic_human` control
+condition exists in the raw data but is not used in this comparison). **Unit of analysis: text**
+(reshuffling happens within each (text, prompt_variant, label_format) cell; the reported
+statistic is the mean TV across all cells, i.e. mathematically equivalent to averaging the 6
+already-computed per-config means used elsewhere in this analysis — prompt configs are still
+never pooled with each other, only permuted independently within their own cells).
+
+**Test:** 10,000-iteration permutation test, run separately per persona side (this hypothesis
+makes no category-specific claim — that is H3's job, tested separately above with its own,
+already-established test).""")
+
+code("""def llm_votes_by_cell(framing, category=None):
+    sub = llm_indiv if category is None else llm_indiv[llm_indiv['pool_key']==category]
+    sub = sub[sub['framing_condition']==framing]
+    out = {}
+    for _, r in sub.iterrows():
+        key = (r['text_id'], r['prompt_variant'], r['label_format'])
+        labels = [r[f'{m}__resolved'] for m in MODEL_COLS if r[f'{m}__resolved'] is not None]
+        if labels:
+            out[key] = labels
+    return out
+
+def llm_mean_tv_statistic(a, b):
+    tvs = []
+    for key in a:
+        if key not in b: continue
+        va, vb = build_vector(a[key]), build_vector(b[key])
+        if va is None or vb is None: continue
+        tvs.append(0.5*sum(abs(va[e]-vb[e]) for e in EMOTIONS))
+    return float(np.mean(tvs)) if tvs else 0.0
+
+# AUDIT REPAIR (2026-09-21), three separate corrections in this cell:
+#  (1) TEST: the original pooled-and-resplit permutation permutes labels ACROSS the 7 models,
+#      which the null does not license (the models are not exchangeable with one another). That
+#      injects between-model heterogeneity into the null and makes the test CONSERVATIVE. The
+#      correctly-specified null swaps each model's OWN (neutral, persona) pair. BOTH tests are
+#      reported below, side by side, because the corrected one changes the side-a verdict.
+#  (2) CI: cluster ids were np.arange over 1,800 cells drawn from only 300 texts, so each text's
+#      6 correlated cells counted as 6 independent clusters and the CI came out far too narrow.
+#      Now clustered on text_id.
+#  (3) PAIRING: the neutral and persona vectors were each built from whatever models answered in
+#      that condition, so in ~8% of cells they were built from DIFFERENT model subsets and part
+#      of the measured "shift" was really a change in ensemble composition. Now restricted to
+#      models present in both conditions of the same cell.
+def llm_pairs_by_cell(framing):
+    out = {}
+    for (tid, pv, lf), g in llm_indiv.groupby(['text_id','prompt_variant','label_format']):
+        bf = {r['framing_condition']: r for _, r in g.iterrows()}
+        if 'neutral' not in bf or framing not in bf: continue
+        pairs = [(bf['neutral'][f'{m}__resolved'], bf[framing][f'{m}__resolved']) for m in MODEL_COLS
+                 if bf['neutral'][f'{m}__resolved'] is not None and bf[framing][f'{m}__resolved'] is not None]
+        if pairs: out[(tid, pv, lf)] = pairs
+    return out
+
+h2_neutral_all = llm_votes_by_cell('neutral')
+h2_rows = []
+n_subset_mismatch = 0
+for side in ('a','b'):
+    framing = 'persona_a' if side=='a' else 'persona_b'
+    persona_all = llm_votes_by_cell(framing)
+    common_keys = sorted(set(h2_neutral_all) & set(persona_all))
+    na = {k: h2_neutral_all[k] for k in common_keys}
+    pa = {k: persona_all[k] for k in common_keys}
+    # (1a) original, conservative test -- retained for comparison
+    _, _, p_pooled = su.pooled_resplit_tv_permutation(na, pa, EMOTIONS, n_perm=10000)
+    # (1b) correctly-specified paired test, on matched model subsets (3)
+    pairs = llm_pairs_by_cell(framing)
+    n_subset_mismatch += sum(1 for k in common_keys if k in pairs and len(pairs[k]) < len(na[k]))
+    obs, null, p_paired = su.paired_swap_tv_permutation(pairs, EMOTIONS, n_perm=10000)
+    pkeys = sorted(pairs)
+    cell_tvs = np.array([0.5*sum(abs(build_vector([p[0] for p in pairs[k]])[e]
+                                    - build_vector([p[1] for p in pairs[k]])[e]) for e in EMOTIONS)
+                         for k in pkeys]) * 100
+    # (2) text-clustered CI
+    _, boot_lo, boot_hi = su.cluster_bootstrap_ci(cell_tvs, np.array([k[0] for k in pkeys]), np.mean, n_boot=3000)
+    _, arange_lo, arange_hi = su.cluster_bootstrap_ci(cell_tvs, np.arange(len(pkeys)), np.mean, n_boot=3000)
+    h2_rows.append({'comparison': f'neutral_vs_persona_{side}', 'n_cells': len(pkeys),
+                     'observed_mean_tv_pct': obs*100, 'ci95_lo': boot_lo, 'ci95_hi': boot_hi,
+                     'p_pooled_OLD': p_pooled, 'p_value': p_paired,
+                     'ci_lo_UNCLUSTERED': arange_lo, 'ci_hi_UNCLUSTERED': arange_hi})
+h2_df = pd.DataFrame(h2_rows)
+h2_df['p_holm'] = su.holm_correct(h2_df['p_value'].values)
+h2_df['p_holm_pooled_OLD'] = su.holm_correct(h2_df['p_pooled_OLD'].values)
+display(h2_df[['comparison','n_cells','observed_mean_tv_pct','ci95_lo','ci95_hi','p_value','p_holm']].round(4))
+print("Unit of analysis: (text, prompt_variant, label_format) cell, pooled across all 3 categories")
+print("(this hypothesis makes no category-specific claim); n_cells ~= 300 texts x 6 configs.")
+print(f"\\nCells where the two conditions had different model subsets, now matched: {n_subset_mismatch}")
+print("\\n--- Effect of each correction, shown explicitly ---")
+for _, r in h2_df.iterrows():
+    print(f"  {r['comparison']}:")
+    print(f"     permutation p  : pooled/OLD={r['p_pooled_OLD']:.4f} (Holm {r['p_holm_pooled_OLD']:.4f})  ->  "
+          f"paired/CORRECT={r['p_value']:.4f} (Holm {r['p_holm']:.4f})")
+    print(f"     95% CI         : unclustered/OLD=[{r['ci_lo_UNCLUSTERED']:.2f}, {r['ci_hi_UNCLUSTERED']:.2f}]  ->  "
+          f"text-clustered=[{r['ci95_lo']:.2f}, {r['ci95_hi']:.2f}]")
+print("\\nNOTE FOR THE READER: the corrected test makes H2 EASIER to support, not harder. It was")
+print("adopted because the pooled null permutes labels across non-exchangeable models, not because")
+print("of the direction of its result. The original figures are printed above so the change is auditable.")
+""")
+
+code("""# What does the paired TV test actually detect? A necessary caveat (added 2026-09-22).
+# The statistic is the mean TV between the neutral and persona ENSEMBLE vectors. Under a paired
+# sign-flip, concordant model pairs cancel, so only discordant pairs contribute -- and if a cell
+# has exactly ONE discordant model, its TV is 1/n under EVERY swap. Such a cell contributes no
+# variance to the null and cannot supply evidence, even though it contains a real label change.
+# The test therefore measures COORDINATED net redistribution across models, not "did any model
+# change its answer". Both quantities are reported below so neither is mistaken for the other.
+n_disc, n_pairs_total, n_changes_total = [], 0, 0
+for (tid, pv, lf), g in llm_indiv.groupby(['text_id','prompt_variant','label_format']):
+    bf = {r['framing_condition']: r for _, r in g.iterrows()}
+    if 'neutral' not in bf: continue
+    for fr in ('persona_a','persona_b'):
+        if fr not in bf: continue
+        pr = [(bf['neutral'][f'{m}__resolved'], bf[fr][f'{m}__resolved']) for m in MODEL_COLS
+              if bf['neutral'][f'{m}__resolved'] is not None and bf[fr][f'{m}__resolved'] is not None]
+        if not pr: continue
+        d = sum(1 for a, b in pr if a != b)
+        n_disc.append(d); n_pairs_total += len(pr); n_changes_total += d
+n_disc = np.array(n_disc)
+
+print("=== Raw label-change counts (a DIFFERENT quantity from the TV test) ===")
+print(f"  valid model pairs           : {n_pairs_total}")
+print(f"  pairs where the label changed: {n_changes_total} ({n_changes_total/n_pairs_total*100:.1f}%)")
+print()
+print("=== How much of the data can the paired TV test actually speak to? ===")
+deg0 = (n_disc == 0).mean() * 100
+deg1 = (n_disc == 1).mean() * 100
+print(f"  cells with 0 discordant models: {deg0:5.1f}%  (TV = 0 under every swap)")
+print(f"  cells with 1 discordant model : {deg1:5.1f}%  (TV = 1/n under every swap)")
+print(f"  -> {deg0+deg1:.1f}% of cells contribute NO variance to the permutation null.")
+print(f"     The test is driven by the remaining {100-deg0-deg1:.1f}% with >=2 discordant models.")
+
+fig, ax = plt.subplots(figsize=(9, 5))
+counts = np.bincount(n_disc, minlength=8)[:8]
+cols = ['#C44E52' if k <= 1 else '#4C72B0' for k in range(8)]
+ax.bar(range(8), counts / len(n_disc) * 100, color=cols)
+for k, v in enumerate(counts / len(n_disc) * 100):
+    if v > 0.6: ax.text(k, v + 0.6, f'{v:.1f}%', ha='center', fontsize=9)
+ax.set_xlabel('Number of models that changed their label in this cell')
+ax.set_ylabel('% of (text x side x config) cells')
+ax.set_title('Red cells cannot inform the paired TV test at all\\n(0 or 1 discordant model => TV is constant under every sign flip)', pad=14)
+plt.tight_layout(); plt.show()
+""")
+
+md("""> **What H2's test does and does not establish** *(added 2026-09-22 after external review)*:
+>
+> The paired TV permutation asks whether the ensemble's **net redistribution** between conditions
+> is larger than chance re-labelling of which answer came from which condition. It is a test of
+> **coordinated** movement, because TV is computed on aggregated vectors and individual changes
+> in opposing directions partly cancel.
+>
+> It is **not** a test of "did the models respond to framing at all". The clearest way to see the
+> gap: if exactly one model changed its answer in every single cell, TV would equal 1/n under
+> every possible swap, the permutation null would be a point mass, and the test would return
+> p = 1 -- despite a label change in every cell. That regime is not hypothetical here: as the
+> figure above shows, a substantial share of cells have 0 or 1 discordant models and contribute
+> nothing to the null.
+>
+> Both quantities are therefore reported: the **raw change rate** (how often any model changed its
+> answer) and the **coordination test** (whether those changes add up to a systematic
+> distributional shift). H2 as worded -- *"LLM emotion classifications will shift across
+> author-framing conditions"* -- is supported by both, but they are different claims and the
+> test statistic speaks to the second.
+>
+> **A further assumption, stated rather than buried:** the permutation flips each model's pair
+> independently within each of the 6 prompt configurations and then pools. A text-clustered
+> bootstrap interval does not by itself license those independent flips, and calling the unit
+> "text" does not make the permutation text-blocked. Exchangeability of a model's two answers
+> under the actual prompt-and-generation procedure remains an assumption, not something this
+> design verifies -- particularly because each model produced only **one** generation per
+> condition, so stochastic response variability is entirely unmeasured.""")
+
+md("""**Interpretation** *(revised 2026-09-21 — this section previously reported a mixed,
+side-dependent result; see the printed comparison in the cell above for the exact before/after
+figures)*: under the correctly-specified paired null, **both** persona sides reject the
+no-framing-effect null. Under the original pooled null, side b rejected and side a did not.
+
+The change is entirely attributable to the null specification, not to any change in the data:
+the observed effect sizes are essentially unchanged (side a ≈ 17%, side b ≈ 20% mean TV shift),
+and what moved was the null they are compared against. The pooled null was wide because it
+included between-model disagreement; the paired null is narrower because it holds model identity
+fixed, which is what H2 actually claims.
+
+**This correction makes H2 look better, and that deserves explicit scrutiny rather than quiet
+acceptance.** Two things are worth checking independently of the result: (i) the argument for
+pairing is a statement about *exchangeability*, and it would have been made the same way had the
+p-values moved the other direction; (ii) the original, conservative figures remain printed in the
+cell above, so a reader who disagrees with the specification can still see and use them. The
+conservative test is not "wrong" in the sense of being invalid — it is a valid test of a broader
+null, and it under-rejects relative to the null H2 states.
+
+This result is now consistent with the descriptive pattern in Section 8 (every model's
+label-change rate rises with category, on both sides), which the previous mixed verdict sat
+awkwardly against.
+
+**Overall H2 verdict: Supported** — the dedicated test rejects the no-framing-effect null on both
+persona sides. Note that this verdict rests on the paired specification; under the original
+pooled specification it would read "Partially supported / mixed."
+
+**Remaining scope limitation (unchanged):** this test compares neutral against persona prompts,
+which differ by more than persona content alone — the persona prompts add an author line the
+neutral prompts lack entirely. Section 8.1 now uses the previously-unanalysed `generic_human`
+condition to separate those two explanations.""")
+
+md("""### H3 (Ambiguity Sensitivity Hypothesis)
+
+**Hypothesis:** "Framing effects will be stronger for author-relevant ambiguous texts than for
+author-independent ambiguous texts."
+
+**Operationalization:** category ordering (Unambiguous < Author-Independent < Author-Relevant) on
+human text-level TV shift (**PRIMARY**), with the LLM side reported as **SECONDARY** support.
+
+**Test:** Kruskal-Wallis (global) + Holm-corrected planned pairwise Mann-Whitney U + Cliff's delta
+with a bootstrap 95% CI + an ordered-trend permutation test for the specific predicted increasing
+order. **Unit of analysis: text** (300 rows, one per text).""")
+
+code("""vals_by_cat = {c: text_level[text_level['pool_key']==c]['tv_distance'].values for c in CATEGORY_ORDER}
+groups = [vals_by_cat[c] for c in CATEGORY_ORDER]
+kw_stat, kw_p = su.kruskal_wallis(*groups)
+trend_j, trend_null, trend_p = su.ordered_trend_permutation_test(groups, n_perm=10000)
+print(f"[HUMAN, PRIMARY] Kruskal-Wallis: stat={kw_stat:.3f} p={kw_p:.2e}")
+print(f"Ordered-trend permutation test: J={trend_j:.1f} p={trend_p:.5f}")
+
+pair_specs = [('unambiguous','author_independent'), ('author_independent','author_relevant'), ('unambiguous','author_relevant')]
+rows, raw_p = [], []
+for a,b in pair_specs:
+    stat, p = su.mann_whitney(vals_by_cat[a], vals_by_cat[b])
+    delta = su.cliffs_delta(vals_by_cat[a], vals_by_cat[b])
+    ci_lo, ci_hi = cliffs_delta_bootstrap_ci(vals_by_cat[a], vals_by_cat[b], n_boot=3000)
+    rows.append({'comparison': f'{POOL_LABEL[a]} vs {POOL_LABEL[b]}', 'p_raw': p, 'cliffs_delta': delta, 'ci95_lo': ci_lo, 'ci95_hi': ci_hi})
+    raw_p.append(p)
+pair_df = pd.DataFrame(rows)
+pair_df['p_holm'] = su.holm_correct(raw_p)
+display(pair_df.round(4))
+""")
+
+code("""print("[LLM, SECONDARY]")
+llm_vals_by_cat = {c: llm_text_level[llm_text_level['pool_key']==c]['tv_distance'].values for c in CATEGORY_ORDER}
+llm_groups = [llm_vals_by_cat[c] for c in CATEGORY_ORDER]
+llm_kw_stat, llm_kw_p = su.kruskal_wallis(*llm_groups)
+llm_trend_j, _, llm_trend_p = su.ordered_trend_permutation_test(llm_groups, n_perm=10000)
+print(f"LLM Kruskal-Wallis: stat={llm_kw_stat:.3f} p={llm_kw_p:.2e}; ordered-trend p={llm_trend_p:.5f}")
+""")
+
+md("""**Interpretation:** the ordered-trend permutation test directly tests the specific predicted
+ordering (not just "the means happen to look ordered") and is significant for both human
+(p=0.0001) and LLM (p=0.0001). The weakest pairwise step is Author-Independent vs.
+Author-Relevant (see Cliff's delta and its CI above) — real but the smallest of the three
+pairwise effects; check whether its 95% CI excludes 0 before treating it as a strong effect on
+its own.
+
+**Overall H3 verdict: Supported**, with the specific caveat that the Author-Independent-to-
+Author-Relevant step is the weakest of the three pairwise comparisons and should not be
+overstated as a dramatic jump beyond what the CI supports.""")
+
+# ===========================================================================
+# H3 NULL-REFERENCED CONTRASTS (NEW, 2026-09-22, after external review)
+# ===========================================================================
+md("""#### Referencing the category contrasts against each text's own sampling null
+
+**[ROBUSTNESS -- added 2026-09-22. This is reported ALONGSIDE the raw contrasts above, not in
+place of them.]**
+
+There is a problem with comparing raw TV across categories that the raw analysis cannot see.
+**TV between two 3-vote samples is not zero when there is no effect.** Two independent 3-vote
+draws from the same underlying distribution disagree by chance -- and they disagree *more* when
+that distribution is dispersed. The ambiguous categories are, by construction, the ones whose
+votes are dispersed. So a raw category comparison measures baseline vote dispersion and any
+framing effect together, and cannot separate them.
+
+The fix is to give every text its own reference point. For each text and persona side, pool that
+text's neutral and persona votes, reshuffle, re-split at the observed group sizes, and average the
+resulting TV. That is the TV expected **for that specific text** if framing did nothing. Each
+text's **excess TV** is then `observed - expected`, and the category contrasts can be recomputed
+on excess rather than raw TV.
+
+> **Methodological note, stated deliberately.** The raw contrasts remain the pre-registered
+> analysis and are reported above unchanged. This null-referenced version was added *after* seeing
+> the raw result, so promoting it to "primary" would be analysis selection after the fact. It is
+> therefore reported as a **sensitivity analysis**: it does not replace the raw contrasts, and it
+> is not evidence that the categories are equivalent. What it does is set an upper bound on how
+> much of the raw ordering can be attributed to framing rather than to baseline dispersion, and
+> that bound turns out to be a demanding one.""")
+
+code("""nr_rows = []
+for (tid, side), grp in human_valid.groupby(['text_id','persona_side']):
+    n_votes = human_votes.get((tid, 'neutral'))
+    p_votes = human_votes.get((tid, side))
+    if not n_votes or not p_votes: continue
+    exp_null = su.conditional_null_tv(n_votes, p_votes, EMOTIONS, n_draw=400)
+    if exp_null is None: continue
+    nr_rows.append({'text_id': tid, 'persona_side': side,
+                    'observed_tv': tv_counts(n_votes, p_votes),
+                    'expected_null_tv': exp_null})
+nr = pd.DataFrame(nr_rows)
+nr['excess_tv'] = nr['observed_tv'] - nr['expected_null_tv']
+nr_text = nr.groupby('text_id', as_index=False)[['observed_tv','expected_null_tv','excess_tv']].mean()
+nr_text['pool_key'] = nr_text['text_id'].map(pool_of_text)
+
+summary_nr = nr_text.groupby('pool_key')[['observed_tv','expected_null_tv','excess_tv']].mean().reindex(CATEGORY_ORDER) * 100
+summary_nr.index = CATEGORY_LABELS
+display(summary_nr.round(2))
+print("observed_tv = raw TV; expected_null_tv = TV expected from finite-sample noise alone,")
+print("given each text's own votes; excess_tv = the part not explained by that noise.")
+
+rng_nr = np.random.default_rng(42)
+def boot_contrast(col, a, b, n_boot=5000):
+    ra = nr_text[nr_text['pool_key']==a][col].values
+    rb = nr_text[nr_text['pool_key']==b][col].values
+    d = ra.mean() - rb.mean()
+    bs = np.empty(n_boot)
+    for i in range(n_boot):
+        bs[i] = rng_nr.choice(ra, len(ra), True).mean() - rng_nr.choice(rb, len(rb), True).mean()
+    lo, hi = np.percentile(bs, [2.5, 97.5])
+    pv = 2 * min((bs <= 0).mean(), (bs >= 0).mean())
+    return d*100, lo*100, hi*100, max(pv, 1/n_boot)
+
+PAIRS = [('author_relevant','author_independent','Author-Relevant - Author-Independent'),
+         ('author_independent','unambiguous','Author-Independent - Unambiguous'),
+         ('author_relevant','unambiguous','Author-Relevant - Unambiguous')]
+out = []
+for col, tag in (('observed_tv','RAW'), ('excess_tv','NULL-REFERENCED')):
+    ps = []
+    rows_c = []
+    for a, b, lbl in PAIRS:
+        d, lo, hi, pv = boot_contrast(col, a, b); ps.append(pv)
+        rows_c.append({'analysis': tag, 'contrast': lbl, 'diff_pp': d, 'ci_lo': lo, 'ci_hi': hi, 'p_raw': pv})
+    holm = su.holm_correct(np.array(ps))
+    for r, h in zip(rows_c, holm):
+        r['p_holm'] = h; out.append(r)
+contrast_df = pd.DataFrame(out)
+display(contrast_df.round(4))
+
+fig, ax = plt.subplots(figsize=(11, 5.5))
+y = np.arange(len(PAIRS)); w = 0.36
+for off, tag, col in ((-w/2, 'RAW', '#B0B0B0'), (w/2, 'NULL-REFERENCED', '#C44E52')):
+    sub = contrast_df[contrast_df['analysis']==tag].set_index('contrast').reindex([l for _,_,l in PAIRS])
+    ax.barh(y + off, sub['diff_pp'], height=w, color=col, label=tag,
+            xerr=[sub['diff_pp']-sub['ci_lo'], sub['ci_hi']-sub['diff_pp']], capsize=3)
+    for i, (_, r) in enumerate(sub.iterrows()):
+        ax.text(r['ci_hi'] + 0.5, y[i] + off, f"p_holm={r['p_holm']:.3f}", va='center', fontsize=8)
+ax.axvline(0, color='black', lw=1.2)
+ax.set_yticks(y); ax.set_yticklabels([l for _,_,l in PAIRS], fontsize=9); ax.invert_yaxis()
+ax.set_xlabel('Difference in mean TV (percentage points, 95% text-bootstrap CI)')
+ax.set_title("H3 category contrasts: raw vs referenced against each text's own sampling null", pad=14)
+ax.legend(fontsize=9, loc='lower right')
+plt.tight_layout(); plt.show()
+
+n_sig_raw = int((contrast_df[contrast_df.analysis=='RAW']['p_holm'] < 0.05).sum())
+n_sig_nr  = int((contrast_df[contrast_df.analysis=='NULL-REFERENCED']['p_holm'] < 0.05).sum())
+print(f"Holm-significant contrasts: RAW {n_sig_raw}/3  |  NULL-REFERENCED {n_sig_nr}/3")
+""")
+
+md("""> **What this shows.** The expected sampling-null TV is itself strongly ordered by category --
+> roughly 43% / 50% / 55% going from Unambiguous to Author-Relevant -- because more ambiguous
+> texts have more dispersed votes. Once each text is referenced against its own null, the excess
+> TV attributable to framing is far smaller (on the order of 2-6pp rather than 45-60pp), the
+> ordering is **preserved in direction**, but none of the three pairwise contrasts remains
+> significant after Holm correction at n=100 per category.
+>
+> **How to report this honestly:**
+> - The raw contrasts are real and are the pre-registered analysis. H3's ordering **is** present
+>   in the raw TV data.
+> - Non-significance in the null-referenced version is **not** evidence that the categories are
+>   equivalent. The excess-TV estimator is noisier than raw TV (it subtracts an estimated
+>   quantity), so this is a lower-powered test, and the confidence intervals are correspondingly
+>   wide.
+> - What it does establish is that **a large share of the raw category difference is attributable
+>   to baseline vote dispersion rather than to framing**, and that this study cannot cleanly
+>   separate the two at its current sample size. A strong behavioural reading of the raw ordering
+>   is not supported.
+>
+> **Revised H3 verdict: Supported in raw TV; not separable from baseline dispersion.** The
+> predicted ordering holds and the ordered-trend test on raw TV is significant, but the contrasts
+> do not survive null-referencing, so H3 should be stated as an ordering in observed
+> disagreement rather than as a demonstrated framing-sensitivity gradient.
+
+> **A further caveat on what H3 can claim.** The three categories were themselves defined using
+> pilot judgments of whether author framing flips the reading (`flip`, `judge_a`, `judge_b` in
+> `sampled_texts.csv`). Texts were therefore *selected* into the Author-Relevant group partly on
+> the property H3 then tests. That makes H3 a **transfer comparison** -- does a grouping built
+> from pilot flips predict framing effects in newly collected human data? -- and not an
+> independent discovery that author-relevance is the operative principle. This does not
+> invalidate the result, but it constrains how it can be worded.""")
+
+# ===========================================================================
+# H3 CATEGORY-SOURCE SENSITIVITY (NEW, audit repair 2026-09-21)
+# ===========================================================================
+md("""#### Sensitivity check: the 9 texts whose category is disputed
+
+**[ROBUSTNESS — added 2026-09-21]** H3 is entirely a claim about category membership, so it is
+the hypothesis most exposed to how the 9 self-contradictory texts are classified (see the note in
+the setup cell). Those texts are `Unambiguous` in `sampled_texts.csv` — the master file the corpus
+was stratified on — but `author_relevant` in the persona rows of `human_annotations.csv`.
+
+This is a genuine definitional conflict rather than a data-entry error: all 9 have high reader
+agreement (0.8–1.0, which is what "unambiguous" means by the corpus's own criterion) **and**
+`flip=True` with two different judge emotions (which is what "author-relevant" means). They sit
+exactly on the boundary between the two definitions.
+
+Because moving them shifts texts between the two *most extreme* categories — precisely the
+contrast H3 rests on — the analysis is run **both ways** below rather than only the way this
+notebook now uses.""")
+
+code("""sens_rows = []
+for label, src in (('MASTER: sampled_texts.csv (used throughout)', pool_master),
+                   ('ALTERNATIVE: persona-round classification', pool_persona_round)):
+    tl = text_level[['text_id','tv_distance']].copy()
+    tl['k'] = tl['text_id'].map(src)
+    groups = [tl[tl['k']==c]['tv_distance'].values for c in CATEGORY_ORDER]
+    kw_s, kw_pv = su.kruskal_wallis(*groups)
+    _, _, tr_p = su.ordered_trend_permutation_test(groups, n_perm=10000)
+    d_ar_un = su.cliffs_delta(groups[2], groups[0])
+    sens_rows.append({'category source': label,
+                      'n per category': str([len(g) for g in groups]),
+                      'mean TV% by category': str([round(g.mean()*100,2) for g in groups]),
+                      'Kruskal-Wallis p': kw_pv, 'ordered-trend p': tr_p,
+                      "Cliff's d (AR vs Unamb)": d_ar_un})
+sens_df = pd.DataFrame(sens_rows)
+display(sens_df.round(5))
+print()
+print("Both category sources give the same qualitative answer: the predicted ordering holds and")
+print("the ordered-trend test is significant either way, so H3's verdict does not depend on how")
+print("these 9 texts are resolved.")
+print()
+print("Note the direction of the difference: the ALTERNATIVE assignment yields the LARGER effect")
+print("size. The master file -- which this notebook uses -- is therefore the more conservative of")
+print("the two choices, not the one that flatters H3.")
+""")
+
+md("""### H4 (Alignment Hypothesis)
+
+**Hypothesis:** "The direction of framing-induced shifts in LLM classifications will partially
+align with human judgment shifts, but the magnitude of these shifts will differ." This makes TWO
+separate, separately-tested predictions.
+
+**Direction component** — Operationalization: cosine of human vs. LLM delta vectors, text-level.
+Test: shuffled-pairing permutation test (Section 9). Effect size: mean cosine, with the
+permutation null as the comparison distribution. Result: mean cosine=0.127 (n=251/300 texts),
+permutation p=0.0001.
+
+**Interpretation:** the LLM's direction is associated with the specific text's human direction
+more than a random pairing would predict, but a raw cosine of ~0.13 is a small, partial
+alignment, not a close match — **Partially supported**, matching H4's own wording rather than
+being rounded up to "supported."
+
+**Magnitude component — two separate questions, tested separately.** "The magnitude of these
+shifts will differ" is a claim about whether the two sides' TV values are *unequal on average*.
+Spearman correlation (Section 9, rho=0.189) does **not** test that — correlation measures
+*covariation* (do texts with a larger human shift tend to also have a larger LLM shift?), which
+is a different question from whether the two magnitudes are equal or different. A weak
+correlation is compatible with either equal or unequal average magnitudes; it cannot be used as
+evidence for "magnitudes differ." Both questions are answered separately below.
+
+**Question 1 (covariation, already answered in Section 9):** rho=0.189, 95% CI [0.121, 0.256] —
+a weak positive association between which texts shift more for humans and which shift more for
+the LLM ensemble. This says nothing about whether the two sides' magnitudes are similar or
+different in size.
+
+**Question 2 (do the magnitudes actually differ?) — direct paired test.** Operationalization:
+for each text, the human text-level TV shift (%) minus the LLM text-level TV shift (%). Test:
+paired Wilcoxon signed-rank test (non-parametric, appropriate for bounded/zero-inflated TV data)
+plus a percentile bootstrap 95% CI on the mean paired difference. Effect size: matched-pairs
+rank-biserial correlation. **Unit of analysis: text** (300 paired observations, one per text —
+already aggregated, no repeated-text structure to cluster).""")
+
+code("""paired = text_level[['text_id','tv_distance']].rename(columns={'tv_distance':'human_tv'}).merge(
+    llm_text_level[['text_id','tv_distance']].rename(columns={'tv_distance':'llm_tv'}), on='text_id', validate='one_to_one')
+paired['diff_pct'] = (paired['human_tv'] - paired['llm_tv']) * 100
+
+mean_diff = paired['diff_pct'].mean()
+median_diff = paired['diff_pct'].median()
+
+rng = np.random.default_rng(42)
+n = len(paired)
+boot_means = np.empty(5000)
+diff_vals = paired['diff_pct'].values
+for i in range(5000):
+    idx = rng.integers(0, n, n)
+    boot_means[i] = diff_vals[idx].mean()
+ci_lo, ci_hi = np.percentile(boot_means, [2.5, 97.5])
+
+w_stat, w_p = su.wilcoxon_signed_rank(paired['human_tv'].values, paired['llm_tv'].values)
+
+d = paired['human_tv'].values - paired['llm_tv'].values
+d_nonzero = d[d != 0]
+ranks = pd.Series(np.abs(d_nonzero)).rank().values
+w_pos = ranks[d_nonzero > 0].sum()
+w_neg = ranks[d_nonzero < 0].sum()
+r_rb = (w_pos - w_neg) / (w_pos + w_neg)
+
+print(f"n={n} paired texts")
+print(f"Mean paired difference (human - LLM): {mean_diff:.1f}pp, 95% CI [{ci_lo:.1f}, {ci_hi:.1f}]")
+print(f"Median paired difference: {median_diff:.1f}pp")
+print(f"Wilcoxon signed-rank test: statistic={w_stat:.1f}, p={w_p:.2e}")
+print(f"Matched-pairs rank-biserial correlation (effect size): r={r_rb:.3f}")
+
+fig, axes = plt.subplots(1, 2, figsize=(13, 5.5))
+groups = [paired['human_tv'].values*100, paired['llm_tv'].values*100]
+violin_box_strip(axes[0], groups, ['Human\\n(text-level)', 'LLM ensemble\\n(text-level)'], colors=['#4C72B0','#DD8452'],
+                  ylabel='TV shift magnitude (%)', title='Paired comparison: same 300 texts')
+axes[1].hist(paired['diff_pct'], bins=30, color='#4C72B0', alpha=0.75, edgecolor='white')
+axes[1].axvline(0, color='black', linewidth=1)
+axes[1].axvline(mean_diff, color='crimson', linewidth=2, label=f'mean diff={mean_diff:.1f}pp')
+axes[1].set_xlabel('Human TV% - LLM TV% (per text)'); axes[1].set_ylabel('# texts')
+axes[1].set_title(f'Paired difference distribution\\n95% CI [{ci_lo:.1f}, {ci_hi:.1f}], Wilcoxon p={w_p:.1e}')
+axes[1].legend(fontsize=9)
+plt.tight_layout()
+plt.show()
+""")
+
+md("""**Interpretation:** the paired test shows humans shift more than the LLM ensemble by a mean
+of ~34.6 percentage points (95% CI excluding 0 by a wide margin), Wilcoxon p≈5e-48, matched-pairs
+rank-biserial correlation r≈0.978 (near the theoretical maximum of 1.0, indicating human TV
+exceeds LLM TV for nearly all 300 texts, not just on average). Taken at face value this is a
+large, consistent, precisely estimated difference.
+
+**Vote-count granularity is a real but small part of this**, and it is measured directly below
+rather than argued about.""")
+
+# ===========================================================================
+# H4 COUNT-STANDARDIZED SENSITIVITY (rewritten 2026-09-22 after external review)
+# ===========================================================================
+md("""#### Is the magnitude gap just an artefact of 3 raters vs 7 models? Direct test.
+
+**[ROBUSTNESS — rewritten 2026-09-22; supersedes an incorrect earlier analysis, see the note at
+the end of this subsection]**
+
+TV between two small-sample vote vectors is partly a function of how many votes there are. Human
+vectors are built from 3 raters and LLM vectors from up to 7 models, so some of the 34.6pp gap
+could be arithmetic rather than behavioural. The right way to settle that is not to argue about
+it but to **equalize the counts and re-measure**.
+
+That is possible here, and it needs no new data:
+- **Human side:** each condition's votes can be subsampled to exactly 3.
+- **LLM side:** the same **3 model identities** can be drawn for the neutral and the persona
+  condition of a cell, so the ensemble composition is held fixed as well as its size.
+
+Both sides then rest on a 3-vs-3 comparison on a common scale. 200 independent draws per
+comparison; the point estimate is an equal-weight average across the balanced
+category × side × configuration strata.""")
+
+code("""# human_votes / tv_counts are defined in the setup cell; both sides are rebuilt from raw
+# votes and labels here so vote COUNT and ensemble COMPOSITION can be controlled directly.
+rng_ss = np.random.default_rng(42)
+NDRAW, K = 200, 3
+ss_rows = []
+for (tid, pv, lf), g in llm_indiv.groupby(['text_id','prompt_variant','label_format']):
+    bf = {r['framing_condition']: r for _, r in g.iterrows()}
+    if 'neutral' not in bf: continue
+    hn = human_votes.get((tid, 'neutral'))
+    for side, fr in (('a','persona_a'), ('b','persona_b')):
+        if fr not in bf: continue
+        hp = human_votes.get((tid, side))
+        if not hn or not hp: continue
+        common = [m for m in MODEL_COLS
+                  if bf['neutral'][f'{m}__resolved'] is not None and bf[fr][f'{m}__resolved'] is not None]
+        if len(common) < K or len(hn) < K or len(hp) < K: continue
+        ln = [bf['neutral'][f'{m}__resolved'] for m in common]
+        lp = [bf[fr][f'{m}__resolved'] for m in common]
+        gaps = np.empty(NDRAW)
+        for d in range(NDRAW):
+            hi_ = rng_ss.choice(len(hn), K, replace=False)
+            pi_ = rng_ss.choice(len(hp), K, replace=False)
+            mi_ = rng_ss.choice(len(common), K, replace=False)   # SAME 3 model identities both sides
+            gaps[d] = (tv_counts([hn[i] for i in hi_], [hp[i] for i in pi_])
+                       - tv_counts([ln[i] for i in mi_], [lp[i] for i in mi_]))
+        ss_rows.append({'text_id': tid, 'persona_side': side, 'prompt_variant': pv, 'label_format': lf,
+                        'pool_key': pool_of_text.get(tid),
+                        'gap_matched': gaps.mean(),
+                        'gap_unmatched': tv_counts(hn, hp) - tv_counts(ln, lp)})
+ss = pd.DataFrame(ss_rows)
+
+strata = ss.groupby(['pool_key','persona_side','prompt_variant','label_format'])[['gap_matched','gap_unmatched']].mean()
+gap_unmatched = strata['gap_unmatched'].mean() * 100
+gap_matched = strata['gap_matched'].mean() * 100
+print(f"Comparisons used: {len(ss)} (>=3 human votes per side, >=3 models valid in BOTH conditions)")
+print(f"  Unmatched gap (human TV - LLM TV)            : {gap_unmatched:.2f} pp")
+print(f"  Count-standardized gap (3 votes vs 3 models) : {gap_matched:.2f} pp")
+print(f"  Attributable to vote-count granularity       : {gap_unmatched - gap_matched:.2f} pp "
+      f"({(gap_unmatched-gap_matched)/gap_unmatched*100:.0f}% of the raw gap)")
+
+fig, axes = plt.subplots(1, 2, figsize=(13.5, 5))
+axes[0].bar(['Unmatched\\n(3 votes vs up to 7 models)', 'Count-standardized\\n(3 votes vs 3 models)'],
+            [gap_unmatched, gap_matched], color=['#B0B0B0', '#4C72B0'], width=0.55)
+for i, v in enumerate([gap_unmatched, gap_matched]):
+    axes[0].text(i, v + 0.7, f'{v:.2f}pp', ha='center', fontweight='bold')
+axes[0].set_ylim(0, max(gap_unmatched, gap_matched) * 1.25)
+axes[0].set_ylabel('Mean human - LLM TV gap (pp)')
+axes[0].set_title('The gap survives count standardization\\nGranularity explains a small share, not the effect', pad=14)
+
+by_cat = strata.groupby('pool_key')[['gap_unmatched','gap_matched']].mean().reindex(CATEGORY_ORDER) * 100
+x = np.arange(3); w = 0.38
+axes[1].bar(x - w/2, by_cat['gap_unmatched'], width=w, label='Unmatched', color='#B0B0B0')
+axes[1].bar(x + w/2, by_cat['gap_matched'], width=w, label='Count-standardized', color='#4C72B0')
+axes[1].set_xticks(x); axes[1].set_xticklabels(CATEGORY_LABELS, rotation=15, ha='right')
+axes[1].set_ylabel('Mean gap (pp)'); axes[1].legend(fontsize=9)
+axes[1].set_title('Same conclusion within every category', pad=14)
+plt.tight_layout(); plt.show()
+
+display(by_cat.round(2))
+print()
+print("This is an empirical sensitivity on the observed answers. It equalizes vote COUNT and")
+print("ensemble COMPOSITION. It does NOT equalize the generating processes, and it does not")
+print("convert a between-person human design into a within-model one -- see the limitations below.")
+""")
+
+md("""> **H4 magnitude conclusion.** After equalizing both sides to 3 votes and holding the model
+> identities fixed, the gap falls from **~34.9pp to ~33.4pp**. Vote-count granularity accounts for
+> roughly **1.5pp -- about 4% of the raw gap** -- and the difference survives within every
+> category. Humans shift substantially more than the LLM ensemble, and that is not an artefact of
+> counting.
+>
+> **It still needs qualification**, for reasons count standardization does not touch:
+> - The human comparison is **between-person** (different raters in each condition) while the LLM
+>   comparison is **within-model** (the same model answers both). Part of the human shift is
+>   between-rater variability with no model counterpart. Matching counts does not fix this.
+> - Each model produced **one generation per condition**, so model-side stochastic variability is
+>   unmeasured and the LLM figure is not a stable per-model expectation.
+> - The null-referenced analysis under H3 shows a substantial share of raw human TV is expected
+>   under pure sampling noise given each text's own votes.
+>
+> **Verdict: Supported (magnitudes differ)**, with the between-person/within-model asymmetry as a
+> standing limitation.
+
+> #### Correction notice
+>
+> An earlier version of this notebook (2026-09-21) claimed the opposite: that **no** matched-count
+> comparison was possible because the two sides share no common vote count, and downgraded H4's
+> magnitude component to *"not cleanly testable in this design."* That was **wrong**, and an
+> external review was right to reject it. Two specific errors:
+>
+> 1. **"No matched subsample exists" was false.** Human votes can be subsampled to 3 and the same
+>    3 model identities drawn on both sides. No ensemble with exactly 3 native members is needed.
+> 2. **The 1/n extrapolation could not support the claim drawn from it.** Fitting mean LLM TV on
+>    inverse neutral count across four points and predicting outside that support conflates count
+>    with missing-answer composition and text composition. Calling it "illustrative" did not
+>    license concluding that granularity could account for the whole gap.
+>
+> The earlier argument also misstated the arithmetic: a minimum non-zero TV of 1/3 requires *both*
+> distributions to have denominator 3. At denominators 3 and 4, TV can be as small as 1/12.
+>
+> This correction restores support for H4's magnitude claim -- a change in the hypothesis's favour.
+> It was made because a direct measurement supersedes an out-of-support extrapolation, and the
+> superseded reasoning is recorded here rather than deleted so the change can be audited.
+""")
+
+md("""**Overall H4 verdict: Partially supported** -- magnitude **supported** (the gap survives count
+standardization); direction **partially supported** (small but above-chance alignment, which is
+what H4 itself predicts).
+
+**Correction to an earlier claim about direction:** this notebook previously stated that the
+direction component was "unaffected by this confound -- cosine is scale-invariant". Scale
+invariance is not noise invariance. Cosine is invariant to multiplying a vector by a positive
+scalar, but drawing 3 votes instead of 7 is not scalar multiplication: it can change a delta
+vector's direction, and it can make the delta exactly zero (in which case direction is undefined
+rather than preserved). Small-count measurement noise therefore *does* affect the direction
+analysis, which is why zero-shift coverage is reported alongside it.""")
+
+md("""### Prompt-structure test (formal test for the Section 10 preview) [EXPLORATORY, no formal
+hypothesis]
+
+**Test:** repeated-measures Friedman test across the 6 prompt configurations. **Unit of
+analysis: text** (one row per text, only texts with all 6 configs present).""")
+
+code("""llm_per_text_config = llm_valid.groupby(['text_id','prompt_variant','label_format'])['tv_distance'].mean().reset_index()
+llm_per_text_config['config'] = llm_per_text_config['prompt_variant'] + '/' + llm_per_text_config['label_format']
+wide = llm_per_text_config.pivot(index='text_id', columns='config', values='tv_distance').dropna()
+configs = sorted(wide.columns)
+friedman_stat, friedman_p = su.friedman_test(*[wide[c].values for c in configs])
+print(f"Friedman test across 6 prompt configs (n={len(wide)} texts with all 6 present): stat={friedman_stat:.3f} p={friedman_p:.5f}")
+
+pair_rows_r, raw_p_r = [], []
+for c1, c2 in combinations(configs, 2):
+    stat, p = su.wilcoxon_signed_rank(wide[c1].values, wide[c2].values)
+    pair_rows_r.append({'config_a': c1, 'config_b': c2, 'p_raw': p})
+    raw_p_r.append(p)
+r_pair_df = pd.DataFrame(pair_rows_r)
+r_pair_df['p_holm'] = su.holm_correct(raw_p_r)
+n_sig = (r_pair_df['p_holm'] < 0.05).sum()
+print(f"{n_sig}/{len(r_pair_df)} pairwise config comparisons significant after Holm correction")
+print()
+print(f"Interpretation: Friedman p={friedman_p:.4f} -- " + ("prompt design appears to change LLM persona-shift magnitude"
+      if friedman_p < 0.05 else "no evidence prompt design changes LLM persona-shift magnitude in this dataset (a clean null result, reported as such)"))
+""")
+
+# ===========================================================================
+# SECTION 13
+# ===========================================================================
+md("""## 13. Qualitative case studies
+
+**[EXPLORATORY]** Six representative cases, each shown as an actual vector comparison plot —
+chosen to illustrate, and in Case F specifically to stress-test, the vector approach itself.
+Patterns E and F are first quantified across the whole matched dataset, not just shown once.""")
+
+code("""print("=== Systematic check: how often does 'dominant-label says changed/unchanged differently, vectors say aligned' happen? ===")
+dominant_mismatch = matched[matched['human_dominant_changed'] != matched['llm_dominant_changed']]
+defined_mismatch = dominant_mismatch[dominant_mismatch['delta_cosine_defined']]
+hidden_agreement_rate = (defined_mismatch['delta_cosine_similarity'] > 0.5).mean()
+print(f"Of {len(dominant_mismatch)} rows where human and LLM dominant-change status disagree "
+      f"({len(defined_mismatch)} with a defined cosine), {hidden_agreement_rate*100:.1f}% have "
+      f"delta-vector cosine > 0.5 -- their underlying shift DIRECTION substantially agrees despite "
+      f"the dominant-label-level disagreement. (Unit: row-level, i.e. text x side x prompt-config;")
+print("this is a descriptive rate over all rows, not a text-level-aggregated statistic.)")
+print()
+print("=== Systematic check: how often does a high cosine co-occur with a large magnitude gap? ===")
+high_cos = matched[(matched['delta_cosine_defined']) & (matched['delta_cosine_similarity']>0.7)]
+big_gap_rate = (np.abs(high_cos['human_shift_percent'] - high_cos['llm_shift_percent']) > 30).mean()
+print(f"Of {len(high_cos)} rows with cosine > 0.7, {big_gap_rate*100:.1f}% also have a magnitude gap "
+      f"> 30 percentage points between human and LLM shift size -- cosine alone does not indicate")
+print("whether the two sides moved by a similar AMOUNT; magnitude must be checked separately.")
+""")
+
+md("""> **Observation:** neither pattern is a rare curiosity in this dataset. A meaningful share of
+> rows with disagreeing dominant-change status still show a high directional cosine, and a
+> meaningful share of high-cosine rows still show a large magnitude gap. Both are reported as
+> row-level descriptive rates (not text-level-aggregated, and not formally tested), consistent
+> with why this analysis reports magnitude and direction together throughout rather than
+> collapsing either into a single similarity score.""")
+
+code("""# AUDIT REPAIR (2026-09-21): every case-study caption used to print a cosine taken from
+# `text_deltas`, i.e. the delta vectors AVERAGED over both persona sides and all 6 prompt
+# configs -- while the bars beneath it show ONE side under ONE config. The two quantities are not
+# the same and are not guaranteed to agree. For Case B they did not even agree qualitatively: the
+# caption read "cosine=-1.000" while the LLM delta in the plotted cell was exactly zero, making
+# the plotted cosine UNDEFINED rather than -1. `case_caption()` below recomputes the cosine from
+# precisely the four vectors handed to the plotter, and says so explicitly when it is undefined.
+def case_caption(hn, hp, ln, lp, extra=''):
+    dh, dl = delta_vector(hn, hp), delta_vector(ln, lp)
+    res = safe_cosine_similarity(dh, dl)
+    if res.defined:
+        cap = f'cosine of PLOTTED deltas = {res.value:+.3f}'
+    else:
+        cap = f'cosine UNDEFINED here ({res.reason})'
+    return cap + (f' | {extra}' if extra else '')
+
+def show_case_text(text_id, side):
+    row = sampled_texts[sampled_texts['text_id']==str(text_id)]
+    if len(row)==0:
+        print(f'(text {text_id} not found in sampled_texts.csv)'); return
+    r = row.iloc[0]
+    persona = r['persona_a'] if side=='a' else r['persona_b']
+    print(f'TEXT {text_id} [{r[\"classification\"]}]: \"{r[\"text\"]}\"')
+    print(f'PERSONA {side}: {persona}')
+    print(f'author_emotion={r[\"author_emotion\"]} | reader_majority={r[\"reader_majority\"]} ({r[\"majority_share\"]})')
+
+def plot_case(ax_pair, text_id, human_neutral_vec, human_persona_vec, llm_neutral_vec, llm_persona_vec, subtitle):
+    vector_bar_pair(ax_pair[0], EMOTIONS, human_neutral_vec, human_persona_vec, title=f'HUMAN — text {text_id}\\n{subtitle}')
+    vector_bar_pair(ax_pair[1], EMOTIONS, llm_neutral_vec, llm_persona_vec, label_before='Neutral', label_after='Persona',
+                     color_before='#8C8C8C', color_after='#4C72B0', title=f'LLM ENSEMBLE — text {text_id}\\n{subtitle}')
+
+human_neutral_by_tid = {r['text_id']: {e: r[f'vec_prob_{e}'] for e in EMOTIONS} for _, r in human_vectors[human_vectors['side']=='neutral'].iterrows()}
+human_persona_by_tid_side = {(r['text_id'], r['side']): {e: r[f'vec_prob_{e}'] for e in EMOTIONS} for _, r in human_vectors[human_vectors['side'].isin(['a','b'])].iterrows()}
+
+def get_llm_vecs(tid, side, pv='one_shot', lf='numbered'):
+    sub = llm_vectors[(llm_vectors['text_id']==tid) & (llm_vectors['prompt_variant']==pv) & (llm_vectors['label_format']==lf)]
+    neutral_row = sub[sub['framing_condition']=='neutral']
+    framing = 'persona_a' if side=='a' else 'persona_b'
+    persona_row = sub[sub['framing_condition']==framing]
+    if len(neutral_row)==0 or len(persona_row)==0: return None, None
+    nv = {e: neutral_row.iloc[0][f'vec_prob_{e}'] for e in EMOTIONS}
+    pv_ = {e: persona_row.iloc[0][f'vec_prob_{e}'] for e in EMOTIONS}
+    return nv, pv_
+""")
+
+code("""# Cases A and B are now selected at the SAME granularity they are plotted at -- one
+# (text x persona side x prompt config) cell -- so the case really is the extreme case of the
+# thing being shown, and the caption is computed from the plotted vectors by construction.
+case_pool = matched[matched['delta_cosine_defined']==True].copy()
+print(f"Selecting cases from {len(case_pool)} (text x side x config) cells with a defined delta cosine")
+print(f"(out of {len(matched)} total cells; {len(matched)-len(case_pool)} are undefined because one")
+print("side did not move at all -- see the zero-shift coverage analysis in Section 8.2).")
+
+print("\\n=== CASE A: strongest directional AGREEMENT (cosine near +1) ===")
+row_a = case_pool.sort_values('delta_cosine_similarity', ascending=False).iloc[0]
+tid_a, side_a, pv_a, lf_a = row_a['text_id'], row_a['persona_side'], row_a['prompt_variant'], row_a['label_format']
+show_case_text(tid_a, side_a)
+print(f'(plotted cell: prompt_variant={pv_a}, label_format={lf_a}, persona side {side_a})')
+hn, hp = human_neutral_by_tid[tid_a], human_persona_by_tid_side[(tid_a, side_a)]
+ln, lp = get_llm_vecs(tid_a, side_a, pv_a, lf_a)
+fig, axes = plt.subplots(1, 2, figsize=(14, 4.5))
+plot_case(axes, tid_a, hn, hp, ln, lp, case_caption(hn, hp, ln, lp, f'{pv_a}/{lf_a}, side {side_a}'))
+plt.tight_layout(); plt.show()
+""")
+
+code("""print("=== CASE B: strongest directional DISAGREEMENT (cosine near -1) ===")
+row_b = case_pool.sort_values('delta_cosine_similarity').iloc[0]
+tid_b, side_b, pv_b, lf_b = row_b['text_id'], row_b['persona_side'], row_b['prompt_variant'], row_b['label_format']
+show_case_text(tid_b, side_b)
+print(f'(plotted cell: prompt_variant={pv_b}, label_format={lf_b}, persona side {side_b})')
+hn, hp = human_neutral_by_tid[tid_b], human_persona_by_tid_side[(tid_b, side_b)]
+ln, lp = get_llm_vecs(tid_b, side_b, pv_b, lf_b)
+fig, axes = plt.subplots(1, 2, figsize=(14, 4.5))
+plot_case(axes, tid_b, hn, hp, ln, lp, case_caption(hn, hp, ln, lp, f'{pv_b}/{lf_b}, side {side_b}'))
+plt.tight_layout(); plt.show()
+print()
+print("Note how narrow a single cell is: the same text's cosine under the other 5 prompt configs")
+print("can differ substantially, which is exactly why the aggregate analysis in Section 9 -- not")
+print("these illustrations -- carries the inferential weight.")
+_same_text = case_pool[(case_pool['text_id']==tid_b) & (case_pool['persona_side']==side_b)]
+print(f"This text/side has defined cosines in {len(_same_text)} of 6 configs: "
+      f"{sorted(_same_text['delta_cosine_similarity'].round(2).tolist())}")
+""")
+
+code("""print("=== CASE C/D: new emotion introduced + large redistribution WITHOUT dominant-label change ===")
+case_cd_candidates = human_valid[(human_valid['new_emotion_introduced']) & (human_valid['dominant_emotion_changed']==False) & (human_valid['tv_distance']>0.5)]
+case_cd = case_cd_candidates.iloc[0] if len(case_cd_candidates) else human_valid[human_valid['new_emotion_introduced']].iloc[0]
+tid_cd, side_cd = case_cd['text_id'], case_cd['persona_side']
+print(f"Text {tid_cd}: TV shift={case_cd['shift_percent']:.1f}%, dominant '{case_cd['neutral_dominant']}' -> '{case_cd['persona_dominant']}' (changed={case_cd['dominant_emotion_changed']})")
+print(f"  new emotion(s) present post-persona that were absent pre-persona: {case_cd['new_emotions']}")
+hn, hp = human_neutral_by_tid[tid_cd], human_persona_by_tid_side[(tid_cd, side_cd)]
+fig, ax = plt.subplots(figsize=(8, 4.5))
+vector_bar_pair(ax, EMOTIONS, hn, hp, title=f'HUMAN — text {tid_cd} (side {side_cd})\\n{case_cd[\"shift_percent\"]:.0f}% TV shift, dominant label unchanged')
+plt.tight_layout(); plt.show()
+print("A dominant-label-only comparison would record this text as 'unchanged' since the dominant")
+print("label survived -- the vector shows the redistribution that comparison would miss.")
+""")
+
+code("""print("=== CASE E: dominant-change status disagrees between human/LLM, but delta vectors still align ===")
+found = None
+for _, row in dominant_mismatch.iterrows():
+    if row['delta_cosine_defined'] and row['delta_cosine_similarity'] > 0.7:
+        found = row; break
+tid_e, side_e, pv_e, lf_e = found['text_id'], found['persona_side'], found['prompt_variant'], found['label_format']
+show_case_text(tid_e, side_e)
+print(f"Text {tid_e} ({side_e}, {pv_e}/{lf_e}): human dominant change={found['human_dominant_changed']}, "
+      f"llm dominant change={found['llm_dominant_changed']} (a dominant-label-only comparison treats these as disagreeing)")
+print(f"delta-vector cosine = {found['delta_cosine_similarity']:.3f} -- direction of shift is similar despite that")
+hn, hp = human_neutral_by_tid[tid_e], human_persona_by_tid_side[(tid_e, side_e)]
+ln, lp = get_llm_vecs(tid_e, side_e, pv_e, lf_e)
+fig, axes = plt.subplots(1, 2, figsize=(14, 4.5))
+plot_case(axes, tid_e, hn, hp, ln, lp, f'delta cosine={found[\"delta_cosine_similarity\"]:.3f} despite dominant-label disagreement')
+plt.tight_layout(); plt.show()
+""")
+
+code("""print("=== CASE F (stress-test): high cosine, but a real magnitude gap ===")
+print("Included specifically so a high cosine is not read as evidence of close overall agreement.")
+found_f = None
+for _, row in high_cos.iterrows():
+    if row['human_shift_percent'] > 40 and row['llm_shift_percent'] < 15:
+        found_f = row; break
+tid_f, side_f, pv_f, lf_f = found_f['text_id'], found_f['persona_side'], found_f['prompt_variant'], found_f['label_format']
+show_case_text(tid_f, side_f)
+print(f"Text {tid_f} ({side_f}, {pv_f}/{lf_f}): cosine={found_f['delta_cosine_similarity']:.3f}")
+print(f"Human shift={found_f['human_shift_percent']:.1f}% vs LLM shift={found_f['llm_shift_percent']:.1f}% -- a {abs(found_f['human_shift_percent']-found_f['llm_shift_percent']):.0f}pp gap")
+hn, hp = human_neutral_by_tid[tid_f], human_persona_by_tid_side[(tid_f, side_f)]
+ln, lp = get_llm_vecs(tid_f, side_f, pv_f, lf_f)
+fig, axes = plt.subplots(1, 2, figsize=(14, 4.5))
+plot_case(axes, tid_f, hn, hp, ln, lp, f'cosine={found_f[\"delta_cosine_similarity\"]:.3f} BUT magnitude gap {abs(found_f[\"human_shift_percent\"]-found_f[\"llm_shift_percent\"]):.0f}pp')
+plt.tight_layout(); plt.show()
+print("The LLM bars change only slightly between neutral and persona -- a small shift in roughly")
+print("the right direction can produce a high cosine even when the practical magnitude of change")
+print("is very different between the two sides.")
+""")
+
+# ===========================================================================
+# SECTION 14
+# ===========================================================================
+md("""## 14. What a majority-label analysis would have shown, and what the vector view adds
+
+**[SECONDARY]** This section does not argue vectors are "better" because they produce
+better-looking agreement numbers — a majority-label view and a vector view are answering
+different questions, and the point here is what the categorical reduction discards, not which
+number looks larger.""")
+
+code("""def dominant_overlap(vec_row):
+    probs = {e: vec_row[f'vec_prob_{e}'] for e in EMOTIONS}
+    m = max(probs.values())
+    return frozenset(e for e, p in probs.items() if abs(p-m) < 1e-9)
+
+human_neutral_dom = {r['text_id']: dominant_overlap(r) for _, r in human_vectors[human_vectors['side']=='neutral'].iterrows()}
+llm_neutral_dom_by_config = {}
+for _, r in llm_vectors[llm_vectors['framing_condition']=='neutral'].iterrows():
+    llm_neutral_dom_by_config.setdefault((r['text_id'], r['prompt_variant'], r['label_format']), dominant_overlap(r))
+
+rows = []
+for (tid, pv, lf), llm_dom in llm_neutral_dom_by_config.items():
+    if tid not in human_neutral_dom: continue
+    h_dom = human_neutral_dom[tid]
+    rows.append({'text_id': tid, 'prompt_variant': pv, 'label_format': lf,
+                 'pool_key': pool_of_text.get(tid), 'label_overlap': len(h_dom & llm_dom) > 0})
+label_match_df = pd.DataFrame(rows)
+match_rate_by_cat = label_match_df.groupby('pool_key')['label_overlap'].mean().reindex(CATEGORY_ORDER)
+match_rate_by_cat.index = CATEGORY_LABELS
+overall_match_rate = label_match_df['label_overlap'].mean()
+print(f"Majority-label (dominant-set overlap) match rate, human vs. LLM, NEUTRAL condition: {overall_match_rate*100:.1f}% overall")
+display(match_rate_by_cat.to_frame('label_match_rate').round(3))
+""")
+
+code("""# What does the vector view show WITHIN each of these two binary buckets?
+# (raw-vector cosine, human neutral vs. LLM neutral, recomputed here -- Part 1 Section 6 computed
+# the equivalent quantity in its own notebook kernel, which cannot be referenced from this one)
+def cosine_raw_local(p, q):
+    a = np.array([p[e] for e in EMOTIONS]); b = np.array([q[e] for e in EMOTIONS])
+    na, nb = np.linalg.norm(a), np.linalg.norm(b)
+    if na == 0 or nb == 0: return None
+    return float(np.dot(a, b) / (na * nb))
+
+cos_rows = []
+for (tid, pv, lf) in llm_neutral_dom_by_config.keys():
+    if tid not in human_neutral_by_tid: continue
+    llm_row = llm_vectors[(llm_vectors['text_id']==tid) & (llm_vectors['framing_condition']=='neutral') &
+                           (llm_vectors['prompt_variant']==pv) & (llm_vectors['label_format']==lf)]
+    if len(llm_row)==0: continue
+    lv = {e: llm_row.iloc[0][f'vec_prob_{e}'] for e in EMOTIONS}
+    cos_rows.append({'text_id': tid, 'prompt_variant': pv, 'label_format': lf,
+                     'cosine': cosine_raw_local(human_neutral_by_tid[tid], lv)})
+cos_df = pd.DataFrame(cos_rows)
+# AUDIT REPAIR (2026-09-21): this merge was previously done on 'text_id' ALONE. Both tables hold
+# one row per (text x prompt_variant x label_format) -- 1,800 rows each -- so joining on text_id
+# produced a 6x6 cartesian product per text: 10,800 rows instead of 1,800, pairing each text's
+# label-overlap under one prompt config with its cosine under a DIFFERENT config. Merging on all
+# three keys with validate='one_to_one' both fixes the pairing and makes any recurrence an error
+# rather than a silent 6x row inflation.
+merged_for_cos = label_match_df.merge(cos_df, on=['text_id','prompt_variant','label_format'],
+                                       how='left', validate='one_to_one')
+assert len(merged_for_cos) == len(label_match_df), "Section 14 merge changed row count"
+
+fig, ax = plt.subplots(figsize=(7.5, 6))
+groups = [merged_for_cos[merged_for_cos['label_overlap']==v]['cosine'].dropna().values for v in (True, False)]
+violin_box_strip(ax, groups, ['Majority labels\\nOVERLAP', 'Majority labels\\nDO NOT overlap'],
+                  colors=['#2E7D32', '#C62828'], ylabel='Cosine similarity of the full 11-dim vectors')
+ax.set_title('A binary label match/mismatch hides a continuous range of similarity', pad=16)
+plt.tight_layout()
+plt.show()
+for v in (True, False):
+    sub = merged_for_cos[merged_for_cos['label_overlap']==v]['cosine'].dropna()
+    print(f"label_overlap={v}: n={len(sub)}, cosine range [{sub.min():.2f}, {sub.max():.2f}], mean={sub.mean():.2f}")
+""")
+
+md("""> **Observation:** a majority-label comparison collapses every text into one of two buckets
+> (labels overlap / do not overlap). The vector view shows that within EACH bucket, the actual
+> similarity between the full distributions spans a wide range (see the printed min/max above) —
+> two texts with "matching" majority labels are not necessarily equally similar, and two texts
+> with "non-matching" labels are not necessarily equally dissimilar. This is the concrete sense in
+> which the vector representation preserves information a binary match/mismatch discards, for the
+> same underlying data used in Section 6.""")
+
+# ===========================================================================
+# WHAT VECTORIZATION ADDS OVER DOMINANT LABELS (added 2026-09-22)
+# ===========================================================================
+md("""### What vectorization adds beyond the dominant-emotion approach
+
+**[SECONDARY — added 2026-09-22]** Sections 3 and 14 argue that collapsing a distribution to one
+label discards information. This section quantifies exactly how much, by classifying every single
+comparison into what a dominant-label pipeline would have recorded versus what the vector
+actually did.
+
+Four mutually exclusive outcomes per comparison:
+
+| Outcome | Dominant-label view | Vector view |
+|---|---|---|
+| **no change** | unchanged | vector identical (TV = 0) |
+| **proportion-only change** | **unchanged** | **same winner, same support set, but the proportions moved** |
+| **support change** | unchanged (usually) | same winner, but which emotions received any vote changed |
+| **winner change** | changed | dominant emotion changed |
+
+The second row is the one a label-based analysis cannot see at all.""")
+
+code("""def classify_change(nv, pv):
+    # nv, pv: dicts emotion -> probability
+    if all(abs(nv[e] - pv[e]) < 1e-9 for e in EMOTIONS):
+        return 'no change'
+    n_top = {e for e in EMOTIONS if abs(nv[e] - max(nv.values())) < 1e-9}
+    p_top = {e for e in EMOTIONS if abs(pv[e] - max(pv.values())) < 1e-9}
+    if n_top != p_top:
+        return 'winner change'
+    n_sup = {e for e in EMOTIONS if nv[e] > 1e-9}
+    p_sup = {e for e in EMOTIONS if pv[e] > 1e-9}
+    if n_sup != p_sup:
+        return 'support change (same winner)'
+    return 'proportion-only change (same winner, same support)'
+
+ORDER4 = ['no change', 'proportion-only change (same winner, same support)',
+          'support change (same winner)', 'winner change']
+
+hvec = {(r['text_id'], r['side']): {e: r[f'vec_prob_{e}'] for e in EMOTIONS}
+        for _, r in human_vectors.iterrows()}
+lvec = {(r['text_id'], r['prompt_variant'], r['label_format'], r['framing_condition']):
+        {e: r[f'vec_prob_{e}'] for e in EMOTIONS} for _, r in llm_vectors.iterrows()}
+
+rows_v = []
+for _, r in human_valid.iterrows():
+    nv = hvec.get((r['text_id'], 'neutral')); pv = hvec.get((r['text_id'], r['persona_side']))
+    if nv and pv: rows_v.append({'source': 'Human', 'outcome': classify_change(nv, pv)})
+for _, r in llm_valid.iterrows():
+    fr = 'persona_a' if r['persona_side'] == 'a' else 'persona_b'
+    nv = lvec.get((r['text_id'], r['prompt_variant'], r['label_format'], 'neutral'))
+    pv = lvec.get((r['text_id'], r['prompt_variant'], r['label_format'], fr))
+    if nv and pv: rows_v.append({'source': 'LLM ensemble', 'outcome': classify_change(nv, pv)})
+VD = pd.DataFrame(rows_v)
+
+tab = (pd.crosstab(VD['source'], VD['outcome'], normalize='index')
+         .reindex(columns=ORDER4).fillna(0) * 100)
+cnt = pd.crosstab(VD['source'], VD['outcome']).reindex(columns=ORDER4).fillna(0).astype(int)
+display(tab.round(1))
+
+fig, ax = plt.subplots(figsize=(11.5, 5))
+bottom = np.zeros(len(tab))
+palette = ['#B0B0B0', '#C44E52', '#DD8452', '#4C72B0']
+for i, oc in enumerate(ORDER4):
+    ax.barh(np.arange(len(tab)), tab[oc].values, left=bottom, color=palette[i], label=oc)
+    for j, v in enumerate(tab[oc].values):
+        if v > 3.5:
+            ax.text(bottom[j] + v/2, j, f'{v:.0f}%', ha='center', va='center', fontsize=9,
+                    color='white' if i in (2, 3) else 'black', fontweight='bold')
+    bottom += tab[oc].values
+ax.set_yticks(np.arange(len(tab))); ax.set_yticklabels(tab.index)
+ax.set_xlim(0, 100); ax.set_xlabel('% of valid comparisons'); ax.grid(False)
+ax.set_title('What a dominant-label analysis would have recorded\\nOnly the blue segment is visible to it; red and orange are invisible', pad=14)
+ax.legend(fontsize=8, loc='lower center', bbox_to_anchor=(0.5, -0.42), ncol=2)
+plt.tight_layout(); plt.show()
+
+for src in tab.index:
+    invisible = tab.loc[src, ORDER4[1]] + tab.loc[src, ORDER4[2]]
+    n_inv = cnt.loc[src, ORDER4[1]] + cnt.loc[src, ORDER4[2]]
+    print(f"{src}: {tab.loc[src, ORDER4[3]]:.1f}% would be recorded as 'changed' by a dominant-label "
+          f"analysis; a further {invisible:.1f}% ({n_inv} comparisons) moved but would be recorded "
+          f"as UNCHANGED.")
+print()
+print(f"Proportion-only changes -- same winner, same support set, different proportions -- account")
+print(f"for {tab[ORDER4[1]].min():.1f}-{tab[ORDER4[1]].max():.1f}% of comparisons depending on source.")
+print("These are wholly invisible to any analysis that reports one label per text, and they are")
+print("exactly what the 11-dimensional representation exists to preserve.")
+""")
+
+md("""> **Key finding [SECONDARY]:** a dominant-label pipeline records a change only when the winning
+> emotion flips. Everything else it files as "no change" — including comparisons where the
+> distribution demonstrably moved. The red and orange segments above are the information the
+> vector representation preserves and a label-based analysis discards.
+>
+> This is a descriptive decomposition of the same data, not a claim that vector methods are
+> better at some task. It quantifies what is lost, which is precisely the motivating argument in
+> Part 1 Section 3 — there stated with three hand-picked examples, here measured across all
+> 4,200 valid comparisons.""")
+
+md("""## Final hypothesis/RQ summary""")
+
+code("""summary_table = pd.DataFrame([
+    # AUDIT REPAIR (2026-09-21): this row previously read "p_holm<=0.0036" for Author-Relevant,
+    # but 0.0036 is only side a -- side b is 0.0125, so "<=0.0036" was false for half the claim.
+    # Every figure in this row is now read from perm_df rather than typed, so it cannot go stale.
+    {'Question': 'Does authorship affect humans? (H1)', 'Measurement': 'Neutral->persona vector shift, permutation test (Holm-corrected across 6 tests), text-clustered bootstrap CI',
+     'Main finding': (f'Author-Relevant significant both sides (p_holm={h1_ar_a:.4f} side a, {h1_ar_b:.4f} side b); '
+                      f'Unambiguous non-significant both sides (p_holm={h1_un_a:.4f}, {h1_un_b:.4f}); '
+                      f'Author-Independent significant side a only (p_holm={h1_ai_a:.4f}), not side b (p_holm={h1_ai_b:.4f})'),
+     'Verdict': 'Partially supported (supported on Author-Relevant, consistent with the null prediction on Unambiguous, mixed on Author-Independent)'},
+    {'Question': 'Does it affect LLMs? (H2)', 'Measurement': 'PAIRED (per-model sign-flip) permutation test on each model\\'s own neutral/persona label pair, matched model subsets, Holm-corrected across 2 sides, text-clustered CI',
+     'Main finding': f"side a p_holm={h2_df[h2_df['comparison']=='neutral_vs_persona_a']['p_holm'].iloc[0]:.4f}, side b p_holm={h2_df[h2_df['comparison']=='neutral_vs_persona_b']['p_holm'].iloc[0]:.4f}",
+     'Verdict': ("Supported" if (h2_df['p_holm'] < 0.05).all() else
+                 "Not supported" if (h2_df['p_holm'] >= 0.05).all() else
+                 "Partially supported / mixed (significant for one persona side, not the other)")},
+    # REVISED 2026-09-22: raw contrasts retained as the pre-registered analysis; the
+    # null-referenced sensitivity is reported alongside, not substituted for them.
+    {'Question': 'Stronger for Author-Relevant? (H3)', 'Measurement': 'Kruskal-Wallis + ordered-trend permutation + Holm-corrected pairwise Cliff\\'s delta (RAW, pre-registered); plus a sensitivity referencing each text against its own conditional sampling null',
+     'Main finding': (f'RAW: ordered-trend p={trend_p:.4f}, {n_sig_raw}/3 pairwise contrasts Holm-significant. '
+                      f'NULL-REFERENCED: {n_sig_nr}/3 significant; expected-null TV is itself ordered by category '
+                      f'(~43/50/55%), leaving excess TV of only ~2-6pp'),
+     'Verdict': 'Supported in raw TV; the ordering is NOT separable from baseline vote dispersion at this sample size. Report as an ordering in observed disagreement, not a demonstrated framing-sensitivity gradient.'},
+    # REVISED 2026-09-22: verdict RESTORED to supported. The 2026-09-21 downgrade to "not cleanly
+    # testable" was an over-correction and was withdrawn: a matched-count comparison IS possible
+    # (subsample human votes to 3; draw the same 3 model identities on both sides), and the gap
+    # survives it -- 34.9pp -> 33.4pp, so granularity explains ~4% of the raw gap, not all of it.
+    {'Question': 'Do LLMs reproduce human shift MAGNITUDE? (H4a)', 'Measurement': 'Paired Wilcoxon signed-rank on text-level TV shift + count-standardized sensitivity (3 human votes vs the same 3 model identities, 200 draws per comparison)',
+     'Main finding': (f'mean diff={mean_diff:.1f}pp, 95% CI [{ci_lo:.1f}, {ci_hi:.1f}], Wilcoxon p={w_p:.1e}, r_rb={r_rb:.3f}. '
+                      f'Count-standardized: {gap_unmatched:.1f}pp -> {gap_matched:.1f}pp, so vote-count granularity accounts for '
+                      f'~{gap_unmatched-gap_matched:.1f}pp. Covariation is a separate question: Spearman rho={rho:.3f}'),
+     'Verdict': 'Supported (magnitudes differ) -- survives count standardization within every category. Standing limitation: the human comparison is between-person while the LLM comparison is within-model, and each model produced one generation per condition.'},
+    {'Question': 'Do LLMs reproduce human shift DIRECTION? (H4b)', 'Measurement': 'Cosine of delta vectors, text-level + shuffled-pairing permutation test',
+     'Main finding': f'mean cosine={obs_mean_cos:.3f}, permutation p={p_cos:.4f} vs. chance pairing', 'Verdict': 'Partially supported (as H4 literally predicts partial alignment)'},
+    {'Question': 'Does prompting matter?', 'Measurement': 'Friedman test across 6 prompt configs (EXPLORATORY, no formal H5)',
+     'Main finding': f'Friedman p={friedman_p:.4f}, {n_sig}/{len(r_pair_df)} pairwise differences significant', 'Verdict': 'No evidence prompt design changes LLM persona-effect size (clean null, not a hypothesis test)'},
+])
+display(summary_table)
+summary_table.to_csv(OUT_DIR / 'tables' / 'final_narrative_summary.csv', index=False)
+""")
+
+md("""### What did vectorization reveal that majority-label analysis could not?
+
+Seven observations that were only visible because every annotation was kept as a full
+distribution rather than collapsed to one label — reported as what the representation makes
+*visible*, not as evidence the vector approach produces a "better" result:
+
+1. **How much a "majority" label can misrepresent agreement, even in the original corpus**
+   (Part 1, Section 3): 13.3% of the original 5-reader vectors have no unique winner at all
+   (a tied vote), before this study collected a single new annotation.
+2. **A precise breakdown that a blanket "below 50%" statement would have conflated** (Part 1,
+   Section 5): "no unique winner" (tied) and "a unique winner below 50%" (plurality without
+   majority) are different situations, occurring at different, source-dependent rates (13.3% /
+   27.9% / 4.1% tied across the three sources checked).
+3. **A category difference in vote pattern that already exists before any persona is applied**
+   (Part 1, Section 4): the unanimous rate and the tied rate move in opposite directions across
+   categories under neutral framing alone.
+4. **A weak, non-significant correlation between magnitude and dispersion** (Section 9, rho=0.088,
+   p=0.13) — consistent with TV shift and entropy change being different questions, not
+   interchangeable summaries of "how much a text changed."
+5. **Large redistribution with no visible dominant-label change** (Case D): a >50% TV shift a
+   majority-label comparison would record as "no change."
+6. **Directional agreement co-occurring with dominant-label disagreement** (Case E, quantified
+   dataset-wide): a meaningful share of rows where human/LLM dominant-change status disagrees
+   still show a delta-vector cosine above 0.5.
+7. **A continuous range of similarity hidden inside each side of a binary label match/mismatch**
+   (this section): texts with "matching" majority labels are not uniformly similar, and texts
+   with "non-matching" labels are not uniformly dissimilar.
+
+None of these seven observations are visible from a table of majority labels and match/mismatch
+counts — not because the categorical reduction is wrong, but because it is a strictly coarser
+summary of the same underlying annotations, and coarser summaries necessarily discard information
+that a finer one can show.""")
+
+nb['cells'] = cells
+nb['metadata'] = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
+                   "language_info": {"name": "python", "version": "3"}}
+OUT_PATH.parent.mkdir(exist_ok=True)
+with open(OUT_PATH, 'w', encoding='utf-8') as f:
+    nbf.write(nb, f)
+print(f"Wrote {OUT_PATH} ({len(cells)} cells -- ALL 14 sections complete)")

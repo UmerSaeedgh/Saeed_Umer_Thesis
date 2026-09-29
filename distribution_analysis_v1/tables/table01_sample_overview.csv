@@ -1,0 +1,5 @@
+category,n_texts,n_human_raters_per_side,n_llm_models,n_prompt_configs,n_persona_sides
+Unambiguous,100,3,7,6,2
+Author-Independent Ambiguous,100,3,7,6,2
+Author-Relevant Ambiguous,100,3,7,6,2
+TOTAL,300,-,-,-,-

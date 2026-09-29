@@ -1,0 +1,277 @@
+\chapter{Discussion}
+\label{c:discussion}
+
+\noindent
+This chapter interprets the results with reference to the three research questions. Results that
+cut across the individual hypotheses are drawn out as stand-alone findings, and the chapter closes
+with the limitations of the design and what future research might address.
+
+\section{Interpretation with Respect to the Research Questions}
+\label{disc:rqs}
+
+\subsection{RQ1: Does Perceived Authorship Influence Human Emotion Judgments?}
+\label{disc:rq1}
+
+\noindent
+The extent to which a framing effect is found varies by category.
+
+Human judgments shift significantly under author framing for author-relevant ambiguous texts on
+both persona sides, but not for unambiguous control texts on either side. This pattern is in line
+with H1. The controls' non-rejection does not prove a zero effect, or a separation of the
+persona's content from the other alterations the author cue makes.
+
+The author-independent category is significant under persona~A and not under persona~B. A split
+decision of this kind at the significance threshold cannot on its own show that the personas have different effects.
+The exploratory direct comparison of their text-level raw TV shifts is 4.44 percentage points,
+with a 95\% bootstrap interval from $-2.08$ to $11.06$ points (Section~\ref{res:h1}). Because this
+interval includes zero, these data do not establish an asymmetry between A and B. Whether the
+category responds to incidental persona content remains a question for further investigation, not a
+demonstrated result.
+
+The size of these effects requires a qualification, developed in Section~\ref{res:h3null}. Taking
+the vote distribution of each text alone, sampling noise from three votes would account for a
+substantial portion of the raw human shift. The effect is detected in the sense that it exceeds
+the permutation null, but the raw TV magnitude is a crude figure that reflects not only the effect
+of framing but also ordinary sampling noise, so it should not be interpreted as a pure measure of
+framing's own contribution to the movement.
+
+The second qualification concerns how the effect was detected in the first place.
+Repeating the identical permutation test on the selected label rather than the vote vector rejects
+the null in one of six cases under a reverse-alphabetical tie-break convention, and none under the
+alphabetical convention used throughout this thesis (only these two conventions were tested;
+Section~\ref{res:h1perm}). Thus, nearly all of the support for RQ1 comes from the distributional
+representation; under the majority-label representation, one of six tests would have found a
+significant effect, and under this thesis's own convention, none. The gap is largely an artefact
+of the representation. Its exact size, however, is not intrinsic to the data but is determined by
+an otherwise-arbitrary tie-breaking decision.
+
+\subsection{RQ2: Does Perceived Authorship Influence LLM Classifications?}
+\label{disc:rq2}
+
+\noindent
+Yes, and with fewer qualifications than RQ1 requires.
+
+The ensemble effect is significant on both persona sides. The observed label-change rates are
+nonzero for all seven models, although per-model significance tests were not performed. The
+exploratory test detects no prompt-configuration effect, but nor does it demonstrate equivalence
+across formats. The differences observed across models and formats make the overall
+result less dependent on any particular setting, subject to the single-generation limitation
+below. This extends the finding of Santurkar et al.\ \citeyear{Santurkar2023WhoseOpinions} that
+persona conditioning shifts model outputs, from opinion elicitation to emotion classification, and
+matches the direction of Zhang et al.\ \citeyear{Zhang2018Persona} on persona-conditioned dialogue.
+
+The generic-human control makes the claim considerably sharper. The neutral-to-generic-author
+contrast is approximately 8\% on both sides (7.98\% and 8.01\%), while the generic-author-to-
+specific-persona contrast is 16.2\% and 19.3\%. These distances are sensitive both to the presence
+of an attribution and to its specific content, but they are not additive components of a total
+effect, so they cannot establish what proportion of the overall shift is due to identity
+specifically. Without this control, the two could not have been distinguished at all.
+
+The claim has two limits. First, the significance test identifies \emph{coordinated}
+redistribution across models; 61.2\% of the cells contribute no variance to this test's null, and
+a scenario in which every cell contained exactly one dissenting model would yield $p = 1$ even
+though every cell changed. The complementary raw change rate, 21.3\% of model pairs altering their
+label, is reported because the two measures answer different questions. Second, each model
+produced one generation per condition, so no distinction is made here between a framing response
+and ordinary stochastic variation in generation. That would require multiple generations under the
+same prompts, which were not gathered.
+
+\subsection{RQ3: Do LLMs Resemble Humans in Direction and Magnitude?}
+\label{disc:rq3}
+
+\noindent
+Here the answer splits cleanly in two, and that split is the most substantive finding
+of the thesis.
+
+\textbf{In direction, models resemble humans weakly but reliably.} Model delta vectors, when
+compared with human ones, have a mean cosine of 0.112, well above a shuffled-pairing null. Models
+do not merely shift when framing is applied; they shift in a direction associated with the
+direction the same text moves for human readers. A cosine of 0.11 is nonetheless a small
+association: the resemblance is genuine but incomplete, as H4 suggested. The criterion is also
+more stringent than the usual label-agreement comparison. It does not ask whether the model
+reaches the same answer as a human, but whether it \emph{responds to context} in the same
+direction, which is closer to the question posed by ambiguity-aware approaches such as Hong et
+al.\ \citeyear{Hong2024AERLLM}.
+
+\textbf{In magnitude, models and humans differ substantially.} Humans shift more, by roughly 34
+percentage points, and this survives standardising both sides to an equal number of votes: doing
+so reduces the estimated gap by only about 1.5 points (roughly 4\%), and it does not remove the
+between-person/within-model design asymmetry discussed below.
+
+One further pattern escapes magnitude altogether, although it calls for caution. Under framing,
+humans become measurably \emph{less in agreement with one another}: entropy rises significantly in
+all three categories. No dispersion effect is detected for the model ensemble in any category.
+These are separate tests, and a significant result on one side alongside a non-significant result
+on the other does not by itself establish that humans and models differ from each other
+statistically; that difference was not tested directly. Taken as two separate results rather
+than a demonstrated contrast, the pattern suggests that models redirect their probability mass
+while human judgments also become more dispersed. An analysis reporting shift magnitude alone
+would never see this.
+
+For the models, then, the results indicate sensitivity to author framing, weak directional
+alignment with human judgments, and smaller observed shifts. Human entropy increases were
+statistically detected, but not model entropy increases; whether those entropy responses differ
+between humans and models remains untested.
+
+\section{Cross-Cutting Findings}
+\label{disc:crosscutting}
+
+\subsection{What Aggregation Costs}
+\label{disc:aggregation}
+
+\noindent
+This finding is a measurement rather than an argument, and it is the clearer of the two
+methodological results in this section. A selected-label analysis of these same data would have
+recorded 38.7\% of human comparisons and 41.4\% of model comparisons as showing no change, when
+the underlying distribution demonstrably moved (under the alphabetical tie-break convention;
+crediting the label method for tracking the complete set of tied top emotions instead lowers these
+to 25.8\% and 38.7\% respectively). For the model ensemble, the comparisons such an analysis
+cannot see outnumber those it detects by more than two to one, and for humans the invisible
+comparisons are nearly three-quarters as numerous as the detected changes (38.7\% invisible
+against 52.8\% detected).
+
+Label-based analysis is not always inappropriate. For the question asked here, however, whether
+framing shifts interpretation, the choice of representation decides whether the phenomenon can be observed at
+all. The human side shows this most clearly: a study designed identically but analysed on
+majority labels would have detected a statistically significant human framing effect in one of
+the six H1 tests (reverse-alphabetical tie-break convention) or none at all (this thesis's
+alphabetical convention) rather than three, and would most plausibly have been interpreted as
+providing little or no evidence of human sensitivity to author framing. The model-side
+selected-label test, by contrast, still detects a significant effect under either representation
+(Section~\ref{res:h2magnitude}), so for the model ensemble the choice of representation
+changes how much of the shift is visible, not whether an effect is detected at all.
+
+This concern was raised in principle by Aroyo and Welty \citeyear{Aroyo2015CrowdTruth} and Basile
+\citeyear{Basile2020GoldStandard}; the figures above put a size on it. They are also consistent with
+Pavlick and Kwiatkowski's \citeyear{Pavlick2019InherentDisagreement} argument that disagreement in
+subjective annotation is frequently inherent rather than erroneous. That literature argues that
+aggregation loses signal; this measurement shows how much is lost and of what kind.
+
+The finding on baseline agreement points the same way. Overall, the human and model dominant
+labels agree for only 58.0\% of comparisons under neutral framing (as high as 74.2\% on
+unambiguous texts, and as low as about 50\% on the two ambiguous categories), but within both the
+matching and non-matching buckets, full-vector similarity spans almost the entire possible range.
+Reporting only the binary match rate compresses a continuous and highly variable quantity into a
+single number that conceals its own variance, and even that single number shows the two sides
+starting from a noticeably different reading of the ambiguous texts before any persona is
+introduced.
+
+\subsection{Small Samples Make TV Deceptive}
+\label{disc:smallsample}
+
+\noindent
+One finding came out of methodological scrutiny rather than the original design, and it applies
+well beyond this thesis.
+
+Total variation distance between two small vote samples is not zero when no effect is present, and
+it grows with the dispersion of the underlying distribution. Two independent three-vote draws from
+the same distribution routinely disagree, and they disagree more when that distribution is spread
+out. Since categories defined by ambiguity are, by construction, categories defined by dispersion,
+comparing raw TV across such categories confounds the quantity of interest with the measurement's
+own noise floor.
+
+Referencing each text against its own conditional sampling null showed that expected null TV is
+itself ordered by category, ranging from roughly 43\% to 55\%. The excess above that
+conditional-null expectation is on the order of two to six percentage points, not forty-five to
+sixty. Any study that compares distributional distance across groups differing in baseline
+dispersion runs into this problem, and it stays hidden unless the null is constructed explicitly.
+
+\section{Limitations}
+\label{disc:limitations}
+
+\noindent
+These results are constrained by the limitations set out below. They have been gathered here
+rather than scattered throughout the results chapter, so that they can be weighed together.
+
+\textbf{Vote counts are small and unequal between sides.} Human vectors rest on three raters per
+condition and model vectors on up to seven. This gives rise to several structural rather than
+behavioural human--model asymmetries reported in Chapter~\ref{c:result} (tie
+frequency, new-emotion rates, zero-shift rates, dominant-set stability). Count standardisation
+(Section~\ref{res:h4counts}) addresses the magnitude comparison specifically, but not these
+descriptive asymmetries.
+
+\textbf{The human comparison is between-person; the model comparison is within-model.} Different
+people rated each framing condition, whereas the same model answered both. Part of the measured
+human shift is between-rater variability with no model counterpart. The problem is built into the
+design, and matching vote counts does not fix it. It is the main caveat on the H4 magnitude
+result.
+
+\textbf{H3's categories were partly defined by the property H3 tests.} Texts were assigned to the
+author-relevant group using an LLM judge's own sensitivity to whether author framing flips the
+reading. H3 is therefore a transfer comparison: whether a grouping derived from that judge's
+sensitivity predicts effects in newly collected data, and not an independent discovery that
+author-relevance is the operative principle. This is a sharper limitation for the model-side
+ordering specifically: the model ensemble's framing effect is reported as ordered by the same
+category that the LLM was used to define, so part of that ordering is true by construction rather
+than an independent finding.
+
+\textbf{The category ordering is not separable from baseline dispersion.} H3's contrasts are
+significant in raw TV, but not significant once referenced against each text's sampling null. This
+is not because the null-referenced intervals are wider; they are, if anything, narrower in
+absolute width than the raw contrasts' intervals. Rather, the estimated excess over the
+conditional null shrinks much more than the interval does, so the same interval now spans zero.
+This does not demonstrate equivalence between categories, but it does show that this design cannot
+attribute the raw ordering to framing rather than to baseline dispersion at 100 texts per category.
+
+\textbf{Model stochasticity is unmeasured.} One generation per condition means the model figures
+are single draws, not stable per-model expectations.
+
+\textbf{No generic-human condition was collected for humans.} The decomposition separating author
+presence from persona content is available for models only, so the equivalent human question
+remains open.
+
+\textbf{Per-emotion effects are underpowered.} Only 7 of the 66 per-emotion tests survive FDR
+correction, and 32 of the 33 human tests do not, including the numerically largest movements in the
+heatmap. The broader descriptive pattern may be real, but this study establishes only the one
+human effect and the six model effects that survived correction, not the pattern as a whole.
+
+\textbf{Cross-text respondent dependence cannot be modelled, and within-text independence is not
+fully guaranteed either.} No collection form repeated a text across both of its conditions, which
+is a property of the form design and can be verified from the assignment records. Respondent
+identifiers were not retained, however, and there is no way to determine whether the same
+individual responded to both conditions of the same text; that is, the same individual could in
+principle have rated both conditions without this being evident in the retained data. The same
+lack of participant tracking means cross-text correlation, one person's answers on one text being
+linked to their answers on another, also cannot be ruled out or quantified: each form carried on
+the order of thirty items, and a one-to-one correspondence between forms and participants would
+bound the possible correlation structure, but no such correspondence is verifiable from what was
+retained. The within-text permutation null also requires comparable respondent groups under the
+null; disjoint form assignments narrow this risk but do not, on their own, establish that
+exchangeability assumption.
+
+\section{Future Directions}
+\label{disc:future}
+
+\noindent
+The limitations above suggest five extensions.
+
+\textbf{Collect human annotations at matched vote counts.} If human raters per condition were
+raised to seven, the main structural asymmetry would be removed, and the descriptive comparisons
+(tie rates, new-emotion rates, dispersion) could be interpreted behaviourally rather than
+arithmetically.
+
+\textbf{Add the generic-human condition to the human study.} This would permit the same
+neutral-to-generic-author versus generic-to-specific-persona comparison already run on the model
+side, so that the two separately measured distances could be compared directly for humans instead
+of assumed from the model pattern.
+
+\textbf{Sample repeated generations per model.} Several generations per prompt would separate
+framing response from generation variance and convert the model figures from single draws into
+estimates with their own uncertainty.
+
+\textbf{Define ambiguity categories independently of the tested property.} If texts were assigned
+to categories on criteria not derived from an LLM judge's own framing sensitivity, H3 would become
+a direct test rather than a transfer comparison.
+
+\textbf{Retain respondent identifiers.} Anonymised respondent identifiers linked to text and
+condition would allow a participant-aware analysis and remove the one dependence structure this
+study cannot quantify.
+
+Another direction comes from the entropy finding rather than from a limitation. A significant
+human dispersion increase was detected and no model dispersion increase was. The apparent
+contrast was not tested directly, and to the author's knowledge the existing literature on persona
+prompting has not examined it. It relates to work modelling annotators individually rather than in
+aggregate \cite{Davani2022Disagreement, Uma2021Survey}: if human interpretive uncertainty is
+itself structured, a model that reproduces answers without reproducing uncertainty is capturing
+only part of the behaviour. Can models be made to show human-like interpretive uncertainty, and
+not just human-like answers? That question looks both open and tractable.

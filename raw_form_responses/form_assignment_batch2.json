@@ -1,0 +1,1232 @@
+{
+"form_b2_01": [
+{
+"text_id": 3936,
+"side": "a",
+"persona": "a first-generation student",
+"text": "I felt relief when I got into university",
+"pool": "author_independent"
+},
+{
+"text_id": 657,
+"side": "b",
+"persona": "a manager",
+"text": "A colleague was always off work.",
+"pool": "author_independent"
+},
+{
+"text_id": 4594,
+"side": "a",
+"persona": "a teenager",
+"text": "I felt fear when a man I had feelings for was not responding to my text messages. I have an iPhone and so I use iMessage with others who also have iPhones. When you use iMessage, the chat bubbles are blue, but I noticed one day that the chat bubbles with him were green. That indicates that the recipient does not have an iPhone, or that they are in an area without internet and therefore are getting the messages sent as text messages rather than iMessage. The problem was that he had not been responding and I started wondering if he was seeing my texts at all - then I had a suspicion he had blocked me this entire time. I messaged a mutual friend to ask if he had told them he was angry with me, and I then checked to see if I could still see his profile on social media platforms. I could not. I started getting anxious at the indication that he had blocked me on everything, and that anxiety skyrocketed with each profile I wasn't seeing. My friend told me she could still access his profiles, and it was then I realized he had blocked me on everything.",
+"pool": "author_relevant"
+},
+{
+"text_id": 31292,
+"side": "b",
+"persona": "someone financially comfortable",
+"text": "I felt SURPRISE when I went to a restaurant for dinner with a friend. On the evening we went to the restaurant they were running a random competition for diners to win a free meal. We heard an announcement being made and a waitress then appeared at our table and told us that our meal would be free. I felt joy and surprise when this happened because it was so unexpected.",
+"pool": "author_relevant"
+},
+{
+"text_id": 52373,
+"side": "a",
+"persona": "a young student learning casually",
+"text": "failed my piano exam",
+"pool": "author_relevant"
+},
+{
+"text_id": 52658,
+"side": "b",
+"persona": "an instructor confident in the trainee's readiness",
+"text": "first time me and a friend were permitted to climb alone after weeks of practice",
+"pool": "author_relevant"
+},
+{
+"text_id": 588,
+"side": "b",
+"persona": "a married spouse",
+"text": "when i was cheated on",
+"pool": "author_independent"
+},
+{
+"text_id": 31234,
+"side": "b",
+"persona": "someone who had been actively disputing the charge",
+"text": "I received a refund cheque through the post from a previous electrical company due to being overcharged.",
+"pool": "author_relevant"
+},
+{
+"text_id": 6804,
+"side": "a",
+"persona": "a tourist",
+"text": "I got home from a flight that we were almost refused on as we didn't have the right documentation",
+"pool": "author_independent"
+},
+{
+"text_id": 3370,
+"side": "a",
+"persona": "a pedestrian",
+"text": "when I was almost run over by a drunk driver",
+"pool": "author_independent"
+},
+{
+"text_id": 51962,
+"side": "a",
+"persona": "a military spouse",
+"text": "I finally saw my long distance partner in person after waiting 9 months.",
+"pool": "author_relevant"
+},
+{
+"text_id": 31317,
+"side": "b",
+"persona": "someone who regularly confides in this friend",
+"text": "I told a friend that I was having trouble with my relationship.",
+"pool": "author_relevant"
+},
+{
+"text_id": 61071,
+"side": "a",
+"persona": "someone entrusted for the first time with this level of financial responsibility",
+"text": "My friend needed support to manage her money so she gave me control of her bank accounts",
+"pool": "author_relevant"
+},
+{
+"text_id": 41600,
+"side": "b",
+"persona": "someone who has already left the religion",
+"text": "my family told me I was sinning and going against God's will by dating someone outside of the church.",
+"pool": "author_relevant"
+},
+{
+"text_id": 61099,
+"side": "a",
+"persona": "someone who has always had a strained relationship with the sister",
+"text": "I was on a zip-line and it malfunctioned just as I stepped off the platform, and I was hanging for a couple of moments 20ft above very shallow water. My sister reached across and pulled me back, and I had to trust that she'd be able to hold my weight and not drop me.",
+"pool": "author_relevant"
+},
+{
+"text_id": 6997,
+"side": "a",
+"persona": "a first-time aunt or uncle meeting a newborn",
+"text": "When I met my niece at how small she was.",
+"pool": "author_relevant"
+},
+{
+"text_id": 3649,
+"side": "a",
+"persona": "a beginner runner",
+"text": "when I completed my first 10k race",
+"pool": "author_independent"
+},
+{
+"text_id": 51023,
+"side": "b",
+"persona": "a husband",
+"text": "I pulled my girlfriends arm and accidentally hurt her.",
+"pool": "author_independent"
+},
+{
+"text_id": 4671,
+"side": "a",
+"persona": "a younger sibling",
+"text": "I broke the vase and lied against my sister which was scolded afterwards.",
+"pool": "author_independent"
+},
+{
+"text_id": 6987,
+"side": "b",
+"persona": "someone who talks to her sister constantly regardless of distance",
+"text": "my sister travelled to New Zealand to surprise me whilst travelling. I had not seen her for over 6 months and was not expecting her to arrive in Auckland.",
+"pool": "author_relevant"
+},
+{
+"text_id": 3641,
+"side": "b",
+"persona": "a laid-off worker",
+"text": "i recently got  a new job",
+"pool": "author_relevant"
+},
+{
+"text_id": 51285,
+"side": "b",
+"persona": "a reunited partner",
+"text": "I found out that we really are going to be together forever.",
+"pool": "author_independent"
+},
+{
+"text_id": 6403,
+"side": "a",
+"persona": "a strict parent",
+"text": "My daughter was being naughty and i smacked her.",
+"pool": "author_independent"
+},
+{
+"text_id": 3493,
+"side": "a",
+"persona": "a single person",
+"text": "I felt guilt when I slept with someone I shouldn’t of",
+"pool": "author_independent"
+},
+{
+"text_id": 41208,
+"side": "b",
+"persona": "a competitive athlete",
+"text": "I felt PRIDE when I was at a track and field meet in 5th grade. I was running the 100m, and all of the girls I was competing against were much taller than me. They all said to me \"you're not going to win. You're too short. Short people are not fast.\" Anyway, I ended up absolutely SMOKING all of them and getting first place. They all looked at me in such disbelief. It was awesome.",
+"pool": "author_independent"
+},
+{
+"text_id": 41759,
+"side": "b",
+"persona": "someone who was lukewarm about it and half expected it to fall through",
+"text": "I got stood up on a date",
+"pool": "author_relevant"
+},
+{
+"text_id": 276,
+"side": "b",
+"persona": "a hospital volunteer",
+"text": "when I began working in the acute care unit of a hospital because I thought people would be dying and I wouldn't know how to handle it",
+"pool": "author_independent"
+},
+{
+"text_id": 41791,
+"side": "b",
+"persona": "someone with generally positive relationships at work",
+"text": "I felt complete trust when I learnt that a colleague of mine defended my reputation in my absence. While some people were trying to defame me, my colleague in a question, took it upon himself to defend my honor and reputation. I was elated when I got wind of it and knew then that this was someone I could really trust.",
+"pool": "author_relevant"
+},
+{
+"text_id": 5609,
+"side": "b",
+"persona": "a nurse",
+"text": "I felt disgust when I had to have a blood test and the nurse had trouble finding a suitable vein to draw the sample from. I usually do not feel nervous or disgusted before having a test done but this particular time I did because she had the tourniquet on my arm for a very long time and was pushing and pulling around to try and get a vein. She did get a vein but she did not give me anything to rest my arm on while having my blood drawn so it was a bit of an awkward and uncomfortable angle and I could feel the needle moving around in my arm. Due to this, I felt quite sick and disgusted and I actually ended up feeling quite hot and I was really anxious that I might faint! Each time I thought about it afterwards, I felt queasy and my arm bruised quite badly afterwards.",
+"pool": "author_independent"
+}
+],
+"form_b2_02": [
+{
+"text_id": 6403,
+"side": "b",
+"persona": "a first-time parent",
+"text": "My daughter was being naughty and i smacked her.",
+"pool": "author_independent"
+},
+{
+"text_id": 4594,
+"side": "b",
+"persona": "an adult woman",
+"text": "I felt fear when a man I had feelings for was not responding to my text messages. I have an iPhone and so I use iMessage with others who also have iPhones. When you use iMessage, the chat bubbles are blue, but I noticed one day that the chat bubbles with him were green. That indicates that the recipient does not have an iPhone, or that they are in an area without internet and therefore are getting the messages sent as text messages rather than iMessage. The problem was that he had not been responding and I started wondering if he was seeing my texts at all - then I had a suspicion he had blocked me this entire time. I messaged a mutual friend to ask if he had told them he was angry with me, and I then checked to see if I could still see his profile on social media platforms. I could not. I started getting anxious at the indication that he had blocked me on everything, and that anxiety skyrocketed with each profile I wasn't seeing. My friend told me she could still access his profiles, and it was then I realized he had blocked me on everything.",
+"pool": "author_relevant"
+},
+{
+"text_id": 41600,
+"side": "a",
+"persona": "someone who still shares their family's faith",
+"text": "my family told me I was sinning and going against God's will by dating someone outside of the church.",
+"pool": "author_relevant"
+},
+{
+"text_id": 41759,
+"side": "a",
+"persona": "someone who was really looking forward to this date",
+"text": "I got stood up on a date",
+"pool": "author_relevant"
+},
+{
+"text_id": 5609,
+"side": "b",
+"persona": "a nurse",
+"text": "I felt disgust when I had to have a blood test and the nurse had trouble finding a suitable vein to draw the sample from. I usually do not feel nervous or disgusted before having a test done but this particular time I did because she had the tourniquet on my arm for a very long time and was pushing and pulling around to try and get a vein. She did get a vein but she did not give me anything to rest my arm on while having my blood drawn so it was a bit of an awkward and uncomfortable angle and I could feel the needle moving around in my arm. Due to this, I felt quite sick and disgusted and I actually ended up feeling quite hot and I was really anxious that I might faint! Each time I thought about it afterwards, I felt queasy and my arm bruised quite badly afterwards.",
+"pool": "author_independent"
+},
+{
+"text_id": 51962,
+"side": "b",
+"persona": "a college student",
+"text": "I finally saw my long distance partner in person after waiting 9 months.",
+"pool": "author_relevant"
+},
+{
+"text_id": 588,
+"side": "a",
+"persona": "a young dater",
+"text": "when i was cheated on",
+"pool": "author_independent"
+},
+{
+"text_id": 51023,
+"side": "a",
+"persona": "a boyfriend",
+"text": "I pulled my girlfriends arm and accidentally hurt her.",
+"pool": "author_independent"
+},
+{
+"text_id": 4671,
+"side": "a",
+"persona": "a younger sibling",
+"text": "I broke the vase and lied against my sister which was scolded afterwards.",
+"pool": "author_independent"
+},
+{
+"text_id": 6997,
+"side": "b",
+"persona": "someone who has met many newborns before",
+"text": "When I met my niece at how small she was.",
+"pool": "author_relevant"
+},
+{
+"text_id": 51285,
+"side": "b",
+"persona": "a reunited partner",
+"text": "I found out that we really are going to be together forever.",
+"pool": "author_independent"
+},
+{
+"text_id": 657,
+"side": "a",
+"persona": "a coworker",
+"text": "A colleague was always off work.",
+"pool": "author_independent"
+},
+{
+"text_id": 52373,
+"side": "a",
+"persona": "a young student learning casually",
+"text": "failed my piano exam",
+"pool": "author_relevant"
+},
+{
+"text_id": 31234,
+"side": "b",
+"persona": "someone who had been actively disputing the charge",
+"text": "I received a refund cheque through the post from a previous electrical company due to being overcharged.",
+"pool": "author_relevant"
+},
+{
+"text_id": 6804,
+"side": "b",
+"persona": "an immigrant",
+"text": "I got home from a flight that we were almost refused on as we didn't have the right documentation",
+"pool": "author_independent"
+},
+{
+"text_id": 3936,
+"side": "a",
+"persona": "a first-generation student",
+"text": "I felt relief when I got into university",
+"pool": "author_independent"
+},
+{
+"text_id": 3641,
+"side": "a",
+"persona": "a recent graduate",
+"text": "i recently got  a new job",
+"pool": "author_relevant"
+},
+{
+"text_id": 3649,
+"side": "a",
+"persona": "a beginner runner",
+"text": "when I completed my first 10k race",
+"pool": "author_independent"
+},
+{
+"text_id": 41208,
+"side": "a",
+"persona": "a school student",
+"text": "I felt PRIDE when I was at a track and field meet in 5th grade. I was running the 100m, and all of the girls I was competing against were much taller than me. They all said to me \"you're not going to win. You're too short. Short people are not fast.\" Anyway, I ended up absolutely SMOKING all of them and getting first place. They all looked at me in such disbelief. It was awesome.",
+"pool": "author_independent"
+},
+{
+"text_id": 31317,
+"side": "a",
+"persona": "someone who rarely opens up about personal struggles",
+"text": "I told a friend that I was having trouble with my relationship.",
+"pool": "author_relevant"
+},
+{
+"text_id": 61099,
+"side": "a",
+"persona": "someone who has always had a strained relationship with the sister",
+"text": "I was on a zip-line and it malfunctioned just as I stepped off the platform, and I was hanging for a couple of moments 20ft above very shallow water. My sister reached across and pulled me back, and I had to trust that she'd be able to hold my weight and not drop me.",
+"pool": "author_relevant"
+},
+{
+"text_id": 276,
+"side": "b",
+"persona": "a hospital volunteer",
+"text": "when I began working in the acute care unit of a hospital because I thought people would be dying and I wouldn't know how to handle it",
+"pool": "author_independent"
+},
+{
+"text_id": 41791,
+"side": "b",
+"persona": "someone with generally positive relationships at work",
+"text": "I felt complete trust when I learnt that a colleague of mine defended my reputation in my absence. While some people were trying to defame me, my colleague in a question, took it upon himself to defend my honor and reputation. I was elated when I got wind of it and knew then that this was someone I could really trust.",
+"pool": "author_relevant"
+},
+{
+"text_id": 3493,
+"side": "b",
+"persona": "a married person",
+"text": "I felt guilt when I slept with someone I shouldn’t of",
+"pool": "author_independent"
+},
+{
+"text_id": 52658,
+"side": "a",
+"persona": "a novice climber who doubted they were ready",
+"text": "first time me and a friend were permitted to climb alone after weeks of practice",
+"pool": "author_relevant"
+},
+{
+"text_id": 61071,
+"side": "b",
+"persona": "someone who regularly manages finances for others professionally",
+"text": "My friend needed support to manage her money so she gave me control of her bank accounts",
+"pool": "author_relevant"
+},
+{
+"text_id": 3370,
+"side": "b",
+"persona": "a cyclist",
+"text": "when I was almost run over by a drunk driver",
+"pool": "author_independent"
+},
+{
+"text_id": 31292,
+"side": "b",
+"persona": "someone financially comfortable",
+"text": "I felt SURPRISE when I went to a restaurant for dinner with a friend. On the evening we went to the restaurant they were running a random competition for diners to win a free meal. We heard an announcement being made and a waitress then appeared at our table and told us that our meal would be free. I felt joy and surprise when this happened because it was so unexpected.",
+"pool": "author_relevant"
+},
+{
+"text_id": 6987,
+"side": "a",
+"persona": "someone who missed her sister deeply",
+"text": "my sister travelled to New Zealand to surprise me whilst travelling. I had not seen her for over 6 months and was not expecting her to arrive in Auckland.",
+"pool": "author_relevant"
+}
+],
+"form_b2_03": [
+{
+"text_id": 3370,
+"side": "b",
+"persona": "a cyclist",
+"text": "when I was almost run over by a drunk driver",
+"pool": "author_independent"
+},
+{
+"text_id": 51962,
+"side": "a",
+"persona": "a military spouse",
+"text": "I finally saw my long distance partner in person after waiting 9 months.",
+"pool": "author_relevant"
+},
+{
+"text_id": 3649,
+"side": "b",
+"persona": "a competitive athlete",
+"text": "when I completed my first 10k race",
+"pool": "author_independent"
+},
+{
+"text_id": 41791,
+"side": "a",
+"persona": "someone who has been betrayed by colleagues before",
+"text": "I felt complete trust when I learnt that a colleague of mine defended my reputation in my absence. While some people were trying to defame me, my colleague in a question, took it upon himself to defend my honor and reputation. I was elated when I got wind of it and knew then that this was someone I could really trust.",
+"pool": "author_relevant"
+},
+{
+"text_id": 5609,
+"side": "a",
+"persona": "a patient",
+"text": "I felt disgust when I had to have a blood test and the nurse had trouble finding a suitable vein to draw the sample from. I usually do not feel nervous or disgusted before having a test done but this particular time I did because she had the tourniquet on my arm for a very long time and was pushing and pulling around to try and get a vein. She did get a vein but she did not give me anything to rest my arm on while having my blood drawn so it was a bit of an awkward and uncomfortable angle and I could feel the needle moving around in my arm. Due to this, I felt quite sick and disgusted and I actually ended up feeling quite hot and I was really anxious that I might faint! Each time I thought about it afterwards, I felt queasy and my arm bruised quite badly afterwards.",
+"pool": "author_independent"
+},
+{
+"text_id": 6403,
+"side": "a",
+"persona": "a strict parent",
+"text": "My daughter was being naughty and i smacked her.",
+"pool": "author_independent"
+},
+{
+"text_id": 4594,
+"side": "a",
+"persona": "a teenager",
+"text": "I felt fear when a man I had feelings for was not responding to my text messages. I have an iPhone and so I use iMessage with others who also have iPhones. When you use iMessage, the chat bubbles are blue, but I noticed one day that the chat bubbles with him were green. That indicates that the recipient does not have an iPhone, or that they are in an area without internet and therefore are getting the messages sent as text messages rather than iMessage. The problem was that he had not been responding and I started wondering if he was seeing my texts at all - then I had a suspicion he had blocked me this entire time. I messaged a mutual friend to ask if he had told them he was angry with me, and I then checked to see if I could still see his profile on social media platforms. I could not. I started getting anxious at the indication that he had blocked me on everything, and that anxiety skyrocketed with each profile I wasn't seeing. My friend told me she could still access his profiles, and it was then I realized he had blocked me on everything.",
+"pool": "author_relevant"
+},
+{
+"text_id": 52658,
+"side": "a",
+"persona": "a novice climber who doubted they were ready",
+"text": "first time me and a friend were permitted to climb alone after weeks of practice",
+"pool": "author_relevant"
+},
+{
+"text_id": 3936,
+"side": "b",
+"persona": "a legacy applicant",
+"text": "I felt relief when I got into university",
+"pool": "author_independent"
+},
+{
+"text_id": 6987,
+"side": "a",
+"persona": "someone who missed her sister deeply",
+"text": "my sister travelled to New Zealand to surprise me whilst travelling. I had not seen her for over 6 months and was not expecting her to arrive in Auckland.",
+"pool": "author_relevant"
+},
+{
+"text_id": 41759,
+"side": "b",
+"persona": "someone who was lukewarm about it and half expected it to fall through",
+"text": "I got stood up on a date",
+"pool": "author_relevant"
+},
+{
+"text_id": 4671,
+"side": "a",
+"persona": "a younger sibling",
+"text": "I broke the vase and lied against my sister which was scolded afterwards.",
+"pool": "author_independent"
+},
+{
+"text_id": 51285,
+"side": "b",
+"persona": "a reunited partner",
+"text": "I found out that we really are going to be together forever.",
+"pool": "author_independent"
+},
+{
+"text_id": 31234,
+"side": "a",
+"persona": "someone who never expected to see the money again",
+"text": "I received a refund cheque through the post from a previous electrical company due to being overcharged.",
+"pool": "author_relevant"
+},
+{
+"text_id": 6997,
+"side": "b",
+"persona": "someone who has met many newborns before",
+"text": "When I met my niece at how small she was.",
+"pool": "author_relevant"
+},
+{
+"text_id": 31317,
+"side": "a",
+"persona": "someone who rarely opens up about personal struggles",
+"text": "I told a friend that I was having trouble with my relationship.",
+"pool": "author_relevant"
+},
+{
+"text_id": 276,
+"side": "b",
+"persona": "a hospital volunteer",
+"text": "when I began working in the acute care unit of a hospital because I thought people would be dying and I wouldn't know how to handle it",
+"pool": "author_independent"
+},
+{
+"text_id": 41600,
+"side": "a",
+"persona": "someone who still shares their family's faith",
+"text": "my family told me I was sinning and going against God's will by dating someone outside of the church.",
+"pool": "author_relevant"
+},
+{
+"text_id": 61099,
+"side": "a",
+"persona": "someone who has always had a strained relationship with the sister",
+"text": "I was on a zip-line and it malfunctioned just as I stepped off the platform, and I was hanging for a couple of moments 20ft above very shallow water. My sister reached across and pulled me back, and I had to trust that she'd be able to hold my weight and not drop me.",
+"pool": "author_relevant"
+},
+{
+"text_id": 3493,
+"side": "b",
+"persona": "a married person",
+"text": "I felt guilt when I slept with someone I shouldn’t of",
+"pool": "author_independent"
+},
+{
+"text_id": 52373,
+"side": "b",
+"persona": "a serious music conservatory applicant",
+"text": "failed my piano exam",
+"pool": "author_relevant"
+},
+{
+"text_id": 657,
+"side": "a",
+"persona": "a coworker",
+"text": "A colleague was always off work.",
+"pool": "author_independent"
+},
+{
+"text_id": 41208,
+"side": "b",
+"persona": "a competitive athlete",
+"text": "I felt PRIDE when I was at a track and field meet in 5th grade. I was running the 100m, and all of the girls I was competing against were much taller than me. They all said to me \"you're not going to win. You're too short. Short people are not fast.\" Anyway, I ended up absolutely SMOKING all of them and getting first place. They all looked at me in such disbelief. It was awesome.",
+"pool": "author_independent"
+},
+{
+"text_id": 31292,
+"side": "b",
+"persona": "someone financially comfortable",
+"text": "I felt SURPRISE when I went to a restaurant for dinner with a friend. On the evening we went to the restaurant they were running a random competition for diners to win a free meal. We heard an announcement being made and a waitress then appeared at our table and told us that our meal would be free. I felt joy and surprise when this happened because it was so unexpected.",
+"pool": "author_relevant"
+},
+{
+"text_id": 51023,
+"side": "b",
+"persona": "a husband",
+"text": "I pulled my girlfriends arm and accidentally hurt her.",
+"pool": "author_independent"
+},
+{
+"text_id": 6804,
+"side": "a",
+"persona": "a tourist",
+"text": "I got home from a flight that we were almost refused on as we didn't have the right documentation",
+"pool": "author_independent"
+},
+{
+"text_id": 588,
+"side": "a",
+"persona": "a young dater",
+"text": "when i was cheated on",
+"pool": "author_independent"
+},
+{
+"text_id": 3641,
+"side": "b",
+"persona": "a laid-off worker",
+"text": "i recently got  a new job",
+"pool": "author_relevant"
+},
+{
+"text_id": 61071,
+"side": "b",
+"persona": "someone who regularly manages finances for others professionally",
+"text": "My friend needed support to manage her money so she gave me control of her bank accounts",
+"pool": "author_relevant"
+}
+],
+"form_b2_04": [
+{
+"text_id": 4594,
+"side": "b",
+"persona": "an adult woman",
+"text": "I felt fear when a man I had feelings for was not responding to my text messages. I have an iPhone and so I use iMessage with others who also have iPhones. When you use iMessage, the chat bubbles are blue, but I noticed one day that the chat bubbles with him were green. That indicates that the recipient does not have an iPhone, or that they are in an area without internet and therefore are getting the messages sent as text messages rather than iMessage. The problem was that he had not been responding and I started wondering if he was seeing my texts at all - then I had a suspicion he had blocked me this entire time. I messaged a mutual friend to ask if he had told them he was angry with me, and I then checked to see if I could still see his profile on social media platforms. I could not. I started getting anxious at the indication that he had blocked me on everything, and that anxiety skyrocketed with each profile I wasn't seeing. My friend told me she could still access his profiles, and it was then I realized he had blocked me on everything.",
+"pool": "author_relevant"
+},
+{
+"text_id": 41208,
+"side": "b",
+"persona": "a competitive athlete",
+"text": "I felt PRIDE when I was at a track and field meet in 5th grade. I was running the 100m, and all of the girls I was competing against were much taller than me. They all said to me \"you're not going to win. You're too short. Short people are not fast.\" Anyway, I ended up absolutely SMOKING all of them and getting first place. They all looked at me in such disbelief. It was awesome.",
+"pool": "author_independent"
+},
+{
+"text_id": 52373,
+"side": "a",
+"persona": "a young student learning casually",
+"text": "failed my piano exam",
+"pool": "author_relevant"
+},
+{
+"text_id": 3936,
+"side": "b",
+"persona": "a legacy applicant",
+"text": "I felt relief when I got into university",
+"pool": "author_independent"
+},
+{
+"text_id": 276,
+"side": "a",
+"persona": "a new nurse",
+"text": "when I began working in the acute care unit of a hospital because I thought people would be dying and I wouldn't know how to handle it",
+"pool": "author_independent"
+},
+{
+"text_id": 6997,
+"side": "a",
+"persona": "a first-time aunt or uncle meeting a newborn",
+"text": "When I met my niece at how small she was.",
+"pool": "author_relevant"
+},
+{
+"text_id": 4671,
+"side": "b",
+"persona": "an older sibling",
+"text": "I broke the vase and lied against my sister which was scolded afterwards.",
+"pool": "author_independent"
+},
+{
+"text_id": 3649,
+"side": "b",
+"persona": "a competitive athlete",
+"text": "when I completed my first 10k race",
+"pool": "author_independent"
+},
+{
+"text_id": 51962,
+"side": "a",
+"persona": "a military spouse",
+"text": "I finally saw my long distance partner in person after waiting 9 months.",
+"pool": "author_relevant"
+},
+{
+"text_id": 31317,
+"side": "b",
+"persona": "someone who regularly confides in this friend",
+"text": "I told a friend that I was having trouble with my relationship.",
+"pool": "author_relevant"
+},
+{
+"text_id": 31292,
+"side": "a",
+"persona": "someone on a tight budget",
+"text": "I felt SURPRISE when I went to a restaurant for dinner with a friend. On the evening we went to the restaurant they were running a random competition for diners to win a free meal. We heard an announcement being made and a waitress then appeared at our table and told us that our meal would be free. I felt joy and surprise when this happened because it was so unexpected.",
+"pool": "author_relevant"
+},
+{
+"text_id": 5609,
+"side": "a",
+"persona": "a patient",
+"text": "I felt disgust when I had to have a blood test and the nurse had trouble finding a suitable vein to draw the sample from. I usually do not feel nervous or disgusted before having a test done but this particular time I did because she had the tourniquet on my arm for a very long time and was pushing and pulling around to try and get a vein. She did get a vein but she did not give me anything to rest my arm on while having my blood drawn so it was a bit of an awkward and uncomfortable angle and I could feel the needle moving around in my arm. Due to this, I felt quite sick and disgusted and I actually ended up feeling quite hot and I was really anxious that I might faint! Each time I thought about it afterwards, I felt queasy and my arm bruised quite badly afterwards.",
+"pool": "author_independent"
+},
+{
+"text_id": 41600,
+"side": "b",
+"persona": "someone who has already left the religion",
+"text": "my family told me I was sinning and going against God's will by dating someone outside of the church.",
+"pool": "author_relevant"
+},
+{
+"text_id": 6987,
+"side": "b",
+"persona": "someone who talks to her sister constantly regardless of distance",
+"text": "my sister travelled to New Zealand to surprise me whilst travelling. I had not seen her for over 6 months and was not expecting her to arrive in Auckland.",
+"pool": "author_relevant"
+},
+{
+"text_id": 588,
+"side": "b",
+"persona": "a married spouse",
+"text": "when i was cheated on",
+"pool": "author_independent"
+},
+{
+"text_id": 6403,
+"side": "a",
+"persona": "a strict parent",
+"text": "My daughter was being naughty and i smacked her.",
+"pool": "author_independent"
+},
+{
+"text_id": 41759,
+"side": "b",
+"persona": "someone who was lukewarm about it and half expected it to fall through",
+"text": "I got stood up on a date",
+"pool": "author_relevant"
+},
+{
+"text_id": 6804,
+"side": "b",
+"persona": "an immigrant",
+"text": "I got home from a flight that we were almost refused on as we didn't have the right documentation",
+"pool": "author_independent"
+},
+{
+"text_id": 51285,
+"side": "a",
+"persona": "a newly engaged person",
+"text": "I found out that we really are going to be together forever.",
+"pool": "author_independent"
+},
+{
+"text_id": 31234,
+"side": "a",
+"persona": "someone who never expected to see the money again",
+"text": "I received a refund cheque through the post from a previous electrical company due to being overcharged.",
+"pool": "author_relevant"
+},
+{
+"text_id": 41791,
+"side": "b",
+"persona": "someone with generally positive relationships at work",
+"text": "I felt complete trust when I learnt that a colleague of mine defended my reputation in my absence. While some people were trying to defame me, my colleague in a question, took it upon himself to defend my honor and reputation. I was elated when I got wind of it and knew then that this was someone I could really trust.",
+"pool": "author_relevant"
+},
+{
+"text_id": 657,
+"side": "a",
+"persona": "a coworker",
+"text": "A colleague was always off work.",
+"pool": "author_independent"
+},
+{
+"text_id": 3641,
+"side": "a",
+"persona": "a recent graduate",
+"text": "i recently got  a new job",
+"pool": "author_relevant"
+},
+{
+"text_id": 52658,
+"side": "a",
+"persona": "a novice climber who doubted they were ready",
+"text": "first time me and a friend were permitted to climb alone after weeks of practice",
+"pool": "author_relevant"
+},
+{
+"text_id": 61071,
+"side": "a",
+"persona": "someone entrusted for the first time with this level of financial responsibility",
+"text": "My friend needed support to manage her money so she gave me control of her bank accounts",
+"pool": "author_relevant"
+},
+{
+"text_id": 3493,
+"side": "a",
+"persona": "a single person",
+"text": "I felt guilt when I slept with someone I shouldn’t of",
+"pool": "author_independent"
+},
+{
+"text_id": 51023,
+"side": "a",
+"persona": "a boyfriend",
+"text": "I pulled my girlfriends arm and accidentally hurt her.",
+"pool": "author_independent"
+},
+{
+"text_id": 61099,
+"side": "b",
+"persona": "someone who has always felt completely secure in the sister's reliability",
+"text": "I was on a zip-line and it malfunctioned just as I stepped off the platform, and I was hanging for a couple of moments 20ft above very shallow water. My sister reached across and pulled me back, and I had to trust that she'd be able to hold my weight and not drop me.",
+"pool": "author_relevant"
+},
+{
+"text_id": 3370,
+"side": "a",
+"persona": "a pedestrian",
+"text": "when I was almost run over by a drunk driver",
+"pool": "author_independent"
+}
+],
+"form_b2_05": [
+{
+"text_id": 41600,
+"side": "b",
+"persona": "someone who has already left the religion",
+"text": "my family told me I was sinning and going against God's will by dating someone outside of the church.",
+"pool": "author_relevant"
+},
+{
+"text_id": 6804,
+"side": "a",
+"persona": "a tourist",
+"text": "I got home from a flight that we were almost refused on as we didn't have the right documentation",
+"pool": "author_independent"
+},
+{
+"text_id": 3641,
+"side": "a",
+"persona": "a recent graduate",
+"text": "i recently got  a new job",
+"pool": "author_relevant"
+},
+{
+"text_id": 51285,
+"side": "a",
+"persona": "a newly engaged person",
+"text": "I found out that we really are going to be together forever.",
+"pool": "author_independent"
+},
+{
+"text_id": 41208,
+"side": "a",
+"persona": "a school student",
+"text": "I felt PRIDE when I was at a track and field meet in 5th grade. I was running the 100m, and all of the girls I was competing against were much taller than me. They all said to me \"you're not going to win. You're too short. Short people are not fast.\" Anyway, I ended up absolutely SMOKING all of them and getting first place. They all looked at me in such disbelief. It was awesome.",
+"pool": "author_independent"
+},
+{
+"text_id": 61099,
+"side": "b",
+"persona": "someone who has always felt completely secure in the sister's reliability",
+"text": "I was on a zip-line and it malfunctioned just as I stepped off the platform, and I was hanging for a couple of moments 20ft above very shallow water. My sister reached across and pulled me back, and I had to trust that she'd be able to hold my weight and not drop me.",
+"pool": "author_relevant"
+},
+{
+"text_id": 31292,
+"side": "a",
+"persona": "someone on a tight budget",
+"text": "I felt SURPRISE when I went to a restaurant for dinner with a friend. On the evening we went to the restaurant they were running a random competition for diners to win a free meal. We heard an announcement being made and a waitress then appeared at our table and told us that our meal would be free. I felt joy and surprise when this happened because it was so unexpected.",
+"pool": "author_relevant"
+},
+{
+"text_id": 31234,
+"side": "a",
+"persona": "someone who never expected to see the money again",
+"text": "I received a refund cheque through the post from a previous electrical company due to being overcharged.",
+"pool": "author_relevant"
+},
+{
+"text_id": 6997,
+"side": "b",
+"persona": "someone who has met many newborns before",
+"text": "When I met my niece at how small she was.",
+"pool": "author_relevant"
+},
+{
+"text_id": 41759,
+"side": "a",
+"persona": "someone who was really looking forward to this date",
+"text": "I got stood up on a date",
+"pool": "author_relevant"
+},
+{
+"text_id": 3370,
+"side": "a",
+"persona": "a pedestrian",
+"text": "when I was almost run over by a drunk driver",
+"pool": "author_independent"
+},
+{
+"text_id": 31317,
+"side": "b",
+"persona": "someone who regularly confides in this friend",
+"text": "I told a friend that I was having trouble with my relationship.",
+"pool": "author_relevant"
+},
+{
+"text_id": 4594,
+"side": "a",
+"persona": "a teenager",
+"text": "I felt fear when a man I had feelings for was not responding to my text messages. I have an iPhone and so I use iMessage with others who also have iPhones. When you use iMessage, the chat bubbles are blue, but I noticed one day that the chat bubbles with him were green. That indicates that the recipient does not have an iPhone, or that they are in an area without internet and therefore are getting the messages sent as text messages rather than iMessage. The problem was that he had not been responding and I started wondering if he was seeing my texts at all - then I had a suspicion he had blocked me this entire time. I messaged a mutual friend to ask if he had told them he was angry with me, and I then checked to see if I could still see his profile on social media platforms. I could not. I started getting anxious at the indication that he had blocked me on everything, and that anxiety skyrocketed with each profile I wasn't seeing. My friend told me she could still access his profiles, and it was then I realized he had blocked me on everything.",
+"pool": "author_relevant"
+},
+{
+"text_id": 3649,
+"side": "a",
+"persona": "a beginner runner",
+"text": "when I completed my first 10k race",
+"pool": "author_independent"
+},
+{
+"text_id": 657,
+"side": "b",
+"persona": "a manager",
+"text": "A colleague was always off work.",
+"pool": "author_independent"
+},
+{
+"text_id": 61071,
+"side": "a",
+"persona": "someone entrusted for the first time with this level of financial responsibility",
+"text": "My friend needed support to manage her money so she gave me control of her bank accounts",
+"pool": "author_relevant"
+},
+{
+"text_id": 4671,
+"side": "b",
+"persona": "an older sibling",
+"text": "I broke the vase and lied against my sister which was scolded afterwards.",
+"pool": "author_independent"
+},
+{
+"text_id": 6987,
+"side": "a",
+"persona": "someone who missed her sister deeply",
+"text": "my sister travelled to New Zealand to surprise me whilst travelling. I had not seen her for over 6 months and was not expecting her to arrive in Auckland.",
+"pool": "author_relevant"
+},
+{
+"text_id": 588,
+"side": "a",
+"persona": "a young dater",
+"text": "when i was cheated on",
+"pool": "author_independent"
+},
+{
+"text_id": 3493,
+"side": "a",
+"persona": "a single person",
+"text": "I felt guilt when I slept with someone I shouldn’t of",
+"pool": "author_independent"
+},
+{
+"text_id": 3936,
+"side": "b",
+"persona": "a legacy applicant",
+"text": "I felt relief when I got into university",
+"pool": "author_independent"
+},
+{
+"text_id": 276,
+"side": "a",
+"persona": "a new nurse",
+"text": "when I began working in the acute care unit of a hospital because I thought people would be dying and I wouldn't know how to handle it",
+"pool": "author_independent"
+},
+{
+"text_id": 52658,
+"side": "b",
+"persona": "an instructor confident in the trainee's readiness",
+"text": "first time me and a friend were permitted to climb alone after weeks of practice",
+"pool": "author_relevant"
+},
+{
+"text_id": 51962,
+"side": "b",
+"persona": "a college student",
+"text": "I finally saw my long distance partner in person after waiting 9 months.",
+"pool": "author_relevant"
+},
+{
+"text_id": 51023,
+"side": "a",
+"persona": "a boyfriend",
+"text": "I pulled my girlfriends arm and accidentally hurt her.",
+"pool": "author_independent"
+},
+{
+"text_id": 41791,
+"side": "a",
+"persona": "someone who has been betrayed by colleagues before",
+"text": "I felt complete trust when I learnt that a colleague of mine defended my reputation in my absence. While some people were trying to defame me, my colleague in a question, took it upon himself to defend my honor and reputation. I was elated when I got wind of it and knew then that this was someone I could really trust.",
+"pool": "author_relevant"
+},
+{
+"text_id": 6403,
+"side": "b",
+"persona": "a first-time parent",
+"text": "My daughter was being naughty and i smacked her.",
+"pool": "author_independent"
+},
+{
+"text_id": 52373,
+"side": "b",
+"persona": "a serious music conservatory applicant",
+"text": "failed my piano exam",
+"pool": "author_relevant"
+},
+{
+"text_id": 5609,
+"side": "a",
+"persona": "a patient",
+"text": "I felt disgust when I had to have a blood test and the nurse had trouble finding a suitable vein to draw the sample from. I usually do not feel nervous or disgusted before having a test done but this particular time I did because she had the tourniquet on my arm for a very long time and was pushing and pulling around to try and get a vein. She did get a vein but she did not give me anything to rest my arm on while having my blood drawn so it was a bit of an awkward and uncomfortable angle and I could feel the needle moving around in my arm. Due to this, I felt quite sick and disgusted and I actually ended up feeling quite hot and I was really anxious that I might faint! Each time I thought about it afterwards, I felt queasy and my arm bruised quite badly afterwards.",
+"pool": "author_independent"
+}
+],
+"form_b2_06": [
+{
+"text_id": 588,
+"side": "b",
+"persona": "a married spouse",
+"text": "when i was cheated on",
+"pool": "author_independent"
+},
+{
+"text_id": 657,
+"side": "b",
+"persona": "a manager",
+"text": "A colleague was always off work.",
+"pool": "author_independent"
+},
+{
+"text_id": 6987,
+"side": "b",
+"persona": "someone who talks to her sister constantly regardless of distance",
+"text": "my sister travelled to New Zealand to surprise me whilst travelling. I had not seen her for over 6 months and was not expecting her to arrive in Auckland.",
+"pool": "author_relevant"
+},
+{
+"text_id": 61099,
+"side": "b",
+"persona": "someone who has always felt completely secure in the sister's reliability",
+"text": "I was on a zip-line and it malfunctioned just as I stepped off the platform, and I was hanging for a couple of moments 20ft above very shallow water. My sister reached across and pulled me back, and I had to trust that she'd be able to hold my weight and not drop me.",
+"pool": "author_relevant"
+},
+{
+"text_id": 31317,
+"side": "a",
+"persona": "someone who rarely opens up about personal struggles",
+"text": "I told a friend that I was having trouble with my relationship.",
+"pool": "author_relevant"
+},
+{
+"text_id": 5609,
+"side": "b",
+"persona": "a nurse",
+"text": "I felt disgust when I had to have a blood test and the nurse had trouble finding a suitable vein to draw the sample from. I usually do not feel nervous or disgusted before having a test done but this particular time I did because she had the tourniquet on my arm for a very long time and was pushing and pulling around to try and get a vein. She did get a vein but she did not give me anything to rest my arm on while having my blood drawn so it was a bit of an awkward and uncomfortable angle and I could feel the needle moving around in my arm. Due to this, I felt quite sick and disgusted and I actually ended up feeling quite hot and I was really anxious that I might faint! Each time I thought about it afterwards, I felt queasy and my arm bruised quite badly afterwards.",
+"pool": "author_independent"
+},
+{
+"text_id": 52373,
+"side": "b",
+"persona": "a serious music conservatory applicant",
+"text": "failed my piano exam",
+"pool": "author_relevant"
+},
+{
+"text_id": 3649,
+"side": "b",
+"persona": "a competitive athlete",
+"text": "when I completed my first 10k race",
+"pool": "author_independent"
+},
+{
+"text_id": 41759,
+"side": "a",
+"persona": "someone who was really looking forward to this date",
+"text": "I got stood up on a date",
+"pool": "author_relevant"
+},
+{
+"text_id": 61071,
+"side": "b",
+"persona": "someone who regularly manages finances for others professionally",
+"text": "My friend needed support to manage her money so she gave me control of her bank accounts",
+"pool": "author_relevant"
+},
+{
+"text_id": 6804,
+"side": "b",
+"persona": "an immigrant",
+"text": "I got home from a flight that we were almost refused on as we didn't have the right documentation",
+"pool": "author_independent"
+},
+{
+"text_id": 51023,
+"side": "b",
+"persona": "a husband",
+"text": "I pulled my girlfriends arm and accidentally hurt her.",
+"pool": "author_independent"
+},
+{
+"text_id": 51285,
+"side": "a",
+"persona": "a newly engaged person",
+"text": "I found out that we really are going to be together forever.",
+"pool": "author_independent"
+},
+{
+"text_id": 3370,
+"side": "b",
+"persona": "a cyclist",
+"text": "when I was almost run over by a drunk driver",
+"pool": "author_independent"
+},
+{
+"text_id": 3493,
+"side": "b",
+"persona": "a married person",
+"text": "I felt guilt when I slept with someone I shouldn’t of",
+"pool": "author_independent"
+},
+{
+"text_id": 52658,
+"side": "b",
+"persona": "an instructor confident in the trainee's readiness",
+"text": "first time me and a friend were permitted to climb alone after weeks of practice",
+"pool": "author_relevant"
+},
+{
+"text_id": 51962,
+"side": "b",
+"persona": "a college student",
+"text": "I finally saw my long distance partner in person after waiting 9 months.",
+"pool": "author_relevant"
+},
+{
+"text_id": 41791,
+"side": "a",
+"persona": "someone who has been betrayed by colleagues before",
+"text": "I felt complete trust when I learnt that a colleague of mine defended my reputation in my absence. While some people were trying to defame me, my colleague in a question, took it upon himself to defend my honor and reputation. I was elated when I got wind of it and knew then that this was someone I could really trust.",
+"pool": "author_relevant"
+},
+{
+"text_id": 4594,
+"side": "b",
+"persona": "an adult woman",
+"text": "I felt fear when a man I had feelings for was not responding to my text messages. I have an iPhone and so I use iMessage with others who also have iPhones. When you use iMessage, the chat bubbles are blue, but I noticed one day that the chat bubbles with him were green. That indicates that the recipient does not have an iPhone, or that they are in an area without internet and therefore are getting the messages sent as text messages rather than iMessage. The problem was that he had not been responding and I started wondering if he was seeing my texts at all - then I had a suspicion he had blocked me this entire time. I messaged a mutual friend to ask if he had told them he was angry with me, and I then checked to see if I could still see his profile on social media platforms. I could not. I started getting anxious at the indication that he had blocked me on everything, and that anxiety skyrocketed with each profile I wasn't seeing. My friend told me she could still access his profiles, and it was then I realized he had blocked me on everything.",
+"pool": "author_relevant"
+},
+{
+"text_id": 6403,
+"side": "b",
+"persona": "a first-time parent",
+"text": "My daughter was being naughty and i smacked her.",
+"pool": "author_independent"
+},
+{
+"text_id": 31292,
+"side": "a",
+"persona": "someone on a tight budget",
+"text": "I felt SURPRISE when I went to a restaurant for dinner with a friend. On the evening we went to the restaurant they were running a random competition for diners to win a free meal. We heard an announcement being made and a waitress then appeared at our table and told us that our meal would be free. I felt joy and surprise when this happened because it was so unexpected.",
+"pool": "author_relevant"
+},
+{
+"text_id": 41208,
+"side": "a",
+"persona": "a school student",
+"text": "I felt PRIDE when I was at a track and field meet in 5th grade. I was running the 100m, and all of the girls I was competing against were much taller than me. They all said to me \"you're not going to win. You're too short. Short people are not fast.\" Anyway, I ended up absolutely SMOKING all of them and getting first place. They all looked at me in such disbelief. It was awesome.",
+"pool": "author_independent"
+},
+{
+"text_id": 6997,
+"side": "a",
+"persona": "a first-time aunt or uncle meeting a newborn",
+"text": "When I met my niece at how small she was.",
+"pool": "author_relevant"
+},
+{
+"text_id": 3641,
+"side": "b",
+"persona": "a laid-off worker",
+"text": "i recently got  a new job",
+"pool": "author_relevant"
+},
+{
+"text_id": 31234,
+"side": "b",
+"persona": "someone who had been actively disputing the charge",
+"text": "I received a refund cheque through the post from a previous electrical company due to being overcharged.",
+"pool": "author_relevant"
+},
+{
+"text_id": 41600,
+"side": "a",
+"persona": "someone who still shares their family's faith",
+"text": "my family told me I was sinning and going against God's will by dating someone outside of the church.",
+"pool": "author_relevant"
+},
+{
+"text_id": 3936,
+"side": "a",
+"persona": "a first-generation student",
+"text": "I felt relief when I got into university",
+"pool": "author_independent"
+},
+{
+"text_id": 4671,
+"side": "b",
+"persona": "an older sibling",
+"text": "I broke the vase and lied against my sister which was scolded afterwards.",
+"pool": "author_independent"
+},
+{
+"text_id": 276,
+"side": "a",
+"persona": "a new nurse",
+"text": "when I began working in the acute care unit of a hospital because I thought people would be dying and I wouldn't know how to handle it",
+"pool": "author_independent"
+}
+]
+}

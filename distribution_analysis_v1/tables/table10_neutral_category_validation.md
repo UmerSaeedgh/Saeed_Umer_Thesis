@@ -1,0 +1,16 @@
+# Table 10: Neutral Category Validation
+
+| metric                 | category                     |   n |   mean |   kruskal_wallis_stat |   kruskal_wallis_p |
+|:-----------------------|:-----------------------------|----:|-------:|----------------------:|-------------------:|
+| vec_entropy            | Unambiguous                  | 100 | 0.4628 |               10.9888 |             0.0041 |
+| vec_entropy            | Author-Independent Ambiguous | 100 | 0.5797 |               10.9888 |             0.0041 |
+| vec_entropy            | Author-Relevant Ambiguous    | 100 | 0.6328 |               10.9888 |             0.0041 |
+| vec_normalized_entropy | Unambiguous                  | 100 | 0.193  |               10.9888 |             0.0041 |
+| vec_normalized_entropy | Author-Independent Ambiguous | 100 | 0.2417 |               10.9888 |             0.0041 |
+| vec_normalized_entropy | Author-Relevant Ambiguous    | 100 | 0.2639 |               10.9888 |             0.0041 |
+| vec_max_probability    | Unambiguous                  | 100 | 0.7467 |               10.9888 |             0.0041 |
+| vec_max_probability    | Author-Independent Ambiguous | 100 | 0.68   |               10.9888 |             0.0041 |
+| vec_max_probability    | Author-Relevant Ambiguous    | 100 | 0.6467 |               10.9888 |             0.0041 |
+| vec_support_size       | Unambiguous                  | 100 | 1.76   |               10.9888 |             0.0041 |
+| vec_support_size       | Author-Independent Ambiguous | 100 | 1.96   |               10.9888 |             0.0041 |
+| vec_support_size       | Author-Relevant Ambiguous    | 100 | 2.06   |               10.9888 |             0.0041 |

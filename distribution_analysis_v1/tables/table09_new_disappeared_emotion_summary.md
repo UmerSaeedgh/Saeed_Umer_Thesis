@@ -1,0 +1,10 @@
+# Table 9: New Disappeared Emotion Summary
+
+| source   | category                     |    n |   new_emotion_rate |   disappeared_emotion_rate | most_common_new_emotion   | most_common_disappeared_emotion   |
+|:---------|:-----------------------------|-----:|-------------------:|---------------------------:|:--------------------------|:----------------------------------|
+| human    | Unambiguous                  |  200 |              0.7   |                      0.525 | relief                    | sadness                           |
+| human    | Author-Independent Ambiguous |  200 |              0.815 |                      0.665 | disgust                   | sadness                           |
+| human    | Author-Relevant Ambiguous    |  200 |              0.84  |                      0.73  | fear                      | joy                               |
+| llm      | Unambiguous                  | 1200 |              0.206 |                      0.158 | relief                    | surprise                          |
+| llm      | Author-Independent Ambiguous | 1200 |              0.268 |                      0.236 | pride                     | surprise                          |
+| llm      | Author-Relevant Ambiguous    | 1200 |              0.437 |                      0.378 | relief                    | surprise                          |

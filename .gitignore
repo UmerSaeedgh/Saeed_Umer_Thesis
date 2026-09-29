@@ -1,0 +1,18 @@
+# Backups (excluded per user request)
+backup_*/
+*.bak_*
+
+# OS / tool junk
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
+.claude/
+
+# Internal AI-review / process artifacts (not thesis content)
+updated_mem.md
+review_bundle/
+astra_review_bundle_20260921.zip
+distribution_analysis_v1/interpretation/
+distribution_analysis_v1/REPORTING_FIXES.md
+distribution_analysis_v1/REVISION_NOTES.md
+*_log*.txt

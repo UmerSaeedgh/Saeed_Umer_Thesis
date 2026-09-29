@@ -1,0 +1,4 @@
+,text_id,classification,author_emotion,reader_majority,majority_share,persona_a,judge_a,persona_b,judge_b,flip
+84,378,Author-Relevant Ambiguous,anger,disgust,0.4,an adult child who has been repeatedly gaslit by this parent for years,anger,"someone estranged from their mother, cautiously trying to reconnect",sadness,True
+87,441,Author-Relevant Ambiguous,anger,anger,0.6,"a woman recently discovering the infidelity, blindsided",sadness,a woman who had long suspected her boyfriend was unfaithful and just got confirmation,anger,True
+121,6337,Author-Relevant Ambiguous,fear,fear,0.6,a horror fan who loves haunted house experiences,joy,someone dragged along by friends who hates being scared,fear,True

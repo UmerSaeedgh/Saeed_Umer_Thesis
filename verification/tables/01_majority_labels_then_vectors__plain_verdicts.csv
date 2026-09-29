@@ -1,0 +1,5 @@
+,hypothesis,old_method,vector_method,meaning
+0,H1 — humans,No adjusted selected-label tests reject in this run,"Qualified partial support: author-relevant A and B, and author-independent A reject",Full distributions detect differences the selected-label statistic misses; control non-rejection is not absence
+1,H2 — models,Both paired selected-label tests reject,Both paired-TV coordination tests reject,Conditional support; single generations and joint exchangeability limit attribution
+2,H3 — author relevance,Direct AR−AI label-frequency contrast does not reject,Raw contrast rejects; conditional-null-referenced contrast does not,The stronger category-sensitivity claim is not robust to the reference
+3,H4 — resemblance,Frequency differs; categorical transition proxy exceeds shuffled pairing,Larger human TV; small positive directional correspondence,Qualified partial resemblance; count sensitivity follows in Notebook 2

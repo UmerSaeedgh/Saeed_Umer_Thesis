@@ -1,0 +1,301 @@
+text_id,side,persona,text,pool,n_raters,raters_raw,human_majority,human_agree
+21,neutral,,I went outside my house to find a dozen large boxes had been delivered by my father in law for a thousand canning jars that we didn't want.,Author-Relevant Ambiguous,1,surprise,surprise,1.0
+99,neutral,,i put on weight,Author-Relevant Ambiguous,1,trust,trust,1.0
+249,neutral,,someone at work did not do there job properly and didn't care that it impacted severely on other,Author-Independent Ambiguous,1,shame,shame,1.0
+253,neutral,,i saw the recent news on England fans,Author-Relevant Ambiguous,1,relief,relief,1.0
+272,neutral,,when I worked my first shift on my own at my bar job.,Author-Independent Ambiguous,1,pride,pride,1.0
+276,neutral,,when I began working in the acute care unit of a hospital because I thought people would be dying and I wouldn't know how to handle it,Author-Independent Ambiguous,1,sadness,sadness,1.0
+281,neutral,,"I went out on a night out and got quite drunk, The co-worker I was out with (alongside others) was the boyfriend of one of my friends. We both were having a great time and ended up kissing. The next morning was horrible and I ended up booking a hotel and staying away for the weekend because I felt so bad and didn't want to be around the local area.",Author-Independent Ambiguous,1,guilt,guilt,1.0
+287,neutral,,"I felt ... the last time I was at a concert of my favourite band, watching the band walk out on stage felt magical and hearing all my favourite songs live was bliss",Unambiguous,1,pride,pride,1.0
+315,neutral,,"I felt ... the other day because our fire alarm in the building went off as Tropical Storm Ida came through - we had to stand outside in a torrential downpour. I had my cat with me and she was freaking out as well. My boyfriend told us to go to his car to sit since we were drenched and the rain was not going to stop anytime soon. We got in the car and my cat was still freaking out - my roommate wanted my boyfriend to turn on some music and make it loud. We both told him no because my cat was having trouble with everything going on. Also, she is 17, so she is quite old, so I worry about her stress levels. After we told him no, he then proceeded to sing VERY loudly and when we scowled at him for it, he said ""well she is meowing and stressed either way"", and he did not care that she was having trouble and that I was trying to calm her down. That made me ....",Unambiguous,1,sadness,sadness,1.0
+340,neutral,,A next door neighbour has once again started running generators and power tools.,Unambiguous,1,anger,anger,1.0
+378,neutral,,"I felt ... when my mom did something wrong and immature. When I tried to talk to her about how wrong her behaviour was, she gaslight me and played the vicitm.",Author-Relevant Ambiguous,1,sadness,sadness,1.0
+387,neutral,,I misplaced my car keys,Unambiguous,1,fear,fear,1.0
+414,neutral,,My waters broke early during pregnancy,Author-Independent Ambiguous,1,fear,fear,1.0
+437,neutral,,.. when a person I served at work ignored what I asked causing me to make a computer error,Unambiguous,1,anger,anger,1.0
+441,neutral,,I felt ... because my boyfriend cheated on me,Author-Relevant Ambiguous,1,sadness,sadness,1.0
+458,neutral,,"An older man was in the wrong lane at a round about. He nearly hit me, I had to slam on and his answer was well move then I didn’t hit you, it’s no big deal!",Unambiguous,1,anger,anger,1.0
+476,neutral,,My ex partner lied to me for 4 years and when I found out he showed no remorse and treated me like I was the one in the wrong,Author-Independent Ambiguous,1,shame,shame,1.0
+481,neutral,,i was in a restaurant and they forgot my order but they blamed me for it. i was still charged for the meal even though i never received it.,Unambiguous,1,anger,anger,1.0
+494,neutral,,my husband left the house in a mess,Author-Independent Ambiguous,1,sadness,sadness,1.0
+521,neutral,,A child that I was looking after was refusing to get off the bathroom floor and she needed to go to bed. Whenever I intervened she pushed me away,Author-Independent Ambiguous,1,anger,anger,1.0
+525,neutral,,my neighbour rudely woke us and the whole neighbourhood up when she came back from the pub drunk and then was trying to smash up her boyfriend van,Author-Independent Ambiguous,1,anger,anger,1.0
+553,neutral,,a colleague entered a new situation at work and was annoyed and moaning rather than coming to me first to ask questions about the situation they had assumed the worst.,Author-Independent Ambiguous,1,disgust,disgust,1.0
+588,neutral,,when i was cheated on,Author-Independent Ambiguous,1,anger,anger,1.0
+594,neutral,,My dad died suddenly,Author-Independent Ambiguous,1,sadness,sadness,1.0
+612,neutral,,I witnessed a resident being emotionally abused by a carer in the care home where I worked.,Unambiguous,1,disgust,disgust,1.0
+623,neutral,,A friend took over my own opinion and discredited how I felt,Author-Independent Ambiguous,1,anger,anger,1.0
+641,neutral,,I felt ... when I got a bad mark on an assignment because of unfair marking.,Unambiguous,1,anger,anger,1.0
+657,neutral,,A colleague was always off work.,Author-Independent Ambiguous,1,anger,anger,1.0
+762,neutral,,I was facing my first exam of this year because the results will have a large impact on my life,Unambiguous,1,relief,relief,1.0
+783,neutral,,my boyfriend told me he loved me for the first time.,Unambiguous,1,joy,joy,1.0
+825,neutral,,I left my parents house,Author-Relevant Ambiguous,1,sadness,sadness,1.0
+922,neutral,,"I got married to my husband. When we said our vows, I ... that they meant them and that I was safe.",Author-Independent Ambiguous,1,trust,trust,1.0
+2105,neutral,,I felt ... when I passed my exams.,Author-Relevant Ambiguous,1,pride,pride,1.0
+2142,neutral,,I gave birth to healthy twins,Author-Independent Ambiguous,1,joy,joy,1.0
+2143,neutral,,I baked a delicious strawberry cobbler.,Unambiguous,1,pride,pride,1.0
+2161,neutral,,I passed my Irish language test,Author-Independent Ambiguous,1,joy,joy,1.0
+2163,neutral,,my dad was diagnosed with cancer and eventually passed away.,Unambiguous,1,sadness,sadness,1.0
+2168,neutral,,I felt ... when arguing with a friend,Author-Relevant Ambiguous,1,anger,anger,1.0
+2172,neutral,,I was diagnosed with fibromyalgia,Author-Relevant Ambiguous,1,sadness,sadness,1.0
+2182,neutral,,I was bullied badly and everyone made fun of me in a situation that made me feel ...,Author-Relevant Ambiguous,1,fear,fear,1.0
+2187,neutral,,"One day as my sister and I were sharing a car, she decided she was not going to let me have it. She had done this many times before and was doing a horrible job of sharing and helping me get to work. I lost my temper in front of her and my mother. I was slamming doors and yelling. I have not thrown a fit like that ever since. I still feel ... I let my emotions get the best of me.",Author-Relevant Ambiguous,1,guilt,guilt,1.0
+2198,neutral,,England scored in the 2n minute of the Euros final,Author-Relevant Ambiguous,1,surprise,surprise,1.0
+2211,neutral,,I asked my partner to do a task for me,Unambiguous,1,relief,relief,1.0
+2212,neutral,,I felt ... when my cat sleeps by me,Author-Relevant Ambiguous,1,joy,joy,1.0
+2213,neutral,,My manager asked me to take voluntary pay reduction due to COVID. He promised that my pay would return to normal after 3 months and that I would be rewarded for my sacrifice. I ... him and it all worked out well.,Author-Relevant Ambiguous,1,trust,trust,1.0
+2218,neutral,,I told my husband a secret.,Author-Relevant Ambiguous,1,trust,trust,1.0
+2224,neutral,,I knew I could rely on a friend on holiday as I have had previous bad experiences with holidays with friends,Author-Relevant Ambiguous,1,trust,trust,1.0
+2228,neutral,,"Approaching a large jump on a horse, I ... the horse to safely get us over it.",Author-Independent Ambiguous,1,fear,fear,1.0
+3107,neutral,,my mother made me feel like a child,Author-Independent Ambiguous,1,joy,joy,1.0
+3117,neutral,,I was cheated on.,Author-Relevant Ambiguous,1,sadness,sadness,1.0
+3118,neutral,,A man was walking late at night with his dog off a leash. It ran into my garden and killed my sleeping cat. He walked away without saying or doing anything until he saw me chasing after him down the street with a large kitchen knife.,Unambiguous,1,anger,anger,1.0
+3267,neutral,,"I learned how mysoginistic/disrespectful my coworker is. I've gathered as much from his conversations but this event was personal. I work in the position directly under him but am capable of, and do, a lot of his work, a lot of the time. This is only because I like to stay moving while on the clock while his preferences are the opposite. I work in medicine, and we have a bag for biohazardous waste set up at a certain part of the room. I had taken the bag out but not yet replaced it. One day, he had some biohazardous waste, and instead of replacing the bag (fully capable) or asking me, he simply put his needles and other contagious things on the floor, right next to where the bag would be. When I asked him about it, he said he left it on the floor for me to pick up later. I would be regretful to see how he treats janitors and service staff.",Author-Independent Ambiguous,1,anger,anger,1.0
+3283,neutral,,I felt ... when I listened to a man’s pro life views after the passing of the new Texas heartbeat law,Author-Independent Ambiguous,1,surprise,surprise,1.0
+3290,neutral,,I felt ... when I found a bug that was over six inches long in my bathroom when I was home alone and knew I had to handle it myself.,Author-Relevant Ambiguous,1,fear,fear,1.0
+3292,neutral,,I was watching a show and it showed someone having surgery. They were cut open on the table and their organs were being pulled out.,Unambiguous,1,surprise,surprise,1.0
+3319,neutral,,I felt ... when I looked down at my shoe while washing dishes and saw I had ravioli stuck to it from the pan I had just finished scraping out.,Author-Independent Ambiguous,1,disgust,disgust,1.0
+3328,neutral,,I felt ... when I ate a meal which had sausages and when i bit into a sausage it had gristle in it,Unambiguous,1,shame,shame,1.0
+3338,neutral,,I felt ... when my best friends boyfriend at the time starting texting our other best friend flirty text messages. I was even more ... when I found out that she was responding to these suggestive messages and didn't see an issue with it.,Author-Independent Ambiguous,1,surprise,surprise,1.0
+3339,neutral,,My grandad was treated poorly in hospital,Author-Independent Ambiguous,1,anger,anger,1.0
+3344,neutral,,I was working in a hospital and a physio was walking a patient through the corridor in a few metres in front of me. The poor patient through no fault of her own was incontinent and had not been given a nappy. She defecated on the floor while walking with the physio and had I not been paying attention I would have walked right the the excrement.,Unambiguous,1,disgust,disgust,1.0
+3348,neutral,,I was told the wall next to my desk at work which is currently a neutral colour is to be painted bright orange.,Author-Relevant Ambiguous,1,surprise,surprise,1.0
+3370,neutral,,when I was almost run over by a drunk driver,Author-Independent Ambiguous,1,anger,anger,1.0
+3426,neutral,,"I felt ... when my friend and I were chased through a forest by an older man on our way home. He stood about 20 metres away from us whilst we were sat on a bench for about 15 minutes and then ran after us when we moved, we hid in a bush and he was searching for us until he was deterred by a dog walker.",Unambiguous,1,fear,fear,1.0
+3431,neutral,,I felt ... when i had a night terror.,Unambiguous,1,fear,fear,1.0
+3443,neutral,,I felt ... when I thought I had COVID-19 a few days ago,Unambiguous,1,fear,fear,1.0
+3469,neutral,,I was running away from a shooting and a car was trying to run me down,Unambiguous,1,fear,fear,1.0
+3481,neutral,,eating badly when I was on a diet,Author-Independent Ambiguous,1,guilt,guilt,1.0
+3493,neutral,,I felt ... when I slept with someone I shouldn’t of,Author-Independent Ambiguous,1,guilt,guilt,1.0
+3514,neutral,,I cheated on an ex after they cheated on me,Author-Independent Ambiguous,1,anger,anger,1.0
+3528,neutral,,"I felt ... whenever I think about how my life could be with another man. I love my boyfriend of two years very much but I still think about my ex a lot because it just felt unresolved (though I'm not entirely sure resolving it would change much). It's mostly because my ex was extremely wealthy and although my current bf and I are well off for our age, it's tough when I consider that I could be flown around in a private jet instead. I feel extremely ... thinking about this and typing it out because I don't want to sound greedy. I just grew up in the lowest income bracket and I can't help but be enticed by money as it was such a barrier growing up. I'm trying really hard to develop a healthier relationship with it as I grow older.",Author-Relevant Ambiguous,1,disgust,disgust,1.0
+3538,neutral,,I got approved for my first apartment.,Author-Relevant Ambiguous,1,joy,joy,1.0
+3579,neutral,,I went skydiving.,Author-Relevant Ambiguous,1,joy,joy,1.0
+3618,neutral,,I got my job offer.,Author-Relevant Ambiguous,1,joy,joy,1.0
+3620,neutral,,When I won an online competition because I won just over 3k.,Unambiguous,1,pride,pride,1.0
+3639,neutral,,I went to Los Angeles,Author-Independent Ambiguous,1,surprise,surprise,1.0
+3641,neutral,,i recently got  a new job,Author-Relevant Ambiguous,1,relief,relief,1.0
+3645,neutral,,I felt ... when I found out I was accepted into graduate school because I was scared that I was not going to make it in and that I was going to have to wait another year to re-apply.,Author-Independent Ambiguous,1,pride,pride,1.0
+3649,neutral,,when I completed my first 10k race,Author-Independent Ambiguous,1,pride,pride,1.0
+3833,neutral,,Whenever someone punches my ego,Author-Independent Ambiguous,1,anger,anger,1.0
+3857,neutral,,my daughter handed her ice cream to her little brother who had dropped his ice cream on the ground outside and started to cry. She handed him her ice cream to stop him crying.,Unambiguous,1,pride,pride,1.0
+3864,neutral,,my niece came out to me and told me she had a girlfriend before she told anyone else.,Author-Independent Ambiguous,1,disgust,disgust,1.0
+3936,neutral,,I felt ... when I got into university,Author-Independent Ambiguous,1,pride,pride,1.0
+3937,neutral,,When I found my dog,Unambiguous,1,joy,joy,1.0
+3942,neutral,,I found my child,Unambiguous,1,relief,relief,1.0
+3964,neutral,,I thought my boss was upset with me about a mistake I made at work but it turned out she was really understanding once I spoke with her.,Author-Independent Ambiguous,1,relief,relief,1.0
+3966,neutral,,I'm supposed to speak publicly but the event gets cancelled.,Unambiguous,1,anger,anger,1.0
+3975,neutral,,I felt ... when I got a job at my current position permanently.,Author-Relevant Ambiguous,1,relief,relief,1.0
+4117,neutral,,I got a low score on my biology quiz.,Author-Independent Ambiguous,1,guilt,guilt,1.0
+4146,neutral,,I felt ... when I was at uni and someone stole my fishcake from the freezer. Had nothing to eat in the evening that day.,Unambiguous,1,sadness,sadness,1.0
+4150,neutral,,My mother invited my unvaccinated sister and her son over to play with my kids without my knowledge.,Unambiguous,1,anger,anger,1.0
+4387,neutral,,My uncles family made my aunt homeless after he left his house to them after his death.,Author-Independent Ambiguous,1,anger,anger,1.0
+4410,neutral,,when my partner invalidates my feelings.,Author-Independent Ambiguous,1,anger,anger,1.0
+4431,neutral,,I was walking to buy food and saw a dead rat on the street,Unambiguous,1,disgust,disgust,1.0
+4454,neutral,,I saw mouldy food,Unambiguous,1,disgust,disgust,1.0
+4490,neutral,,I felt ... when my family was experiencing a hurricane being stuck in our house. It was ... because two houses behind us caught on fire and our first floor flooded. We were stuck and unable to leave.,Unambiguous,1,sadness,sadness,1.0
+4497,neutral,,"I felt ... when there was a power outage in my home. That day, my wife and I were cuddling in the sitting room when a thunderstorm started. Then ... filled me when thunder hit our roof and all the lights went off.",Unambiguous,1,fear,fear,1.0
+4510,neutral,,when I discovered my boyfriend had been drinking alcohol alone in his room,Author-Independent Ambiguous,1,sadness,sadness,1.0
+4519,neutral,,I went for a chest x-ray,Unambiguous,1,fear,fear,1.0
+4571,neutral,,"In elementary school one of my male classmates starting to sexually harass me everyday, touching me inappropriately in all different places multiple times a day, I was too ... to tell anyone or tell him off.",Author-Relevant Ambiguous,1,fear,fear,1.0
+4573,neutral,,I felt a project was not meeting upmto standards.,Author-Relevant Ambiguous,1,fear,fear,1.0
+4592,neutral,,I felt ... when I went to a haunted house amusement park.,Author-Relevant Ambiguous,1,fear,fear,1.0
+4594,neutral,,"I felt ... when a man I had feelings for was not responding to my text messages. I have an iPhone and so I use iMessage with others who also have iPhones. When you use iMessage, the chat bubbles are blue, but I noticed one day that the chat bubbles with him were green. That indicates that the recipient does not have an iPhone, or that they are in an area without internet and therefore are getting the messages sent as text messages rather than iMessage. The problem was that he had not been responding and I started wondering if he was seeing my texts at all - then I had a suspicion he had blocked me this entire time. I messaged a mutual friend to ask if he had told them he was angry with me, and I then checked to see if I could still see his profile on social media platforms. I could not. I started getting anxious at the indication that he had blocked me on everything, and that anxiety skyrocketed with each profile I wasn't seeing. My friend told me she could still access his profiles, and it was then I realized he had blocked me on everything.",Author-Independent Ambiguous,1,sadness,sadness,1.0
+4609,neutral,,I was nearly hit by a car while commuting to work,Author-Independent Ambiguous,1,relief,relief,1.0
+4636,neutral,,the ladder I was on kicked out from under me.,Author-Independent Ambiguous,1,fear,fear,1.0
+4671,neutral,,I broke the vase and lied against my sister which was scolded afterwards.,Author-Independent Ambiguous,1,shame,shame,1.0
+4817,neutral,,my son has finally committed to joining a baseball team. He is 10 years old and enjoys playing ball.,Author-Independent Ambiguous,1,joy,joy,1.0
+4868,neutral,,when I beat a video game on hard,Author-Independent Ambiguous,1,pride,pride,1.0
+4874,neutral,,I felt ... because I was able to see my girlfriend.,Unambiguous,1,joy,joy,1.0
+5105,neutral,,My teenage son lies in bed all day,Author-Relevant Ambiguous,1,fear,fear,1.0
+5130,neutral,,I was ignored by my last manager when I informed her of my leaving the company. They did not acknowledge my email I sent.,Author-Independent Ambiguous,1,sadness,sadness,1.0
+5166,neutral,,my permanent work contract was not offered to me at the end of my 6 month term even though it was promised it would be,Unambiguous,1,sadness,sadness,1.0
+5206,neutral,,unfair things happen,Author-Independent Ambiguous,1,disgust,disgust,1.0
+5225,neutral,,People make plans and then cancel last moment with no intention to tell me.,Author-Independent Ambiguous,1,anger,anger,1.0
+5502,neutral,,a child threw up in my classroom,Unambiguous,1,shame,shame,1.0
+5575,neutral,,I saw someone shouting at their wife very aggressively outside my window,Author-Relevant Ambiguous,1,shame,shame,1.0
+5580,neutral,,I took my child into a family toilet in a shopping centre. The room was absolutely filthy and there was even poo on the floor.,Unambiguous,1,disgust,disgust,1.0
+5600,neutral,,when i read a study about eating powdered bugs,Author-Independent Ambiguous,1,disgust,disgust,1.0
+5609,neutral,,"I felt ... when I had to have a blood test and the nurse had trouble finding a suitable vein to draw the sample from. I usually do not feel nervous or ... before having a test done but this particular time I did because she had the tourniquet on my arm for a very long time and was pushing and pulling around to try and get a vein. She did get a vein but she did not give me anything to rest my arm on while having my blood drawn so it was a bit of an awkward and uncomfortable angle and I could feel the needle moving around in my arm. Due to this, I felt quite sick and ... and I actually ended up feeling quite hot and I was really anxious that I might faint! Each time I thought about it afterwards, I felt queasy and my arm bruised quite badly afterwards.",Author-Relevant Ambiguous,1,fear,fear,1.0
+5639,neutral,,When I witnessed a male making unwanted advances on a female at a club,Author-Relevant Ambiguous,1,shame,shame,1.0
+5641,neutral,,"My neighbour came and harassed me because he thought our fence was 2 inches onto their land, before getting the proof that it actually wasn’t.",Author-Independent Ambiguous,1,anger,anger,1.0
+5642,neutral,,My husband had an affair,Author-Relevant Ambiguous,1,anger,anger,1.0
+5680,neutral,,I saw someone let their dog poo on the road and they didn't pick it up,Unambiguous,1,disgust,disgust,1.0
+5688,neutral,,I felt ... when I watched a grown man try to flirt with new college age girls and I.,Author-Independent Ambiguous,1,disgust,disgust,1.0
+5691,neutral,,I found out my girlfriend was sleeping with a friend,Author-Independent Ambiguous,1,sadness,sadness,1.0
+5704,neutral,,Someone flicked a wet bogey on to my cheek. It was ...,Unambiguous,1,anger,anger,1.0
+5720,neutral,,"people snot, especially if it is green.",Author-Independent Ambiguous,1,shame,shame,1.0
+5725,neutral,,I woke one night to find my wife trying to harm our child in the belief that it would make her life better if there weren't children to take care of.,Author-Independent Ambiguous,1,anger,anger,1.0
+5730,neutral,,A housemate came at me with a knife.,Unambiguous,1,fear,fear,1.0
+5802,neutral,,I didn't submit an essay on time at university.,Author-Independent Ambiguous,1,guilt,guilt,1.0
+5830,neutral,,my toddler took a high fever and started to shake without other obvious symptoms,Unambiguous,1,surprise,surprise,1.0
+5856,neutral,,I was surrounded by four men; they hit me in the face before I offered to give them everything I had in my pockets.,Unambiguous,1,fear,fear,1.0
+5880,neutral,,I felt ... going in to hospital,Unambiguous,1,fear,fear,1.0
+5914,neutral,,"I was in labour december last year, my pain was worse than I remembered with my previous pregnancies and my waters still hadn’t broken. The ambulance was called and I was ... that something was wrong with my baby or me. We were rushed to hospital and the pain kept intensifying, until my waters broke suddenly and my baby arrived, safe and well.",Unambiguous,1,fear,fear,1.0
+5951,neutral,,I have to perform for others,Author-Independent Ambiguous,1,pride,pride,1.0
+5986,neutral,,I accidentally broke one of my mother's cats legs,Unambiguous,1,guilt,guilt,1.0
+6218,neutral,,I felt ... because I lied about something,Author-Relevant Ambiguous,1,guilt,guilt,1.0
+6221,neutral,,one of my classmates purposely gave me incorrect information about an assignment so that I would perform poorly and look like a fool.,Author-Independent Ambiguous,1,anger,anger,1.0
+6228,neutral,,"My dog rolled on a decomposing rabbit, which caused her to smell very much and actually left her with maggots wriggling on her.",Unambiguous,1,sadness,sadness,1.0
+6288,neutral,,I was walking up the stairs in school and I put my hand in somebody’s spit on the hand rail,Unambiguous,1,disgust,disgust,1.0
+6304,neutral,,"when I needed to stop at the side of the road to confirm whether or not the roadkill by my house was the body of one of my cats. I could give more details if you like, but think it is unnecessaryly graphic, suffice to say that maggots were involved.",Author-Independent Ambiguous,1,sadness,sadness,1.0
+6306,neutral,,When I found out our CFO was stealing money from the company.,Author-Independent Ambiguous,1,surprise,surprise,1.0
+6337,neutral,,I felt ... when i went to an in person ... experience for halloween,Author-Relevant Ambiguous,1,joy,joy,1.0
+6403,neutral,,My daughter was being naughty and i smacked her.,Author-Independent Ambiguous,1,anger,anger,1.0
+6407,neutral,,"I accepted a pizza delivery to my address from Dominos, it was marked as paid and with my address on the label but I did not order it.",Author-Relevant Ambiguous,1,surprise,surprise,1.0
+6440,neutral,,I was dancing with my friends at a gig,Unambiguous,1,sadness,sadness,1.0
+6450,neutral,,When I received a invite to a wedding,Author-Independent Ambiguous,1,guilt,guilt,1.0
+6499,neutral,,the seeds that I had sowed grew to became vegetables that I could eat and share with others,Author-Independent Ambiguous,1,relief,relief,1.0
+6524,neutral,,Got to see a BTS perform live at Wembley stadium with friends I was close with at the time.,Unambiguous,1,joy,joy,1.0
+6649,neutral,,I was offered a new job and they offered me the position above the one I interviewed for with great pay,Author-Independent Ambiguous,1,joy,joy,1.0
+6696,neutral,,I saw my daughter perform at her gymnastics show,Author-Independent Ambiguous,1,shame,shame,1.0
+6732,neutral,,i took a moment to look back and saw how far i had come mentally over the last year,Unambiguous,1,pride,pride,1.0
+6761,neutral,,when I had someone help me with a stressful event,Unambiguous,1,relief,relief,1.0
+6768,neutral,,my dad was told his cancer had not spread.,Unambiguous,1,joy,joy,1.0
+6789,neutral,,I felt ... when we had an our offer accepted for the house we now call our home. We had sold our then current property and we due to exchange in a couple of weeks despite the fact we had nowhere else to go yet. Thankfully everything fell in to place at the last minute and it was a huge ... for us all!,Unambiguous,1,relief,relief,1.0
+6804,neutral,,I got home from a flight that we were almost refused on as we didn't have the right documentation,Author-Independent Ambiguous,1,anger,anger,1.0
+6829,neutral,,"After going through IVF and finally being pregnant with what should of been my second child, losing the baby when I was 9 weeks pregnant.",Unambiguous,1,sadness,sadness,1.0
+6848,neutral,,my feelings were hurt.,Unambiguous,1,sadness,sadness,1.0
+6869,neutral,,I felt ... when my ex boyfriend of 7 years cheated on me.,Author-Independent Ambiguous,1,anger,anger,1.0
+6938,neutral,,not getting as much work done as i could,Author-Relevant Ambiguous,1,sadness,sadness,1.0
+6957,neutral,,"I felt ... when my I told an ... story about my sister in front of her friends. It was an ... story about when she was learning to potty train as a child. I thought the story was funny but my sister felt really upset and ... that I told it. After I told that story, I felt ... because I ... my sister and made her feel bad when I know that if she would do the same thing to me, that I would be very upset.",Author-Independent Ambiguous,1,shame,shame,1.0
+6997,neutral,,When I met my niece at how small she was.,Unambiguous,1,surprise,surprise,1.0
+7134,neutral,,A friend described me as her angel because I had travelled by several buses to bring her to a group meeting over several weeks when she wasn’t able to leave home alone.,Unambiguous,1,joy,joy,1.0
+7147,neutral,,going to visit my family and realising my dad is turning in to someone I don't really want to be associated with. They are saying quite racist and homophobic things as well as watching/listening to quite right/conservative opinions.,Author-Independent Ambiguous,1,disgust,disgust,1.0
+7160,neutral,,I realised I had not overcome a mental struggle when I thought I had.,Author-Relevant Ambiguous,1,sadness,sadness,1.0
+7164,neutral,,my ex fiancé left me.,Unambiguous,1,anger,anger,1.0
+7179,neutral,,I regularly feel ... due to mental illness but the last night I a specific event triggered ... was when my brother was angry at me.,Author-Independent Ambiguous,1,sadness,sadness,1.0
+7180,neutral,,people betray me,Author-Independent Ambiguous,1,sadness,sadness,1.0
+7193,neutral,,I'm not where I thought I would be at this point in my life. Went through a nasty divorce. My daughter & grandkids moved far away,Unambiguous,1,sadness,sadness,1.0
+7198,neutral,,I got promoted.,Author-Relevant Ambiguous,1,joy,joy,1.0
+7200,neutral,,Last night I was ... I could smell smoke in my basement,Author-Relevant Ambiguous,1,fear,fear,1.0
+31015,neutral,,I felt ... when my boyfriend didn't text me back in a timely manner. He has moved to another city for college. We used to hang a lot before he left so when we couldn't see each other like how I wanted to it made me feel very .... I want him to myself which I know is selfish now but then it made me ... and brokenhearted. I cried for a few days. I do have relationship anxiety so I think that was a big part of it. I'm okay now I haven't cried about it. We talked it through and I feel better about the situation.,Unambiguous,1,sadness,sadness,1.0
+31060,neutral,,in the uk we were put into a lockdown over Christmas where I thought I would be able to see my family who I hadnt seen in a while and celebrate my 21st birthday,Unambiguous,1,guilt,guilt,1.0
+31077,neutral,,my friend broke my heart,Unambiguous,1,sadness,sadness,1.0
+31089,neutral,,I felt ... because my mother died.,Unambiguous,1,sadness,sadness,1.0
+31147,neutral,,I shouted at my son for doing something wrong but I found out it wasn’t his fault.,Author-Relevant Ambiguous,1,shame,shame,1.0
+31154,neutral,,I was shouted at by a stranger for ignoring a sign,Author-Relevant Ambiguous,1,guilt,guilt,1.0
+31177,neutral,,When I was shopping and accidently took someone else's cart rather than my own,Author-Independent Ambiguous,1,guilt,guilt,1.0
+31179,neutral,,I did cheating in passing one exam and I got very good grades,Author-Independent Ambiguous,1,joy,joy,1.0
+31181,neutral,,"When I gave birth to my baby girl last December, and we thought she was another baby boy.",Author-Relevant Ambiguous,1,surprise,surprise,1.0
+31207,neutral,,my parents said they would help pay for my wedding,Author-Relevant Ambiguous,1,relief,relief,1.0
+31234,neutral,,I received a refund cheque through the post from a previous electrical company due to being overcharged.,Author-Relevant Ambiguous,1,surprise,surprise,1.0
+31292,neutral,,I felt ... when I went to a restaurant for dinner with a friend. On the evening we went to the restaurant they were running a random competition for diners to win a free meal. We heard an announcement being made and a waitress then appeared at our table and told us that our meal would be free. I felt joy and ... when this happened because it was so unexpected.,Unambiguous,1,surprise,surprise,1.0
+31313,neutral,,when my friend stayed with me during a hard time,Author-Relevant Ambiguous,1,trust,trust,1.0
+31317,neutral,,I told a friend that I was having trouble with my relationship.,Author-Relevant Ambiguous,1,fear,fear,1.0
+31346,neutral,,I locked the shop myself for the first time,Author-Relevant Ambiguous,1,joy,joy,1.0
+31378,neutral,,My co-worker confided in me about a personal life issue,Author-Relevant Ambiguous,1,pride,pride,1.0
+31387,neutral,,"I felt ... when we went to a restaurant in London, and asked for steak done to a particular level, the waiter came out and advised that the steak had not been cooked to his satisfaction, so asked for the steak to be redone, it was at this point that we realised we could fully ... that we were going to get exactly what we had asked for.",Author-Relevant Ambiguous,1,trust,trust,1.0
+31398,neutral,,my friends had my back during a certain situation when I felt like they would turn their back on me. We had deferring opinions and I thought they wouldn't want to see me because of it.,Author-Relevant Ambiguous,1,pride,pride,1.0
+41082,neutral,,I felt ... when I completed a drawing and my art instructor complimented my skill and attention to detail,Unambiguous,1,pride,pride,1.0
+41208,neutral,,"I felt ... when I was at a track and field meet in 5th grade. I was running the 100m, and all of the girls I was competing against were much taller than me. They all said to me ""you're not going to win. You're too short. Short people are not fast."" Anyway, I ended up absolutely SMOKING all of them and getting first place. They all looked at me in such disbelief. It was awesome.",Author-Independent Ambiguous,1,pride,pride,1.0
+41228,neutral,,My grandad recovered from a temporary ailment. I have not lost anyone close to me as yet and I did not feel ready to. This was the closest I have come and I felt a sense of hopelessness and upset and so the ... when it was not life threatening was huge.,Unambiguous,1,relief,relief,1.0
+41239,neutral,,I found out my mam didn't need a serious surgery,Unambiguous,1,relief,relief,1.0
+41260,neutral,,"I felt ... when I realized that despite my past, I had the ability to love again. After a horrible toxic relationship, I felt as if I would be better off alone forever. I moved to a different city, met new people and was able to fall in love again.",Author-Independent Ambiguous,1,relief,relief,1.0
+41311,neutral,,I signed a lease to our house just before we became homeless.,Author-Independent Ambiguous,1,sadness,sadness,1.0
+41378,neutral,,I knew I needed to put my dog Holly to sleep. It was awful but I knew it was the right thing to do to stop her suffering she looked so ... most of the time.,Unambiguous,1,sadness,sadness,1.0
+41415,neutral,,I felt ... when I was laid off from a job I had just started and was excited for.,Author-Independent Ambiguous,1,pride,pride,1.0
+41548,neutral,,I felt ... when my boyfriend found out that I had a secret Tinder (dating app) profile and had used it during our relationship.,Author-Relevant Ambiguous,1,guilt,guilt,1.0
+41581,neutral,,aborted my baby,Author-Relevant Ambiguous,1,guilt,guilt,1.0
+41600,neutral,,my family told me I was sinning and going against God's will by dating someone outside of the church.,Author-Relevant Ambiguous,1,shame,shame,1.0
+41606,neutral,,"I did not stand up for my friend when I knew she was in the right. However, I didnt know how to handle the situation. In hindsight, i let her down.",Author-Relevant Ambiguous,1,guilt,guilt,1.0
+41629,neutral,,My football team won,Author-Relevant Ambiguous,1,pride,pride,1.0
+41641,neutral,,A time o felt ... is when my mom and friends planned a ... bday party for my 17th bday.,Unambiguous,1,sadness,sadness,1.0
+41660,neutral,,my friends asked me to be maid of honour,Author-Relevant Ambiguous,1,trust,trust,1.0
+41671,neutral,,I felt ... when I had won the first woman's greco roman style wrestling match in my countries province. I was not told before hand that the tournament I was wrestling at was going to be the first to offer this style of wrestling to women. I was just the first match that was up and I won.,Author-Relevant Ambiguous,1,pride,pride,1.0
+41688,neutral,,my friend came out as gay to me,Unambiguous,1,disgust,disgust,1.0
+41722,neutral,,"I felt ... when I was able to hold hands with and kiss my girlfriend in public and not feel any shame, despite growing up in an extremely homophobic environment.",Author-Relevant Ambiguous,1,shame,shame,1.0
+41744,neutral,,I read that someone prominent in my workplace announced he was leaving.,Author-Relevant Ambiguous,1,joy,joy,1.0
+41759,neutral,,I got stood up on a date,Author-Relevant Ambiguous,1,sadness,sadness,1.0
+41789,neutral,,"4 years ago i had open heart surgery done.  I was new to the hospital and knew none of the doctors or nurses, even though I did not know the surgeon I implicitly ... him and his decisions.",Unambiguous,1,trust,trust,1.0
+41791,neutral,,"I felt complete ... when I learnt that a colleague of mine defended my reputation in my absence. While some people were trying to defame me, my colleague in a question, took it upon himself to defend my honor and reputation. I was elated when I got wind of it and knew then that this was someone I could really ....",Author-Independent Ambiguous,1,joy,joy,1.0
+41795,neutral,,I felt ... when I was voted class president,Author-Independent Ambiguous,1,surprise,surprise,1.0
+41840,neutral,,"I felt ... when I could open up about my feelings to my significant other. Growing up, I would bottle up my feelings. As an adult, I am working toward not doing that so often.",Author-Independent Ambiguous,1,shame,shame,1.0
+41857,neutral,,I felt ... when I was applying for a promotion in work. I looked to my line manager who I ... and gave me great advice and support through the process,Author-Independent Ambiguous,1,relief,relief,1.0
+41862,neutral,,When i had to get in a strangers car because mine was stuck in the snow in the midde of the lanes.,Author-Relevant Ambiguous,1,relief,relief,1.0
+51023,neutral,,I pulled my girlfriends arm and accidentally hurt her.,Author-Independent Ambiguous,1,sadness,sadness,1.0
+51054,neutral,,"I felt ... when as a young adult I wore braces on my teeth and I hated them, even though it was my choice to get them. I was visiting my younger sister who was working overseas and we had a brilliant time together. She took lots of photos of us, had them developed (it was the 1990s!) and sent them to my family. In one picture in particular, all I could see were these awful braces. I couldn't see anything else - the fabulous place we were in, the gorgeous outfits we were wearing, how lovely our hair was as we'd treated ourselves to getting blowdries, and I wrote her the most horrible letter saying that the only reason she'd sent that photo was to prove how gorgeous she was compared to me, she knew how ugly I was and that I was sorry I'd ever visited her in the first place. To this day I still feel so awful for writing that letter. She could only see the fun time we were having - I was the one with the complex about my teeth.",Author-Relevant Ambiguous,1,guilt,guilt,1.0
+51081,neutral,,I felt ... when I fought with my friends.,Author-Relevant Ambiguous,1,sadness,sadness,1.0
+51082,neutral,,I struggle with addiction,Author-Independent Ambiguous,1,sadness,sadness,1.0
+51236,neutral,,"When it was Christmas, watching my daughter opening her presents and being with my wonderful family.",Unambiguous,1,joy,joy,1.0
+51249,neutral,,I felt ... when I became partners with my partner,Unambiguous,1,joy,joy,1.0
+51258,neutral,,I adopted my cat Sandy because she is like my child and she brings me a ton of ....,Unambiguous,1,joy,joy,1.0
+51263,neutral,,"I felt ... when I asked someone I used to work with for a date. We always got on at work and when I left I was nervous about asking her to go on a date, but when I did I felt instant ... just from the relief of worrying about it and her saying yes.",Author-Independent Ambiguous,1,joy,joy,1.0
+51275,neutral,,When I was healthy and could truly participate in fall activities.,Author-Relevant Ambiguous,1,joy,joy,1.0
+51285,neutral,,I found out that we really are going to be together forever.,Author-Independent Ambiguous,1,trust,trust,1.0
+51329,neutral,,"watching my favourite show and seeing the characters I find comfort in, because it gave me a chance to escape from reality and also a sense of not being alone",Author-Relevant Ambiguous,1,relief,relief,1.0
+51577,neutral,,i received my GCSE results.,Author-Independent Ambiguous,1,joy,joy,1.0
+51593,neutral,,At work by helping others and providing a good experience,Unambiguous,1,pride,pride,1.0
+51598,neutral,,the event was successful,Author-Relevant Ambiguous,1,relief,relief,1.0
+51632,neutral,,I received honors for my degree,Unambiguous,1,surprise,surprise,1.0
+51653,neutral,,My sons were born,Author-Relevant Ambiguous,1,pride,pride,1.0
+51688,neutral,,"I am ... of my D&D campaigns. Between myself and my friends, I am the dungeon master and designer of our tabletop games. I am ... my players enjoyed my work, they invest in the plots, feel emotion from the music and events and that they enjoy our shared story adventures",Unambiguous,1,pride,pride,1.0
+51705,neutral,,"I graduated from sixth form, with the grades that I had strived to achieve.",Author-Independent Ambiguous,1,joy,joy,1.0
+51710,neutral,,I felt ... when I graduated from school because it took many years and a lot of work to get to the point where I completed the program.,Unambiguous,1,relief,relief,1.0
+51713,neutral,,Because I'm married to a wonderful man.,Author-Independent Ambiguous,1,joy,joy,1.0
+51792,neutral,,when i succeeded at my current product development project,Unambiguous,1,joy,joy,1.0
+51835,neutral,,When my ex partner finally stopped harassing me. He would make me feel so scared that once it stopped I was so ....,Author-Independent Ambiguous,1,fear,fear,1.0
+51837,neutral,,i thought my little girl had gone missing but she was hiding,Unambiguous,1,relief,relief,1.0
+51882,neutral,,When certain committee members left the committee.,Author-Independent Ambiguous,1,sadness,sadness,1.0
+51929,neutral,,I was able to complete a task that I was having issues completing,Author-Independent Ambiguous,1,pride,pride,1.0
+51945,neutral,,A friend who had stopped talking completely for a while (health reasons) called me,Author-Independent Ambiguous,1,relief,relief,1.0
+51946,neutral,,I quit my job as a waitress at a restaurant where I felt like they didn't treat their employees with respect.,Author-Independent Ambiguous,1,relief,relief,1.0
+51953,neutral,,i had a health problem resolved,Unambiguous,1,sadness,sadness,1.0
+51962,neutral,,I finally saw my long distance partner in person after waiting 9 months.,Author-Relevant Ambiguous,1,relief,relief,1.0
+52029,neutral,,I was assigned my project of choice for my final year degree project,Unambiguous,1,joy,joy,1.0
+52046,neutral,,I lost my daughter while in a large department store and then found her safe and sound,Author-Independent Ambiguous,1,relief,relief,1.0
+52050,neutral,,our dog died of cancer suddenly a year ago.,Unambiguous,1,sadness,sadness,1.0
+52051,neutral,,my grandad passed away,Unambiguous,1,sadness,sadness,1.0
+52077,neutral,,"When my mum died of cancer four years ago, I am a parent of two young children and she was my best friend and my mum, I relied on her and confided in her, I have not got many friends or family, she gave me strength and when she passed I felt half of me past with her.",Unambiguous,1,relief,relief,1.0
+52102,neutral,,my parents were upset before my wedding,Unambiguous,1,sadness,sadness,1.0
+52157,neutral,,"I felt ... when it was during Ramadan 2020 during the pandemic. I remember hearing little conversations about my uncle (mothers brother) being ill and I'd always ask of him just to check if he was okay. My family and I had woken up at around 04:00 to pray fajr together. We'd finished praying and we were making dua as we usually do for the deceased and in general and I'm guessing my mum and dad had found out about his death earlier that morning and my mums voice just completely cracked and she broke down completely and just kept saying the words ""he's gone, (uncles name) gone"". It took me and my sister a while to process what we'd just been told and me, my mum and dad were in my parents room just crying for hours. I, personally had never really experienced death or grief in my life before, so this was the first time. Seeing my parents, especially my mum cry was ....",Unambiguous,1,sadness,sadness,1.0
+52176,neutral,,watching toy story 3 at the cenima as a grown man surrounded by children,Author-Independent Ambiguous,1,shame,shame,1.0
+52184,neutral,,I felt ... when I was rejected from a dance team after spending a year working on my dance skills.,Unambiguous,1,sadness,sadness,1.0
+52217,neutral,,my favourite serial drama comes to an end,Unambiguous,1,sadness,sadness,1.0
+52225,neutral,,my 18 year relationship was ending,Unambiguous,1,sadness,sadness,1.0
+52289,neutral,,I found out that my ex-wife was divorcing me.,Author-Independent Ambiguous,1,shame,shame,1.0
+52316,neutral,,"I had to stay overnight in a boy's bedroom when the door handle broke off, and people assumed we had been having sex.",Author-Relevant Ambiguous,1,shame,shame,1.0
+52338,neutral,,offended someone,Author-Relevant Ambiguous,1,guilt,guilt,1.0
+52365,neutral,,broke an expensive item in a shop accidently,Author-Relevant Ambiguous,1,guilt,guilt,1.0
+52369,neutral,,I DIDNT DO WELL AT WORK WHICH CAUSED A TEAM MEMBER TO BE ANNOYED,Author-Relevant Ambiguous,1,sadness,sadness,1.0
+52371,neutral,,I had to get fillings,Author-Relevant Ambiguous,1,fear,fear,1.0
+52373,neutral,,failed my piano exam,Author-Relevant Ambiguous,1,anger,anger,1.0
+52398,neutral,,i vomited at work in front of colleagues.,Unambiguous,1,disgust,disgust,1.0
+52434,neutral,,when I built my first computer,Author-Relevant Ambiguous,1,pride,pride,1.0
+52441,neutral,,When my sister shared she was pregnant,Author-Relevant Ambiguous,1,joy,joy,1.0
+52448,neutral,,my friend from a different state came to my birthday party without me knowing,Unambiguous,1,joy,joy,1.0
+52458,neutral,,"I felt ... when I received a job offer immediately after graduating college, especially because I had gone through nearly forty interviews and a hundred applications without positive results.",Author-Relevant Ambiguous,1,relief,relief,1.0
+52501,neutral,,"My partner announced she was pregnant, after many years of miscarriages this ... me because we both thought it would never happen for us.",Unambiguous,1,surprise,surprise,1.0
+52520,neutral,,when i won a £500 john lewis voucher,Author-Relevant Ambiguous,1,relief,relief,1.0
+52550,neutral,,someone named their kid after me,Author-Relevant Ambiguous,1,surprise,surprise,1.0
+52584,neutral,,my theater professor called on me to perform our exercise,Author-Relevant Ambiguous,1,trust,trust,1.0
+52591,neutral,,my wife bought me a car on my birthday,Author-Relevant Ambiguous,1,surprise,surprise,1.0
+52596,neutral,,one of my best friends came to a girlguiding meeting unexpectedly after I hadn't seen her for a couple of months,Author-Relevant Ambiguous,1,shame,shame,1.0
+52598,neutral,,I got pregnant with my son,Author-Relevant Ambiguous,1,disgust,disgust,1.0
+52614,neutral,,my boyfriend ... me with a handwritten note,Author-Independent Ambiguous,1,trust,trust,1.0
+52625,neutral,,my uncle had an argument with my cousin,Author-Relevant Ambiguous,1,sadness,sadness,1.0
+52626,neutral,,Patient accepted elaborated treatment plan easily,Author-Relevant Ambiguous,1,relief,relief,1.0
+52635,neutral,,I got a dog for my birthday,Author-Relevant Ambiguous,1,joy,joy,1.0
+52645,neutral,,I received a letter approving a visa application to migrate to Canada which was almost impossible to get from a middle eastern country,Author-Relevant Ambiguous,1,surprise,surprise,1.0
+52658,neutral,,first time me and a friend were permitted to climb alone after weeks of practice,Author-Relevant Ambiguous,1,trust,trust,1.0
+52679,neutral,,"I gave my son some rubbish to put in the bin. I was able to ... him to do this by himself, he is 3 years old .",Author-Independent Ambiguous,1,pride,pride,1.0
+52709,neutral,,Someone told me a secret,Author-Relevant Ambiguous,1,trust,trust,1.0
+52768,neutral,,when I dyed my hair blonde with highlights,Author-Relevant Ambiguous,1,joy,joy,1.0
+52777,neutral,,"An example of ... for me was in related to my education. Prior to undergrad, I had been severely behind and informed my teacher that I would need a tutor. I wanted to get one as I had an opportunity to secure one before school began, and it would be very hard for me to find one after school begun. I also knew this would be a financial investment. My teacher told me that she assured me that I would not need a tutor and she would provide all the extra help I needed. I was hesitant at first, considering she had hundreds of other students to help, but in the end, I took her advice and did not get a tutor. That class was amazing. She managed to catch me up completely wherever I needed it and dedicated lots of time for me after school. This was a time where I took a risk and ... my teacher, and this ... payed off.",Author-Independent Ambiguous,1,joy,joy,1.0
+52784,neutral,,I was confused about how my partner was treating me and so I went to a friend who I thought could help and she really listened to me and provided me with good advice.,Author-Relevant Ambiguous,1,relief,relief,1.0
+52822,neutral,,"I was diagnosed with a rare blood disease and had to see a specialist. His knowledge and expertise in a field that most doctors I had encountered before knew nothing about, made me ... him greatly.",Unambiguous,1,trust,trust,1.0
+52823,neutral,,My baby was born and I felt a ... for my husband I had never felt before when he first held her whilst I was still beingClosed up where I knew he would always keep her and the rest of our family safe,Author-Independent Ambiguous,1,trust,trust,1.0
+52828,neutral,,I felt ... when the gym staff were actively checking for covid vax documents and proper ID.,Author-Relevant Ambiguous,1,surprise,surprise,1.0
+52829,neutral,,I got too drunk and my friend brought me home in an uber and fed me and put me to bed,Author-Relevant Ambiguous,1,trust,trust,1.0
+52833,neutral,,I was playing in a team game and had to ... my team mates.,Unambiguous,1,pride,pride,1.0
+52859,neutral,,My manager told me during performance reviews that I was selling myself short and she would be advocating harder on my behalf.,Author-Relevant Ambiguous,1,joy,joy,1.0
+52860,neutral,,when being told a piece of deeply personal information because it was not something shared with just anyone,Unambiguous,1,disgust,disgust,1.0
+52866,neutral,,I heard my mom giving my aunt hell for treating me crappy. I knew i could ... my mom to stand up for me,Author-Relevant Ambiguous,1,joy,joy,1.0
+52895,neutral,,"a client of mine paid me upfront for a project which i never ask clients to do that, but he did it and i had a big massive ... that made my day.",Author-Relevant Ambiguous,1,joy,joy,1.0
+61021,neutral,,found out I didn't get a promotion,Author-Relevant Ambiguous,1,anger,anger,1.0
+61031,neutral,,my husband is always there for me and i can ... that no matter what he will be there for our child and do what ittakes to provide for us as a family,Unambiguous,1,pride,pride,1.0
+61055,neutral,,When I went to a teacher about a problem I had,Author-Relevant Ambiguous,1,trust,trust,1.0
+61071,neutral,,My friend needed support to manage her money so she gave me control of her bank accounts,Unambiguous,1,trust,trust,1.0
+61094,neutral,,I felt ... when I moved to a new country with my partner.,Author-Independent Ambiguous,1,joy,joy,1.0
+61099,neutral,,"I was on a zip-line and it malfunctioned just as I stepped off the platform, and I was hanging for a couple of moments 20ft above very shallow water. My sister reached across and pulled me back, and I had to ... that she'd be able to hold my weight and not drop me.",Unambiguous,1,trust,trust,1.0
+61101,neutral,,My mother helped me bake bread. I'd know idea what I was doing,Author-Relevant Ambiguous,1,joy,joy,1.0

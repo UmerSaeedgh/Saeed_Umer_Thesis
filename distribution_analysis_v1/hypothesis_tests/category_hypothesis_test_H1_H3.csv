@@ -1,0 +1,7 @@
+source,comparison,u_stat,p_raw,cliffs_delta,p_holm,kruskal_wallis_stat,kruskal_wallis_p,trend_test_J,trend_test_p
+"HUMAN (text-level, primary/confirmatory)",Unambiguous vs Author-Independent Ambiguous,3915.0,0.0076903366390150725,-0.217,0.015380673278030145,22.59632986608658,1.239565025173809e-05,18859.5,9.999000099990002e-05
+"HUMAN (text-level, primary/confirmatory)",Author-Independent Ambiguous vs Author-Relevant Ambiguous,4146.5,0.03563435274294143,-0.1707,0.03563435274294143,22.59632986608658,1.239565025173809e-05,18859.5,9.999000099990002e-05
+"HUMAN (text-level, primary/confirmatory)",Unambiguous vs Author-Relevant Ambiguous,3079.0,2.303366179089582e-06,-0.3842,6.910098537268746e-06,22.59632986608658,1.239565025173809e-05,18859.5,9.999000099990002e-05
+"LLM (text-level, averaged across configs, secondary/exploratory)",Unambiguous vs Author-Independent Ambiguous,3698.5,0.0014023753921297692,-0.2603,0.0014023753921297692,71.80255517088408,2.5601962160856133e-16,22001.5,9.999000099990002e-05
+"LLM (text-level, averaged across configs, secondary/exploratory)",Author-Independent Ambiguous vs Author-Relevant Ambiguous,2449.5,4.606973143195055e-10,-0.5101,9.21394628639011e-10,71.80255517088408,2.5601962160856133e-16,22001.5,9.999000099990002e-05
+"LLM (text-level, averaged across configs, secondary/exploratory)",Unambiguous vs Author-Relevant Ambiguous,1850.5,1.2349989138447684e-14,-0.6299,3.704996741534305e-14,71.80255517088408,2.5601962160856133e-16,22001.5,9.999000099990002e-05

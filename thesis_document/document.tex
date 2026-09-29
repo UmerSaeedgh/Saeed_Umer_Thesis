@@ -1,0 +1,128 @@
+% ---------------------------------------------
+% Header
+% ---------------------------------------------
+\input{header}
+\usepackage{soul}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{listings}
+\usepackage{xcolor}
+\sethlcolor{yellow}
+
+\begin{document}
+\selectlanguage{english}
+
+% ----------------------------------------------
+% Commands
+% ----------------------------------------------
+
+% Cursive Citations
+\let\origquote\quote
+\let\endorigquote\endquote
+\renewenvironment{quote}{
+  \itshape
+  \origquote
+}
+{\endorigquote}
+
+
+% -----------------------------------------------
+% Title
+% -----------------------------------------------
+
+\include{title}
+
+% -----------------------------------------------
+% Abstract
+% -----------------------------------------------
+
+ \pagestyle{empty}
+\include{content/abstract}
+% \cleardoublepage
+
+% -----------------------------------------------
+% Table of Content
+% -----------------------------------------------
+
+\pagestyle{ihv}
+
+\addtocontents{toc}{\protect\enlargethispage{2\normalbaselineskip}}
+\singlespacing
+
+\tableofcontents
+
+\onehalfspacing
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+
+% \cleardoublepage
+
+\let\cleardoublepage\clearpage
+
+% ---------------------------------------------
+% Table References
+% ---------------------------------------------
+
+\clearpage
+\pagestyle{lot}
+\listoftables
+%\addcontentsline{toc}{chapter}{List of Table}
+\newpage
+
+% ---------------------------------------------
+% Figure References
+% ---------------------------------------------
+
+\pagestyle{abv}
+\listoffigures
+% \addcontentsline{toc}{chapter}{List of Figures}
+
+% ---------------------------------------------
+% List of Abbreviations
+% ---------------------------------------------
+
+\pagestyle{akv}
+ \input{shortcuts}
+%\addcontentsline{toc}{chapter}{List of Abbreviations}
+\clearpage
+
+
+% ----------------------------------------------
+% Thesis Content
+% ----------------------------------------------
+
+\pagestyle{normal}
+\pagenumbering{arabic}
+\onehalfspacing
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+\include{content/intro}
+\include{content/literature}
+\include{content/methodology}
+\include{content/implementation}
+\include{content/result}
+\include{content/discussion}
+\include{content/conclusion}
+
+
+
+% ---------------------------------------------
+% References
+% ---------------------------------------------
+
+\pagestyle{bib}
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+
+
+% ---------------------------------------------
+% Declaration of Independence
+% ---------------------------------------------
+
+\input{consent}
+%\cleardoublepage
+
+\end{document}

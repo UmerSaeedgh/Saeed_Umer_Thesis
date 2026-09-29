@@ -1,0 +1,301 @@
+text_id,category,tv_distance
+21,Author-Relevant Ambiguous,0.25119047619047613
+2105,Author-Relevant Ambiguous,0.5357142857142857
+2142,Author-Independent Ambiguous,0.035714285714285705
+2143,Unambiguous,0.3452380952380952
+2161,Author-Independent Ambiguous,0.3095238095238095
+2163,Unambiguous,0.0
+2168,Author-Relevant Ambiguous,0.5
+2172,Author-Relevant Ambiguous,0.15476190476190474
+2182,Author-Relevant Ambiguous,0.1547619047619047
+2187,Author-Relevant Ambiguous,0.17857142857142852
+2198,Author-Relevant Ambiguous,0.36904761904761907
+2211,Unambiguous,0.5666666666666667
+2212,Author-Relevant Ambiguous,0.1309523809523809
+2213,Author-Relevant Ambiguous,0.11904761904761901
+2218,Author-Relevant Ambiguous,0.5238095238095237
+2224,Author-Relevant Ambiguous,0.11904761904761901
+2228,Author-Independent Ambiguous,0.3452380952380952
+249,Author-Independent Ambiguous,0.0
+253,Author-Relevant Ambiguous,0.6706349206349206
+272,Author-Independent Ambiguous,0.1309523809523809
+276,Author-Independent Ambiguous,0.0
+281,Author-Independent Ambiguous,0.10317460317460315
+287,Unambiguous,0.0
+31015,Unambiguous,0.023809523809523798
+31060,Unambiguous,0.0
+3107,Author-Independent Ambiguous,0.19047619047619044
+31077,Unambiguous,0.0
+31089,Unambiguous,0.13095238095238093
+31147,Author-Relevant Ambiguous,0.19047619047619044
+31154,Author-Relevant Ambiguous,0.14880952380952375
+3117,Author-Relevant Ambiguous,0.119047619047619
+31177,Author-Independent Ambiguous,0.0714285714285714
+31179,Author-Independent Ambiguous,0.15476190476190474
+3118,Unambiguous,0.0357142857142857
+31181,Author-Relevant Ambiguous,0.3095238095238095
+31207,Author-Relevant Ambiguous,0.4166666666666667
+31234,Author-Relevant Ambiguous,0.26190476190476186
+31292,Unambiguous,0.08333333333333331
+31313,Author-Relevant Ambiguous,0.35714285714285715
+31317,Author-Relevant Ambiguous,0.35714285714285704
+31346,Author-Relevant Ambiguous,0.0833333333333333
+31378,Author-Relevant Ambiguous,0.19047619047619047
+31387,Author-Relevant Ambiguous,0.23809523809523805
+31398,Author-Relevant Ambiguous,0.3452380952380952
+315,Unambiguous,0.0833333333333333
+3267,Author-Independent Ambiguous,0.011904761904761899
+3283,Author-Independent Ambiguous,0.1805555555555555
+3290,Author-Relevant Ambiguous,0.17857142857142852
+3292,Unambiguous,0.061507936507936484
+3319,Author-Independent Ambiguous,0.13293650793650788
+3328,Unambiguous,0.0
+3338,Author-Independent Ambiguous,0.3095238095238095
+3339,Author-Independent Ambiguous,0.16666666666666663
+3344,Unambiguous,0.0357142857142857
+3348,Author-Relevant Ambiguous,0.14682539682539678
+3370,Author-Independent Ambiguous,0.0
+340,Unambiguous,0.0
+3426,Unambiguous,0.023809523809523798
+3431,Unambiguous,0.011904761904761899
+3443,Unambiguous,0.21428571428571427
+3469,Unambiguous,0.0
+3481,Author-Independent Ambiguous,0.0357142857142857
+3493,Author-Independent Ambiguous,0.09523809523809519
+3514,Author-Independent Ambiguous,0.20238095238095236
+3528,Author-Relevant Ambiguous,0.15277777777777776
+3538,Author-Relevant Ambiguous,0.24999999999999997
+3579,Author-Relevant Ambiguous,0.43650793650793646
+3618,Author-Relevant Ambiguous,0.36904761904761907
+3620,Unambiguous,0.4523809523809524
+3639,Author-Independent Ambiguous,0.2436507936507936
+3641,Author-Relevant Ambiguous,0.4166666666666667
+3645,Author-Independent Ambiguous,0.119047619047619
+3649,Author-Independent Ambiguous,0.14285714285714282
+378,Author-Relevant Ambiguous,0.07142857142857141
+3833,Author-Independent Ambiguous,0.19404761904761902
+3857,Unambiguous,0.09126984126984126
+3864,Author-Independent Ambiguous,0.22619047619047614
+387,Unambiguous,0.4226190476190476
+3936,Author-Independent Ambiguous,0.7718253968253967
+3937,Unambiguous,0.27777777777777773
+3942,Unambiguous,0.15476190476190474
+3964,Author-Independent Ambiguous,0.0357142857142857
+3966,Unambiguous,0.22063492063492063
+3975,Author-Relevant Ambiguous,0.4166666666666667
+41082,Unambiguous,0.04761904761904761
+4117,Author-Independent Ambiguous,0.07142857142857141
+41208,Author-Independent Ambiguous,0.05952380952380951
+41228,Unambiguous,0.2738095238095238
+41239,Unambiguous,0.0
+41260,Author-Independent Ambiguous,0.11904761904761903
+41311,Author-Independent Ambiguous,0.17857142857142852
+41378,Unambiguous,0.0
+414,Author-Independent Ambiguous,0.08333333333333331
+41415,Author-Independent Ambiguous,0.2023809523809524
+4146,Unambiguous,0.1071428571428571
+4150,Unambiguous,0.17857142857142852
+41548,Author-Relevant Ambiguous,0.19047619047619044
+41581,Author-Relevant Ambiguous,0.375
+41600,Author-Relevant Ambiguous,0.4047619047619047
+41606,Author-Relevant Ambiguous,0.0595238095238095
+41629,Author-Relevant Ambiguous,0.20238095238095233
+41641,Unambiguous,0.19047619047619044
+41660,Author-Relevant Ambiguous,0.5119047619047619
+41671,Author-Relevant Ambiguous,0.14285714285714282
+41688,Unambiguous,0.4047619047619047
+41722,Author-Relevant Ambiguous,0.24999999999999997
+41744,Author-Relevant Ambiguous,0.3095238095238095
+41759,Author-Relevant Ambiguous,0.2380952380952381
+41789,Unambiguous,0.0714285714285714
+41791,Author-Independent Ambiguous,0.1071428571428571
+41795,Author-Independent Ambiguous,0.23809523809523805
+41840,Author-Independent Ambiguous,0.20238095238095233
+41857,Author-Independent Ambiguous,0.1071428571428571
+41862,Author-Relevant Ambiguous,0.3452380952380952
+437,Unambiguous,0.0595238095238095
+4387,Author-Independent Ambiguous,0.16666666666666663
+441,Author-Relevant Ambiguous,0.3333333333333333
+4410,Author-Independent Ambiguous,0.13095238095238093
+4431,Unambiguous,0.0357142857142857
+4454,Unambiguous,0.0
+4490,Unambiguous,0.023809523809523798
+4497,Unambiguous,0.5119047619047619
+4510,Author-Independent Ambiguous,0.3507936507936507
+4519,Unambiguous,0.4146825396825397
+4571,Author-Relevant Ambiguous,0.48214285714285715
+4573,Author-Relevant Ambiguous,0.3442460317460317
+458,Unambiguous,0.14285714285714282
+4592,Author-Relevant Ambiguous,0.3928571428571428
+4594,Author-Independent Ambiguous,0.1577380952380952
+4609,Author-Independent Ambiguous,0.011904761904761899
+4636,Author-Independent Ambiguous,0.047619047619047596
+4671,Author-Independent Ambiguous,0.04761904761904761
+476,Author-Independent Ambiguous,0.0595238095238095
+481,Unambiguous,0.0
+4817,Author-Independent Ambiguous,0.21428571428571427
+4868,Author-Independent Ambiguous,0.07142857142857141
+4874,Unambiguous,0.119047619047619
+494,Author-Independent Ambiguous,0.20238095238095233
+51023,Author-Independent Ambiguous,0.0
+5105,Author-Relevant Ambiguous,0.11507936507936502
+51054,Author-Relevant Ambiguous,0.16666666666666663
+51081,Author-Relevant Ambiguous,0.49999999999999994
+51082,Author-Independent Ambiguous,0.17857142857142852
+51236,Unambiguous,0.0
+51249,Unambiguous,0.2738095238095238
+51258,Unambiguous,0.25
+51263,Author-Independent Ambiguous,0.0714285714285714
+51275,Author-Relevant Ambiguous,0.22619047619047616
+51285,Author-Independent Ambiguous,0.0
+5130,Author-Independent Ambiguous,0.119047619047619
+51329,Author-Relevant Ambiguous,0.20238095238095233
+51577,Author-Independent Ambiguous,0.3095238095238095
+51593,Unambiguous,0.16666666666666666
+51598,Author-Relevant Ambiguous,0.3214285714285714
+51632,Unambiguous,0.09523809523809519
+51653,Author-Relevant Ambiguous,0.07142857142857141
+5166,Unambiguous,0.11904761904761903
+51688,Unambiguous,0.0357142857142857
+51705,Author-Independent Ambiguous,0.0595238095238095
+51710,Unambiguous,0.0357142857142857
+51713,Author-Independent Ambiguous,0.023809523809523798
+51792,Unambiguous,0.11904761904761903
+51835,Author-Independent Ambiguous,0.047619047619047596
+51837,Unambiguous,0.20238095238095233
+51882,Author-Independent Ambiguous,0.47420634920634924
+51929,Author-Independent Ambiguous,0.15476190476190474
+51945,Author-Independent Ambiguous,0.19047619047619047
+51946,Author-Independent Ambiguous,0.0595238095238095
+51953,Unambiguous,0.0357142857142857
+51962,Author-Relevant Ambiguous,0.09523809523809519
+52029,Unambiguous,0.23809523809523805
+52046,Author-Independent Ambiguous,0.0
+52050,Unambiguous,0.0
+52051,Unambiguous,0.0
+5206,Author-Independent Ambiguous,0.35714285714285715
+52077,Unambiguous,0.0
+521,Author-Independent Ambiguous,0.13888888888888887
+52102,Unambiguous,0.1726190476190476
+52157,Unambiguous,0.0
+52176,Author-Independent Ambiguous,0.3194444444444444
+52184,Unambiguous,0.10714285714285714
+52217,Unambiguous,0.0
+52225,Unambiguous,0.0
+5225,Author-Independent Ambiguous,0.119047619047619
+52289,Author-Independent Ambiguous,0.0595238095238095
+52316,Author-Relevant Ambiguous,0.08531746031746028
+52338,Author-Relevant Ambiguous,0.34722222222222215
+52365,Author-Relevant Ambiguous,0.15079365079365073
+52369,Author-Relevant Ambiguous,0.119047619047619
+52371,Author-Relevant Ambiguous,0.5515873015873015
+52373,Author-Relevant Ambiguous,0.09523809523809519
+52398,Unambiguous,0.11507936507936505
+52434,Author-Relevant Ambiguous,0.3095238095238095
+52441,Author-Relevant Ambiguous,0.48809523809523814
+52448,Unambiguous,0.2857142857142857
+52458,Author-Relevant Ambiguous,0.119047619047619
+525,Author-Independent Ambiguous,0.0
+52501,Unambiguous,0.0833333333333333
+52520,Author-Relevant Ambiguous,0.13095238095238093
+52550,Author-Relevant Ambiguous,0.42857142857142855
+52584,Author-Relevant Ambiguous,0.7083333333333334
+52591,Author-Relevant Ambiguous,0.11904761904761903
+52596,Author-Relevant Ambiguous,0.46428571428571425
+52598,Author-Relevant Ambiguous,0.5357142857142857
+52614,Author-Independent Ambiguous,0.17063492063492058
+52625,Author-Relevant Ambiguous,0.33928571428571425
+52626,Author-Relevant Ambiguous,0.24999999999999997
+52635,Author-Relevant Ambiguous,0.48809523809523814
+52645,Author-Relevant Ambiguous,0.23809523809523805
+52658,Author-Relevant Ambiguous,0.3095238095238095
+52679,Author-Independent Ambiguous,0.1071428571428571
+52709,Author-Relevant Ambiguous,0.40039682539682536
+52768,Author-Relevant Ambiguous,0.6884920634920634
+52777,Author-Independent Ambiguous,0.22619047619047614
+52784,Author-Relevant Ambiguous,0.11904761904761901
+52822,Unambiguous,0.0357142857142857
+52823,Author-Independent Ambiguous,0.09523809523809519
+52828,Author-Relevant Ambiguous,0.35714285714285704
+52829,Author-Relevant Ambiguous,0.3611111111111111
+52833,Unambiguous,0.5813492063492063
+52859,Author-Relevant Ambiguous,0.45238095238095233
+52860,Unambiguous,0.34920634920634913
+52866,Author-Relevant Ambiguous,0.26190476190476186
+52895,Author-Relevant Ambiguous,0.011904761904761899
+5502,Unambiguous,0.07738095238095237
+553,Author-Independent Ambiguous,0.047619047619047596
+5575,Author-Relevant Ambiguous,0.14285714285714282
+5580,Unambiguous,0.0
+5600,Author-Independent Ambiguous,0.11706349206349204
+5609,Author-Relevant Ambiguous,0.0
+5639,Author-Relevant Ambiguous,0.17857142857142852
+5641,Author-Independent Ambiguous,0.0833333333333333
+5642,Author-Relevant Ambiguous,0.09523809523809523
+5680,Unambiguous,0.14285714285714282
+5688,Author-Independent Ambiguous,0.48214285714285715
+5691,Author-Independent Ambiguous,0.21428571428571427
+5704,Unambiguous,0.3055555555555555
+5720,Author-Independent Ambiguous,0.0
+5725,Author-Independent Ambiguous,0.09523809523809522
+5730,Unambiguous,0.0
+5802,Author-Independent Ambiguous,0.09722222222222217
+5830,Unambiguous,0.0
+5856,Unambiguous,0.0833333333333333
+588,Author-Independent Ambiguous,0.0833333333333333
+5880,Unambiguous,0.035714285714285705
+5914,Unambiguous,0.1309523809523809
+594,Author-Independent Ambiguous,0.011904761904761899
+5951,Author-Independent Ambiguous,0.28333333333333327
+5986,Unambiguous,0.0357142857142857
+61021,Author-Relevant Ambiguous,0.3452380952380952
+61031,Unambiguous,0.14285714285714282
+61055,Author-Relevant Ambiguous,0.5119047619047619
+61071,Unambiguous,0.22619047619047614
+61094,Author-Independent Ambiguous,0.30357142857142855
+61099,Unambiguous,0.28571428571428564
+61101,Author-Relevant Ambiguous,0.625
+612,Unambiguous,0.19047619047619047
+6218,Author-Relevant Ambiguous,0.19047619047619047
+6221,Author-Independent Ambiguous,0.0
+6228,Unambiguous,0.0
+623,Author-Independent Ambiguous,0.14087301587301584
+6288,Unambiguous,0.0
+6304,Author-Independent Ambiguous,0.13888888888888884
+6306,Author-Independent Ambiguous,0.05158730158730155
+6337,Author-Relevant Ambiguous,0.5297619047619048
+6403,Author-Independent Ambiguous,0.3928571428571428
+6407,Author-Relevant Ambiguous,0.0357142857142857
+641,Unambiguous,0.011904761904761899
+6440,Unambiguous,0.0
+6450,Author-Independent Ambiguous,0.32936507936507936
+6499,Author-Independent Ambiguous,0.14285714285714282
+6524,Unambiguous,0.0
+657,Author-Independent Ambiguous,0.2424603174603174
+6649,Author-Independent Ambiguous,0.09523809523809519
+6696,Author-Independent Ambiguous,0.09523809523809519
+6732,Unambiguous,0.0
+6761,Unambiguous,0.0714285714285714
+6768,Unambiguous,0.0
+6789,Unambiguous,0.10714285714285714
+6804,Author-Independent Ambiguous,0.20238095238095233
+6829,Unambiguous,0.0
+6848,Unambiguous,0.0
+6869,Author-Independent Ambiguous,0.14285714285714282
+6938,Author-Relevant Ambiguous,0.14285714285714282
+6957,Author-Independent Ambiguous,0.0
+6997,Unambiguous,0.21428571428571427
+7134,Unambiguous,0.07142857142857141
+7147,Author-Independent Ambiguous,0.15476190476190474
+7160,Author-Relevant Ambiguous,0.2559523809523809
+7164,Unambiguous,0.0
+7179,Author-Independent Ambiguous,0.369047619047619
+7180,Author-Independent Ambiguous,0.25
+7193,Unambiguous,0.0
+7198,Author-Relevant Ambiguous,0.6666666666666666
+7200,Author-Relevant Ambiguous,0.18055555555555555
+762,Unambiguous,0.0
+783,Unambiguous,0.0833333333333333
+825,Author-Relevant Ambiguous,0.5198412698412698
+922,Author-Independent Ambiguous,0.20238095238095233
+99,Author-Relevant Ambiguous,0.2976190476190476

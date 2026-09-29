@@ -1,0 +1,16 @@
+config_a,config_b,wilcoxon_stat,p_raw,p_holm
+few_shot__inline,few_shot__numbered,8956.0,0.4463445976433964,1.0
+few_shot__inline,one_shot__inline,9900.5,0.509981960450329,1.0
+few_shot__inline,one_shot__numbered,9525.0,0.38121642829480573,1.0
+few_shot__inline,zero_shot__inline,10197.0,0.75941450538817,1.0
+few_shot__inline,zero_shot__numbered,10700.0,0.5091925199368864,1.0
+few_shot__numbered,one_shot__inline,9132.0,0.5113663631741896,1.0
+few_shot__numbered,one_shot__numbered,8711.0,0.5492074521859964,1.0
+few_shot__numbered,zero_shot__inline,9785.5,0.4265528821969431,1.0
+few_shot__numbered,zero_shot__numbered,8171.0,0.07865703519925596,1.0
+one_shot__inline,one_shot__numbered,9844.0,0.993562713879066,1.0
+one_shot__inline,zero_shot__inline,11395.5,0.9058456679232576,1.0
+one_shot__inline,zero_shot__numbered,10276.0,0.11580784513593088,1.0
+one_shot__numbered,zero_shot__inline,12114.0,0.9652546232512679,1.0
+one_shot__numbered,zero_shot__numbered,9043.0,0.11690572719304869,1.0
+zero_shot__inline,zero_shot__numbered,7705.5,0.11363380655549288,1.0

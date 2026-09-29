@@ -1,0 +1,484 @@
+\chapter{Implementation}
+\label{c:implementation}
+
+\noindent
+This chapter documents the entire analytical pipeline, from prompt construction to the statistical
+procedures that underpin each hypothesis test. The aim is reproducibility, so every
+transformation applied to the data is explained, along with the decision made wherever more than
+one treatment was defensible.
+
+The pipeline has five stages. Prompts are constructed and models are queried
+(Section~\ref{impl:prompts}); human annotations are gathered under the same materials
+(Section~\ref{impl:human}); every judgment, human and model alike, is converted into an
+eleven-dimensional probability vector (Section~\ref{impl:vectors}); metrics of shift are derived
+from those vectors (Section~\ref{impl:metrics}); and a quality-control gate
+(Section~\ref{impl:qc}) must be passed before any inferential statistic is calculated
+(Section~\ref{impl:stats}).
+
+\section{Prompt Construction and Model Evaluation}
+\label{impl:prompts}
+
+\subsection{Stimulus Construction}
+\label{impl:stimulus}
+
+\noindent
+Each stimulus consists of the unmodified text followed by an optional author cue, in the fixed
+format \texttt{"Text: \{text\}"} for the neutral condition and \texttt{"Text: \{text\}\textbackslash
+nAuthor: \{cue\}"} for the other three, where \texttt{\{cue\}} is the literal string
+\texttt{"a person"} for the generic human condition and the assigned persona description for the
+two persona conditions. All four framing conditions keep the text byte-identical; only the cue,
+and whether it appears at all, varies.
+
+One property of the source corpus had to be fixed during implementation. crowd-enVent texts were
+elicited using the frame \emph{``I felt [emotion] when\slash that\slash if\ldots''}, and in some
+texts the author's own emotion word was still present in the stimulus. A text like this gives its
+own answer away. In every affected text, the emotion word was redacted and replaced with an
+ellipsis, which keeps the sentence structure but removes the answer. Section~\ref{impl:leak}
+documents how the issue was detected and corrected after an initial round of model collection.
+
+\subsection{Model Selection}
+\label{impl:models}
+
+\noindent
+Seven large language models were tested, spanning proprietary, commercial and open-weight
+systems: \textbf{OpenAI}, \textbf{Claude}, \textbf{Gemini}, \textbf{Qwen3}, \textbf{Gemma3},
+\textbf{Ministral} and \textbf{Llama 3.1}. Proprietary and commercial models were queried through
+their respective APIs; open-weight models were run locally through Ollama. The shared collection
+script also supported a Moonshot Kimi~K3 endpoint as a fourth proprietary/commercial option, but
+no Kimi~K3 output was generated or retained: the corresponding
+\texttt{KimiK3\_label}\slash\texttt{KimiK3\_reason} columns are empty across all 7{,}200 rows of the
+raw result files, and a dedicated quality-control check confirms Kimi~K3 has no normalised-label
+column and is correctly absent from the seven-model set analysed throughout this thesis.
+
+\textbf{Recovered model identifiers.} The defaults set in the collection scripts (not recorded
+per-row in the result files themselves, so recovered from the scripts and their run logs rather
+than from the data) give: \texttt{gpt-5-nano} (OpenAI), \texttt{claude-haiku-4-5-20251001}
+(Claude), \texttt{gemini-3.6-flash} (Gemini), \texttt{qwen3:8b}, \texttt{gemma3:4b},
+\texttt{ministral-3:8b} and \texttt{llama3.1:8b} (open-weight, via Ollama). No explicit
+temperature, top-$p$, or other decoding parameter was set for any model, so each used its
+provider's or Ollama's own default, which is not separately recorded and cannot be recovered.
+Collection dates can only be reconstructed partially: run logs of the open-weight models date
+their collection to early September 2026 (specifically 2026-09-03 to 2026-09-04); no equivalent
+timestamped log was found for the proprietary and commercial models' collection runs. These
+identifiers are the defaults actually present in the scripts that produced this data; they are
+not independently confirmed against a per-response API version field, since none was retained.
+
+The proposal required three systems; seven were used because of RQ2. What one model shows as a
+framing effect could be an artefact of a single training pipeline, but an effect that replicates
+across seven independently developed systems is far less plausibly attributed to any single one
+of them.
+
+\subsection{Prompt Configurations}
+\label{impl:configs}
+
+\noindent
+Six prompt configurations were used, formed by crossing three prompt variants with two label
+formats:
+
+\begin{itemize}
+    \item \textbf{Variants:} zero-shot, one-shot, few-shot.
+    \item \textbf{Label formats:} the eleven emotions presented as a numbered list, or embedded
+    inline in the question.
+\end{itemize}
+
+\noindent
+Each model answered every (text, framing) pair once under each configuration, giving
+$300 \times 4 \times 3 \times 2 = 7{,}200$ cells per model-ensemble position. Configurations are
+\textbf{never pooled at the level of raw responses}. Where an aggregate across configurations is
+given, each configuration's results are calculated independently first and then averaged, so that
+no analysis treats six correlated observations of one text as six independent observations.
+
+\subsection{Response Normalisation and Off-List Answers}
+\label{impl:normalisation}
+
+\noindent
+Models were instructed to return exactly one emotion from the fixed set of eleven, and not every
+response did. Two kinds of non-compliance were handled explicitly.
+
+\textbf{Formatting variation}, answers that differ only in case, whitespace, or surrounding
+punctuation, were normalised to the canonical label.
+
+\textbf{Off-list answers}, where the respondent named an emotion outside the eleven, such as
+\emph{anxiety}, \emph{disappointment}, or \emph{frustration}, were \textbf{excluded} rather than
+mapped onto the nearest in-set label. Mapping would mean deciding which of the eleven a given
+synonym corresponds to, and that decision would itself be an interpretive judgment inserted into
+the data by the analyst. Exclusion is the conservative choice: it shrinks the effective ensemble
+for the affected cell instead of inventing a vote.
+
+Off-list rates differ substantially by model and are reported in Section~\ref{res:offlist}. The
+present analysis does not record any synonym-mapping sensitivity result; whether the exclude-only
+policy affects a specific conclusion remains untested here.
+
+\subsection{A Data-Quality Correction Made During Analysis}
+\label{impl:leak}
+
+\noindent
+Corrections made partway through the study are documented, rather than presenting the corrected
+data as though it had always existed. The emotion-word leak described in
+Section~\ref{impl:stimulus} was caught and fixed on two separate occasions with different scopes.
+Both are described below, not only the more visible second one.
+
+\textbf{First round.} An early audit of the stimulus texts identified 401 candidate texts still
+carrying the author's emotion word, of which 102 fell inside the 300-text sample (78 corrected in
+place, 24 replaced outright because a clean substitute was not otherwise available). The model
+side was fully re-run against the corrected corpus. Since the human side had already been
+annotated for 78 of those 102 texts before the fix, those human ratings answered a stimulus that
+no longer existed; they were discarded and re-collected, together with the human annotations for
+the 24 replacement texts, in a dedicated collection round. The same round also collected the
+study's first human ratings for the neutral condition, which up to that point had been supplied
+by reusing the original corpus's five-reader labels, a different, disjoint rater pool from the
+persona conditions. All of this, 900 human vectors across three framings, each now from data
+collected specifically for the post-correction 300-text sample, was in place before the second
+round began.
+
+\textbf{Second round.} After an initial round of \emph{model} collection against that corrected
+corpus, a further 49 of the 300 texts (16.3\%) were found to still retain the author's emotion word
+in the model stimulus, and the same texts additionally carried an outdated persona pair from an
+earlier design revision. The corrected wording existed in the master sampling file but had never
+been propagated into the model prompt files for that batch. This is a distinct error from the
+first round rather than a repetition of it: it affected the \emph{model} prompt files
+specifically, was not identified until the human side described above was already complete, and
+does not claim to share a common cause with the first round beyond both having occurred within
+the same elicitation frame.
+
+The error was corrected through \textbf{full re-collection}, not through exclusion. All 1{,}176
+affected rows ($49 \text{ texts} \times 24 \text{ conditions}$) of the stimulus and both personas
+were reconstructed from the corrected master file, previous answers for those rows were discarded
+since they responded to a prompt that no longer existed, and all seven models were re-queried.
+
+The change in results was material, and that is the reason for reporting it. Model persona
+sensitivity rose from 8.7\% to 11.3\% on unambiguous texts and from 12.2\% to 14.8\% on
+author-independent texts, while author-relevant texts, of which only nine were affected, shifted
+only marginally. The size of this change follows the number of affected texts per category,
+consistent with the correction having removed a suppressing artefact. This round,
+however, altered two things at once for the affected 49 texts, both the leaked emotion word and
+the persona pair itself, so the rise cannot be credited to removing the leak alone. Some or all of
+it may instead reflect the updated persona pairs being more effective manipulations than the
+outdated ones they replaced. No hypothesis verdict changed qualitatively.
+
+\section{Human Annotation Study}
+\label{impl:human}
+
+\noindent
+Human annotators saw the same texts, the same eleven-label set and the same author cues as the
+models, so both sides were responding to materially identical stimuli.
+
+Each (text, framing) pair was annotated several times by independent annotators, with the aim of
+three annotators per cell; some cells had more. As the approved proposal specified,
+\textbf{no annotator read the same text more than once}. A participant who rated a text under
+one framing never saw that text under a different framing.
+
+The statistical treatment in Section~\ref{impl:stats} rests on this property. Since the
+conditions of a given text were rated by disjoint sets of individuals, there is no
+individual-level pairing across conditions to preserve. The comparison is therefore
+\textbf{between-subjects at the level of framing condition}. Disjoint raters are a documented
+property of the collection procedure; exchangeability under a null of no framing effect
+additionally requires that the groups assigned to each condition would, absent a framing effect,
+have produced the same distribution of judgments, which disjoint recruitment alone does not
+guarantee if allocation or the participant pool differed systematically across rounds
+(Section~\ref{impl:permutation}).
+
+The neutral condition was collected in a separate, later round from the persona conditions. Only
+vote values were stored in the analysis pipeline; respondent identifiers were not retained. The
+consequences of this for inference are stated in Section~\ref{impl:stats}.
+
+\textbf{A traceability limit in the neutral collection.} The neutral condition's forms were
+initially designed and distributed for one rater per text, and the collection records available
+alongside this thesis's data reflect that design. The dataset used throughout this thesis instead
+carries three raters per neutral cell, matching the persona conditions. The source of the
+additional two raters per text for the neutral condition could not be reconstructed from the
+retained collection records at the time of writing. It is disclosed as a limit on this thesis's
+own reproducibility, not as an allegation that the three-rater neutral vote counts are invalid:
+these are exactly the numbers every downstream calculation in this thesis, including all six H1
+tests, is computed from, and nothing in the analysis pipeline is inconsistent with them. But a
+reader who wants to trace every human vote back to a raw, timestamped response should know that
+this particular step in the collection history is not fully documented in the materials retained
+for this thesis.
+
+\section{Emotion Probability Vector Construction}
+\label{impl:vectors}
+
+\noindent
+The representation described here is the core of the thesis.
+
+\subsection{Definition}
+\label{impl:vecdef}
+
+\noindent
+Let $E = \langle e_1, \ldots, e_{11}\rangle$ be the fixed, alphabetically ordered emotion set.
+For any group of judgments about a single (text, condition), whether those judgments come from
+human raters or from models, let $c_i$ be the number of judgments naming emotion $e_i$, and let
+$n = \sum_i c_i$ be the number of usable judgments. The emotion probability vector is
+
+\begin{equation}
+\mathbf{v} = \left\langle \frac{c_1}{n}, \frac{c_2}{n}, \ldots, \frac{c_{11}}{n} \right\rangle,
+\qquad \sum_{i=1}^{11} v_i = 1 .
+\end{equation}
+
+\noindent
+Every vector in this thesis is constructed this way. A human vector for a (text, framing) pair
+aggregates that cell's raters; a model ensemble vector for a (text, framing, variant, format) cell aggregates the seven models' single answers. Off-list and
+missing answers are excluded from $c_i$ and reduce $n$ accordingly; they are never silently
+counted as zeros, which would distort the denominator.
+
+\subsection{Why Distributions Rather Than Labels}
+\label{impl:whyvectors}
+
+\noindent
+The reason for this representation is empirical. In the original five-reader corpus, only 80.3\%
+of texts have a unique emotion commanding a strict majority. Of the remainder, 6.3\% have a
+unique top choice that never reaches 50\% (a plurality, not a majority) and 13.3\% have
+\textbf{no unique top choice at all}. For roughly one text in five, a pipeline that reports a
+single label must either retain the most frequent label while concealing how divided readers
+actually were, or break a tie arbitrarily.
+
+A vector sidesteps the choice. It can also express something a label cannot: the difference
+between a judgment that barely moved and one that was substantially reinterpreted but happened to
+keep the same most-popular answer. Section~\ref{res:vectorization} measures that difference.
+
+\section{Metrics}
+\label{impl:metrics}
+
+\noindent
+The vectors give rise to two families of metric: one for the \emph{magnitude} of a shift and one
+for its \emph{direction}. They answer different questions and are never conflated.
+
+\subsection{Magnitude: Total Variation Distance}
+\label{impl:tv}
+
+\noindent
+For two vectors $\mathbf{p}$ and $\mathbf{q}$ over the same emotion set, total variation distance
+is
+
+\begin{equation}
+\mathrm{TV}(\mathbf{p}, \mathbf{q}) = \frac{1}{2}\sum_{i=1}^{11} |p_i - q_i| \; \in [0, 1].
+\end{equation}
+
+\noindent
+TV is the share of probability mass that must be moved to turn one distribution into the other.
+It is zero when the two are identical and one when their supports are disjoint. Shift magnitudes
+are reported as $\mathrm{TV} \times 100$ and referred to as shift percentages.
+
+TV measures magnitude only. It expresses how much moved, but not which emotions moved or in which
+direction; the directional metrics below are therefore reported alongside it as a matter of
+course, not as an optional extra.
+
+\subsection{Direction: Delta Vectors and Cosine Similarity}
+\label{impl:delta}
+
+\noindent
+The signed change induced by framing is the delta vector
+
+\begin{equation}
+\boldsymbol{\delta} = \mathbf{v}_{\text{persona}} - \mathbf{v}_{\text{neutral}},
+\end{equation}
+
+\noindent
+whose components sum to zero and record which emotions gained mass and which lost it. To ask
+whether a model's shift resembles the human shift \emph{for the same text}, the two delta vectors
+are compared by cosine similarity:
+
+\begin{equation}
+\cos(\boldsymbol{\delta}_{H}, \boldsymbol{\delta}_{L}) =
+\frac{\boldsymbol{\delta}_{H} \cdot \boldsymbol{\delta}_{L}}
+     {\lVert \boldsymbol{\delta}_{H}\rVert \, \lVert \boldsymbol{\delta}_{L}\rVert}.
+\end{equation}
+
+\noindent
+Cosine is undefined when either delta is the zero vector, which occurs whenever one side did not
+move at all. These cases are \textbf{counted and reported} rather than silently dropped, because
+their frequency is itself a finding (Section~\ref{res:zeroshift}).
+
+
+\subsection{Dominant Sets and Their Five Outcomes}
+\label{impl:dominant}
+
+\noindent
+The dominant set of a vector is the set of emotions attaining its maximum probability. It is a
+\emph{set} rather than a single label because ties are common at small sample sizes and resolving
+them arbitrarily is exactly the practice this thesis is examining.
+
+Comparing dominant sets before and after framing yields five descriptive outcomes:
+
+\begin{itemize}
+    \item the sets are \textbf{identical};
+    \item a single emotion \textbf{splits into a tie};
+    \item a tie \textbf{resolves} to a single emotion;
+    \item two ties \textbf{partially overlap};
+    \item the sets are \textbf{disjoint}.
+\end{itemize}
+
+\noindent
+These describe relationships between complete top sets. A selected-label analysis instead
+chooses one winner from each set, so its changed/unchanged verdict does not coincide with any one
+of these five outcomes; a tie can change the chosen winner while the sets still overlap. The set
+outcomes are given in Section~\ref{res:dominant} and the selected-label comparison in
+Section~\ref{res:vectorization}.
+
+\subsection{Dispersion Measures}
+\label{impl:dispersion}
+
+\noindent
+Three further quantities summarise the shape of a vector: Shannon entropy (and its normalised
+form), maximum probability as a measure of consensus strength, and support size, the count of
+emotions receiving any mass. These address a question distinct from magnitude, namely whether
+framing \emph{concentrates} or \emph{disperses} interpretation, and are examined in
+Section~\ref{res:entropy}.
+
+\section{Quality-Control Gate}
+\label{impl:qc}
+
+\noindent
+Every inferential statistic in this thesis was computed only after its inputs passed quality
+control. Since the notebook rebuild described in Section~\ref{impl:repro}, this rule is enforced
+at two levels rather than through a single external report. First, the data-loading routine that
+every notebook calls halts immediately, by assertion, if a structural invariant fails: there is no
+code path by which an analysis can run against malformed inputs. Second, an independent
+verification script re-derives 30 scientific and execution checks from the raw inputs and confirms
+that all three notebooks executed top to bottom with zero errors and consecutive execution counts;
+all 30 pass.
+
+The checks fall into four groups:
+
+\begin{itemize}
+    \item \textbf{Completeness}: every text present in every derived table; expected row counts
+    exactly met ($900$ human vectors yielding $600$ comparisons across two persona sides,
+    $3{,}600$ model comparisons
+    across two persona sides and six prompt configurations, exactly six configuration rows per
+    text and persona side).
+
+    \item \textbf{Mathematical validity}: every probability vector sums to one; every delta
+    vector sums to zero; total variation equals the sum of positive signed change; the retained
+    vote count for every model comparison is equal on both sides of the comparison.
+
+    \item \textbf{Design integrity}: exactly 100 texts per category; at least three model
+    identities common to both sides of every model comparison; no duplicate (text, condition) rows;
+    every one of the 300 sampled texts reproduces the classification rule of
+    Section~\ref{meth:rule} exactly against the 985-text eligible candidate pool.
+
+    \item \textbf{Source consistency}: every category value maps to a known category, and no
+    text is classified inconsistently across its own rows.
+\end{itemize}
+
+\noindent
+The final group was written to catch a particular bug. The human annotation file disagrees with
+itself on nine texts: one category is recorded in the neutral rows and another in the persona
+rows, a relic of a reclassification between rounds of collection. Because naive de-duplication
+does not remove such a conflict but silently resolves it by whichever row happens to come first,
+those nine texts had crept into the human-side analyses under the wrong category, producing an
+unbalanced 91/100/109 grouping in place of the designed 100/100/100. The fix is structural: instead of reading the per-row category column of the human annotation file,
+the master sampling file is read once, at data-loading time, and the category of every text is
+looked up from it. The nine texts are checked explicitly to confirm that the defect is real and has
+been correctly resolved, not to certify a list that could otherwise remain stale.
+
+\section{Statistical Procedures}
+\label{impl:stats}
+
+\noindent
+This section sets out the inferential procedures and, just as important, the unit of analysis for
+each test.
+
+\subsection{Unit of Analysis}
+\label{impl:unit}
+
+\noindent
+The risk that keeps recurring in this dataset is pseudoreplication. A single text provides 2
+human comparisons and 12 model comparisons (2 persona sides $\times$ 6 configurations). Treating
+those as independent observations inflates $n$ by as much as twelvefold, and correspondingly
+inflates significance.
+
+Accordingly, unless stated otherwise, \textbf{the unit of analysis is the text}. Where a statistic
+is computed on finer-grained rows, the confidence interval is instead obtained by a bootstrap that resamples
+texts rather than rows, so that the correlation among a text's own observations is preserved in
+the resampling.
+
+\subsection{Permutation Tests}
+\label{impl:permutation}
+
+\noindent
+Two different permutation nulls are used \cite{Good2005Permutation}, and the difference between
+them is one of substance, not merely of technicality.
+
+\textbf{For the human data (H1)}, the votes are pooled within a text across the two conditions
+under comparison, reshuffled, and re-split at the observed group sizes. The different conditions
+of a text were rated by different people, so there is no within-text participant pairing
+requirement. The permutation also presumes that, given no framing effect, the groups assigned to
+that text's conditions would have the same distribution of emotion judgments; disjoint
+participants alone do not imply exchangeability if recruitment or allocation differed
+systematically.
+
+\textbf{For the model data (H2)}, the same pooling would be invalid. The same seven models answer
+both conditions, so model identity is tracked on both sides, and the models are not exchangeable
+with each other; Section~\ref{res:h2magnitude} measures directly how differently they behave. The
+correct null holds model identity fixed and asks whether each model's own two answers could just
+as well have been obtained the other way round. The test is therefore a \textbf{paired sign-flip}: for
+each (cell, model) pair independently, the two labels are swapped with probability one half.
+
+Both tests use 10{,}000 iterations with a fixed random seed.
+
+\subsection{Effect Sizes and Confidence Intervals}
+\label{impl:effects}
+
+\noindent
+Effect sizes are reported alongside every $p$-value. Category contrasts (H3) are reported as the
+raw difference in mean shift between groups, with a text-level bootstrap confidence interval,
+rather than as a standardised ordinal effect size; matched-pairs rank-biserial correlation is used
+for paired comparisons (H4 magnitude), and Spearman's $\rho$ for monotonic association (H4
+covariation). Confidence intervals are percentile bootstrap intervals with text-level clustering.
+
+Where an association is summarised by a correlation, inference is drawn from the
+\textbf{clustered bootstrap itself}, as opposed to an analytic $p$-value computed over all rows. Over correlated rows, an
+analytic $p$ is not merely imprecise but misleading. Duplicating every row would leave $\rho$
+unchanged and shrink $p$, the very behaviour clustering is meant to prevent.
+
+\subsection{Multiple Comparisons}
+\label{impl:multiple}
+
+\noindent
+Two correction regimes are used, and which applies is indicated at each test. Confirmatory
+hypothesis families are controlled by \textbf{Holm} correction \cite{Holm1979Sequential}, where
+the family-wise error rate should be controlled. Exploratory families, such as the 66 per-emotion
+tests (Section~\ref{res:emotions}), where the aim is to limit the proportion of false positives
+among discoveries rather than exclude them entirely, are controlled by \textbf{Benjamini--Hochberg}
+false discovery rate control \cite{Benjamini1995FDR}.
+
+\subsection{Referencing Against a Sampling Null}
+\label{impl:nullref}
+
+\noindent
+One last procedure is needed because of an easily overlooked property of small-sample TV.
+
+\textbf{TV between two small vote samples is not zero when there is no effect.} Two independent
+three-vote draws from the same underlying distribution will often disagree, and they disagree
+more when the underlying distribution is dispersed. Since the ambiguous categories are by
+construction the dispersed ones, a raw comparison of TV across categories conflates baseline
+dispersion with any framing effect.
+
+To separate the two, each text is given its own reference point. That text's votes are
+pooled across the two conditions, reshuffled, and re-split at the observed sizes; the average TV
+over many such draws is the TV expected for that specific text if framing did nothing. The
+observed value minus this expectation is referred to as the text's \textbf{excess TV}.
+
+This is applied in Section~\ref{res:h3null} as a sensitivity analysis. It is reported next to the
+raw contrasts and never replaces them: it was specified after the raw result was known, and
+making it the primary analysis would amount to selecting an analysis by its outcome.
+
+\subsection{Reproducibility}
+\label{impl:repro}
+
+\noindent
+All permutation tests and bootstrap operations are deterministic and were confirmed to reproduce
+exactly across separate process invocations with a fixed seed. A single non-determinism bug was
+discovered and fixed during development: an unsorted set intersection produced an iteration order
+dependent on per-process hash randomisation, causing seeded results to be irreproducible across
+runs. All collections of string keys feeding a seeded loop are now explicitly sorted before use.
+
+The analysis notebooks were later rewritten so that the calculations behind the four main
+hypotheses are stored directly within the notebook rather than being imported from a separate
+module; the core pipeline can now be audited without referring to other files. All 44 result tables
+generated by the rewritten notebooks were compared against the results generated prior to the
+rewrite and were binary equivalent; the rewrite reformatted, but did not redefine, the
+calculations. A small number of additional results added later (the inter-annotator agreement
+figures, the conventional majority-label benchmark, the entropy hypothesis tests of
+Section~\ref{res:entropy}, and the transition-matrix figure of Section~\ref{res:dominant}) are not
+inlined into the notebooks but are generated by independent scripts alongside them.

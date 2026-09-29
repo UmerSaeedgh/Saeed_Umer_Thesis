@@ -1,0 +1,7 @@
+comparison,category,comparisons,agreement_pct
+Human vs LLM neutral,author_independent,600,49.833333333333336
+Human vs LLM neutral,author_relevant,600,50.0
+Human vs LLM neutral,unambiguous,600,74.16666666666667
+Original vs new human neutral,author_independent,100,45.0
+Original vs new human neutral,author_relevant,100,40.0
+Original vs new human neutral,unambiguous,100,76.0

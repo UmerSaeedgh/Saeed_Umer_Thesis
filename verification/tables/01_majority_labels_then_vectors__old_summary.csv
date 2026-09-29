@@ -1,0 +1,5 @@
+,hypothesis,old_method_answer,scope
+0,H1,0/6 adjusted tests reject; category/side-specific,Selected-label-change rate; non-rejection is not absence
+1,H2,2/2 adjusted tests reject,"Ensemble selected-label changes, preserving model pairs"
+2,H3,AR−AI 4.50pp; adjusted p=0.4721,Raw category difference in label-change frequency
+3,H4,Human−model label-change frequency 34.44pp; transition agreement 23.3%,Only categorical proxies; full magnitude/direction unavailable

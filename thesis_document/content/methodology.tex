@@ -1,0 +1,391 @@
+\chapter{Methodology}
+\label{c:methodology}
+
+\noindent
+The research questions and hypotheses are introduced first, followed by the corpus, the typology
+of ambiguity types in texts, and the author-framing manipulation. The chapter ends with the
+experimental design as it was actually carried out and an account of how that design differs
+from what was originally proposed.
+
+\section{Research Questions}
+\label{meth:rqs}
+
+\noindent
+The thesis addresses three research questions.
+
+\begin{itemize}
+    \item \textbf{RQ1 (Framing Effect in Humans).} Does perceived author identity significantly
+    influence human emotion judgments of ambiguous texts?
+
+    \item \textbf{RQ2 (Framing Effect in LLMs).} Does perceived author identity significantly
+    influence emotion classifications produced by large language models?
+
+    \item \textbf{RQ3 (Human--Model Alignment).} Are the framing effects of LLMs similar in
+    direction and magnitude to those of human annotators?
+\end{itemize}
+
+\section{Research Hypotheses}
+\label{meth:hypotheses}
+
+\noindent
+These questions are operationalised in four hypotheses.
+
+\begin{itemize}
+    \item \textbf{H1 (Human Framing Hypothesis).} Human emotion judgments will differ significantly
+    across author-framing conditions for ambiguous texts, but not (or substantially less) for
+    unambiguous control texts.
+
+    \item \textbf{H2 (Model Framing Hypothesis).} LLM emotion classifications will shift across
+    author-framing conditions, reflecting sensitivity to minimal author cues.
+
+    \item \textbf{H3 (Ambiguity Sensitivity Hypothesis).} Framing effects will be stronger for
+    author-relevant ambiguous texts than for author-independent ambiguous texts.
+
+    \item \textbf{H4 (Alignment Hypothesis).} The direction of framing-induced shifts in LLM
+    classifications will partially align with human judgment shifts, but the magnitude of these
+    shifts will differ.
+\end{itemize}
+
+\noindent
+The scoring of the evidence for H4 is affected by two aspects of its wording. First, H4
+predicts \emph{partial} directional alignment, so a positive but weak directional correlation is
+counted \emph{for} the hypothesis, rather than against it. Second, H4 predicts that magnitudes
+will \emph{differ}. Human and model shift sizes that turned out similar would thus be a surprise
+with respect to the hypothesis as stated, not an affirmation of it. Chapter~\ref{c:result} scores
+the two components individually.
+
+The approved proposal contains no numbered hypothesis about prompt structure. Prompt-configuration
+effects are thus treated as an exploratory question, not as a test of a formal hypothesis.
+
+\section{Corpus Selection and Dataset Construction}
+\label{meth:corpus}
+
+\noindent
+The source of the data is the crowd-enVent corpus \cite{Troiano2023CrowdEnVent}, which comprises
+short self-authored descriptions of emotional events. Every text has two layers of annotation:
+one label provided by the author of the text, indicating the emotion they were trying to express,
+and labels provided by five independent readers who did not see the author's label. These two
+layers make the corpus suitable for this study: disagreement can be assessed both between author
+and readers and among the readers themselves.
+
+The corpus uses eleven categories of emotion, consisting of \emph{anger, disgust, fear, guilt,
+joy, pride, relief, sadness, shame, surprise} and \emph{trust}. All eleven are kept. The set is
+small enough for human annotators and models to work with, and deleting any category could
+suppress exactly the disagreement patterns the study aims to observe. This fixed, alphabetically
+ordered set of eleven is the dimension set for every probability vector built in
+Chapter~\ref{c:implementation}.
+
+To operationalise ambiguity, two quantities were calculated per text. \textbf{Author--reader
+agreement} asks whether the reader majority recovers the emotion the author claims to have
+intended; a discrepancy means the text failed to convey what its author intended. \textbf{Reader
+consensus} (\emph{majority share}) is the fraction of the five readers who selected the majority
+emotion. Since there are exactly five readers, this measure only takes the values $0.2$, $0.4$,
+$0.6$, $0.8$ and $1.0$, a coarseness that directly constrains where a threshold can sit.
+
+Reader consensus does not cluster at the top of that scale. In the candidate corpus, a majority
+share of $0.6$ (three readers of five) occurs most frequently. Disagreement is the typical case
+and not an edge case, and this is the empirical basis for the distributional representation
+adopted in Section~\ref{impl:vectors}.
+
+\subsection{The classification rule}
+\label{meth:rule}
+
+\noindent
+Three decisions are applied in a fixed order. Their thresholds and ordering are encoded in
+\texttt{scripts/classify\_ambiguity\_pools.py}. \textbf{The persona-flip input for each text (Step
+2 below) was generated by an LLM judge, not by human pilot annotators}: the judge was shown the
+same text under two candidate personas and asked for the emotion it read into each, and the two
+judgments were compared directly. This LLM-judging step is described in the dataset-construction
+notebook, \texttt{complete\_analysis.ipynb}; the specific model used as the judge is not recorded
+in the materials retained for this thesis and could not be reconstructed at the time of writing.
+The full derivation, including a threshold sensitivity analysis, is documented in
+\texttt{00\_corpus\_and\_sampling.ipynb}.
+
+\textbf{Step 0: exclude off-label texts.} Texts whose author emotion or reader majority is
+\emph{boredom} or \emph{no-emotion} are dropped, since these fall outside the eleven-emotion set.
+Forced into the taxonomy, they produce persona-to-persona differences that are a labelling
+artefact, not a real interpretive shift. The step removes 215 of the 1{,}200 candidates and
+leaves 985 eligible.
+
+\textbf{Step 1: threshold first.} A text is \textbf{unambiguous} if
+$\text{majority share} \geq 0.8$ \emph{and} the readers recover the author's own label. This is
+decided purely from the original corpus's reader data.
+
+\textbf{Step 2: flip test, among the remainder only.} Of the texts not classified as
+unambiguous, those whose two candidate personas yield different judged emotions from the LLM judge
+are \textbf{author-relevant ambiguous}; the rest are \textbf{author-independent ambiguous}.
+
+\noindent
+\textbf{The ordering is deliberate.} A persona flip does \emph{not} override a strong,
+author-matching reader consensus: a text the readers already agree on remains unambiguous even
+when the LLM judge is moved by a persona flip. With the order reversed, the flip test could shift
+high-consensus texts into the author-relevant category, and that category's definition would then
+become circular with respect to H3.
+
+\textbf{A filtering inconsistency at this step.} Step 0 filters out texts whose author emotion or
+reader majority does not lie within the eleven-emotion set, on the grounds that forcing an
+off-label judgment into the taxonomy is an artefact of labelling and not a true interpretive
+shift. The same criterion was not applied to the LLM judge's own answers at Step 2: of the 100
+texts classified as author-relevant, 24 have the judge answering \emph{no-emotion} for at least
+one persona, precisely the type of off-label judgment Step 0 treats as unreliable elsewhere. These
+texts were not re-screened against that criterion, so the author-relevant category is filtered
+less consistently than the unambiguous category.
+
+With a five-valued measure, only three threshold settings are defensible, and $0.8$ is one of
+them. At $0.6$ the unambiguous pool would take in texts on which only three of five readers agreed,
+weakening the control category the design relies on; at $1.0$ it would admit only unanimous
+texts. Every one of the three leaves more than 100 candidates per pool, so availability does not
+force $0.8$; it was chosen as the stricter of the two middle options.
+
+\subsection{Drawing the sample}
+\label{meth:sampling}
+
+\noindent
+The sample was not a single fresh draw and should not be described as one. It was
+produced by \textbf{reconciliation} against an existing sample: the current sample is kept, every
+text in it is reclassified under the rule above, any pool of more than 100 texts is pruned back to
+100 using the fixed seed ($42$), and shortfalls are filled by drawing from eligible candidates not
+already used. Three texts set aside as one-shot and few-shot prompt examples are excluded
+throughout, so that no sampled text can appear inside its own prompt. This is asserted to result
+in 300 texts, 100 per pool, with no duplicates.
+
+Because the pools differ in size, so do the sampling fractions. The design puts equal $n$ per
+category ahead of proportional representation, so that category comparisons are not confounded
+with unequal sample size.
+
+\textbf{What is and is not reproducible.} The classification rule is fully reproducible and is
+verified against all 300 sampled texts. The \emph{specific membership} of the sample is not
+recoverable from the seed alone, because it depends on the prior sample's contents and on the
+candidate ordering at the time each replacement was drawn. \texttt{sampled\_texts.csv} is
+therefore the authoritative record of which texts were used.
+
+Seven verification checks on the sample (size, balance, absence of reserved examples, absence
+of duplicates, pool eligibility, agreement with the classification rule, and absence of off-label
+texts) all pass and are enforced as assertions rather than advisory output in
+\texttt{00\_corpus\_and\_sampling.ipynb}.
+
+\textbf{One limit of the off-label filter.} Step 0 screens two labels per text, the author's
+own and the selected reader-majority label, not the individual reader votes. A text can
+therefore enter the sample while still containing reader votes outside the eleven-emotion set, and
+27 such votes survive across 25 texts, so \textbf{275 of the 300 sampled texts retain all five
+in-inventory reader votes}. Those votes are excluded when the original-corpus vectors are built,
+which is why vector construction tracks $n$ per vector rather than assuming five throughout
+(Section~\ref{impl:vecdef}).
+
+\section{Ambiguity Types and Author Relevance}
+\label{meth:ambiguity}
+
+\noindent
+Not all ambiguous texts are ambiguous for the same reason. Some are uncertain because
+author-related context is missing; others describe an underspecified or emotionally complicated
+situation in which the author's identity is not material. H3 relies on this distinction, since it
+predicts that framing effects concentrate in the former.
+
+Texts were accordingly sorted into three groups, used consistently throughout the thesis:
+
+\begin{itemize}
+    \item \textbf{Author-relevant ambiguous texts}, where information about the author's role,
+    perspective, or position within society could plausibly shift the perceived emotion. A
+    description of a risky action may read as pride from the agent who took it and as fear or
+    worry from a spectator.
+
+    \item \textbf{Author-independent ambiguous texts}, where several emotions remain plausible
+    regardless of who wrote the text, typically attributable to a lack of situational detail
+    rather than to an authorship issue.
+
+    \item \textbf{Unambiguous control texts}, drawn from the high-agreement pool, where the writer
+    and the readers agree strongly on one emotion.
+\end{itemize}
+
+\noindent
+The final sample consists of \textbf{300 texts, balanced at exactly 100 per category}. This
+balance is a property of the sampling design and is verified programmatically as part of the
+quality-control gate described in Section~\ref{impl:qc}.
+
+One property of this categorisation constrains what H3 can claim, and it must be stated
+plainly. Texts were assigned to the author-relevant group partly on the basis of
+an LLM judge's own sensitivity to whether author framing would invert the reading: the corpus
+preparation records, for each text, two candidate persona readings from that judge and whether
+they differ. Texts were therefore \emph{selected} into that group partly on the property H3
+subsequently measures. H3 is consequently a \textbf{transfer comparison}: it asks whether a
+grouping based on the judgments of one LLM predicts framing effects in newly collected human
+data. That author-relevance is the operative principle is therefore not an independent
+discovery, and Chapter~\ref{c:result} does not present it as one.
+
+The impact is sharper on the model side than on the human side. Because the category itself was
+defined by whether an LLM's judgment flips between personas, the finding that the \emph{model
+ensemble's} framing-effect magnitude is ordered author-relevant $>$ author-independent $>$
+unambiguous (Section~\ref{res:h2magnitude}) is partly true by construction: texts were selected into the
+author-relevant pool precisely because at least one LLM's reading was sensitive to the persona
+pair. The ordering holds across all six prompt configurations, and for an ensemble of seven
+distinct models rather than just the one used as classification judge, which suggests that the
+pattern is more than an artefact of the selection. Nonetheless, the model-side ordering claim must
+be read as partially circular rather than as an independent confirmation, just as the
+human-side H3 result is treated as a transfer comparison rather than a fresh discovery.
+
+\section{Author-Framing Manipulation}
+\label{meth:framing}
+
+\noindent
+Perceived authorship is the independent variable. The content of every text is held
+\emph{exactly} constant; only a short author cue attached to it varies, so no difference in
+emotion judgment can come from a change in the text itself. The cue is appended after the
+text rather than placed before it (Section~\ref{impl:stimulus} gives the exact format).
+Which side of the text the cue sits on is not expected to matter for the manipulation's logic,
+but the earlier description of it as \emph{preceding} the text was not consistent with how it was
+actually presented. Nor does the manipulation by itself isolate identity from every other kind of information
+the cue carries: a persona description can also supply substantive situational detail beyond who
+the author is (for instance, a persona contrasting someone who has been struggling all year with
+someone expecting to pass easily differs in circumstance as well as in identity), so the design
+measures sensitivity to the provided author/persona framing as a whole, not a pure identity
+mechanism in isolation.
+
+Four framing conditions were used:
+
+\begin{itemize}
+    \item \textbf{Neutral}: no author information is provided.
+    \item \textbf{Generic human}: the text is attributed to an unspecified human author.
+    \item \textbf{Persona A} and \textbf{Persona B}: the text is attributed to a person with a
+    defined social role.
+\end{itemize}
+
+\noindent
+The generic human condition is more than an extra level; the analysis depends on it. Neutral and
+persona prompts differ in more than persona content, since persona prompts include an author
+line that is absent from neutral prompts. A neutral-to-persona comparison therefore confounds
+\emph{who the author is} with \emph{whether an author is named at all}. The generic human
+condition separates the two, and Section~\ref{res:generic} uses it for exactly that purpose.
+
+Persona selection was not straightforward. There is no single fixed pair, such as \emph{politician} and
+\emph{comedian}, that applies equally to every text; a domestic anecdote has no natural connection
+to either role. Personas were therefore assigned per text to suit its subject matter, with the two
+personas of a pair chosen to have contrasting interpretive expectations (one related to
+accountability, one to latitude, for instance), so that a framing effect, if present, has a
+reasonable chance of emerging. Both personas for every text, along with the reasoning behind the
+pairing, are recorded explicitly in the dataset.
+
+\section{Realised Experimental Design}
+\label{meth:design}
+
+\noindent
+Table~\ref{tab:design} summarises the design as executed.
+
+\begin{table}[h]
+\centering
+\footnotesize
+\caption{Realised experimental design.}
+\label{tab:design}
+\begin{tabular}{lp{7.5cm}l}
+\hline
+\textbf{Factor} & \textbf{Levels} & \textbf{Count} \\
+\hline
+Texts & balanced across 3 ambiguity categories & 300 (100 per category) \\
+Emotion labels & fixed, alphabetically ordered & 11 \\
+Framing (models) & neutral, generic human, persona A, persona B & 4 \\
+Framing (humans) & neutral, persona A, persona B & 3 \\
+Models & 7 (proprietary, commercial and open-weight) & 7 \\
+Prompt variants & zero-shot, one-shot, few-shot & 3 \\
+Label formats & numbered list, inline & 2 \\
+\hline
+Model judgments & $300 \times 4 \times 3 \times 2 = 7{,}200$ cells, each an ensemble vector aggregating up to 7 models' raw answers (50{,}400 raw answers total) & 7{,}200 ensemble vectors \\
+Human judgments & $300 \times 3$ sides & 900 vectors \\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent
+\textbf{Human annotation.} Participants were recruited and presented with texts one at a time
+together with the assigned author framing, selecting a label from the same fixed set of eleven
+emotions used for the models. Texts and framings were distributed such that each text--framing
+pair received several independent annotations from different people, while \textbf{no individual
+annotator saw the same text more than once}. This property was specified in the approved
+proposal, and the statistical analysis of the human data in Section~\ref{impl:stats} is based on
+it: since each participant was shown only one framing of a given text, the conditions for a text
+are rated by disjoint sets of individuals, and there is no within-text pairing across conditions
+to preserve.
+
+\textbf{Model evaluation.} Each model saw each text only once per framing condition and prompt
+configuration, avoiding repeated exposure. The predicted label for each (text, framing, variant,
+format, model) combination was recorded. Prompt configurations are always kept separate in any
+analysis; they are only reported, or averaged, after being calculated independently.
+
+\section{Deviations from the Approved Proposal}
+\label{meth:deviations}
+
+\noindent
+The departures from the proposal are detailed here so that none is left implicit.
+
+\textbf{Sample size.} The proposal expected 300--400 texts. The actual sample is 300, chosen to
+allow an exact balance of 100 per category.
+
+\textbf{Number of models.} The proposal outlined at least one proprietary, one commercial, and one
+open-source model. Seven were used, which substantially supports RQ2: a framing effect that shows
+up across seven independently developed systems is more difficult to attribute to a peculiarity
+of a single model family.
+
+\textbf{Number of prompt configurations.} The proposal specified at least two prompt variants.
+Three variants were crossed with two label formats (six configurations), making it possible to
+evaluate prompt sensitivity as an exploratory question in its own right.
+
+\textbf{Ambiguity typing and persona mapping.} The proposal envisaged manual inspection of a
+subset of texts, thematic clusters, and persona pairs assigned consistently within each cluster. The
+realised classification instead employed a fixed consensus threshold and a documented pilot
+persona-flip decision for the remaining texts; persona pairs were assigned text by text. The
+category definition incorporates the pilot judgments, so the author-relevant category is partly
+selected for the property tested by H3 (Section~\ref{meth:ambiguity}). Under this per-text
+design, a cluster-to-persona mapping was not generated. The realised pairings and rationales
+can be inspected only in the master sampling file; they are not catalogued in this manuscript.
+
+\textbf{Asymmetry in framing conditions.} Models were evaluated under all four framings; humans
+were annotated under three, omitting the generic human condition. The control analysis in
+Section~\ref{res:generic} can therefore only be applied to models, and it is not possible to
+provide a parallel human decomposition of author-presence versus persona-content.
+Section~\ref{disc:limitations} returns to this limitation of the collected data.
+
+\textbf{Inter-annotator agreement.} The proposal specified Fleiss' $\kappa$ \cite{Fleiss1971Kappa}.
+This statistic does not require respondent identifiers: each item contributes its counts of
+emotion votes. Since the realised number of votes per (text, framing) cell ranges from three to
+seven, the conventional equal-rater calculation is restricted to the 754 cells with exactly three
+votes. The other 146 cells are excluded from this descriptive calculation only, not from the main
+distributional analysis. Kappa is calculated separately within each ambiguity pool and framing
+condition across the eleven emotion labels (Section~\ref{res:agreement}). It corrects for the
+group-specific marginal emotion frequencies, so comparing values between groups is a descriptive
+rather than a causal claim about framing. The equal-three restriction can also select a
+non-representative subset of persona cells.
+
+\textbf{Model evaluation metric.} The proposal specified macro-F1 and percentage agreement
+against human majority labels. Section~\ref{res:majoritybenchmark} provides both as a secondary
+neutral-framing benchmark against the original corpus's reader majority, using only the 241
+sampled texts with a strict majority among five readers. Each of the six prompt configurations is
+scored individually and averaged by model; invalid labels are removed, and the count of retained
+predictions is presented in the reproducible table. The benchmark answers a narrower question
+than the main analysis: it uses a noisy reader majority as the gold label, filters out 59 texts
+with no strict majority, and does not score persona responses against the separately
+collected human votes. Model framing behaviour is instead characterised distributionally: by
+agreement with human vectors at baseline (Section~\ref{res:vectorization}), and by the magnitude
+and direction of the shift under framing (Sections~\ref{res:h2}, \ref{res:h4}).
+
+\textbf{Qualitative case analysis.} The proposal outlined an analysis of individual strong-shift
+and stable-text cases. One traceable example, selected for its observed human shifts and reported
+in Section~\ref{res:example}, illustrates how the reading of the same text can change completely
+under one persona and stay completely unchanged under another. This illustrative example is not a systematically
+coded thematic analysis of cases and cannot be used to determine why the shift occurred.
+
+\textbf{Explanations and corpus summaries.} All seven analysed models provided a nonempty
+explanation for every one of their 7{,}200 responses (coverage is documented in
+\texttt{results/\allowbreak model\_explanation\_coverage\_verified.csv}); one such response is
+discussed in Section~\ref{res:example}. Neither an explanation-based thematic analysis nor a
+model confidence analysis was conducted. Section~\ref{res:sampledescription} provides
+author-label frequencies and text lengths for the final 300-text sample. These sample statistics
+are not a proxy for a separately requested descriptive analysis of the full source corpus.
+
+\textbf{Participant count.} The proposal projected 10--15 participants. The
+realised study used a larger, less formally demarcated pool recruited across multiple collection
+rounds (an early round and a later persona/neutral re-collection round, Section~\ref{impl:leak}),
+with a target of three annotators per (text, framing) cell. Since respondent identifiers were not
+stored (Section~\ref{impl:human}), the actual number of distinct participants cannot be
+reconstructed after the fact, and no such claim is made. This is itself a limitation, revisited in
+Section~\ref{disc:limitations}. The within-text permutation null of Section~\ref{impl:permutation}
+does not require knowledge of the total number of people involved, but different people rating
+the two conditions eliminates only the within-text pairing requirement; it is not, in itself,
+evidence that the two conditions are exchangeable (Section~\ref{impl:permutation}).

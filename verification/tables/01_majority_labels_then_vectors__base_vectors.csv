@@ -1,0 +1,7 @@
+,comparison,category,comparisons,mean_TV_pct,mean_cosine
+0,Human vs LLM neutral,author_independent,600,47.99126984126985,0.6370752403153073
+1,Human vs LLM neutral,author_relevant,600,49.59920634920634,0.6354173557496552
+2,Human vs LLM neutral,unambiguous,600,32.05,0.800056965846597
+3,Original vs new human neutral,author_independent,100,47.483333333333334,0.6509189552810213
+4,Original vs new human neutral,author_relevant,100,53.18333333333333,0.5993353425018078
+5,Original vs new human neutral,unambiguous,100,33.13333333333334,0.8036622507659859

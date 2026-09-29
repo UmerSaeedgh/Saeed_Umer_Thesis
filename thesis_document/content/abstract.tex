@@ -1,0 +1,68 @@
+\chapter*{Abstract}
+
+Evaluating emotion recognition in text commonly assumes that each text has a single correct
+emotion label. Many texts, however, admit several plausible emotional readings, and the one a
+given reader settles on depends not only on the words but on who they suppose wrote them. Pride, embarrassment, or regret can be conveyed by the
+sentence \emph{``I can't believe I actually did that''} depending on who is taken to be the
+speaker. The thesis asks whether perceived author identity measurably affects the interpretation
+of emotion, both for human readers and for large language models, and whether the responses of
+the two are similar.
+
+Three hundred brief self-reports of emotional experience were sampled from the crowd-enVent
+corpus and stratified into three categories of one hundred texts each: \emph{unambiguous control
+texts}, \emph{author-independent ambiguous texts}, and \emph{author-relevant ambiguous texts}.
+Each text was neutrally framed and also presented under two opposite author personas, with the
+text itself left unchanged. Human judgment was gathered across all three framings. Seven large
+language models then categorised every text under four framings and six prompt
+configurations. The outcome is 7{,}200 model-ensemble distributions and 900 human distributions
+(one per text and framing condition), constructed using as many as 50{,}400 model answers and
+2{,}899 human ratings.
+
+The hypotheses are tested in two circumstances: one where a single majority or top emotion is
+chosen for each condition, and another using the complete \textbf{probability distribution over
+eleven emotions}. When the two are compared to each other, one can see what the single-label
+method is not able to capture. Among the 300 sampled texts, 19.7\% have no emotion commanding
+a strict majority of readings. Of those, 6.3\% still have a unique most-frequent (plurality) label, so a
+pipeline that reports only the top label can retain it while covering up how divided readers
+really were; the remaining 13.3\% have no single best choice whatsoever, and some arbitrary
+tie-break must be made. A distribution preserves that disagreement rather than eliminating it. It
+also allows one to ask not only \emph{whether} an answer changed but \emph{how far} and
+\emph{in which direction} it changed.
+
+Four hypotheses were tested. As predicted, human judgments shift significantly under
+author framing in author-relevant ambiguous texts, while unambiguous texts show no detectable
+shift. There is only one persona contrast on which the author-independent category is significant,
+and there is no evidence that the two persona effects are different. The model ensemble, however,
+shifts significantly under both personas. A previously unanalysed \texttt{generic\_human} control
+separates
+out two comparisons with matched models: an unspecified author line alone produces about an
+8\% move in classifications on both sides, and going further to a named persona is associated
+with a separately measured 16--19\% move (the two distances are not additive elements of a single
+effect). The predicted category ordering holds in raw shift magnitude. A sensitivity analysis
+referring each text to its own conditional sampling null, however, shows that at this sample size
+the ordering cannot be told apart from the dispersion in the baseline votes. Lastly, models move
+in the same \emph{direction} as human shifts better than chance, though only weakly, and human
+shifts are substantially larger in \emph{magnitude} than model shifts. This difference in
+magnitude does not vanish when both sides are standardised to exactly the same number of votes.
+
+Two outcomes are reported as negative or near-negative rather than smoothed out. After testing
+both human and model shifts, virtually no single per-emotion shift passes multiple-comparison
+correction (7 of 66, forming a small but directionally coherent pattern on the model side, rather
+than scattered noise). And the exploratory analysis did not detect a prompt-design effect on the size of the
+model framing effect. Another finding is methodological in nature, and it reveals most sharply
+why the representation matters. Run the same statistical test on the chosen label instead of the
+entire distribution, and it rejects the null in \textbf{1} of 6 tests establishing H1 under a
+reverse-alphabetical tie-break rule, and \textbf{0} under the alphabetical rule used throughout
+this thesis (only these two otherwise-arbitrary rules were tested); the distributional test
+rejects it in 3 of them regardless. Using a chosen label, this study would have detected a
+statistically significant human framing effect in at best one of six H1 tests, or none at all
+under its own convention. More broadly, across all comparisons, two fifths of both human and model
+comparisons shifted in ways a selected-label analysis would have recorded as no change whatsoever.
+This value is also convention-dependent: when the label method is credited with tracking the full
+set of tied top emotions rather than only the alphabetically chosen one, the human figure drops to
+about a quarter (25.8\%), while the model figure stays substantially unchanged (38.7\%).
+
+Collectively, these findings support three conclusions: author framing is an actual and
+measurable factor affecting the interpretation of emotion, language models are sensitive to it,
+and the resemblance between human and model behaviour is partial and directional rather than
+close.

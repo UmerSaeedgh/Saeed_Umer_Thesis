@@ -1,0 +1,3 @@
+source,all_comparisons,selected_label_unchanged,moved_with_same_selected_label,hidden_pct_of_all,hidden_pct_of_unchanged_labels,moved_with_same_complete_top_set,same_top_set_hidden_pct
+Human,600,283,232,38.666666666666664,81.97879858657244,155,25.833333333333336
+LLM,3600,2938,1492,41.44444444444444,50.78284547311096,1393,38.69444444444444

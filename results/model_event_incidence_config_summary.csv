@@ -1,0 +1,6 @@
+event,mean,min,max
+gain_any,138.83333333333334,132,148
+hidden_top,171.16666666666666,164,188
+loss_any,105.5,95,121
+same_support_change,71.33333333333333,66,81
+strict_proportion,44.166666666666664,34,53

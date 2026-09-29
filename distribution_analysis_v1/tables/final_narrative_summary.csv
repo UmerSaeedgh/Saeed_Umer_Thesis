@@ -1,0 +1,8 @@
+Question,Conclusion
+H1: human framing,Qualified partial support; use six Holm-adjusted tests above. Nonsignificant controls do not establish no effect.
+H2: model framing,Recorded label differences and paired-TV coordination are distinct evidence. Preserve model pairing; joint exchangeability across configurations remains an assumption.
+H3: category ordering,Raw ordering present; the direct AR-minus-AI contrast is not robust to the conditional-null reference. Report both estimands.
+H4: magnitude,"The common-model gap remains positive after three-vote standardization. This is an empirical difference, not an isolated intrinsic-sensitivity effect."
+H4: direction,Small conditional average-delta alignment. Averaging personas before cosine can cancel effects; do not equate it with persona-specific alignment.
+Prompt comparisons,Exploratory TV analysis; no rejection is not prompt equivalence or a statement about accuracy.
+Vector added value,"Distinguishes redistribution, changes in observed emotion support, tie changes, direction and size. All-valid and common-model figures retain their own denominators."

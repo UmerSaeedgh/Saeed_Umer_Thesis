@@ -1,0 +1,301 @@
+text_id,category,tv_distance
+21,Author-Relevant Ambiguous,0.6666666666666666
+2105,Author-Relevant Ambiguous,0.5
+2142,Author-Independent Ambiguous,0.3333333333333333
+2143,Unambiguous,0.25
+2161,Author-Independent Ambiguous,0.5833333333333334
+2163,Unambiguous,0.3333333333333333
+2168,Author-Relevant Ambiguous,0.5
+2172,Author-Relevant Ambiguous,0.5
+2182,Author-Relevant Ambiguous,0.6666666666666666
+2187,Author-Relevant Ambiguous,0.6666666666666666
+2198,Author-Relevant Ambiguous,0.5
+2211,Unambiguous,0.6666666666666666
+2212,Author-Relevant Ambiguous,0.6666666666666667
+2213,Author-Relevant Ambiguous,0.5416666666666666
+2218,Author-Relevant Ambiguous,0.8333333333333334
+2224,Author-Relevant Ambiguous,0.6666666666666666
+2228,Author-Independent Ambiguous,0.6666666666666666
+249,Author-Independent Ambiguous,0.5416666666666666
+253,Author-Relevant Ambiguous,0.8333333333333333
+272,Author-Independent Ambiguous,0.1666666666666666
+276,Author-Independent Ambiguous,0.2666666666666666
+281,Author-Independent Ambiguous,0.5
+287,Unambiguous,0.6666666666666666
+31015,Unambiguous,0.8333333333333333
+31060,Unambiguous,0.5
+3107,Author-Independent Ambiguous,0.5
+31077,Unambiguous,0.3333333333333333
+31089,Unambiguous,0.75
+31147,Author-Relevant Ambiguous,0.5
+31154,Author-Relevant Ambiguous,0.5
+3117,Author-Relevant Ambiguous,0.8333333333333333
+31177,Author-Independent Ambiguous,0.6666666666666666
+31179,Author-Independent Ambiguous,0.6666666666666666
+3118,Unambiguous,0.3333333333333333
+31181,Author-Relevant Ambiguous,0.7333333333333334
+31207,Author-Relevant Ambiguous,0.6666666666666667
+31234,Author-Relevant Ambiguous,0.5666666666666667
+31292,Unambiguous,0.8333333333333333
+31313,Author-Relevant Ambiguous,0.4166666666666666
+31317,Author-Relevant Ambiguous,0.3666666666666666
+31346,Author-Relevant Ambiguous,0.3333333333333333
+31378,Author-Relevant Ambiguous,0.3333333333333333
+31387,Author-Relevant Ambiguous,0.8333333333333333
+31398,Author-Relevant Ambiguous,1.0
+315,Unambiguous,0.5
+3267,Author-Independent Ambiguous,1.0
+3283,Author-Independent Ambiguous,1.0
+3290,Author-Relevant Ambiguous,0.5
+3292,Unambiguous,0.2
+3319,Author-Independent Ambiguous,0.3333333333333333
+3328,Unambiguous,0.8333333333333333
+3338,Author-Independent Ambiguous,0.6666666666666666
+3339,Author-Independent Ambiguous,0.5
+3344,Unambiguous,0.5
+3348,Author-Relevant Ambiguous,0.8333333333333333
+3370,Author-Independent Ambiguous,0.7333333333333334
+340,Unambiguous,0.3333333333333333
+3426,Unambiguous,0.8333333333333334
+3431,Unambiguous,0.125
+3443,Unambiguous,0.1666666666666666
+3469,Unambiguous,0.0
+3481,Author-Independent Ambiguous,0.3333333333333333
+3493,Author-Independent Ambiguous,0.5
+3514,Author-Independent Ambiguous,1.0
+3528,Author-Relevant Ambiguous,0.5
+3538,Author-Relevant Ambiguous,0.5416666666666666
+3579,Author-Relevant Ambiguous,0.5
+3618,Author-Relevant Ambiguous,0.4583333333333333
+3620,Unambiguous,0.5416666666666666
+3639,Author-Independent Ambiguous,0.3333333333333333
+3641,Author-Relevant Ambiguous,0.7333333333333334
+3645,Author-Independent Ambiguous,0.6666666666666666
+3649,Author-Independent Ambiguous,0.5333333333333334
+378,Author-Relevant Ambiguous,0.3333333333333333
+3833,Author-Independent Ambiguous,0.3333333333333333
+3857,Unambiguous,0.5
+3864,Author-Independent Ambiguous,0.5
+387,Unambiguous,0.75
+3936,Author-Independent Ambiguous,0.6666666666666666
+3937,Unambiguous,0.3749999999999999
+3942,Unambiguous,0.5416666666666666
+3964,Author-Independent Ambiguous,0.3
+3966,Unambiguous,0.4666666666666666
+3975,Author-Relevant Ambiguous,0.6666666666666666
+41082,Unambiguous,0.8333333333333333
+4117,Author-Independent Ambiguous,0.1666666666666666
+41208,Author-Independent Ambiguous,0.3333333333333333
+41228,Unambiguous,0.5
+41239,Unambiguous,0.0
+41260,Author-Independent Ambiguous,0.6666666666666666
+41311,Author-Independent Ambiguous,0.3333333333333333
+41378,Unambiguous,0.6666666666666666
+414,Author-Independent Ambiguous,0.6666666666666667
+41415,Author-Independent Ambiguous,0.4166666666666666
+4146,Unambiguous,0.2499999999999999
+4150,Unambiguous,0.6666666666666667
+41548,Author-Relevant Ambiguous,0.5
+41581,Author-Relevant Ambiguous,0.5
+41600,Author-Relevant Ambiguous,0.4
+41606,Author-Relevant Ambiguous,0.2083333333333333
+41629,Author-Relevant Ambiguous,0.3333333333333333
+41641,Unambiguous,0.3333333333333333
+41660,Author-Relevant Ambiguous,1.0
+41671,Author-Relevant Ambiguous,0.5416666666666666
+41688,Unambiguous,0.8333333333333333
+41722,Author-Relevant Ambiguous,0.5
+41744,Author-Relevant Ambiguous,0.6666666666666666
+41759,Author-Relevant Ambiguous,0.7333333333333334
+41789,Unambiguous,0.3333333333333333
+41791,Author-Independent Ambiguous,0.6666666666666666
+41795,Author-Independent Ambiguous,0.3749999999999999
+41840,Author-Independent Ambiguous,0.6666666666666667
+41857,Author-Independent Ambiguous,0.6666666666666666
+41862,Author-Relevant Ambiguous,0.5416666666666666
+437,Unambiguous,0.25
+4387,Author-Independent Ambiguous,0.6666666666666666
+441,Author-Relevant Ambiguous,1.0
+4410,Author-Independent Ambiguous,1.0
+4431,Unambiguous,0.125
+4454,Unambiguous,0.4333333333333333
+4490,Unambiguous,0.6666666666666666
+4497,Unambiguous,0.6666666666666666
+4510,Author-Independent Ambiguous,0.875
+4519,Unambiguous,0.5
+4571,Author-Relevant Ambiguous,0.8333333333333333
+4573,Author-Relevant Ambiguous,0.8333333333333333
+458,Unambiguous,0.5833333333333333
+4592,Author-Relevant Ambiguous,0.6666666666666666
+4594,Author-Independent Ambiguous,0.5
+4609,Author-Independent Ambiguous,0.7083333333333334
+4636,Author-Independent Ambiguous,0.5952380952380951
+4671,Author-Independent Ambiguous,0.4
+476,Author-Independent Ambiguous,0.6666666666666666
+481,Unambiguous,0.1666666666666666
+4817,Author-Independent Ambiguous,0.2916666666666666
+4868,Author-Independent Ambiguous,0.2916666666666666
+4874,Unambiguous,0.5
+494,Author-Independent Ambiguous,0.5
+51023,Author-Independent Ambiguous,0.5666666666666667
+5105,Author-Relevant Ambiguous,0.6666666666666666
+51054,Author-Relevant Ambiguous,0.8333333333333333
+51081,Author-Relevant Ambiguous,0.6666666666666666
+51082,Author-Independent Ambiguous,1.0
+51236,Unambiguous,0.0
+51249,Unambiguous,0.4166666666666666
+51258,Unambiguous,0.0
+51263,Author-Independent Ambiguous,0.5
+51275,Author-Relevant Ambiguous,0.875
+51285,Author-Independent Ambiguous,0.5
+5130,Author-Independent Ambiguous,0.1666666666666666
+51329,Author-Relevant Ambiguous,0.1666666666666666
+51577,Author-Independent Ambiguous,0.7083333333333333
+51593,Unambiguous,0.5416666666666666
+51598,Author-Relevant Ambiguous,0.6666666666666666
+51632,Unambiguous,0.3666666666666667
+51653,Author-Relevant Ambiguous,0.0
+5166,Unambiguous,0.5
+51688,Unambiguous,0.1666666666666666
+51705,Author-Independent Ambiguous,0.8333333333333333
+51710,Unambiguous,0.5
+51713,Author-Independent Ambiguous,0.3749999999999999
+51792,Unambiguous,0.1666666666666666
+51835,Author-Independent Ambiguous,0.8333333333333334
+51837,Unambiguous,0.5
+51882,Author-Independent Ambiguous,0.5
+51929,Author-Independent Ambiguous,0.3333333333333333
+51945,Author-Independent Ambiguous,0.5
+51946,Author-Independent Ambiguous,0.1666666666666666
+51953,Unambiguous,0.5
+51962,Author-Relevant Ambiguous,0.5
+52029,Unambiguous,0.3333333333333333
+52046,Author-Independent Ambiguous,0.3333333333333333
+52050,Unambiguous,0.0
+52051,Unambiguous,0.1666666666666666
+5206,Author-Independent Ambiguous,0.5
+52077,Unambiguous,0.3333333333333333
+521,Author-Independent Ambiguous,0.2333333333333333
+52102,Unambiguous,0.6666666666666666
+52157,Unambiguous,0.3333333333333333
+52176,Author-Independent Ambiguous,0.875
+52184,Unambiguous,0.5
+52217,Unambiguous,0.1666666666666666
+52225,Unambiguous,0.9
+5225,Author-Independent Ambiguous,0.5
+52289,Author-Independent Ambiguous,0.6333333333333333
+52316,Author-Relevant Ambiguous,0.5
+52338,Author-Relevant Ambiguous,0.875
+52365,Author-Relevant Ambiguous,0.7083333333333333
+52369,Author-Relevant Ambiguous,0.6666666666666666
+52371,Author-Relevant Ambiguous,1.0
+52373,Author-Relevant Ambiguous,0.0999999999999999
+52398,Unambiguous,0.3333333333333333
+52434,Author-Relevant Ambiguous,0.2
+52441,Author-Relevant Ambiguous,0.5
+52448,Unambiguous,0.8333333333333334
+52458,Author-Relevant Ambiguous,0.875
+525,Author-Independent Ambiguous,0.5
+52501,Unambiguous,0.3333333333333333
+52520,Author-Relevant Ambiguous,0.6666666666666666
+52550,Author-Relevant Ambiguous,0.5
+52584,Author-Relevant Ambiguous,0.8333333333333334
+52591,Author-Relevant Ambiguous,0.5
+52596,Author-Relevant Ambiguous,0.5833333333333333
+52598,Author-Relevant Ambiguous,0.6666666666666666
+52614,Author-Independent Ambiguous,0.6666666666666666
+52625,Author-Relevant Ambiguous,0.8333333333333333
+52626,Author-Relevant Ambiguous,0.5
+52635,Author-Relevant Ambiguous,0.8333333333333334
+52645,Author-Relevant Ambiguous,0.875
+52658,Author-Relevant Ambiguous,0.4666666666666667
+52679,Author-Independent Ambiguous,0.8333333333333333
+52709,Author-Relevant Ambiguous,0.1666666666666666
+52768,Author-Relevant Ambiguous,0.6666666666666666
+52777,Author-Independent Ambiguous,0.8333333333333334
+52784,Author-Relevant Ambiguous,0.75
+52822,Unambiguous,0.8333333333333333
+52823,Author-Independent Ambiguous,0.5
+52828,Author-Relevant Ambiguous,0.5
+52829,Author-Relevant Ambiguous,0.8333333333333333
+52833,Unambiguous,0.6666666666666666
+52859,Author-Relevant Ambiguous,0.625
+52860,Unambiguous,0.3333333333333333
+52866,Author-Relevant Ambiguous,0.6666666666666666
+52895,Author-Relevant Ambiguous,0.5
+5502,Unambiguous,0.575
+553,Author-Independent Ambiguous,0.3333333333333333
+5575,Author-Relevant Ambiguous,0.6666666666666666
+5580,Unambiguous,0.1666666666666666
+5600,Author-Independent Ambiguous,0.125
+5609,Author-Relevant Ambiguous,0.3333333333333333
+5639,Author-Relevant Ambiguous,0.5
+5641,Author-Independent Ambiguous,0.0
+5642,Author-Relevant Ambiguous,0.6666666666666666
+5680,Unambiguous,0.8333333333333334
+5688,Author-Independent Ambiguous,0.6666666666666666
+5691,Author-Independent Ambiguous,0.6666666666666666
+5704,Unambiguous,0.3333333333333333
+5720,Author-Independent Ambiguous,0.3333333333333333
+5725,Author-Independent Ambiguous,0.4833333333333333
+5730,Unambiguous,0.5
+5802,Author-Independent Ambiguous,0.6666666666666667
+5830,Unambiguous,0.1666666666666666
+5856,Unambiguous,0.6666666666666666
+588,Author-Independent Ambiguous,0.2666666666666666
+5880,Unambiguous,0.3333333333333333
+5914,Unambiguous,0.6666666666666667
+594,Author-Independent Ambiguous,0.5416666666666666
+5951,Author-Independent Ambiguous,0.5833333333333333
+5986,Unambiguous,0.4166666666666666
+61021,Author-Relevant Ambiguous,0.5416666666666666
+61031,Unambiguous,0.3333333333333333
+61055,Author-Relevant Ambiguous,0.5
+61071,Unambiguous,0.4666666666666667
+61094,Author-Independent Ambiguous,0.5
+61099,Unambiguous,0.8333333333333334
+61101,Author-Relevant Ambiguous,0.7083333333333333
+612,Unambiguous,1.0
+6218,Author-Relevant Ambiguous,0.8333333333333333
+6221,Author-Independent Ambiguous,0.5
+6228,Unambiguous,0.3333333333333333
+623,Author-Independent Ambiguous,0.6666666666666666
+6288,Unambiguous,0.3333333333333333
+6304,Author-Independent Ambiguous,0.5416666666666666
+6306,Author-Independent Ambiguous,0.5
+6337,Author-Relevant Ambiguous,0.6666666666666666
+6403,Author-Independent Ambiguous,0.5666666666666667
+6407,Author-Relevant Ambiguous,0.5
+641,Unambiguous,0.5
+6440,Unambiguous,0.4166666666666666
+6450,Author-Independent Ambiguous,0.5416666666666666
+6499,Author-Independent Ambiguous,0.6666666666666666
+6524,Unambiguous,0.1666666666666666
+657,Author-Independent Ambiguous,0.2666666666666666
+6649,Author-Independent Ambiguous,0.7083333333333334
+6696,Author-Independent Ambiguous,0.1666666666666666
+6732,Unambiguous,0.3333333333333333
+6761,Unambiguous,0.3333333333333333
+6768,Unambiguous,0.4
+6789,Unambiguous,0.6666666666666666
+6804,Author-Independent Ambiguous,0.3
+6829,Unambiguous,0.3333333333333333
+6848,Unambiguous,0.375
+6869,Author-Independent Ambiguous,0.625
+6938,Author-Relevant Ambiguous,0.8333333333333333
+6957,Author-Independent Ambiguous,1.0
+6997,Unambiguous,0.2999999999999999
+7134,Unambiguous,0.3333333333333333
+7147,Author-Independent Ambiguous,0.8333333333333333
+7160,Author-Relevant Ambiguous,0.5833333333333333
+7164,Unambiguous,0.6666666666666667
+7179,Author-Independent Ambiguous,0.8333333333333333
+7180,Author-Independent Ambiguous,0.75
+7193,Unambiguous,0.75
+7198,Author-Relevant Ambiguous,0.5
+7200,Author-Relevant Ambiguous,0.3333333333333333
+762,Unambiguous,0.3333333333333333
+783,Unambiguous,0.3333333333333333
+825,Author-Relevant Ambiguous,0.7333333333333334
+922,Author-Independent Ambiguous,0.3333333333333333
+99,Author-Relevant Ambiguous,0.6666666666666666

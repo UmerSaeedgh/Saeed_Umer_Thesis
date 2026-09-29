@@ -1,0 +1,11 @@
+,source,event,comparisons,denominator,percent,texts_with_event,text_denominator
+0,Human,No distribution change,51,600,8.5,44,300
+1,Human,Same emotions; proportions change,13,600,2.166666666666667,13,300
+2,Human,Emotions appear only,152,600,25.333333333333336,114,300
+3,Human,Emotions disappear only,65,600,10.833333333333334,57,300
+4,Human,Emotions appear AND disappear,319,600,53.166666666666664,211,300
+5,LLM,No distribution change,1446,3600,40.166666666666664,245,300
+6,LLM,Same emotions; proportions change,543,3600,15.083333333333334,153,300
+7,LLM,Emotions appear only,699,3600,19.416666666666664,197,300
+8,LLM,Emotions disappear only,530,3600,14.722222222222223,173,300
+9,LLM,Emotions appear AND disappear,382,3600,10.61111111111111,112,300

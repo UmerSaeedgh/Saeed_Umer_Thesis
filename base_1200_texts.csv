@@ -1,0 +1,1201 @@
+text_id,text,author_emotion,word_count,char_count,n_readers,reader_majority,majority_share,n_distinct_emotions,author_matches_readers
+21,I went outside my house to find a dozen large boxes had been delivered by my father in law for a thousand canning jars that we didn't want.,anger,28,139,5,anger,0.6,3,True
+23,"the side of my car got sideswiped, leaving a lot of damage which cost a lot of money to repair which wasn't my fault.",anger,24,117,5,anger,1.0,1,True
+26,A person close to me belittled my actions,anger,8,41,5,anger,0.6,2,True
+213,I am struggling financially and it is not my fault.,anger,10,51,5,anger,0.8,2,True
+393,I was treated unfairly by other people.,anger,7,39,5,sadness,0.6,2,False
+399,I felt anger when I walked outside to my garden and saw that deer ate a lot of the plants,anger,20,89,5,anger,0.8,2,True
+3107,my mother made me feel like a child,anger,8,35,5,shame,0.6,3,False
+3113,I felt anger when another driver pulled out Infront of me on a very dangerous road and almost caused me to crash,anger,22,112,5,anger,0.8,2,True
+3117,I was cheated on.,anger,4,17,5,disgust,0.4,3,False
+3118,A man was walking late at night with his dog off a leash. It ran into my garden and killed my sleeping cat. He walked away without saying or doing anything until he saw me chasing after him down the street with a large kitchen knife.,anger,46,233,5,anger,1.0,1,True
+30,my partner gaslights me to get money from me for alcohol and cannabis,anger,13,69,5,anger,0.8,2,True
+39,When my partner didn’t help with kids and just slept in with out a care or consideration,anger,17,88,5,anger,0.6,3,True
+313,Because I've lost some money for a while.,anger,8,41,5,guilt,0.4,3,False
+314,My ex broke up with me,anger,6,22,5,sadness,1.0,1,False
+315,"I felt ANGER the other day because our fire alarm in the building went off as Tropical Storm Ida came through - we had to stand outside in a torrential downpour. I had my cat with me and she was freaking out as well. My boyfriend told us to go to his car to sit since we were drenched and the rain was not going to stop anytime soon. We got in the car and my cat was still freaking out - my roommate wanted my boyfriend to turn on some music and make it loud. We both told him no because my cat was having trouble with everything going on. Also, she is 17, so she is quite old, so I worry about her stress levels. After we told him no, he then proceeded to sing VERY loudly and when we scowled at him for it, he said ""well she is meowing and stressed either way"", and he did not care that she was having trouble and that I was trying to calm her down. That made me angry.",anger,180,871,5,anger,1.0,1,True
+323,"I was travelling on a country road when a car was pulling out from a side lane, the driver stopped at the junction than proceeded to pull out on front of me. I had to perform an emergency stop  to avoid driving into the car. The driver went down the road and I caught with her at a junction and had strong words.",anger,63,312,5,anger,0.8,2,True
+340,A next door neighbour has once again started running generators and power tools.,anger,13,80,5,anger,1.0,1,True
+347,I felt anger when my partner invalidated my feelings.,anger,9,53,5,sadness,0.6,3,False
+348,my mom’s boyfriend was arguing with me,anger,7,38,5,anger,0.6,2,True
+349,My best friend found out he had been cheated on for over 2 years.,anger,14,65,5,anger,0.6,3,True
+352,I felt anger when my boyfriend got upset about me going out to a bar with my friends because he doesn't trust me and he has no reason not to,anger,30,140,5,anger,0.6,3,True
+358,"I remember couple of weeks ago while driving, a man hit my car from behind and he didn't bother apologizing or wasn't remorseful towards the situation. I got quite upset because he was trying to put the blame on me and was angered that I almost hit him due to the rage in me.",anger,54,275,5,anger,0.8,2,True
+363,"when my mom makes comments about what I eat ( happens often) i know its from her insecurities but she knows i work out everyday and still feels the need to make comments like ""you're going to eeat all that.. didnt you just eat etc)",anger,45,231,5,anger,0.4,4,True
+367,My mom body-shamed me,anger,4,21,5,shame,0.6,2,False
+378,"I felt anger when my mom did something wrong and immature. When I tried to talk to her about how wrong her behaviour was, she gaslight me and played the vicitm.",anger,31,160,5,disgust,0.4,3,False
+381,I got jumped at the store and lost all my money,anger,11,47,5,anger,0.6,2,True
+382,a work colleague did not fulfil a task that she was supposed to.,anger,13,64,5,no-emotion,0.6,2,False
+387,I misplaced my car keys,anger,5,23,5,anger,0.8,2,True
+466,someone moved my personal belongings,anger,5,36,5,anger,0.8,2,True
+468,I found out my ex partner had been unfaithful.,anger,9,46,5,anger,0.4,4,True
+476,My ex partner lied to me for 4 years and when I found out he showed no remorse and treated me like I was the one in the wrong,anger,29,125,5,anger,0.6,3,True
+47,one of my friends hit another one of my friends while drunk.,anger,12,60,5,surprise,0.4,3,False
+410,My ex boyfriend started dating a new girl only a few months after he broke up with me.,anger,18,86,5,sadness,0.4,3,False
+414,My waters broke early during pregnancy,anger,6,38,5,fear,1.0,1,False
+417,My home insurance company messed up my insurance claim,anger,9,54,5,anger,1.0,1,True
+428,Someone I interact with at work called me at 5pm the evening before a bank holiday to complain about an email update I had sent,anger,25,127,5,anger,0.8,2,True
+429,When someone threatened me in front of my children,anger,9,50,5,anger,0.4,4,True
+437,.. when a person I served at work ignored what I asked causing me to make a computer error,anger,19,90,5,anger,0.8,2,True
+438,My ex boyfriend would control whatI did and who I could see,anger,12,59,5,anger,0.8,2,True
+439,"My son was moved down to a lower level team so that the son of his position coach could move to the varsity level team. In the game right after this happened, his son was responsible for multiple penalty plays and committed multiple errors.",anger,44,240,5,anger,0.8,2,True
+441,I felt anger because my boyfriend cheated on me,anger,9,47,5,anger,0.6,3,True
+449,"my friend said something offensive to me, I voiced that I was hurt, and he invalidated my feelings.",anger,18,99,5,sadness,0.8,2,False
+454,Although I work full time I still have to do all the housework,anger,13,62,5,boredom,0.4,3,False
+458,"An older man was in the wrong lane at a round about. He nearly hit me, I had to slam on and his answer was well move then I didn’t hit you, it’s no big deal!",anger,36,157,5,anger,1.0,1,True
+4146,I felt ANGER when I was at uni and someone stole my fishcake from the freezer. Had nothing to eat in the evening that day.,anger,25,122,5,anger,0.8,2,True
+4150,My mother invited my unvaccinated sister and her son over to play with my kids without my knowledge.,anger,18,100,5,anger,0.8,2,True
+4151,robbed and vunrable,anger,3,19,5,fear,1.0,1,False
+4155,My partner moved out while I was at work,anger,9,40,5,sadness,0.6,3,False
+4117,I got a low score on my biology quiz.,anger,9,37,5,shame,0.4,3,False
+479,I felt anger when my sister assumed I would watch her children because I felt she was taking advantage,anger,19,102,5,anger,0.6,3,True
+481,i was in a restaurant and they forgot my order but they blamed me for it. i was still charged for the meal even though i never received it.,anger,29,139,5,anger,0.8,2,True
+494,my husband left the house in a mess,anger,8,35,5,anger,0.6,3,True
+495,I have to go to work,anger,6,20,5,no-emotion,0.6,2,False
+594,My dad died suddenly,anger,4,20,5,sadness,0.8,2,False
+5103,My daughter wasn’t invited to her best friends birthday party because her mum doesn’t like her,anger,16,94,5,sadness,1.0,1,False
+5105,My teenage son lies in bed all day,anger,8,34,5,sadness,0.6,3,False
+5109,Four years ago I lost my favorite wristwatch that my wife gave me.,anger,13,66,5,sadness,0.6,3,False
+510,When my workplace asked us to start working in the office again,anger,12,63,5,fear,0.4,4,False
+517,I felt anger when details of the Sarah Everard case came out.,anger,12,61,5,disgust,0.6,2,False
+521,A child that I was looking after was refusing to get off the bathroom floor and she needed to go to bed. Whenever I intervened she pushed me away,anger,29,145,5,anger,0.4,4,True
+525,my neighbour rudely woke us and the whole neighbourhood up when she came back from the pub drunk and then was trying to smash up her boyfriend van,anger,28,146,5,anger,0.6,2,True
+548,when my girlfriend said i was ugly,anger,7,34,5,sadness,0.4,4,False
+553,a colleague entered a new situation at work and was annoyed and moaning rather than coming to me first to ask questions about the situation they had assumed the worst.,anger,30,167,5,anger,0.6,3,True
+559,I felt anger because i missed my bus and i was already later for a meeting.,anger,16,75,5,anger,0.6,3,True
+560,I lost in a video game after I had invested over 45 minutes in trying to complete a level in the game. I was angry because I had lost all my progress and the past 45 minutes felt like they counted for nothing and were wasted.,anger,46,225,5,anger,0.8,2,True
+562,"My husband missed an important call, because his phone was on silent AGAIN!",anger,13,75,5,anger,1.0,1,True
+564,a colleague took credit for my hard work,anger,8,40,5,anger,1.0,1,True
+583,I was questioned on how much effort I put into my work. I had given it my best and that was seen as lazy and unfinished work in my supervisor's view. I was angry that my work was considered subpar and bothered me a lot.,anger,45,219,5,anger,0.8,2,True
+588,when i was cheated on,anger,5,21,5,anger,0.6,3,True
+589,I felt anger when my partner waited to tell me 3 months later that he had texted his ex-partners.,anger,19,97,5,disgust,0.8,2,False
+5189,my housemate couldn't find room in the freezer for his shopping and took one of my items out and just left it carelessly in the fridge and defrosted,anger,28,148,5,anger,1.0,1,True
+5206,unfair things happen,anger,3,20,5,sadness,1.0,1,False
+5208,"I felt anger when an internet order would not refund my properly for their mistake and when I emailed to explain the problem they just sent back automated answers that didn’t answer. So after 4 emails a person finally answered and then agreed to refund, however the refund when it came through wasn’t all the money back!",anger,57,320,5,anger,1.0,1,True
+5210,A friend who I thought was a friend turned out to not be,anger,13,56,5,sadness,0.4,4,False
+5225,People make plans and then cancel last moment with no intention to tell me.,anger,14,75,5,anger,0.4,3,True
+5238,my sports team lost on the weekend,anger,7,34,5,sadness,0.8,2,False
+5158,a neighbour chucked rubbish into our garden,anger,7,43,5,anger,0.8,2,True
+5166,my permanent work contract was not offered to me at the end of my 6 month term even though it was promised it would be,anger,25,118,5,anger,1.0,1,True
+5123,i felt anger when i lost my traveling ticket which am supposed to use and travel for an event.,anger,19,94,5,anger,0.4,4,True
+5130,I was ignored by my last manager when I informed her of my leaving the company. They did not acknowledge my email I sent.,anger,24,121,5,anger,0.6,2,True
+5145,"Asking my fiancé to help with an errand. She immediately said no, citing personal errands she had to run, which included going to one of the places I needed help with… the bank.",anger,33,177,5,anger,0.8,2,True
+5149,my mother is dismissive of my truths/when I am upset and she doesn't feel like dealing with it,anger,18,94,5,anger,0.6,2,True
+60,"I felt ANGER when my fantasy football team didn't perform well due to injuries and illnesses on my team. Although my anger was not at the players themselves, I still felt myself feeling ill will towards the players despite their injuries being out of their control. At the end of the day, I understand that my fantasy football team having the most injuries out of my league was pure chance.",anger,70,390,5,anger,0.8,2,True
+68,I was trying to explain to my parents and sister how certain things they were saying was actually transphobic and that they shouldn't say this kind of stuff. They proceeded to ignore me and continue what they were saying anyway. They said that they weren't being transphobic and that I can't make every situation into some kind 'woke culture' thing. Those weren't the words they used but it's essentially what they meant. I got really upset and angry with them and shouted at them saying I was just trying to help make them decent people and I stormed out of the room.,anger,102,568,5,anger,1.0,1,True
+69,"My business partner, someone I trusted, went behind my back and communicated a change to the entire organization without involving/consulting me.",anger,21,145,5,anger,0.8,2,True
+612,I witnessed a resident being emotionally abused by a carer in the care home where I worked.,anger,17,91,5,anger,0.8,2,True
+614,when youths dont respect their elders,anger,6,37,5,shame,0.4,4,False
+617,I felt anger when a former friend I sold a jeep to sued me because they didn't know what they were doing.,anger,22,105,5,anger,0.8,2,True
+620,my teenage child blocked the toilet and lied,anger,8,44,5,disgust,0.8,2,False
+623,A friend took over my own opinion and discredited how I felt,anger,12,60,5,sadness,0.6,3,False
+628,"I felt anger because my college professors were being unresponsive to important emails regarding a certain assignment, The professor said that they would be available to answer questions within the time frame that I emailed, but they did not respond until after the assignment was due.",anger,46,285,5,anger,1.0,1,True
+641,I felt anger when I got a bad mark on an assignment because of unfair marking.,anger,16,78,5,anger,0.8,2,True
+657,A colleague was always off work.,anger,6,32,5,anger,0.4,3,True
+670,I was wrongly accused of stealing,anger,6,33,5,anger,0.8,2,True
+678,I felt angry when I was consistently denied access to higher education despite my overwhelmingly good grades,anger,17,108,5,anger,0.6,2,True
+686,I felt anger when I finally quit my job.,anger,9,40,5,relief,0.8,2,False
+689,when I was playing a game with friends I stated that we needed to have a tank but noone wanted to listen,anger,22,104,5,anger,0.4,3,True
+690,My Grandfather critizied my parenting,anger,5,37,5,shame,0.6,2,False
+90,I was lied to about money,anger,6,25,5,anger,0.4,4,True
+93,"I felt anger a few days ago at my husband at he came across very sexist toward women, he stated that women are felt sorry for when it comes to their driving test as the make instructors feel sorry for them because they are women who do school run, he's also made it very clear that he thinks women complain to much about safety, this made me feel disgusted and ashamed of him as he clearly doesn't know that women are not like this and the reason we voice our opinions is when something clearly is wrong not just because we feel like it",anger,104,536,5,anger,0.6,2,True
+220,"I get extremely bored at work. If fact that is the reason I signed up for prolific in the first place. I work in an office job and there isn't much work to do in the middle of the week. I try and cure the boredom by doing surveys, or just chatting with my co-workers, or friends on my phone.",boredom,60,291,5,boredom,1.0,1,True
+224,waiting for a delayed flight at the airport,boredom,8,43,5,boredom,0.8,2,True
+228,"When I watched WandaVision, everyone said it was worth watching but it was just boring to me",boredom,17,92,5,boredom,0.8,2,True
+230,I had to complete a couple of hours of e-learning courses for work,boredom,13,66,5,boredom,1.0,1,True
+3211,I was stuck in traffic,boredom,5,22,5,boredom,0.6,2,True
+3214,I'm at work and no one is here,boredom,8,30,5,boredom,0.4,4,True
+3220,"I went to stay withmy mum for bank holiday weekend, she put on a documentary about guide dogs and then fell asleep on the remote. So I couldn't change the channel and it was boring",boredom,35,180,5,boredom,0.8,2,True
+3223,I do the same thing over and over again,boredom,9,39,5,boredom,0.8,2,True
+3225,sitting in a 12 hour drive with my phone dead and nothing to do.,boredom,14,64,5,boredom,1.0,1,True
+3231,I was quarantined in my room with COVID.,boredom,8,40,5,boredom,1.0,1,True
+3233,I felt boredom when I attended primary school because of the teachers instructional style.,boredom,14,90,5,boredom,1.0,1,True
+3237,"stuck at home, the weather too poor to go outside. Nothing catching my interest on T.V. No motivation to tidy or read or do much of anything that'd help the time pass.",boredom,32,167,5,boredom,1.0,1,True
+3131,When I was working on a job I had no interest in,boredom,12,48,5,boredom,1.0,1,True
+3137,I was sat in bed done nothing,boredom,7,29,5,boredom,0.8,2,True
+3138,I was home alone last Saturday night waiting for my friend to arrive and she was later than I had expected.,boredom,21,107,5,fear,0.6,3,False
+3140,I am usually home alone and I don't have a social life.,boredom,12,55,5,sadness,0.6,3,False
+3143,when im at home alone because im always either watching tv or my laptop,boredom,14,71,5,boredom,0.6,3,True
+3150,I took my last prolific survey,boredom,6,30,5,no-emotion,0.6,3,False
+3157,when the power went off in the evening there was nothing to do in the house as the shops were shut and nothing to do but go to sleep.,boredom,29,133,5,boredom,0.8,2,True
+3159,I had nothing to do for the day. I usually hang out with my boyfriend or my mum who i live with but both my mum and boyfriend were busy with work for the day. I didn't have anything to do and I was sick of scrolling through social media.,boredom,50,237,5,boredom,1.0,1,True
+3170,I felt boredom when we lost power and cell service at my remote cabin.,boredom,14,70,5,fear,0.8,2,False
+3187,I feel boredom whenever I am in class listening to a lecture.,boredom,12,61,5,boredom,1.0,1,True
+3189,when I was finishing my last two hours at my office job. I had completed all my tasks for the day and I couldn't start a new one because my boss was gone. I was just sitting at my desk doing nothing and I was painfully bored.,boredom,47,225,5,boredom,0.8,2,True
+3192,I have nothing to do,boredom,5,20,5,boredom,0.8,2,True
+3195,I was home alone on a Saturday and all of my friends were busy. I had also already watched the show that I wanted to watch.,boredom,26,123,5,boredom,0.8,2,True
+3207,"When attending an online work  conference (non-interactive, to learn about industry news and how to improve service - boredom after about 3 hours and got progressively worse).",boredom,27,175,5,boredom,0.8,2,True
+4163,traveling from norfolk to swansea.,boredom,5,34,5,boredom,0.6,3,True
+4165,I had my newborn baby,boredom,5,21,5,joy,0.6,3,False
+4170,I felt boredom when I had to do the dishes earlier.,boredom,11,51,5,boredom,0.6,3,True
+4174,"At work, my job is far to mind numbing and it does not challenge me.",boredom,15,68,5,boredom,1.0,1,True
+4213,Doing online training,boredom,3,21,5,boredom,0.8,2,True
+4215,my professor spoke in a monotone in my algebra class.,boredom,10,53,5,boredom,1.0,1,True
+4217,I was in a college class I was not particularly interested in.,boredom,12,62,5,boredom,1.0,1,True
+4281,I enjoy being creative but I feel like I have no creativity recently.,boredom,13,69,5,sadness,0.8,2,False
+4288,I was alone in the house and had nothing to do,boredom,11,46,5,boredom,1.0,1,True
+4290,I am left alone for too long.,boredom,7,29,5,sadness,0.8,2,False
+4304,I was waiting in a queue shopping,boredom,7,33,5,boredom,1.0,1,True
+4306,Watching a documentary with partner,boredom,5,35,5,boredom,0.4,4,True
+4317,"I have been experiencing boredom intermittently for the last month due to being unemployed. Though I have may activities I can engage with, I often spend hours just staring at my phone and feeling bored.",boredom,35,203,5,sadness,0.8,2,False
+4269,I felt boredom when I wasnt pushing myself career wise.,boredom,10,55,5,shame,0.4,3,False
+4254,I was sat through a staff meeting that was all about what we already know!,boredom,15,74,5,boredom,0.8,2,True
+5339,Waiting at the doctors yesterday to have my flu vaccination,boredom,10,59,5,boredom,0.6,2,True
+5341,"I was invigilating an exam taken by one student in a small room in which I simply had to monitor the student. I couldn't read, use my phone, talk or write.",boredom,31,155,5,boredom,1.0,1,True
+5356,I was alone with no immediate responsibilities.,boredom,7,47,5,relief,0.6,3,False
+5361,I felt boredom when I was waiting for my family member to pick me up,boredom,15,68,5,boredom,0.8,2,True
+5240,I was on a train journey,boredom,6,24,5,boredom,0.8,2,True
+5243,I got invited to a work meeting but got ignored the whole time and they spoke about things that I didn't understand or have any involvement in for over an hour,boredom,31,159,5,anger,0.6,3,False
+5247,I played the same video game for nine hours,boredom,9,43,5,boredom,0.4,3,True
+5254,Had a boring project at work,boredom,6,28,5,surprise,0.4,4,False
+5257,waiting at the dentist office because my appointment was delayed,boredom,10,64,5,boredom,0.6,2,True
+5263,I was attending a work meeting,boredom,6,30,5,boredom,1.0,1,True
+5276,I was waiting what felt like a very long time for my coffee order,boredom,14,65,5,boredom,0.6,2,True
+5284,I was at work and we didnt have any checks come into the kithchen for over 2 hours,boredom,18,82,5,boredom,0.8,2,True
+5298,"i felt boredom when i finish everything im doing for the day, i make dinner, and sit down, and my husband puts on something i am really uninterested inn on the television. the build up to it being my opportunity to sit down and relax, with the anticlimax of being just something i am so uninterested in, makes me feel really bored",boredom,62,330,5,boredom,0.6,3,True
+5306,I went on holiday abroad for the first time. I felt bored because I didn't enjoy being on the beach doing nothing.,boredom,22,114,5,boredom,1.0,1,True
+5307,I felt boredom when it was raining at the weekend and we couldn't think of anything to do so we ended up staying in and doing nothing which made me feel as though the day was wasted.,boredom,37,182,5,boredom,0.8,2,True
+5329,"Endlessly doomscrolling through social media, then I think to myself ""I need to do something""",boredom,15,93,5,guilt,0.8,2,False
+5454,when watching a film I don't enjoy!,boredom,7,35,5,boredom,0.6,2,True
+5456,My flight was delayed for 2 hours at the airport,boredom,10,48,5,anger,1.0,1,False
+5471,In my first week of my studies when I had talks all day that were irrelevant to me.,boredom,18,83,5,boredom,1.0,1,True
+5481,"I felt boredom waiting in the doctors surgery. They were running behind on appointments so I had to wait there what felt like a long time. Most of the leaflets and reading material had been removed because of covid, chairs were far apart so no one was making conversation. I was unable to use my phone in the building.",boredom,59,318,5,boredom,1.0,1,True
+5413,I am home alone,boredom,4,15,5,no-emotion,0.4,4,False
+5420,"I was stuck in traffic on the motorway, traffic was at a stand still and there was nothing to do but wait.",boredom,22,106,5,boredom,0.8,2,True
+5371,I was on training,boredom,4,17,5,no-emotion,0.4,4,False
+5382,"sitting in biology class, because i dont understand most of the things that were going on.",boredom,16,90,5,boredom,0.8,2,True
+5388,"at work, a process failed and I had to manually enter a long list of data into a web form, this was both boring and frustrating as it took around 30 minutes to complete, was very repetitive and was only necessary because something beyond my control had gone wrong.",boredom,49,264,5,anger,0.8,2,False
+5389,I was coerced into accompanying my partner browsing the clothing department of a local shop and I was profoundly bored as my input was minimal.,boredom,25,143,5,boredom,0.8,2,True
+697,Waiting for 5+ hours for an appointment that I knew would only last minutes,boredom,14,75,5,anger,0.6,3,False
+6101,I had a long administrative task to do for owrk.,boredom,10,48,5,boredom,0.8,2,True
+6106,I felt BOREDOM because I wasn't doing anything exciting.,boredom,9,56,5,boredom,1.0,1,True
+6110,I couldn't sleep due to insomnia,boredom,6,32,5,anger,0.4,3,False
+6122,I was at a meeting at work and the topics did not relate to my role or job at all.,boredom,20,82,5,surprise,0.4,4,False
+6124,I had to check all of my ropes equipment. You have to check every single bit as well as serial numbers. It takes a long time and is very repeatative.,boredom,30,149,5,boredom,0.8,2,True
+6135,my son asked me to watch a Star Wars film with him,boredom,12,50,5,surprise,0.2,5,False
+6143,"I was made to sit through a long workshop on ""coping with the pandemic"" that was not useful at all.",boredom,20,99,5,boredom,1.0,1,True
+6144,i have no homework or work,boredom,6,26,5,relief,0.8,2,False
+6154,I had to stay in an airport for several hours and was unable to leave the secure area. It was after hours and all the airport amenities were closed,boredom,29,147,5,boredom,0.6,2,True
+6156,we wend into lockdown,boredom,4,21,5,fear,0.4,3,False
+6161,watching TV with my husband.,boredom,5,28,5,joy,0.4,4,False
+6162,I was sitting at the courthouse because I had jury duty.,boredom,11,56,5,boredom,0.6,3,True
+6170,Today when I was hone alone,boredom,6,27,5,sadness,0.4,3,False
+6174,I had to wait for my friend and they were 40 mins late,boredom,13,54,5,boredom,0.6,2,True
+6178,I was travelling on an aeroplane to Sri Lanka and he TV wasn't working so we had to just sit there and read books. We weren't prepared and struggled to sleep,boredom,31,157,5,boredom,0.8,2,True
+6181,I felt boredom when I was listening to a business presentation.,boredom,11,63,5,boredom,1.0,1,True
+6192,"I was in a cell after apparently having a bench warrant. I sat there, waiting to be let out, as the second I was placed into jail, my bail was payed. It's supposed to be a fairly quick process but I spent over 24 hours, just waiting, alone, on cold concrete, in a grey room, just looking at a wall.",boredom,60,298,5,boredom,0.4,3,True
+6204,I was in hospital for 6 days,boredom,7,28,5,fear,0.4,4,False
+6210,reading a certain book,boredom,4,22,5,joy,0.6,3,False
+71,"Watching a film,unable to leave as I was a volunteer in the cinema",boredom,13,66,5,boredom,1.0,1,True
+74,"my flight was delayed, and we were allowed onto the plane but were told that we would have to sit and wait before take off. At the time we didn't know how long this would last for, but it ended up being for about an hour and a half",boredom,49,231,5,boredom,0.8,2,True
+711,there isn't something mentally stimulating to me.,boredom,7,49,5,boredom,0.6,3,True
+713,"I felt BOREDOM when I was editing photos for a client, which kept asking for every small changes.",boredom,18,97,5,boredom,0.4,3,True
+720,I was in a mental health review and was being talked at by a psychiatrist and CPN. They were relaying my medical history and past diagnosis to me (essentially reading notes from a computer) and my mind and body just gave up listening to information I already know.,boredom,48,264,5,boredom,0.6,3,True
+726,I am studying for math midterms,boredom,6,31,5,fear,0.4,4,False
+734,"I am not doing anything productive. I find it hard to get into new hobbies so I find myself sitting at home, bored often.",boredom,24,121,5,boredom,0.6,2,True
+736,I was waiting on hold with my bank to update my travel rewards arrangements,boredom,14,75,5,boredom,1.0,1,True
+740,I was listening to a financial planner explain his choice of investment.,boredom,12,72,5,trust,0.6,2,False
+743,I felt BOREDOM recently when we lost our home internet connection for days.,boredom,13,75,5,anger,0.6,2,False
+744,"I was playing cricket with my siblings and friends. I was fielding, in the outfield. I was waiting for the ball to be hit my way and it didn't come my way for a long time. I felt very bored just standing there, waiting for the ball, when it didn't appear and I had nothing to do. I don't like playing cricket that much anyway, and when I play I like batting the most. I don't like fielding as it's mostly standing there with nothing to do. I don't like being in the outfield especially as it's even more just standing there. This particular time I stood there for ages without the ball coming near me.",boredom,116,601,5,boredom,1.0,1,True
+81,"A few weeks ago, I was not working very frequently and found myself bored as hell at home. I was caught up on all my cleaning and home chores, and would read for a few hours, journal for a few hours, but would still feel so bored every day I was not working / socializing.",boredom,55,272,5,boredom,1.0,1,True
+84,"I attended a 'tech check' meeting for a talk I am giving, and it only required maybe 30 seconds of attention from me but I had to sit through everyone else providing commentary, sharing screens, etc. It was painful to see so many struggle with basic Zoom tasks and to have to sit through all of this when it was not at all relevant to me.",boredom,66,338,5,boredom,1.0,1,True
+253,i saw the recent news on England fans,disgust,8,37,5,disgust,0.4,3,True
+255,I found some rotten onions in my cupboard that were slimy and smelly and I had to clean it up,disgust,20,93,5,disgust,1.0,1,True
+256,"i got the strawberries out of the fridge and they had gone off, exploded and gone furry.",disgust,17,88,5,disgust,1.0,1,True
+249,someone at work did not do there job properly and didn't care that it impacted severely on other,disgust,18,96,5,anger,0.8,2,False
+3328,I felt disgust when I ate a meal which had sausages and when i bit into a sausage it had gristle in it,disgust,23,102,5,disgust,1.0,1,True
+3338,I felt disgust when my best friends boyfriend at the time starting texting our other best friend flirty text messages. I was even more disgusted when I found out that she was responding to these suggestive messages and didn't see an issue with it.,disgust,44,247,5,anger,1.0,1,False
+3339,My grandad was treated poorly in hospital,disgust,7,41,5,anger,0.6,2,False
+3344,I was working in a hospital and a physio was walking a patient through the corridor in a few metres in front of me. The poor patient through no fault of her own was incontinent and had not been given a nappy. She defecated on the floor while walking with the physio and had I not been paying attention I would have walked right the the excrement.,disgust,67,346,5,disgust,1.0,1,True
+3347,when I saw someone being sick outside a shop,disgust,9,44,5,disgust,1.0,1,True
+3348,I was told the wall next to my desk at work which is currently a neutral colour is to be painted bright orange.,disgust,23,111,5,disgust,0.4,4,True
+3248,Seeing my brother picking his toe nails,disgust,7,39,5,disgust,1.0,1,True
+3254,When i see bugs or any gross stuff.And that when i feel disgust,disgust,13,63,5,disgust,0.8,2,True
+3260,my friend sent her mum round to attack my mum,disgust,10,45,5,anger,1.0,1,False
+3263,someone does something that I do not agree with/would have done in the same situation,disgust,15,85,5,disgust,0.6,3,True
+3264,"I felt disgust when my friends much older boyfriend started to distance himself by claiming he won't commit to the official status. The part that disgusted me, however, was when he gave my friend an STD and called her miscellaneous names. This disgust me because I found the entire situation appalling and disgusting.",disgust,53,317,5,anger,0.8,2,False
+3267,"I learned how mysoginistic/disrespectful my coworker is. I've gathered as much from his conversations but this event was personal. I work in the position directly under him but am capable of, and do, a lot of his work, a lot of the time. This is only because I like to stay moving while on the clock while his preferences are the opposite. I work in medicine, and we have a bag for biohazardous waste set up at a certain part of the room. I had taken the bag out but not yet replaced it. One day, he had some biohazardous waste, and instead of replacing the bag (fully capable) or asking me, he simply put his needles and other contagious things on the floor, right next to where the bag would be. When I asked him about it, he said he left it on the floor for me to pick up later. I would be regretful to see how he treats janitors and service staff.",disgust,165,851,5,disgust,0.6,2,True
+3272,I felt disgust when I found out my colleague was being bullied for her nationality,disgust,15,82,5,shame,0.4,4,False
+3274,someone dropped meat on the floor at work and used it.,disgust,11,54,5,disgust,1.0,1,True
+3283,I felt disgust when I listened to a man’s pro life views after the passing of the new Texas heartbeat law,disgust,21,105,5,disgust,0.4,4,True
+3285,"a person in a position of power at work called a coworker ""sexy"" in an email and then was surprised when they took offence.",disgust,24,123,5,surprise,0.6,2,False
+3287,my boyfriend lied to me.,disgust,5,24,5,anger,0.4,3,False
+3290,I felt disgust when I found a bug that was over six inches long in my bathroom when I was home alone and knew I had to handle it myself.,disgust,30,136,5,fear,0.6,2,False
+3292,I was watching a show and it showed someone having surgery. They were cut open on the table and their organs were being pulled out.,disgust,25,131,5,disgust,0.8,2,True
+3302,I felt DISGUST when I saw him,disgust,7,29,5,anger,0.4,4,False
+3315,"I applied for a job onetime after applying once before. I had previously found out that I had lost out to a person who already wrorked within the same team in a junior position however i was more qualified. I asked for feedback as to why i did not get the job and I was provided with an answer that told me how to improve in the future. a month later the same job came available I took onboard the advice and spent  days revising, researching  and studying for the interview. again the same thing happened. when I asked for feedback about my answers They told me that I should have answered the questions almost word for word in the way that I did indeed actually answer the question. I was disgusted that people could be treated this was as i had spent so much time working hard to secure this Job and that no matter how i interviewed the job was always destined for somebody internally.",disgust,167,888,5,anger,0.8,2,False
+3319,I felt disgust when I looked down at my shoe while washing dishes and saw I had ravioli stuck to it from the pan I had just finished scraping out.,disgust,30,146,5,surprise,0.4,3,False
+3320,When my wife pressure me to go outside.,disgust,8,39,5,anger,0.4,4,False
+3321,"I was dating a girl during high school and after some date I took her home. Normally I would just drop her off and head home myself, but this time she and her guardian invited me inside to relax before the long drive home. Once inside I discovered that her family were hoarders and rarely, if ever, would clean the house using actual products. The house had a smell to it that would differ between rooms, but it always seemed to be a sweet-and-sour kind of stench. At the time I never said anything aside from offering to clean some stuff, but it was often physically revolting to be inside the house for any extended period of time.",disgust,118,633,5,disgust,1.0,1,True
+3325,i was left told by my coach to play on defense in our football team,disgust,15,67,5,trust,0.2,5,False
+4387,My uncles family made my aunt homeless after he left his house to them after his death.,disgust,17,87,5,disgust,0.4,4,True
+4400,I felt disgusted when I walked outside to my backyard and saw a dead bird. It made me want to throw up because its gut were torn out and were splattered everywhere. It was a couple weeks ago but everytime I go to my yard I think about the little bird and the blood. It makes me want to vomit.,disgust,60,292,5,disgust,0.8,2,True
+4327,I was treated unfairly,disgust,4,22,5,disgust,0.6,2,True
+4337,I saw a man trying to seduce a girl on the street.,disgust,12,50,5,disgust,0.6,3,True
+4343,I felt DISGUST when i had to explain what being a Black person in America meant to a clueless and privileged white man who taught saying the words 'monkey' doesn't mean anything to a black person,disgust,36,195,5,anger,0.8,2,False
+4348,I was left out of a family chat.,disgust,8,32,5,sadness,1.0,1,False
+4364,because of an unprovoked attack,disgust,5,31,5,fear,0.8,2,False
+4454,I saw mouldy food,disgust,4,17,5,disgust,1.0,1,True
+4461,I felt disgust when my ex husband had his friend knock my door at 2am and run away.,disgust,18,83,5,fear,0.6,2,False
+4475,When if ound messages on my (now) ex partners phone.,disgust,10,52,5,surprise,0.2,5,False
+4431,I was walking to buy food and saw a dead rat on the street,disgust,14,58,5,disgust,0.8,2,True
+4408,when i ended a friendship because they said rude things to me,disgust,12,61,5,sadness,0.6,3,False
+4410,when my partner invalidates my feelings.,disgust,6,40,5,anger,0.8,2,False
+5575,I saw someone shouting at their wife very aggressively outside my window,disgust,12,72,5,anger,0.4,4,False
+5577,I heard about how Sarah Edvard was treated,disgust,8,42,5,disgust,0.4,3,True
+5580,I took my child into a family toilet in a shopping centre. The room was absolutely filthy and there was even poo on the floor.,disgust,25,126,5,disgust,1.0,1,True
+5600,when i read a study about eating powdered bugs,disgust,9,46,5,disgust,0.6,3,True
+5601,The doctors would help me get in touch with a dermatologist for my son,disgust,14,70,5,relief,0.8,2,False
+5603,"I feel disgust because my colleague racially abused my other black colleague, I had to speak up for my colleague.",disgust,20,113,5,disgust,0.4,4,True
+5502,a child threw up in my classroom,disgust,7,32,5,disgust,0.8,2,True
+5515,I found a rotten banana in my new car,disgust,9,37,5,disgust,1.0,1,True
+5517,Someone named me as a witness to an alleged work assault when I had not seen it,disgust,17,79,5,surprise,0.8,2,False
+5524,I was cheated on.,disgust,4,17,5,sadness,0.6,3,False
+5538,When I did not hear back from my interview.,disgust,9,43,5,sadness,0.8,2,False
+5546,I felt disgust when a family member turned their back on the rest of the family because of his new partner.,disgust,21,107,5,anger,0.4,3,False
+5550,People chew loudly,disgust,3,18,5,disgust,0.8,2,True
+5556,"I moved into my flat and it hadn’t been cleaned at all my then letting company. Food on the doorstep, mouldy bathrooms and all the old tenants belongings",disgust,28,153,5,disgust,0.6,3,True
+5561,a child was sent to my childrens school with covid,disgust,10,50,5,anger,0.4,3,False
+5567,"Trump said Megyn Kelly had ""blood coming out of her wherever"".",disgust,11,62,5,disgust,0.6,3,True
+5568,I realised I had been the victim of fraud.,disgust,9,42,5,anger,0.4,3,False
+5572,If I found rotten food in a cupboard when I moved into my new house.,disgust,15,68,5,disgust,0.8,2,True
+5680,I saw someone let their dog poo on the road and they didn't pick it up,disgust,16,70,5,disgust,1.0,1,True
+5684,I found out my daughters father had stolen money from us and had been manipulating me,disgust,16,85,5,anger,0.6,3,False
+5688,I felt disgust when I watched a grown man try to flirt with new college age girls and I.,disgust,19,88,5,disgust,0.6,3,True
+5689,I felt disgust when I went to bite into my burger only to find out it was not cooked properly and pink in the middle.,disgust,25,117,5,disgust,1.0,1,True
+5691,I found out my girlfriend was sleeping with a friend,disgust,10,52,5,sadness,0.4,3,False
+5700,I felt disgust when I stumbled upon a racist twitter account that continued to post disgusting content even after I had reported it numerous times,disgust,25,146,5,anger,0.6,3,False
+5704,Someone flicked a wet bogey on to my cheek. It was disgusting,disgust,12,61,5,disgust,1.0,1,True
+5705,"When I found out a colleague I used to work with was an anti-vaxxer; I work in healthcare so... to me, a nurse who doesn't believe in science is openly choosing to put her patients at risk, which is disgusting to me.",disgust,42,216,5,disgust,0.8,2,True
+5720,"people snot, especially if it is green.",disgust,7,39,5,disgust,0.6,3,True
+5639,When I witnessed a male making unwanted advances on a female at a club,disgust,14,70,5,anger,0.6,3,False
+5641,"My neighbour came and harassed me because he thought our fence was 2 inches onto their land, before getting the proof that it actually wasn’t.",disgust,25,142,5,anger,0.8,2,False
+5642,My husband had an affair,disgust,5,24,5,anger,0.6,3,False
+5653,I lost my bag in a park,disgust,7,23,5,sadness,0.6,3,False
+5654,"of a family member chewing with her mouth wide open. Specifically, the noise.",disgust,13,77,5,disgust,0.8,2,True
+5658,I saw a toddler in the grocery store licking the side of the check out belt area in the middle of a pandemic. I gagged in my mouth.,disgust,28,131,5,disgust,1.0,1,True
+5661,I was in college studying beauty therapy and my fellow student was refused by the tutor to participate in the training for spray tanning because she was in a wheelchair and there was apparently no provision / easy way for her to be able to take part. This disgusted myself and my fellow students as we felt that was horrifically disablist towards our friend / fellow student.,disgust,67,375,5,anger,0.6,2,False
+5605,"I slept over at a romantic partner's house after a gig recently. I could smell beer in my hair that was spilt on me during the gig and could feel sweat all over me, but the feeling of sweat on the back of my neck making my hair damp was completely repulsive to me. I was really distracted for the rest of the morning by wanting to go home and shower so I wouldn't feel that sensation anymore. I have quite a strong sensory aversion to the smell and sticky texture of a lot of alcohol when it's spilled, so that was the main source of my disgust.",disgust,108,545,5,disgust,1.0,1,True
+5609,"I felt disgust when I had to have a blood test and the nurse had trouble finding a suitable vein to draw the sample from. I usually do not feel nervous or disgusted before having a test done but this particular time I did because she had the tourniquet on my arm for a very long time and was pushing and pulling around to try and get a vein. She did get a vein but she did not give me anything to rest my arm on while having my blood drawn so it was a bit of an awkward and uncomfortable angle and I could feel the needle moving around in my arm. Due to this, I felt quite sick and disgusted and I actually ended up feeling quite hot and I was really anxious that I might faint! Each time I thought about it afterwards, I felt queasy and my arm bruised quite badly afterwards.",disgust,156,776,5,fear,0.6,3,False
+5627,I went to bite into toast to find the bread was mouldy,disgust,12,54,5,disgust,1.0,1,True
+5629,I felt disgust when I heard a coworker use a racial slur,disgust,12,56,5,anger,0.8,2,False
+5632,Someone made an innapropriate comment about my weight,disgust,8,53,5,sadness,0.6,2,False
+6218,I felt DISGUST because I lied about something,disgust,8,45,5,guilt,0.8,2,False
+6221,one of my classmates purposely gave me incorrect information about an assignment so that I would perform poorly and look like a fool.,disgust,23,133,5,anger,1.0,1,False
+6224,My ex husband got a girlfriend because we were still married,disgust,11,60,5,disgust,0.4,3,True
+6228,"My dog rolled on a decomposing rabbit, which caused her to smell very much and actually left her with maggots wriggling on her.",disgust,23,127,5,disgust,1.0,1,True
+6235,I trod on the body of a dead bird,disgust,9,33,5,disgust,0.6,2,True
+6249,When i seen a video of a person eating a bowl of Larvae on tiktok,disgust,15,65,5,disgust,1.0,1,True
+6258,Someone was sick,disgust,3,16,5,sadness,0.6,3,False
+6277,a man was complaining and being rude in the restaurant,disgust,10,54,5,disgust,0.6,2,True
+6281,I was on tiktok and came across multiple live videos of people eating live bugs from a bowl.,disgust,18,92,5,disgust,1.0,1,True
+6283,at work when a stool sample popped the cap and erupted like a volcano,disgust,14,69,5,disgust,0.8,2,True
+6288,I was walking up the stairs in school and I put my hand in somebody’s spit on the hand rail,disgust,20,91,5,disgust,1.0,1,True
+6290,I feel disgust when I observed someone neglecting to feed their dog.,disgust,12,68,5,anger,0.4,3,False
+6294,I saw anti-vaxxers accost and harass healthcare workers at the hospital.,disgust,11,72,5,anger,0.8,2,False
+6304,"when I needed to stop at the side of the road to confirm whether or not the roadkill by my house was the body of one of my cats. I could give more details if you like, but think it is unnecessaryly graphic, suffice to say that maggots were involved.",disgust,50,249,5,disgust,0.6,3,True
+6306,When I found out our CFO was stealing money from the company.,disgust,12,61,5,anger,0.4,4,False
+6307,I felt disgust when I got sick all over myself.,disgust,10,47,5,disgust,0.6,2,True
+6308,"I was eating alongside someone, and they were eating their food with their mouth wide open.",disgust,16,91,5,disgust,1.0,1,True
+745,His toenails where massive,disgust,4,26,5,disgust,1.0,1,True
+751,When my daughter was attacked by her peers,disgust,8,42,5,anger,0.8,2,False
+276,when I began working in the acute care unit of a hospital because I thought people would be dying and I wouldn't know how to handle it,fear,27,134,5,fear,0.4,4,True
+261,A group of young men following me home.,fear,8,39,5,fear,0.8,2,True
+271,when i was receiving my a-level grades,fear,7,38,5,relief,0.6,3,False
+272,when I worked my first shift on my own at my bar job.,fear,13,53,5,fear,0.6,3,True
+3450,I lost control of my car whilst driving,fear,8,39,5,fear,1.0,1,True
+3451,my flight was cancelled and I was abroad alone.,fear,9,47,5,fear,1.0,1,True
+3462,because I was being chased by older people through the park.,fear,11,60,5,fear,0.8,2,True
+3467,I felt fear the first time someone tried to teach me how to drive.,fear,14,66,5,fear,0.6,3,True
+3469,I was running away from a shooting and a car was trying to run me down,fear,16,70,5,fear,1.0,1,True
+3474,I felt fear when I was in a public place during the coronavirus pandemic,fear,14,72,5,fear,1.0,1,True
+3360,Waiting in line for a roller coaster,fear,7,36,5,boredom,0.6,2,False
+3361,"I was sat in a bus in Peru with three friends, having left our luggage back at a hostel, so simply carrying one bag full of items to go hiking. This bus was quite small and I felt incredibly sick, the roads were winding throughout the mountains. Feeling sick always produces a feeling of fear, but this was heightened by the fact we were high up in the mountains, driving along cliff edges with no barrier, every so often being met with cross along the road where busses had fallen off the edge and driving through literal waterfalls. I was genuinely terrified that I was going to die.",fear,108,585,5,fear,0.8,2,True
+3366,i thought my dog may not survive his operation,fear,9,46,5,fear,0.6,2,True
+3370,when I was almost run over by a drunk driver,fear,10,44,5,fear,0.4,3,True
+3373,my mom fell down the stairs.,fear,6,28,5,fear,0.6,3,True
+3378,I felt fear when I was I gave birth to my daughter because she had ingested fluids and wasn't making any sounds when they were tending to her.,fear,28,142,5,fear,0.8,2,True
+3399,I received a phone call that my son was hurt and needed medical attention,fear,14,73,5,fear,0.8,2,True
+3401,the alarm at my house went off in the middle of the night,fear,13,57,5,fear,0.6,2,True
+3404,my mom underwent 2 serious back surgeries.,fear,7,42,5,fear,0.6,3,True
+3414,When my son almost scootered into the road and I was too far away to stop him,fear,17,77,5,fear,1.0,1,True
+3422,I felt fear when meeting aggressive fans of an opposing team at a sporting event,fear,15,80,5,fear,0.8,2,True
+3423,sexually assaulted,fear,2,18,5,fear,0.4,3,True
+3426,"I felt fear when my friend and I were chased through a forest by an older man on our way home. He stood about 20 metres away from us whilst we were sat on a bench for about 15 minutes and then ran after us when we moved, we hid in a bush and he was searching for us until he was deterred by a dog walker.",fear,67,304,5,fear,0.8,2,True
+3427,I had to go to hospital and have a blood test as i have a huge fear of needles,fear,19,78,5,fear,0.6,3,True
+3431,I felt fear when i had a night terror.,fear,9,38,5,fear,1.0,1,True
+3436,I felt fear when followed by an unknown vehicle in a foreign country.,fear,13,69,5,fear,1.0,1,True
+3437,"i was walking home from work late, i worked at a bar and i used to not finish work till 4am my house was 15 mins walk from my work. I would feel fear when someone was walking towards me that late at night. or a specific night when a car drove by slow then u -turned and came back down slowly i felt very scared",fear,66,310,5,fear,1.0,1,True
+3440,I felt fear when I was almost late to class,fear,10,43,5,shame,0.4,3,False
+3442,"I lost control of my car on a slippery and busy road and got stuck in a snowbank, with cars zooming past me.",fear,23,108,5,fear,1.0,1,True
+3443,I felt fear when I thought I had COVID-19 a few days ago,fear,13,56,5,fear,0.8,2,True
+4490,I felt fear when my family was experiencing a hurricane being stuck in our house. It was scary because two houses behind us caught on fire and our first floor flooded. We were stuck and unable to leave.,fear,38,202,5,fear,1.0,1,True
+4496,"Since an accident that happened many years ago I've been very fearful of driving on highways. Although I can still do it, I get a sudden sense of dread and fear (panic attacks). At times I can reduce the fear and keep going but other times require intervention (I. E., taking a break, breathing exercises). I'm often embarrassed by this fear too and don't often drive others besides my immediate family.",fear,71,403,5,fear,1.0,1,True
+4497,"I felt fear when there was a power outage in my home. That day, my wife and I were cuddling in the sitting room when a thunderstorm started. Then fear filled me when thunder hit our roof and all the lights went off.",fear,43,215,5,fear,1.0,1,True
+4504,My mom had to get extensive surgery,fear,7,35,5,fear,1.0,1,True
+4510,when I discovered my boyfriend had been drinking alcohol alone in his room,fear,13,74,5,surprise,0.4,4,False
+4517,I felt I was going to lose my life. Someone had pointed a gun at me.,fear,16,68,5,fear,1.0,1,True
+4519,I went for a chest x-ray,fear,6,24,5,fear,0.8,2,True
+4538,I was stung by a wasp,fear,6,21,5,surprise,0.6,3,False
+4539,"I was about 7 years old and I swam into the deep end of the pool. I didn't know how to swim well at the time, so I would sink and then kick off the bottom of the pool to gasp for air and then quickly sink again. I was scared that I would drown and no one would notice, but I eventually was able to kick myself back to the shallow end.",fear,73,334,5,fear,0.8,2,True
+4600,I felt fear when I had anxiety.,fear,7,31,5,fear,0.6,3,True
+4609,I was nearly hit by a car while commuting to work,fear,11,49,5,fear,0.6,3,True
+4633,I felt fear when my partner became sick because I had no control over the situation,fear,16,83,5,sadness,0.6,2,False
+4636,the ladder I was on kicked out from under me.,fear,10,45,5,surprise,0.4,3,False
+4639,I felt fear when I was fired from my job because I didn’t know how I’d be able to support myself that month,fear,23,107,5,fear,1.0,1,True
+4582,"I worked at a huge haunted house for one night. At the end, they said everyone could leave, but it took me longer to get out of my little spot than everyone else. I had no one to lead me out, and I have a terrible sense of direction. The haunted house is made to be a maze that you get lost in, so I was running through it, trying to find my way out, with lots of creepy stuff all around me, totally disoriented.",fear,85,412,5,fear,1.0,1,True
+4583,I felt fear walking down the street when I saw a man stealing license plates off of cars.,fear,18,89,5,fear,0.6,3,True
+4592,I felt fear when I went to a haunted house amusement park.,fear,12,58,5,fear,0.6,2,True
+4594,"I felt fear when a man I had feelings for was not responding to my text messages. I have an iPhone and so I use iMessage with others who also have iPhones. When you use iMessage, the chat bubbles are blue, but I noticed one day that the chat bubbles with him were green. That indicates that the recipient does not have an iPhone, or that they are in an area without internet and therefore are getting the messages sent as text messages rather than iMessage. The problem was that he had not been responding and I started wondering if he was seeing my texts at all - then I had a suspicion he had blocked me this entire time. I messaged a mutual friend to ask if he had told them he was angry with me, and I then checked to see if I could still see his profile on social media platforms. I could not. I started getting anxious at the indication that he had blocked me on everything, and that anxiety skyrocketed with each profile I wasn't seeing. My friend told me she could still access his profiles, and it was then I realized he had blocked me on everything.",fear,203,1059,5,fear,0.6,3,True
+4571,"In elementary school one of my male classmates starting to sexually harass me everyday, touching me inappropriately in all different places multiple times a day, I was too scared to tell anyone or tell him off.",fear,36,210,5,fear,0.6,2,True
+4573,I felt a project was not meeting upmto standards.,fear,9,49,5,anger,0.4,3,False
+4579,I had to confront a couple worker over some things that she had been saying about me behind my back. I don't like confrontation so this made me fear how she would react as she's a sensitive over the top person,fear,41,209,5,fear,0.8,2,True
+5830,my toddler took a high fever and started to shake without other obvious symptoms,fear,14,80,5,fear,0.8,2,True
+5841,I have nightmares because im out of control,fear,8,43,5,fear,0.8,2,True
+5725,I woke one night to find my wife trying to harm our child in the belief that it would make her life better if there weren't children to take care of.,fear,31,149,5,fear,0.6,2,True
+5727,I experienced an earthquake in Greece,fear,6,37,5,fear,0.6,2,True
+5730,A housemate came at me with a knife.,fear,8,36,5,fear,1.0,1,True
+5734,When I had to go for an emergency caesarean,fear,9,43,5,fear,1.0,1,True
+5752,I had a music exam,fear,5,18,5,fear,0.8,2,True
+5753,i felt fear when i lost my job some years back because i didnt have another means of survival and my family depended on my income,fear,26,129,5,fear,0.6,2,True
+5754,"Someone I was dating at the time was hitting me while in the car going home. This person had no concern that they might kill the both of us while doing this, beating me in the head.",fear,37,181,5,fear,0.6,3,True
+5766,I had to ask my neighbour to move his car as it was blocking my driveway. I felt fear because he was uncooperative and moody. I didn't understand why he would behave like this,fear,34,175,5,anger,0.6,2,False
+5769,I received a call  to say that my dad had had a heart attack and was in hospital needing open heart surgery,fear,22,107,5,fear,1.0,1,True
+5773,My daughter had sepsis,fear,4,22,5,sadness,0.4,3,False
+5774,i had a migraine that caused blurry vision,fear,8,42,5,no-emotion,0.4,3,False
+5796,"Home alone and keep hearing wat sound like footsteps, doors closing",fear,11,67,5,fear,1.0,1,True
+5798,when my first child was born,fear,6,28,5,joy,0.8,2,False
+5802,I didn't submit an essay on time at university.,fear,9,47,5,guilt,0.6,3,False
+5810,"I felt fear when I had a car accident in Puerto Plata Dominican republic, I lived in the DR for many years. On the malecon one night about 15 years ago I was in the car with my then boyfriend and he was driving, we had been to a party and had both been drinking and I didn't put my seatbelt on. Coming round the bend in the malecon two motorcycles came speeding towards us on the wrong side of the road. One went over the top of the car and one into the windscreen, my face was torn open by the glass my entire mouth and skin up to my nose hanging open and being in country which definitely does not have the best medical care, I think it was safe to say I felt lots of fear.",fear,139,675,5,fear,0.6,3,True
+5813,I was younger and went down a slide into a swimming pool. I couldn’t swim and couldn’t touch the bottom of the pool and kept goi g under the water. Two girls managed to get hold of me pull me to the side,fear,43,203,5,fear,1.0,1,True
+5914,"I was in labour december last year, my pain was worse than I remembered with my previous pregnancies and my waters still hadn’t broken. The ambulance was called and I was terrified that something was wrong with my baby or me. We were rushed to hospital and the pain kept intensifying, until my waters broke suddenly and my baby arrived, safe and well.",fear,63,351,5,fear,0.8,2,True
+5916,Not knowing how to pay for rent and food,fear,9,40,5,fear,0.6,3,True
+5920,A stranger in the street started shouting at me for not allowing him to approach my dog,fear,17,87,5,fear,0.6,2,True
+5929,lots of spiders in the house,fear,6,28,5,fear,0.8,2,True
+5931,we were attacked,fear,3,16,5,fear,0.8,2,True
+5936,I made a mistake at work,fear,6,24,5,guilt,0.4,3,False
+5951,I have to perform for others,fear,6,28,5,fear,0.6,3,True
+5953,I was about to go on a rollercoaster at Alton Towers,fear,11,52,5,fear,0.8,2,True
+5955,"Had a car crash,",fear,4,16,5,fear,0.6,3,True
+5964,I was confronted by a thief,fear,6,27,5,fear,1.0,1,True
+5880,I felt fear going in to hospital,fear,7,32,5,fear,1.0,1,True
+5892,There was a spider in my house,fear,7,30,5,fear,0.8,2,True
+5901,"i had just been told by the midwife ""I'm so sorry i cant find baby's heartbeat""",fear,16,79,5,sadness,0.6,2,False
+5848,"I felt fear when I had to carry out a behavioural experiment, not knowing the outcome made be fearful.",fear,19,102,5,fear,0.8,2,True
+5856,I was surrounded by four men; they hit me in the face before I offered to give them everything I had in my pockets.,fear,24,115,5,fear,1.0,1,True
+5873,Working as a lifeguard and performing an emergency missing person rescue on a potential drowning child,fear,16,102,5,fear,0.8,2,True
+6315,when I think about how much i'm struggling with finances,fear,10,56,5,fear,0.6,3,True
+6320,I felt fear because I put myself in a dangerous situation while driving,fear,13,71,5,shame,0.6,3,False
+6324,Waiting for the vet to call after my cat's operation,fear,10,52,5,fear,1.0,1,True
+6329,I was young and a dog chased me down an alleyway,fear,11,48,5,fear,1.0,1,True
+6333,"i fear death itself i dont want to die, i fear leaving my grandchildren behind it plays on my mind all the time",fear,23,111,5,fear,1.0,1,True
+6337,I felt fear when i went to an in person scare experience for halloween,fear,14,70,5,fear,0.6,3,True
+6339,I had a terrible kidney infection that caused me so much pain I thought I was dying,fear,17,83,5,fear,0.8,2,True
+6364,i felt fear when i went to luna Park for the first time and i was nearly forced to go on the scissor ride because i do not like rides that go upside down,fear,34,153,5,fear,0.8,2,True
+6366,When I found out my mum had cancer,fear,8,34,5,fear,0.8,2,True
+6370,"I saw a woman across a crowed room who I knew for a fact had died. I couldn't believe my eyes and thought I must seeing a ghost and therefore going momentarily insane. I was with my mother and I tapped her urgently. She looked where I was looking and must have recognised the fear on my face, then realised what I must be thinking. My mother then said something along the lines of ""Don't worry, that's her twin, she was a twin.""",fear,83,428,5,surprise,0.6,2,False
+6374,During labour and I got rushed to theatre for a cesarean section because my child's heartbeat and movement had slowed right down.,fear,22,129,5,fear,1.0,1,True
+6375,"I went to a haunted house a few weeks ago and there were many sudden ""jump"" scenes",fear,17,82,5,fear,0.6,2,True
+6389,"I had given birth, a few hours later I began to feel nauseous and then felt intense pain. My blood pressure was plummeting and my heart rate was rising. I’m a healthcare worker so I knew this was not good. I was haemhorraging internally and on the cusp of bleeding to death.",fear,52,274,5,fear,0.6,2,True
+762,I was facing my first exam of this year because the results will have a large impact on my life,fear,20,95,5,fear,1.0,1,True
+764,I felt fear when I had a practicum orientation,fear,9,46,5,boredom,0.4,3,False
+280,I didn't spend more time with my Dad.,guilt,8,37,5,sadness,0.6,3,False
+281,"I went out on a night out and got quite drunk, The co-worker I was out with (alongside others) was the boyfriend of one of my friends. We both were having a great time and ended up kissing. The next morning was horrible and I ended up booking a hotel and staying away for the weekend because I felt so bad and didn't want to be around the local area.",guilt,70,350,5,shame,0.8,2,False
+3514,I cheated on an ex after they cheated on me,guilt,10,43,5,anger,0.4,4,False
+3519,I took the last shirt in the right size when my friend wanted it too.,guilt,15,69,5,guilt,0.6,3,True
+3522,I feel guilt when I missed an opportunity to be present and available to a good friend,guilt,17,86,5,guilt,0.8,2,True
+3523,Booked a night away with friends and my children were upset that i was going to a hotel without them,guilt,20,100,5,guilt,1.0,1,True
+3525,I felt guilt when continuing to accept presents and money from someone who seemed like they wanted more even though I kept telling them we were only friends.,guilt,28,157,5,guilt,1.0,1,True
+3528,"I felt guilt whenever I think about how my life could be with another man. I love my boyfriend of two years very much but I still think about my ex a lot because it just felt unresolved (though I'm not entirely sure resolving it would change much). It's mostly because my ex was extremely wealthy and although my current bf and I are well off for our age, it's tough when I consider that I could be flown around in a private jet instead. I feel extremely guilty thinking about this and typing it out because I don't want to sound greedy. I just grew up in the lowest income bracket and I can't help but be enticed by money as it was such a barrier growing up. I'm trying really hard to develop a healthier relationship with it as I grow older.",guilt,144,743,5,sadness,0.6,2,False
+3533,I lied to my friend about not being able see her and said I was busy because I am avoiding her. She only cares about herself and does not take the time to be considerate of our friendship.,guilt,38,188,5,guilt,0.4,4,True
+3480,I don't carry out with the plans I made from the beginning.,guilt,12,59,5,relief,0.2,5,False
+3481,eating badly when I was on a diet,guilt,8,33,5,shame,0.6,2,False
+3492,"I felt guilt when I knew someone was about to lose their job before they was made aware, and couldn't make them aware beforehand.",guilt,24,129,5,guilt,0.8,2,True
+3493,I felt guilt when I slept with someone I shouldn’t of,guilt,11,53,5,shame,0.6,2,False
+3498,I did not get to say goodbye to my dying grandmother,guilt,11,52,5,sadness,1.0,1,False
+3502,I cheated,guilt,2,9,5,guilt,0.8,2,True
+4666,I felt guilty when I spoke about a friend to another friend that was in a horrible manner.,guilt,18,90,5,shame,0.8,2,False
+4671,I broke the vase and lied against my sister which was scolded afterwards.,guilt,13,73,5,guilt,0.6,3,True
+4649,I picked the neighbor's flowers,guilt,5,31,5,guilt,0.4,4,True
+4655,I accidentally hit yogurt onto a girl,guilt,7,37,5,guilt,0.6,3,True
+4659,I felt guilt when I used my anger to say things to mean things to my ex.,guilt,17,72,5,guilt,0.6,3,True
+4692,I was in a relationship once that wasn't what i wanted. I met another guy and before ending my current relationship i cheated on my partner.,guilt,26,140,5,guilt,0.6,3,True
+4706,I felt guilt when I kept cheating on my ex partner time and time again,guilt,15,70,5,guilt,0.6,2,True
+5996,Didn't return a book from the library,guilt,7,37,5,guilt,0.6,2,True
+51005,I had two simultaneous relationships,guilt,5,36,5,guilt,0.8,2,True
+51014,a practical joke (I played) backfired,guilt,6,37,5,shame,0.6,2,False
+51017,I was guilty at work of giving a friend a promotion above others.,guilt,13,65,5,joy,0.2,5,False
+51023,I pulled my girlfriends arm and accidentally hurt her.,guilt,9,54,5,guilt,0.6,2,True
+5981,I took a genetics test that would determine whether I will inherit a genetic disease from my mother. I tested negative and my sister (who is untested and still at risk) does not know I have been tested or that I am not at risk of developing this disease.,guilt,49,254,5,relief,0.4,3,False
+5986,I accidentally broke one of my mother's cats legs,guilt,9,49,5,guilt,0.8,2,True
+51041,I missed my sons first nativity,guilt,6,31,5,sadness,0.6,2,False
+51047,I Lied to workplace,guilt,4,19,5,guilt,1.0,1,True
+51051,I ate some food from the fridge which belonged to my flatmate without her permission,guilt,15,84,5,guilt,0.8,2,True
+51053,I went on holiday with my youngest child but my oldest child had to stay home.,guilt,16,78,5,guilt,0.6,2,True
+51054,"I felt guilt when as a young adult I wore braces on my teeth and I hated them, even though it was my choice to get them. I was visiting my younger sister who was working overseas and we had a brilliant time together. She took lots of photos of us, had them developed (it was the 1990s!) and sent them to my family. In one picture in particular, all I could see were these awful braces. I couldn't see anything else - the fabulous place we were in, the gorgeous outfits we were wearing, how lovely our hair was as we'd treated ourselves to getting blowdries, and I wrote her the most horrible letter saying that the only reason she'd sent that photo was to prove how gorgeous she was compared to me, she knew how ugly I was and that I was sorry I'd ever visited her in the first place. To this day I still feel so awful for writing that letter. She could only see the fun time we were having - I was the one with the complex about my teeth.",guilt,186,939,5,shame,0.6,3,False
+51061,"My mental illness' were playing up and I was rude and said some thing I didnt mean to my partner, who was visibly upset after I lashed out at him.",guilt,30,146,5,shame,0.6,3,False
+51065,I felt guilt when I cheated on my boyfriend,guilt,9,43,5,guilt,0.4,4,True
+51067,"I felt guilt when I forgot my sisters doctors appointment, for a serious issue and didnt ask about it",guilt,19,101,5,guilt,0.8,2,True
+51081,I felt guilt when I fought with my friends.,guilt,9,43,5,sadness,0.6,2,False
+51082,I struggle with addiction,guilt,4,25,5,shame,0.6,3,False
+51085,"I felt guilt when I saw how drained my husband became while I was recovering from shoulder surgery. For a few months before and then another few months after my surgery, I was unable to do a lot of the household tasks because of the pain in my dominant arm. I know that there wasn't anything I could have done to avoid the restrictions I was under, but I still feel bad for him having to take care of so much on his own.",guilt,84,420,5,guilt,0.8,2,True
+6392,I felt guilt when my baby was born and couldn’t give my dog attention,guilt,14,69,5,guilt,0.8,2,True
+6397,I did not call my friend early enough.,guilt,8,38,5,guilt,0.8,2,True
+6403,My daughter was being naughty and i smacked her.,guilt,9,48,5,anger,0.6,3,False
+6407,"I accepted a pizza delivery to my address from Dominos, it was marked as paid and with my address on the label but I did not order it.",guilt,28,134,5,surprise,0.4,4,False
+6418,"I dropped a light bulb at the department store and it broke, then I put it back on the shelf and got a new one.",guilt,25,111,5,guilt,0.8,2,True
+6422,I totaled my car and raised my mom's car insurance,guilt,10,50,5,guilt,0.6,3,True
+6423,I was having a nice time with my friend and my daughter was at home with her dad,guilt,18,80,5,joy,0.6,3,False
+6424,i couldnt help my friend when he was going through a dark time,guilt,13,62,5,guilt,0.8,2,True
+96,I felt GUILT when I didn't do the work I planned to do,guilt,13,54,5,guilt,0.8,2,True
+99,i put on weight,guilt,4,15,5,shame,0.4,3,False
+2105,I felt joy when I passed my exams.,joy,8,34,5,relief,0.6,3,False
+287,"I felt joy the last time I was at a concert of my favourite band, watching the band walk out on stage felt magical and hearing all my favourite songs live was bliss",joy,33,164,5,joy,0.8,2,True
+289,I was gifted a large amount of money,joy,8,36,5,joy,1.0,1,True
+294,Finding out that I passed my final masters exams with a first (distinction),joy,13,75,5,pride,0.6,2,False
+299,My dog runs to the car when I come home from work,joy,12,49,5,joy,0.8,2,True
+3639,I went to Los Angeles,joy,5,21,5,joy,0.6,3,True
+3641,i recently got  a new job,joy,6,25,5,relief,0.6,2,False
+3644,when I was at a Harry Styles concert,joy,8,36,5,joy,1.0,1,True
+3645,I felt joy when I found out I was accepted into graduate school because I was scared that I was not going to make it in and that I was going to have to wait another year to re-apply.,joy,39,182,5,relief,0.8,2,False
+3647,"When I was on Vacation, outside in nature exploring the mountains.",joy,11,66,5,joy,0.8,2,True
+3649,when I completed my first 10k race,joy,7,34,5,pride,1.0,1,False
+3651,I finished work because I knew I could come home and put my feet up,joy,15,67,5,relief,0.6,2,False
+3536,I bought a stock that doubled in price within days,joy,10,50,5,joy,0.4,3,True
+3538,I got approved for my first apartment.,joy,7,38,5,joy,0.6,2,True
+3542,"I felt JOY when I met my kitten Mochi for the first time. I had contacted breeders for months looking for a British Shorthair kitten. I was invited to a breeder's home to visit a kitten, and felt immense joy when I first saw him and picked him up. This feeling was intensified due to the long wait and anticipation that led to the moment.",joy,65,338,5,joy,0.8,2,True
+3546,I was accepted to Villanova University,joy,6,38,5,joy,0.4,3,True
+3576,my fiancé proposed,joy,3,18,5,joy,1.0,1,True
+3579,I went skydiving.,joy,3,17,5,fear,0.8,2,False
+3584,when i was on vacation in the mountains,joy,8,39,5,joy,1.0,1,True
+3586,"When I skydived out of a plane in New Zealand, I felt real joy and euphoria.",joy,16,76,5,fear,0.4,3,False
+3587,my partner asked me to marry him,joy,7,32,5,joy,1.0,1,True
+3589,my children were born as I have always wanted children.,joy,10,55,5,joy,0.8,2,True
+3601,I felt joy when I held my new baby cousin for the first time. He was beautiful and adorable.,joy,19,92,5,joy,1.0,1,True
+3603,The day I bought my car I felt extreme joy because I had saved for so long to make the purchase. I sometimes had to restrict some spending decisions just to save up for the car. I was so happy to have finally bought a car,joy,46,221,5,pride,0.6,3,False
+3604,Seeing my dad happy on my graduation day at the college,joy,11,55,5,pride,0.6,2,False
+3605,I was called to interview for a new position.,joy,9,45,5,joy,0.2,5,True
+3612,"I gave birth each time to my 3 kids, nothing compares to that feeling.",joy,14,70,5,joy,0.8,2,True
+3615,I was on a sunset drive in South Africa on a game reserve with the man I was in love with and his family. We were listening to oldies and singing and laughing and having the most amazing time together. It was the closest I've ever felt to being in heaven,joy,51,254,5,joy,0.8,2,True
+3618,I got my job offer.,joy,5,19,5,joy,0.6,2,True
+3620,When I won an online competition because I won just over 3k.,joy,12,60,5,joy,0.8,2,True
+4802,I felt joy when my football team won our cup match,joy,11,50,5,joy,0.8,2,True
+4745,I visited Japan for 3 weeks. It was such an extreme culture shock and the different variety of experiences was overwhelming. My favourite time was when we went snowboarding in Hakuba. The rush was intense. Truly a great time.,joy,39,225,5,joy,0.8,2,True
+4759,I felt so much joy when I achieved my goals bothering me,joy,12,56,5,relief,0.8,2,False
+4763,I felt joy when I got my cat.,joy,8,29,5,joy,1.0,1,True
+4768,I felt joy when I went for a meal with my boyfriend and he told me he loved me and it made me very happy,joy,25,104,5,joy,1.0,1,True
+4773,When my long term boyfriend purposed!,joy,6,37,5,joy,1.0,1,True
+4778,my daughter was born via c section which I was thankfully awake for,joy,13,67,5,relief,0.6,2,False
+4780,"I felt joy when my partner and I moved in with each other. I feel joy on a daily basis, often because of interactions with my partner. I felt so happy that I was creating a life with someone I love so much, and someone who will always be there to support me.",joy,53,258,5,joy,0.6,3,True
+4868,when I beat a video game on hard,joy,8,32,5,pride,0.6,3,False
+4874,I felt joy because I was able to see my girlfriend.,joy,11,51,5,joy,1.0,1,True
+4842,I felt joy whe  I toured my new apartment because it was much better than my current one.,joy,18,89,5,joy,0.6,3,True
+4804,I watched my daughter swim,joy,5,26,5,pride,0.6,2,False
+4814,I sold a bicycle that has been sitting around for years. I was very happy that I was able to earn some money and get rid of something I didn't need.,joy,31,148,5,joy,0.6,2,True
+4817,my son has finally committed to joining a baseball team. He is 10 years old and enjoys playing ball.,joy,19,100,5,pride,0.8,2,False
+4821,I felt JOY when i helped a homeless last month,joy,10,46,5,pride,0.6,3,False
+51178,I was offered my dream job because i had studied for 2 years and had lots of stress and set backs,joy,21,97,5,pride,0.4,3,False
+51184,My wife gave birth to a bouncing baby boy,joy,9,41,5,joy,0.8,2,True
+51185,i recieved the top grade in my class on a calculus test in my last year of high school,joy,19,86,5,pride,0.8,2,False
+51092,i passed my driving test,joy,5,24,5,pride,0.4,3,False
+51096,I felt joy when I sung a song with my band in front of a school audience of roughly 1000 people. It was extremely enjoyable and felt very liberating and the experience was overall a major mood booster and had me feeling on top of the world and very joyous.,joy,50,256,5,pride,0.6,2,False
+51111,I picked my first home grown tomatoes,joy,7,37,5,pride,0.8,2,False
+51131,"Moved to Germany after I finished college, it was a great time for me",joy,14,69,5,joy,1.0,1,True
+51136,my first child was born,joy,5,23,5,joy,1.0,1,True
+51139,after several holidays myself to New York I finally got to take my sister and niece who had wanted to go for many years.,joy,24,120,5,joy,0.6,3,True
+51145,I felt joy when I saw my two children this morning holding hands,joy,13,64,5,joy,0.6,3,True
+51153,i felt joy on my wedding day,joy,7,28,5,joy,0.6,2,True
+51176,"ever i remember this episode, though too insignificant for others but somehow has stuck in my memory as the first solid short clip etched in brain. I may not have been more than two and half years' old.I was just standing thinking of stepping out of house to have a glimpse of the outside world when my mother asked me what I was thinking of doing. Before I replied, I saw a biscuit behind me on a stool. I picked and ate. I was about to leave then I saw another biscuit. She was so quick that I could not catch her even after fifth biscuit. I never bothered and kept on picking it up and putting in my mouth. On asking who was placing them there, she laughed and indicated towards a crow sitting on wall! .......... and I naively accepted the explanation.",joy,144,756,5,pride,0.2,5,False
+51268,I bought my own horse with my own money I had worked hard to afford,joy,15,67,5,pride,1.0,1,False
+51275,When I was healthy and could truly participate in fall activities.,joy,11,66,5,sadness,0.8,2,False
+51276,I found out I had passed my exams,joy,8,33,5,joy,0.4,3,True
+51278,"I felt joy when I adopted my dog, Cali. I waited two years after my childhood dog died to get her and it felt so nice to have a puppy to come home to every day again.",joy,37,166,5,joy,0.8,2,True
+51281,I felt joy when I was listening to music with my girlfriend this morning.,joy,14,73,5,joy,0.8,2,True
+51285,I found out that we really are going to be together forever.,joy,12,60,5,joy,0.6,3,True
+51287,I was able to do a one arm push up after 6 weeks of training to be able to do it.,joy,21,81,5,pride,0.6,3,False
+51289,i seen my boyfriend after busy week,joy,7,35,5,joy,0.6,2,True
+51292,When I lost weight,joy,4,18,5,pride,1.0,1,False
+51294,my husband and I were lying in bed together looking at memes while on holiday while the kids amused themselves elsewhere.  Hardest I've laughed in a long time.,joy,28,159,5,joy,1.0,1,True
+51300,I was scuba diving,joy,4,18,5,joy,0.8,2,True
+51302,we picked up a puppy.,joy,5,21,5,joy,1.0,1,True
+51324,I went skydiving,joy,3,16,5,fear,0.8,2,False
+51328,"i won a court case and was vindicated, relieved to free",joy,11,55,5,relief,0.6,2,False
+51329,"watching my favourite show and seeing the characters I find comfort in, because it gave me a chance to escape from reality and also a sense of not being alone",joy,30,158,5,joy,0.6,2,True
+51240,I found out I was pregnant.,joy,6,27,5,joy,0.4,3,True
+51241,when my son came home from schoool,joy,7,34,5,no-emotion,0.4,4,False
+51249,I felt joy when I became partners with my partner,joy,10,49,5,joy,1.0,1,True
+51258,I adopted my cat Sandy because she is like my child and she brings me a ton of happiness.,joy,19,89,5,joy,1.0,1,True
+51259,i went for a nice meal with friends,joy,8,35,5,joy,1.0,1,True
+51263,"I felt joy when I asked someone I used to work with for a date. We always got on at work and when I left I was nervous about asking her to go on a date, but when I did I felt instant joy just from the relief of worrying about it and her saying yes.",joy,56,248,5,joy,0.6,2,True
+51208,I won a football match,joy,5,22,5,pride,0.6,2,False
+51227,I got a part in a tv show,joy,8,25,5,joy,0.6,2,True
+51231,finally mastered a song i was practising on guitar,joy,9,50,5,pride,1.0,1,False
+51236,"When it was Christmas, watching my daughter opening her presents and being with my wonderful family.",joy,16,100,5,joy,1.0,1,True
+6436,I was able to complete a challenge that I didn't think I would do,joy,14,65,5,pride,1.0,1,False
+6440,I was dancing with my friends at a gig,joy,9,38,5,joy,1.0,1,True
+6443,I received a large sum of money from a tax refund.,joy,11,50,5,surprise,0.6,2,False
+6450,When I received a invite to a wedding,joy,8,37,5,surprise,0.6,2,False
+6468,I got married in the summer,joy,6,27,5,joy,1.0,1,True
+6472,I was diagnosed with PMDD because it meant I had answers,joy,11,56,5,relief,1.0,1,False
+6492,"I felt joy when going to Iceland, renting a car and seeing the wide variety of landscape. I felt like I was living in a dream. The mountains are high and feels as if they are protecting you.",joy,38,190,5,joy,1.0,1,True
+6499,the seeds that I had sowed grew to became vegetables that I could eat and share with others,joy,18,91,5,pride,1.0,1,False
+6502,I saw my dog after I got back from University for my half term break.,joy,15,69,5,joy,1.0,1,True
+6508,I felt joy when I traveled to Europe because I got to fulfill a dream.,joy,15,70,5,joy,1.0,1,True
+6519,I first met my boyfriend in person after talking long distance.,joy,11,63,5,joy,0.8,2,True
+6524,Got to see a BTS perform live at Wembley stadium with friends I was close with at the time.,joy,19,91,5,joy,0.8,2,True
+781,I felt joy when a person on a night out gave me a lot of attention. It made me feel good.,joy,21,89,5,pride,0.4,3,False
+783,my boyfriend told me he loved me for the first time.,joy,11,52,5,joy,0.8,2,True
+784,"I got my most recent pet, a kitten. A wonderful little orange fur ball that I named Fergus.",joy,18,91,5,joy,1.0,1,True
+786,"I was tidying the kitchen and heard my nearly 3 year old singing in the living room. I went in to find her in her Anna dress (a character from frozen) dancing around the living room and singing along to one of Anna’s songs in the soundtrack that her dad had put on the sonos for her. She wasn’t aware that either of us was watching, she was just so happy to be playing her character and living in her moment",joy,81,407,5,joy,1.0,1,True
+787,I was dancing with my partner and closest friends right before the pandemic,joy,13,75,5,joy,0.8,2,True
+797,I play valorant and land really good headshots,joy,8,46,5,pride,1.0,1,False
+2120,I felt no particular emotion when I passed a recent test.,no-emotion,11,57,5,relief,0.6,3,False
+2109,3 years after my sister passed away,no-emotion,7,35,5,sadness,0.8,2,False
+2115,I walked my dog this morning,no-emotion,6,28,5,joy,0.4,3,False
+2117,When I’m dealing with customers at work,no-emotion,7,39,5,boredom,0.4,3,False
+2118,Dropping Food,no-emotion,2,13,5,anger,0.6,2,False
+3748,I felt no particular emotion when I drove to work this morning.,no-emotion,12,63,5,sadness,0.2,5,False
+3773,playing video games,no-emotion,3,19,5,joy,0.6,2,False
+3662,My biological mom got in touch,no-emotion,6,30,5,joy,0.4,4,False
+3672,when taking the dog for a walk,no-emotion,7,30,5,boredom,0.4,3,False
+3676,"I felt no particular emotion when I went to the car wash, because it was a normal activity. I have done this activity many times, I know what I am doing and it was quick. it was just a job that I needed to get done, which I did.",no-emotion,49,228,5,no-emotion,0.6,2,True
+3686,I took the beyond burgers out of the freezer this morning. This held no emotion for me whatsoever.,no-emotion,18,98,5,disgust,0.4,4,False
+3687,i  felt no particular emotion when i saw them,no-emotion,9,45,5,anger,0.4,4,False
+3697,I felt no particular emotion when I was eating pizza because I was on my phone and not paying attention to what I was eating,no-emotion,25,124,5,shame,0.4,4,False
+3701,I felt no particular emotion when my friend and I became distant,no-emotion,12,64,5,sadness,1.0,1,False
+3704,I felt no particular emotion when I turned 25 because as time goes on fewer and fewer things make me feel any particular emotion at all.,no-emotion,26,136,5,sadness,0.4,4,False
+3706,When I saw my uncle dead in the casket it brought me no emotions. To me death is a part of life and I think about it differently.,no-emotion,28,129,5,no-emotion,0.4,4,True
+3708,when I made myself french toast for breakfast this morning,no-emotion,10,58,5,pride,0.6,2,False
+3709,"I felt no particular emotion when I paid for my lunch a week ago. I was at a food court, actively waiting in line,  until it was my turn to pay. The lady at the register had grey hair and my guess was that she was in her 50s. My plate consisted of a cheese burger, french fries and green beans.",no-emotion,61,294,5,no-emotion,0.6,3,True
+3710,I was not involved in the situation,no-emotion,7,35,5,no-emotion,0.6,3,True
+3712,I felt no particular emotion when I saw two women walking down the street together,no-emotion,15,82,5,no-emotion,0.6,3,True
+3725,I helped my parents into the house from the car with their shopping because it had no particular impact on me for any length of time.,no-emotion,26,133,5,no-emotion,0.6,3,True
+3726,"when someone left the job I was working in, who was working with me on shift Because It has happened before and I had grown accustom to it.",no-emotion,28,139,5,no-emotion,0.8,2,True
+3733,"I was doing homework at my desk today, because I was focusing on my work",no-emotion,15,72,5,pride,0.6,3,False
+3734,When I found out my aunt died,no-emotion,7,29,5,sadness,0.8,2,False
+3737,I felt no particular emotions when I had some health issues due to the stress at work,no-emotion,17,85,5,fear,0.4,3,False
+4904,"my mom was rushed to hospital because of a serious medical event when i was a teenager, and i felt emotionally numb to the entire process for several days because of my inability to process what was happening.",no-emotion,38,209,5,fear,0.6,3,False
+4925,I was told that I needed to stop being so prone to suffering,no-emotion,13,60,5,shame,0.4,4,False
+4928,"I received a low mark on my assignment, because I realised I didn't really care about the subject.",no-emotion,18,98,5,guilt,0.4,4,False
+4929,travelling to Cooktown Queensland,no-emotion,4,33,5,joy,0.6,3,False
+4930,"i felt no particular emotion when someone i worked with anncounced they where expecting. i have fertility issues so i have trained my self to block emotions of these types of announcements out, i did congratulate her but with no emotion no feelings etc. i did when home and by my self break down",no-emotion,54,295,5,sadness,1.0,1,False
+4940,I started attending college.,no-emotion,4,28,5,pride,0.6,3,False
+4943,my husband asked for a divorce,no-emotion,6,30,5,sadness,0.4,4,False
+41013,Vanessa Feltz was screaming get your vaccine on morning television and half of her face wasn't moving yet the other half was incredibly animated.,no-emotion,24,145,5,fear,0.2,5,False
+41017,I was driving to work,no-emotion,5,21,5,no-emotion,0.4,4,True
+41018,The last time I had to work,no-emotion,7,27,5,relief,0.4,4,False
+41020,i felt no particular emotion when I was grocery shopping,no-emotion,10,56,5,boredom,0.6,2,False
+41023,I looked at my monthly blood test results as it's been stable for a long time and doesn't need a happy or sad response to it. It just is.,no-emotion,29,137,5,no-emotion,0.8,2,True
+41045,I felt not emotion when my boss was giving me the outcome on my pay raise because my attention and energy was directed towards other personal problems in my life at the time.,no-emotion,33,174,5,no-emotion,0.4,4,True
+41049,my mother gave me a couple candles she bought for me.,no-emotion,11,53,5,surprise,0.4,3,False
+41051,I went to the art museum with my family and there was no art compelling enough for me to care very much.,no-emotion,22,104,5,boredom,0.6,2,False
+41006,I felt no emotion when i was brushing my teeth this morning.,no-emotion,12,60,5,no-emotion,0.6,2,True
+41007,when I was cooking my dinner for myself and my boyfriend because it is something I do everyday. I am used to doing this task frequently so it's almost sometimes robot like.,no-emotion,32,172,5,boredom,0.8,2,False
+4976,"My aunt died.  I wasn't super close with her, but outside of immediate family, she was someone that I saw fairly regularly for a large portion of my childhood.  Fairly regularly meaning basically on holidays every year.  She was a great person and I never had anything bad to say about her.  I've had other relatives pass away besides her where I didn't feel anything, but I think she was the first.  It was kind of sudden.  She got cancer and was gone within a couple months or so.  Since it was the first time I had lost anyone remotely close to me, I remember it well specifically because I didn't feel any sadness or anything really.  It was kind of like ""well, that sucks I guess.""  I wasn't (and still aren't) sure if something was/is wrong with me for not feeling something more.",no-emotion,144,786,5,guilt,0.4,4,False
+4981,I felt no particular emotion when I was checking out my groceries at the super market.,no-emotion,16,86,5,no-emotion,0.4,3,True
+4987,When I graduated from college,no-emotion,5,29,5,pride,0.8,2,False
+51435,I felt no emotion in particular in the situation where someone in my collage class fell down the stairs,no-emotion,19,103,5,fear,0.6,2,False
+51436,"I attended my nan's funeral. Was not affected by everyone else being sad and crying, I felt nothing",no-emotion,18,99,5,shame,0.4,3,False
+51441,I was rewatching a tv show i had seen before,no-emotion,10,44,5,boredom,1.0,1,False
+51442,I felt no particular when I drove to college campus in the morning because it is a daily tradition.,no-emotion,19,99,5,boredom,0.6,2,False
+51445,I felt no particular emotion when I made coffee this morning because it is part of my daily routine.,no-emotion,19,100,5,no-emotion,0.8,2,True
+51346,A colleague in another team got a promotion,no-emotion,8,43,5,pride,0.2,5,False
+51353,"When I found out my boyfriend has cheated on me, because I think I knew it was already happening, therefore I didn’t have any reaction to it",no-emotion,27,140,5,sadness,0.6,3,False
+51355,Felt no particular emotion when I loss my dog because she always disturbed and harm my kids,no-emotion,17,91,5,relief,0.8,2,False
+51390,I walked to the village near my home,no-emotion,8,36,5,no-emotion,0.8,2,True
+51394,I was waiting for test results and I always try to be unemotional till I find out the ends result,no-emotion,20,97,5,fear,0.8,2,False
+51395,"I felt NO PARTICULAR EMOTION when my best friend told me she was pregnant. It did not surprise me, phase me or excite me. It just felt like a message being delivered",no-emotion,32,165,5,no-emotion,0.8,2,True
+51414,I felt no particular emotion when tickets for a show I wanted to see were cancelled for the 3rd time becasue of Covid 19.,no-emotion,24,121,5,sadness,0.6,3,False
+51415,When I got engaged,no-emotion,4,18,5,joy,0.8,2,False
+51416,When an ex boyfriend pleaded for me to take him back,no-emotion,11,52,5,guilt,0.4,4,False
+51515,My house was valued to sell by my bank,no-emotion,9,38,5,fear,0.4,4,False
+51524,I felt no particular emotion when My neighbour moved house,no-emotion,10,58,5,relief,0.4,3,False
+51530,I was at work and a coworker asked me to assist with fixing the printer/photocopier machine.,no-emotion,16,92,5,surprise,0.4,4,False
+51531,Playing volleyball on a rec league. Many other players on my team take it very personally when we win/lose but I have no particular emotion toward it because it won't change anything in my life if we win/beat every team after the whole summer,no-emotion,44,242,5,no-emotion,1.0,1,True
+51534,when any baseball team has won a World Series.,no-emotion,9,46,5,joy,0.4,3,False
+51539,I felt no particular emotion when I was eating dinner last night because i do i every night,no-emotion,18,91,5,boredom,0.4,3,False
+51541,when I met my new neighbours,no-emotion,6,28,5,surprise,0.4,3,False
+51556,"I nipped into the shops to pick up a few bits n bobs for the house. I had no interaction with anyone and it was a simple task of picking up day to day items, i didn't need to browse or look for things as i knew exactly where to find them.",no-emotion,52,238,5,no-emotion,0.6,2,True
+51562,When working at walmart I felt no emotion when going about my normal task because they had become routine for me and I was just going through the motions as I always do.,no-emotion,33,169,5,boredom,0.8,2,False
+51484,The financial aid employee retired,no-emotion,5,34,5,fear,0.4,4,False
+51487,I felt NO PARTICULAR EMOTION when lonely,no-emotion,7,40,5,sadness,1.0,1,False
+51503,"I felt no particular emotion when watching the news recently with my girlfriend and a segment about the Taliban regaining control of Afghanistan was shown. My girlfriend commented how bad and terrible it is for the people over there but I didn't feel much empathy for the situation. I think it was mainly because the news didn't particularly affect me and I'm detached from the goings on thousands of miles away. It lead to my girlfriend telling me I had no heart, and I know it is a sad and bad thing to happen, but I just didn't feel any particular emotion.",no-emotion,102,559,5,no-emotion,0.8,2,True
+51454,I ordered a cold brew from Dunkin and paid for it.,no-emotion,11,50,5,joy,0.8,2,False
+51458,I said that I didn't want to date this guy again months after we ended things,no-emotion,16,77,5,relief,0.4,4,False
+51465,someone hit my car,no-emotion,4,18,5,anger,0.6,3,False
+51472,"Completing my degree. Should have felt pride, didn't feel anything but a headache.",no-emotion,13,82,5,relief,0.4,4,False
+51474,When i found out i was being made redundant,no-emotion,9,43,5,anger,0.4,3,False
+51479,going on a roller coaster for the first time since Covid-19.,no-emotion,11,60,5,joy,1.0,1,False
+6535,I saw an ex-friend who stabbed me in the back with someone I considered a friend,no-emotion,16,80,5,anger,1.0,1,False
+6537,I was told that someone I know had a met a celebrity I only kind of recognised,no-emotion,17,78,5,surprise,0.6,3,False
+6546,the job was being done for me and i was waiting for the to finish.,no-emotion,15,66,5,boredom,0.8,2,False
+6565,I felt no particular emotion when I lost our last district basketball game of the season which meant I would never play basketball again. I think this is because I didn't really care whether we won or lost or whether the season continued.,no-emotion,43,238,5,guilt,0.4,4,False
+6573,I felt NO PARTICULAR EMOTION when I went to my college's health center for a physical with a nurse practitioner I met for the first time that day.,no-emotion,28,146,5,fear,0.8,2,False
+6575,when I saw my ex boyfriend over it.,no-emotion,8,35,5,anger,0.4,3,False
+6579,when getting my roof inspected for storm or wind damage.,no-emotion,10,56,5,fear,1.0,1,False
+6582,Listening to music,no-emotion,3,18,5,no-emotion,0.4,3,True
+6590,I went to see a new car,no-emotion,7,23,5,joy,0.4,4,False
+6595,On my birthday because I did not feel happy,no-emotion,9,43,5,sadness,1.0,1,False
+6598,"My husband talks about his business, which is also his hobby, model trains.",no-emotion,13,75,5,pride,0.6,2,False
+6602,I lit a candle while I was studying for an exam,no-emotion,11,47,5,boredom,0.4,4,False
+6603,I was attending therapy and my therapist was talking a lot about something I only kind of cared about.,no-emotion,19,102,5,boredom,0.4,4,False
+6609,Breaking up with my partner,no-emotion,5,27,5,sadness,1.0,1,False
+6613,I went for a blood test today. I believe this is because I have this blood test carried out regularly and I've become so used to it. Nothing new ever happens at the test appointment and I don't expect anything new to happen.,no-emotion,43,224,5,boredom,0.8,2,False
+6619,I felt no particular emotion when completing a regular household chore as it was a regular and necessary task and not emotionally provoking,no-emotion,23,139,5,boredom,1.0,1,False
+6625,I had my covid vaccine,no-emotion,5,22,5,relief,0.6,2,False
+6629,I was helping my dad paint a fence in my nan's garden and I looked at the wall of the shed. I thouhgt that I would try to remember this boring event forever. It seemed I did.,no-emotion,37,174,5,boredom,1.0,1,False
+6630,"I was putting away the groceries after going shopping. It was a very monotonous task and my mind went to autopilot. I knew where everything went already, as I have put the same items there before, so it seemed to have been second nature to do so.",no-emotion,47,246,5,boredom,0.8,2,False
+7100,I found out my biological father had died,no-emotion,8,41,5,sadness,0.6,2,False
+910,driving to my boyfriends house as its a regular route,no-emotion,10,53,5,joy,0.6,3,False
+912,I felt no emotion when I have had to have a rude/annoying customer removed from my work,no-emotion,17,87,5,relief,0.6,3,False
+915,"I broke up with my ex. I had caught her in three different occasions with a particular guy. So, i was already expecting another cheating event from her. I tried to feel anger but the more I felt virtually no emotions.",no-emotion,41,217,5,no-emotion,0.8,2,True
+2142,I gave birth to healthy twins,pride,6,29,5,joy,0.8,2,False
+2143,I baked a delicious strawberry cobbler.,pride,6,39,5,pride,1.0,1,True
+2129,pride in baking a cake for my father and he liked it.,pride,12,53,5,pride,0.4,4,True
+2134,My partner was accepted for a job because she worked really hard to get it,pride,15,74,5,pride,0.8,2,True
+2138,I bowled two people out during the final over of my cricket game to win the final.,pride,17,82,5,pride,0.8,2,True
+3864,my niece came out to me and told me she had a girlfriend before she told anyone else.,pride,18,85,5,trust,0.4,3,False
+3866,my dog followed a command from a distance of 12 feet.,pride,11,53,5,pride,0.6,2,True
+3868,I found out that I would be graduating from my university with the highest honors of summa cum laude,pride,19,100,5,joy,0.6,3,False
+3873,my daughter wanted to actively join in an protest and make sure her voice was heard.,pride,16,84,5,pride,0.6,3,True
+3882,I managed to get an exemption to enter Australia this year.,pride,11,59,5,relief,0.6,2,False
+3884,"A tradesman thought the wood work I had done was done by an actual joiner, and was really impressed",pride,19,99,5,surprise,0.6,2,False
+3887,I got the first job I applied for after reeducating after being unemployed for several years.,pride,16,93,5,pride,0.4,4,True
+3779,I felt pride when I completed my degree because it was a massive accomplishment,pride,14,79,5,pride,1.0,1,True
+3797,I’ve spent a week with my family including 4 Grandchildren,pride,10,58,5,joy,0.8,2,False
+3804,"I finally successfully ""cycled"" my aquarium. I have a learning disability and I have put blood sweat and tears into the process of ""cycling"". It is a scientific process involving the nitrogen cycle and it took me a year of research as well as trial and error to fully understand it. That first time when I checked my water levels and the test readings came back perfect I was absolutely overwhelmed with pride in myself. I've never taught myself and completed a task pertaining to science completely on my own (outside of school when I was younger). I was so proud of myself I broke down crying and called my dad to celebrate.",pride,113,626,5,pride,1.0,1,True
+3811,My daughter received her University degree,pride,6,42,5,pride,0.6,2,True
+3816,I get an A in a class.,pride,7,22,5,pride,0.8,2,True
+3819,I graduated from University,pride,4,27,5,pride,1.0,1,True
+3827,I felt pride when I received placement on Deans Honour roll at my university for the first time.,pride,18,96,5,pride,0.8,2,True
+3830,I felt pride when I landed my first vending machine location because I set out to do something and I accomplished it.,pride,22,117,5,pride,1.0,1,True
+3833,Whenever someone punches my ego,pride,5,31,5,anger,0.6,3,False
+3836,"when, at work, callers would specifically request to talk to me for assistance.",pride,13,79,5,pride,0.6,3,True
+3850,I surfed one of my biggest waves of my life,pride,10,43,5,joy,0.6,3,False
+3857,my daughter handed her ice cream to her little brother who had dropped his ice cream on the ground outside and started to cry. She handed him her ice cream to stop him crying.,pride,34,175,5,pride,0.8,2,True
+3859,When we won a war.,pride,5,18,5,joy,0.6,3,False
+41128,I finished a book I was preparing for several years and it was published with a leading publisher.,pride,18,98,5,pride,0.6,2,True
+41052,I bought my car recently,pride,5,24,5,pride,0.8,2,True
+41058,I passed my university exams,pride,5,28,5,relief,0.8,2,False
+41082,I felt pride when I completed a drawing and my art instructor complimented my skill and attention to detail,pride,19,107,5,pride,1.0,1,True
+41097,I retained all PT employees after a location closure at my company.,pride,12,67,5,pride,0.8,2,True
+41102,Wizkid sold out three shows at the O2,pride,8,37,5,joy,0.6,3,False
+41109,I helped out a friend in need,pride,7,29,5,pride,1.0,1,True
+41111,I felt pride when my oldest child stole the basketball from a member of the opposing team. I couldn't stop smiling and cheering them on! I was so happy for them because they were super shy and reserved.,pride,38,202,5,pride,0.8,2,True
+41201,I felt PRIDE when I was able to get out of my toxic household because I was finally given a sense of relief and freedom. I was now living for myself and focusing on me.,pride,35,168,5,relief,0.6,2,False
+41202,I accomplished a difficult presentation on my own,pride,8,49,5,pride,0.8,2,True
+41208,"I felt PRIDE when I was at a track and field meet in 5th grade. I was running the 100m, and all of the girls I was competing against were much taller than me. They all said to me ""you're not going to win. You're too short. Short people are not fast."" Anyway, I ended up absolutely SMOKING all of them and getting first place. They all looked at me in such disbelief. It was awesome.",pride,76,382,5,pride,0.6,2,True
+41209,"I felt pride when at my job as a tour guide, the random strangers who sign up tell me that I do a good job, or that I seem like a natural, or that they have had a good time. Also I feel pride when I get tipped for a job well done, because that proves I really did a good job.",pride,62,275,5,pride,1.0,1,True
+41210,I won an award for my university work,pride,8,37,5,pride,0.8,2,True
+41167,I felt pride when I ran a marathon at a decent pace and finished the race in a good place,pride,20,89,5,pride,1.0,1,True
+41142,"I felt PRIDE when I accomplish my goals through a team effort. I take part in team sports and have a pivotal role in success, and being able to do my job and make my team proud of me gives me a strong sense of pride.",pride,46,216,5,pride,1.0,1,True
+51670,I felt pride when I received my perfect college grades,pride,10,54,5,pride,0.8,2,True
+51674,I graduated from university,pride,4,27,5,pride,0.8,2,True
+51687,"I can still remember vividly the day i went to my friend birthday party, the way my friends welcome me I felt honored and walk in with full of pride, I gave him the present I brought for him and I left the party after some minutes",pride,47,230,5,pride,0.6,2,True
+51688,"I am proud of my D&D campaigns. Between myself and my friends, I am the dungeon master and designer of our tabletop games. I am proud my players enjoyed my work, they invest in the plots, feel emotion from the music and events and that they enjoy our shared story adventures",pride,51,274,5,pride,0.8,2,True
+51575,I gave birth to my daughter and she was perfectly healthy and beautiful.,pride,13,72,5,joy,0.6,2,False
+51577,i received my GCSE results.,pride,5,27,5,relief,0.6,3,False
+51591,"my autistic daughter got an unconditional offer for college, because she's had such a hard time at high school.",pride,19,111,5,pride,0.6,2,True
+51592,"I was at work and I received a phone call from a university lecturer who told me I had been nominated for (and won) two prizes for my BSc, the BPS Undergraduate award and the Faculty Award.  I had had a difficult year completing the final year of my degree in covid-times and I was a mature student who had never studies at degree level before, and so I felt immense pride that my efforts had been noticed and appreciated.  I have never won an award before.",pride,87,457,5,joy,0.4,4,False
+51593,At work by helping others and providing a good experience,pride,10,57,5,pride,1.0,1,True
+51595,I felt pride when I graduated the  best student in my class,pride,12,59,5,pride,0.6,3,True
+51597,my band got signed to a label run by an artist i admire,pride,13,55,5,joy,1.0,1,False
+51598,the event was successful,pride,4,24,5,relief,0.6,3,False
+51607,I graduated from university,pride,4,27,5,pride,0.8,2,True
+51611,I came out to my parents,pride,6,24,5,relief,0.8,2,False
+51613,"WHEN I WENT AND GOT MY G.E,D.",pride,7,29,5,pride,0.6,3,True
+51624,I feel pride when I complete a task well at work,pride,11,48,5,no-emotion,0.4,3,False
+51626,When I worked at the hospital and saw the nhs staff across all areas of the hospital come to work day after day to help the general public.,pride,28,139,5,pride,0.8,2,True
+51632,I received honors for my degree,pride,6,31,5,pride,0.8,2,True
+51635,I was recognised for doing well at work by my line manager,pride,12,58,5,pride,1.0,1,True
+51639,my client was happy with the painting they commissioned from me.,pride,11,64,5,joy,0.6,2,False
+51652,I got my degree,pride,4,15,5,pride,0.8,2,True
+51653,My sons were born,pride,4,17,5,joy,1.0,1,False
+51751,my daughter was baptised and confirmed on the same day,pride,10,54,5,pride,0.8,2,True
+51758,I told my family I was leaving the UK to travel full-time and they were all so happy for me,pride,20,91,5,joy,0.6,2,False
+51768,I finally put up my kitchen blinds because I'd put it off for a year!,pride,15,69,5,pride,0.6,2,True
+51774,I felt pride when I aced a test.,pride,8,32,5,pride,0.8,2,True
+51775,I had my baby in the water all natural,pride,9,38,5,relief,0.4,3,False
+51792,when i succeeded at my current product development project,pride,9,58,5,pride,0.8,2,True
+51795,I became chartered,pride,3,18,5,no-emotion,0.4,4,False
+51799,My boyfriend said he was proud of me,pride,8,36,5,pride,0.8,2,True
+51801,I did really well in a course I didn't think I would do well in,pride,15,63,5,surprise,0.6,3,False
+51804,i see my daughters achieve things - daughters nativity play,pride,10,59,5,pride,0.8,2,True
+51805,i spoke at my nans funeral,pride,6,26,5,pride,0.6,3,True
+51807,My son attestation when becoming a police officer,pride,8,49,5,pride,0.6,3,True
+51808,I felt pride when I got myself a new pair of nike air force 1s because it felt really good putting on the latest pairs at the time.,pride,28,131,5,joy,0.8,2,False
+51720,I felt pride when I got my first job as a teacher.This is because of how much effort I had put in that year and what I had been through to get the job. Secondly because of how hard I had worked and how good the job is and was.,pride,50,226,5,pride,0.8,2,True
+51730,I felt pride when I passed my PhD viva because it was a lot of work and things such as personal loss and the pandemic made the last year and a half particularly challenging.,pride,34,173,5,pride,1.0,1,True
+51732,I crochet. I finished a blanket for my best friend for her baby shower. I showed it to a couple of my friends and they loved it!,pride,27,128,5,joy,0.6,2,False
+51738,I went to lgbt pride.,pride,5,21,5,pride,0.4,3,True
+51694,"I used to answer emergency ambulance calls, I felt pride when I received a letter last week to say that I had saved a patient's life who was in cardiac arrest, I gave CPR instructions over the phone and they survived.",pride,41,217,5,pride,0.6,3,True
+51705,"I graduated from sixth form, with the grades that I had strived to achieve.",pride,14,75,5,pride,0.6,3,True
+51708,my son came home with a headteacher's certificate from school for having a positive attitude and being kind,pride,18,107,5,pride,0.8,2,True
+51710,I felt pride when I graduated from school because it took many years and a lot of work to get to the point where I completed the program.,pride,28,137,5,pride,0.8,2,True
+51713,Because I'm married to a wonderful man.,pride,7,39,5,joy,0.8,2,False
+6649,I was offered a new job and they offered me the position above the one I interviewed for with great pay,pride,21,103,5,joy,0.6,2,False
+6652,"I felt pride when I organised, managed and played in an ice hockey varsity game. It had never been done before and the team was in financial trouble and I saw it as a great opportunity to make some money for the club and also to give the team and sport some exposure. It took a lot to get other members on the team to buy in but eventually they did. On the night of the game we made £1700 for the team and wider club which helped pay for a lot of different things. Not only that but over the following years the game just got bigger and bigger each year with the game eventually being played in front of 3000 people. It gave me immense pride to have this initial idea for it to grow into a great spectator event, but also a game that the guy who took part in it will remember for the rest of their lives.",pride,162,804,5,pride,1.0,1,True
+6696,I saw my daughter perform at her gymnastics show,pride,9,48,5,pride,0.6,2,True
+6716,my son started school,pride,4,21,5,joy,0.6,3,False
+6717,my proposal was selected for my first solo artist exhibition at a local gallery as it validated my choice to pursue my B.F.A. and become an artist even though I had a previous degree in sciences.,pride,36,195,5,pride,1.0,1,True
+6720,"I read in the press that the Irish Naval Service had sent its flagship to the Mediterranean to help in the rescue of migrants from Libya. As it is one of very few ships, it was a significant gesture in support of the European effort.",pride,45,233,5,pride,0.8,2,True
+6728,I sang with the band at a church service for the first time. The band is very amateur and there are no auditions but I had worked hard to prepare well and do my best. A couple of days later I got a message from a friend who had heard me sing and told me it sounded great. This friend is not only honest but is professionally trained in theatre arts so doesn't give that kind of feedback lightly. The coment made me feel proud of my preparation and performance.,pride,90,460,5,pride,0.8,2,True
+6729,my youngest son who has a health condition has progressed and is slowly beginning to speak as he has a speech deficit,pride,22,117,5,joy,0.6,3,False
+6732,i took a moment to look back and saw how far i had come mentally over the last year,pride,19,83,5,pride,0.8,2,True
+7113,When I wrapped up a load of birthday presents and they didn’t look awful,pride,14,72,5,surprise,0.6,2,False
+7118,That I put together a funeral service for my Aunt,pride,10,49,5,sadness,1.0,1,False
+7125,when I do something good,pride,5,24,5,pride,0.8,2,True
+7128,I watched my baby girl walk for the first time,pride,10,46,5,joy,0.6,2,False
+7134,A friend described me as her angel because I had travelled by several buses to bring her to a group meeting over several weeks when she wasn’t able to leave home alone.,pride,32,168,5,pride,1.0,1,True
+7135,I am able to help someone with something they need,pride,10,50,5,pride,0.8,2,True
+86,On the anniversary of my business,pride,6,33,5,pride,0.4,4,True
+2161,I passed my Irish language test,relief,6,31,5,joy,0.6,2,False
+2144,Finding out my degree classification,relief,5,36,5,pride,0.4,4,False
+2145,I completed my degree and found out I got a 1st Class Degree overall.,relief,14,69,5,pride,1.0,1,False
+2158,"I had my first vaccine, as I have a fear of needles but it was not as bad as I thought it would be.",relief,24,99,5,fear,0.4,4,False
+3983,when I got a professional massage because I felt like I could finally relax and did not have to worry about anything.,relief,22,117,5,relief,0.8,2,True
+3991,I felt relief when I managed to complete a work task that I had been putting off.,relief,17,81,5,relief,0.8,2,True
+3998,I didn't have to go to my senior year graduation.,relief,10,49,5,relief,0.8,2,True
+3890,"I felt relief the time that I thought my dad had seriously injured himself while cutting down a dead tree branch. Turns out, the design on his shirt was a red splatter pattern-not blood seeping through from the chest area.",relief,40,222,5,relief,0.8,2,True
+3893,I got on the plane to come back to the USA from Kuwait to be with my family.,relief,18,76,5,joy,0.6,2,False
+3919,I found out I wasnt pregnant after missing my period for 4 months,relief,13,65,5,relief,0.4,3,True
+3923,I felt relief when I realized I was able to quit my job to pursue my education.,relief,17,79,5,joy,0.4,3,False
+3926,I got enough money to sort my bills,relief,8,35,5,relief,0.6,3,True
+3934,I found relief when I was able to keep my job during a worldwide pandemic,relief,15,73,5,relief,0.6,3,True
+3936,I felt relief when I got into university,relief,8,40,5,pride,0.6,2,False
+3937,When I found my dog,relief,5,19,5,relief,1.0,1,True
+3942,I found my child,relief,4,16,5,relief,1.0,1,True
+3944,When I got a good. response on an article I wrote for work because I had been stressing out about it all week.,relief,23,110,5,relief,0.8,2,True
+3948,I felt relief when my COVID test came back negative,relief,10,51,5,relief,1.0,1,True
+3964,I thought my boss was upset with me about a mistake I made at work but it turned out she was really understanding once I spoke with her.,relief,28,136,5,relief,0.6,2,True
+3966,I'm supposed to speak publicly but the event gets cancelled.,relief,10,60,5,relief,0.8,2,True
+3969,"I felt relief when I entered my car and saw that it has been broken into but that nothing was taken or damaged. Someone had gone through it over night. In the morning, I got into the car to go to work and saw they the contents of the glove compartment and centre console had been emptied all over the seat and floor. I searched through and was relieved to find nothing was missing or damaged.",relief,76,392,5,relief,0.8,2,True
+3973,I felt relief when I was able to collect enough money for my business to make payroll. I was worried I did not have enough money in the business bank account to pay employees for the time period and wasn't sure what to do. At the last minute I had a few customers make payments on their accounts and was able to successfully pay my employees.,relief,66,342,5,relief,1.0,1,True
+3975,I felt relief when I got a job at my current position permanently.,relief,13,66,5,relief,0.4,3,True
+41278,I felt relief when my boyfriend said I could move in when my flat flooded,relief,15,73,5,relief,1.0,1,True
+41287,I felt relief when I woke up this morning because another day had passed,relief,14,72,5,boredom,0.2,5,False
+41220,"I felt relief when I was very broke and I needed some money to pay for a particular bill that came up unexpected. My car engine broke down and I wasn't expecting such situation to happen initially, but the situation happened at a time when I had no money.But at the end of the day, my close friend loaned me some money to fix the problem, so i was well relieved.",relief,71,362,5,relief,0.8,2,True
+41225,My car was hit by a drunk driver and because it's an older car we were pretty sure it would be totaled even though the damage was only cosmetic. It was totaled but his insurance let us take the car back and gave a couple grand for when we get a new car. It was a relief to be able to get the car back because I don't have another one yet.,relief,72,338,5,relief,0.4,4,True
+41228,My grandad recovered from a temporary ailment. I have not lost anyone close to me as yet and I did not feel ready to. This was the closest I have come and I felt a sense of hopelessness and upset and so the relief when it was not life threatening was huge.,relief,52,256,5,relief,0.8,2,True
+41236,Arsenal won 2 games,relief,4,19,5,joy,0.8,2,False
+41239,I found out my mam didn't need a serious surgery,relief,10,48,5,relief,1.0,1,True
+41251,"i got into university. Because i felt like i actually had a future, and wouldn't feel any regret with my past education.",relief,22,120,5,pride,0.4,3,False
+41260,"I felt relief when I realized that despite my past, I had the ability to love again. After a horrible toxic relationship, I felt as if I would be better off alone forever. I moved to a different city, met new people and was able to fall in love again.",relief,50,251,5,relief,0.6,3,True
+41262,"I felt relief when my wife successfully delivered our son. Prior to that moment, it has been very tensed for us.",relief,21,112,5,relief,0.6,2,True
+41271,"i felt relief when I found out that my boyfriends dog was going to be okay. They had taken the dog to the vet to get some tests and found out that if the results were bad, they would have to put him down.",relief,44,204,5,relief,0.8,2,True
+41343,I felt relief when I received my masters acceptance and saw that I got a scholarship too.,relief,17,89,5,relief,0.4,3,True
+41348,When I finally finished moving out of my apartment into my new place,relief,13,68,5,relief,1.0,1,True
+41349,a recent dental surgery was over because I am terrified of dentists,relief,12,67,5,relief,0.8,2,True
+41352,I'm dog-sitting a puppy and I left him alone yesterday for the first time. When I came home he was napping and hadn't peed in the house or destroyed anything.,relief,30,158,5,relief,1.0,1,True
+41360,When I made it through my surgery safely,relief,8,40,5,relief,1.0,1,True
+41363,I felt relief when I arrived safely and calmly to our destination after driving a rental car in a different province.,relief,21,117,5,relief,1.0,1,True
+41319,So basically I felt a huge relief a few months back because let me start of by saying I’m 19 so I make minimum wage. So basically over the course of about two months I got about 4 speeding tickets each of them 200$ a piece so it was a lot for someone my age and I was working super hard. Anyways so one day I’m coming home from work super tired and upset because I know all my money from work is going towards these tickets right. So I get a phone call from my mom telling me she had a surprise for me and she pretty much went to the court house and paid all my ticket fees and the relief I felt knowing I wouldn’t have to slave my days away just to give my money back to the governing anyways I know this is long but I admire my mom for that and it was a big relief and weight off my chest !,relief,168,792,5,relief,0.8,2,True
+41296,i felt relief when i heard that my cousin was not a part of the crew that suffered a crash.,relief,20,91,5,relief,0.8,2,True
+41299,I got my Leaving Cert results and had enough points to go to college,relief,14,68,5,relief,0.6,2,True
+41311,I signed a lease to our house just before we became homeless.,relief,12,61,5,relief,0.6,2,True
+51901,I felt relief when I got to know that the course which I thought I would fail I latter perform excellently there,relief,22,112,5,relief,0.6,2,True
+51915,my wife just left for work,relief,6,26,5,relief,0.4,4,True
+51918,My neice rang the bell to be cleared of cancer,relief,10,46,5,relief,0.8,2,True
+51919,When my nannan was okay after her operation,relief,8,43,5,relief,1.0,1,True
+51922,I got college placement place,relief,5,29,5,joy,0.4,3,False
+51926,I went to my first baby scan,relief,7,28,5,joy,0.8,2,False
+51821,When my child settled well into school,relief,7,38,5,pride,0.8,2,False
+51826,I received some test results back from the doctor that cleared me of further illnesses,relief,15,86,5,relief,0.8,2,True
+51835,When my ex partner finally stopped harassing me. He would make me feel so scared that once it stopped I was so relieved.,relief,23,120,5,relief,0.6,3,True
+51837,i thought my little girl had gone missing but she was hiding,relief,12,60,5,relief,0.8,2,True
+51849,I realised I hadn’t had put the wrong fuel in my car,relief,12,52,5,relief,0.6,2,True
+51857,I felt relief when my boss sent a message saying that I could switch from taking phone calls to responding to letters.,relief,22,118,5,relief,0.8,2,True
+51866,I felt relief when I was able to get my ipad to work after I thought it was broken,relief,19,82,5,relief,0.8,2,True
+51881,I felt relief when I found my lost phone.,relief,9,41,5,fear,0.6,2,False
+51882,When certain committee members left the committee.,relief,7,50,5,sadness,0.4,4,False
+51883,I got a job after months of searching.,relief,8,38,5,relief,0.6,2,True
+51889,"I was being investigated for a brain tumour and I was not it was not a tumor nor cancerous, but inflammatory scarring caused by shingles",relief,25,136,5,relief,1.0,1,True
+51896,I've finally got round to doing a task which Ive been putting off.,relief,13,66,5,relief,0.8,2,True
+51897,"I felt relief when my father died after a short illness because I feared that even if he recovered from his illness, he would then have a lifestyle and standard of living which he would not be happy with, and in which I would struggle to look after him satisfactorily.",relief,50,268,5,relief,0.8,2,True
+51992,I felt relieved when I heard about your coming.,relief,9,47,5,joy,0.8,2,False
+51996,When I attended my 12 week pregnancy scan. It was such a relief to know everything was okay and he was healthy and growing as he should be.,relief,28,139,5,relief,1.0,1,True
+52004,There were 15 slots left on prolific and I got in this study,relief,13,60,5,joy,0.6,3,False
+52012,I felt relief when I submitted my midterm last night.,relief,10,53,5,relief,0.8,2,True
+52015,"we were trying to sell our second home and it seemed we were not going to actually sell it as we had no people around in ages. Then someone viewed and offered asking price, they were a cash buyer and the sale went through in only 6 weeks",relief,48,237,5,relief,0.6,2,True
+52018,When a medical test came back negative for cancer.,relief,9,50,5,relief,0.6,3,True
+52020,our aeroplane landed.  (I'm terrified of flying),relief,7,48,5,relief,1.0,1,True
+52029,I was assigned my project of choice for my final year degree project,relief,13,68,5,relief,0.8,2,True
+52036,"I felt relief when I tested negative for covid 19, because testing positive would have meant that myself and my son would get poorly and pass it to other family members.",relief,31,169,5,relief,0.8,2,True
+52045,I found my manuscript that I had lost the day prior.,relief,11,52,5,relief,1.0,1,True
+52046,I lost my daughter while in a large department store and then found her safe and sound,relief,17,86,5,relief,0.6,3,True
+51962,I finally saw my long distance partner in person after waiting 9 months.,relief,13,72,5,joy,0.8,2,False
+51982,"I felt relief when I got a passing grade in Intermediate Biostats in grad school because I was making a failing grade going into the final, but I made an A on the final so I passed and was able to graduate",relief,42,205,5,relief,0.8,2,True
+51929,I was able to complete a task that I was having issues completing,relief,13,65,5,relief,0.6,2,True
+51930,"the child I was babysitting ran off in the park and I couldn't find him for a few minutes, and then he finally came out of the wooded area that he had followed some other children into.",relief,37,185,5,fear,0.6,2,False
+51945,A friend who had stopped talking completely for a while (health reasons) called me,relief,14,82,5,relief,0.4,3,True
+51946,I quit my job as a waitress at a restaurant where I felt like they didn't treat their employees with respect.,relief,21,109,5,anger,0.6,3,False
+51949,"I finally was able to get approved to refinance my home after a divorce.  My income is somewhat non-standard (not salaried) and even though it is quite consistent and reliable (arguably more reliable than a salary because I can't really get ""fired"") the bank did not like that the amount wasn't guaranteed.  It looked at one point like I was going to have to sell my home.",relief,67,372,5,relief,0.8,2,True
+51953,i had a health problem resolved,relief,6,31,5,relief,1.0,1,True
+51957,"my wife and my mother, after years of therapy, conversations, and emotional turmoil fueled by my mother's alcohol abuse, finally started to rebuild a relationship.",relief,25,163,5,relief,0.8,2,True
+6736,I get home and don’t have to be social,relief,9,38,5,relief,1.0,1,True
+6752,after a job interview,relief,4,21,5,pride,0.4,3,False
+6761,when I had someone help me with a stressful event,relief,10,49,5,relief,0.8,2,True
+6768,my dad was told his cancer had not spread.,relief,9,42,5,relief,1.0,1,True
+6773,My covid pcr test was negative,relief,6,30,5,relief,0.8,2,True
+6779,I quit my job that I hated,relief,7,26,5,relief,0.8,2,True
+6789,I felt relief when we had an our offer accepted for the house we now call our home. We had sold our then current property and we due to exchange in a couple of weeks despite the fact we had nowhere else to go yet. Thankfully everything fell in to place at the last minute and it was a huge relief for us all!,relief,64,308,5,relief,0.8,2,True
+6796,When the webinar was over as I was concerned it wouldn't run smoothly,relief,13,69,5,relief,0.6,2,True
+6799,"I had my cell phone on the rim of the bathtub. My home phone rang, I grabbed it and my cell phone fell into the bathtub.  AAAGHHHHHH.  I had bought the phone within the last month.I dried it, put it in a bag of rice overnight, and in the morning discovered that it was still working.  What a relief!",relief,59,299,5,relief,1.0,1,True
+6801,When I completed a large cross stitch which took me over a month to complete. P,relief,16,79,5,pride,0.6,3,False
+6804,I got home from a flight that we were almost refused on as we didn't have the right documentation,relief,19,97,5,relief,0.6,3,True
+6808,"my house sold. My husband and I decided to sell our house last year. It was a hard year for us. He finished his contract at the military and we really hadn't planned for the transition. Due to some circumstances this transition happened sooner than expected. We decided the best thing to do was move to another state to pursue an opportunity. I was really nervous about selling a house during a pandemic, even if the market and interest rates were the best they ever were. I just didn't think someone would want our house or that it wouldn't sell that quick. It sold in 4 days. We received multiple overs and I never imagined having that much profit only having a mortgage for 2 years.",relief,126,685,5,surprise,0.6,3,False
+6810,"I felt relief when I got my results back from my year 12 exams and found out that I did well, because I was very stressed beforehand and did not believe that I had done well. i needed to do well to get into the uni course that I wanted and I was so relieved to find out that I had in fact achieved the grades for this.",relief,68,318,5,relief,0.8,2,True
+6815,I was told that a CT scan hadn’t identified any metastatic disease in my body.,relief,15,78,5,relief,0.8,2,True
+7143,"we went on a hike on a UK holiday. The weather was warmer than we anticipated, the hike was rougher, we didn't take enough to drink as we were stopping at a cafe on the way. The cafe had closed! We had to trawl all the way back to the holiday cottage and when I saw it on the horizon, got there and had a long drink, that was true relief.",relief,71,338,5,relief,0.4,4,True
+7144,I perform  concert without mistakes,relief,5,35,5,pride,0.8,2,False
+89,I finally was told my leaving date for my current job.,relief,11,54,5,no-emotion,0.2,5,False
+2179,I had a miscarriage recently,sadness,5,28,5,sadness,1.0,1,True
+2163,my dad was diagnosed with cancer and eventually passed away.,sadness,10,60,5,sadness,1.0,1,True
+2168,I felt sad when arguing with a friend,sadness,8,37,5,anger,0.4,3,False
+2169,I felt sadness when my 18 year old son passed away.,sadness,11,51,5,sadness,1.0,1,True
+2172,I was diagnosed with fibromyalgia,sadness,5,33,5,sadness,0.6,3,True
+31098,When my dog died,sadness,4,16,5,sadness,1.0,1,True
+31114,I felt sadness when I graduated high school because I remember that I'm growing up and that means leaving people behind.,sadness,21,120,5,sadness,1.0,1,True
+31116,my house burned down,sadness,4,20,5,sadness,0.6,2,True
+31118,my dad died,sadness,3,11,5,sadness,1.0,1,True
+31009,"I felt SADNESS when my grandmother was suffering from dementia, forgot that her husband died, and wanted to die when she found out that he was gone again. She blamed me for lying to her and said I didn't love her.",sadness,41,213,5,sadness,0.6,2,True
+31015,I felt sadness when my boyfriend didn't text me back in a timely manner. He has moved to another city for college. We used to hang a lot before he left so when we couldn't see each other like how I wanted to it made me feel very sad. I want him to myself which I know is selfish now but then it made me sad and brokenhearted. I cried for a few days. I do have relationship anxiety so I think that was a big part of it. I'm okay now I haven't cried about it. We talked it through and I feel better about the situation.,sadness,108,517,5,sadness,1.0,1,True
+31021,I was in a personal relationship,sadness,6,32,5,sadness,0.4,3,True
+31029,"my pet fish died, and I wasn't there. The person feeding him for me told me.",sadness,16,76,5,sadness,1.0,1,True
+31034,I was notified of my mother's death.,sadness,7,36,5,sadness,1.0,1,True
+31056,My boyfriend is moving away,sadness,5,27,5,sadness,1.0,1,True
+31060,in the uk we were put into a lockdown over Christmas where I thought I would be able to see my family who I hadnt seen in a while and celebrate my 21st birthday,sadness,34,160,5,sadness,0.8,2,True
+31062,IVF failed,sadness,2,10,5,sadness,0.6,3,True
+31067,"I felt sadness when I visited my great grandmother in the hospital and knew this would be the last time I saw her alive due to her old age and current condition. Death has always been extremely saddening to me, and this was my first time experiencing it with a close family member.",sadness,53,281,5,sadness,1.0,1,True
+31070,When my grandson died,sadness,4,21,5,sadness,0.8,2,True
+31077,my friend broke my heart,sadness,5,24,5,sadness,1.0,1,True
+31083,i felt sadness when the concert I was supposed to go to got cancelled,sadness,14,69,5,sadness,1.0,1,True
+31089,I felt SADNESS because my mother died.,sadness,7,38,5,sadness,1.0,1,True
+41448,"my sister developed multiple sclerosis and has slowly disappeared, from a cognitive standpoint.",sadness,13,95,5,sadness,1.0,1,True
+41377,"I felt sadness when I heard about a friend who has recently gone into a psych ward because he used to be very close to me, an ambitious young man, but for reasons that may or may not be in his control he has abandoned society and society has done the same to him.",sadness,54,263,5,sadness,0.6,2,True
+41378,I knew I needed to put my dog Holly to sleep. It was awful but I knew it was the right thing to do to stop her suffering she looked so sad most of the time.,sadness,36,156,5,sadness,1.0,1,True
+41397,when I returned to my apartment after being away during COVID.,sadness,11,62,5,relief,1.0,1,False
+41402,I felt sadness when I graduated high school,sadness,8,43,5,pride,0.8,2,False
+41407,I thought I had upset a fiend and damaged our relationship,sadness,11,58,5,guilt,0.8,2,False
+41415,I felt sadness when I was laid off from a job I had just started and was excited for.,sadness,19,85,5,anger,0.4,3,False
+41425,"The saddest day of my life is when my dog got hit by a car. I watched her get hit. Luckily after everything was said and done she ended up being okay, but at the time it was the worst and saddest day of my life. She is my best friend. TAfter finding out she wasnt going to die I still had to quit my job to rehab her and nurse her back to health.",sadness,75,346,5,relief,0.6,2,False
+41503,I felt sadness when I called my mom and found out that she and my dad were on vacation with my brother and they hadn't told me they were going somewhere together.,sadness,32,162,5,sadness,0.6,2,True
+41507,My work office was relocating across the country,sadness,8,48,5,fear,0.4,3,False
+41515,When returning home from a vacation because I didn't want it to be over.,sadness,14,72,5,sadness,1.0,1,True
+41529,"When I was 13 years old I was raped by a friend’s older brother. I didn’t tell anyone about it. I felt embarrassed and scared. And because of keeping this inside, I began acting out. I was then sent by my parents to a wilderness troubled teens program where I was forced to live outdoors in a tent, cooking my own food, cutting down trees, and put into extreme physical labor type situations. I had just turned 14 at this point. I was confused as to why I had to wake up one morning with two strangers in my bedroom, who then handcuffed me and drove me 2 hours from my home and dropped me off in the woods with other young girls and some “group leaders” who were barely of age themselves. I lived my life like this, with no goodbyes to family or friends, for 5 months. I was terrified. And I was sad. The most sad I’ve ever been in my life.",sadness,165,840,5,fear,0.6,3,False
+41479,I felt sadness when my sister's dog passed away.,sadness,9,48,5,sadness,1.0,1,True
+41481,"i felt sadness when i lost my first dog, it was sad because i had grown up with the dog since a child it was apart of my family.",sadness,29,128,5,sadness,1.0,1,True
+52149,My parent’s dog died. We knew Doris was getting old but it was still very sad when she died. I still miss her but I’m getting less sad as time goes on.,sadness,32,151,5,sadness,0.8,2,True
+52157,"I felt sadness when it was during Ramadan 2020 during the pandemic. I remember hearing little conversations about my uncle (mothers brother) being ill and I'd always ask of him just to check if he was okay. My family and I had woken up at around 04:00 to pray fajr together. We'd finished praying and we were making dua as we usually do for the deceased and in general and I'm guessing my mum and dad had found out about his death earlier that morning and my mums voice just completely cracked and she broke down completely and just kept saying the words ""he's gone, (uncles name) gone"". It took me and my sister a while to process what we'd just been told and me, my mum and dad were in my parents room just crying for hours. I, personally had never really experienced death or grief in my life before, so this was the first time. Seeing my parents, especially my mum cry was excruciating.",sadness,166,890,5,sadness,1.0,1,True
+52049,"Last week I attended hospital and my father died. He was in a coma for about 10 days, but after some meetigns with doctors, it was decided to pull out his breathing tube. He would get morphine before that. Looking at my dad's face, with several tubes up his nose and down his throat made me feel sad. It also made me sad to think I would never see him alive again.",sadness,72,364,5,sadness,1.0,1,True
+52050,our dog died of cancer suddenly a year ago.,sadness,9,43,5,sadness,1.0,1,True
+52051,my grandad passed away,sadness,4,22,5,sadness,1.0,1,True
+52064,my hamster died,sadness,3,15,5,sadness,0.8,2,True
+52077,"When my mum died of cancer four years ago, I am a parent of two young children and she was my best friend and my mum, I relied on her and confided in her, I have not got many friends or family, she gave me strength and when she passed I felt half of me past with her.",sadness,58,267,5,sadness,1.0,1,True
+52079,my long time girlfriend broke up with me.,sadness,8,41,5,sadness,1.0,1,True
+52087,sometimes i feel my life has not worked out the way i wanted it to and i missed some opportunities like not applying for certain jobs,sadness,26,133,5,guilt,0.4,3,False
+52088,I felt sadness when my grandmother died.,sadness,7,40,5,sadness,1.0,1,True
+52102,my parents were upset before my wedding,sadness,7,39,5,sadness,1.0,1,True
+52116,I am stressed at work,sadness,5,21,5,fear,0.4,3,False
+52118,My brother died,sadness,3,15,5,sadness,1.0,1,True
+52132,my previous manager resigned from her position because we worked well together and she became a great friend outside of work. I knew she was being pushed out of the company.,sadness,31,173,5,sadness,0.6,3,True
+52138,my sister couldnt get married due to covid,sadness,8,42,5,sadness,0.8,2,True
+52251,"When I was a child, around Christmas time, there were many presents under the tree, with everyones name on. I found one of mine (wrapped, of course), but it was flat. Like 2 pieces of paper. I actually thought my parents had got me two sheets of paper for Christmas and I felt extremely sad about this. So after a lot of sobbing I got to open my present early. It was a cool glow in the dark skeleton, that was about 6 foot tall . It eventually hung on my bedroom wall for years after that, until it was too old to hang any more :-)",sadness,107,532,5,sadness,1.0,1,True
+52252,My husband was poorly with covid,sadness,6,32,5,fear,1.0,1,False
+52256,My girlfriend broke up with me.,sadness,6,31,5,sadness,1.0,1,True
+52282,my co-worker passed away from a brain tumour they had for two years at the age of 39 and losing their presence at work was very sad,sadness,27,131,5,sadness,1.0,1,True
+52284,I didn’t get a job,sadness,5,18,5,sadness,0.6,3,True
+52289,I found out that my ex-wife was divorcing me.,sadness,9,45,5,shame,0.4,3,False
+52290,I felt sadness when my husband left for work this morning. I like having him around and when he leaves it makes me sad.,sadness,24,119,5,sadness,1.0,1,True
+52202,my boyfriend dumped me,sadness,4,22,5,sadness,1.0,1,True
+52217,my favourite serial drama comes to an end,sadness,8,41,5,sadness,0.8,2,True
+52225,my 18 year relationship was ending,sadness,6,34,5,sadness,0.8,2,True
+52176,watching toy story 3 at the cenima as a grown man surrounded by children,sadness,14,72,5,shame,0.4,3,False
+52184,I felt sadness when I was rejected from a dance team after spending a year working on my dance skills.,sadness,20,102,5,sadness,0.8,2,True
+52196,when my boyfriend left to go back home as we are long distance at the moment. We had an amazing month together and him leaving always gets me sad that we have to part ways.,sadness,35,172,5,sadness,0.8,2,True
+52197,I felt sadness when the job I was looking forward to working at didn't offer me the salary pay I needed to make the change in jobs.,sadness,27,131,5,sadness,0.6,3,True
+52198,My son broke his arm,sadness,5,20,5,sadness,0.6,3,True
+6829,"After going through IVF and finally being pregnant with what should of been my second child, losing the baby when I was 9 weeks pregnant.",sadness,25,137,5,sadness,0.8,2,True
+6831,when my husband and I divorced,sadness,6,30,5,sadness,0.8,2,True
+6835,I was packing my suitcase to come home from my holiday to Israel because I had enjoyed spending two weeks of with my sister and would miss the feeling of freedom.,sadness,31,162,5,sadness,1.0,1,True
+6836,I was not approved for an apartment complex. After putting so much time and work into this. I was completly upset.,sadness,21,114,5,sadness,0.4,3,True
+6848,my feelings were hurt.,sadness,4,22,5,sadness,1.0,1,True
+6852,A trip I was really looking forward to was cancelled due to the pandemic as well as financial situations.,sadness,19,105,5,sadness,0.6,2,True
+6864,A friend betrayed me at work.,sadness,6,29,5,sadness,0.6,2,True
+6869,I felt sadness when my ex boyfriend of 7 years cheated on me.,sadness,13,61,5,anger,0.6,2,False
+6879,I felt sadness when I found out my boyfriend was cheating on me.,sadness,13,64,5,anger,0.6,3,False
+6885,"I broke up with my ex, because we were together for 7 years and shared lots of memories together.",sadness,19,97,5,sadness,0.8,2,True
+6899,"I felt sadness when I broke up with my ex boyfriend because I did love him but it wasn’t enough, I felt a sense of loss and guilt along with the sadness.",sadness,32,153,5,relief,0.6,3,False
+6906,I received an insult from someone,sadness,6,33,5,anger,0.4,4,False
+6907,I struggled to help my husband through an emotional event,sadness,10,57,5,sadness,0.6,3,True
+6915,"I was watching a film for class about Hurricane Katrina, and saw people describing the experience of losing their loved ones, their moms and their siblings, and the film showed these grieving people and the dead bodies of their loved ones, and it all felt so avoidable if the government wasn't so evil and neglectful.",sadness,55,317,5,anger,1.0,1,False
+6916,"I needed to move to a different province because of the aid I would receive as a disabled person, but I really did not want to leave where I was living and my good friends there.",sadness,36,178,5,sadness,0.8,2,True
+6920,my husband left me,sadness,4,18,5,sadness,0.8,2,True
+6928,I felt like my relationship was possibly ending.,sadness,8,48,5,sadness,1.0,1,True
+6933,when I lost my job today.,sadness,6,25,5,fear,0.4,4,False
+7146,my favourite mug broke,sadness,4,22,5,sadness,1.0,1,True
+7147,going to visit my family and realising my dad is turning in to someone I don't really want to be associated with. They are saying quite racist and homophobic things as well as watching/listening to quite right/conservative opinions.,sadness,38,232,5,disgust,0.4,4,False
+7157,"i had started working from home in 2020 and lost all the progress of my apprenticeship in a business as we were moving rooms and i had helped set it all up with the laptops and tables moving and so forth, missing my colleagues i had a fun time with",sadness,50,248,5,sadness,0.8,2,True
+7160,I realised I had not overcome a mental struggle when I thought I had.,sadness,14,69,5,shame,0.4,3,False
+7161,"I felt sadness when the day came for me to sign over possession of my house to a housing agency. Whilst this meant I could stay in the house, it was no longer mine. This was after 8 years of back and forth with court",sadness,45,216,5,sadness,0.6,2,True
+7164,my ex fiancé left me.,sadness,5,21,5,sadness,1.0,1,True
+7175,"Someone in my direct community stole from me and we caught them red handed. It made me feel sad not just because I’d been a victims of a crime, but someone I knew had done this to be and I had been violated",sadness,43,206,5,anger,0.6,2,False
+7179,I regularly feel sadness due to mental illness but the last night I a specific event triggered sadness was when my brother was angry at me.,sadness,26,139,5,guilt,0.2,5,False
+7180,people betray me,sadness,3,16,5,anger,1.0,1,False
+7187,I moved away from my friends to a new province.,sadness,10,47,5,sadness,1.0,1,True
+7192,My marriage ended,sadness,3,17,5,sadness,0.6,3,True
+7193,I'm not where I thought I would be at this point in my life. Went through a nasty divorce. My daughter & grandkids moved far away,sadness,26,129,5,sadness,0.8,2,True
+815,"I found out my Aunt had passed away from covid at the beginning of the year. She spent chrstmas day with her daughter, son in law and their kids however caught covid over christmas dinner. Within a week she had gone from being completely healthy and fit to being rushed to hospital. We received a text message from the family one afternoon early January to say she had been admitted to hospital with covid, within 24 hours she had gone onto a ventilator and sadly passed away.",sadness,87,476,5,sadness,1.0,1,True
+816,the UK voted to leave the EU,sadness,7,28,5,surprise,0.4,4,False
+822,When I was cut from a sports team,sadness,8,33,5,sadness,0.4,3,True
+825,I left my parents house,sadness,5,23,5,sadness,0.4,3,True
+2187,"One day as my sister and I were sharing a car, she decided she was not going to let me have it. She had done this many times before and was doing a horrible job of sharing and helping me get to work. I lost my temper in front of her and my mother. I was slamming doors and yelling. I have not thrown a fit like that ever since. I still feel ashamed I let my emotions get the best of me.",shame,83,386,5,guilt,0.6,3,False
+2180,when i failed my driving test,shame,6,29,5,shame,0.4,3,True
+2182,I was bullied badly and everyone made fun of me in a situation that made me feel shameful,shame,18,89,5,sadness,0.6,3,False
+31154,I was shouted at by a stranger for ignoring a sign,shame,11,50,5,shame,0.4,4,True
+31174,i have lied to my parents,shame,6,25,5,guilt,0.8,2,False
+31177,When I was shopping and accidently took someone else's cart rather than my own,shame,14,78,5,guilt,0.4,3,False
+31179,I did cheating in passing one exam and I got very good grades,shame,13,61,5,guilt,0.4,4,False
+31124,I felt shame when I saw a video of me being mean to my cousin as a child.,shame,18,73,5,shame,0.8,2,True
+31129,"I felt shame when I realized how badly I've been treated by others, and that I constantly put myself in crappy situations. I need to learn how to avoid putting myself in those situations because it causes me so much embarrassment.",shame,41,230,5,shame,0.8,2,True
+31141,I couldn't afford a bill.,shame,5,25,5,shame,0.6,3,True
+31143,my daughter got very ill from eating a tiny drop of laundry detergent that i'd spilt and I had to take her to A&E,shame,24,113,5,boredom,0.4,3,False
+31145,I was totally wrong when testifying in court to an event,shame,11,56,5,guilt,0.6,3,False
+31146,sent my daughter to school in uniform but it was dress up day,shame,13,61,5,guilt,0.6,3,False
+31147,I shouted at my son for doing something wrong but I found out it wasn’t his fault.,shame,17,82,5,guilt,1.0,1,False
+41548,I felt shame when my boyfriend found out that I had a secret Tinder (dating app) profile and had used it during our relationship.,shame,24,129,5,shame,0.4,3,True
+41581,aborted my baby,shame,3,15,5,sadness,0.4,3,False
+41583,my father had an intervention with me about my drinking habits and how it is affecting my relationships and work.,shame,20,113,5,shame,0.6,2,True
+41586,"I felt shame when a previous partner of mine made fun of me for one of my sexual fetishes. I had built up the confidence to ask them to include it when we had sex, and instead of the hoped-for reaction of agreement, or the emotionally-neutral reaction of politely declining, they ridiculed me for having the fetish and strongly refused to ever indulge it.",shame,64,355,5,shame,0.8,2,True
+41589,I raised my hand in class to answer a question but gave a wrong answer,shame,15,70,5,shame,1.0,1,True
+41600,my family told me I was sinning and going against God's will by dating someone outside of the church.,shame,19,101,5,shame,0.4,3,True
+41606,"I did not stand up for my friend when I knew she was in the right. However, I didnt know how to handle the situation. In hindsight, i let her down.",shame,31,147,5,guilt,0.6,2,False
+41607,Not being around my son,shame,5,23,5,sadness,1.0,1,False
+52323,I felt shame when I was 10 years old and I had a bathroom accident at an extended family members house.,shame,21,103,5,shame,0.8,2,True
+52327,"About 8 or 9 years ago I was going to school on a public bus, my brother was getting on the bus after me. There was one open seat but I chose to sit in the seat in front next to someone else because at the time I didn't want to sit next to my brother (I think that was my reasoning at the time). At the time it was fairly awkward - the person I sat next to looked confused, and occasionally I look back on it and feel embarrassed about the whole thing, and ashamed that I didn't want to sit next to my brother for some reason.",shame,110,526,5,guilt,0.8,2,False
+52330,When I got pregnant young,shame,5,25,5,fear,0.6,3,False
+52337,I got drunk on holiday with my daughter,shame,8,39,5,shame,0.4,4,True
+52338,offended someone,shame,2,16,5,guilt,0.6,3,False
+52339,I revealed a family secret acccidently,shame,6,38,5,guilt,0.6,3,False
+52341,"I felt shame going through my divorce with my ex wife, my parents have been married longer than I have been alive and have stuck together through a lot, I felt shame that I wasn't able to be like them",shame,40,200,5,shame,0.8,2,True
+52343,I felt SHAME when I could not afford to go on vacation with my sisters. I did not want to ask to borrow money and felt ashamed that I could not go with them because of money.,shame,37,174,5,shame,0.8,2,True
+52347,I failed a maths test and the teacher called me out in front of the class,shame,16,73,5,shame,1.0,1,True
+52305,I felt shame when I was called out for giving incorrect information on a topic that I thought I knew very well.,shame,22,111,5,shame,1.0,1,True
+52312,Lost my temper with my child,shame,6,28,5,anger,0.6,3,False
+52316,"I had to stay overnight in a boy's bedroom when the door handle broke off, and people assumed we had been having sex.",shame,23,117,5,shame,0.6,3,True
+52356,This past weekend I attended a wedding with my girlfriend's family. I got too drunk and was apparently an embarrassment.,shame,20,120,5,shame,1.0,1,True
+52365,broke an expensive item in a shop accidently,shame,8,44,5,guilt,0.8,2,False
+52368,I tasked with sorting out some files from the office the previous day and I slept off when I got home,shame,21,101,5,relief,1.0,1,False
+52369,I DIDNT DO WELL AT WORK WHICH CAUSED A TEAM MEMBER TO BE ANNOYED,shame,14,64,5,shame,0.4,3,True
+52371,I had to get fillings,shame,5,21,5,fear,0.8,2,False
+52373,failed my piano exam,shame,4,20,5,shame,0.6,3,True
+52374,when I said the wrong thing.,shame,6,28,5,shame,0.6,2,True
+52378,One time at a part time waiter job i was working i had accidently spilled soup on a customer during a crowded dinner service. The customer was very mad and i tried to get away from the situation without resolving it.,shame,41,216,5,guilt,0.6,3,False
+52396,"I felt shame when I didn't catch on to a new job as quickly as expected.  I was asked to input simple settings into a machine and I put in very wrong settings.  I could tell the other employees there were talking badly about me, and the incident was also reported to management.",shame,53,278,5,shame,0.8,2,True
+52398,i vomited at work in front of colleagues.,shame,8,41,5,shame,1.0,1,True
+6938,not getting as much work done as i could,shame,9,40,5,guilt,0.8,2,False
+6944,over the last year because I've become disabled and now often find myself dealing with family who don't understand how severely my illness has affected me.,shame,26,155,5,sadness,0.6,2,False
+6950,I manage a small family run restaurant - one night I forgot one of our day one regulars had a booking and i gave away their table to some walk-in customers. When the regulars came in there was no room for them and they had to wait half an hour. I was so ashamed and embarrassed,shame,56,277,5,guilt,0.6,2,False
+6953,"When I was at uni and was deciding who to live with in my final year I really didn't want to live with this one girl who I was living with currently, I didn't have the balls to say anything so we lived together anyway and became really close bizarrely and I found out her mental health was awful and that she knew we didn't want to live with her and I was really ashamed that I'd treated her so badly at that time",shame,84,413,5,guilt,0.4,3,False
+6954,I had sex in a public car park,shame,8,30,5,shame,0.4,4,True
+6957,"I felt shame when my I told an embarrassing story about my sister in front of her friends. It was an embarrassing story about when she was learning to potty train as a child. I thought the story was funny but my sister felt really upset and embarrassed that I told it. After I told that story, I felt shame because I embarrassed my sister and made her feel bad when I know that if she would do the same thing to me, that I would be very upset.",shame,89,443,5,guilt,0.8,2,False
+2193,i discovered a lost person item that i hid for myself years ago.,surprise,13,64,5,guilt,0.4,3,False
+2194,I felt suprised when my little sister chose me to read her story instead of my dad,surprise,17,82,5,pride,0.6,3,False
+2195,I finished 13th out of 170 in my first half marathon. I didn't expect to do as well as I did.,surprise,21,93,5,surprise,0.4,3,True
+2198,England scored in the 2n minute of the Euros final,surprise,10,50,5,joy,1.0,1,False
+31280,I felt surprised when I came home and my friend had flowers delivered for me.,surprise,15,77,5,surprise,0.6,2,True
+31285,"I felt surprised when my students planned a surprise birthday party for me. I was a TA for a study abroad trip to Tanzania and I was responsible for the 18 students. On my birthday, the students informed me that they found someone who could drive us to an area where there was no light pollution so we could star gaze (something I do often). I was surprised because they remembered my birthday, planned it, and realized that I like to star gaze (it's not something I talk about, just do).",surprise,91,488,5,joy,0.4,3,False
+31286,My girlfriend took me on holiday but didn't tell me where to.,surprise,12,61,5,surprise,0.8,2,True
+31292,I felt SURPRISE when I went to a restaurant for dinner with a friend. On the evening we went to the restaurant they were running a random competition for diners to win a free meal. We heard an announcement being made and a waitress then appeared at our table and told us that our meal would be free. I felt joy and surprise when this happened because it was so unexpected.,surprise,71,372,5,surprise,1.0,1,True
+31180,"I felt surprise when my sister sent me a message detailing how our aunt had stated that she disliked a tapestry my sister had made for her because of a very small, inconsequential detail on the piece.",surprise,37,200,5,sadness,0.4,3,False
+31181,"When I gave birth to my baby girl last December, and we thought she was another baby boy.",surprise,18,89,5,surprise,0.6,2,True
+31183,I found out my old friend was pregnant,surprise,8,38,5,surprise,0.8,2,True
+31203,I passed my economics exam,surprise,5,26,5,pride,0.8,2,False
+31207,my parents said they would help pay for my wedding,surprise,10,50,5,relief,0.6,3,False
+31220,my cousin asked me to be a bridesmaid in her wedding and I did not expect her to,surprise,18,80,5,surprise,0.8,2,True
+31227,I felt surprised when my parents told me they were taking me to Disney land,surprise,15,75,5,joy,1.0,1,False
+31233,My wife was angry at me,surprise,6,23,5,guilt,0.4,4,False
+31234,I received a refund cheque through the post from a previous electrical company due to being overcharged.,surprise,17,104,5,relief,0.6,3,False
+31240,I felt surprised when I was 6 years old and my mom told me we were getting a dog.,surprise,19,81,5,joy,0.8,2,False
+31269,i felt surprise when i was in year 8 and i was awarded the student of the year award. this was not something that i had anticipated and it felt good that my hard work was well rewarded,surprise,38,184,5,pride,0.8,2,False
+41674,I applied for a prestigious position at my university when I was a student. The competition was intense and I was very much a dark horse with nothing more than an outside shot. I felt surprise when the hiring committee showed up at my front door with party streamers and a bottle of champagne to tell me that I'd been selected for the job.,surprise,64,339,5,surprise,0.8,2,True
+41681,"I was asked to be the best man at a wedding of a friend I did not consider myself close with. I had not talked to him in more than a year, but he said I was one of his best friends. I had never even met the bride.",surprise,49,213,5,surprise,0.6,3,True
+41688,my friend came out as gay to me,surprise,8,31,5,surprise,0.8,2,True
+41621,my friend told me she was pregnant.,surprise,7,35,5,surprise,0.6,2,True
+41628,"I was proposed to. Even thought I had thought about it some time before maybe a few months. I was on holiday and was not expecting it at all, it was a huge surprise.",surprise,34,165,5,surprise,0.8,2,True
+41629,My football team won,surprise,4,20,5,joy,0.6,2,False
+41630,I felt surprise when my best friend gave me a little kitten as a birthday gift.,surprise,16,79,5,joy,0.8,2,False
+41632,"I felt surprise when i discovered i was pregnant after thinking i was infertile after i had had breast cancer and due to my chemo etc, also because i have another medical condition which is one of the biggest causes of infertility",surprise,42,230,5,surprise,0.4,3,True
+41641,A time o felt surprised is when my mom and friends planned a surprise bday party for my 17th bday.,surprise,20,98,5,surprise,0.8,2,True
+41642,I found out a puppy was available for adoption.,surprise,9,47,5,joy,0.8,2,False
+41648,I got gifted a Pandora bracelet,surprise,6,31,5,joy,0.6,2,False
+41651,"I felt surprise when I went back to a city I had once lived in for 11 years, Montreal (Canada). When I had left the city 23 years ago, I was in love with the city. When I returned for the first time two weeks ago, I felt surprised that I no longer felt that way. I, as a matter of fact, hated every minute I was in the city. Both me and the city had changed.",surprise,77,358,5,surprise,0.6,2,True
+41654,I felt surprise when I passed my English GCSE with an A as I had failed all prior ones before,surprise,20,93,5,pride,0.6,2,False
+41658,I felt surprise when my parents threw me a surprise party.,surprise,11,58,5,joy,0.6,2,False
+41660,my friends asked me to be maid of honour,surprise,9,40,5,pride,0.6,2,False
+41661,I was a child and my parents surprised my sister and I with a golden retriever puppy,surprise,17,84,5,surprise,0.6,2,True
+41664,The new house that I moved into at university did not look like the pictures (in a bad way),surprise,19,91,5,anger,0.8,2,False
+41671,I felt surprised when I had won the first woman's greco roman style wrestling match in my countries province. I was not told before hand that the tournament I was wrestling at was going to be the first to offer this style of wrestling to women. I was just the first match that was up and I won.,surprise,58,294,5,surprise,0.6,2,True
+41744,I read that someone prominent in my workplace announced he was leaving.,surprise,12,71,5,surprise,0.6,3,True
+41759,I got stood up on a date,surprise,7,24,5,anger,0.4,3,False
+41760,I was surprised when I was hired for my job 6 months ago. I'm a recent graduate that had no relevant experience and was concerned how my job prospects were looking. Even without any experience the company still took a chance with me and things have been going great ever since.,surprise,51,277,5,surprise,0.6,2,True
+41763,"I found the perfect man for me, and the more time goes on, the more I realized he was the best person for me. Every day is a surprise.",surprise,29,134,5,joy,1.0,1,False
+41769,when i received my teaching certificate last week.,surprise,8,50,5,pride,0.8,2,False
+41722,"I felt surprise when I was able to hold hands with and kiss my girlfriend in public and not feel any shame, despite growing up in an extremely homophobic environment.",surprise,30,166,5,relief,0.6,3,False
+41693,a close friend at work got a promotion over me,surprise,10,46,5,anger,0.6,3,False
+52520,when i won a £500 john lewis voucher,surprise,8,36,5,joy,0.4,4,False
+52521,I felt surprise when my parents bought me a laptop for my birthday because I didn't expect it as I didn't think they would spend that much on me and I hadn't asked them to.,surprise,35,172,5,surprise,0.8,2,True
+52530,I felt surprise when my girlfriend broke up with me because it was very unexpected and came out of nowhere.,surprise,20,107,5,surprise,0.8,2,True
+52420,My brother announced his pregnancy with his girlfriend,surprise,8,54,5,joy,0.4,4,False
+52428,Someone left my team,surprise,4,20,5,sadness,0.6,3,False
+52434,when I built my first computer,surprise,6,30,5,pride,1.0,1,False
+52441,When my sister shared she was pregnant,surprise,7,38,5,joy,0.6,3,False
+52444,"my ex boyfriend messaged me back after 10 years of not speaking. I never expected a response, I was married at the time (unhappily) and i contacted him by just saying ""hi"". He instantly messaged back with his phone number and we spoke for ages on the telephone. we then went onto re-kindle our romance and are still together 4 years later. it still surprises me now as i never expected it",surprise,72,388,5,surprise,0.4,4,True
+52448,my friend from a different state came to my birthday party without me knowing,surprise,14,77,5,surprise,0.8,2,True
+52451,"the result of the UK referendum re remaining/leaving the EU was announced.  I had voted to remain in the EU, and everyone I worked or socialised with voted the same, so incorrectly assumed that the majority of the UK had voted similiarly.  I was very surprised (and disappointed!) when the results came back as leave.",surprise,55,317,5,sadness,0.6,2,False
+52452,I am called about work on a weekend,surprise,8,35,5,anger,0.8,2,False
+52458,"I felt surprise when I received a job offer immediately after graduating college, especially because I had gone through nearly forty interviews and a hundred applications without positive results.",surprise,29,196,5,relief,0.6,3,False
+52467,I got a message from my colleague about my increment in wages which wasn't expecting due to COVID-19 issues.,surprise,19,108,5,joy,0.6,2,False
+52472,I felt SURPRISE when I won a radio contest to have a conversation with my favorite musical artist.,surprise,18,98,5,joy,1.0,1,False
+52487,my sister got married,surprise,4,21,5,pride,0.6,2,False
+52488,a person let me down on a task they had promised to do. It surprised me as they are usually very reliable,surprise,22,105,5,surprise,0.4,3,True
+52501,"My partner announced she was pregnant, after many years of miscarriages this surprised me because we both thought it would never happen for us.",surprise,24,143,5,surprise,0.8,2,True
+52502,"my wife was pregnant for the first time, this really was a big surprise because we were trying to have a baby for long time, visiting many doctors and neraly giving up hope, however when my wife was preganant for the first time I was surprised and so happy.",surprise,49,257,5,joy,0.4,4,False
+52594,I felt surprise when I found out I was pregnant with my daughter,surprise,13,64,5,joy,0.8,2,False
+52596,one of my best friends came to a girlguiding meeting unexpectedly after I hadn't seen her for a couple of months,surprise,21,112,5,joy,0.4,3,False
+52598,I got pregnant with my son,surprise,6,26,5,joy,0.6,3,False
+52614,my boyfriend surprised me with a handwritten note,surprise,8,49,5,joy,0.4,3,False
+52625,my uncle had an argument with my cousin,surprise,8,39,5,sadness,0.6,2,False
+52626,Patient accepted elaborated treatment plan easily,surprise,6,49,5,relief,0.8,2,False
+52627,I heard that my daughter had diagnosed type diabetes,surprise,9,52,5,fear,0.6,3,False
+52628,I got accepted to a masters program,surprise,7,35,5,joy,0.4,4,False
+52633,My cat did so well on his first overnight trip away from home.,surprise,13,62,5,relief,0.8,2,False
+52635,I got a dog for my birthday,surprise,7,27,5,joy,1.0,1,False
+52637,"I have been dating someone online for a couple of years, and we finally got the chance to meet in person last week. It didn't go well at all, and I was very surprised by how he over reacted to a very minor thing that I said, and our relationship crumbled in a matter of minutes. I still don't fully understand what happened!",surprise,63,324,5,surprise,0.8,2,True
+52645,I received a letter approving a visa application to migrate to Canada which was almost impossible to get from a middle eastern country,surprise,23,134,5,surprise,0.4,3,True
+52648,my offer on commercial lease was accepted because i didn't it would.,surprise,12,68,5,surprise,0.4,3,True
+52571,my parents surprised me to go for dinner,surprise,8,40,5,surprise,0.2,5,True
+52578,when I got accepted into my college course,surprise,8,42,5,pride,0.4,3,False
+52579,Finding out I was pregnant with twins,surprise,7,37,5,joy,0.6,3,False
+52584,my theater professor called on me to perform our exercise,surprise,10,57,5,surprise,0.4,4,True
+52591,my wife bought me a car on my birthday,surprise,9,38,5,joy,0.8,2,False
+52593,"I felt surprise when I took my driving test for the first time. I knew I was a good driver and had practiced very hard for it, but when the actual driving test came, it was like I forgot everything I had learned for the past half year. One small mistake led to the next and the next until I ultimately failed and then proceeded to feel really bad about my driving skills. A month later when I took the test again, I passed with flying colors.",surprise,87,442,5,fear,0.4,3,False
+52533,when I saw my teacher on an aeroplane,surprise,8,37,5,surprise,1.0,1,True
+52534,I felt surprised when I found a turkey on sale for only 15 dollars,surprise,14,66,5,joy,0.6,3,False
+52541,I felt surprised when I got a car for my 16th birthday,surprise,12,54,5,joy,0.6,2,False
+52550,someone named their kid after me,surprise,6,32,5,pride,0.6,3,False
+52551,"we were chosen to rent the house we currently now live in, out of several applicants",surprise,16,84,5,joy,0.6,2,False
+52558,I felt surprised when my partner put their arms around me at a concert and started to dance with me to a song we listen to.,surprise,26,123,5,joy,1.0,1,False
+52562,My best friend told me she was pregnant,surprise,8,39,5,surprise,0.8,2,True
+6968,My teen age son wasn't in his bed after bedtime,surprise,10,47,5,fear,0.6,3,False
+6981,My boyfriend turned up with a starbucks,surprise,7,39,5,joy,0.6,2,False
+6987,my sister travelled to New Zealand to surprise me whilst travelling. I had not seen her for over 6 months and was not expecting her to arrive in Auckland.,surprise,29,154,5,surprise,0.8,2,True
+6989,I was praised at work for a successful task,surprise,9,43,5,pride,0.8,2,False
+6992,I won money on the lotto,surprise,6,24,5,joy,1.0,1,False
+6997,When I met my niece at how small she was.,surprise,10,41,5,surprise,1.0,1,True
+61003,when my dad announced that he had a new girlfriend,surprise,10,50,5,surprise,0.4,4,True
+61018,Someone crashed into my car,surprise,5,27,5,anger,0.8,2,False
+61021,found out I didn't get a promotion,surprise,7,34,5,sadness,0.6,3,False
+7198,I got promoted.,surprise,3,15,5,pride,0.6,2,False
+7200,Last night I was suprised I could smell smoke in my basement,surprise,12,60,5,fear,0.6,3,False
+916,i felt surprise when my partner came to my door with a milkshake unannounced,surprise,14,76,5,surprise,0.8,2,True
+2228,"Approaching a large jump on a horse, I trust the horse to safely get us over it.",trust,17,80,5,fear,0.4,3,False
+2230,"I felt trust when I got sick mysteriously and puked two days after moving away from home into a dorm, and going to the drop in clinic very very early in the morning and they looked after me even when I was stress-crying and freaked out from puking blood and being in a new place where I knew no one.",trust,60,299,5,fear,0.6,3,False
+2231,"My friend demonstrated authenticity in validating my feelings, and also vulnerability in sharing her thoughts with me.",trust,17,118,5,trust,1.0,1,True
+2210,I told my parents I was pregnant at the age of 16 and they told me they'd support me and help me with everything I need and always stay by me,trust,31,141,5,relief,0.4,3,False
+2211,I asked my partner to do a task for me,trust,10,38,5,trust,0.8,2,True
+2212,I felt trust when my cat sleeps by me,trust,9,37,5,trust,0.6,3,True
+2213,My manager asked me to take voluntary pay reduction due to COVID. He promised that my pay would return to normal after 3 months and that I would be rewarded for my sacrifice. I trusted him and it all worked out well.,trust,42,216,5,trust,0.4,3,True
+2224,I knew I could rely on a friend on holiday as I have had previous bad experiences with holidays with friends,trust,21,108,5,trust,0.6,3,True
+2225,I was able to tell my partner about an unwanted sexual experience I had when I was younger,trust,18,90,5,trust,0.4,4,True
+2226,working with my financial advisor,trust,5,33,5,boredom,0.6,2,False
+2227,because I know people understand me,trust,6,35,5,relief,0.6,3,False
+2218,I told my husband a secret.,trust,6,27,5,relief,0.4,3,False
+31398,my friends had my back during a certain situation when I felt like they would turn their back on me. We had deferring opinions and I thought they wouldn't want to see me because of it.,trust,36,184,5,relief,0.6,2,False
+31415,I was allowed to park my colleague's brand new car.I felt a sense oft rust from him as it was brand new,trust,22,103,5,trust,0.6,2,True
+31421,"I felt trust when the nurse, assisting in a procedure I was going under anesthesia for, made me laugh at a funny joke literally moments before I blacked out.",trust,29,157,5,surprise,0.8,2,False
+31304,I felt TRUST when me and my partner opened up to each other for the first time,trust,17,78,5,trust,0.6,3,True
+31307,i felt trust when i gave my savings to a friend to look after after finding out my dad was taking money from me and after a year i got the money back without any missing,trust,36,169,5,relief,0.6,2,False
+31313,when my friend stayed with me during a hard time,trust,10,48,5,sadness,0.6,3,False
+31317,I told a friend that I was having trouble with my relationship.,trust,12,63,5,sadness,0.6,3,False
+31330,my friend and I were playing with her daughter in the park and my friend had to take a phone call so she trusted me to look after her daughter whilst she took the phone call away from us. I felt that she trusted me to watch her daughter and make sure that she didn't get hurt whilst playing.,trust,59,291,5,trust,0.8,2,True
+31332,I gave my wallet to a friend,trust,7,28,5,trust,1.0,1,True
+31338,My friends helped me answer a survey for a job reference and did so very positively,trust,16,83,5,pride,0.4,4,False
+31340,When i successfully completed a transatlantic journey,trust,7,53,5,pride,0.8,2,False
+31346,I locked the shop myself for the first time,trust,9,43,5,pride,0.8,2,False
+31347,I felt trust when my boyfriend called me because I knew he would support me always.,trust,16,83,5,trust,0.4,3,True
+31360,a friend opened up to me about the end of their relationship and we talked about it,trust,17,83,5,sadness,0.6,2,False
+31361,My wife said she turned off the electric fence as i was about to go through it,trust,17,78,5,relief,0.6,3,False
+31378,My co-worker confided in me about a personal life issue,trust,10,55,5,trust,0.6,3,True
+31382,my organization told me they were sending me to the Dominican Republic for study abroad instead of Uganda because they thought it would be best for now.,trust,27,152,5,surprise,0.6,3,False
+31387,"I felt trust when we went to a restaurant in London, and asked for steak done to a particular level, the waiter came out and advised that the steak had not been cooked to his satisfaction, so asked for the steak to be redone, it was at this point that we realised we could fully trust that we were going to get exactly what we had asked for.",trust,68,341,5,relief,0.6,3,False
+31390,I felt trust when I told my close friend about a situation that I was scared to open up about but because she didn't react with any judgement I knew I made the right choice opening up to her. It felt a lot like a weight being lifted from my shoulders.,trust,51,251,5,relief,1.0,1,False
+41835,"my current boyfriend asked me to date him. This told me that he only wanted associations with me, and I trusted him from then on out to only want to date me and focus on me rather than other girls.",trust,40,197,5,trust,0.4,3,True
+41840,"I felt trust when I could open up about my feelings to my significant other. Growing up, I would bottle up my feelings. As an adult, I am working toward not doing that so often.",trust,35,177,5,relief,0.6,3,False
+41844,"I felt trust when I realized my friends and family supported me in a big career jump I made because deep down I had feared I had made the wrong decision. I myself do get in my own way sometimes because I am type a so when i feel like things arent perfect, I get nervous. I realized they supported me because they lent me some money while I couldnt afford a bill that they would struggle to afford as well.",trust,81,405,5,guilt,0.4,3,False
+41847,i felt trust when i got nominated to set up a working group at hte charity i vouluenteer for,trust,19,92,5,pride,0.8,2,False
+41778,i wasn't judged by my therapist whenever i would talk about the little things in life that upset me. And when they validated my feelings when no one ever has.,trust,30,158,5,relief,0.8,2,False
+41779,"I form a meaningful connection with someone that shares my beliefs, listens to my thoughts and communicates with me in a respectful way",trust,23,135,5,trust,0.8,2,True
+41780,"I felt trust when I confided in my partner about my past experiences, and he listened to me without judging",trust,20,107,5,relief,0.8,2,False
+41789,"4 years ago i had open heart surgery done.  I was new to the hospital and knew none of the doctors or nurses, even though I did not know the surgeon I implicitly trusted him and his decisions.",trust,38,192,5,trust,1.0,1,True
+41791,"I felt complete trust when I learnt that a colleague of mine defended my reputation in my absence. While some people were trying to defame me, my colleague in a question, took it upon himself to defend my honor and reputation. I was elated when I got wind of it and knew then that this was someone I could really trust.",trust,61,319,5,joy,0.4,3,False
+41794,my good friend shared something personal with me,trust,8,48,5,trust,0.8,2,True
+41795,I felt trust when I was voted class president,trust,9,45,5,pride,0.4,4,False
+41801,When I was in an ambulance I trusted the professionals,trust,10,54,5,trust,0.8,2,True
+41814,my client opened up about abuse he had experienced at the hands of a woman. He felt he could not tell another woman what happened but he stated he felt completely accepted by me and this meant that he was able to trust me with his darkest secret.,trust,48,246,5,trust,0.6,3,True
+41826,"My boss left his job and I was appointed to his role. He left me a two page letter afterwards with his encouragement, and I felt trust because two years prior, when we commenced working together, he established a very strong wall between us. Over the years he started to trust me and that was a sign to me of that wall having come down.",trust,65,336,5,pride,0.6,3,False
+41830,A child asked for my help with a difficult situation (at work),trust,12,62,5,no-emotion,0.4,4,False
+41895,I felt trust when my boyfriend drove out of town to see me at 2 in the morning.,trust,18,79,5,joy,1.0,1,False
+41912,"In my current relationship when I heard my partner say I love you for the first time, it made me feel valued and assured in my relationship and instilled a sense of trust in my partner and my relationship.",trust,39,205,5,trust,0.8,2,True
+41882,I felt trust in my career prospects because I performed well academically,trust,12,73,5,pride,0.8,2,False
+41857,I felt trust when I was applying for a promotion in work. I looked to my line manager who I trusted and gave me great advice and support through the process,trust,31,156,5,trust,0.2,5,True
+41862,When i had to get in a strangers car because mine was stuck in the snow in the midde of the lanes.,trust,22,98,5,fear,0.8,2,False
+41871,My boyfriend told me to not get into more debt and get a new car on finance. He said to me that I would be better off using my current car for as long as possible as it was a good car and didn’t have any problems. I didn’t need a new car. I trusted his advice and managed to get myself out of debt quicker.,trust,66,306,5,pride,0.4,4,False
+41872,I felt TRUST when I received the keys to my new flat from a housing association because it was the first time in my life I have had housing security.,trust,30,149,5,joy,0.8,2,False
+52768,when I dyed my hair blonde with highlights,trust,8,42,5,pride,0.6,2,False
+52658,first time me and a friend were permitted to climb alone after weeks of practice,trust,15,80,5,pride,0.6,2,False
+52667,I am with my friends,trust,5,20,5,joy,1.0,1,False
+52679,"I gave my son some rubbish to put in the bin. I was able to trust him to do this by himself, he is 3 years old .",trust,28,112,5,pride,0.8,2,False
+52689,I felt trust when my boyfriend shared his past life problems with me,trust,13,68,5,trust,0.6,2,True
+52703,I gave birth to my daughter,trust,6,27,5,joy,0.8,2,False
+52704,I felt trust when my family helped me from a abusive relationship and i lacked alot of trust and felt isolated and affectly me hugely mentally and i didn't trust myself and no one. They helped me with trust and realise i can do this!,trust,45,233,5,relief,0.8,2,False
+52706,I felt trust when my boss said that she wants me to stay in her business for a long time and wanted to know how she could help me grow.,trust,30,135,5,pride,0.8,2,False
+52709,Someone told me a secret,trust,5,24,5,trust,0.6,3,True
+52716,When my then boyfriend allowed me to pick up his son from daycare,trust,13,65,5,trust,0.6,3,True
+52718,"I felt trust when allowing my family to help me take care of my very ill dog. Any wrong steps, and he could have very easily had his life shortened due to the medications he needed. When my family stepped up and helped me on occasion, I felt trust allowing them to do so.",trust,54,271,5,trust,0.4,3,True
+52731,i loaned a friend money,trust,5,23,5,trust,0.8,2,True
+52732,I got married to my husband,trust,6,27,5,joy,0.8,2,False
+52738,i felt alot of trust when i allowed my daughter to start walking to school  by her self it took a while but now i fully trust her,trust,28,129,5,fear,0.6,2,False
+52739,he seemed confident,trust,3,19,5,no-emotion,0.4,3,False
+52742,I HAD MY CHILDREN,trust,4,17,5,joy,0.6,2,False
+52857,I had to collect a parcel for a friend,trust,9,38,5,trust,0.6,3,True
+52859,My manager told me during performance reviews that I was selling myself short and she would be advocating harder on my behalf.,trust,22,126,5,pride,0.6,3,False
+52860,when being told a piece of deeply personal information because it was not something shared with just anyone,trust,18,107,5,trust,1.0,1,True
+52866,I heard my mom giving my aunt hell for treating me crappy. I knew i could trust my mom to stand up for me,trust,24,105,5,trust,0.6,2,True
+52874,I left my door unlocked and nobody went in,trust,9,42,5,relief,0.8,2,False
+52895,"a client of mine paid me upfront for a project which i never ask clients to do that, but he did it and i had a big massive trust that made my day.",trust,33,146,5,surprise,0.4,3,False
+52821,my colleague helped with a  work situation,trust,7,42,5,relief,0.6,2,False
+52822,"I was diagnosed with a rare blood disease and had to see a specialist. His knowledge and expertise in a field that most doctors I had encountered before knew nothing about, made me trust him greatly.",trust,36,199,5,trust,1.0,1,True
+52823,My baby was born and I felt a trust for my husband I had never felt before when he first held her whilst I was still beingClosed up where I knew he would always keep her and the rest of our family safe,trust,43,201,5,joy,0.6,2,False
+52826,"I revealed to a colleague information about myself that could have had negative consequences for me at work, but I thought was important for the colleague to know in order for us to complete a project.",trust,36,201,5,trust,0.6,3,True
+52827,"I felt trust when everyone in our company accused me of theft despite the fact that we were two people incharge of finance, everyone expect our boss, Because he knew my father, and knows the kind of thing i can do. This made me really relaxed.",trust,46,243,5,relief,0.6,3,False
+52828,I felt trust when the gym staff were actively checking for covid vax documents and proper ID.,trust,17,93,5,relief,0.6,3,False
+52829,I got too drunk and my friend brought me home in an uber and fed me and put me to bed,trust,21,85,5,trust,0.4,3,True
+52833,I was playing in a team game and had to trust my team mates.,trust,14,60,5,trust,0.8,2,True
+52777,"An example of trust for me was in related to my education. Prior to undergrad, I had been severely behind and informed my teacher that I would need a tutor. I wanted to get one as I had an opportunity to secure one before school began, and it would be very hard for me to find one after school begun. I also knew this would be a financial investment. My teacher told me that she assured me that I would not need a tutor and she would provide all the extra help I needed. I was hesitant at first, considering she had hundreds of other students to help, but in the end, I took her advice and did not get a tutor. That class was amazing. She managed to catch me up completely wherever I needed it and dedicated lots of time for me after school. This was a time where I took a risk and trusted my teacher, and this trust payed off.",trust,164,827,5,trust,0.4,3,True
+52778,When I needed surgery and I was terrified and my dad was in the room with me before I went in. He talked to me and told me everything was going to be okay and he told the doctors to take good care of me. In that moment I trusted that everything would be fine because of how protective he was and how sure he seemed that everything would go well.,trust,71,345,5,trust,0.6,3,True
+52782,"I felt trust when I first really grasped the understanding of trust. I was maybe 10 years old sat in assembly in school when they asked for a volunteer. So I put my hand up and was chosen. The teacher asked me to close my eyes, he stood behind me and asked me to fall backwards and trust me to catch him. I did trust him and so I fell back and he caught me. Then as he was still stood behind me speaking he asked me again to close my eyes but this time fall forward. I was confused as I knew he was still talking behind me. I thought i would fall flat on my face. What I didn't know was the assembly had been asked to keep quiet as another teacher snook up and stood in front of me ready to catch me. ""Trust me"" the teacher behind me said and so i stumbled forward and didn't fall. After i got a round of applause and sat back down he did a presentation on what trust is and i knew the exact feeling thanks to that assembly.",trust,190,924,5,trust,0.8,2,True
+52784,I was confused about how my partner was treating me and so I went to a friend who I thought could help and she really listened to me and provided me with good advice.,trust,34,166,5,relief,0.6,3,False
+52802,I felt trust when I was experiencing traumatic anxiety and contacted the doctor concerning it. They were very respectful of my situation and accommodated me by putting me on medication to help me get my life back on track.,trust,39,222,5,fear,0.8,2,False
+61031,my husband is always there for me and i can trust that no matter what he will be there for our child and do what ittakes to provide for us as a family,trust,33,150,5,trust,1.0,1,True
+61055,When I went to a teacher about a problem I had,trust,11,46,5,fear,0.4,4,False
+61071,My friend needed support to manage her money so she gave me control of her bank accounts,trust,17,88,5,trust,0.8,2,True
+61094,I felt TRUST when I moved to a new country with my partner.,trust,13,59,5,fear,0.6,3,False
+61096,When I had first started hanging out with the man who is now my husband. He was telling about all about something he was passionate about that was an obscure and kind of weird to some hobby. He spoke about it with such confidence and passion and not a single worry about what anyone else would think of him. It opened me up to trusting that I could fully be myself around this man without ever feeling like I would be judged.,trust,82,425,5,trust,0.8,2,True
+61097,"when my bride and I knelt at the alter to be married, I realized just how much she loved me and I loved her.",trust,24,108,5,joy,0.8,2,False
+61098,"I felt trust when me and my friend went to London and I gave her my Oyster card pass which discounts tube prices, my mum was adamant that I shouldn't lose the pass and I gave it to my friend and was worried she would lose it, however I felt trust in her as she did not lose it. It meant a lot for some reason, I really didn't want to let my mum down.",trust,75,350,5,pride,0.4,4,False
+61099,"I was on a zip-line and it malfunctioned just as I stepped off the platform, and I was hanging for a couple of moments 20ft above very shallow water. My sister reached across and pulled me back, and I had to trust that she'd be able to hold my weight and not drop me.",trust,54,267,5,trust,0.8,2,True
+61101,My mother helped me bake bread. I'd know idea what I was doing,trust,13,62,5,relief,0.4,3,False
+7204,I asked someone to help me at work and they did,trust,11,47,5,relief,0.6,2,False
+922,"I got married to my husband. When we said our vows, I trusted that they meant them and that I was safe.",trust,22,103,5,anger,0.4,4,False
+923,my girlfriend travelled all the way up the country to see me,trust,12,60,5,joy,0.6,2,False

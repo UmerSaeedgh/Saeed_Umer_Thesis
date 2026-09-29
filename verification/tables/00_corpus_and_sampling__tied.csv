@@ -1,0 +1,135 @@
+,text_id,recon_share,n_top,recon_winners,reader_majority,majority_share,author_emotion,author_matches_readers
+5,47,0.4,2,"['sadness', 'surprise']",surprise,0.4,anger,False
+14,89,0.2,5,"['fear', 'joy', 'no-emotion', 'relief', 'sadness']",no-emotion,0.2,relief,False
+18,99,0.4,2,"['guilt', 'shame']",shame,0.4,guilt,False
+25,253,0.4,2,"['disgust', 'shame']",disgust,0.4,disgust,True
+38,313,0.4,2,"['guilt', 'sadness']",guilt,0.4,anger,False
+50,378,0.4,2,"['anger', 'disgust']",disgust,0.4,anger,False
+56,410,0.4,2,"['disgust', 'sadness']",sadness,0.4,anger,False
+66,454,0.4,2,"['anger', 'boredom']",boredom,0.4,anger,False
+96,657,0.4,2,"['anger', 'disgust']",anger,0.4,anger,True
+100,689,0.4,2,"['anger', 'no-emotion']",anger,0.4,anger,True
+104,713,0.4,2,"['anger', 'boredom']",boredom,0.4,boredom,True
+115,764,0.4,2,"['boredom', 'pride']",boredom,0.4,fear,False
+116,781,0.4,2,"['pride', 'surprise']",pride,0.4,joy,False
+124,822,0.4,2,"['sadness', 'shame']",sadness,0.4,sadness,True
+125,825,0.4,2,"['joy', 'sadness']",sadness,0.4,sadness,True
+134,2115,0.4,2,"['boredom', 'joy']",joy,0.4,no-emotion,False
+135,2117,0.4,2,"['anger', 'boredom']",boredom,0.4,no-emotion,False
+148,2168,0.4,2,"['anger', 'sadness']",anger,0.4,sadness,False
+152,2180,0.4,2,"['sadness', 'shame']",shame,0.4,shame,True
+155,2193,0.4,2,"['guilt', 'surprise']",guilt,0.4,surprise,False
+157,2195,0.4,2,"['pride', 'surprise']",surprise,0.4,surprise,True
+159,2210,0.4,2,"['relief', 'trust']",relief,0.4,trust,False
+162,2213,0.4,2,"['fear', 'trust']",trust,0.4,trust,True
+163,2218,0.4,2,"['relief', 'trust']",relief,0.4,trust,False
+168,2228,0.4,2,"['fear', 'relief']",fear,0.4,trust,False
+173,3117,0.4,2,"['anger', 'disgust']",disgust,0.4,anger,False
+207,3287,0.4,2,"['anger', 'sadness']",anger,0.4,disgust,False
+212,3319,0.4,2,"['disgust', 'surprise']",surprise,0.4,disgust,False
+215,3325,0.2,5,"['no-emotion', 'sadness', 'shame', 'surprise', 'trust']",trust,0.2,disgust,False
+225,3370,0.4,2,"['anger', 'fear']",fear,0.4,fear,True
+233,3423,0.4,2,"['fear', 'shame']",fear,0.4,fear,True
+239,3440,0.4,2,"['fear', 'shame']",shame,0.4,fear,False
+248,3480,0.2,5,"['anger', 'guilt', 'relief', 'sadness', 'shame']",relief,0.2,guilt,False
+261,3536,0.4,2,"['joy', 'surprise']",joy,0.4,joy,True
+264,3546,0.4,2,"['joy', 'relief']",joy,0.4,joy,True
+268,3586,0.4,2,"['fear', 'joy']",fear,0.4,joy,False
+274,3605,0.2,5,"['joy', 'no-emotion', 'pride', 'relief', 'surprise']",joy,0.2,joy,True
+287,3672,0.4,2,"['boredom', 'joy']",boredom,0.4,no-emotion,False
+303,3737,0.4,2,"['anger', 'fear']",fear,0.4,no-emotion,False
+304,3748,0.2,5,"['anger', 'boredom', 'joy', 'pride', 'sadness']",sadness,0.2,no-emotion,False
+319,3864,0.4,2,"['pride', 'trust']",trust,0.4,pride,False
+328,3919,0.4,2,"['relief', 'sadness']",relief,0.4,relief,True
+329,3923,0.4,2,"['joy', 'relief']",joy,0.4,relief,False
+341,3975,0.4,2,"['relief', 'surprise']",relief,0.4,relief,True
+345,4117,0.4,2,"['sadness', 'shame']",shame,0.4,anger,False
+358,4269,0.4,2,"['guilt', 'shame']",shame,0.4,boredom,False
+377,4475,0.2,5,"['anger', 'disgust', 'fear', 'sadness', 'surprise']",surprise,0.2,disgust,False
+388,4573,0.4,2,"['anger', 'shame']",anger,0.4,fear,False
+397,4636,0.4,2,"['fear', 'surprise']",surprise,0.4,fear,False
+429,4981,0.4,2,"['boredom', 'no-emotion']",no-emotion,0.4,no-emotion,True
+444,5225,0.4,2,"['anger', 'sadness']",anger,0.4,anger,True
+448,5247,0.4,2,"['boredom', 'no-emotion']",boredom,0.4,boredom,True
+477,5546,0.4,2,"['anger', 'disgust']",anger,0.4,disgust,False
+480,5561,0.4,2,"['anger', 'fear']",anger,0.4,disgust,False
+482,5568,0.4,2,"['anger', 'shame']",anger,0.4,disgust,False
+485,5577,0.4,2,"['anger', 'disgust']",disgust,0.4,disgust,True
+506,5691,0.4,2,"['anger', 'sadness']",sadness,0.4,disgust,False
+520,5773,0.4,2,"['fear', 'sadness']",sadness,0.4,fear,False
+521,5774,0.4,2,"['fear', 'no-emotion']",no-emotion,0.4,fear,False
+540,5936,0.4,2,"['guilt', 'shame']",guilt,0.4,fear,False
+545,5981,0.4,2,"['guilt', 'relief']",relief,0.4,guilt,False
+550,6110,0.4,2,"['anger', 'boredom']",anger,0.4,boredom,False
+553,6135,0.2,5,"['boredom', 'joy', 'no-emotion', 'pride', 'surprise']",surprise,0.2,boredom,False
+557,6156,0.4,2,"['boredom', 'fear']",fear,0.4,boredom,False
+560,6170,0.4,2,"['fear', 'sadness']",sadness,0.4,boredom,False
+564,6192,0.4,2,"['boredom', 'fear']",boredom,0.4,boredom,True
+569,6224,0.4,2,"['anger', 'disgust']",disgust,0.4,disgust,True
+578,6290,0.4,2,"['anger', 'sadness']",anger,0.4,disgust,False
+622,6575,0.4,2,"['anger', 'disgust']",anger,0.4,no-emotion,False
+624,6582,0.4,2,"['joy', 'no-emotion']",no-emotion,0.4,no-emotion,True
+646,6752,0.4,2,"['pride', 'relief']",pride,0.4,relief,False
+662,6836,0.4,2,"['anger', 'sadness']",sadness,0.4,sadness,True
+680,6953,0.4,2,"['guilt', 'shame']",guilt,0.4,shame,False
+701,7160,0.4,2,"['sadness', 'shame']",shame,0.4,sadness,False
+705,7179,0.2,5,"['anger', 'fear', 'guilt', 'sadness', 'trust']",guilt,0.2,sadness,False
+715,31021,0.4,2,"['joy', 'sadness']",sadness,0.4,sadness,True
+733,31143,0.4,2,"['boredom', 'fear']",boredom,0.4,shame,False
+739,31177,0.4,2,"['guilt', 'surprise']",guilt,0.4,shame,False
+741,31180,0.4,2,"['anger', 'sadness']",sadness,0.4,surprise,False
+753,31285,0.4,2,"['joy', 'surprise']",joy,0.4,surprise,False
+765,31347,0.4,2,"['relief', 'trust']",trust,0.4,trust,True
+777,41013,0.2,5,"['anger', 'fear', 'no-emotion', 'sadness', 'surprise']",fear,0.2,no-emotion,False
+783,41049,0.4,2,"['no-emotion', 'surprise']",surprise,0.4,no-emotion,False
+805,41251,0.4,2,"['pride', 'relief']",pride,0.4,relief,False
+810,41287,0.2,5,"['boredom', 'no-emotion', 'relief', 'sadness', 'surprise']",boredom,0.2,relief,False
+815,41343,0.4,2,"['joy', 'relief']",relief,0.4,relief,True
+826,41415,0.4,2,"['anger', 'sadness']",anger,0.4,sadness,False
+832,41507,0.4,2,"['fear', 'surprise']",fear,0.4,sadness,False
+835,41548,0.4,2,"['guilt', 'shame']",shame,0.4,shame,True
+836,41581,0.4,2,"['guilt', 'sadness']",sadness,0.4,shame,False
+840,41600,0.4,2,"['anger', 'shame']",shame,0.4,shame,True
+847,41632,0.4,2,"['joy', 'surprise']",surprise,0.4,surprise,True
+864,41759,0.4,2,"['anger', 'sadness']",anger,0.4,surprise,False
+872,41791,0.4,2,"['joy', 'trust']",joy,0.4,trust,False
+879,41835,0.4,2,"['joy', 'trust']",trust,0.4,trust,True
+881,41844,0.4,2,"['guilt', 'pride']",guilt,0.4,trust,False
+883,41857,0.2,5,"['fear', 'joy', 'pride', 'relief', 'trust']",trust,0.2,trust,True
+892,51017,0.2,5,"['disgust', 'guilt', 'joy', 'no-emotion', 'shame']",joy,0.2,guilt,False
+905,51092,0.4,2,"['joy', 'pride']",pride,0.4,joy,False
+913,51176,0.2,5,"['boredom', 'joy', 'no-emotion', 'pride', 'surprise']",pride,0.2,joy,False
+914,51178,0.4,2,"['pride', 'relief']",pride,0.4,joy,False
+921,51240,0.4,2,"['joy', 'surprise']",joy,0.4,joy,True
+929,51276,0.4,2,"['joy', 'pride']",joy,0.4,joy,True
+942,51346,0.2,5,"['anger', 'no-emotion', 'pride', 'sadness', 'surprise']",pride,0.2,no-emotion,False
+952,51436,0.4,2,"['relief', 'shame']",shame,0.4,no-emotion,False
+960,51474,0.4,2,"['anger', 'fear']",anger,0.4,no-emotion,False
+966,51524,0.4,2,"['joy', 'relief']",relief,0.4,no-emotion,False
+969,51534,0.4,2,"['joy', 'surprise']",joy,0.4,no-emotion,False
+970,51539,0.4,2,"['boredom', 'relief']",boredom,0.4,no-emotion,False
+971,51541,0.4,2,"['fear', 'surprise']",surprise,0.4,no-emotion,False
+985,51624,0.4,2,"['no-emotion', 'pride']",no-emotion,0.4,pride,False
+1004,51738,0.4,2,"['joy', 'pride']",pride,0.4,pride,True
+1009,51775,0.4,2,"['pride', 'relief']",relief,0.4,pride,False
+1035,51922,0.4,2,"['joy', 'relief']",joy,0.4,relief,False
+1039,51945,0.4,2,"['relief', 'surprise']",relief,0.4,relief,True
+1063,52087,0.4,2,"['guilt', 'shame']",guilt,0.4,sadness,False
+1066,52116,0.4,2,"['anger', 'fear']",fear,0.4,sadness,False
+1072,52176,0.4,2,"['joy', 'shame']",shame,0.4,sadness,False
+1085,52289,0.4,2,"['sadness', 'shame']",shame,0.4,sadness,False
+1102,52369,0.4,2,"['guilt', 'shame']",shame,0.4,shame,True
+1121,52488,0.4,2,"['anger', 'surprise']",surprise,0.4,surprise,True
+1134,52571,0.2,5,"['anger', 'guilt', 'joy', 'no-emotion', 'surprise']",surprise,0.2,surprise,True
+1135,52578,0.4,2,"['joy', 'pride']",pride,0.4,surprise,False
+1139,52593,0.4,2,"['fear', 'shame']",fear,0.4,surprise,False
+1141,52596,0.4,2,"['joy', 'surprise']",joy,0.4,surprise,False
+1143,52614,0.4,2,"['anger', 'joy']",joy,0.4,surprise,False
+1151,52645,0.4,2,"['joy', 'surprise']",surprise,0.4,surprise,True
+1152,52648,0.4,2,"['relief', 'surprise']",surprise,0.4,surprise,True
+1162,52718,0.4,2,"['relief', 'trust']",trust,0.4,trust,True
+1166,52739,0.4,2,"['no-emotion', 'pride']",no-emotion,0.4,trust,False
+1169,52777,0.4,2,"['pride', 'trust']",trust,0.4,trust,True
+1180,52829,0.4,2,"['guilt', 'trust']",trust,0.4,trust,True
+1187,52895,0.4,2,"['pride', 'surprise']",surprise,0.4,trust,False
+1199,61101,0.4,2,"['relief', 'surprise']",relief,0.4,trust,False

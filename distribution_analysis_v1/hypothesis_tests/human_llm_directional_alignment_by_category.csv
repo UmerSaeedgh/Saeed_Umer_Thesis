@@ -1,0 +1,4 @@
+pool_key,mean,count,category
+author_independent,0.12402686212170144,86,Author-Independent Ambiguous
+author_relevant,0.14576287500388582,98,Author-Relevant Ambiguous
+unambiguous,0.10294268139277743,67,Unambiguous

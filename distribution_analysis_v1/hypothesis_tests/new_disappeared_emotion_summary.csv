@@ -1,0 +1,7 @@
+source,category,n,new_emotion_rate,disappeared_emotion_rate,most_common_new_emotion,most_common_disappeared_emotion
+human,Unambiguous,200,0.7,0.525,relief,sadness
+human,Author-Independent Ambiguous,200,0.815,0.665,disgust,sadness
+human,Author-Relevant Ambiguous,200,0.84,0.73,fear,joy
+llm,Unambiguous,1200,0.20583333333333334,0.1575,relief,surprise
+llm,Author-Independent Ambiguous,1200,0.2675,0.23583333333333334,pride,surprise
+llm,Author-Relevant Ambiguous,1200,0.43666666666666665,0.37833333333333335,relief,surprise

@@ -1,0 +1,716 @@
+text_id,framing_condition,prompt_variant,label_format,label,reason
+6957,neutral,zero_shot,numbered,guilt,The author feels remorse for hurting their sister's feelings by telling an embarrassing story about her.
+6957,neutral,zero_shot,inline,guilt,The author feels remorse for hurting their sister's feelings by sharing an embarrassing story about her.
+6957,neutral,few_shot,numbered,guilt,The author feels remorse for hurting their sister's feelings by sharing an embarrassing story about her.
+6957,neutral,one_shot,inline,guilt,The author feels remorse for hurting their sister's feelings and recognizing that their actions were unfair and wrong.
+6957,neutral,few_shot,inline,guilt,The author feels remorseful for embarrassing their sister and causing her distress by sharing a private story.
+6957,generic_human,zero_shot,numbered,guilt,The author feels remorse for hurting their sister's feelings by sharing an embarrassing story about her in front of her friends.
+6957,neutral,one_shot,numbered,guilt,The author feels remorseful for causing their sister distress by sharing an embarrassing story and realizing how hurt they would feel if the situation were reversed.
+6957,generic_human,zero_shot,inline,guilt,The author feels remorse for hurting their sister's feelings by sharing an embarrassing story about her in front of her friends.
+6957,generic_human,one_shot,numbered,guilt,The author feels remorse for telling an embarrassing story that hurt their sister's feelings and caused her distress.
+6957,generic_human,one_shot,inline,guilt,"The author feels remorse for telling an embarrassing story that hurt their sister's feelings, recognizing how unfair it was after causing her distress."
+6957,generic_human,few_shot,inline,guilt,"The author feels remorse for hurting their sister's feelings by sharing an embarrassing story, recognizing how unfair it was."
+6957,persona_a,zero_shot,inline,guilt,"The author feels guilty for telling an embarrassing story that hurt their sister's feelings, recognizing that they would be equally upset if the roles were reversed."
+6957,persona_a,zero_shot,numbered,guilt,The author feels remorse for hurting their sister's feelings and causing her distress by sharing an embarrassing story.
+6957,generic_human,few_shot,numbered,guilt,The author feels remorseful for hurting their sister's feelings and recognizing that their actions were wrong and unkind.
+6957,persona_a,one_shot,inline,guilt,The author feels remorseful for upsetting her sister by sharing an embarrassing story and realizing she would feel just as hurt if the situation were reversed.
+6957,persona_a,few_shot,numbered,guilt,The author feels remorse for causing her sister distress and hurting her feelings by sharing an embarrassing story.
+6957,persona_a,one_shot,numbered,guilt,The author feels remorse for hurting their sister's feelings and causing her distress by sharing an embarrassing childhood story in front of her friends.
+6957,persona_a,few_shot,inline,guilt,"The author feels remorse for telling an embarrassing story that upset her sister, recognizing that her actions caused harm and were unfair."
+6957,persona_b,zero_shot,inline,guilt,The author feels remorse for telling an embarrassing story that upset her sister and made her feel bad.
+6957,persona_b,zero_shot,numbered,guilt,"The author feels remorse for telling an embarrassing story that hurt their sister's feelings, recognizing how wrong it was to treat her that way."
+6957,persona_b,one_shot,numbered,guilt,The author feels remorse for causing their sister distress and violating empathy by sharing an embarrassing story.
+6957,persona_b,one_shot,inline,guilt,The narrator feels remorse for hurting their sister's feelings and causing her distress by sharing an embarrassing story in front of her friends.
+6957,persona_b,few_shot,inline,guilt,"The author expresses remorse for telling an embarrassing story that hurt their sister's feelings, recognizing that they would be equally upset if the roles were reversed."
+52614,neutral,one_shot,numbered,joy,Receiving a thoughtful handwritten note from a romantic partner is a sweet gesture that evokes happiness and affection.
+52614,neutral,zero_shot,numbered,joy,The author felt happy and touched by their boyfriend's thoughtful gesture of giving them a handwritten note.
+6957,persona_b,few_shot,numbered,guilt,The author feels remorse for causing their sister distress and embarrassment by telling a personal story that they knew would upset her.
+52614,neutral,zero_shot,inline,joy,Receiving a thoughtful handwritten note from a romantic partner is an affectionate gesture that typically evokes happiness and warmth.
+52614,neutral,one_shot,inline,joy,Receiving a thoughtful handwritten note from a romantic partner is an affectionate gesture that brings happiness and warmth.
+52614,generic_human,zero_shot,inline,joy,Receiving a thoughtful handwritten note from a romantic partner is a sweet gesture that evokes feelings of happiness and affection.
+52614,neutral,few_shot,numbered,joy,"The author describes receiving a sweet, thoughtful gesture from their romantic partner, which evokes happiness."
+52614,neutral,few_shot,inline,joy,"The author describes receiving a thoughtful, romantic gesture from their partner, which typically evokes happiness and affection."
+52614,generic_human,zero_shot,numbered,joy,"Receiving a thoughtful, personal gesture like a handwritten note from a romantic partner typically evokes feelings of happiness and affection."
+52614,generic_human,one_shot,numbered,joy,"Receiving a sweet, thoughtful gesture like a handwritten note from a romantic partner naturally brings happiness and delight."
+52614,generic_human,few_shot,numbered,joy,"The author describes receiving a thoughtful, romantic gesture from their partner, which typically evokes feelings of happiness and joy."
+52614,persona_a,zero_shot,numbered,joy,Receiving a thoughtful handwritten note from a romantic partner is a sweet gesture that evokes happiness and affection.
+52614,generic_human,one_shot,inline,joy,"Receiving a romantic, thoughtful handwritten note from a partner is a sweet gesture that evokes happiness and affection."
+52614,persona_a,zero_shot,inline,joy,The narrator felt joy upon receiving a sweet and thoughtful gesture from their boyfriend.
+52614,generic_human,few_shot,inline,surprise,"The author describes receiving an unexpected, thoughtful gesture from their partner, which evokes a feeling of surprise."
+52614,persona_a,one_shot,numbered,joy,Receiving a thoughtful handwritten note from a romantic partner is a sweet gesture that evokes happiness and affection.
+52614,persona_a,one_shot,inline,joy,Receiving a thoughtful handwritten note from a romantic partner is a personal gesture that naturally brings happiness and delight.
+52614,persona_a,few_shot,numbered,joy,"The author describes receiving a thoughtful gesture from their romantic partner, which evokes feelings of happiness and affection."
+52614,persona_a,few_shot,inline,joy,"The author describes receiving a thoughtful, romantic gesture from their partner, which naturally evokes happiness and joy."
+52614,persona_b,one_shot,numbered,joy,"The author felt joy while expressing love and affection for their partner through a sweet, personalized gesture."
+52614,persona_b,zero_shot,inline,joy,The author felt joy while expressing affection and love by leaving a thoughtful handwritten note for their partner.
+52614,persona_b,zero_shot,numbered,joy,Expressing love and thoughtfulness through a handwritten note for a partner is a romantic gesture rooted in joy.
+52614,persona_b,one_shot,inline,joy,The author felt joy while expressing their affection and happiness by creating a thoughtful handwritten note for their partner.
+2228,neutral,zero_shot,numbered,trust,"The author relies on the horse's capability to safely navigate a risky jump, demonstrating confidence and trust in the animal."
+52614,persona_b,few_shot,numbered,joy,"Creating a thoughtful, handwritten note for a partner is a caring gesture that typically stems from feelings of love and happiness."
+2228,neutral,zero_shot,inline,trust,The author expresses confidence and reliance on the horse's ability to navigate the large jump safely.
+52614,persona_b,few_shot,inline,joy,"Writing a sweet, thoughtful handwritten note for a romantic partner is a loving gesture that expresses happiness and affection in the relationship."
+2228,neutral,one_shot,numbered,trust,"The author relies on the horse's ability and safety to navigate a challenging jump, demonstrating confidence and faith in the animal."
+2228,neutral,one_shot,inline,trust,The author places their safety in the horse's capabilities and cooperation to successfully navigate a dangerous jump.
+2228,generic_human,zero_shot,numbered,trust,The author relies on and has confidence in the horse's capability to safely clear the obstacle.
+2228,neutral,few_shot,inline,trust,"The author relies on their horse's ability to safely navigate a potentially dangerous jump, demonstrating reliance and faith in the animal."
+2228,neutral,few_shot,numbered,trust,"The author describes relying on the horse's ability to navigate a large obstacle safely, demonstrating confidence and faith in the animal."
+2228,generic_human,zero_shot,inline,trust,The author relies on the horse's capabilities and places faith in the animal to carry them safely over a large jump.
+2228,generic_human,few_shot,numbered,trust,"The author relies on the horse's ability and cooperation to safely navigate a dangerous obstacle, demonstrating a strong sense of trust."
+2228,generic_human,few_shot,inline,trust,The author relies on and places faith in the horse's ability to navigate a large jump safely.
+2228,generic_human,one_shot,inline,trust,"The author relies on the horse's ability to safely navigate a challenging jump, demonstrating confidence and faith in the animal."
+2228,persona_a,zero_shot,inline,trust,"As an experienced rider approaching a familiar jump, the author confidently relies on their horse to navigate the obstacle safely."
+2228,persona_a,zero_shot,numbered,trust,"As an experienced rider approaching a familiar jump, the author relies on and believes in the horse's ability to clear the obstacle safely."
+2228,generic_human,one_shot,numbered,trust,The author relies on and has confidence in the horse's ability to safely navigate a dangerous hurdle.
+2228,persona_a,few_shot,inline,trust,"The experienced rider relies on the horse's ability to navigate the jump safely, demonstrating confidence and faith in the animal."
+2228,persona_a,one_shot,numbered,trust,The experienced rider relies on and has confidence in their horse to navigate the familiar jump safely.
+2228,persona_b,zero_shot,numbered,trust,The author expressed confidence and reliance in the horse's ability to safely navigate the dangerous jump.
+2228,persona_a,few_shot,numbered,trust,"The author expresses confidence in their horse's ability to safely navigate a large jump, highlighting reliance and mutual confidence."
+2228,persona_a,one_shot,inline,trust,"As an experienced rider approaching a familiar jump, the author relies on and has confidence in their horse to navigate the obstacle safely."
+2228,persona_b,one_shot,numbered,trust,The author describes relying on the horse's ability to safely navigate a dangerous jump.
+2228,persona_b,few_shot,numbered,trust,"The author describes relying on the horse to safely navigate a dangerous jump, demonstrating a strong sense of trust."
+2228,persona_b,zero_shot,inline,trust,The author expresses reliance on the horse's ability to navigate the jump safely.
+2228,persona_b,one_shot,inline,fear,"Watching a horse approach a high, risky jump creates anxiety and concern for potential danger, triggering fear in a first-time spectator."
+2228,persona_b,few_shot,inline,trust,The author relies on and confides in the horse's ability to safely navigate a high-risk obstacle.
+41840,neutral,one_shot,inline,relief,The author felt a sense of release and comfort after finally sharing emotions they had previously kept bottled up.
+41840,neutral,zero_shot,numbered,trust,The author felt safe and secure enough to be vulnerable and confide their personal feelings to their significant other.
+41840,neutral,zero_shot,inline,relief,The author experienced a sense of release and comfort after finally expressing feelings that they had previously bottled up for a long time.
+41840,neutral,few_shot,numbered,trust,"The author describes being able to share vulnerable feelings with their partner, which reflects a strong sense of safety and trust in the relationship."
+41840,neutral,few_shot,inline,trust,"The author describes feeling safe enough to share their vulnerable emotions with their partner, which demonstrates trust."
+41840,generic_human,zero_shot,numbered,trust,The author felt trust because they were able to be vulnerable and share their private feelings with their partner after a habit of keeping them hidden.
+41840,neutral,one_shot,numbered,trust,"The author feels safe and secure enough to share their vulnerable, bottled-up feelings with their partner, which demonstrates a strong sense of trust."
+41840,generic_human,one_shot,numbered,trust,"The author felt safe and confident enough to share their vulnerable, bottled-up feelings with their partner."
+41840,generic_human,zero_shot,inline,trust,The author felt trust because they felt safe and secure enough to share their vulnerable feelings with their significant other.
+41840,generic_human,one_shot,inline,trust,"The author felt safe and confident enough to share their vulnerable, bottled-up emotions with their significant other."
+41840,generic_human,few_shot,inline,relief,"The author describes unburdening long-suppressed emotions to a supportive partner, which brings a sense of comfort and release."
+41840,persona_a,zero_shot,inline,trust,The author felt a sense of trust by being vulnerable and sharing their bottled-up emotions with their significant other.
+41840,persona_a,zero_shot,numbered,trust,The author felt trust because they were able to be vulnerable and share their bottled-up emotions with their partner.
+41840,generic_human,few_shot,numbered,relief,The author felt a sense of unburdening and comfort after sharing feelings they had previously kept bottled up.
+41840,persona_a,few_shot,inline,trust,"The author expresses the ability to be vulnerable and share deep feelings with a partner, which demonstrates trust."
+41840,persona_a,one_shot,numbered,relief,The author experienced a release of emotional tension by sharing feelings that they had previously kept bottled up.
+41840,persona_b,zero_shot,numbered,relief,The author felt a sense of unburdening and comfort after finally releasing their bottled-up emotions to their partner.
+41840,persona_b,zero_shot,inline,trust,The author felt trust because they were able to be vulnerable and share their hidden feelings with their significant other.
+41840,persona_a,few_shot,numbered,relief,"The author describes releasing long-suppressed emotions to a partner, which provides a sense of unburdening and emotional comfort."
+41840,persona_b,one_shot,numbered,relief,The author expresses a sense of release and comfort after unburdening long-suppressed emotions to their partner.
+41840,persona_b,one_shot,inline,pride,The author feels a sense of accomplishment and pride in their personal growth by overcoming a lifelong habit of bottling up their emotions.
+41840,persona_a,one_shot,inline,trust,The author felt safe and secure enough to be vulnerable and share their bottled-up feelings with their partner.
+41795,neutral,zero_shot,numbered,pride,Being elected to a leadership role like class president is a personal accomplishment that generates a strong sense of achievement and self-worth.
+41840,persona_b,few_shot,numbered,relief,The author feels a sense of unburdening and emotional release after sharing feelings they had long suppressed.
+41840,persona_b,few_shot,inline,pride,The author feels a sense of personal accomplishment and pride in overcoming their lifelong habit of bottling up emotions to openly share with their partner.
+41795,neutral,one_shot,numbered,pride,"Being elected class president represents a meaningful personal achievement and recognition by peers, which naturally evokes a feeling of pride."
+41795,neutral,zero_shot,inline,pride,"Being elected class president is a significant personal achievement and recognition by peers, naturally inspiring a feeling of accomplishment and self-worth."
+41795,neutral,one_shot,inline,pride,Being elected to a leadership position by one's peers is a significant achievement that evokes a sense of honor and self-worth.
+41795,neutral,few_shot,numbered,pride,"The author describes being elected to a prestigious leadership role by their peers, which is a significant personal achievement that naturally evokes pride."
+41795,generic_human,zero_shot,inline,pride,Being elected to a leadership position like class president generates a strong sense of achievement and self-worth.
+41795,generic_human,zero_shot,numbered,pride,Being elected class president is a significant achievement that brings a sense of accomplishment and recognition from peers.
+41795,generic_human,one_shot,numbered,pride,"Being elected class president is a personal achievement and a sign of recognition from peers, which naturally evokes a feeling of accomplishment and self-worth."
+41795,neutral,few_shot,inline,pride,"The author describes achieving a prestigious position through peer recognition, which naturally evokes a sense of accomplishment and pride."
+41795,generic_human,one_shot,inline,pride,Being elected to a leadership role by peers brings a strong sense of personal achievement and honor.
+41795,generic_human,few_shot,numbered,pride,"The author describes being elected to a leadership position by their peers, which naturally evokes a sense of personal accomplishment and pride."
+41795,persona_a,zero_shot,numbered,pride,The narrator felt a sense of achievement and self-worth after being chosen by their peers for a leadership role.
+41795,persona_a,zero_shot,inline,pride,Being elected class president is a significant personal accomplishment that instills a strong sense of achievement and satisfaction.
+41795,generic_human,few_shot,inline,pride,"The author describes being elected to a prominent leadership role by their peers, which is a personal achievement that typically evokes pride."
+41795,persona_a,one_shot,numbered,pride,"Being elected class president represents a major personal achievement and recognition by peers, which naturally evokes a sense of pride."
+41795,persona_a,one_shot,inline,pride,Being elected to a leadership position by one's peers is a significant accomplishment that naturally evokes a sense of pride.
+41795,persona_a,few_shot,numbered,pride,"The author describes achieving a prestigious position through peer recognition, which naturally evokes a sense of pride."
+41795,persona_a,few_shot,inline,pride,"Being elected class president represents a significant personal achievement and peer recognition, which naturally evokes a sense of pride."
+41795,persona_b,zero_shot,numbered,joy,The author felt joy because the candidate they supported successfully won the election for class president.
+41795,persona_b,zero_shot,inline,pride,The author felt a deep sense of accomplishment and honor upon being elected class president by their peers.
+41795,persona_b,one_shot,inline,pride,"Being elected class president represents a significant personal achievement and peer recognition, which naturally evokes a sense of pride."
+41795,persona_b,few_shot,numbered,trust,Voting for someone to be class president demonstrates faith and confidence in that person's ability to lead.
+41795,persona_b,one_shot,numbered,joy,Seeing the candidate you supported win the election brings a strong sense of happiness and satisfaction with the successful outcome.
+41857,neutral,zero_shot,numbered,trust,"The author expresses reliance on and confidence in their line manager, who provided them with great advice and support during their promotion application."
+41857,neutral,zero_shot,inline,trust,"The author describes relying on their line manager for support and guidance during a promotion process, demonstrating confidence and trust in their relationship."
+41857,neutral,one_shot,numbered,trust,"The author felt reliance and confidence in their line manager, who provided valuable advice and support during their promotion application."
+41857,neutral,one_shot,inline,trust,"The author describes relying on their line manager for guidance and receiving supportive advice during a promotion application, demonstrating confidence and reliance in their manager."
+41795,persona_b,few_shot,inline,trust,Voting for a classmate to be class president reflects confidence and faith in their ability to represent and lead the class.
+41857,neutral,few_shot,numbered,trust,"The author describes relying on their line manager for guidance and receiving supportive advice, which demonstrates reliance and confidence in another person."
+41857,neutral,few_shot,inline,trust,"The author describes relying on their line manager for guidance and receiving strong support during a promotion process, which reflects a feeling of trust."
+41857,generic_human,zero_shot,numbered,trust,"The author expresses reliance and confidence in their line manager, who provided valuable advice and support during the promotion process."
+41857,generic_human,one_shot,numbered,trust,"The author describes relying on their line manager for advice and support during a promotion process, demonstrating confidence in their guidance."
+41857,generic_human,zero_shot,inline,trust,The author expresses reliance on and confidence in their line manager who provided them with guidance and support during their promotion application.
+41857,generic_human,one_shot,inline,trust,"The author expresses reliance and confidence in their line manager, who provided valuable advice and support during the promotion process."
+41857,persona_a,zero_shot,numbered,trust,"The author felt trust toward their line manager, whom they relied on for valuable advice and support during the promotion application process."
+41857,generic_human,few_shot,inline,trust,"The author describes relying on their line manager for advice and receiving strong support during a promotion process, which reflects deep trust in their guidance."
+41857,generic_human,few_shot,numbered,trust,"The author describes relying on their line manager for guidance and receiving helpful support during a job application process, which demonstrates a feeling of trust."
+41857,persona_a,zero_shot,inline,trust,"The author expresses reliance and confidence in their line manager, who provided valuable support and guidance during the promotion process."
+41857,persona_a,one_shot,numbered,trust,"The author describes relying on their line manager for support and advice during a promotion application, demonstrating confidence and reliance in their guidance."
+41857,persona_a,few_shot,numbered,trust,"The author describes receiving valuable advice and support from a line manager whom they relied on during a professional milestone, which demonstrates trust."
+41857,persona_a,one_shot,inline,trust,"The author describes relying on their line manager for advice and support during a promotion application, demonstrating confidence and reliance in their guidance."
+41857,persona_a,few_shot,inline,trust,"The author describes relying on their line manager for guidance and receiving valuable support, which highlights a feeling of trust in their advice."
+41857,persona_b,zero_shot,numbered,trust,"The author describes relying on their line manager for guidance and support during a promotion application, demonstrating confidence and reliance in their relationship."
+41857,persona_b,zero_shot,inline,trust,"The author felt trust toward their line manager, who provided them with valuable advice and support during the promotion application process."
+41857,persona_b,one_shot,inline,trust,The author describes relying on their line manager for guidance and receiving valuable support during the promotion process.
+41857,persona_b,one_shot,numbered,trust,"The author describes relying on their line manager for guidance and support during a promotion application, demonstrating confidence and faith in their guidance."
+41857,persona_b,few_shot,numbered,trust,"The author describes relying on their line manager for advice and support during a workplace promotion process, demonstrating confidence and reliance in them."
+52679,neutral,zero_shot,numbered,pride,The author feels a sense of satisfaction in their three-year-old son's ability to accomplish a task independently.
+41857,persona_b,few_shot,inline,trust,"The author describes relying on their line manager for guidance and receiving supportive advice during a promotion process, which demonstrates strong confidence and trust in them."
+52679,neutral,zero_shot,inline,pride,The author feels a sense of accomplishment and satisfaction in their young child's ability to complete a task independently.
+52679,neutral,few_shot,numbered,pride,The author feels a sense of satisfaction and achievement in their young child's ability to complete a task independently.
+52679,neutral,one_shot,numbered,pride,The author feels a sense of accomplishment and satisfaction in their young child's ability to complete a task independently.
+52679,neutral,one_shot,inline,pride,The author feels a sense of satisfaction and accomplishment regarding their young child's ability to complete a task independently.
+52679,neutral,few_shot,inline,pride,The author feels a sense of accomplishment watching their young child successfully complete a task on his own.
+52679,generic_human,zero_shot,inline,pride,The author feels a sense of accomplishment and satisfaction seeing their young son independently complete a task.
+52679,generic_human,zero_shot,numbered,pride,The author feels a sense of satisfaction and accomplishment seeing their three-year-old son complete a task independently.
+52679,generic_human,one_shot,numbered,pride,The author feels a sense of satisfaction and achievement regarding their three-year-old child's ability to complete a task independently.
+52679,generic_human,one_shot,inline,pride,The author feels a sense of accomplishment and satisfaction seeing their three-year-old child complete a chore independently.
+52679,generic_human,few_shot,numbered,pride,The author feels proud that their three-year-old son was able to accomplish a task independently.
+52679,generic_human,few_shot,inline,pride,The author feels a sense of accomplishment regarding their three-year-old child's ability to complete a task independently.
+52679,persona_a,zero_shot,numbered,pride,The author feels a sense of accomplishment and pride in their three-year-old child's ability to complete a task independently.
+52679,persona_a,zero_shot,inline,pride,The author feels a sense of accomplishment and satisfaction seeing their young child successfully complete a chore independently.
+52679,persona_a,one_shot,numbered,pride,The author feels a sense of satisfaction and achievement watching their young child successfully complete a task independently.
+52679,persona_b,zero_shot,numbered,pride,The author feels a sense of achievement and satisfaction in their young child's growing independence.
+52679,persona_a,one_shot,inline,pride,The author feels a sense of satisfaction and achievement in their young child's ability to act independently and take on responsibility.
+52679,persona_a,few_shot,numbered,pride,The author feels a sense of satisfaction and accomplishment watching their young child perform a task independently.
+52679,persona_a,few_shot,inline,pride,The author feels proud seeing their three-year-old child successfully complete a chore by himself.
+52679,persona_b,zero_shot,inline,pride,The author feels a sense of pride in their three-year-old son's growing independence and ability to complete the task by himself.
+52679,persona_b,one_shot,inline,trust,The author felt confidence and reliance in their young son's ability to complete a task independently.
+52679,persona_b,few_shot,inline,pride,The author feels a sense of accomplishment and satisfaction seeing their three-year-old child successfully complete a task independently.
+52679,persona_b,few_shot,numbered,pride,The author feels a sense of accomplishment and satisfaction seeing their three-year-old son perform a task independently.
+52823,neutral,zero_shot,numbered,trust,The author expresses complete confidence and security in her husband's ability to keep their baby and family safe.
+52823,neutral,zero_shot,inline,trust,The author expresses a deep sense of security and confidence in her husband's commitment to protect and care for their family.
+52679,persona_b,one_shot,numbered,trust,The author expresses confidence and reliance on their young child's ability to handle a task independently.
+52823,neutral,one_shot,numbered,trust,The author describes a profound sense of security and faith in her husband's commitment to protecting their new baby and family.
+52823,neutral,one_shot,inline,trust,The author expresses a profound sense of security and faith in her husband's ability to protect and care for their family.
+52823,generic_human,zero_shot,numbered,trust,The author describes a deep sense of security and confidence that her husband would always keep their newborn baby and family safe.
+52823,neutral,few_shot,numbered,trust,The author expresses a deep sense of security and confidence in her husband's ability to protect their new baby and family.
+52823,neutral,few_shot,inline,trust,The author describes a deep sense of security and complete confidence in her husband's commitment to keep their newborn and family safe.
+52823,generic_human,zero_shot,inline,trust,The author felt a deep sense of reliance and confidence that her husband would always protect and keep their family safe.
+52823,generic_human,one_shot,numbered,trust,The author describes a profound sense of security and confidence in her husband's ability to protect their new baby and family.
+52823,generic_human,one_shot,inline,trust,The author expresses a deep sense of security and confidence in her husband's ability to protect their new baby and family.
+52823,generic_human,few_shot,numbered,trust,The author describes a deep sense of security and confidence in their husband's ability to protect and care for their new family.
+52823,persona_a,zero_shot,numbered,trust,The author expresses a profound sense of security and confidence in her husband's ability to protect their new baby and family.
+52823,generic_human,few_shot,inline,trust,The author describes a profound sense of security and confidence in her husband's ability to keep their newborn and family safe.
+52823,persona_a,zero_shot,inline,trust,The author felt a deep sense of trust upon seeing her husband hold their newborn and knowing he would always protect and keep their family safe.
+52823,persona_a,one_shot,numbered,trust,The author expresses a deep confidence and sense of security in her husband's ability to protect and keep their family safe.
+52823,persona_a,one_shot,inline,trust,The author expresses a deep sense of security and confidence that her husband will protect and care for their family.
+52823,persona_a,few_shot,inline,trust,The author expresses a deep confidence and sense of security in her husband's ability to protect their new baby and keep the family safe.
+52823,persona_b,zero_shot,numbered,trust,The author expresses a profound sense of security and confidence in her husband's ability to protect their new baby and family.
+52823,persona_a,few_shot,numbered,trust,The author describes a profound sense of security and confidence in her husband's commitment and ability to keep their newborn baby and family safe.
+52823,persona_b,zero_shot,inline,trust,The text conveys a profound sense of security and confidence in the husband's ability to protect and care for the family.
+52823,persona_b,one_shot,numbered,trust,The author describes a deep sense of security and confidence in her husband's commitment to protecting their new baby and family.
+52823,persona_b,one_shot,inline,trust,The author expresses a profound sense of security and confidence in her husband's ability to protect and care for their family.
+52823,persona_b,few_shot,inline,trust,The author expresses deep faith and confidence in her husband's ability to keep their newborn and family safe.
+52823,persona_b,few_shot,numbered,trust,The author expresses a profound sense of security and confidence in her husband's ability to keep their newborn and family safe.
+52777,neutral,zero_shot,numbered,trust,"The author reflects on a time when they placed their faith in a teacher's advice and guidance, which ultimately proved to be successful."
+52777,neutral,zero_shot,inline,trust,"The author reflects on taking a risk by relying on their teacher's promise of guidance, which Ultimately paid off and validated their confidence in the teacher."
+52777,neutral,one_shot,numbered,trust,"The author describes taking a risk to rely on their teacher's advice and guidance, demonstrating faith in her support that ultimately proved to be well-placed."
+52777,neutral,few_shot,numbered,trust,"The author describes taking a risk by relying on their teacher's promise of extra help rather than hiring a tutor, an act of faith that ultimately paid off."
+52777,neutral,one_shot,inline,trust,"The author describes taking a risk by relying on their teacher's promise of extra help instead of hiring a tutor, an expectation that was successfully fulfilled."
+52777,neutral,few_shot,inline,trust,"The author describes taking a risk by believing in and following their teacher's advice, which ultimately proved to be a well-placed act of trust that paid off."
+52777,generic_human,zero_shot,numbered,trust,The author reflects on a positive experience where taking a risk to rely on and trust their teacher's promise ultimately paid off.
+52777,generic_human,one_shot,numbered,trust,"The author describes taking a leap of faith by relying on their teacher's promise of extra help rather than hiring a tutor, which ultimately paid off."
+52777,generic_human,zero_shot,inline,trust,"The author describes a positive experience where relying on their teacher's promise proved successful, demonstrating a strong sense of faith and confidence in that relationship."
+52777,generic_human,one_shot,inline,trust,"The author describes taking a risk by relying on their teacher's promise of extra help instead of hiring a tutor, which ultimately paid off."
+52777,generic_human,few_shot,numbered,trust,"The author describes taking a risk by relying on a teacher's promise to help them succeed academically, which ultimately paid off."
+52777,persona_a,zero_shot,inline,trust,"The author reflects on relying on their teacher's advice and guidance, feeling confident in her promise despite the initial risk."
+52777,persona_a,one_shot,numbered,trust,"The author describes a situation where they took a risk by relying on a teacher's promise, which ultimately paid off and validated their trust."
+52777,persona_a,zero_shot,numbered,trust,The author describes placing their faith in a teacher's promise and relying on her guidance despite initial hesitation.
+52777,generic_human,few_shot,inline,trust,"The author describes placing their confidence in a teacher's promise despite initial hesitations, which ultimately proved to be a successful and rewarding decision."
+52777,persona_a,one_shot,inline,trust,"The author describes taking a risk by placing faith in their teacher's promise to help them succeed without a private tutor, a decision that ultimately paid off."
+52777,persona_a,few_shot,numbered,trust,"The author describes relying on their teacher's advice and reassurance despite initial hesitation, which ultimately paid off successfully."
+52777,persona_a,few_shot,inline,trust,"The author describes taking a risk by relying on their teacher's promise of guidance instead of hiring a tutor, which ultimately proved successful."
+52777,persona_b,zero_shot,numbered,trust,The author reflects on a situation where trusting their teacher's advice proved successful and beneficial for their education.
+52777,persona_b,zero_shot,inline,trust,"The author describes relying on their teacher's advice and promise of support, demonstrating confidence and faith in the teacher's guidance."
+52777,persona_b,one_shot,numbered,trust,"The author describes taking a risk by placing their trust in a teacher's promise, which ultimately paid off and led to a successful educational outcome."
+52777,persona_b,one_shot,inline,trust,"The author describes placing faith in their teacher's promise of extra help despite initial doubts, demonstrating reliance on her guidance."
+52777,persona_b,few_shot,numbered,trust,"The author describes relying on a teacher's promise and taking a risk by following her advice, which demonstrates placing trust in another person."
+52777,persona_b,few_shot,inline,trust,"The author describes relying on their teacher's advice and guidance despite initial hesitation, placing faith in her support which ultimately led to success."
+61094,neutral,zero_shot,inline,joy,Moving to a new country with a partner is a major life milestone that typically brings happiness and excitement for a shared future.
+61094,neutral,one_shot,numbered,joy,"Moving to a new country alongside a romantic partner represents a major, exciting life milestone that typically evokes happiness."
+61094,neutral,one_shot,inline,joy,Moving to a new country with a partner represents an exciting major life milestone and a shared adventure.
+61094,neutral,zero_shot,numbered,joy,Moving to a new country alongside a partner is an exciting life milestone that typically brings feelings of happiness and enthusiasm for a shared new chapter.
+61094,neutral,few_shot,numbered,joy,"The author describes a major positive life event shared with a loved one, which typically evokes joy."
+61094,neutral,few_shot,inline,joy,"The author describes an exciting major life transition shared with a loved one, which typically evokes joy."
+61094,generic_human,zero_shot,numbered,joy,Moving to a new country alongside a partner represents a major life milestone filled with excitement and happiness for a shared future.
+61094,generic_human,one_shot,inline,joy,Moving to a new country to start a fresh chapter with a romantic partner is a major life milestone typically associated with happiness and excitement.
+61094,generic_human,few_shot,numbered,joy,"The author describes a major positive life transition shared with their partner, an event that typically evokes joy."
+61094,generic_human,one_shot,numbered,joy,"Moving to a new country with a partner represents an exciting new chapter and a shared milestone in a relationship, which naturally evokes happiness."
+61094,generic_human,zero_shot,inline,joy,Embarking on a major new life adventure by moving to a new country alongside a partner naturally evokes feelings of happiness and excitement.
+61094,persona_a,zero_shot,numbered,joy,"Moving to a new country with a partner represents an exciting new chapter and a shared life experience, evoking feelings of happiness and excitement."
+61094,persona_a,zero_shot,inline,fear,"Moving to an entirely new country involves facing an unfamiliar environment and uncertainty about the future, which naturally evokes fear of the unknown."
+61094,generic_human,few_shot,inline,joy,"The author describes embarking on a major life transition to a new country with their partner, which is an exciting and positive life event."
+61094,persona_a,one_shot,inline,joy,"Moving to a new country with a romantic partner represents an exciting new chapter and a shared life milestone, which typically evokes happiness and excitement."
+61094,persona_a,one_shot,numbered,joy,Moving to a new country with a partner represents an exciting fresh start and a major positive life milestone.
+61094,persona_a,few_shot,numbered,joy,"The author describes a major positive life event and exciting new beginning with their partner, which typically evokes joy."
+61094,persona_b,zero_shot,numbered,sadness,Hearing that a close friend is moving to a new country creates a sense of loss and longing due to the impending distance between them.
+61094,persona_a,few_shot,inline,joy,"Moving to a new country with a partner is a major positive life milestone and exciting fresh start, which typically evokes joy."
+61094,persona_b,zero_shot,inline,sadness,The author feels sadness at the prospect of being separated from a close friend who is relocating to another country.
+61094,persona_b,one_shot,numbered,sadness,"The author feels sad because a close friend is moving away to a different country, leading to a painful separation."
+61094,persona_b,few_shot,inline,sadness,"The author feels sadness because their friend is moving far away to another country, bringing about a painful separation."
+61094,persona_b,one_shot,inline,sadness,Hearing that a close friend is moving far away to a new country triggers feelings of loss and separation.
+61094,persona_b,few_shot,numbered,sadness,The author feels sadness upon learning that their friend is moving away to a new country.
+922,neutral,zero_shot,numbered,trust,The author felt a strong sense of security and belief in their partner's sincerity and commitments during their vows.
+922,neutral,zero_shot,inline,trust,The author expresses a firm belief in the sincerity of their husband's vows and feels safe with him.
+922,neutral,one_shot,numbered,trust,"The author describes feeling secure and believing in the sincerity of their partner's vows, which demonstrates a deep sense of trust."
+922,neutral,few_shot,inline,trust,"The author describes feeling safe and believing in the sincerity of their partner's vows, which reflects a strong sense of trust."
+922,neutral,one_shot,inline,trust,The author describes feeling safe and confident in the sincerity of their partner's vows during their wedding.
+922,neutral,few_shot,numbered,trust,"The author describes feeling safe and believing in the sincerity of their partner's wedding vows, which reflects a deep sense of security and reliance on another person."
+922,generic_human,zero_shot,inline,trust,The author expresses a firm belief in the sincerity of their husband's vows and a feeling of security with him.
+922,generic_human,zero_shot,numbered,trust,The author expresses a deep sense of security and confidence in their partner's sincerity during their marriage vows.
+922,generic_human,one_shot,inline,trust,The author expresses a deep sense of security and belief in their partner's sincerity during their wedding vows.
+922,generic_human,few_shot,inline,trust,"The author describes feeling safe and confident in the sincerity of her husband's wedding vows, which reflects a sense of trust."
+922,generic_human,few_shot,numbered,trust,"The author describes believing their partner's marriage vows and feeling secure, which reflects a deep sense of trust."
+922,generic_human,one_shot,numbered,trust,The author feels a sense of security and confidence in the sincerity of their partner's vows.
+922,persona_a,zero_shot,numbered,trust,The narrator felt a strong sense of security and belief in her husband's commitment when they exchanged their wedding vows.
+922,persona_a,few_shot,inline,trust,The author expresses a deep belief in her partner's wedding vows and a strong sense of safety with them.
+922,persona_a,few_shot,numbered,trust,The author expresses a strong sense of safety and belief in the sincerity of her husband's vows.
+922,persona_a,one_shot,numbered,trust,The author expresses a deep sense of security and belief in the sincerity of her husband's wedding vows.
+922,persona_a,zero_shot,inline,trust,The narrator expresses a deep belief in the sincerity of her husband's vows and a sense of security in their relationship.
+922,persona_a,one_shot,inline,trust,The author expresses a deep sense of security and confidence in her partner's sincerity when exchanging their wedding vows.
+922,persona_b,zero_shot,numbered,trust,The author felt a sense of safety and confidence in the sincerity of the vows being spoken.
+922,persona_b,zero_shot,inline,trust,The author felt a strong sense of security and confidence in the sincerity of the wedding vows.
+922,persona_b,few_shot,numbered,trust,"The author expresses a firm belief in the sincerity of the wedding vows and a feeling of security, which directly characterizes trust."
+922,persona_b,one_shot,inline,trust,"The author expresses a feeling of security and confidence in the sincerity of the marriage vows, which reflects trust."
+922,persona_b,one_shot,numbered,trust,The author expresses a strong sense of security and confidence in the sincerity of the spoken vows.
+922,persona_b,few_shot,inline,trust,"The author describes feeling safe and confident in the sincerity of the vows exchanged, which directly reflects a feeling of trust."
+41791,neutral,one_shot,numbered,joy,The author felt elated and extremely happy upon learning that a colleague stood up to defend their reputation.
+41791,neutral,zero_shot,inline,joy,The author expresses feeling elated and deeply satisfied upon learning that a colleague defended their honor and reputation.
+41791,neutral,zero_shot,numbered,joy,The author describes feeling elated and deeply satisfied upon learning that a colleague stood up to defend their honor and reputation.
+41791,neutral,few_shot,numbered,joy,"The author expresses elation and a feeling of completeness upon learning that a colleague defended their reputation, which evokes joy."
+41791,generic_human,zero_shot,numbered,joy,"The author explicitly describes feeling ""elated"" and ""complete"" upon learning that a colleague defended their honor and reputation."
+41791,neutral,few_shot,inline,joy,The author explicitly mentions feeling elated upon learning that a colleague stood up to defend their honor and reputation.
+41791,neutral,one_shot,inline,trust,The author felt a deep sense of trust after learning that a colleague loyally defended their honor and reputation in their absence.
+41791,generic_human,zero_shot,inline,joy,The author explicitly describes feeling elated and fulfilled after learning that a colleague stood up to defend their honor and reputation.
+41791,generic_human,one_shot,inline,joy,The author explicitly mentions feeling elated and complete upon learning that a colleague had defended their honor and reputation.
+41791,generic_human,one_shot,numbered,joy,The author explicitly describes feeling elated after learning that a colleague defended their reputation and honor in their absence.
+41791,generic_human,few_shot,numbered,joy,"The author describes feeling elated and complete after learning that a colleague defended their reputation, which reflects a strong sense of joy."
+41791,persona_a,zero_shot,numbered,joy,The author felt elated and joyful upon learning that a colleague loyally defended their honor and reputation in their absence.
+41791,generic_human,few_shot,inline,trust,"The author describes a colleague defending their reputation in their absence, leading them to feel deep confidence and reliance in that person."
+41791,persona_a,one_shot,numbered,joy,The author explicitly mentions feeling elated and fulfilled upon discovering that a colleague loyally defended their reputation.
+41791,persona_a,zero_shot,inline,joy,The author describes feeling elated and complete happiness upon learning that a colleague stood up to defend their honor and reputation.
+41791,persona_a,one_shot,inline,joy,The author explicitly describes feeling elated upon learning that a colleague defended their honor and reputation.
+41791,persona_a,few_shot,inline,joy,The author describes feeling elated and deeply supported after learning that a colleague stood up to defend their honor and reputation.
+41791,persona_a,few_shot,numbered,joy,The author describes feeling elated upon learning that a colleague defended their honor and reputation in their absence.
+41791,persona_b,zero_shot,numbered,joy,"The author explicitly states they felt ""elated"" and ""complete"" upon learning that their colleague defended their honor and reputation."
+41791,persona_b,one_shot,numbered,trust,The author expresses deep trust in a colleague who loyally defended their honor and reputation in their absence.
+41791,persona_b,one_shot,inline,trust,The author experienced a deep sense of trust upon learning that a colleague loyally defended their honor and reputation in their absence.
+41791,persona_b,zero_shot,inline,trust,The author feels a strong sense of trust and reliance toward their colleague after learning that they loyally defended their honor and reputation in their absence.
+4594,neutral,zero_shot,numbered,fear,The author explicitly describes feeling anxious and experiencing skyrocketing anxiety as they realized the person they had feelings for had blocked them on every platform.
+41791,persona_b,few_shot,numbered,joy,The author felt joy because they were elated to learn that a loyal colleague stood up to defend their honor and reputation.
+41791,persona_b,few_shot,inline,trust,"The author describes a colleague defending their honor in their absence, which demonstrated deep loyalty and made them feel they could fully rely on this person."
+4594,neutral,zero_shot,inline,fear,The author describes feeling escalating anxiety and dread as they discovered that someone they had feelings for had blocked them across all platforms.
+4594,neutral,one_shot,numbered,fear,The author explicitly describes experiencing mounting anxiety and dread as they discovered that a person they had feelings for had blocked them across text messages and social media platforms.
+4594,neutral,few_shot,inline,fear,The author describes experiencing mounting anxiety and distress as they gradually realize they have been blocked by someone they cared about.
+4594,neutral,one_shot,inline,fear,The author explicitly describes feeling an overwhelming surge of anxiety as they uncovered evidence that the person they had feelings for had blocked them on all communication and social media platforms.
+4594,neutral,few_shot,numbered,fear,The author describes experiencing mounting anxiety and panic upon realizing that someone they had feelings for had blocked them across all communication platforms.
+4594,generic_human,zero_shot,numbered,fear,The author explicitly describes feeling escalating anxiety and distress upon realizing they had been blocked across all communication and social media platforms.
+4594,generic_human,zero_shot,inline,fear,The author explicitly describes experiencing escalating anxiety and panic as they discovered they had been blocked on all communication channels and social media platforms.
+4594,persona_a,zero_shot,numbered,fear,The author explicitly describes feeling a sense of escalating anxiety as she realized her ex-partner had blocked her across all messaging and social media platforms.
+4594,generic_human,one_shot,numbered,fear,The author explicitly describes experiencing escalating anxiety as they realized they had been blocked across all platforms by someone they cared about.
+4594,generic_human,one_shot,inline,fear,The author explicitly describes feeling mounting anxiety and panic as they discovered that someone they had feelings for had blocked them across all communication and social media channels.
+4594,generic_human,few_shot,inline,fear,The author explicitly describes experiencing escalating anxiety and panic upon realizing they had been blocked across all platforms by someone they cared about.
+4594,generic_human,few_shot,numbered,fear,The author explicitly describes feeling skyrocketing anxiety and apprehension upon suspecting and confirming that someone they had feelings for had blocked them on all platforms.
+4594,persona_a,zero_shot,inline,fear,The author describes experiencing escalating anxiety and dread upon discovering that the man she had feelings for had blocked her across all platforms.
+4594,persona_a,one_shot,inline,fear,The author explicitly describes feeling escalating anxiety as they discovered clues indicating their ex-partner had blocked them across all platforms.
+4594,persona_a,one_shot,numbered,fear,The author explicitly describes experiencing escalating anxiety and panic as she progressively realized her former partner had blocked her on all communication and social media platforms.
+4594,persona_a,few_shot,inline,fear,The author describes experiencing escalating anxiety as she discovered signs that the man she had feelings for had blocked her across all platforms.
+4594,persona_a,few_shot,numbered,fear,The author explicitly describes experiencing escalating anxiety upon realizing that her ex-partner had blocked her across all messaging and social media platforms.
+4594,persona_b,zero_shot,numbered,fear,The author explicitly describes experiencing a surge of anxiety as they realized the man they had feelings for had blocked them on all platforms.
+4594,persona_b,zero_shot,inline,fear,The author explicitly describes feeling an overwhelming surge of anxiety as they realized they had been blocked across multiple platforms.
+4594,persona_b,few_shot,inline,fear,The author describes escalating anxiety and panic upon discovering that a man they had feelings for had blocked them across all communication and social media platforms.
+4594,persona_b,one_shot,numbered,fear,The author explicitly describes experiencing intense and escalating anxiety as they realized they had been blocked across all platforms.
+4594,persona_b,one_shot,inline,fear,The author explicitly states that their anxiety skyrocketed as they discovered evidence that the person they had feelings for had blocked them across multiple platforms.
+4594,persona_b,few_shot,numbered,fear,The author explicitly describes experiencing escalating anxiety and distress upon realizing that someone they cared about had blocked them on all messaging and social media platforms.
+588,neutral,zero_shot,numbered,sadness,"Being cheated on involves a deep sense of personal betrayal, loss of trust, and emotional pain, which typically evokes profound sadness."
+588,neutral,zero_shot,inline,sadness,"The author describes an experience of romantic betrayal, which naturally causes deep emotional pain and heartbreak."
+588,neutral,one_shot,numbered,sadness,Experiencing infidelity from a partner causes profound heartbreak and emotional pain due to the betrayal of trust.
+588,neutral,one_shot,inline,anger,"Being cheated on is a severe betrayal of trust and fairness, which naturally provokes strong feelings of resentment and fury toward the partner."
+588,neutral,few_shot,numbered,sadness,"The author describes experiencing infidelity in a relationship, which causes heartbreak and deep emotional pain."
+588,neutral,few_shot,inline,sadness,"The author describes experiencing romantic betrayal, an emotionally painful event that typically evokes deep sadness and heartbreak."
+588,generic_human,zero_shot,numbered,sadness,The author felt sadness due to the emotional pain and heartbreak caused by betrayal in a relationship.
+588,generic_human,zero_shot,inline,anger,"Being cheated on involves a severe breach of trust and unfair treatment by a partner, which typically evokes strong feelings of anger."
+588,generic_human,one_shot,numbered,sadness,"Being cheated on causes deep emotional pain, heartbreak, and sorrow resulting from a severe betrayal of trust in a relationship."
+588,generic_human,one_shot,inline,sadness,Being betrayed by a romantic partner causes deep heartbreak and emotional pain over the loss of trust and the relationship.
+588,generic_human,few_shot,numbered,anger,"Being cheated on is a direct betrayal of trust and a personal injustice, which typically provokes strong anger toward the partner."
+588,generic_human,few_shot,inline,sadness,"The author describes experiencing infidelity in a relationship, which typically evokes deep heartbreak and emotional pain."
+588,persona_a,zero_shot,numbered,anger,"Being cheated on involves a severe breach of trust and unfair treatment by a partner, which typically evokes intense feelings of anger and betrayal."
+588,persona_a,zero_shot,inline,anger,The author felt anger due to the intense feeling of betrayal and injustice experienced when their partner cheated on them.
+588,persona_a,one_shot,numbered,anger,"Being cheated on is a direct betrayal of trust and commitment in a relationship, which naturally triggers strong feelings of anger and resentment toward the partner."
+588,persona_a,one_shot,inline,anger,"Being cheated on involves a severe betrayal of trust and personal hurt by a partner, which commonly triggers strong feelings of anger."
+588,persona_a,few_shot,numbered,sadness,"The author describes experiencing infidelity in a relationship, which typically causes deep heartbreak and emotional pain."
+588,persona_a,few_shot,inline,anger,"The author describes experiencing infidelity and betrayal in a romantic relationship, which typically evokes strong anger."
+588,persona_b,zero_shot,numbered,sadness,"Discovering infidelity in a marriage causes deep emotional pain, heartbreak, and a profound sense of personal loss."
+588,persona_b,zero_shot,inline,sadness,Being cheated on causes deep emotional heartbreak and grief from the betrayal of a spouse's trust.
+588,persona_b,one_shot,numbered,sadness,The author experienced deep emotional pain and heartbreak caused by their spouse's infidelity.
+588,persona_b,one_shot,inline,sadness,"Experiencing infidelity in a marriage causes deep emotional hurt, heartbreak, and grief over the betrayal of trust."
+588,persona_b,few_shot,numbered,anger,"Being cheated on by a spouse is a severe betrayal of trust and relationship vows, which typically provokes intense anger."
+6403,neutral,zero_shot,numbered,anger,"The author felt anger in response to their daughter's misbehavior, which prompted them to smack her."
+588,persona_b,few_shot,inline,sadness,"The author describes experiencing infidelity from their spouse, an act of betrayal that causes deep heartbreak and emotional pain."
+6403,neutral,zero_shot,inline,anger,"The author felt anger triggered by their daughter's misbehavior, causing them to react by smacking her."
+6403,neutral,one_shot,numbered,anger,The author acted aggressively toward their child out of frustration and irritation caused by the child's misbehavior.
+6403,neutral,few_shot,numbered,anger,"The author describes being provoked by their child's misbehavior and reacting impulsively, which is a direct response to feeling anger."
+6403,neutral,one_shot,inline,anger,"The author felt anger in response to their daughter's bad behavior, which led to them smacking her."
+6403,generic_human,zero_shot,numbered,anger,"The author felt anger toward their daughter for misbehaving, which led to them smacking her."
+6403,generic_human,zero_shot,inline,anger,"The author felt anger driven by their daughter's misbehavior, which caused them to react by smacking her."
+6403,neutral,few_shot,inline,guilt,"The author describes losing control and physically disciplining their child, an action that typically evokes remorse and guilt."
+6403,generic_human,one_shot,inline,anger,"The author felt anger toward their daughter's misbehavior, which prompted them to physically discipline her."
+6403,generic_human,one_shot,numbered,anger,"The author reacted physically to their child's misbehavior, which is a action driven by frustration and anger."
+6403,generic_human,few_shot,numbered,anger,The author acted out physically due to frustration and provocation caused by their child's misbehavior.
+6403,generic_human,few_shot,inline,anger,"The author reacted to their child's misbehavior with physical discipline, which is a direct response to feeling angry."
+6403,persona_a,zero_shot,numbered,anger,"The author felt anger toward their daughter's naughty behavior, which prompted them to discipline her."
+6403,persona_a,zero_shot,inline,anger,"The author felt anger due to their daughter's disobedient behavior, which led to the physical discipline."
+6403,persona_a,one_shot,numbered,anger,"The author felt anger towards their child's misbehavior, which prompted them to react with physical discipline."
+6403,persona_a,one_shot,inline,anger,"The author felt anger toward their daughter due to her misbehavior, which prompted the physical discipline."
+6403,persona_a,few_shot,numbered,anger,"The author reacted with frustration and anger toward their daughter's misbehavior, leading them to discipline her."
+6403,persona_a,few_shot,inline,anger,"The author describes disciplining their child in response to misbehavior, an action typically driven by frustration and anger."
+6403,persona_b,zero_shot,numbered,guilt,The author feels remorse and self-reproach for physically disciplining their young child.
+6403,persona_b,zero_shot,inline,guilt,The author feels remorse and regret for losing their composure and physically disciplining their child.
+6403,persona_b,one_shot,numbered,guilt,The author expresses remorse and self-reproach after reacting to their child's behavior with physical discipline.
+6403,persona_b,one_shot,inline,guilt,The author feels remorse and regret for physically disciplining their child after losing their patience.
+6403,persona_b,few_shot,numbered,guilt,The author feels remorse for losing their temper and physically disciplining their child.
+6403,persona_b,few_shot,inline,guilt,The author feels remorse for physically disciplining their child after reacting to her bad behavior.
+4671,neutral,zero_shot,numbered,guilt,The author feels remorse for breaking the vase and dishonestly allowing their sister to take the blame and be scolded.
+4671,neutral,zero_shot,inline,guilt,"The author feels remorse for breaking the vase and framing their sister, who was unfairly punished for their wrong action."
+4671,neutral,one_shot,numbered,guilt,The author feels remorse for lying and allowing their sister to be unfairly punished for something they did.
+4671,neutral,one_shot,inline,guilt,The author feels remorse for lying and allowing their sister to be unfairly punished for a mistake they committed.
+4671,neutral,few_shot,numbered,guilt,"The author describes dishonesty that resulted in their innocent sister being unfairly punished, which evokes a sense of remorse for their actions."
+4671,neutral,few_shot,inline,guilt,The author feels remorse for lying about breaking a vase and allowing their innocent sister to take the blame and get scolded.
+4671,generic_human,zero_shot,numbered,guilt,The author feels remorse for breaking a vase and unfairly causing their sister to take the blame and get scolded.
+4671,generic_human,zero_shot,inline,guilt,The author feels remorse for breaking an object and deceitfully letting their sister take the blame and punishment for it.
+4671,generic_human,one_shot,numbered,guilt,The author feels remorse for causing their sister to be unfairly punished after lying about breaking the vase.
+4671,generic_human,one_shot,inline,guilt,The author feels remorse for lying and causing their innocent sister to get scolded for their own mistake.
+4671,generic_human,few_shot,numbered,guilt,The author feels remorse for lying and letting their sister take the blame and get scolded for a mistake they committed.
+4671,generic_human,few_shot,inline,guilt,The author feels remorse for lying and allowing their sister to take the blame and be scolded for an accident they caused.
+4671,persona_a,zero_shot,numbered,guilt,"The author feels remorse for breaking a vase, lying, and allowing their sister to be unjustly scolded for their mistake."
+4671,persona_a,zero_shot,inline,guilt,The author feels remorse for breaking the vase and dishonestly allowing their innocent sister to take the blame and get scolded.
+4671,persona_a,one_shot,numbered,guilt,The author feels remorse for causing a mistake and lying so that their innocent sister was blamed and punished instead.
+4671,persona_a,one_shot,inline,guilt,The author feels remorse for causing their sister to be unfairly punished for a mistake they committed and lied about.
+4671,persona_a,few_shot,numbered,guilt,The author feels remorseful for lying and allowing their innocent sister to take the blame and get punished for their mistake.
+4671,persona_a,few_shot,inline,guilt,The author feels remorse for lying and causing their innocent sister to take the blame and get punished for their own mistake.
+4671,persona_b,zero_shot,numbered,guilt,The author feels remorse for lying and allowing their innocent sister to take the blame and be scolded for their own mistake.
+41415,neutral,zero_shot,numbered,sadness,"Losing a newly started job that one was enthusiastic about causes a deep sense of loss and disappointment, which is characteristic of sadness."
+41415,neutral,few_shot,numbered,sadness,"The author describes unexpectedly losing a job they were enthusiastic about, evoking feelings of disappointment and loss."
+41415,neutral,one_shot,inline,sadness,"The author experienced the unexpected loss of a job they were enthusiastic about, leading to feelings of disappointment and sorrow."
+41415,neutral,few_shot,inline,sadness,"The author describes losing a new job they were enthusiastic about, which evokes feelings of loss and disappointment."
+41415,neutral,one_shot,numbered,sadness,"The author experienced the loss of an exciting new job opportunity, which naturally evokes feelings of disappointment and sadness."
+41415,generic_human,zero_shot,inline,sadness,Losing a newly started job that one was enthusiastic about causes feelings of deep disappointment and loss.
+41415,generic_human,zero_shot,numbered,sadness,Being laid off from a job one was eager and excited about naturally induces feelings of disappointment and loss.
+41415,neutral,zero_shot,inline,sadness,The author felt sadness because they unexpectedly lost a new job opportunity that they were eager and excited to pursue.
+41415,generic_human,one_shot,inline,sadness,"The author experienced the unexpected loss of a promising job opportunity they were excited about, leading to feelings of deep disappointment and sorrow."
+41415,generic_human,one_shot,numbered,sadness,The author experienced loss and disappointment after unexpectedly losing a job they were excited about.
+41415,generic_human,few_shot,inline,sadness,"The author describes losing a new job they were excited about, which naturally evokes disappointment and sadness."
+41415,generic_human,few_shot,numbered,sadness,"The author describes losing an exciting new job opportunity, which naturally evokes feelings of loss and disappointment."
+41415,persona_a,one_shot,numbered,sadness,"The author experienced the sudden loss of a job they were enthusiastic about after sacrificing a stable position, causing profound disappointment and sorrow."
+41415,persona_a,zero_shot,inline,sadness,The author experienced profound loss and disappointment after giving up a stable position for an exciting new opportunity that was abruptly taken away.
+41415,persona_a,zero_shot,numbered,sadness,The author experienced deep disappointment and loss after sacrificing a stable position for a promising new job that was unexpectedly cut short.
+41415,persona_a,few_shot,inline,sadness,"The author experienced the sudden loss of an exciting new job opportunity after giving up a stable position, causing deep disappointment and sorrow."
+41415,persona_a,one_shot,inline,sadness,The author experienced deep disappointment and grief after losing an exciting new job that they had sacrificed a stable position to pursue.
+41415,persona_a,few_shot,numbered,sadness,"The author describes losing an exciting new job that they sacrificed a stable position for, which evokes deep disappointment and a sense of loss."
+6869,neutral,zero_shot,inline,sadness,The author experienced profound grief and heartbreak after being betrayed by a long-term partner.
+41415,persona_b,few_shot,inline,sadness,"The author describes the sudden loss of a job they were genuinely excited about, which naturally evokes feelings of disappointment and sadness."
+41415,persona_b,one_shot,inline,sadness,"The author experienced the loss of a new job they were genuinely enthusiastic about, causing disappointment and sorrow despite having backup options."
+41415,persona_b,zero_shot,numbered,sadness,"The author experienced sadness due to the painful loss of a new job they were genuinely excited about, despite having backup options available."
+6869,neutral,zero_shot,numbered,sadness,"Being cheated on after a seven-year relationship causes deep emotional pain, heartbreak, and grief over the betrayal and end of the relationship."
+6869,neutral,one_shot,numbered,anger,"Being cheated on by a long-term partner represents a severe betrayal of trust and unfair treatment, which naturally triggers anger."
+41415,persona_b,few_shot,numbered,sadness,"The author experienced the sudden loss of an exciting job opportunity they had just begun, resulting in deep disappointment and loss."
+6869,neutral,one_shot,inline,sadness,The author experienced deep emotional pain and heartbreak from the betrayal and end of a long-term relationship.
+41415,persona_b,zero_shot,inline,surprise,The author experienced surprise because being unexpectedly laid off right after starting a role they were excited about was a sudden and unanticipated turn of events.
+41415,persona_b,one_shot,numbered,sadness,"The author experienced the sudden loss of a promising job opportunity they were genuinely enthusiastic about, causing deep disappointment and sadness."
+6869,neutral,few_shot,inline,sadness,"The author describes experiencing infidelity and heartbreak after a long-term relationship, which evokes deep emotional pain and sadness."
+6869,generic_human,zero_shot,inline,sadness,The author experienced profound heartbreak and loss after being betrayed by a long-term partner of seven years.
+6869,generic_human,zero_shot,numbered,sadness,"Discovering infidelity after a long-term seven-year relationship causes profound heartbreak, pain, and grief over the betrayal."
+6869,neutral,few_shot,numbered,sadness,The author describes the painful betrayal and heartbreak of being cheated on by a long-term partner.
+6869,generic_human,one_shot,numbered,sadness,"Being cheated on by a partner of seven years causes severe heartbreak, hurt, and a profound sense of loss."
+6869,generic_human,one_shot,inline,sadness,The author experienced profound heartbreak and emotional pain due to the betrayal of a long-term partner.
+6869,generic_human,few_shot,numbered,anger,"The author experienced infidelity and betrayal by a long-term partner, an act of intentional wrongdoing that typically triggers strong anger."
+6869,persona_a,zero_shot,inline,sadness,The author experienced deep grief and heartbreak over the loss of a long-term relationship and the future they had envisioned together.
+6869,persona_a,zero_shot,numbered,sadness,The author experienced profound heartbreak and grief over the sudden end of a long-term relationship and the loss of their shared future plans.
+6869,persona_a,one_shot,numbered,sadness,The author experienced deep heartbreak and grief over the loss of a long-term relationship and the future they had planned together due to their partner's betrayal.
+6869,persona_a,one_shot,inline,sadness,"The author experienced profound heartbreak and loss after their long-term partner betrayed them, ending a seven-year relationship and destroying their planned future together."
+6869,persona_a,few_shot,numbered,sadness,"The author describes the devastating loss of a long-term relationship and a shared future due to betrayal, which evokes deep grief and heartbreak."
+6869,persona_b,zero_shot,inline,relief,"The author was already suspicious and growing distant, so learning the truth confirmed their doubts and provided closure to end the relationship."
+6869,persona_a,few_shot,inline,sadness,The author experienced deep heartbreak and grief over the sudden end to a long-term relationship and the loss of their shared future.
+6869,generic_human,few_shot,inline,sadness,The author describes experiencing a painful betrayal and the heartbreak of a long-term relationship ending due to infidelity.
+6869,persona_b,zero_shot,numbered,relief,Confirming their suspicions provided clarity and a definitive reason to leave a relationship from which they were already emotionally detaching.
+6869,persona_b,one_shot,inline,relief,The author felt relief because discovering the cheating confirmed their existing suspicions and provided closure to a relationship they were already emotionally checked out of.
+3338,neutral,zero_shot,inline,disgust,The author expressed strong revulsion and disapproval toward the inappropriate and disloyal behavior of their friends.
+6869,persona_b,few_shot,inline,relief,"The confirmation of long-held suspicions provided closure and an end to an already deteriorating relationship, evoking a sense of relief."
+3338,neutral,zero_shot,numbered,disgust,The author felt a strong sense of moral repulsion and aversion toward the inappropriate flirting and betrayal of trust occurring among their close friends.
+3338,neutral,one_shot,inline,anger,The author experienced intense frustration and outrage over the betrayal and inappropriate behavior involving their close friends.
+3338,neutral,one_shot,numbered,anger,The author describes feeling strong indignation and outrage over a breach of trust and loyalty among close friends.
+3338,neutral,few_shot,inline,anger,"The author describes feeling betrayed and upset by the disloyal and inappropriate behavior of their close friends, which naturally evokes anger."
+3338,generic_human,zero_shot,inline,disgust,The author felt strong moral revulsion and disapproval toward the disloyal and inappropriate behavior of their close friends.
+6869,persona_b,one_shot,numbered,anger,"Being cheated on by a long-term partner is a severe breach of trust and betrayal, which fundamentally evokes anger regardless of prior suspicions."
+3338,neutral,few_shot,numbered,anger,"The author experienced betrayal and unethical behavior involving close friends, which naturally evokes anger."
+6869,persona_b,few_shot,numbered,sadness,"The author experienced the painful end and betrayal of a long-term relationship, which evokes profound sorrow and heartbreak."
+3338,generic_human,one_shot,numbered,anger,The author is furious about the betrayal of trust and moral transgression committed by their close friends.
+3338,generic_human,few_shot,numbered,anger,The author describes feelings of betrayal and frustration caused by their friends' deceitful and inappropriate behavior.
+3338,generic_human,zero_shot,numbered,anger,The author experienced intense outrage and frustration over the betrayal and hypocritical behavior of their friends.
+3338,persona_a,zero_shot,inline,anger,The author felt angry because their best friend's boyfriend and another close friend betrayed the group's trust through inappropriate flirting and a lack of remorse.
+3338,persona_a,zero_shot,numbered,anger,The author felt angry because their friends engaged in a betrayal of trust by exchanging flirty and suggestive text messages behind another best friend's back.
+3338,persona_a,one_shot,numbered,anger,The author felt intense outrage and betrayal over the breach of trust and disloyalty within their close group of friends.
+3338,persona_a,one_shot,inline,anger,The author feels intense anger at the betrayal of trust and disloyalty shown when one best friend flirted with another best friend's boyfriend.
+3338,generic_human,one_shot,inline,disgust,The author expresses moral revulsion towards the sleazy behavior and betrayal of trust occurring within their circle of close friends.
+3338,persona_a,few_shot,numbered,anger,The author feels anger over the disloyalty and betrayal of trust happening among their close group of friends.
+3338,persona_a,few_shot,inline,anger,The author feels intense outrage and indignation over the disloyalty and betrayal of a friend responding to flirtatious messages from another friend's partner.
+3338,generic_human,few_shot,inline,anger,"The author describes a betrayal of trust and disloyal behavior within their close friend group, which naturally provokes anger."
+5688,neutral,zero_shot,inline,disgust,The author felt repulsed and uncomfortable watching an older man inappropriately flirt with young college women.
+3338,persona_b,zero_shot,numbered,disgust,The author feels deep moral revulsion and disgust toward the inappropriate flirty behavior and betrayal occurring between close friends.
+5688,neutral,zero_shot,numbered,disgust,Watching an older man inappropriately flirt with young college students evokes a strong sense of revulsion and repulsion.
+3338,persona_b,zero_shot,inline,disgust,The author felt moral revulsion and strong disapproval toward the disloyal and inappropriate behavior of their friends.
+3338,persona_b,few_shot,numbered,anger,"The author felt intense outrage and frustration upon discovering their friend's disloyalty and complicity in cheating, especially given their own history with betrayal."
+5688,neutral,one_shot,numbered,disgust,The author describes witnessing inappropriate and creepy behavior that evokes strong social revulsion.
+3338,persona_b,one_shot,numbered,anger,The author feels intense outrage and indignation at the disloyalty and moral betrayal displayed by their close friends.
+3338,persona_b,one_shot,inline,anger,The author feels intense outrage and frustration over the betrayal of loyalty and disregard for their friend's relationship boundaries.
+5688,generic_human,zero_shot,numbered,disgust,The author experienced a feeling of revulsion and discomfort while observing an older man inappropriately flirt with young college-aged women.
+5688,neutral,few_shot,numbered,disgust,"The author describes witnessing inappropriate and creepy behavior from an older man towards young women, which naturally evokes a feeling of revulsion."
+5688,generic_human,zero_shot,inline,disgust,"The author describes witnessing an older man inappropriately flirting with young college women, which evokes revulsion and discomfort."
+5688,neutral,one_shot,inline,disgust,The author felt revulsion and discomfort while witnessing a grown man's inappropriate behavior toward young college women.
+5688,neutral,few_shot,inline,disgust,"The author describes witnessing uncomfortable and inappropriate romantic advances from an older man towards young women, which evokes a sense of revulsion."
+3338,persona_b,few_shot,inline,disgust,The author feels deep moral repulsion towards their friends participating in and condoning emotional infidelity and betrayal.
+5688,generic_human,one_shot,inline,disgust,The author felt repulsed and uncomfortable watching an older man inappropriately flirt with young women.
+5688,persona_a,zero_shot,inline,disgust,"The author felt revulsion and creeped out by an older man inappropriately trying to flirt with young college women, including herself."
+5688,persona_a,zero_shot,numbered,disgust,The author felt repulsed and uncomfortable witnessing an older man make inappropriate romantic advances toward young women.
+5688,generic_human,few_shot,inline,disgust,"The author describes witnessing inappropriate and uncomfortable flirtatious behavior from an older man, which typically evokes a strong sense of repulsion and disgust."
+5688,generic_human,few_shot,numbered,disgust,"The author describes witnessing uncomfortable and inappropriate behavior from an older man towards young women, which evokes a strong sense of repulsion and creepiness."
+5688,persona_a,few_shot,inline,disgust,"The author experienced an unwanted and creepy interaction from an older man, which naturally evokes revulsion and disgust."
+5688,persona_a,one_shot,numbered,disgust,"Unwanted, creepy romantic advances from an inappropriately older man naturally evoke a strong sense of revulsion and disgust."
+5688,persona_a,few_shot,numbered,disgust,"The author experienced uncomfortable and inappropriate flirting from an older man, which naturally evokes a feeling of repulsion and creepiness."
+5688,persona_a,one_shot,inline,disgust,"The author experienced revulsion at an older man making inappropriate, unwanted advances toward her and other young women."
+5688,persona_b,zero_shot,inline,shame,The author felt secondhand embarrassment on the man's behalf watching his awkward attempts to flirt with young college girls.
+5688,persona_b,zero_shot,numbered,shame,"The author experienced vicarious embarrassment from watching the man's awkward attempts to flirt, which maps to the feeling of shame."
+5688,persona_b,one_shot,numbered,shame,"The author feels secondhand embarrassment watching the man make awkward, inappropriate flirtatious advances toward young college students."
+5688,persona_b,one_shot,inline,shame,"The author felt vicarious embarrassment while watching the man's awkward behavior, which is a form of shame felt on someone else's behalf."
+5688,persona_b,few_shot,numbered,shame,The author feels vicarious embarrassment while observing an awkward and inappropriate attempt at flirting.
+5688,persona_b,few_shot,inline,shame,"The author feels vicarious embarrassment from watching the man's awkward behavior, which corresponds to the emotion of shame."
+3645,neutral,zero_shot,inline,relief,The author felt relieved upon being accepted into graduate school because it alleviated their fear and anxiety about not getting in and having to wait another year.
+3645,neutral,zero_shot,numbered,relief,The author experienced a release of anxiety and fear upon learning they were accepted into graduate school after worrying they would be rejected.
+3645,generic_human,zero_shot,numbered,relief,The author felt relieved because their anxiety about not getting accepted into graduate school was resolved upon receiving the good news.
+3645,neutral,one_shot,inline,relief,"The author felt a sense of reassurance and release from anxiety after learning they were accepted into graduate school, mitigating their fear of rejection."
+5688,generic_human,one_shot,numbered,disgust,"The author describes witnessing creepy and inappropriate behavior from an older man towards young women, which typically triggers a strong feeling of disgust."
+3645,neutral,few_shot,numbered,relief,"The author describes being accepted into graduate school after fearing they would fail, which alleviated their anxiety about waiting another year."
+3645,neutral,few_shot,inline,relief,The author describes a positive outcome that alleviated their previous fear and anxiety about not being accepted into graduate school.
+3645,neutral,one_shot,numbered,relief,The author felt a sense of reassurance when they were accepted into graduate school because it removed their fear of being rejected and having to wait another year.
+3645,generic_human,zero_shot,inline,relief,The author felt relief because their anxiety about not getting accepted and having to wait another year was dispelled when they received their acceptance.
+3645,generic_human,few_shot,numbered,relief,"The author describes getting accepted into graduate school after being afraid of rejection, which resolved their anxiety and brought a sense of relief."
+3645,generic_human,one_shot,numbered,relief,The author felt a sense of comfort when a positive outcome removed their fear of rejection and the need to wait another year.
+3645,persona_a,zero_shot,numbered,relief,The author felt a sense of relief upon being accepted into graduate school after experiencing intense anxiety about being rejected and having to wait another year.
+3645,generic_human,one_shot,inline,relief,The author felt reassurance and a weight lifted when their fear of being rejected and having to re-apply next year was dispelled by getting accepted into graduate school.
+3645,generic_human,few_shot,inline,relief,The author experienced a sense of reassurance when a positive outcome removed their intense fear of rejection and delay.
+3645,persona_a,one_shot,inline,relief,The author experienced relief upon being accepted into graduate school because it alleviated their intense anxiety about being rejected and having to wait another year.
+3645,persona_a,few_shot,numbered,relief,The author experienced a release from anxiety and fear of rejection upon finding out they were accepted into graduate school.
+3645,persona_a,one_shot,numbered,relief,"The author felt a sense of reassurance and ease after learning they were accepted into graduate school, which alleviated their fear of being rejected and having to wait another year."
+3645,persona_a,zero_shot,inline,relief,The author experienced relief upon being accepted into graduate school because it dispelled their fear of rejection and having to wait another year to re-apply.
+3645,persona_a,few_shot,inline,relief,The author experienced a sudden alleviation of anxiety and fear upon learning they were accepted into graduate school after worrying about rejection.
+3645,persona_b,zero_shot,numbered,relief,The author felt relief because getting accepted into graduate school removed their fear of not making it in and having to wait another year to re-apply.
+3645,persona_b,zero_shot,inline,relief,The author felt relief because the fear and anxiety of not being accepted and having to wait another year were dispelled upon receiving the good news.
+3645,persona_b,one_shot,numbered,relief,The author experienced a sense of reassurance when getting accepted into graduate school because it alleviated their fear of being rejected and having to wait another year to re-apply.
+3645,persona_b,one_shot,inline,relief,The author felt relief because their anxiety about being rejected and having to wait another year was resolved when they found out they were accepted.
+3645,persona_b,few_shot,numbered,relief,"The author describes being accepted into graduate school after fearing they would be rejected and forced to wait another year, which alleviated their anxiety."
+3645,persona_b,few_shot,inline,relief,The author experienced the alleviation of their fear of rejection and the prospect of waiting another year after learning they were accepted into graduate school.
+3319,neutral,zero_shot,numbered,surprise,The author was caught off guard by unexpectedly finding a piece of ravioli stuck to their shoe while doing the dishes.
+3319,neutral,zero_shot,inline,disgust,The author felt grossed out by unexpectedly finding messy food stuck to their shoe.
+3319,neutral,one_shot,numbered,disgust,"The author describes an unpleasant moment of discovering messy, unwanted food stuck to their shoe."
+3319,generic_human,zero_shot,numbered,disgust,The author felt repulsed after discovering messy leftover food stuck to their shoe.
+3319,neutral,few_shot,inline,disgust,"The author describes finding messy food waste stuck to their shoe, which triggers a feeling of disgust toward the unappealing mess."
+3319,neutral,few_shot,numbered,disgust,"The author describes unexpectedly finding messy food stuck to their shoe, which naturally evokes a feeling of revulsion."
+3319,generic_human,one_shot,numbered,disgust,The author experienced revulsion upon discovering messy food waste stuck to their shoe.
+3319,generic_human,zero_shot,inline,surprise,The author experienced surprise upon unexpectedly discovering a piece of ravioli stuck to their shoe.
+3319,neutral,one_shot,inline,surprise,The author felt surprised by the unexpected discovery of food stuck to their shoe while doing dishes.
+3319,persona_a,zero_shot,inline,surprise,The author was caught off guard by the unexpected discovery of food stuck to their shoe while doing the dishes.
+3319,generic_human,few_shot,numbered,disgust,The author felt grossed out by unexpectedly discovering messy food stuck to their shoe.
+3319,persona_a,zero_shot,numbered,surprise,The author was caught off guard by unexpectedly finding a piece of ravioli stuck to their shoe while doing the dishes.
+3319,persona_a,one_shot,numbered,surprise,The author was caught off guard by unexpectedly finding a piece of food stuck to their shoe while doing dishes.
+3319,generic_human,few_shot,inline,disgust,Finding sticky food waste stuck to one's shoe creates a feeling of messiness and revulsion.
+3319,persona_a,one_shot,inline,surprise,The author was caught off guard by the unexpected sight of a piece of ravioli stuck to their shoe while doing dishes.
+3319,persona_a,few_shot,numbered,surprise,"The author unexpectedly discovered food stuck to their shoe while doing an everyday chore, causing a moment of sudden astonishment."
+3319,persona_b,zero_shot,numbered,shame,"As a professional chef bound by strict hygiene standards, discovering food on their shoe triggered a sense of embarrassment and personal failure to uphold those standards."
+3319,persona_a,few_shot,inline,disgust,The author experienced disgust upon discovering messy food stuck to their shoe while cleaning up.
+3319,persona_b,zero_shot,inline,shame,"As a professional chef bound by strict hygiene standards, finding food stuck to their shoe creates a feeling of embarrassment and personal failure regarding their cleanliness."
+3319,persona_b,few_shot,numbered,shame,"As a professional chef with strict hygiene standards, finding food stuck to their shoe caused the author to feel shame for failing to meet their own professional code of cleanliness."
+3319,generic_human,one_shot,inline,surprise,The author was astonished to unexpectedly discover a piece of food stuck to their shoe while doing dishes.
+3319,persona_b,few_shot,inline,shame,"As a professional chef who maintains strict hygiene standards, finding food stuck to their shoe evoked a sense of personal failure and embarrassment."
+7179,neutral,zero_shot,inline,sadness,The author describes experiencing a trigger related to their mental illness following a distressing conflict where their brother was angry with them.
+3319,persona_b,one_shot,numbered,shame,"As a professional chef who holds themselves to strict hygiene standards, discovering messy food stuck to their footwear evoked a sense of shame over failing to maintain personal cleanliness in the kitchen."
+7179,neutral,one_shot,numbered,sadness,"The author describes an interpersonal conflict with a family member whose anger hurt them, triggering deep emotional pain and sadness."
+7179,generic_human,zero_shot,numbered,sadness,The author describes experiencing a painful emotional state triggered by mental illness and conflict with their brother.
+7179,neutral,one_shot,inline,sadness,"The author describes experiencing a persistent emotional state linked to mental illness that was specifically triggered by interpersonal conflict with their brother, which typically evokes sadness."
+7179,neutral,few_shot,inline,sadness,The author describes an upsetting interpersonal conflict where their brother's anger triggered a negative emotional state linked to their mental illness.
+7179,generic_human,zero_shot,inline,fear,The author felt fear when confronted with their brother's anger during a triggering event.
+3319,persona_b,one_shot,inline,disgust,The author feels disgust because finding food stuck to their shoe creates an unhygienic mess that revolts their professional standards of cleanliness.
+7179,neutral,zero_shot,numbered,fear,"The author felt fear when confronted by their brother's anger, which acted as a specific trigger for their distress."
+7179,neutral,few_shot,numbered,sadness,"The author describes a distressing conflict where their brother was angry at them, triggering emotional pain related to their mental illness."
+7179,persona_a,zero_shot,inline,sadness,The author describes experiencing another low point in their ongoing struggle with mental illness after a distressing conflict with their brother.
+7179,persona_a,zero_shot,numbered,sadness,The author describes experiencing a low point related to their chronic depression following an argument with their brother.
+7179,persona_a,few_shot,numbered,sadness,"The author describes reaching another low point in their ongoing struggle with chronic depression following a conflict with their brother, which evokes feelings of sadness."
+7179,generic_human,one_shot,numbered,sadness,"The author describes a specific instance where interpersonal conflict with their brother triggered an emotional response related to their ongoing mental illness, which commonly evokes sadness."
+7179,persona_a,one_shot,numbered,sadness,The author describes experiencing a low point associated with chronic depression after a distressing conflict with their brother.
+7179,persona_a,one_shot,inline,sadness,The author describes experiencing another low point in their ongoing struggle with mental illness following a conflict with their brother.
+7179,generic_human,one_shot,inline,fear,"Facing an angry family member directly triggers feelings of threat and anxiety, which the author notes is also related to their mental illness."
+7179,persona_a,few_shot,inline,sadness,"The author describes experiencing a low point triggered by conflict with their brother, reflecting the heavy emotional toll of their chronic depression."
+7179,generic_human,few_shot,inline,sadness,"The author describes an ongoing struggle with mental illness and an interpersonal conflict with their brother that triggered a deep emotional low, which is characteristic of sadness."
+51835,neutral,zero_shot,numbered,relief,The author expresses the feeling of alleviation and comfort that occurred after the frightening harassment from their ex-partner finally ceased.
+51835,neutral,zero_shot,inline,relief,The author expresses a sense of comfort and freedom from fear after their ex-partner finally stopped harassing them.
+7179,generic_human,few_shot,numbered,guilt,The author describes experiencing an emotion linked to self-blame and their mental illness that was triggered when a family member became angry with them.
+7179,persona_b,zero_shot,numbered,fear,"The author experienced fear when facing their brother's anger, which acted as a sharp trigger for distress."
+51835,neutral,one_shot,numbered,relief,"The author describes the stopping of terrifying harassment, which removes a major source of fear and creates a sense of profound relief."
+51835,neutral,few_shot,numbered,relief,"The author describes the cessation of a scary and stressful situation, which naturally evokes a feeling of relief."
+51835,neutral,few_shot,inline,relief,"The author describes the end of a scary and stressful period of harassment, which naturally brings a sense of relief."
+51835,neutral,one_shot,inline,relief,"The author describes the end of a terrifying and harassing situation, which naturally evokes a profound feeling of safety and alleviation of fear."
+7179,persona_b,few_shot,numbered,sadness,"The author describes experiencing emotional distress caused by conflict with their brother, which is a common trigger for hurt and sadness."
+51835,generic_human,zero_shot,numbered,relief,The author describes feeling a sense of peace and reassurance after a frightening and distressing situation finally came to an end.
+7179,persona_b,few_shot,inline,sadness,"The author describes experiencing emotional distress from a conflict with a family member alongside mental health struggles, which typically evokes sadness."
+7179,persona_b,one_shot,numbered,fear,The author experienced fear as a reaction to their brother's directed anger and interpersonal conflict.
+51835,generic_human,zero_shot,inline,relief,The author expresses the sense of reassurance and comfort they experienced when the terrifying harassment from their ex-partner finally came to an end.
+7179,persona_b,one_shot,inline,fear,"The author describes a distressing situation where they were the target of their brother's anger, which naturally triggers fear of conflict and confrontation."
+51835,generic_human,one_shot,numbered,relief,The author describes the comforting feeling experienced after a terrifying situation of persistent harassment finally came to an end.
+7179,persona_b,zero_shot,inline,fear,The author felt fear as a reaction to the threat and confrontation of their brother directing anger at them.
+51835,generic_human,few_shot,inline,relief,"The author describes the end of a frightening period of harassment, which naturally evokes a sense of relief."
+51835,generic_human,one_shot,inline,relief,"The author describes the cessation of a terrifying and stressful harassment situation, which brings a profound sense of reassurance and comfort."
+51835,generic_human,few_shot,numbered,relief,"The author describes the end of a terrifying period of harassment, which naturally evokes a sense of ease and comfort."
+51835,persona_a,zero_shot,numbered,relief,The author felt relief because the persistent harassment and fear for her safety finally came to an end.
+51835,persona_a,zero_shot,inline,relief,The author felt a profound sense of reassurance and comfort when the constant fear and harassment from her ex-partner finally ended.
+51835,persona_a,one_shot,numbered,relief,The author describes the profound sense of ease that came after a prolonged and frightening ordeal of harassment finally ended.
+51835,persona_a,one_shot,inline,relief,"The author describes the cessation of a long period of scary harassment, which naturally evokes a sense of freedom from threat and overwhelming relief."
+51835,persona_a,few_shot,inline,relief,"The author describes the end of a prolonged period of fear and harassment, which naturally brings a profound sense of relief."
+51835,persona_b,zero_shot,numbered,relief,The author expresses a sense of peace and comfort after the terrifying harassment from their ex-partner finally came to an end.
+51835,persona_b,zero_shot,inline,relief,The author expresses a sense of alleviation and peace after the scary harassment from their ex-partner finally came to an end.
+51835,persona_a,few_shot,numbered,relief,"The author describes the end of a terrifying period of persistent harassment, which evokes a sense of relief."
+51835,persona_b,one_shot,numbered,relief,The author feels relief because the frightening harassment from their ex-partner has finally come to an end.
+51835,persona_b,one_shot,inline,relief,The author expresses a profound sense of comfort and unburdening once a distressing and scary situation of harassment finally came to an end.
+51835,persona_b,few_shot,numbered,relief,"The author describes the cessation of a scary and distressing situation, which evokes a strong sense of relief."
+51835,persona_b,few_shot,inline,relief,The author describes feeling a sense of peace and comfort once a terrifying period of harassment by an ex-partner finally came to an end.
+41260,neutral,one_shot,numbered,joy,The author expresses happiness and emotional fulfillment upon overcoming a toxic past and realizing they are capable of falling in love again.
+41260,neutral,zero_shot,inline,joy,The author experienced joy upon overcoming a painful past relationship and discovering that they were capable of falling in love again.
+41260,neutral,zero_shot,numbered,joy,The author expresses happiness and emotional fulfillment upon realizing they could heal from a toxic past and experience love again.
+41260,neutral,few_shot,numbered,joy,"The author describes overcoming a painful past to fall in love again, which brings a strong sense of happiness and emotional renewal."
+41260,neutral,few_shot,inline,joy,The author describes overcoming a toxic relationship and rediscovering the happiness of being able to fall in love again.
+41260,generic_human,zero_shot,numbered,joy,The author expresses deep happiness and renewal upon overcoming a toxic past and realizing they are capable of falling in love again.
+41260,generic_human,one_shot,numbered,joy,The author expresses happiness and fulfillment upon realizing they were able to overcome a toxic relationship and fall in love again.
+41260,neutral,one_shot,inline,joy,The author expresses happiness and fulfillment upon discovering they could heal from a toxic past and fall in love again.
+41260,generic_human,few_shot,numbered,joy,"The author describes overcoming a toxic past relationship and successfully finding love again, which evokes deep happiness and positive emotion."
+41260,generic_human,few_shot,inline,joy,"The author describes overcoming a toxic relationship and finding the ability to fall in love again, which evokes a sense of deep happiness and joy."
+41260,generic_human,zero_shot,inline,joy,The author experienced joy upon realizing they were capable of healing and falling in love again after a painful toxic relationship.
+41260,generic_human,one_shot,inline,joy,The author expresses happiness and emotional healing upon realizing they can overcome a toxic past and fall in love again.
+41260,persona_b,zero_shot,numbered,joy,The author experienced happiness and fulfillment upon realizing they could overcome a painful past and fall in love again.
+41260,persona_a,zero_shot,numbered,joy,The author felt joy upon realizing that they were capable of overcoming their past trauma and falling in love again.
+41260,persona_a,one_shot,numbered,joy,The author expresses happiness and fulfillment upon discovering that they could overcome past trauma and experience love again.
+41260,persona_a,one_shot,inline,joy,The author expresses happiness and emotional renewal upon discovering that they are capable of overcoming past trauma to fall in love again.
+41260,persona_a,few_shot,numbered,joy,The author describes overcoming a toxic past to experience the positive realization that they are capable of falling in love again.
+41260,persona_a,few_shot,inline,joy,"The author describes overcoming a traumatic past and regaining the capacity to fall in love, which evokes a deep sense of happiness and emotional renewal."
+41260,persona_b,one_shot,numbered,joy,The author expresses happiness and emotional fulfillment upon discovering they were capable of overcoming a toxic past and falling in love again.
+41260,persona_b,zero_shot,inline,joy,The author feels happiness and elation after realizing they could move past a toxic relationship and experience love again.
+41260,persona_b,one_shot,inline,joy,The author felt happiness and renewal upon discovering that they could heal from a toxic past and experience love again.
+41260,persona_b,few_shot,numbered,joy,"The author describes overcoming a painful past and discovering the ability to fall in love again, which brings deep happiness and fulfillment."
+41260,persona_b,few_shot,inline,joy,"The author describes overcoming a toxic relationship and rediscovering the ability to fall in love, which evokes deep happiness and hope."
+41260,persona_a,zero_shot,inline,joy,The author experiences profound happiness and hope upon realizing they can overcome past trauma and fall in love again.
+3283,neutral,zero_shot,inline,anger,The author felt intense frustration and hostility when hearing opinions supporting a restrictive law they strongly opposed.
+3283,neutral,one_shot,numbered,anger,The author expresses strong frustration and outrage after listening to opposing political views following the passage of a controversial law.
+3283,neutral,one_shot,inline,anger,The author expresses frustration and outrage upon hearing opposing views regarding a controversial law that restricts reproductive rights.
+3283,neutral,zero_shot,numbered,disgust,The author experienced moral revulsion and strong disapproval while listening to an opposing political stance on a restrictive law concerning bodily autonomy.
+3283,neutral,few_shot,numbered,anger,The author experienced frustration and moral outrage upon hearing opposing political views regarding a controversial law.
+3283,neutral,few_shot,inline,anger,The author expresses frustration and strong opposition upon hearing views supporting a controversial law that restricts fundamental rights.
+3283,generic_human,zero_shot,inline,anger,The author felt angry listening to someone express support for a restrictive law that limits reproductive rights.
+3283,generic_human,few_shot,numbered,anger,Listening to views supporting a controversial and restrictive law often evokes intense frustration and moral outrage.
+3283,generic_human,few_shot,inline,anger,The author expresses frustration and outrage after hearing opposing political views on a sensitive and controversial topic.
+3283,generic_human,one_shot,numbered,anger,Listening to opposing views regarding a highly controversial law restricting reproductive rights typically evokes strong moral outrage and frustration.
+3283,generic_human,zero_shot,numbered,anger,Hearing opposing political views regarding restrictions on reproductive rights frequently evokes strong feelings of outrage and hostility.
+3283,generic_human,one_shot,inline,anger,The author expresses strong outrage and frustration upon hearing opposing political views regarding restrictive abortion legislation.
+3283,persona_a,zero_shot,numbered,anger,"The author felt angry listening to a man express opinions that restrict reproductive rights, given her personal history with a difficult reproductive health decision."
+3283,persona_a,one_shot,numbered,anger,"The author felt anger hearing a man express pro-life views restricting reproductive rights shortly after a restrictive law passed, especially given her own personal experience with difficult reproductive choices."
+3283,persona_a,zero_shot,inline,anger,The author felt anger because the man's pro-life stance invalidated her personal experience and supported laws restricting reproductive freedom.
+3283,persona_a,one_shot,inline,anger,The author feels intense outrage and frustration listening to a man dictate anti-abortion views after having personally navigated a complex reproductive health decision.
+3283,persona_b,zero_shot,numbered,anger,The author felt anger due to hearing opposing political views supporting a law they strongly disagree with on policy grounds.
+3283,persona_a,few_shot,inline,anger,The author feels outrage and frustration listening to a man advocate for restricting reproductive rights after having faced a difficult reproductive health decision herself.
+3283,persona_b,one_shot,numbered,anger,The author felt frustration and indignation when listening to views supporting a controversial policy they strongly oppose.
+3283,persona_a,few_shot,numbered,anger,The author feels outrage and frustration listening to a man defend restrictive laws after having personally faced a difficult reproductive choice.
+3283,persona_b,one_shot,inline,anger,The author felt anger when listening to opposing political views that directly conflict with their own beliefs regarding the law.
+3283,persona_b,zero_shot,inline,anger,The author felt anger because they strongly oppose the Texas heartbeat law and found listening to opposing pro-life views frustrating and infuriating.
+3283,persona_b,few_shot,numbered,anger,"The author strongly disagrees with the opposing political views and the law, which naturally evokes frustration and outrage."
+3283,persona_b,few_shot,inline,anger,The author feels strong frustration and opposition when hearing political views that directly conflict with their own stance on a controversial law.
+51263,neutral,zero_shot,numbered,relief,The author describes a sudden release of anxiety and a feeling of ease after overcoming their nervousness to ask someone out and receiving a positive response.
+51263,neutral,zero_shot,inline,relief,The author describes feeling an immediate sense of relief after overcoming their nervousness to ask out a former colleague and having her say yes.
+51263,neutral,one_shot,inline,relief,The author experienced an immediate sense of alleviation after nervously asking someone out and having their worries dispelled when she said yes.
+51263,generic_human,zero_shot,inline,relief,The author describes an instant sense of ease and freedom from anxiety after taking a risk to ask someone out and receiving a positive response.
+51263,generic_human,zero_shot,numbered,relief,The author explicitly mentions feeling instant relief after overcoming their anxiety about asking a former colleague out and having her say yes.
+51263,neutral,few_shot,numbered,relief,The author describes feeling an immediate weight lifted after overcoming their anxiety and having their former coworker accept the date invitation.
+51263,neutral,few_shot,inline,relief,The author experienced an unburdening of anxiety and worry after asking someone on a date and receiving a positive answer.
+51263,generic_human,one_shot,numbered,relief,The author describes an immediate sense of ease after overcoming their anxiety about asking someone out and receiving a positive answer.
+51263,generic_human,few_shot,numbered,relief,The author describes feeling immediate ease and unburdening after overcoming their nervousness and receiving a positive answer to asking someone on a date.
+51263,neutral,one_shot,numbered,relief,The author experienced an immediate sense of reassurance and ease after the anxiety of asking someone on a date resolved positively.
+51263,generic_human,one_shot,inline,relief,The author felt an immediate sense of unburdening after overcoming their anxiety about asking someone out and receiving a positive response.
+51263,persona_a,zero_shot,numbered,relief,The author experienced a sense of relief after overcoming their anxiety to ask a former coworker on a date and receiving a positive response.
+51263,generic_human,few_shot,inline,relief,The author felt a strong sense of relief after overcoming their nervousness to ask a former coworker out and receiving a positive response.
+51263,persona_a,zero_shot,inline,relief,The author explicitly describes feeling an immediate sense of ease after asking their former coworker out and having the worry lifted when she said yes.
+51263,persona_b,zero_shot,numbered,relief,"The author explicitly describes experiencing instant relief after overcoming their nervousness, asking their former coworker out, and receiving a positive response."
+51263,persona_a,few_shot,inline,relief,The author felt an instant wave of relief after overcoming their anxiety to ask out a former coworker and receiving a positive response.
+51263,persona_b,zero_shot,inline,relief,The author explicitly mentions feeling an immediate sense of alleviation from their previous worry and nervousness after asking her out and getting a positive answer.
+51263,persona_a,few_shot,numbered,relief,The author describes feeling an immediate sense of relief after overcoming their nervousness to ask out a former coworker and having her say yes.
+51263,persona_a,one_shot,numbered,joy,The author describes the happiness and positive outcome of asking out a former coworker and having her accept the invitation.
+51263,persona_b,one_shot,inline,relief,The author describes an immediate sense of ease and unburdening after overcoming their nervousness to ask someone out and receiving a positive response.
+51263,persona_b,few_shot,inline,relief,The author felt an immediate sense of relief after overcoming their nervousness to ask someone out and receiving a positive response.
+3493,neutral,zero_shot,numbered,guilt,The author expresses remorse over taking an action they knew they should not have done.
+51263,persona_b,few_shot,numbered,relief,The author explicitly describes feeling instant relief after overcoming their nervousness about asking for a date and getting a positive response.
+3493,neutral,zero_shot,inline,guilt,The author expresses remorse over engaging in a specific action that violated their moral standards or better judgment.
+3493,neutral,one_shot,numbered,guilt,The author expresses remorse for engaging in an action that violated their moral boundaries or personal standards.
+3493,neutral,few_shot,numbered,guilt,The author expresses regret for engaging in an action that violated their moral standards or personal boundaries.
+3493,neutral,one_shot,inline,guilt,The author expresses regret over committing an action that violated their personal boundaries or moral standards.
+3493,neutral,few_shot,inline,guilt,The author expresses remorse for engaging in an action that violated their personal boundaries or moral standards.
+3493,generic_human,zero_shot,numbered,guilt,The author expresses regret over committing an action that they knew violated their personal or moral boundaries.
+3493,generic_human,zero_shot,inline,guilt,The author expresses remorse over engaging in a specific action that they knew was wrong or inappropriate.
+3493,generic_human,one_shot,numbered,guilt,The author expresses remorse for committing an action they acknowledge they should not have done.
+3493,generic_human,one_shot,inline,guilt,The author expresses regret over engaging in an action that violated their moral standards or personal boundaries.
+51263,persona_b,one_shot,numbered,joy,The author felt happiness and delight when the person they were nervous to ask out said yes to the date.
+3493,generic_human,few_shot,numbered,guilt,The author expresses remorse over engaging in an intimate act they know was wrong or inappropriate.
+3493,generic_human,few_shot,inline,guilt,The author expresses remorse over taking an action that violated their moral judgment or personal boundaries.
+3493,persona_a,zero_shot,numbered,guilt,The author experiences remorse for violating their moral standards and commitment by engaging in infidelity.
+3493,persona_a,zero_shot,inline,guilt,The author expresses regret and remorse for engaging in an action that violated their moral standards and commitment to their relationship.
+3493,persona_a,one_shot,inline,guilt,"The author expresses remorse over engaging in infidelity, which violated their commitment to their partner and moral standards."
+3493,persona_a,few_shot,inline,guilt,The author expresses remorse for betraying their partner by engaging in infidelity while in a committed relationship.
+3493,persona_a,one_shot,numbered,guilt,The author feels remorse for betraying their partner and violating the expectations of their committed relationship.
+51263,persona_a,one_shot,inline,joy,The author experienced happiness and delight when the coworker they were attracted to accepted their invitation to go on a date.
+3493,persona_a,few_shot,numbered,guilt,The author expresses remorse over an action that violated their moral standards and relationship commitment.
+3493,persona_b,zero_shot,numbered,guilt,The author feels remorse for breaking a personal promise to a friend and engaging in an action they knew was wrong.
+3493,persona_b,one_shot,numbered,guilt,The author expresses remorse over an action that violated their own moral judgment and broke a personal promise to a friend.
+3493,persona_b,zero_shot,inline,guilt,The author feels remorse for violating a personal promise to a friend and engaging in a betrayal of their trust.
+3493,persona_b,one_shot,inline,guilt,The author feels remorse for breaking a moral standard and a personal promise to a friend by engaging in an inappropriate relationship.
+3493,persona_b,few_shot,numbered,guilt,The author expresses remorse for breaking a personal promise to a friend and engaging in an action they knew was wrong.
+3493,persona_b,few_shot,inline,guilt,The author feels remorse for breaking a personal promise to a friend by sleeping with someone they knew they shouldn't have.
+3936,neutral,zero_shot,numbered,pride,"Getting accepted into university is a major personal achievement, which naturally evokes a strong sense of accomplishment and pride."
+3936,neutral,one_shot,numbered,joy,Getting accepted into university is a major positive life achievement that naturally brings happiness and celebration.
+3936,neutral,few_shot,numbered,joy,"The author describes getting accepted into university, which is a major positive milestone that typically evokes happiness and joy."
+3936,neutral,one_shot,inline,joy,Getting accepted into university is a major personal achievement that naturally evokes intense happiness and celebration.
+3936,generic_human,zero_shot,numbered,joy,Getting accepted into university is a major milestone and positive achievement that naturally fills a person with joy.
+3936,generic_human,one_shot,numbered,joy,Getting accepted into university is a major life milestone that typically brings immense happiness and a sense of achievement.
+3936,generic_human,zero_shot,inline,joy,Achieving acceptance into a university is a major milestone that naturally evokes feelings of happiness and celebration.
+3936,neutral,zero_shot,inline,pride,Getting accepted into university is a major personal achievement that evokes a strong sense of accomplishment and self-worth.
+3936,generic_human,one_shot,inline,joy,Getting accepted into university is a major personal achievement that naturally evokes happiness and celebration.
+3936,neutral,few_shot,inline,joy,"The author describes achieving a major positive life milestone by getting accepted into university, which typically evokes joy."
+3936,generic_human,few_shot,numbered,joy,Getting accepted into a university is a major positive achievement that typically evokes joy.
+3936,persona_a,zero_shot,numbered,relief,"Getting accepted into university directly resolved the author's intense fear of rejection, replacing their anxiety with a profound sense of relief."
+3936,persona_a,zero_shot,inline,relief,The author felt relief because getting accepted into university removed the burden of their deep-seated fear of rejection.
+3936,generic_human,few_shot,inline,joy,Getting accepted into university is a major positive milestone that naturally evokes feelings of happiness and celebration.
+3936,persona_a,one_shot,inline,relief,The author experienced a release from their intense fear of rejection upon learning they were accepted into university.
+3936,persona_a,one_shot,numbered,relief,Getting accepted into university resolved the author's strong fear of rejection.
+3936,persona_a,few_shot,numbered,relief,"The author describes getting accepted into university after fearing rejection, which resolved their anxiety and brought a sense of reassurance."
+3936,persona_b,zero_shot,inline,relief,The author likely felt relief upon getting accepted because it alleviated the intense pressure and anxiety of living up to family tradition.
+3936,persona_b,zero_shot,numbered,relief,The author felt relief because getting accepted fulfilled the heavy pressure and expectations of continuing a multi-generational family tradition.
+3936,persona_a,few_shot,inline,relief,"The author describes achieving university acceptance after experiencing intense anxiety about rejection, which directly alleviates their fear and brings a sense of relief."
+3936,persona_b,one_shot,inline,pride,The author feels a sense of accomplishment and honor in carrying on a multi-generational family tradition.
+41208,neutral,zero_shot,inline,pride,The author felt a strong sense of accomplishment and satisfaction after proving their doubters wrong by winning first place in the race.
+41208,neutral,one_shot,inline,pride,The author describes the deep satisfaction and accomplishment of proving their doubters wrong by winning the race.
+41208,neutral,one_shot,numbered,pride,The author felt a strong sense of achievement and satisfaction after overcoming the doubts of her competitors and winning first place in the race.
+3936,persona_b,one_shot,numbered,pride,The author felt pride in successfully continuing their family's multi-generational tradition of attending the university.
+3936,persona_b,few_shot,inline,pride,The author feels a sense of pride in upholding a multi-generational family tradition by earning acceptance into the university.
+41208,neutral,zero_shot,numbered,pride,The author felt a strong sense of accomplishment and satisfaction after proving their doubters wrong and winning first place in the race.
+41208,neutral,few_shot,numbered,pride,"The author describes proving their doubters wrong by winning a race, which evokes a strong sense of personal achievement and satisfaction."
+41208,generic_human,zero_shot,numbered,pride,The author felt a strong sense of satisfaction and triumph after proving their doubters wrong by winning the race.
+41208,neutral,few_shot,inline,pride,"The author successfully proved their doubting competitors wrong by winning the race despite being at a physical disadvantage, leading to a strong sense of accomplishment."
+3936,persona_b,few_shot,numbered,relief,The author felt relief upon getting accepted because it lifted the immense pressure of upholding a multi-generational family tradition.
+41208,generic_human,zero_shot,inline,pride,The author feels a strong sense of accomplishment and self-satisfaction from winning the race and proving their doubting competitors wrong.
+41208,generic_human,few_shot,numbered,pride,The author feels a strong sense of accomplishment and self-satisfaction after proving their doubting competitors wrong and winning the race.
+41208,generic_human,one_shot,inline,pride,The author feels a strong sense of accomplishment and triumph after proving their doubters wrong and winning the race decisively.
+41208,persona_a,zero_shot,numbered,pride,The author felt a sense of pride after proving her doubters wrong and triumphantly winning first place in the race.
+41208,generic_human,one_shot,numbered,pride,The author felt a strong sense of achievement and self-satisfaction after proving their doubters wrong and winning the race.
+41208,generic_human,few_shot,inline,pride,"The author describes proving doubters wrong by winning first place in a race, which evokes a strong sense of personal achievement and triumph."
+41208,persona_a,zero_shot,inline,pride,The author felt a strong sense of pride in proving her competitors wrong by winning the race despite their mocking comments about her height.
+41208,persona_a,one_shot,inline,pride,The author felt a strong sense of accomplishment and satisfaction after proving her doubters wrong and winning the race despite being underestimated.
+41208,persona_a,one_shot,numbered,pride,The author felt a deep sense of satisfaction and pride after proving her doubters wrong and winning the race despite being mocked for her height.
+41208,persona_a,few_shot,inline,pride,The author feels a strong sense of accomplishment and self-satisfaction after proving her doubters wrong and winning the race.
+41208,persona_b,zero_shot,inline,pride,The author feels a strong sense of achievement and satisfaction after proving their doubters wrong and dominating the race.
+41208,persona_a,few_shot,numbered,pride,The author felt a strong sense of accomplishment and satisfaction after winning the race and proving her doubters wrong despite their mockery.
+41208,persona_b,one_shot,numbered,pride,The author feels pride after proving their doubting opponents wrong by decisively winning the race despite being underestimated for their height.
+41208,persona_b,few_shot,inline,pride,The author feels a strong sense of triumph and self-satisfaction after overcoming the doubts of their competitors and winning first place.
+41208,persona_b,zero_shot,numbered,pride,The author felt immense pride in proving their doubters wrong by dominating the race and securing first place.
+41208,persona_b,few_shot,numbered,pride,The author felt intense pride after proving her condescending competitors wrong by winning the race and outperforming everyone.
+41208,persona_b,one_shot,inline,pride,The author felt a strong sense of satisfaction and superiority after proving their doubters wrong by winning the race.

@@ -1,0 +1,19 @@
+category,prompt_variant,label_format,n,mean_shift_pct
+Unambiguous,few_shot,inline,200,10.7
+Unambiguous,few_shot,numbered,200,11.0
+Unambiguous,one_shot,inline,200,11.3
+Unambiguous,one_shot,numbered,200,11.5
+Unambiguous,zero_shot,inline,200,11.4
+Unambiguous,zero_shot,numbered,200,12.1
+Author-Independent Ambiguous,few_shot,inline,200,15.9
+Author-Independent Ambiguous,few_shot,numbered,200,15.2
+Author-Independent Ambiguous,one_shot,inline,200,15.4
+Author-Independent Ambiguous,one_shot,numbered,200,14.9
+Author-Independent Ambiguous,zero_shot,inline,200,13.8
+Author-Independent Ambiguous,zero_shot,numbered,200,15.3
+Author-Relevant Ambiguous,few_shot,inline,200,29.8
+Author-Relevant Ambiguous,few_shot,numbered,200,27.9
+Author-Relevant Ambiguous,one_shot,inline,200,28.3
+Author-Relevant Ambiguous,one_shot,numbered,200,28.3
+Author-Relevant Ambiguous,zero_shot,inline,200,29.9
+Author-Relevant Ambiguous,zero_shot,numbered,200,30.4

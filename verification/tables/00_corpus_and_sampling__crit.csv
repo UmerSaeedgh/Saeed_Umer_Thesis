@@ -1,0 +1,15 @@
+,text_id,recon_share,n_top,recon_winners,reader_majority,majority_share,author_emotion,author_matches_readers,in_top_set,eq_chosen,retained,in_sample
+14,89,0.2,5,"['fear', 'joy', 'no-emotion', 'relief', 'sadness']",no-emotion,0.2,relief,False,True,False,False,False
+66,454,0.4,2,"['anger', 'boredom']",boredom,0.4,anger,False,True,False,False,False
+100,689,0.4,2,"['anger', 'no-emotion']",anger,0.4,anger,True,True,True,True,False
+115,764,0.4,2,"['boredom', 'pride']",boredom,0.4,fear,False,False,False,False,False
+215,3325,0.2,5,"['no-emotion', 'sadness', 'shame', 'surprise', 'trust']",trust,0.2,disgust,False,False,False,True,False
+274,3605,0.2,5,"['joy', 'no-emotion', 'pride', 'relief', 'surprise']",joy,0.2,joy,True,True,True,True,False
+521,5774,0.4,2,"['fear', 'no-emotion']",no-emotion,0.4,fear,False,True,False,False,False
+733,31143,0.4,2,"['boredom', 'fear']",boredom,0.4,shame,False,False,False,False,False
+810,41287,0.2,5,"['boredom', 'no-emotion', 'relief', 'sadness', 'surprise']",boredom,0.2,relief,False,True,False,False,False
+892,51017,0.2,5,"['disgust', 'guilt', 'joy', 'no-emotion', 'shame']",joy,0.2,guilt,False,True,False,True,False
+913,51176,0.2,5,"['boredom', 'joy', 'no-emotion', 'pride', 'surprise']",pride,0.2,joy,False,True,False,True,False
+985,51624,0.4,2,"['no-emotion', 'pride']",no-emotion,0.4,pride,False,True,False,False,False
+1134,52571,0.2,5,"['anger', 'guilt', 'joy', 'no-emotion', 'surprise']",surprise,0.2,surprise,True,True,True,True,False
+1166,52739,0.4,2,"['no-emotion', 'pride']",no-emotion,0.4,trust,False,False,False,False,False

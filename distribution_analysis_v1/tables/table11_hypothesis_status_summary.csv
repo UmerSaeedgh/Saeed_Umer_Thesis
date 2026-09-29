@@ -1,0 +1,6 @@
+hypothesis,evidence,verdict
+H1 (Human Framing),permutation test (Holm-corrected across all 8 comparisons): Author-Relevant significant on BOTH persona sides (Holm p=0.0035/0.0125); Author-Independent significant on side a only (Holm p=0.0125) but NOT side b (Holm p=0.1845); Unambiguous non-significant on both sides (Holm p=0.1845/0.2137),Supported on Author-Relevant; mixed on Author-Independent (side-dependent); cleanly non-significant on Unambiguous (consistent with H1)
+H2 (Model Framing),LLM ensemble TV rises from ~9% (Unambiguous) to ~29% (Author-Relevant); individual-model label-change rates confirm the same monotonic pattern for all 7 models,Supported
+H3 (Ambiguity Sensitivity),"ordered-trend permutation test p=0.0001 (human, text-level, primary); Author-Relevant > Author-Independent pairwise Holm-significant",Supported
+H4 -- direction component,"mean directional cosine=0.116, shuffled-pairing permutation p=0.0001 (better than chance pairing)","Partially supported (as H4 predicts ""partial"" alignment)"
+H4 -- magnitude component,Spearman rho=0.189 (weak); magnitudes are NOT closely matched between humans and LLMs,"Consistent with H4 (H4 explicitly predicts magnitudes will differ, not match)"

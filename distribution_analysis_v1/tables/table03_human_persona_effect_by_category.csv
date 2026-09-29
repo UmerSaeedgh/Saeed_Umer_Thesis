@@ -1,0 +1,4 @@
+category,n_texts,mean_shift_pct,median_shift_pct,sd_shift_pct
+Unambiguous,100,45.1,41.7,23.3
+Author-Independent Ambiguous,100,54.1,51.7,22.1
+Author-Relevant Ambiguous,100,60.3,64.6,20.3

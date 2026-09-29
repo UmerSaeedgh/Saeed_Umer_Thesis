@@ -1,0 +1,2 @@
+category,n_texts,mean_raw_a_minus_b_pp,bootstrap_ci_lo_pp,bootstrap_ci_hi_pp,paired_signflip_p_exploratory,texts_a_greater,texts_b_greater,texts_equal
+author_independent,100,4.44047619047619,-2.076190476190477,11.064285714285713,0.1864406779661017,39,34,27

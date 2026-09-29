@@ -1,0 +1,39 @@
+# Table 8: Per Emotion Category Delta
+
+Mean per-emotion shift (persona - neutral) in percentage points, human text-level. Benjamini-Hochberg FDR correction across all 33 (category x emotion) tests.
+
+| category                     | emotion   |   n |   mean_delta_pp |   wilcoxon_p_raw |   p_bh_fdr |
+|:-----------------------------|:----------|----:|----------------:|-----------------:|-----------:|
+| Unambiguous                  | anger     | 100 |          0.6667 |           0.8669 |     0.9228 |
+| Unambiguous                  | disgust   | 100 |         -1.8333 |           0.6324 |     0.777  |
+| Unambiguous                  | fear      | 100 |          3.6417 |           0.0113 |     0.186  |
+| Unambiguous                  | guilt     | 100 |          1.8667 |           0.0652 |     0.2335 |
+| Unambiguous                  | joy       | 100 |         -1.7083 |           0.3091 |     0.5368 |
+| Unambiguous                  | pride     | 100 |          1.7917 |           0.2402 |     0.4953 |
+| Unambiguous                  | relief    | 100 |         -0.4417 |           0.8506 |     0.9228 |
+| Unambiguous                  | sadness   | 100 |         -5.3917 |           0.0509 |     0.2335 |
+| Unambiguous                  | shame     | 100 |          1.875  |           0.0748 |     0.2335 |
+| Unambiguous                  | surprise  | 100 |          0.4417 |           0.9208 |     0.9496 |
+| Unambiguous                  | trust     | 100 |         -0.9083 |           0.4037 |     0.6439 |
+| Author-Independent Ambiguous | anger     | 100 |         -4.5619 |           0.0792 |     0.2335 |
+| Author-Independent Ambiguous | disgust   | 100 |          2.3167 |           0.1043 |     0.2647 |
+| Author-Independent Ambiguous | fear      | 100 |          2.431  |           0.0367 |     0.2335 |
+| Author-Independent Ambiguous | guilt     | 100 |          4.0083 |           0.0061 |     0.186  |
+| Author-Independent Ambiguous | joy       | 100 |         -0.5417 |           0.6167 |     0.777  |
+| Author-Independent Ambiguous | pride     | 100 |          1.3298 |           0.6357 |     0.777  |
+| Author-Independent Ambiguous | relief    | 100 |         -1.4667 |           0.2995 |     0.5368 |
+| Author-Independent Ambiguous | sadness   | 100 |         -4.3417 |           0.0577 |     0.2335 |
+| Author-Independent Ambiguous | shame     | 100 |         -2.2667 |           0.4098 |     0.6439 |
+| Author-Independent Ambiguous | surprise  | 100 |          2.2298 |           0.0849 |     0.2335 |
+| Author-Independent Ambiguous | trust     | 100 |          0.8631 |           0.5989 |     0.777  |
+| Author-Relevant Ambiguous    | anger     | 100 |          1.0167 |           0.8166 |     0.9228 |
+| Author-Relevant Ambiguous    | disgust   | 100 |          2.2298 |           0.0521 |     0.2335 |
+| Author-Relevant Ambiguous    | fear      | 100 |          2.4964 |           0.0358 |     0.2335 |
+| Author-Relevant Ambiguous    | guilt     | 100 |          2.0798 |           0.1281 |     0.3019 |
+| Author-Relevant Ambiguous    | joy       | 100 |         -4.8083 |           0.0578 |     0.2335 |
+| Author-Relevant Ambiguous    | pride     | 100 |          2.1    |           0.2879 |     0.5368 |
+| Author-Relevant Ambiguous    | relief    | 100 |         -1.75   |           0.4594 |     0.6891 |
+| Author-Relevant Ambiguous    | sadness   | 100 |          0.0714 |           0.8609 |     0.9228 |
+| Author-Relevant Ambiguous    | shame     | 100 |         -0.4083 |           0.6285 |     0.777  |
+| Author-Relevant Ambiguous    | surprise  | 100 |         -0.794  |           0.9729 |     0.9729 |
+| Author-Relevant Ambiguous    | trust     | 100 |         -2.2333 |           0.2334 |     0.4953 |

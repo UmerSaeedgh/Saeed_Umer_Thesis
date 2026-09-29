@@ -1,0 +1,2 @@
+unit,n_texts,rho,ci_lo,ci_hi,bootstrap_resamples,seed
+text,300,0.3305422372506764,0.2230816073715187,0.4278397101995463,10000,42

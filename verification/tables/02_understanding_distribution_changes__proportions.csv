@@ -1,0 +1,5 @@
+,source,definition,comparisons,out_of,percent,unique_texts
+0,Human,same_support_change,13,600,2.1666666666666665,13
+1,Human,strict_proportion,3,600,0.5,3
+2,LLM,same_support_change,543,3600,15.083333333333334,153
+3,LLM,strict_proportion,310,3600,8.61111111111111,126

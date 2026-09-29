@@ -1,0 +1,130 @@
+\chapter{Theoretical Background}
+\label{c:literature}
+
+\noindent
+This thesis brings together two research strands. One is emotion recognition and the status of
+annotator disagreement within it; the other is the framing effect of perceived authorship.
+Section~\ref{lit:intersection} shows where the two meet, and Section~\ref{lit:gap} states the gap
+this thesis addresses.
+
+\section{Emotion Recognition and Annotator Disagreement}
+\label{lit:disagreement}
+
+\noindent
+Emotion recognition assigns fine-grained affective labels to text, whereas sentiment analysis
+has typically been reduced to polarity. Popular resources such as GoEmotions
+\cite{Demszky2020GoEmotions} provide large annotated corpora over rich emotion taxonomies, and transformer classifiers trained on them achieve good
+benchmark performance \cite{Acheampong2021EmotionReview}.
+
+Beneath these benchmarks lies a common assumption. Each text is labelled by multiple annotators,
+their judgments are aggregated (usually by majority vote), and the aggregate is the gold standard
+against which models are trained and scored \cite{Basile2020GoldStandard}. On this view,
+annotators are equivalent estimators of one underlying truth, and any difference from the
+majority is a mistake.
+
+A large literature argues that this assumption does not hold for subjective tasks.
+Pavlick and Kwiatkowski \citeyear{Pavlick2019InherentDisagreement} show that disagreement in
+natural language inference is often \emph{inherent} rather than erroneous: annotators differ
+genuinely and reproducibly. Uma et al.\ \citeyear{Uma2021Survey} survey learning approaches that
+model disagreement instead of eliminating it. Aroyo and Welty \citeyear{Aroyo2015CrowdTruth}
+argue directly against the single-ground-truth perspective, and Davani et al.\
+\citeyear{Davani2022Disagreement} show that models treating annotators individually can
+outperform those trained on aggregated labels.
+
+When disagreement is systematic, aggregation is not neutral. Annotator judgments vary with
+demographic background \cite{Prabhakaran2021AnnotatorMetadata}, and in hate speech and
+offensive language annotation the variation follows social group membership \cite{Sap2019RacialBias,
+Waseem2016AnnotatorInfluence}. Nor is it only demographic. Geva et al.\
+\citeyear{Geva2019AnnotatorBias} show that, for datasets whose instances were themselves written
+by crowdworkers, a model can learn to identify the most prolific annotators from the text they
+wrote, and that the model generalises poorly to examples written by annotators unseen during
+training. The identity of the annotator itself, that is, carries systematic, non-interchangeable
+signal. A majority label therefore encodes the dominant reading and suppresses minority ones
+\cite{Davani2022Disagreement}.
+
+A particularly clear example is emotion. According to Acheampong et al.\
+\citeyear{Acheampong2021EmotionReview}, emotional meaning is often implicit and context-dependent,
+leaving room for competing but defensible readings. Chou and Lee \citeyear{Chou2019EveryRating}
+argue that each rating contains information, so disposing of non-majority ratings would mean
+disposing of evidence.
+
+\section{Perceived Authorship and Framing Effects}
+\label{lit:framing}
+
+\noindent
+The second strand concerns the role that assumptions about a speaker play in interpreting what
+is said. The same text can be read differently depending on who is believed to have written
+it.
+
+Henestrosa et al.\ \citeyear{Henestrosa2023Authorship} found that, for a science journalism
+article held constant in content, authorship cues had an impact on readers' perceptions of the
+\emph{author}, and that their experiments did not reveal differences in the article's perceived
+credibility or trustworthiness between AI and human authorship. The manipulation is subtle (an
+attribution line, not a change in content), but it shifts some judgments and not others. The
+present thesis adopts the same design: hold the text fixed, vary only the attributed
+author, and quantify the difference, without determining in advance what judgments will vary and
+which will not.
+
+Contextual framing sensitivity is well documented for language models. Santurkar et al.\
+\citeyear{Santurkar2023WhoseOpinions} demonstrate that model outputs on opinion questions conform
+to some demographic groups more than others, and that this shifts when the model is prompted to
+adopt a persona. Zhang et al.\ \citeyear{Zhang2018Persona} show that conditioning dialogue
+agents on persona profiles systematically changes their responses. Both results establish that
+persona information in a prompt is not neutral.
+
+Work applying models to ambiguous emotional content has begun to treat ambiguity as a property in
+its own right. Hong et al.\ \citeyear{Hong2024AERLLM} propose ambiguity-aware emotion recognition
+with large language models, arguing that a single label is not always an appropriate output
+target. R\"ottger et al.\ \citeyear{Rottger2022AnnotationParadigms} distinguish annotation
+paradigms aimed at a single, correct answer from those aimed at intentionally representing
+variation.
+
+\section{Points of Intersection}
+\label{lit:intersection}
+
+\noindent
+Neither strand has fully explored the point at which the two meet.
+
+The literature on disagreement shows that variation in subjective annotation is systematic and
+worth preserving, but it tends to locate that variation in the \emph{annotator}: their
+background, their sensitivity, their interpretive style. The variable is who is reading.
+
+The framing literature shows that assumptions about the \emph{author} shift interpretation.
+It usually measures the shift on a single outcome variable such as perceived quality, however,
+and typically in humans or in models, not in both under one design.
+
+Together, they raise a question that neither strand asks directly. Suppose disagreement in
+emotion annotation is partly driven by differing assumptions about the author, which readers make
+silently when context is underspecified. Supplying that context explicitly should then shift the
+\emph{distribution} of emotional readings in a measurable and predictable way. If models are
+sensitive to persona framing, they should show a similar shift that can be compared against the
+human shift on the same texts.
+
+\section{Research Gap and Motivation}
+\label{lit:gap}
+
+\noindent
+The review above points to three gaps.
+
+\textbf{Perceived authorship is not manipulated as an experimental variable in emotion
+recognition.} Existing emotion corpora record disagreement but do not vary author attribution
+while holding the text unchanged. Disagreement is observed rather than induced, so its link to
+assumptions about the author cannot be isolated.
+
+\textbf{Aggregation destroys the quantity of interest.} If author framing redistributes
+probability mass among plausible emotions without necessarily changing which emotion is most
+popular, a majority-label analysis is structurally insensitive to it. The effect can only be seen
+when judgments are expressed as distributions. This thesis measures directly how much aggregation
+loses (Section~\ref{res:vectorization}).
+
+\textbf{Human and model framing effects are rarely measured under one design.} Claims that models
+do or do not resemble human interpretation are often based on comparison with a
+majority-derived gold label. That tells us whether the model's single answer matches the human's.
+It does not tell us whether the model is \emph{responsive to context} as human beings are.
+Measuring the change on both sides, under the same manipulation, on the same texts, and comparing
+direction and magnitude separately, is a different and narrower question.
+
+\noindent
+This thesis takes up all three. It manipulates perceived authorship experimentally, represents
+every judgment as a full emotion distribution, and applies the identical manipulation to human
+annotators and to seven large language models, so that their responses can be compared directly.

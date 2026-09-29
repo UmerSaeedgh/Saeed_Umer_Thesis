@@ -1,0 +1,698 @@
+"""
+Builds distribution_analysis_v1/01_foundations_and_baseline.ipynb -- Part 1 of the narrative
+analysis (sections 1-6), REVISED per the 2026-09-21 methodological review:
+- three human data sources kept explicit and separate throughout (data-design table added)
+- vectorization story now starts from the ORIGINAL 5-reader corpus, not a generic example
+- majority/plurality/tied/unanimous classification replaces the earlier blanket "50%" framing
+- entropy/support-size/max-probability explicitly flagged as near-redundant under n=3, one
+  primary measure preferred
+- majority-vs-vector section strengthened with 3 real, concrete examples
+- distribution-similarity vs. framing-effect-similarity kept conceptually distinct (never
+  "accuracy")
+- PRIMARY/SECONDARY/EXPLORATORY labeling introduced
+- language audited for overclaiming ("best", "genuinely", "clearly", etc.)
+
+Run: python build_notebook_1.py
+Then: jupyter nbconvert --to notebook --execute --inplace <output path>
+"""
+import nbformat as nbf
+from pathlib import Path
+
+OUT_PATH = Path(r"C:\Users\umers\Desktop\thesis\thesis final\distribution_analysis_v1\01_foundations_and_baseline.ipynb")
+
+nb = nbf.v4.new_notebook()
+cells = []
+
+
+def md(text):
+    cells.append(nbf.v4.new_markdown_cell(text))
+
+
+def code(text):
+    cells.append(nbf.v4.new_code_cell(text))
+
+
+# ===========================================================================
+# SECTION 1
+# ===========================================================================
+md("""# Part 1: Foundations & Baseline — Vector-Based Framing-Effect Analysis
+
+## 1. Analysis objective, hypotheses, and the core narrative
+
+This notebook (Part 1 of 2) tests whether **perceived author identity changes emotion
+interpretation** — in humans and in large language models — by representing every annotation as
+a full **11-dimensional emotion probability distribution** rather than collapsing it to a single
+majority label. Part 2 (`02_persona_effects_and_conclusions.ipynb`) covers the persona-effect
+analysis, human-LLM shift alignment, statistical hypothesis tests, qualitative case studies, and
+the final conclusions.
+
+**The argument this pair of notebooks makes, in one paragraph:** original human judgments on
+these texts contain meaningful disagreement; collapsing that disagreement to a majority label
+discards it; representing it as a distribution instead preserves it; perceived authorship
+(persona framing) then measurably moves those distributions; the *size* of that movement differs
+by text category; and this lets LLMs be evaluated not merely on whether their single answer
+matches a human's single answer, but on whether they reproduce the *direction* and *magnitude* of
+the human framing-induced change. Nothing below is meant to prove this story — it is meant to
+test each link in it against the actual data, honestly reporting where the evidence is strong,
+mixed, or absent.
+
+**Exact hypothesis wording**, recovered verbatim from `Desktop/ThesisProposal.pdf` (see
+`interpretation/hypotheses_source.md` for the full recovery process and precision notes):
+
+- **RQ1 / H1 (Human Framing):** Does perceived author identity significantly influence human
+  emotion judgments of ambiguous texts? *Human emotion judgments will differ significantly across
+  author-framing conditions for ambiguous texts, but not (or substantially less) for unambiguous
+  control texts.*
+- **RQ2 / H2 (Model Framing):** Does perceived author identity significantly influence emotion
+  classifications produced by LLMs? *LLM emotion classifications will shift across author-framing
+  conditions, indicating sensitivity to minimal author cues.*
+- **H3 (Ambiguity Sensitivity):** *Framing effects will be stronger for author-relevant ambiguous
+  texts than for author-independent ambiguous texts.*
+- **RQ3 / H4 (Alignment):** Do LLMs exhibit framing effects similar in direction and magnitude to
+  humans? *The direction of framing-induced shifts in LLM classifications will partially align
+  with human judgment shifts, but the magnitude of these shifts will differ.*
+
+No formal, numbered hypothesis about prompt structure exists in the thesis proposal — any
+analysis of prompt design in these notebooks is exploratory.
+
+**How results are labeled throughout both notebooks:**
+- **[PRIMARY]** — a test that directly operationalizes one of the 4 hypotheses above.
+- **[SECONDARY]** — a planned, non-hypothesis descriptive or robustness analysis (e.g. the LLM
+  side of the category comparison, per-emotion breakdowns).
+- **[EXPLORATORY]** — anything not planned in the original proposal (prompt-structure effects,
+  per-model comparisons, qualitative case patterns). Exploratory findings are reported honestly
+  but are never treated as if they were confirmatory.
+
+> **How to read this notebook:** every quantitative claim is backed by a specific number computed
+> in a cell directly above or below it. Boxed **"Key finding"** callouts summarize what the
+> immediately preceding output shows — they do not introduce new claims.""")
+
+md("""### 1.1 Three human data sources — kept separate throughout
+
+This study involves **three distinct human-judgment sources** that must never be conflated. The
+table below is the map used consistently across both notebooks.
+
+| Source | Raters/text | Collected when | Role in this analysis |
+|---|---|---|---|
+| **Original corpus** (crowd-enVent, Troiano et al.) | 5 | Pre-existing, before this study | The **original reference distribution** — how this text was independently rated *before* any of this study's framing manipulation existed. Used to motivate vectorization (Section 3) and as an external validity check (Section 4), never as a persona-effect baseline. |
+| **New neutral** (this study) | 3 (occasionally 4-7) | Collected for this study, no author framing | The **experimental "no persona" condition** — the actual baseline every persona-effect comparison in Part 2 is measured against, because it shares the rater pool, era, and task framing with the persona conditions. |
+| **New persona A / B** (this study) | 3 (occasionally more) | Collected for this study, WITH author framing | The **experimental framing conditions**. Compared against New neutral (never against the original corpus) to measure the persona effect. |
+
+The original corpus and the new neutral round are **two independent measurements of the same
+underlying "no persona" condition**, collected years apart by different rater pools. Section 4
+uses their disagreement as a noise-floor check; it is never used as if it were a persona effect.""")
+
+code("""import sys
+import math
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+%matplotlib inline
+sys.path.insert(0, str(Path.cwd().parent / 'scripts'))
+from plot_style import setup_style, sig_bracket, sig_stars, stat_box, violin_box_strip, vector_bar_pair, categorical_proportion_bars, COLORS
+setup_style()
+
+from emotion_vectors import (
+    EMOTIONS, N_EMOTIONS, build_vector, build_vector_with_meta, total_variation,
+    compare_dominant, new_emotions, disappeared_emotions, delta_vector, safe_cosine_similarity,
+    shannon_entropy, normalized_entropy, max_probability, support_size, dominant_set,
+)
+import stats_utils as su
+from build_emotion_distributions import (
+    BASE, OUT_DIR, POOL_TO_KEY, POOL_LABEL, MODEL_COLS, MODEL_RAW_COLS,
+    build_original_neutral_vectors, load_original_corpus_aggregate_metadata,
+    build_baseline_validation, build_human_vectors, build_llm_ensemble_vectors,
+    build_human_comparisons, build_llm_comparisons, build_human_vs_llm_matched,
+    aggregate, print_text_report, vec_from_row, _normalize_label_fallback,
+)
+
+pd.set_option('display.max_columns', 50)
+pd.set_option('display.width', 140)
+
+CATEGORY_ORDER = ['unambiguous', 'author_independent', 'author_relevant']
+CATEGORY_LABELS = [POOL_LABEL[c] for c in CATEGORY_ORDER]
+
+print(f"Emotion set ({N_EMOTIONS}): {EMOTIONS}")
+""")
+
+# ===========================================================================
+# SECTION 2
+# ===========================================================================
+md("""## 2. Load and validate all data""")
+
+code("""human_annotations = pd.read_csv(BASE / 'human_annotations.csv')
+human_annotations['text_id'] = human_annotations['text_id'].astype(str)
+human_annotations['pool_key'] = human_annotations['pool'].map(POOL_TO_KEY)
+sample_text_ids = sorted(human_annotations['text_id'].unique(), key=int)
+
+# --- SINGLE AUTHORITATIVE CATEGORY SOURCE (audit repair, 2026-09-21) -------------------------
+# The category was previously read off human_annotations.csv via drop_duplicates('text_id').
+# That file disagrees with itself for 9 texts: their 'neutral' rows say Unambiguous while their
+# persona rows say author_relevant (they were re-classified between the two collection rounds),
+# and drop_duplicates silently resolves the conflict by row order. The result was a 91/100/109
+# category split instead of the designed, balanced 100/100/100. sampled_texts.csv is the master
+# file the corpus was stratified on, and experiment_results_all.csv agrees with it, so it is now
+# the single source of truth in BOTH notebooks. See Part 2 Section 12 for the sensitivity check.
+sampled_texts = pd.read_csv(BASE / 'sampled_texts.csv')
+sampled_texts['text_id'] = sampled_texts['text_id'].astype(str)
+pool_of_text = sampled_texts.set_index('text_id')['classification'].map(POOL_TO_KEY)
+
+pool_counts = pool_of_text.reindex(sample_text_ids).value_counts().reindex(CATEGORY_ORDER)
+pool_counts.index = CATEGORY_LABELS
+print(f"{len(sample_text_ids)} sampled texts across 3 categories (source: sampled_texts.csv):")
+display(pool_counts.to_frame('n_texts'))
+
+_ha_pool = human_annotations.drop_duplicates('text_id').set_index('text_id')['pool_key']
+_cmp = pd.DataFrame({'master': pool_of_text, 'persona_round': _ha_pool}).dropna()
+_conflict = sorted(_cmp.index[_cmp['master'] != _cmp['persona_round']], key=int)
+print(f"\\n{len(_conflict)} texts are classified inconsistently WITHIN human_annotations.csv "
+      f"(neutral row vs persona rows); all resolved to the master file's value:")
+print(f"  {_conflict}")
+if _conflict:
+    print("  master says:", _cmp.loc[_conflict, 'master'].unique().tolist(),
+          "| persona rows say:", _cmp.loc[_conflict, 'persona_round'].unique().tolist())
+
+original_vectors = build_original_neutral_vectors(sample_text_ids)
+original_meta = load_original_corpus_aggregate_metadata(sample_text_ids)
+human_vectors = build_human_vectors(sample_text_ids)
+llm_vectors = build_llm_ensemble_vectors(sample_text_ids)
+baseline_validation = build_baseline_validation(original_meta, original_vectors, human_vectors)
+human_cmp = build_human_comparisons(human_vectors)
+llm_cmp = build_llm_comparisons(llm_vectors)
+matched = build_human_vs_llm_matched(human_vectors, llm_vectors, human_cmp, llm_cmp)
+agg = aggregate(human_cmp, llm_cmp)
+
+print()
+print("Row counts by data source (cross-check against the Section 1.1 table):")
+print(f"  Original corpus (5 readers/text):        {len(original_vectors)} rows (= 300 texts x 1 vector each)")
+print(f"  New human (neutral + persona a/b):        {len(human_vectors)} rows (= 300 texts x 3 sides)")
+print(f"  LLM ensemble (7 models):                  {len(llm_vectors)} rows (= 300 texts x 4 framings x 3 variants x 2 formats)")
+""")
+
+md("""### Sanity checks: missing texts, duplicates, annotation counts, valid emotions, category
+counts, persona coverage""")
+
+code("""checks = []
+
+def check(name, cond, detail=''):
+    checks.append((name, bool(cond), detail))
+    print(f"[{'PASS' if cond else 'FAIL'}] {name}" + (f' -- {detail}' if detail else ''))
+
+missing_original = set(sample_text_ids) - set(original_vectors['text_id'])
+check('all 300 texts have an original 5-reader vector', len(missing_original)==0, f'{len(missing_original)} missing')
+missing_human = set(sample_text_ids) - set(human_vectors['text_id'])
+check('all 300 texts have new human vectors', len(missing_human)==0, f'{len(missing_human)} missing')
+missing_llm = set(sample_text_ids) - set(llm_vectors['text_id'].astype(str))
+check('all 300 texts have LLM ensemble vectors', len(missing_llm)==0, f'{len(missing_llm)} missing')
+check('no duplicate (text_id, side) in new human vectors', human_vectors.duplicated(subset=['text_id','side']).sum()==0)
+check('no duplicate (text_id, framing, prompt_variant, label_format) in llm_vectors',
+      llm_vectors.duplicated(subset=['text_id','framing_condition','prompt_variant','label_format']).sum()==0)
+check('new human vectors: 900 rows (300 texts x 3 sides)', len(human_vectors)==900, f'got {len(human_vectors)}')
+check('llm_vectors: 7200 rows (300 texts x 4 framings x 3 variants x 2 formats)', len(llm_vectors)==7200, f'got {len(llm_vectors)}')
+check('human raters_raw: 0 blank', (human_annotations['raters_raw'].isna() | (human_annotations['raters_raw'].astype(str).str.strip()=='')).sum()==0)
+zero_n_human = (human_vectors['vec_n']==0).sum()
+zero_n_llm = (llm_vectors['vec_n']==0).sum()
+zero_n_orig = (original_vectors['vec_n']==0).sum()
+check('new human vectors: 0 rows with zero valid votes', zero_n_human==0, f'{zero_n_human} rows')
+check('llm_vectors: 0 rows with zero valid votes (all 7 models off-list)', zero_n_llm==0, f'{zero_n_llm} rows')
+check('original corpus vectors: 0 rows with zero valid votes', zero_n_orig==0, f'{zero_n_orig} rows')
+check('3 categories all present, totaling 300', pool_counts.sum()==300 and len(pool_counts)==3)
+check("new human vectors side counts == {'a':300,'b':300,'neutral':300}",
+      human_vectors['side'].value_counts().to_dict() == {'a':300,'b':300,'neutral':300})
+
+n_fail = sum(1 for _,ok,_ in checks if not ok)
+print(f"\\n{len(checks)-n_fail}/{len(checks)} checks passed." + (f" {n_fail} FAILED." if n_fail else " All clear."))
+""")
+
+# ===========================================================================
+# SECTION 3 -- vectorization story starts from the ORIGINAL corpus
+# ===========================================================================
+md("""## 3. Why vectors: the problem is visible in the original corpus BEFORE this study even
+begins
+
+Every one of the 300 sampled texts already has 5 independent human emotion judgments from the
+**original** corpus (crowd-enVent). Before touching anything this study collected, look at what a
+majority-label reduction of those 5 original judgments would already discard.""")
+
+code("""def classify_vote_pattern(vec_row, emotions=EMOTIONS):
+    \"\"\"Classifies one vector's vote pattern into exactly one of 4 mutually exclusive buckets,
+    for any n: 'unanimous' (all votes on one emotion), 'majority' (a single emotion has a UNIQUE,
+    strict >50% share), 'plurality_no_majority' (a single emotion has the unique top share, but
+    that share is <=50%), or 'tied' (two or more emotions share the top share, regardless of what
+    that share is). This is a strictly finer distinction than a blanket '>=50%' check.\"\"\"
+    n = vec_row['vec_n']
+    if n == 0:
+        return None
+    counts = [round(vec_row[f'vec_prob_{e}'] * n) for e in emotions]
+    counts = [c for c in counts if c > 0]
+    top = max(counts)
+    n_at_top = sum(1 for c in counts if c == top)
+    if top == n:
+        return 'unanimous'
+    if n_at_top > 1:
+        return 'tied'
+    if top > n / 2:
+        return 'majority'
+    return 'plurality_no_majority'
+
+original_vectors['pattern'] = original_vectors.apply(classify_vote_pattern, axis=1)
+pattern_counts = original_vectors['pattern'].value_counts().reindex(['unanimous','majority','plurality_no_majority','tied']).fillna(0).astype(int)
+pattern_pct = (pattern_counts / len(original_vectors) * 100).round(1)
+display(pd.DataFrame({'count': pattern_counts, 'pct': pattern_pct}))
+""")
+
+code("""print("=== A 2/1/1/1 pattern from the ORIGINAL corpus: a unique top choice, but no majority ===")
+ex1 = original_vectors[original_vectors['text_id']=='276'].iloc[0]
+print(f"Text 276, original 5-reader vector: {ex1['vec_vector_str']}")
+print("2 of 5 readers said 'fear'; the other 3 each chose a different emotion (guilt, pride, sadness).")
+print("'fear' IS the majority label under a plurality rule -- but only 40% of readers actually said it.")
+print()
+print("=== A 2/2/1 pattern from the ORIGINAL corpus: no unique winner at all ===")
+ex2 = original_vectors[original_vectors['text_id']=='2168'].iloc[0]
+print(f"Text 2168, original 5-reader vector: {ex2['vec_vector_str']}")
+print("2 readers said 'anger', 2 said 'sadness', 1 said 'guilt' -- there is no single 'majority label'")
+print("here at all; any majority-label pipeline must make an ARBITRARY tie-break to report one answer.")
+""")
+
+code("""fig, axes = plt.subplots(1, 2, figsize=(13, 4.3))
+for ax, ex, title in zip(axes, (ex1, ex2), ('Text 276: 2/1/1/1 (unique top, no majority)', 'Text 2168: 2/2/1 (tied, no unique winner)')):
+    probs = [ex[f'vec_prob_{e}'] for e in EMOTIONS]
+    ax.bar(EMOTIONS, probs, color='#4C72B0', edgecolor='white')
+    ax.set_title(title, fontsize=11)
+    ax.set_ylabel('Share of 5 original readers')
+    ax.tick_params(axis='x', rotation=45)
+    ax.axhline(0.5, color='crimson', linestyle='--', linewidth=1, label='50% line')
+    ax.legend(fontsize=8)
+plt.tight_layout()
+plt.show()
+""")
+
+md("""> **Key finding** *(wording corrected 2026-09-21 — see note below)***:** in the ORIGINAL corpus
+> alone, before this study collected a single new annotation, **80.4%** of texts have a unique
+> emotion with a strict majority (>50%) of the 5 readers — 56.7% with a non-unanimous majority
+> plus 23.7% unanimous. The remaining **19.6%** do not: 6.3% have a unique top choice that never
+> reaches 50% (a plurality, not a majority — text 276 above), and 13.3% have **no unique top
+> choice at all** (text 2168 above). A pipeline that reports one "ground truth" emotion per text is
+> making a majority-rule assumption that is false for **one in five** of these texts, and a
+> coin-flip tie-break for roughly one in eight. This is the original motivation for representing
+> every judgment as a distribution — the same representation is used consistently for the new
+> human and LLM data throughout the rest of this analysis.
+>
+> *Correction note:* this passage previously read "only 56.7% of texts have a unique emotion with
+> a strict majority". That understated the corpus: `classify_vote_pattern` assigns `unanimous` and
+> `majority` to **mutually exclusive** buckets, so the 23.7% unanimous texts — which are the
+> strongest possible majority, 5/5 — were being excluded from the majority count rather than added
+> to it. The corrected figure is 56.7 + 23.7 = 80.4%. The paragraph's own next sentence ("false for
+> one in five of these texts") was already computed the correct way and is unchanged, so the two
+> halves of the passage previously contradicted each other. No number in any analysis depended on
+> the incorrect phrasing — this is a text correction only.""")
+
+md("""### The same representation, applied consistently to this study's own data
+
+Every observation from here on — a new human rater's vote, an LLM's single-label answer — is
+counted into the same fixed 11-slot emotion vector: `[anger, disgust, fear, guilt, joy, pride,
+relief, sadness, shame, surprise, trust]`.""")
+
+code("""print("=== A real text's new 3-rater human vector (this study's own neutral-condition data) ===")
+example_row = human_vectors[(human_vectors['side']=='neutral') & (human_vectors['vec_n']==3)].iloc[0]
+print(f"Text {example_row['text_id']}: \\"{example_row['text'][:80]}...\\"")
+print(f"Vector: {example_row['vec_vector_str']}")
+
+print("\\n=== A real 7-model LLM ensemble vector (chosen to show genuine model disagreement) ===")
+llm_full_n = llm_vectors[llm_vectors['vec_n']==7].copy()
+llm_full_n['n_nonzero'] = (llm_full_n[[f'vec_prob_{e}' for e in EMOTIONS]] > 0).sum(axis=1)
+example_llm = llm_full_n[llm_full_n['n_nonzero']>=3].iloc[50]
+print(f"Text {example_llm['text_id']}, framing={example_llm['framing_condition']}, "
+      f"prompt={example_llm['prompt_variant']}/{example_llm['label_format']}")
+print(f"Vector (7 models' single answers): {example_llm['vec_vector_str']}")
+""")
+
+code("""fig, axes = plt.subplots(1, 2, figsize=(13, 4.3))
+probs1 = {e: example_row[f'vec_prob_{e}'] for e in EMOTIONS}
+axes[0].bar(EMOTIONS, [probs1[e] for e in EMOTIONS], color='#4C72B0', edgecolor='white')
+axes[0].set_title(f"New human vector — text {example_row['text_id']} (n=3 raters, NEUTRAL condition)")
+axes[0].set_ylabel('Probability')
+axes[0].tick_params(axis='x', rotation=45)
+probs2 = {e: example_llm[f'vec_prob_{e}'] for e in EMOTIONS}
+axes[1].bar(EMOTIONS, [probs2[e] for e in EMOTIONS], color='#DD8452', edgecolor='white')
+axes[1].set_title(f"LLM ensemble vector — text {example_llm['text_id']} (n=7 models)")
+axes[1].tick_params(axis='x', rotation=45)
+plt.tight_layout()
+plt.show()
+""")
+
+# ===========================================================================
+# SECTION 4 -- category ambiguity before persona (revised: one primary measure)
+# ===========================================================================
+md("""## 4. How ambiguous are the three categories, really? (before any persona is applied)
+
+The study's category labels (Unambiguous / Author-Independent Ambiguous / Author-Relevant
+Ambiguous) are *design* categories — texts were assigned based on how they were expected to
+behave. This section **[SECONDARY]** tests, rather than assumes, whether that design intent
+shows up in the actual NEW neutral-condition human data (this study's own baseline, not the
+original corpus — see Section 1.1).
+
+**On measurement choice:** with only 3 raters per text, support size, entropy, and
+max-probability are **not independent pieces of evidence** — they are different numeric
+summaries of the same underlying vote-count pattern (only 3 possible shapes exist for n=3: 3-0-0,
+2-1-0, or 1-1-1), so all three necessarily move together and agreeing with each other is not
+itself a confirmation. The categorical **majority/plurality/tied classification** from Section 3
+is preferred here as the primary, most directly interpretable measure; normalized entropy is
+kept as a single secondary numeric summary for the formal test, not as a third independent
+confirmation.""")
+
+code("""human_neutral = human_vectors[human_vectors['side']=='neutral'].copy()
+human_neutral['pool_key'] = human_neutral['text_id'].map(pool_of_text)  # audit repair: single authoritative source
+human_neutral['pattern'] = human_neutral.apply(classify_vote_pattern, axis=1)
+
+print("PRIMARY measure for this section: majority/plurality/tied classification, by category (new neutral condition, n=3)")
+pattern_by_cat = pd.crosstab(human_neutral['pool_key'], human_neutral['pattern'], normalize='index').reindex(CATEGORY_ORDER) * 100
+pattern_by_cat = pattern_by_cat[[c for c in ['unanimous','majority','plurality_no_majority','tied'] if c in pattern_by_cat.columns]]
+pattern_by_cat.index = CATEGORY_LABELS
+display(pattern_by_cat.round(1))
+
+fig, ax = plt.subplots(figsize=(8, 5.5))
+pattern_by_cat.plot(kind='bar', ax=ax, color=['#2E7D32','#4C72B0','#DD8452','#C62828'][:pattern_by_cat.shape[1]])
+ax.set_ylabel('% of texts (new neutral condition, n=3)')
+ax.set_title('Vote-pattern classification under NEUTRAL framing, by category', pad=14)
+ax.legend(title='pattern', fontsize=8, title_fontsize=8)
+plt.xticks(rotation=15, ha='right')
+plt.tight_layout()
+plt.show()
+""")
+
+code("""print("SECONDARY numeric test: normalized entropy (a single summary of the same vote pattern)")
+groups = [human_neutral[human_neutral['pool_key']==c]['vec_normalized_entropy'].dropna().values for c in CATEGORY_ORDER]
+kw_stat, kw_p = su.kruskal_wallis(*groups)
+means = [g.mean() for g in groups]
+fig, ax = plt.subplots(figsize=(7, 5.5))
+ax.bar(CATEGORY_LABELS, means, color=[COLORS[c] for c in CATEGORY_LABELS])
+ax.set_ylabel('Mean normalized entropy (neutral condition)')
+ax.set_title('Normalized entropy by category (secondary numeric summary)', pad=16)
+sig_bracket(ax, 1, 3, p=kw_p, text=f'Kruskal-Wallis {sig_stars(kw_p)}  p={kw_p:.4f}')
+plt.xticks(rotation=15, ha='right')
+plt.tight_layout()
+plt.show()
+print(f"Kruskal-Wallis on normalized entropy across categories: stat={kw_stat:.3f}, p={kw_p:.4f}")
+print("Unit of analysis: one row per text (300 texts, new neutral condition only) -- no repeated-text pseudoreplication.")
+""")
+
+md("""> **Key finding:** the unanimous rate under neutral framing falls from Unambiguous to
+> Author-Relevant, and the tied rate rises in the opposite direction (see the table above for
+> exact percentages); normalized entropy differs significantly across categories in the same
+> direction (p=0.0043). These are reported as **one categorical pattern plus one corroborating
+> numeric summary**, not three independent confirmations, because — as stated above — they are
+> mathematically linked at n=3. This matters for Part 2: a later finding that Unambiguous texts
+> show a smaller persona effect cannot be explained away as "there was nothing to shift," since a
+> unique majority/unanimous interpretation is more common there to begin with.""")
+
+md("""### A distinct, second question: how similar are the two independent "no persona"
+measurements (original corpus vs. new neutral round)?
+
+This compares two **independent** human-judgment sources described in Section 1.1 — it is a
+**distribution-similarity** check between two "no persona" measurements, not a persona-effect
+measurement, and is kept conceptually separate from anything in Part 2. It is reported here as
+context for interpreting the size of any later persona-effect number: two measurements of the
+*same* neutral condition, taken by different rater pools, will not perfectly agree even with zero
+framing manipulation.""")
+
+code("""baseline_valid = baseline_validation[baseline_validation['full_comparison_valid']==True].copy()
+fig, ax = plt.subplots(figsize=(7.5, 6))
+groups = [baseline_valid[baseline_valid['pool_key']==c]['full_tv_distance'].values*100 for c in CATEGORY_ORDER]
+violin_box_strip(ax, groups, CATEGORY_LABELS, colors=[COLORS[c] for c in CATEGORY_LABELS],
+                  ylabel='TV distance: original 5-reader vs. new 3-reader neutral (%)',
+                  title='Distribution similarity between two INDEPENDENT "no persona" measurements', title_pad=18)
+ax.tick_params(axis='x', rotation=15)
+kw_stat, kw_p = su.kruskal_wallis(*groups)
+sig_bracket(ax, 1, 3, p=kw_p, text=f'{sig_stars(kw_p)}  p={kw_p:.2e}')
+plt.tight_layout()
+plt.show()
+
+means = {POOL_LABEL[c]: baseline_valid[baseline_valid['pool_key']==c]['full_tv_distance'].mean()*100 for c in CATEGORY_ORDER}
+for cat, m in means.items():
+    print(f"{cat}: mean TV between original-corpus and new-neutral vectors = {m:.1f}%")
+print("Unit of analysis: one row per text (300 texts) -- no repeated-text pseudoreplication.")
+""")
+
+md("""> **Key finding — context for every persona-shift percentage reported in Part 2:** even
+> comparing two independent "no persona" measurements, the TV distance between them is
+> substantial (31.5% for Unambiguous, rising to 52.9% for Author-Relevant), and it varies by
+> category in the same direction the persona effect will later be reported in. This does not by
+> itself explain away any later persona effect, but it means a raw persona-shift percentage
+> should always be read next to this number, not against an assumed zero. Part 2's permutation
+> tests compare against each text's own within-condition rater variability directly, which is a
+> more direct control than this cross-source comparison, but this comparison is the most
+> intuitive illustration of why a raw percentage alone is not self-interpreting.""")
+
+# ===========================================================================
+# SECTION 5 -- majority-vote information loss, strengthened with real examples
+# ===========================================================================
+md("""## 5. What majority-label reduction throws away
+
+Section 3 showed this problem exists in the original corpus. This section **[SECONDARY]**
+quantifies it across all of this study's own data, and shows 3 concrete, real patterns that a
+majority-label pipeline cannot represent.""")
+
+code("""print("Majority/plurality/tied classification, ALL new human annotations (900 rows, all 3 conditions pooled)")
+human_vectors['pattern'] = human_vectors.apply(classify_vote_pattern, axis=1)
+h_counts = human_vectors['pattern'].value_counts().reindex(['unanimous','majority','plurality_no_majority','tied']).fillna(0).astype(int)
+h_pct = (h_counts / len(human_vectors) * 100).round(1)
+display(pd.DataFrame({'count': h_counts, 'pct': h_pct}))
+
+print()
+print("Majority/plurality/tied classification, ALL LLM ensemble vectors (7,200 rows, 7-model ensemble)")
+llm_vectors['pattern'] = llm_vectors.apply(classify_vote_pattern, axis=1)
+l_counts = llm_vectors['pattern'].value_counts().reindex(['unanimous','majority','plurality_no_majority','tied']).fillna(0).astype(int)
+l_pct = (l_counts / len(llm_vectors) * 100).round(1)
+display(pd.DataFrame({'count': l_counts, 'pct': l_pct}))
+""")
+
+md("""> **Key finding:** the "tied" rate (no unique winner at all) varies a great deal by source and
+> by n: **13.3%** in the original corpus (n=5, Section 3), **27.9%** in this study's new human
+> data pooled across all three conditions (n=3 mostly), and only **4.1%** in the LLM ensemble
+> (n=7 — a larger ensemble makes an exact tie mechanically less likely). This range is wide enough
+> that a single blanket "below 50% agreement" statement would have obscured how much the rate
+> depends on sample size per condition, not just on the text itself. Distinguishing "tied" (no
+> unique winner) from "plurality_no_majority" (a unique winner, but under 50%) matters for the
+> same reason — they are different situations with different implications for how much a
+> majority-label pipeline can be trusted.""")
+
+code("""print("=== EXAMPLE 1: same majority-label ('anger'), very different underlying distributions ===")
+print("(both from the ORIGINAL corpus -- same source, so the comparison isn't confounded by n)")
+ex_low = original_vectors[original_vectors['text_id']=='5575'].iloc[0]
+ex_high = original_vectors[original_vectors['text_id']=='458'].iloc[0]
+print(f"Text 5575: {ex_low['vec_vector_str']}  <- 'anger' is the top choice, but only {ex_low['vec_max_probability']*100:.0f}% of readers said it")
+print(f"Text 458:  {ex_high['vec_vector_str']}  <- 'anger' is the top choice, and it is unanimous ({ex_high['vec_max_probability']*100:.0f}%)")
+print("A pipeline that reports only the label 'anger' cannot distinguish these two very different situations.")
+""")
+
+code("""fig, axes = plt.subplots(1, 2, figsize=(13, 4.3))
+for ax, ex, title in zip(axes, (ex_low, ex_high), ('Text 5575: majority label = anger (40% support)', 'Text 458: majority label = anger (100%, unanimous)')):
+    probs = [ex[f'vec_prob_{e}'] for e in EMOTIONS]
+    ax.bar(EMOTIONS, probs, color='#C44E52', edgecolor='white')
+    ax.set_title(title, fontsize=10.5)
+    ax.set_ylim(0, 1.05)
+    ax.tick_params(axis='x', rotation=45)
+fig.suptitle('Same majority label, very different agreement (both ORIGINAL corpus, n=5)', y=1.04, fontweight='bold')
+plt.tight_layout()
+plt.show()
+""")
+
+md("""**EXAMPLE 2 (tied, no unique winner):** already shown in Section 3 — text 2168, original
+corpus, anger:0.40 / sadness:0.40 / guilt:0.20. Repeated here only as a cross-reference: a
+majority-label pipeline must arbitrarily choose between anger and sadness for this text.""")
+
+code("""print("=== EXAMPLE 3: persona changes the distribution substantially while the reported LABEL survives ===")
+hv_neutral_side = human_vectors[(human_vectors['text_id']=='31181') & (human_vectors['side']=='neutral')].iloc[0]
+hv_persona_side = human_vectors[(human_vectors['text_id']=='31181') & (human_vectors['side']=='a')].iloc[0]
+print(f"Text 31181, neutral:  {hv_neutral_side['vec_vector_str']}")
+print(f"Text 31181, persona:  {hv_persona_side['vec_vector_str']}")
+tv_ex3 = total_variation({e: hv_neutral_side[f'vec_prob_{e}'] for e in EMOTIONS}, {e: hv_persona_side[f'vec_prob_{e}'] for e in EMOTIONS})
+print(f"TV distance = {tv_ex3*100:.0f}% -- a large share of probability mass moved.")
+print("'surprise' remains IN the (now 5-way tied) dominant set both before and after, so a")
+print("dominant-label-only comparison would call this text 'unchanged' -- despite an 80% TV shift.")
+""")
+
+code("""fig, ax = plt.subplots(figsize=(8, 4.5))
+vector_bar_pair(ax, EMOTIONS, {e: hv_neutral_side[f'vec_prob_{e}'] for e in EMOTIONS}, {e: hv_persona_side[f'vec_prob_{e}'] for e in EMOTIONS},
+                 title=f'Text 31181: dominant label unchanged, but TV shift = {tv_ex3*100:.0f}%')
+plt.tight_layout()
+plt.show()
+""")
+
+md("""> **Key finding:** these three real examples show three distinct ways a majority/dominant
+> label alone loses information that a vector retains: (1) the same label can mean 40% support or
+> 100% unanimity, (2) some texts have no defensible single label at all, and (3) a text's label
+> can survive a framing manipulation even while most of its probability mass moves elsewhere. All
+> three recur at non-trivial rates in this dataset (Section 3-5 tables above), not just in these
+> illustrative cases.
+>
+> **A methodological note carried through the rest of this analysis:** magnitude (how much moved,
+> e.g. TV distance) and direction (which emotions moved where, e.g. a delta vector or its cosine
+> similarity to another delta vector) answer different questions, and **neither is sufficient
+> alone** — Example 3 above is a magnitude-only illustration; Part 2 Section 13 (Case F) shows the
+> mirror case, where a good directional match still hides a large magnitude gap. Every persona-
+> effect result in Part 2 reports both.""")
+
+# ===========================================================================
+# SECTION 6 -- baseline alignment (revised: distribution similarity, not "accuracy"; CI language)
+# ===========================================================================
+md("""## 6. Baseline distribution similarity: how closely does the LLM ensemble's answer resemble
+human interpretation, before any persona is introduced?
+
+**[SECONDARY]** This measures **distribution similarity** between the LLM ensemble's neutral
+vector and the new human neutral vector — i.e., interpretation alignment on raw distributions. It
+is conceptually distinct from, and should never be described with the same word as, the
+**framing-effect alignment** measured in Part 2 Section 9 (comparing *delta* vectors between
+conditions). Neither is "accuracy" in the ground-truth sense, since neither original human data
+nor a model output is treated as ground truth here.""")
+
+code("""def jensen_shannon(p, q):
+    p_arr = np.array([p[e] for e in EMOTIONS]); q_arr = np.array([q[e] for e in EMOTIONS])
+    m = 0.5 * (p_arr + q_arr)
+    def kl(a, b):
+        mask = a > 0
+        return np.sum(a[mask] * np.log(a[mask] / b[mask]))
+    return 0.5 * kl(p_arr, m) + 0.5 * kl(q_arr, m)
+
+def cosine_raw(p, q):
+    a = np.array([p[e] for e in EMOTIONS]); b = np.array([q[e] for e in EMOTIONS])
+    na, nb = np.linalg.norm(a), np.linalg.norm(b)
+    if na == 0 or nb == 0: return None
+    return float(np.dot(a, b) / (na * nb))
+
+human_neutral_vec_by_tid = {r['text_id']: {e: r[f'vec_prob_{e}'] for e in EMOTIONS}
+                             for _, r in human_neutral.iterrows() if r['vec_n'] > 0}
+llm_neutral = llm_vectors[llm_vectors['framing_condition']=='neutral'].copy()
+llm_neutral['pool_key'] = llm_neutral['text_id'].astype(str).map(pool_of_text)  # audit repair: single authoritative source
+
+rows = []
+for _, r in llm_neutral.iterrows():
+    tid = str(r['text_id'])
+    if tid not in human_neutral_vec_by_tid or r['vec_n']==0: continue
+    hv = human_neutral_vec_by_tid[tid]
+    lv = {e: r[f'vec_prob_{e}'] for e in EMOTIONS}
+    rows.append({'text_id': tid, 'pool_key': r['pool_key'], 'prompt_variant': r['prompt_variant'],
+                 'label_format': r['label_format'], 'cosine': cosine_raw(hv, lv), 'js_divergence': jensen_shannon(hv, lv)})
+baseline_align = pd.DataFrame(rows)
+baseline_align['category'] = baseline_align['pool_key'].map(POOL_LABEL)
+print(f"{len(baseline_align)} matched (text, prompt-config) pairs. Unit of analysis note: {baseline_align['text_id'].nunique()} unique texts, "
+      f"each appearing up to 6 times (once per prompt config) -- the by-category test below aggregates to text-level first to avoid pseudoreplication.")
+""")
+
+code("""baseline_align_text_level = baseline_align.groupby(['text_id','category'])[['cosine','js_divergence']].mean().reset_index()
+
+fig, axes = plt.subplots(1, 2, figsize=(13, 5.5))
+for ax, col, ylab in zip(axes, ('cosine','js_divergence'), ('Cosine similarity (raw vectors)', 'Jensen-Shannon divergence')):
+    groups = [baseline_align_text_level[baseline_align_text_level['category']==c][col].dropna().values for c in CATEGORY_LABELS]
+    violin_box_strip(ax, groups, CATEGORY_LABELS, colors=[COLORS[c] for c in CATEGORY_LABELS], ylabel=ylab)
+    ax.tick_params(axis='x', rotation=15)
+    kw_stat, kw_p = su.kruskal_wallis(*groups)
+    sig_bracket(ax, 1, 3, p=kw_p, text=f'{sig_stars(kw_p)}  p={kw_p:.2e}')
+fig.suptitle('Baseline (NEUTRAL framing) distribution similarity, LLM ensemble vs. new human, by category', fontsize=12.5, fontweight='bold', y=1.05)
+plt.tight_layout()
+plt.show()
+
+display(baseline_align_text_level.groupby('category')[['cosine','js_divergence']].mean().reindex(CATEGORY_LABELS).round(3))
+print("(text-level means, one row per text)")
+print()
+print("By prompt configuration (row-level, descriptive only -- not a formal test):")
+display(baseline_align.groupby(['prompt_variant','label_format'])[['cosine','js_divergence']].mean().round(3))
+""")
+
+md("""> **Key finding:** baseline distribution similarity is higher for Unambiguous texts (cosine
+> ≈0.82) and lower, at a similar level, for both ambiguous categories (≈0.63-0.64). This says
+> the drop happens once a text leaves "unambiguous" territory — it does not by itself indicate
+> whether Author-Relevant texts are harder for LLMs to match to humans than Author-Independent
+> ones. Any Author-Relevant-specific finding in Part 2 comes from the persona manipulation, not
+> from a baseline difficulty gap between the two ambiguous categories.""")
+
+md("""### Per-model baseline distribution similarity
+
+**[EXPLORATORY]** Breaking the ensemble apart by model. Because a single categorical answer can
+only partially match a spread-out human distribution, the ceiling here is naturally lower than
+the 7-model ensemble's. 95% confidence intervals (normal approximation on the per-text mean) are
+shown; when intervals overlap substantially, a difference in the observed mean should not be
+read as evidence the models genuinely differ.""")
+
+code("""def load_llm_individual_labels_local(text_ids=None):
+    df = pd.read_csv(BASE / 'experiment_results_all.csv')
+    df['pool_key'] = df['classification'].map(POOL_TO_KEY)
+    df['text_id'] = df['text_id'].astype(str)
+    if text_ids is not None: df = df[df['text_id'].isin([str(t) for t in text_ids])]
+    for model, norm_col in MODEL_COLS.items():
+        raw_col = MODEL_RAW_COLS[model]
+        norm_vals = df[norm_col].astype(str).str.strip().str.lower()
+        needs_fallback = df[norm_col].isna() | (df[norm_col].astype(str).str.strip()=='')
+        resolved = norm_vals.where(~needs_fallback, None)
+        fallback_vals = df.loc[needs_fallback, raw_col].apply(lambda v: _normalize_label_fallback(v) if pd.notna(v) else None)
+        resolved.loc[needs_fallback] = fallback_vals
+        resolved = resolved.where(resolved.isin(EMOTIONS), None)
+        df[f'{model}__resolved'] = resolved
+    return df
+
+llm_indiv = load_llm_individual_labels_local(sample_text_ids)
+llm_indiv_neutral = llm_indiv[llm_indiv['framing_condition']=='neutral']
+
+per_model_rows = []
+for model in MODEL_COLS:
+    for _, r in llm_indiv_neutral.iterrows():
+        label = r[f'{model}__resolved']
+        tid = r['text_id']
+        if label is None or tid not in human_neutral_vec_by_tid: continue
+        one_hot = {e: (1.0 if e==label else 0.0) for e in EMOTIONS}
+        hv = human_neutral_vec_by_tid[tid]
+        per_model_rows.append({'model': model, 'text_id': tid, 'pool_key': r['pool_key'], 'cosine': cosine_raw(hv, one_hot), 'js_divergence': jensen_shannon(hv, one_hot)})
+per_model_df = pd.DataFrame(per_model_rows)
+# aggregate to text level first (each text appears up to 6 times, once per prompt config)
+per_model_text_level = per_model_df.groupby(['model','text_id'])['cosine'].mean().reset_index()
+summary = per_model_text_level.groupby('model')['cosine'].agg(['mean','std','count'])
+summary['sem'] = summary['std'] / np.sqrt(summary['count'])
+summary = summary.sort_values('mean', ascending=False)
+display(summary.round(3))
+
+fig, ax = plt.subplots(figsize=(8.5, 5.5))
+order = summary.index.tolist()
+ax.bar(order, summary['mean'].values, yerr=1.96*summary['sem'].values, capsize=4, color=plt.cm.viridis(np.linspace(0.15, 0.85, len(order))))
+ax.set_ylabel('Mean cosine similarity to human neutral vector\\n(text-level, 95% CI)')
+ax.set_title('Per-model baseline distribution similarity (one-hot answer vs. human distribution)', pad=14)
+plt.xticks(rotation=20)
+plt.tight_layout()
+plt.show()
+BASELINE_MODEL_RANK = summary['mean'].to_dict()
+print("Ranking is by observed mean; see the 95% CI whiskers above before treating any pairwise")
+print("difference as a confirmed model difference -- no pairwise significance test was run here.")
+# AUDIT REPAIR (2026-09-21): the 'count' column above is not identical across models -- some have
+# fewer than the full 300 texts, because every one of that text's answers for that model was
+# off-list or missing and so contributed no usable one-hot vector. This was previously displayed
+# without comment, leaving it to the reader to notice that the models are not all ranked on
+# exactly the same set of texts. It is now stated explicitly.
+_short = summary[summary['count'] < summary['count'].max()]
+if len(_short):
+    print()
+    print(f"NOTE ON COVERAGE: {len(_short)} model(s) are ranked on fewer than {int(summary['count'].max())} texts:")
+    for m, r in _short.iterrows():
+        print(f"   {m}: {int(r['count'])} texts ({int(summary['count'].max()-r['count'])} missing -- no usable on-list answer for that text)")
+    print("   The ranking is therefore not computed on an identical text set for every model. The")
+    print("   gaps are small here, but any close pairwise comparison should be read with that in mind.")
+""")
+
+md("""> **Key finding:** Gemini has the highest observed mean cosine (0.644) and Gemma3/Ministral
+> the lowest (0.551/0.554), but no pairwise test was run to confirm these differences are outside
+> chance variation — note the 95% CI half-widths (~0.04, from ±1.96×SEM) are not small relative to
+> the gaps between adjacent models, so the ranking should be read as descriptive, not as
+> established pairwise differences. **This ranking is carried forward into Part 2 Section 9 as an
+> association to check**, not a settled fact: is the model with the highest observed baseline
+> similarity also associated with better tracking of a persona-driven shift, or are these
+> unrelated?""")
+
+nb['cells'] = cells
+nb['metadata'] = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
+                   "language_info": {"name": "python", "version": "3"}}
+OUT_PATH.parent.mkdir(exist_ok=True)
+with open(OUT_PATH, 'w', encoding='utf-8') as f:
+    nbf.write(nb, f)
+print(f"Wrote {OUT_PATH} ({len(cells)} cells -- ALL 6 sections of Part 1 complete)")

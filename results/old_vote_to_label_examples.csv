@@ -1,0 +1,7 @@
+text_id,neutral_votes,selected_label,top_share_pct,strict_majority,tied_top
+21,"surprise, joy, anger",anger,33.33333333333333,False,True
+99,"trust, anger, sadness",anger,33.33333333333333,False,True
+249,"shame, shame, anger",shame,66.66666666666666,True,False
+253,"relief, relief, surprise",relief,66.66666666666666,True,False
+272,"pride, pride, pride",pride,100.0,True,False
+276,"sadness, fear, fear",fear,66.66666666666666,True,False

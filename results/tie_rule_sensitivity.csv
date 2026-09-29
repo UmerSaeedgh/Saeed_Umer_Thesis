@@ -1,0 +1,3 @@
+source,comparisons,either_condition_tied,alphabetic_change_pct,reverse_order_change_pct,changed_decision,unique_winners_only_n,unique_winners_only_change_pct
+Human,600,262,52.83333333333333,57.333333333333336,125,338,39.053254437869825
+LLM,3600,291,18.38888888888889,17.944444444444443,212,3309,14.536113629495315

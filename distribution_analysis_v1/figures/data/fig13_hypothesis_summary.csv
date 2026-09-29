@@ -1,0 +1,11 @@
+hypothesis,verdict
+H1 (Human Framing),"Supported on Author-Independent/Author-Relevant
+(permutation p<0.02); mixed on Unambiguous"
+H2 (Model Framing),"Supported -- LLM ensemble TV rises from ~9% (Unambig.)
+to ~29% (Author-Relevant)"
+H3 (Ambiguity Sensitivity),"Supported -- ordered-trend permutation p=0.0001
+(human, text-level, primary)"
+H4 (Alignment: direction),"Partially supported -- mean cosine 0.116 > chance
+(permutation p=0.0001)"
+H4 (Alignment: magnitude),"Magnitudes DIFFER as H4 predicts -- weak correlation
+(Spearman rho=0.19)"
